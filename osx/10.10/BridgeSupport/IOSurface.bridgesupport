@@ -1,0 +1,196 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<cftype gettypeid_func='IOSurfaceGetTypeID' name='IOSurfaceRef' type='^{__IOSurface=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfaceAllocSize' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfaceBytesPerElement' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfaceBytesPerRow' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfaceCacheMode' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfaceElementHeight' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfaceElementWidth' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfaceHeight' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfaceIsGlobal' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfaceOffset' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfacePixelFormat' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfacePlaneBase' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfacePlaneBytesPerElement' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfacePlaneBytesPerRow' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfacePlaneElementHeight' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfacePlaneElementWidth' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfacePlaneHeight' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfacePlaneInfo' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfacePlaneOffset' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfacePlaneSize' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfacePlaneWidth' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kIOSurfaceWidth' type='^{__CFString=}'/>
+<enum name='kIOSurfaceLockAvoidSync' value='2'/>
+<enum name='kIOSurfaceLockReadOnly' value='1'/>
+<function name='IOSurfaceAlignProperty'>
+<arg declared_type='CFStringRef' name='property' type='^{__CFString=}'/>
+<arg declared_type='size_t' name='value' type='L' type64='Q'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
+</function>
+<function name='IOSurfaceCopyValue'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<arg declared_type='CFStringRef' name='key' type='^{__CFString=}'/>
+<retval already_retained='true' declared_type='CFTypeRef' type='@'/>
+</function>
+<function name='IOSurfaceCreate'>
+<arg declared_type='CFDictionaryRef' name='properties' type='^{__CFDictionary=}'/>
+<retval already_retained='true' declared_type='IOSurfaceRef' type='^{__IOSurface=}'/>
+</function>
+<function name='IOSurfaceCreateMachPort'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<retval declared_type='mach_port_t' type='I'/>
+</function>
+<function name='IOSurfaceCreateXPCObject'>
+<arg declared_type='IOSurfaceRef' name='aSurface' type='^{__IOSurface=}'/>
+<retval already_retained='true' declared_type='xpc_object_t' type='@'/>
+</function>
+<function name='IOSurfaceDecrementUseCount'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='IOSurfaceGetAllocSize'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
+</function>
+<function name='IOSurfaceGetBaseAddress'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<retval declared_type='void*' type='^v'/>
+</function>
+<function name='IOSurfaceGetBaseAddressOfPlane'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<arg declared_type='size_t' name='planeIndex' type='L' type64='Q'/>
+<retval declared_type='void*' type='^v'/>
+</function>
+<function name='IOSurfaceGetBytesPerElement'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
+</function>
+<function name='IOSurfaceGetBytesPerElementOfPlane'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<arg declared_type='size_t' name='planeIndex' type='L' type64='Q'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
+</function>
+<function name='IOSurfaceGetBytesPerRow'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
+</function>
+<function name='IOSurfaceGetBytesPerRowOfPlane'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<arg declared_type='size_t' name='planeIndex' type='L' type64='Q'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
+</function>
+<function name='IOSurfaceGetElementHeight'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
+</function>
+<function name='IOSurfaceGetElementHeightOfPlane'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<arg declared_type='size_t' name='planeIndex' type='L' type64='Q'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
+</function>
+<function name='IOSurfaceGetElementWidth'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
+</function>
+<function name='IOSurfaceGetElementWidthOfPlane'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<arg declared_type='size_t' name='planeIndex' type='L' type64='Q'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
+</function>
+<function name='IOSurfaceGetHeight'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
+</function>
+<function name='IOSurfaceGetHeightOfPlane'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<arg declared_type='size_t' name='planeIndex' type='L' type64='Q'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
+</function>
+<function name='IOSurfaceGetID'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<retval declared_type='IOSurfaceID' type='I'/>
+</function>
+<function name='IOSurfaceGetPixelFormat'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<retval declared_type='OSType' type='L' type64='I'/>
+</function>
+<function name='IOSurfaceGetPlaneCount'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
+</function>
+<function name='IOSurfaceGetPropertyAlignment'>
+<arg declared_type='CFStringRef' name='property' type='^{__CFString=}'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
+</function>
+<function name='IOSurfaceGetPropertyMaximum'>
+<arg declared_type='CFStringRef' name='property' type='^{__CFString=}'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
+</function>
+<function name='IOSurfaceGetSeed'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<retval declared_type='uint32_t' type='I'/>
+</function>
+<function name='IOSurfaceGetTypeID'>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
+</function>
+<function name='IOSurfaceGetUseCount'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<retval declared_type='int32_t' type='i'/>
+</function>
+<function name='IOSurfaceGetWidth'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
+</function>
+<function name='IOSurfaceGetWidthOfPlane'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<arg declared_type='size_t' name='planeIndex' type='L' type64='Q'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
+</function>
+<function name='IOSurfaceIncrementUseCount'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='IOSurfaceIsInUse'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='IOSurfaceLock'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<arg declared_type='uint32_t' name='options' type='I'/>
+<arg declared_type='uint32_t*' name='seed' type='^I'/>
+<retval declared_type='IOReturn' type='i'/>
+</function>
+<function name='IOSurfaceLookup'>
+<arg declared_type='IOSurfaceID' name='csid' type='I'/>
+<retval declared_type='IOSurfaceRef' type='^{__IOSurface=}'/>
+</function>
+<function name='IOSurfaceLookupFromMachPort'>
+<arg declared_type='mach_port_t' name='port' type='I'/>
+<retval declared_type='IOSurfaceRef' type='^{__IOSurface=}'/>
+</function>
+<function name='IOSurfaceLookupFromXPCObject'>
+<arg declared_type='xpc_object_t' name='xobj' type='@'/>
+<retval declared_type='IOSurfaceRef' type='^{__IOSurface=}'/>
+</function>
+<function name='IOSurfaceRemoveValue'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<arg declared_type='CFStringRef' name='key' type='^{__CFString=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='IOSurfaceSetValue'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<arg declared_type='CFStringRef' name='key' type='^{__CFString=}'/>
+<arg declared_type='CFTypeRef' name='value' type='@'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='IOSurfaceUnlock'>
+<arg declared_type='IOSurfaceRef' name='buffer' type='^{__IOSurface=}'/>
+<arg declared_type='uint32_t' name='options' type='I'/>
+<arg declared_type='uint32_t*' name='seed' type='^I'/>
+<retval declared_type='IOReturn' type='i'/>
+</function>
+</signatures>

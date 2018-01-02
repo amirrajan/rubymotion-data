@@ -1,0 +1,61 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioUnit.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<enum name='AUViewParametersDisplayFlag' value='4'/>
+<enum name='AUViewPropertiesDisplayFlag' value='2'/>
+<enum name='AUViewTitleDisplayFlag' value='1'/>
+<class name='AUGenericView'>
+<method selector='audioUnit'>
+<retval declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+</method>
+<method selector='initWithAudioUnit:'>
+<arg declared_type='AudioUnit' index='0' name='au' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<retval declared_type='AUGenericView*' type='@'/>
+</method>
+<method selector='initWithAudioUnit:displayFlags:'>
+<arg declared_type='AudioUnit' index='0' name='inAudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='UInt32' index='1' name='inFlags' type='L' type64='I'/>
+<retval declared_type='AUGenericView*' type='@'/>
+</method>
+<method selector='setShowsExpertParameters:'>
+<arg declared_type='BOOL' index='0' name='showsExpertParameters' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='showsExpertParameters'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='AUPannerView'>
+<method class_method='true' selector='AUPannerViewWithAudioUnit:'>
+<arg declared_type='AudioUnit' index='0' name='au' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<retval declared_type='AUPannerView*' type='@'/>
+</method>
+<method selector='audioUnit'>
+<retval declared_type='AudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='customViewPersistentData'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='setCustomViewPersistentData:'>
+<arg declared_type='NSDictionary*' index='0' name='data' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='AUCustomViewPersistentData'>
+<method selector='customViewPersistentData' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='setCustomViewPersistentData:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='NSDictionary*' index='0' name='data' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>

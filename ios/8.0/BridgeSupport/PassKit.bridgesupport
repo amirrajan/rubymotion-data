@@ -1,0 +1,457 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/MessageUI.framework'/>
+<depends_on path='/System/Library/Frameworks/AddressBookUI.framework'/>
+<depends_on path='/System/Library/Frameworks/AddressBook.framework'/>
+<depends_on path='/System/Library/Frameworks/Accounts.framework'/>
+<depends_on path='/System/Library/Frameworks/MobileCoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/StoreKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreImage.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/UIKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreLocation.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<constant const='true' declared_type='NSString*' name='PKPassKitErrorDomain' type='@'/>
+<constant const='true' declared_type='NSString*' name='PKPassLibraryAddedPassesUserInfoKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='PKPassLibraryDidChangeNotification' type='@'/>
+<constant const='true' declared_type='NSString*' name='PKPassLibraryPassTypeIdentifierUserInfoKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='PKPassLibraryRemovedPassInfosUserInfoKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='PKPassLibraryReplacementPassesUserInfoKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='PKPassLibrarySerialNumberUserInfoKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='PKPaymentNetworkAmex' type='@'/>
+<constant const='true' declared_type='NSString*' name='PKPaymentNetworkMasterCard' type='@'/>
+<constant const='true' declared_type='NSString*' name='PKPaymentNetworkVisa' type='@'/>
+<enum name='PKAddressFieldAll' value='7'/>
+<enum name='PKAddressFieldEmail' value='4'/>
+<enum name='PKAddressFieldNone' value='0'/>
+<enum name='PKAddressFieldPhone' value='2'/>
+<enum name='PKAddressFieldPostalAddress' value='1'/>
+<enum name='PKInvalidDataError' value='1'/>
+<enum name='PKInvalidSignature' value='3'/>
+<enum name='PKMerchantCapability3DS' value='1'/>
+<enum name='PKMerchantCapabilityEMV' value='2'/>
+<enum name='PKNotEntitledError' value='4'/>
+<enum name='PKPassLibraryDidAddPasses' value='0'/>
+<enum name='PKPassLibraryDidCancelAddPasses' value='2'/>
+<enum name='PKPassLibraryShouldReviewPasses' value='1'/>
+<enum name='PKPassTypeAny' value='4294967295' value64='18446744073709551615'/>
+<enum name='PKPassTypeBarcode' value='0'/>
+<enum name='PKPassTypePayment' value='1'/>
+<enum name='PKPaymentAuthorizationStatusFailure' value='1'/>
+<enum name='PKPaymentAuthorizationStatusInvalidBillingPostalAddress' value='2'/>
+<enum name='PKPaymentAuthorizationStatusInvalidShippingContact' value='4'/>
+<enum name='PKPaymentAuthorizationStatusInvalidShippingPostalAddress' value='3'/>
+<enum name='PKPaymentAuthorizationStatusSuccess' value='0'/>
+<enum name='PKPaymentPassActivationStateActivated' value='0'/>
+<enum name='PKPaymentPassActivationStateActivating' value='2'/>
+<enum name='PKPaymentPassActivationStateDeactivated' value='4'/>
+<enum name='PKPaymentPassActivationStateRequiresActivation' value='1'/>
+<enum name='PKPaymentPassActivationStateSuspended' value='3'/>
+<enum name='PKUnknownError' value='-1'/>
+<enum name='PKUnsupportedVersionError' value='2'/>
+<class name='NSObject'>
+<method selector='addPassesViewControllerDidFinish:'>
+<arg declared_type='PKAddPassesViewController*' index='0' name='controller' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='paymentAuthorizationViewController:didAuthorizePayment:completion:'>
+<arg declared_type='PKPaymentAuthorizationViewController*' index='0' name='controller' type='@'/>
+<arg declared_type='PKPayment*' index='1' name='payment' type='@'/>
+<arg declared_type='void (^)(PKPaymentAuthorizationStatus)' function_pointer='true' index='2' name='completion' type='@?'>
+<arg declared_type='PKPaymentAuthorizationStatus' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='paymentAuthorizationViewController:didSelectShippingAddress:completion:'>
+<arg declared_type='PKPaymentAuthorizationViewController*' index='0' name='controller' type='@'/>
+<arg declared_type='ABRecordRef' index='1' name='address' type='@'/>
+<arg declared_type='void (^)(PKPaymentAuthorizationStatus, NSArray *, NSArray *)' function_pointer='true' index='2' name='completion' type='@?'>
+<arg declared_type='PKPaymentAuthorizationStatus' type='i' type64='q'/>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSArray*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='paymentAuthorizationViewController:didSelectShippingMethod:completion:'>
+<arg declared_type='PKPaymentAuthorizationViewController*' index='0' name='controller' type='@'/>
+<arg declared_type='PKShippingMethod*' index='1' name='shippingMethod' type='@'/>
+<arg declared_type='void (^)(PKPaymentAuthorizationStatus, NSArray *)' function_pointer='true' index='2' name='completion' type='@?'>
+<arg declared_type='PKPaymentAuthorizationStatus' type='i' type64='q'/>
+<arg declared_type='NSArray*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='paymentAuthorizationViewControllerDidFinish:'>
+<arg declared_type='PKPaymentAuthorizationViewController*' index='0' name='controller' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='PKAddPassesViewController'>
+<method class_method='true' selector='canAddPasses'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithPass:'>
+<arg declared_type='id' index='0' name='pass' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithPasses:'>
+<arg declared_type='NSArray*' index='0' name='passes' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='PKPass'>
+<method selector='authenticationToken'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='icon'>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method selector='initWithData:error:'>
+<arg declared_type='NSData*' index='0' name='data' type='@'/>
+<arg declared_type='NSError**' index='1' name='error' type='^@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='localizedDescription'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='localizedName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='localizedValueForFieldKey:'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='organizationName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='passType'>
+<retval declared_type='PKPassType' type='I' type64='Q'/>
+</method>
+<method selector='passTypeIdentifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='passURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='paymentPass'>
+<retval declared_type='PKPaymentPass*' type='@'/>
+</method>
+<method selector='relevantDate'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='serialNumber'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='userInfo'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='webServiceURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+</class>
+<class name='PKPassLibrary'>
+<method selector='activatePaymentPass:withActivationCode:completion:'>
+<arg declared_type='PKPaymentPass*' index='0' name='paymentPass' type='@'/>
+<arg declared_type='NSString*' index='1' name='activationCode' type='@'/>
+<arg declared_type='void (^)(BOOL, NSError *)' function_pointer='true' index='2' name='completion' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='activatePaymentPass:withActivationData:completion:'>
+<arg declared_type='PKPaymentPass*' index='0' name='paymentPass' type='@'/>
+<arg declared_type='NSData*' index='1' name='activationData' type='@'/>
+<arg declared_type='void (^)(BOOL, NSError *)' function_pointer='true' index='2' name='completion' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addPasses:withCompletionHandler:'>
+<arg declared_type='NSArray*' index='0' name='passes' type='@'/>
+<arg declared_type='void (^)(PKPassLibraryAddPassesStatus)' function_pointer='true' index='1' name='completion' type='@?'>
+<arg declared_type='PKPassLibraryAddPassesStatus' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='containsPass:'>
+<arg declared_type='PKPass*' index='0' name='pass' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='isPassLibraryAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='isPaymentPassActivationAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='passWithPassTypeIdentifier:serialNumber:'>
+<arg declared_type='NSString*' index='0' name='identifier' type='@'/>
+<arg declared_type='NSString*' index='1' name='serialNumber' type='@'/>
+<retval declared_type='PKPass*' type='@'/>
+</method>
+<method selector='passes'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='passesOfType:'>
+<arg declared_type='PKPassType' index='0' name='passType' type='I' type64='Q'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='removePass:'>
+<arg declared_type='PKPass*' index='0' name='pass' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='replacePassWithPass:'>
+<arg declared_type='PKPass*' index='0' name='pass' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='PKPayment'>
+<method selector='billingAddress'>
+<retval declared_type='ABRecordRef' type='@'/>
+</method>
+<method selector='shippingAddress'>
+<retval declared_type='ABRecordRef' type='@'/>
+</method>
+<method selector='shippingMethod'>
+<retval declared_type='PKShippingMethod*' type='@'/>
+</method>
+<method selector='token'>
+<retval declared_type='PKPaymentToken*' type='@'/>
+</method>
+</class>
+<class name='PKPaymentAuthorizationViewController'>
+<method class_method='true' selector='canMakePayments'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='canMakePaymentsUsingNetworks:'>
+<arg declared_type='NSArray*' index='0' name='supportedNetworks' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithPaymentRequest:'>
+<arg declared_type='PKPaymentRequest*' index='0' name='request' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='PKPaymentPass'>
+<method selector='activationState'>
+<retval declared_type='PKPaymentPassActivationState' type='I' type64='Q'/>
+</method>
+<method selector='deviceAccountIdentifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='deviceAccountNumberSuffix'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='primaryAccountIdentifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='primaryAccountNumberSuffix'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='PKPaymentRequest'>
+<method selector='applicationData'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='billingAddress'>
+<retval declared_type='ABRecordRef' type='@'/>
+</method>
+<method selector='countryCode'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='currencyCode'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='merchantCapabilities'>
+<retval declared_type='PKMerchantCapability' type='I' type64='Q'/>
+</method>
+<method selector='merchantIdentifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='paymentSummaryItems'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='requiredBillingAddressFields'>
+<retval declared_type='PKAddressField' type='I' type64='Q'/>
+</method>
+<method selector='requiredShippingAddressFields'>
+<retval declared_type='PKAddressField' type='I' type64='Q'/>
+</method>
+<method selector='setApplicationData:'>
+<arg declared_type='NSData*' index='0' name='applicationData' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBillingAddress:'>
+<arg declared_type='ABRecordRef' index='0' name='billingAddress' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCountryCode:'>
+<arg declared_type='NSString*' index='0' name='countryCode' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCurrencyCode:'>
+<arg declared_type='NSString*' index='0' name='currencyCode' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMerchantCapabilities:'>
+<arg declared_type='PKMerchantCapability' index='0' name='merchantCapabilities' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMerchantIdentifier:'>
+<arg declared_type='NSString*' index='0' name='merchantIdentifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPaymentSummaryItems:'>
+<arg declared_type='NSArray*' index='0' name='paymentSummaryItems' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRequiredBillingAddressFields:'>
+<arg declared_type='PKAddressField' index='0' name='requiredBillingAddressFields' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRequiredShippingAddressFields:'>
+<arg declared_type='PKAddressField' index='0' name='requiredShippingAddressFields' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShippingAddress:'>
+<arg declared_type='ABRecordRef' index='0' name='shippingAddress' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShippingMethods:'>
+<arg declared_type='NSArray*' index='0' name='shippingMethods' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSupportedNetworks:'>
+<arg declared_type='NSArray*' index='0' name='supportedNetworks' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shippingAddress'>
+<retval declared_type='ABRecordRef' type='@'/>
+</method>
+<method selector='shippingMethods'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='supportedNetworks'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</class>
+<class name='PKPaymentSummaryItem'>
+<method selector='amount'>
+<retval declared_type='NSDecimalNumber*' type='@'/>
+</method>
+<method selector='label'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setAmount:'>
+<arg declared_type='NSDecimalNumber*' index='0' name='amount' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLabel:'>
+<arg declared_type='NSString*' index='0' name='label' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='summaryItemWithLabel:amount:'>
+<arg declared_type='NSString*' index='0' name='label' type='@'/>
+<arg declared_type='NSDecimalNumber*' index='1' name='amount' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+</class>
+<class name='PKPaymentToken'>
+<method selector='paymentData'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='paymentInstrumentName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='paymentNetwork'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='transactionIdentifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='PKShippingMethod'>
+<method selector='detail'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setDetail:'>
+<arg declared_type='NSString*' index='0' name='detail' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setIdentifier:'>
+<arg declared_type='NSString*' index='0' name='identifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='PKAddPassesViewControllerDelegate'>
+<method selector='addPassesViewControllerDidFinish:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='PKAddPassesViewController*' index='0' name='controller' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='PKPaymentAuthorizationViewControllerDelegate'>
+<method selector='paymentAuthorizationViewController:didAuthorizePayment:completion:' type='v20@0:4@8@12@?16' type64='v40@0:8@16@24@?32'>
+<arg declared_type='PKPaymentAuthorizationViewController*' index='0' name='controller' type='@'/>
+<arg declared_type='PKPayment*' index='1' name='payment' type='@'/>
+<arg declared_type='void (^)(PKPaymentAuthorizationStatus)' function_pointer='true' index='2' name='completion' type='@?'>
+<arg declared_type='PKPaymentAuthorizationStatus' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='paymentAuthorizationViewController:didSelectShippingAddress:completion:' type='v20@0:4@8^v12@?16' type64='v40@0:8@16^v24@?32'>
+<arg declared_type='PKPaymentAuthorizationViewController*' index='0' name='controller' type='@'/>
+<arg declared_type='ABRecordRef' index='1' name='address' type='@'/>
+<arg declared_type='void (^)(PKPaymentAuthorizationStatus, NSArray *, NSArray *)' function_pointer='true' index='2' name='completion' type='@?'>
+<arg declared_type='PKPaymentAuthorizationStatus' type='i' type64='q'/>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSArray*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='paymentAuthorizationViewController:didSelectShippingMethod:completion:' type='v20@0:4@8@12@?16' type64='v40@0:8@16@24@?32'>
+<arg declared_type='PKPaymentAuthorizationViewController*' index='0' name='controller' type='@'/>
+<arg declared_type='PKShippingMethod*' index='1' name='shippingMethod' type='@'/>
+<arg declared_type='void (^)(PKPaymentAuthorizationStatus, NSArray *)' function_pointer='true' index='2' name='completion' type='@?'>
+<arg declared_type='PKPaymentAuthorizationStatus' type='i' type64='q'/>
+<arg declared_type='NSArray*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='paymentAuthorizationViewControllerDidFinish:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='PKPaymentAuthorizationViewController*' index='0' name='controller' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>

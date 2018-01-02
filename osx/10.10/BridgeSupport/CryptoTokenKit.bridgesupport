@@ -1,0 +1,189 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<constant const='true' declared_type64='NSString*' name='TKErrorDomain' type64='@'/>
+<enum name='TKErrorAuthenticationFailed' value64='-5'/>
+<enum name='TKErrorCodeCanceledByUser' value64='-4'/>
+<enum name='TKErrorCodeCommunicationError' value64='-2'/>
+<enum name='TKErrorCodeCorruptedData' value64='-3'/>
+<enum name='TKErrorCodeNotImplemented' value64='-1'/>
+<enum name='TKErrorObjectNotFound' value64='-6'/>
+<enum name='TKErrorTokenNotFound' value64='-7'/>
+<enum name='TKSmartCardNoSlot' value64='0'/>
+<enum name='TKSmartCardProtocolAny' value64='65535'/>
+<enum name='TKSmartCardProtocolNone' value64='0'/>
+<enum name='TKSmartCardProtocolT0' value64='1'/>
+<enum name='TKSmartCardProtocolT1' value64='2'/>
+<enum name='TKSmartCardProtocolT15' value64='32768'/>
+<enum name='TKSmartCardSlotEmpty' value64='1'/>
+<enum name='TKSmartCardSlotMuteCard' value64='3'/>
+<enum name='TKSmartCardSlotProbing' value64='2'/>
+<enum name='TKSmartCardSlotStateEmpty' value64='1'/>
+<enum name='TKSmartCardSlotStateMissing' value64='0'/>
+<enum name='TKSmartCardSlotStateMuteCard' value64='3'/>
+<enum name='TKSmartCardSlotStateProbing' value64='2'/>
+<enum name='TKSmartCardSlotStateValidCard' value64='4'/>
+<enum name='TKSmartCardSlotValidCard' value64='4'/>
+<class name='TKSmartCard'>
+<method selector='allowedProtocols'>
+<retval declared_type64='TKSmartCardProtocol' type64='Q'/>
+</method>
+<method selector='beginSessionWithReply:'>
+<arg declared_type64='void (^)(BOOL, NSError *)' function_pointer='true' index='0' name='reply' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='cla'>
+<retval declared_type64='UInt8' type64='C'/>
+</method>
+<method selector='context'>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='currentProtocol'>
+<retval declared_type64='TKSmartCardProtocol' type64='Q'/>
+</method>
+<method selector='endSession'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sendIns:p1:p2:data:le:reply:'>
+<arg declared_type64='UInt8' index='0' name='ins' type64='C'/>
+<arg declared_type64='UInt8' index='1' name='p1' type64='C'/>
+<arg declared_type64='UInt8' index='2' name='p2' type64='C'/>
+<arg declared_type64='NSData*' index='3' name='requestData' type64='@'/>
+<arg declared_type64='NSNumber*' index='4' name='le' type64='@'/>
+<arg declared_type64='void (^)(NSData *, UInt16, NSError *)' function_pointer='true' index='5' name='reply' type64='@?'>
+<arg declared_type64='NSData*' type64='@'/>
+<arg declared_type64='UInt16' type64='S'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sensitive'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setAllowedProtocols:'>
+<arg declared_type64='TKSmartCardProtocol' index='0' name='allowedProtocols' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCla:'>
+<arg declared_type64='UInt8' index='0' name='cla' type64='C'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setContext:'>
+<arg declared_type64='id' index='0' name='context' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSensitive:'>
+<arg declared_type64='BOOL' index='0' name='sensitive' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setUseExtendedLength:'>
+<arg declared_type64='BOOL' index='0' name='useExtendedLength' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='slot'>
+<retval declared_type64='TKSmartCardSlot*' type64='@'/>
+</method>
+<method selector='transmitRequest:reply:'>
+<arg declared_type64='NSData*' index='0' name='request' type64='@'/>
+<arg declared_type64='void (^)(NSData *, NSError *)' function_pointer='true' index='1' name='reply' type64='@?'>
+<arg declared_type64='NSData*' type64='@'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='useExtendedLength'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='valid'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='TKSmartCardATR'>
+<method selector='bytes'>
+<retval declared_type64='NSData*' type64='@'/>
+</method>
+<method selector='historicalBytes'>
+<retval declared_type64='NSData*' type64='@'/>
+</method>
+<method selector='initWithBytes:'>
+<arg declared_type64='NSData*' index='0' name='bytes' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='initWithSource:'>
+<arg declared_type64='int (^)()' function_pointer='true' index='0' name='source' type64='@?'>
+<retval declared_type64='int' type64='i'/>
+</arg>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='interfaceGroupAtIndex:'>
+<arg declared_type64='NSInteger' index='0' name='index' type64='q'/>
+<retval declared_type64='TKSmartCardATRInterfaceGroup*' type64='@'/>
+</method>
+<method selector='interfaceGroupForProtocol:'>
+<arg declared_type64='TKSmartCardProtocol' index='0' name='protocol' type64='Q'/>
+<retval declared_type64='TKSmartCardATRInterfaceGroup*' type64='@'/>
+</method>
+<method selector='protocols'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+</class>
+<class name='TKSmartCardATRInterfaceGroup'>
+<method selector='TA'>
+<retval declared_type64='NSNumber*' type64='@'/>
+</method>
+<method selector='TB'>
+<retval declared_type64='NSNumber*' type64='@'/>
+</method>
+<method selector='TC'>
+<retval declared_type64='NSNumber*' type64='@'/>
+</method>
+<method selector='protocol'>
+<retval declared_type64='NSNumber*' type64='@'/>
+</method>
+</class>
+<class name='TKSmartCardSlot'>
+<method selector='ATR'>
+<retval declared_type64='TKSmartCardATR*' type64='@'/>
+</method>
+<method selector='makeSmartCard'>
+<retval declared_type64='TKSmartCard*' type64='@'/>
+</method>
+<method selector='maxInputLength'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='maxOutputLength'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='state'>
+<retval declared_type64='TKSmartCardSlotState' type64='q'/>
+</method>
+</class>
+<class name='TKSmartCardSlotManager'>
+<method class_method='true' selector='defaultManager'>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='getSlotWithName:reply:'>
+<arg declared_type64='NSString*' index='0' name='name' type64='@'/>
+<arg declared_type64='void (^)(TKSmartCardSlot *)' function_pointer='true' index='1' name='reply' type64='@?'>
+<arg declared_type64='TKSmartCardSlot*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='slotNames'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+</class>
+</signatures>

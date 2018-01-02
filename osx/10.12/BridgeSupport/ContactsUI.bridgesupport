@@ -1,0 +1,96 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/MediaLibrary.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Contacts.framework'/>
+<depends_on path='/System/Library/Frameworks/Quartz.framework'/>
+<depends_on path='/System/Library/Frameworks/AddressBook.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreData.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<class name='CNContactPicker'>
+<method selector='close'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='displayedKeys'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDisplayedKeys:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='displayedKeys' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='showRelativeToRect:ofView:preferredEdge:'>
+<arg declared_type64='NSRect' index='0' name='positioningRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='NSView * _Nonnull' index='1' name='positioningView' type64='@'/>
+<arg declared_type64='NSRectEdge' index='2' name='preferredEdge' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CNContactViewController'>
+<method selector='contact'>
+<retval declared_type64='CNContact * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorForRequiredKeys'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='setContact:'>
+<arg declared_type64='CNContact * _Nullable' index='0' name='contact' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='contactPicker:didSelectContact:'>
+<arg declared_type64='CNContactPicker * _Nonnull' index='0' name='picker' type64='@'/>
+<arg declared_type64='CNContact * _Nonnull' index='1' name='contact' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='contactPicker:didSelectContactProperty:'>
+<arg declared_type64='CNContactPicker * _Nonnull' index='0' name='picker' type64='@'/>
+<arg declared_type64='CNContactProperty * _Nonnull' index='1' name='contactProperty' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='contactPickerDidClose:'>
+<arg declared_type64='CNContactPicker * _Nonnull' index='0' name='picker' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='contactPickerWillClose:'>
+<arg declared_type64='CNContactPicker * _Nonnull' index='0' name='picker' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='CNContactPickerDelegate'>
+<method selector='contactPicker:didSelectContact:' type64='v32@0:8@16@24'>
+<arg declared_type64='CNContactPicker * _Nonnull' index='0' name='picker' type64='@'/>
+<arg declared_type64='CNContact * _Nonnull' index='1' name='contact' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='contactPicker:didSelectContactProperty:' type64='v32@0:8@16@24'>
+<arg declared_type64='CNContactPicker * _Nonnull' index='0' name='picker' type64='@'/>
+<arg declared_type64='CNContactProperty * _Nonnull' index='1' name='contactProperty' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='contactPickerDidClose:' type64='v24@0:8@16'>
+<arg declared_type64='CNContactPicker * _Nonnull' index='0' name='picker' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='contactPickerWillClose:' type64='v24@0:8@16'>
+<arg declared_type64='CNContactPicker * _Nonnull' index='0' name='picker' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

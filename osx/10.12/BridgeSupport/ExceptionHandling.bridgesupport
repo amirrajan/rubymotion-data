@@ -1,0 +1,82 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant declared_type='NSString*' name='NSStackTraceKey' type='@'/>
+<constant declared_type='NSString*' name='NSUncaughtRuntimeErrorException' type='@'/>
+<constant declared_type='NSString*' name='NSUncaughtSystemExceptionException' type='@'/>
+<enum name='NSHandleOtherExceptionMask' value='512'/>
+<enum name='NSHandleTopLevelExceptionMask' value='128'/>
+<enum name='NSHandleUncaughtExceptionMask' value='2'/>
+<enum name='NSHandleUncaughtRuntimeErrorMask' value='32'/>
+<enum name='NSHandleUncaughtSystemExceptionMask' value='8'/>
+<enum name='NSHangOnEveryExceptionMask' value='31'/>
+<enum name='NSHangOnOtherExceptionMask' value='16'/>
+<enum name='NSHangOnTopLevelExceptionMask' value='8'/>
+<enum name='NSHangOnUncaughtExceptionMask' value='1'/>
+<enum name='NSHangOnUncaughtRuntimeErrorMask' value='4'/>
+<enum name='NSHangOnUncaughtSystemExceptionMask' value='2'/>
+<enum name='NSLogAndHandleEveryExceptionMask' value='1023'/>
+<enum name='NSLogOtherExceptionMask' value='256'/>
+<enum name='NSLogTopLevelExceptionMask' value='64'/>
+<enum name='NSLogUncaughtExceptionMask' value='1'/>
+<enum name='NSLogUncaughtRuntimeErrorMask' value='16'/>
+<enum name='NSLogUncaughtSystemExceptionMask' value='4'/>
+<function name='NSExceptionHandlerResume'>
+<retval declared_type='void' type='v'/>
+</function>
+<class name='NSExceptionHandler'>
+<method class_method='true' selector='defaultExceptionHandler'>
+<retval declared_type='NSExceptionHandler*' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='exceptionHandlingMask'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='exceptionHangingMask'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='anObject' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setExceptionHandlingMask:'>
+<arg declared_type='NSUInteger' index='0' name='aMask' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setExceptionHangingMask:'>
+<arg declared_type='NSUInteger' index='0' name='aMask' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='exceptionHandler:shouldHandleException:mask:'>
+<arg declared_type='NSExceptionHandler*' index='0' name='sender' type='@'/>
+<arg declared_type='NSException*' index='1' name='exception' type='@'/>
+<arg declared_type='NSUInteger' index='2' name='aMask' type='I' type64='Q'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='exceptionHandler:shouldLogException:mask:'>
+<arg declared_type='NSExceptionHandler*' index='0' name='sender' type='@'/>
+<arg declared_type='NSException*' index='1' name='exception' type='@'/>
+<arg declared_type='NSUInteger' index='2' name='aMask' type='I' type64='Q'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<informal_protocol name='NSExceptionHandlerDelegate'>
+<method selector='exceptionHandler:shouldHandleException:mask:' type='B20@0:4@8@12I16' type64='B40@0:8@16@24Q32'>
+<arg declared_type='NSExceptionHandler*' index='0' name='sender' type='@'/>
+<arg declared_type='NSException*' index='1' name='exception' type='@'/>
+<arg declared_type='NSUInteger' index='2' name='aMask' type='I' type64='Q'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='exceptionHandler:shouldLogException:mask:' type='B20@0:4@8@12I16' type64='B40@0:8@16@24Q32'>
+<arg declared_type='NSExceptionHandler*' index='0' name='sender' type='@'/>
+<arg declared_type='NSException*' index='1' name='exception' type='@'/>
+<arg declared_type='NSUInteger' index='2' name='aMask' type='I' type64='Q'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</informal_protocol>
+</signatures>

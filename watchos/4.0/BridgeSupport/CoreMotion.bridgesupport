@@ -1,0 +1,493 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/CFNetwork.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<struct name='CMAcceleration' type='{_CMAcceleration=&quot;x&quot;d&quot;y&quot;d&quot;z&quot;d}'>
+<field declared_type='double' name='x' type='d'/>
+<field declared_type='double' name='y' type='d'/>
+<field declared_type='double' name='z' type='d'/>
+</struct>
+<struct name='CMCalibratedMagneticField' type='{_CMCalibratedMagneticField=&quot;field&quot;{_CMMagneticField=&quot;x&quot;d&quot;y&quot;d&quot;z&quot;d}&quot;accuracy&quot;i}'>
+<field declared_type='CMMagneticField' name='field' type='{_CMMagneticField=&quot;x&quot;d&quot;y&quot;d&quot;z&quot;d}'/>
+<field declared_type='CMMagneticFieldCalibrationAccuracy' name='accuracy' type='i'/>
+</struct>
+<struct name='CMMagneticField' type='{_CMMagneticField=&quot;x&quot;d&quot;y&quot;d&quot;z&quot;d}'>
+<field declared_type='double' name='x' type='d'/>
+<field declared_type='double' name='y' type='d'/>
+<field declared_type='double' name='z' type='d'/>
+</struct>
+<struct name='CMQuaternion' type='{_CMQuaternion=&quot;x&quot;d&quot;y&quot;d&quot;z&quot;d&quot;w&quot;d}'>
+<field declared_type='double' name='x' type='d'/>
+<field declared_type='double' name='y' type='d'/>
+<field declared_type='double' name='z' type='d'/>
+<field declared_type='double' name='w' type='d'/>
+</struct>
+<struct name='CMRotationMatrix' type='{_CMRotationMatrix=&quot;m11&quot;d&quot;m12&quot;d&quot;m13&quot;d&quot;m21&quot;d&quot;m22&quot;d&quot;m23&quot;d&quot;m31&quot;d&quot;m32&quot;d&quot;m33&quot;d}'>
+<field declared_type='double' name='m11' type='d'/>
+<field declared_type='double' name='m12' type='d'/>
+<field declared_type='double' name='m13' type='d'/>
+<field declared_type='double' name='m21' type='d'/>
+<field declared_type='double' name='m22' type='d'/>
+<field declared_type='double' name='m23' type='d'/>
+<field declared_type='double' name='m31' type='d'/>
+<field declared_type='double' name='m32' type='d'/>
+<field declared_type='double' name='m33' type='d'/>
+</struct>
+<struct name='CMRotationRate' type='{_CMRotationRate=&quot;x&quot;d&quot;y&quot;d&quot;z&quot;d}'>
+<field declared_type='double' name='x' type='d'/>
+<field declared_type='double' name='y' type='d'/>
+<field declared_type='double' name='z' type='d'/>
+</struct>
+<constant const='true' declared_type='NSString * _Nonnull' name='CMErrorDomain' type='@'/>
+<enum name='CMAttitudeReferenceFrameXArbitraryCorrectedZVertical' value='2'/>
+<enum name='CMAttitudeReferenceFrameXArbitraryZVertical' value='1'/>
+<enum name='CMAttitudeReferenceFrameXMagneticNorthZVertical' value='4'/>
+<enum name='CMAttitudeReferenceFrameXTrueNorthZVertical' value='8'/>
+<enum name='CMAuthorizationStatusAuthorized' value='3'/>
+<enum name='CMAuthorizationStatusDenied' value='2'/>
+<enum name='CMAuthorizationStatusNotDetermined' value='0'/>
+<enum name='CMAuthorizationStatusRestricted' value='1'/>
+<enum name='CMErrorDeviceRequiresMovement' value='101'/>
+<enum name='CMErrorInvalidAction' value='108'/>
+<enum name='CMErrorInvalidParameter' value='107'/>
+<enum name='CMErrorMotionActivityNotAuthorized' value='105'/>
+<enum name='CMErrorMotionActivityNotAvailable' value='104'/>
+<enum name='CMErrorMotionActivityNotEntitled' value='106'/>
+<enum name='CMErrorNULL' value='100'/>
+<enum name='CMErrorNotAuthorized' value='111'/>
+<enum name='CMErrorNotAvailable' value='109'/>
+<enum name='CMErrorNotEntitled' value='110'/>
+<enum name='CMErrorTrueNorthNotAvailable' value='102'/>
+<enum name='CMErrorUnknown' value='103'/>
+<enum name='CMMagneticFieldCalibrationAccuracyHigh' value='2'/>
+<enum name='CMMagneticFieldCalibrationAccuracyLow' value='0'/>
+<enum name='CMMagneticFieldCalibrationAccuracyMedium' value='1'/>
+<enum name='CMMagneticFieldCalibrationAccuracyUncalibrated' value='-1'/>
+<enum name='CMMotionActivityConfidenceHigh' value='2'/>
+<enum name='CMMotionActivityConfidenceLow' value='0'/>
+<enum name='CMMotionActivityConfidenceMedium' value='1'/>
+<enum name='CMPedometerEventTypePause' value='0'/>
+<enum name='CMPedometerEventTypeResume' value='1'/>
+<class name='CMAccelerometerData'>
+<method selector='acceleration'>
+<retval declared_type='CMAcceleration' type='{_CMAcceleration=ddd}'/>
+</method>
+</class>
+<class name='CMAltimeter'>
+<method class_method='true' selector='authorizationStatus'>
+<retval declared_type='CMAuthorizationStatus' type='i'/>
+</method>
+<method class_method='true' selector='isRelativeAltitudeAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='startRelativeAltitudeUpdatesToQueue:withHandler:'>
+<arg declared_type='NSOperationQueue * _Nonnull' index='0' name='queue' type='@'/>
+<arg declared_type='CMAltitudeHandler _Nonnull' function_pointer='true' index='1' name='handler' type='@?'>
+<arg declared_type='CMAltitudeData * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stopRelativeAltitudeUpdates'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CMAltitudeData'>
+<method selector='pressure'>
+<retval declared_type='NSNumber * _Nonnull' type='@'/>
+</method>
+<method selector='relativeAltitude'>
+<retval declared_type='NSNumber * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='CMAttitude'>
+<method selector='multiplyByInverseOfAttitude:'>
+<arg declared_type='CMAttitude * _Nonnull' index='0' name='attitude' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='pitch'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='quaternion'>
+<retval declared_type='CMQuaternion' type='{_CMQuaternion=dddd}'/>
+</method>
+<method selector='roll'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='rotationMatrix'>
+<retval declared_type='CMRotationMatrix' type='{_CMRotationMatrix=ddddddddd}'/>
+</method>
+<method selector='yaw'>
+<retval declared_type='double' type='d'/>
+</method>
+</class>
+<class name='CMDeviceMotion'>
+<method selector='attitude'>
+<retval declared_type='CMAttitude * _Nonnull' type='@'/>
+</method>
+<method selector='gravity'>
+<retval declared_type='CMAcceleration' type='{_CMAcceleration=ddd}'/>
+</method>
+<method selector='heading'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='magneticField'>
+<retval declared_type='CMCalibratedMagneticField' type='{_CMCalibratedMagneticField={_CMMagneticField=ddd}i}'/>
+</method>
+<method selector='rotationRate'>
+<retval declared_type='CMRotationRate' type='{_CMRotationRate=ddd}'/>
+</method>
+<method selector='userAcceleration'>
+<retval declared_type='CMAcceleration' type='{_CMAcceleration=ddd}'/>
+</method>
+</class>
+<class name='CMGyroData'>
+<method selector='rotationRate'>
+<retval declared_type='CMRotationRate' type='{_CMRotationRate=ddd}'/>
+</method>
+</class>
+<class name='CMLogItem'>
+<method selector='timestamp'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+</class>
+<class name='CMMagnetometerData'>
+<method selector='magneticField'>
+<retval declared_type='CMMagneticField' type='{_CMMagneticField=ddd}'/>
+</method>
+</class>
+<class name='CMMotionActivity'>
+<method selector='automotive'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='confidence'>
+<retval declared_type='CMMotionActivityConfidence' type='i'/>
+</method>
+<method selector='cycling'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='running'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='startDate'>
+<retval declared_type='NSDate * _Nonnull' type='@'/>
+</method>
+<method selector='stationary'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='unknown'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='walking'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='CMMotionActivityManager'>
+<method class_method='true' selector='authorizationStatus'>
+<retval declared_type='CMAuthorizationStatus' type='i'/>
+</method>
+<method class_method='true' selector='isActivityAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='queryActivityStartingFromDate:toDate:toQueue:withHandler:'>
+<arg declared_type='NSDate * _Nonnull' index='0' name='start' type='@'/>
+<arg declared_type='NSDate * _Nonnull' index='1' name='end' type='@'/>
+<arg declared_type='NSOperationQueue * _Nonnull' index='2' name='queue' type='@'/>
+<arg declared_type='CMMotionActivityQueryHandler _Nonnull' function_pointer='true' index='3' name='handler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startActivityUpdatesToQueue:withHandler:'>
+<arg declared_type='NSOperationQueue * _Nonnull' index='0' name='queue' type='@'/>
+<arg declared_type='CMMotionActivityHandler _Nonnull' function_pointer='true' index='1' name='handler' type='@?'>
+<arg declared_type='CMMotionActivity * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stopActivityUpdates'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CMMotionManager'>
+<method selector='accelerometerData'>
+<retval declared_type='CMAccelerometerData * _Nullable' type='@'/>
+</method>
+<method selector='accelerometerUpdateInterval'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='attitudeReferenceFrame'>
+<retval declared_type='CMAttitudeReferenceFrame' type='I'/>
+</method>
+<method class_method='true' selector='availableAttitudeReferenceFrames'>
+<retval declared_type='CMAttitudeReferenceFrame' type='I'/>
+</method>
+<method selector='deviceMotion'>
+<retval declared_type='CMDeviceMotion * _Nullable' type='@'/>
+</method>
+<method selector='deviceMotionUpdateInterval'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='gyroData'>
+<retval declared_type='CMGyroData * _Nullable' type='@'/>
+</method>
+<method selector='gyroUpdateInterval'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='isAccelerometerActive'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isAccelerometerAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isDeviceMotionActive'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isDeviceMotionAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isGyroActive'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isGyroAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isMagnetometerActive'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isMagnetometerAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='magnetometerData'>
+<retval declared_type='CMMagnetometerData * _Nullable' type='@'/>
+</method>
+<method selector='magnetometerUpdateInterval'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='setAccelerometerUpdateInterval:'>
+<arg declared_type='NSTimeInterval' index='0' name='accelerometerUpdateInterval' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDeviceMotionUpdateInterval:'>
+<arg declared_type='NSTimeInterval' index='0' name='deviceMotionUpdateInterval' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGyroUpdateInterval:'>
+<arg declared_type='NSTimeInterval' index='0' name='gyroUpdateInterval' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMagnetometerUpdateInterval:'>
+<arg declared_type='NSTimeInterval' index='0' name='magnetometerUpdateInterval' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShowsDeviceMovementDisplay:'>
+<arg declared_type='BOOL' index='0' name='showsDeviceMovementDisplay' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='showsDeviceMovementDisplay'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='startAccelerometerUpdates'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startAccelerometerUpdatesToQueue:withHandler:'>
+<arg declared_type='NSOperationQueue * _Nonnull' index='0' name='queue' type='@'/>
+<arg declared_type='CMAccelerometerHandler _Nonnull' function_pointer='true' index='1' name='handler' type='@?'>
+<arg declared_type='CMAccelerometerData * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startDeviceMotionUpdates'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startDeviceMotionUpdatesToQueue:withHandler:'>
+<arg declared_type='NSOperationQueue * _Nonnull' index='0' name='queue' type='@'/>
+<arg declared_type='CMDeviceMotionHandler _Nonnull' function_pointer='true' index='1' name='handler' type='@?'>
+<arg declared_type='CMDeviceMotion * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startDeviceMotionUpdatesUsingReferenceFrame:'>
+<arg declared_type='CMAttitudeReferenceFrame' index='0' name='referenceFrame' type='I'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startDeviceMotionUpdatesUsingReferenceFrame:toQueue:withHandler:'>
+<arg declared_type='CMAttitudeReferenceFrame' index='0' name='referenceFrame' type='I'/>
+<arg declared_type='NSOperationQueue * _Nonnull' index='1' name='queue' type='@'/>
+<arg declared_type='CMDeviceMotionHandler _Nonnull' function_pointer='true' index='2' name='handler' type='@?'>
+<arg declared_type='CMDeviceMotion * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startGyroUpdates'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startGyroUpdatesToQueue:withHandler:'>
+<arg declared_type='NSOperationQueue * _Nonnull' index='0' name='queue' type='@'/>
+<arg declared_type='CMGyroHandler _Nonnull' function_pointer='true' index='1' name='handler' type='@?'>
+<arg declared_type='CMGyroData * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startMagnetometerUpdates'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startMagnetometerUpdatesToQueue:withHandler:'>
+<arg declared_type='NSOperationQueue * _Nonnull' index='0' name='queue' type='@'/>
+<arg declared_type='CMMagnetometerHandler _Nonnull' function_pointer='true' index='1' name='handler' type='@?'>
+<arg declared_type='CMMagnetometerData * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stopAccelerometerUpdates'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stopDeviceMotionUpdates'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stopGyroUpdates'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stopMagnetometerUpdates'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CMPedometer'>
+<method class_method='true' selector='authorizationStatus'>
+<retval declared_type='CMAuthorizationStatus' type='i'/>
+</method>
+<method class_method='true' selector='isCadenceAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='isDistanceAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='isFloorCountingAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='isPaceAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='isPedometerEventTrackingAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='isStepCountingAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='queryPedometerDataFromDate:toDate:withHandler:'>
+<arg declared_type='NSDate * _Nonnull' index='0' name='start' type='@'/>
+<arg declared_type='NSDate * _Nonnull' index='1' name='end' type='@'/>
+<arg declared_type='CMPedometerHandler _Nonnull' function_pointer='true' index='2' name='handler' type='@?'>
+<arg declared_type='CMPedometerData * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startPedometerEventUpdatesWithHandler:'>
+<arg declared_type='CMPedometerEventHandler _Nonnull' function_pointer='true' index='0' name='handler' type='@?'>
+<arg declared_type='CMPedometerEvent * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startPedometerUpdatesFromDate:withHandler:'>
+<arg declared_type='NSDate * _Nonnull' index='0' name='start' type='@'/>
+<arg declared_type='CMPedometerHandler _Nonnull' function_pointer='true' index='1' name='handler' type='@?'>
+<arg declared_type='CMPedometerData * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stopPedometerEventUpdates'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stopPedometerUpdates'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CMPedometerData'>
+<method selector='averageActivePace'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='currentCadence'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='currentPace'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='distance'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='endDate'>
+<retval declared_type='NSDate * _Nonnull' type='@'/>
+</method>
+<method selector='floorsAscended'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='floorsDescended'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='numberOfSteps'>
+<retval declared_type='NSNumber * _Nonnull' type='@'/>
+</method>
+<method selector='startDate'>
+<retval declared_type='NSDate * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='CMPedometerEvent'>
+<method selector='date'>
+<retval declared_type='NSDate * _Nonnull' type='@'/>
+</method>
+<method selector='type'>
+<retval declared_type='CMPedometerEventType' type='i'/>
+</method>
+</class>
+<class name='CMRecordedAccelerometerData'>
+<method selector='identifier'>
+<retval declared_type='uint64_t' type='Q'/>
+</method>
+<method selector='startDate'>
+<retval declared_type='NSDate * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='CMSensorRecorder'>
+<method selector='accelerometerDataFromDate:toDate:'>
+<arg declared_type='NSDate * _Nonnull' index='0' name='fromDate' type='@'/>
+<arg declared_type='NSDate * _Nonnull' index='1' name='toDate' type='@'/>
+<retval declared_type='CMSensorDataList * _Nullable' type='@'/>
+</method>
+<method class_method='true' selector='authorizationStatus'>
+<retval declared_type='CMAuthorizationStatus' type='i'/>
+</method>
+<method class_method='true' selector='isAccelerometerRecordingAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='isAuthorizedForRecording'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='recordAccelerometerForDuration:'>
+<arg declared_type='NSTimeInterval' index='0' name='duration' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+</signatures>

@@ -1,0 +1,90 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/SecurityInterface.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/PubSub.framework'/>
+<depends_on path='/System/Library/Frameworks/Quartz.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<function inline='true' name='SSCenteredRectInRect'>
+<arg declared_type='NSRect' name='innerRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='NSRect' name='outerRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='NSRect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function inline='true' name='SSRandomFloatBetween'>
+<arg declared_type='CGFloat' name='a' type='f' type64='d'/>
+<arg declared_type='CGFloat' name='b' type='f' type64='d'/>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</function>
+<function inline='true' name='SSRandomIntBetween'>
+<arg declared_type='int' name='a' type='i'/>
+<arg declared_type='int' name='b' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function inline='true' name='SSRandomPointForSizeWithinRect'>
+<arg declared_type='NSSize' name='size' type='{_NSSize=ff}' type64='{CGSize=dd}'/>
+<arg declared_type='NSRect' name='rect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='NSPoint' type='{_NSPoint=ff}' type64='{CGPoint=dd}'/>
+</function>
+<class name='ScreenSaverDefaults'>
+<method class_method='true' selector='defaultsForModuleWithName:'>
+<arg declared_type='NSString*' index='0' name='inModuleName' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='ScreenSaverView'>
+<method selector='animateOneFrame'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='animationTimeInterval'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method class_method='true' selector='backingStoreType'>
+<retval declared_type='NSBackingStoreType' type='I' type64='Q'/>
+</method>
+<method selector='configureSheet'>
+<retval declared_type='NSWindow*' type='@'/>
+</method>
+<method selector='drawRect:'>
+<arg declared_type='NSRect' index='0' name='rect' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='hasConfigureSheet'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithFrame:'>
+<arg declared_type='NSRect' index='0' name='frame' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithFrame:isPreview:'>
+<arg declared_type='NSRect' index='0' name='frame' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='BOOL' index='1' name='isPreview' type='B'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='isAnimating'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isPreview'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='performGammaFade'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setAnimationTimeInterval:'>
+<arg declared_type='NSTimeInterval' index='0' name='timeInterval' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startAnimation'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stopAnimation'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+</signatures>

@@ -1,0 +1,2574 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CFNetwork.framework'/>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<struct name='CGAffineTransform' type64='{CGAffineTransform=&quot;a&quot;d&quot;b&quot;d&quot;c&quot;d&quot;d&quot;d&quot;tx&quot;d&quot;ty&quot;d}'>
+<field declared_type64='CGFloat' name='a' type64='d'/>
+<field declared_type64='CGFloat' name='b' type64='d'/>
+<field declared_type64='CGFloat' name='c' type64='d'/>
+<field declared_type64='CGFloat' name='d' type64='d'/>
+<field declared_type64='CGFloat' name='tx' type64='d'/>
+<field declared_type64='CGFloat' name='ty' type64='d'/>
+</struct>
+<struct name='CGDataConsumerCallbacks' type64='{CGDataConsumerCallbacks=&quot;putBytes&quot;^?&quot;releaseConsumer&quot;^?}'>
+<field declared_type64='CGDataConsumerPutBytesCallback _Nullable' function_pointer='true' name='putBytes' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<arg const='true' declared_type64='void * _Nonnull' type64='^v'/>
+<arg declared_type64='size_t' type64='Q'/>
+<retval declared_type64='size_t' type64='Q'/>
+</field>
+<field declared_type64='CGDataConsumerReleaseInfoCallback _Nullable' function_pointer='true' name='releaseConsumer' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</field>
+</struct>
+<struct name='CGDataProviderDirectCallbacks' type64='{CGDataProviderDirectCallbacks=&quot;version&quot;I&quot;getBytePointer&quot;^?&quot;releaseBytePointer&quot;^?&quot;getBytesAtPosition&quot;^?&quot;releaseInfo&quot;^?}'>
+<field declared_type64='unsigned int' name='version' type64='I'/>
+<field declared_type64='CGDataProviderGetBytePointerCallback _Nullable' function_pointer='true' name='getBytePointer' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval const='true' declared_type64='void * _Nullable' type64='^v'/>
+</field>
+<field declared_type64='CGDataProviderReleaseBytePointerCallback _Nullable' function_pointer='true' name='releaseBytePointer' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<arg const='true' declared_type64='void * _Nonnull' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</field>
+<field declared_type64='CGDataProviderGetBytesAtPositionCallback _Nullable' function_pointer='true' name='getBytesAtPosition' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<arg declared_type64='void * _Nonnull' type64='^v'/>
+<arg declared_type64='off_t' type64='q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<retval declared_type64='size_t' type64='Q'/>
+</field>
+<field declared_type64='CGDataProviderReleaseInfoCallback _Nullable' function_pointer='true' name='releaseInfo' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</field>
+</struct>
+<struct name='CGDataProviderSequentialCallbacks' type64='{CGDataProviderSequentialCallbacks=&quot;version&quot;I&quot;getBytes&quot;^?&quot;skipForward&quot;^?&quot;rewind&quot;^?&quot;releaseInfo&quot;^?}'>
+<field declared_type64='unsigned int' name='version' type64='I'/>
+<field declared_type64='CGDataProviderGetBytesCallback _Nullable' function_pointer='true' name='getBytes' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<arg declared_type64='void * _Nonnull' type64='^v'/>
+<arg declared_type64='size_t' type64='Q'/>
+<retval declared_type64='size_t' type64='Q'/>
+</field>
+<field declared_type64='CGDataProviderSkipForwardCallback _Nullable' function_pointer='true' name='skipForward' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<arg declared_type64='off_t' type64='q'/>
+<retval declared_type64='off_t' type64='q'/>
+</field>
+<field declared_type64='CGDataProviderRewindCallback _Nullable' function_pointer='true' name='rewind' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</field>
+<field declared_type64='CGDataProviderReleaseInfoCallback _Nullable' function_pointer='true' name='releaseInfo' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</field>
+</struct>
+<struct name='CGFunctionCallbacks' type64='{CGFunctionCallbacks=&quot;version&quot;I&quot;evaluate&quot;^?&quot;releaseInfo&quot;^?}'>
+<field declared_type64='unsigned int' name='version' type64='I'/>
+<field declared_type64='CGFunctionEvaluateCallback _Nullable' function_pointer='true' name='evaluate' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<arg const='true' declared_type64='CGFloat * _Nonnull' type64='^d'/>
+<arg declared_type64='CGFloat * _Nonnull' type64='^d'/>
+<retval declared_type64='void' type64='v'/>
+</field>
+<field declared_type64='CGFunctionReleaseInfoCallback _Nullable' function_pointer='true' name='releaseInfo' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</field>
+</struct>
+<struct name='CGPathElement' type64='{CGPathElement=&quot;type&quot;i&quot;points&quot;^{CGPoint}}'>
+<field declared_type64='CGPathElementType' name='type' type64='i'/>
+<field declared_type64='CGPoint * _Nonnull' name='points' type64='^{CGPoint=dd}'/>
+</struct>
+<struct name='CGPatternCallbacks' type64='{CGPatternCallbacks=&quot;version&quot;I&quot;drawPattern&quot;^?&quot;releaseInfo&quot;^?}'>
+<field declared_type64='unsigned int' name='version' type64='I'/>
+<field declared_type64='CGPatternDrawPatternCallback _Nullable' function_pointer='true' name='drawPattern' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<arg declared_type64='CGContextRef _Nullable' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</field>
+<field declared_type64='CGPatternReleaseInfoCallback _Nullable' function_pointer='true' name='releaseInfo' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</field>
+</struct>
+<struct name='CGPoint' type64='{CGPoint=&quot;x&quot;d&quot;y&quot;d}'>
+<field declared_type64='CGFloat' name='x' type64='d'/>
+<field declared_type64='CGFloat' name='y' type64='d'/>
+</struct>
+<struct name='CGRect' type64='{CGRect=&quot;origin&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;size&quot;{CGSize=&quot;width&quot;d&quot;height&quot;d}}'>
+<field declared_type64='CGPoint' name='origin' type64='{CGPoint=&quot;x&quot;d&quot;y&quot;d}'/>
+<field declared_type64='CGSize' name='size' type64='{CGSize=&quot;width&quot;d&quot;height&quot;d}'/>
+</struct>
+<struct name='CGSize' type64='{CGSize=&quot;width&quot;d&quot;height&quot;d}'>
+<field declared_type64='CGFloat' name='width' type64='d'/>
+<field declared_type64='CGFloat' name='height' type64='d'/>
+</struct>
+<struct name='CGVector' type64='{CGVector=&quot;dx&quot;d&quot;dy&quot;d}'>
+<field declared_type64='CGFloat' name='dx' type64='d'/>
+<field declared_type64='CGFloat' name='dy' type64='d'/>
+</struct>
+<cftype gettypeid_func='CGColorGetTypeID' name='CGColorRef' tollfree='__NSCFType' type64='^{CGColor=}'/>
+<cftype gettypeid_func='CGColorSpaceGetTypeID' name='CGColorSpaceRef' tollfree='__NSCFType' type64='^{CGColorSpace=}'/>
+<cftype gettypeid_func='CGContextGetTypeID' name='CGContextRef' tollfree='__NSCFType' type64='^{CGContext=}'/>
+<cftype gettypeid_func='CGDataConsumerGetTypeID' name='CGDataConsumerRef' tollfree='__NSCFType' type64='^{CGDataConsumer=}'/>
+<cftype gettypeid_func='CGDataProviderGetTypeID' name='CGDataProviderRef' tollfree='__NSCFType' type64='^{CGDataProvider=}'/>
+<cftype gettypeid_func='CGFontGetTypeID' name='CGFontRef' tollfree='__NSCFType' type64='^{CGFont=}'/>
+<cftype gettypeid_func='CGFunctionGetTypeID' name='CGFunctionRef' tollfree='__NSCFType' type64='^{CGFunction=}'/>
+<cftype gettypeid_func='CGGradientGetTypeID' name='CGGradientRef' tollfree='__NSCFType' type64='^{CGGradient=}'/>
+<cftype gettypeid_func='CGImageGetTypeID' name='CGImageRef' tollfree='__NSCFType' type64='^{CGImage=}'/>
+<cftype gettypeid_func='CGLayerGetTypeID' name='CGLayerRef' tollfree='__NSCFType' type64='^{CGLayer=}'/>
+<cftype gettypeid_func='CGPathGetTypeID' name='CGMutablePathRef' tollfree='__NSCFType' type64='^{CGPath=}'/>
+<cftype gettypeid_func='CGPDFDocumentGetTypeID' name='CGPDFDocumentRef' tollfree='__NSCFType' type64='^{CGPDFDocument=}'/>
+<cftype gettypeid_func='CGPDFPageGetTypeID' name='CGPDFPageRef' tollfree='__NSCFType' type64='^{CGPDFPage=}'/>
+<cftype gettypeid_func='CGPathGetTypeID' name='CGPathRef' tollfree='__NSCFType' type64='^{CGPath=}'/>
+<cftype gettypeid_func='CGPatternGetTypeID' name='CGPatternRef' tollfree='__NSCFType' type64='^{CGPattern=}'/>
+<cftype gettypeid_func='CGShadingGetTypeID' name='CGShadingRef' tollfree='__NSCFType' type64='^{CGShading=}'/>
+<cftype name='CGPDFArrayRef' type64='^{CGPDFArray=}'/>
+<cftype name='CGPDFContentStreamRef' type64='^{CGPDFContentStream=}'/>
+<cftype name='CGPDFDictionaryRef' type64='^{CGPDFDictionary=}'/>
+<cftype name='CGPDFObjectRef' type64='^(CGPDFObject=)'/>
+<cftype name='CGPDFOperatorTableRef' type64='^{CGPDFOperatorTable=}'/>
+<cftype name='CGPDFScannerRef' type64='^{CGPDFScanner=}'/>
+<cftype name='CGPDFStreamRef' type64='^{CGPDFStream=}'/>
+<cftype name='CGPDFStringRef' type64='^{CGPDFString=}'/>
+<constant const='true' declared_type64='CGAffineTransform' name='CGAffineTransformIdentity' type64='{CGAffineTransform=dddddd}'/>
+<constant const='true' declared_type64='CGPoint' name='CGPointZero' type64='{CGPoint=dd}'/>
+<constant const='true' declared_type64='CGRect' name='CGRectInfinite' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<constant const='true' declared_type64='CGRect' name='CGRectNull' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<constant const='true' declared_type64='CGRect' name='CGRectZero' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<constant const='true' declared_type64='CGSize' name='CGSizeZero' type64='{CGSize=dd}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceACESCGLinear' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceAdobeRGB1998' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceGenericCMYK' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceGenericGray' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceGenericGrayGamma2_2' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceGenericRGB' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceGenericRGBLinear' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceGenericXYZ' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceITUR_2020' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceITUR_709' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceROMMRGB' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceSRGB' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CGFontIndex' name='kCGFontIndexInvalid' type64='S'/>
+<constant const='true' declared_type64='CGFontIndex' name='kCGFontIndexMax' type64='S'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGFontVariationAxisDefaultValue' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGFontVariationAxisMaxValue' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGFontVariationAxisMinValue' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGFontVariationAxisName' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CGFontIndex' name='kCGGlyphMax' type64='S'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGPDFContextAllowsCopying' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGPDFContextAllowsPrinting' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGPDFContextArtBox' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGPDFContextAuthor' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGPDFContextBleedBox' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGPDFContextCreator' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGPDFContextCropBox' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGPDFContextEncryptionKeyLength' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGPDFContextKeywords' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGPDFContextMediaBox' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGPDFContextOwnerPassword' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGPDFContextSubject' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGPDFContextTitle' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGPDFContextTrimBox' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGPDFContextUserPassword' type64='^{__CFString=}'/>
+<enum name='CGFLOAT_DEFINED' value64='1'/>
+<enum name='CGFLOAT_IS_DOUBLE' value64='1'/>
+<enum name='CGFLOAT_MAX' value64='1.7976931348623157E+308'/>
+<enum name='CGFLOAT_MIN' value64='2.2250738585072014E-308'/>
+<enum name='CGGlyphMax' value64='1'/>
+<enum name='CGGlyphMin' value64='0'/>
+<enum name='CGPDFDataFormatJPEG2000' value64='2'/>
+<enum name='CGPDFDataFormatJPEGEncoded' value64='1'/>
+<enum name='CGPDFDataFormatRaw' value64='0'/>
+<enum name='CGRectMaxXEdge' value64='2'/>
+<enum name='CGRectMaxYEdge' value64='3'/>
+<enum name='CGRectMinXEdge' value64='0'/>
+<enum name='CGRectMinYEdge' value64='1'/>
+<enum name='CGVECTOR_DEFINED' value64='1'/>
+<enum name='kCGBitmapAlphaInfoMask' value64='31'/>
+<enum name='kCGBitmapByteOrder16Big' value64='12288'/>
+<enum name='kCGBitmapByteOrder16Host' value64='4096'/>
+<enum name='kCGBitmapByteOrder16Little' value64='4096'/>
+<enum name='kCGBitmapByteOrder32Big' value64='16384'/>
+<enum name='kCGBitmapByteOrder32Host' value64='8192'/>
+<enum name='kCGBitmapByteOrder32Little' value64='8192'/>
+<enum name='kCGBitmapByteOrderDefault' value64='0'/>
+<enum name='kCGBitmapByteOrderMask' value64='28672'/>
+<enum name='kCGBitmapFloatComponents' value64='256'/>
+<enum name='kCGBlendModeClear' value64='16'/>
+<enum name='kCGBlendModeColor' value64='14'/>
+<enum name='kCGBlendModeColorBurn' value64='7'/>
+<enum name='kCGBlendModeColorDodge' value64='6'/>
+<enum name='kCGBlendModeCopy' value64='17'/>
+<enum name='kCGBlendModeDarken' value64='4'/>
+<enum name='kCGBlendModeDestinationAtop' value64='24'/>
+<enum name='kCGBlendModeDestinationIn' value64='22'/>
+<enum name='kCGBlendModeDestinationOut' value64='23'/>
+<enum name='kCGBlendModeDestinationOver' value64='21'/>
+<enum name='kCGBlendModeDifference' value64='10'/>
+<enum name='kCGBlendModeExclusion' value64='11'/>
+<enum name='kCGBlendModeHardLight' value64='9'/>
+<enum name='kCGBlendModeHue' value64='12'/>
+<enum name='kCGBlendModeLighten' value64='5'/>
+<enum name='kCGBlendModeLuminosity' value64='15'/>
+<enum name='kCGBlendModeMultiply' value64='1'/>
+<enum name='kCGBlendModeNormal' value64='0'/>
+<enum name='kCGBlendModeOverlay' value64='3'/>
+<enum name='kCGBlendModePlusDarker' value64='26'/>
+<enum name='kCGBlendModePlusLighter' value64='27'/>
+<enum name='kCGBlendModeSaturation' value64='13'/>
+<enum name='kCGBlendModeScreen' value64='2'/>
+<enum name='kCGBlendModeSoftLight' value64='8'/>
+<enum name='kCGBlendModeSourceAtop' value64='20'/>
+<enum name='kCGBlendModeSourceIn' value64='18'/>
+<enum name='kCGBlendModeSourceOut' value64='19'/>
+<enum name='kCGBlendModeXOR' value64='25'/>
+<enum name='kCGColorSpaceModelCMYK' value64='2'/>
+<enum name='kCGColorSpaceModelDeviceN' value64='4'/>
+<enum name='kCGColorSpaceModelIndexed' value64='5'/>
+<enum name='kCGColorSpaceModelLab' value64='3'/>
+<enum name='kCGColorSpaceModelMonochrome' value64='0'/>
+<enum name='kCGColorSpaceModelPattern' value64='6'/>
+<enum name='kCGColorSpaceModelRGB' value64='1'/>
+<enum name='kCGColorSpaceModelUnknown' value64='-1'/>
+<enum name='kCGEncodingFontSpecific' value64='0'/>
+<enum name='kCGEncodingMacRoman' value64='1'/>
+<enum name='kCGErrorCannotComplete' value64='1004'/>
+<enum name='kCGErrorFailure' value64='1000'/>
+<enum name='kCGErrorIllegalArgument' value64='1001'/>
+<enum name='kCGErrorInvalidConnection' value64='1002'/>
+<enum name='kCGErrorInvalidContext' value64='1003'/>
+<enum name='kCGErrorInvalidOperation' value64='1010'/>
+<enum name='kCGErrorNoneAvailable' value64='1011'/>
+<enum name='kCGErrorNotImplemented' value64='1006'/>
+<enum name='kCGErrorRangeCheck' value64='1007'/>
+<enum name='kCGErrorSuccess' value64='0'/>
+<enum name='kCGErrorTypeCheck' value64='1008'/>
+<enum name='kCGFontPostScriptFormatType1' value64='1'/>
+<enum name='kCGFontPostScriptFormatType3' value64='3'/>
+<enum name='kCGFontPostScriptFormatType42' value64='42'/>
+<enum name='kCGGradientDrawsAfterEndLocation' value64='2'/>
+<enum name='kCGGradientDrawsBeforeStartLocation' value64='1'/>
+<enum name='kCGImageAlphaFirst' value64='4'/>
+<enum name='kCGImageAlphaLast' value64='3'/>
+<enum name='kCGImageAlphaNone' value64='0'/>
+<enum name='kCGImageAlphaNoneSkipFirst' value64='6'/>
+<enum name='kCGImageAlphaNoneSkipLast' value64='5'/>
+<enum name='kCGImageAlphaOnly' value64='7'/>
+<enum name='kCGImageAlphaPremultipliedFirst' value64='2'/>
+<enum name='kCGImageAlphaPremultipliedLast' value64='1'/>
+<enum name='kCGInterpolationDefault' value64='0'/>
+<enum name='kCGInterpolationHigh' value64='3'/>
+<enum name='kCGInterpolationLow' value64='2'/>
+<enum name='kCGInterpolationMedium' value64='4'/>
+<enum name='kCGInterpolationNone' value64='1'/>
+<enum name='kCGLineCapButt' value64='0'/>
+<enum name='kCGLineCapRound' value64='1'/>
+<enum name='kCGLineCapSquare' value64='2'/>
+<enum name='kCGLineJoinBevel' value64='2'/>
+<enum name='kCGLineJoinMiter' value64='0'/>
+<enum name='kCGLineJoinRound' value64='1'/>
+<enum name='kCGPDFArtBox' value64='4'/>
+<enum name='kCGPDFBleedBox' value64='2'/>
+<enum name='kCGPDFCropBox' value64='1'/>
+<enum name='kCGPDFMediaBox' value64='0'/>
+<enum name='kCGPDFObjectTypeArray' value64='7'/>
+<enum name='kCGPDFObjectTypeBoolean' value64='2'/>
+<enum name='kCGPDFObjectTypeDictionary' value64='8'/>
+<enum name='kCGPDFObjectTypeInteger' value64='3'/>
+<enum name='kCGPDFObjectTypeName' value64='5'/>
+<enum name='kCGPDFObjectTypeNull' value64='1'/>
+<enum name='kCGPDFObjectTypeReal' value64='4'/>
+<enum name='kCGPDFObjectTypeStream' value64='9'/>
+<enum name='kCGPDFObjectTypeString' value64='6'/>
+<enum name='kCGPDFTrimBox' value64='3'/>
+<enum name='kCGPathEOFill' value64='1'/>
+<enum name='kCGPathEOFillStroke' value64='4'/>
+<enum name='kCGPathElementAddCurveToPoint' value64='3'/>
+<enum name='kCGPathElementAddLineToPoint' value64='1'/>
+<enum name='kCGPathElementAddQuadCurveToPoint' value64='2'/>
+<enum name='kCGPathElementCloseSubpath' value64='4'/>
+<enum name='kCGPathElementMoveToPoint' value64='0'/>
+<enum name='kCGPathFill' value64='0'/>
+<enum name='kCGPathFillStroke' value64='3'/>
+<enum name='kCGPathStroke' value64='2'/>
+<enum name='kCGPatternTilingConstantSpacing' value64='2'/>
+<enum name='kCGPatternTilingConstantSpacingMinimalDistortion' value64='1'/>
+<enum name='kCGPatternTilingNoDistortion' value64='0'/>
+<enum name='kCGRenderingIntentAbsoluteColorimetric' value64='1'/>
+<enum name='kCGRenderingIntentDefault' value64='0'/>
+<enum name='kCGRenderingIntentPerceptual' value64='3'/>
+<enum name='kCGRenderingIntentRelativeColorimetric' value64='2'/>
+<enum name='kCGRenderingIntentSaturation' value64='4'/>
+<enum name='kCGTextClip' value64='7'/>
+<enum name='kCGTextFill' value64='0'/>
+<enum name='kCGTextFillClip' value64='4'/>
+<enum name='kCGTextFillStroke' value64='2'/>
+<enum name='kCGTextFillStrokeClip' value64='6'/>
+<enum name='kCGTextInvisible' value64='3'/>
+<enum name='kCGTextStroke' value64='1'/>
+<enum name='kCGTextStrokeClip' value64='5'/>
+<function name='CGAffineTransformConcat'>
+<arg declared_type64='CGAffineTransform' name='t1' type64='{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGAffineTransform' name='t2' type64='{CGAffineTransform=dddddd}'/>
+<retval declared_type64='CGAffineTransform' type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGAffineTransformEqualToTransform'>
+<arg declared_type64='CGAffineTransform' name='t1' type64='{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGAffineTransform' name='t2' type64='{CGAffineTransform=dddddd}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGAffineTransformInvert'>
+<arg declared_type64='CGAffineTransform' name='t' type64='{CGAffineTransform=dddddd}'/>
+<retval declared_type64='CGAffineTransform' type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGAffineTransformIsIdentity'>
+<arg declared_type64='CGAffineTransform' name='t' type64='{CGAffineTransform=dddddd}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGAffineTransformMake'>
+<arg declared_type64='CGFloat' name='a' type64='d'/>
+<arg declared_type64='CGFloat' name='b' type64='d'/>
+<arg declared_type64='CGFloat' name='c' type64='d'/>
+<arg declared_type64='CGFloat' name='d' type64='d'/>
+<arg declared_type64='CGFloat' name='tx' type64='d'/>
+<arg declared_type64='CGFloat' name='ty' type64='d'/>
+<retval declared_type64='CGAffineTransform' type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGAffineTransformMakeRotation'>
+<arg declared_type64='CGFloat' name='angle' type64='d'/>
+<retval declared_type64='CGAffineTransform' type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGAffineTransformMakeScale'>
+<arg declared_type64='CGFloat' name='sx' type64='d'/>
+<arg declared_type64='CGFloat' name='sy' type64='d'/>
+<retval declared_type64='CGAffineTransform' type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGAffineTransformMakeTranslation'>
+<arg declared_type64='CGFloat' name='tx' type64='d'/>
+<arg declared_type64='CGFloat' name='ty' type64='d'/>
+<retval declared_type64='CGAffineTransform' type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGAffineTransformRotate'>
+<arg declared_type64='CGAffineTransform' name='t' type64='{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGFloat' name='angle' type64='d'/>
+<retval declared_type64='CGAffineTransform' type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGAffineTransformScale'>
+<arg declared_type64='CGAffineTransform' name='t' type64='{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGFloat' name='sx' type64='d'/>
+<arg declared_type64='CGFloat' name='sy' type64='d'/>
+<retval declared_type64='CGAffineTransform' type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGAffineTransformTranslate'>
+<arg declared_type64='CGAffineTransform' name='t' type64='{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGFloat' name='tx' type64='d'/>
+<arg declared_type64='CGFloat' name='ty' type64='d'/>
+<retval declared_type64='CGAffineTransform' type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGBitmapContextCreate'>
+<arg declared_type64='void * _Nullable' name='data' type64='^v'/>
+<arg declared_type64='size_t' name='width' type64='Q'/>
+<arg declared_type64='size_t' name='height' type64='Q'/>
+<arg declared_type64='size_t' name='bitsPerComponent' type64='Q'/>
+<arg declared_type64='size_t' name='bytesPerRow' type64='Q'/>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<arg declared_type64='uint32_t' name='bitmapInfo' type64='I'/>
+<retval declared_type64='CGContextRef _Nullable' type64='^{CGContext=}'/>
+</function>
+<function name='CGBitmapContextCreateImage'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<retval declared_type64='CGImageRef _Nullable' type64='^{CGImage=}'/>
+</function>
+<function name='CGBitmapContextCreateWithData'>
+<arg declared_type64='void * _Nullable' name='data' type64='^v'/>
+<arg declared_type64='size_t' name='width' type64='Q'/>
+<arg declared_type64='size_t' name='height' type64='Q'/>
+<arg declared_type64='size_t' name='bitsPerComponent' type64='Q'/>
+<arg declared_type64='size_t' name='bytesPerRow' type64='Q'/>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<arg declared_type64='uint32_t' name='bitmapInfo' type64='I'/>
+<arg declared_type64='CGBitmapContextReleaseDataCallback _Nullable' function_pointer='true' name='releaseCallback' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='void * _Nullable' name='releaseInfo' type64='^v'/>
+<retval declared_type64='CGContextRef _Nullable' type64='^{CGContext=}'/>
+</function>
+<function name='CGBitmapContextGetAlphaInfo'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<retval declared_type64='CGImageAlphaInfo' type64='I'/>
+</function>
+<function name='CGBitmapContextGetBitmapInfo'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<retval declared_type64='CGBitmapInfo' type64='I'/>
+</function>
+<function name='CGBitmapContextGetBitsPerComponent'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGBitmapContextGetBitsPerPixel'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGBitmapContextGetBytesPerRow'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGBitmapContextGetColorSpace'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<retval declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGBitmapContextGetData'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<retval declared_type64='void * _Nullable' type64='^v'/>
+</function>
+<function name='CGBitmapContextGetHeight'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGBitmapContextGetWidth'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGColorCreate'>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='components' type64='^d'/>
+<retval declared_type64='CGColorRef _Nullable' type64='^{CGColor=}'/>
+</function>
+<function name='CGColorCreateCopy'>
+<arg declared_type64='CGColorRef _Nullable' name='color' type64='^{CGColor=}'/>
+<retval declared_type64='CGColorRef _Nullable' type64='^{CGColor=}'/>
+</function>
+<function name='CGColorCreateCopyByMatchingToColorSpace'>
+<arg declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+<arg declared_type64='CGColorRenderingIntent' name='intent' type64='i'/>
+<arg declared_type64='CGColorRef _Nullable' name='color' type64='^{CGColor=}'/>
+<arg declared_type64='CFDictionaryRef _Nullable' name='options' type64='^{__CFDictionary=}'/>
+<retval declared_type64='CGColorRef _Nullable' type64='^{CGColor=}'/>
+</function>
+<function name='CGColorCreateCopyWithAlpha'>
+<arg declared_type64='CGColorRef _Nullable' name='color' type64='^{CGColor=}'/>
+<arg declared_type64='CGFloat' name='alpha' type64='d'/>
+<retval declared_type64='CGColorRef _Nullable' type64='^{CGColor=}'/>
+</function>
+<function name='CGColorCreateWithPattern'>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<arg declared_type64='CGPatternRef _Nullable' name='pattern' type64='^{CGPattern=}'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='components' type64='^d'/>
+<retval declared_type64='CGColorRef _Nullable' type64='^{CGColor=}'/>
+</function>
+<function name='CGColorEqualToColor'>
+<arg declared_type64='CGColorRef _Nullable' name='color1' type64='^{CGColor=}'/>
+<arg declared_type64='CGColorRef _Nullable' name='color2' type64='^{CGColor=}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGColorGetAlpha'>
+<arg declared_type64='CGColorRef _Nullable' name='color' type64='^{CGColor=}'/>
+<retval declared_type64='CGFloat' type64='d'/>
+</function>
+<function name='CGColorGetColorSpace'>
+<arg declared_type64='CGColorRef _Nullable' name='color' type64='^{CGColor=}'/>
+<retval declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorGetComponents'>
+<arg declared_type64='CGColorRef _Nullable' name='color' type64='^{CGColor=}'/>
+<retval const='true' declared_type64='CGFloat * _Nullable' type64='^d'/>
+</function>
+<function name='CGColorGetNumberOfComponents'>
+<arg declared_type64='CGColorRef _Nullable' name='color' type64='^{CGColor=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGColorGetPattern'>
+<arg declared_type64='CGColorRef _Nullable' name='color' type64='^{CGColor=}'/>
+<retval declared_type64='CGPatternRef _Nullable' type64='^{CGPattern=}'/>
+</function>
+<function name='CGColorGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='CGColorRelease'>
+<arg declared_type64='CGColorRef _Nullable' name='color' type64='^{CGColor=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGColorRetain'>
+<arg declared_type64='CGColorRef _Nullable' name='color' type64='^{CGColor=}'/>
+<retval declared_type64='CGColorRef _Nullable' type64='^{CGColor=}'/>
+</function>
+<function name='CGColorSpaceCopyICCProfile'>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<retval declared_type64='CFDataRef _Nullable' type64='^{__CFData=}'/>
+</function>
+<function name='CGColorSpaceCreateCalibratedGray'>
+<arg const='true' declared_type64='CGFloat*' name='whitePoint' type64='^d'/>
+<arg const='true' declared_type64='CGFloat*' name='blackPoint' type64='^d'/>
+<arg declared_type64='CGFloat' name='gamma' type64='d'/>
+<retval declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateCalibratedRGB'>
+<arg const='true' declared_type64='CGFloat*' name='whitePoint' type64='^d'/>
+<arg const='true' declared_type64='CGFloat*' name='blackPoint' type64='^d'/>
+<arg const='true' declared_type64='CGFloat*' name='gamma' type64='^d'/>
+<arg const='true' declared_type64='CGFloat*' name='matrix' type64='^d'/>
+<retval declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateDeviceCMYK'>
+<retval declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateDeviceGray'>
+<retval declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateDeviceRGB'>
+<retval declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateICCBased'>
+<arg declared_type64='size_t' name='nComponents' type64='Q'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='range' type64='^d'/>
+<arg declared_type64='CGDataProviderRef _Nullable' name='profile' type64='^{CGDataProvider=}'/>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='alternate' type64='^{CGColorSpace=}'/>
+<retval declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateIndexed'>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='baseSpace' type64='^{CGColorSpace=}'/>
+<arg declared_type64='size_t' name='lastIndex' type64='Q'/>
+<arg const='true' declared_type64='unsigned char * _Nullable' name='colorTable' type64='*'/>
+<retval declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateLab'>
+<arg const='true' declared_type64='CGFloat*' name='whitePoint' type64='^d'/>
+<arg const='true' declared_type64='CGFloat*' name='blackPoint' type64='^d'/>
+<arg const='true' declared_type64='CGFloat*' name='range' type64='^d'/>
+<retval declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreatePattern'>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='baseSpace' type64='^{CGColorSpace=}'/>
+<retval declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateWithICCProfile'>
+<arg declared_type64='CFDataRef _Nullable' name='data' type64='^{__CFData=}'/>
+<retval declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateWithName'>
+<arg declared_type64='CFStringRef _Nullable' name='name' type64='^{__CFString=}'/>
+<retval declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceCreateWithPlatformColorSpace'>
+<arg const='true' declared_type64='void * _Nullable' name='ref' type64='^v'/>
+<retval declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceGetBaseColorSpace'>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<retval declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGColorSpaceGetColorTable'>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<arg declared_type64='uint8_t * _Nullable' name='table' type64='*'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGColorSpaceGetColorTableCount'>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGColorSpaceGetModel'>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<retval declared_type64='CGColorSpaceModel' type64='i'/>
+</function>
+<function name='CGColorSpaceGetNumberOfComponents'>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGColorSpaceGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='CGColorSpaceRelease'>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGColorSpaceRetain'>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<retval declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGContextAddArc'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='x' type64='d'/>
+<arg declared_type64='CGFloat' name='y' type64='d'/>
+<arg declared_type64='CGFloat' name='radius' type64='d'/>
+<arg declared_type64='CGFloat' name='startAngle' type64='d'/>
+<arg declared_type64='CGFloat' name='endAngle' type64='d'/>
+<arg declared_type64='int' name='clockwise' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextAddArcToPoint'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='x1' type64='d'/>
+<arg declared_type64='CGFloat' name='y1' type64='d'/>
+<arg declared_type64='CGFloat' name='x2' type64='d'/>
+<arg declared_type64='CGFloat' name='y2' type64='d'/>
+<arg declared_type64='CGFloat' name='radius' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextAddCurveToPoint'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='cp1x' type64='d'/>
+<arg declared_type64='CGFloat' name='cp1y' type64='d'/>
+<arg declared_type64='CGFloat' name='cp2x' type64='d'/>
+<arg declared_type64='CGFloat' name='cp2y' type64='d'/>
+<arg declared_type64='CGFloat' name='x' type64='d'/>
+<arg declared_type64='CGFloat' name='y' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextAddEllipseInRect'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextAddLineToPoint'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='x' type64='d'/>
+<arg declared_type64='CGFloat' name='y' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextAddLines'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg const='true' declared_type64='CGPoint * _Nullable' name='points' type64='^{CGPoint=dd}'/>
+<arg declared_type64='size_t' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextAddPath'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGPathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextAddQuadCurveToPoint'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='cpx' type64='d'/>
+<arg declared_type64='CGFloat' name='cpy' type64='d'/>
+<arg declared_type64='CGFloat' name='x' type64='d'/>
+<arg declared_type64='CGFloat' name='y' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextAddRect'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextAddRects'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg const='true' declared_type64='CGRect * _Nullable' name='rects' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='size_t' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextBeginPage'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg const='true' declared_type64='CGRect * _Nullable' name='mediaBox' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextBeginPath'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextBeginTransparencyLayer'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CFDictionaryRef _Nullable' name='auxiliaryInfo' type64='^{__CFDictionary=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextBeginTransparencyLayerWithRect'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CFDictionaryRef _Nullable' name='auxInfo' type64='^{__CFDictionary=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextClearRect'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextClip'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextClipToMask'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGImageRef _Nullable' name='mask' type64='^{CGImage=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextClipToRect'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextClipToRects'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg const='true' declared_type64='CGRect * _Nonnull' name='rects' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='size_t' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextClosePath'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextConcatCTM'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGAffineTransform' name='transform' type64='{CGAffineTransform=dddddd}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextConvertPointToDeviceSpace'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGPoint' name='point' type64='{CGPoint=dd}'/>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</function>
+<function name='CGContextConvertPointToUserSpace'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGPoint' name='point' type64='{CGPoint=dd}'/>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</function>
+<function name='CGContextConvertRectToDeviceSpace'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGContextConvertRectToUserSpace'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGContextConvertSizeToDeviceSpace'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGSize' name='size' type64='{CGSize=dd}'/>
+<retval declared_type64='CGSize' type64='{CGSize=dd}'/>
+</function>
+<function name='CGContextConvertSizeToUserSpace'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGSize' name='size' type64='{CGSize=dd}'/>
+<retval declared_type64='CGSize' type64='{CGSize=dd}'/>
+</function>
+<function name='CGContextCopyPath'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='CGPathRef _Nullable' type64='^{CGPath=}'/>
+</function>
+<function name='CGContextDrawImage'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextDrawLayerAtPoint'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<arg declared_type64='CGPoint' name='point' type64='{CGPoint=dd}'/>
+<arg declared_type64='CGLayerRef _Nullable' name='layer' type64='^{CGLayer=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextDrawLayerInRect'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGLayerRef _Nullable' name='layer' type64='^{CGLayer=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextDrawLinearGradient'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGGradientRef _Nullable' name='gradient' type64='^{CGGradient=}'/>
+<arg declared_type64='CGPoint' name='startPoint' type64='{CGPoint=dd}'/>
+<arg declared_type64='CGPoint' name='endPoint' type64='{CGPoint=dd}'/>
+<arg declared_type64='CGGradientDrawingOptions' name='options' type64='I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextDrawPDFPage'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGPDFPageRef _Nullable' name='page' type64='^{CGPDFPage=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextDrawPath'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGPathDrawingMode' name='mode' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextDrawRadialGradient'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGGradientRef _Nullable' name='gradient' type64='^{CGGradient=}'/>
+<arg declared_type64='CGPoint' name='startCenter' type64='{CGPoint=dd}'/>
+<arg declared_type64='CGFloat' name='startRadius' type64='d'/>
+<arg declared_type64='CGPoint' name='endCenter' type64='{CGPoint=dd}'/>
+<arg declared_type64='CGFloat' name='endRadius' type64='d'/>
+<arg declared_type64='CGGradientDrawingOptions' name='options' type64='I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextDrawShading'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGShadingRef _Nullable' name='shading' type64='^{CGShading=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextDrawTiledImage'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextEOClip'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextEOFillPath'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextEndPage'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextEndTransparencyLayer'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextFillEllipseInRect'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextFillPath'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextFillRect'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextFillRects'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg const='true' declared_type64='CGRect * _Nullable' name='rects' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='size_t' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextFlush'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextGetCTM'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='CGAffineTransform' type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGContextGetClipBoundingBox'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGContextGetInterpolationQuality'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='CGInterpolationQuality' type64='i'/>
+</function>
+<function name='CGContextGetPathBoundingBox'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGContextGetPathCurrentPoint'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</function>
+<function name='CGContextGetTextMatrix'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='CGAffineTransform' type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGContextGetTextPosition'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</function>
+<function name='CGContextGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='CGContextGetUserSpaceToDeviceSpaceTransform'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='CGAffineTransform' type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGContextIsPathEmpty'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGContextMoveToPoint'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='x' type64='d'/>
+<arg declared_type64='CGFloat' name='y' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextPathContainsPoint'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGPoint' name='point' type64='{CGPoint=dd}'/>
+<arg declared_type64='CGPathDrawingMode' name='mode' type64='i'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGContextRelease'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextReplacePathWithStrokedPath'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextRestoreGState'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextRetain'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='CGContextRef _Nullable' type64='^{CGContext=}'/>
+</function>
+<function name='CGContextRotateCTM'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='angle' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSaveGState'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextScaleCTM'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='sx' type64='d'/>
+<arg declared_type64='CGFloat' name='sy' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSelectFont'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg const='true' declared_type64='char * _Nullable' name='name' type64='*'/>
+<arg declared_type64='CGFloat' name='size' type64='d'/>
+<arg declared_type64='CGTextEncoding' name='textEncoding' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetAllowsAntialiasing'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='_Bool' name='allowsAntialiasing' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetAllowsFontSmoothing'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='_Bool' name='allowsFontSmoothing' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetAllowsFontSubpixelPositioning'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='_Bool' name='allowsFontSubpixelPositioning' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetAllowsFontSubpixelQuantization'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='_Bool' name='allowsFontSubpixelQuantization' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetAlpha'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='alpha' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetBlendMode'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGBlendMode' name='mode' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetCMYKFillColor'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='cyan' type64='d'/>
+<arg declared_type64='CGFloat' name='magenta' type64='d'/>
+<arg declared_type64='CGFloat' name='yellow' type64='d'/>
+<arg declared_type64='CGFloat' name='black' type64='d'/>
+<arg declared_type64='CGFloat' name='alpha' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetCMYKStrokeColor'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='cyan' type64='d'/>
+<arg declared_type64='CGFloat' name='magenta' type64='d'/>
+<arg declared_type64='CGFloat' name='yellow' type64='d'/>
+<arg declared_type64='CGFloat' name='black' type64='d'/>
+<arg declared_type64='CGFloat' name='alpha' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetCharacterSpacing'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='spacing' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetFillColor'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='components' type64='^d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetFillColorSpace'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetFillColorWithColor'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGColorRef _Nullable' name='color' type64='^{CGColor=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetFillPattern'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGPatternRef _Nullable' name='pattern' type64='^{CGPattern=}'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='components' type64='^d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetFlatness'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='flatness' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetFont'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetFontSize'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='size' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetGrayFillColor'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='gray' type64='d'/>
+<arg declared_type64='CGFloat' name='alpha' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetGrayStrokeColor'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='gray' type64='d'/>
+<arg declared_type64='CGFloat' name='alpha' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetInterpolationQuality'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGInterpolationQuality' name='quality' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetLineCap'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGLineCap' name='cap' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetLineDash'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='phase' type64='d'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='lengths' type64='^d'/>
+<arg declared_type64='size_t' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetLineJoin'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGLineJoin' name='join' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetLineWidth'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='width' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetMiterLimit'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='limit' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetPatternPhase'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGSize' name='phase' type64='{CGSize=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetRGBFillColor'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='red' type64='d'/>
+<arg declared_type64='CGFloat' name='green' type64='d'/>
+<arg declared_type64='CGFloat' name='blue' type64='d'/>
+<arg declared_type64='CGFloat' name='alpha' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetRGBStrokeColor'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='red' type64='d'/>
+<arg declared_type64='CGFloat' name='green' type64='d'/>
+<arg declared_type64='CGFloat' name='blue' type64='d'/>
+<arg declared_type64='CGFloat' name='alpha' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetRenderingIntent'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGColorRenderingIntent' name='intent' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetShadow'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGSize' name='offset' type64='{CGSize=dd}'/>
+<arg declared_type64='CGFloat' name='blur' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetShadowWithColor'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGSize' name='offset' type64='{CGSize=dd}'/>
+<arg declared_type64='CGFloat' name='blur' type64='d'/>
+<arg declared_type64='CGColorRef _Nullable' name='color' type64='^{CGColor=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetShouldAntialias'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='_Bool' name='shouldAntialias' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetShouldSmoothFonts'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='_Bool' name='shouldSmoothFonts' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetShouldSubpixelPositionFonts'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='_Bool' name='shouldSubpixelPositionFonts' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetShouldSubpixelQuantizeFonts'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='_Bool' name='shouldSubpixelQuantizeFonts' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetStrokeColor'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='components' type64='^d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetStrokeColorSpace'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetStrokeColorWithColor'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGColorRef _Nullable' name='color' type64='^{CGColor=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetStrokePattern'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGPatternRef _Nullable' name='pattern' type64='^{CGPattern=}'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='components' type64='^d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetTextDrawingMode'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGTextDrawingMode' name='mode' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetTextMatrix'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGAffineTransform' name='t' type64='{CGAffineTransform=dddddd}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSetTextPosition'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='x' type64='d'/>
+<arg declared_type64='CGFloat' name='y' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextShowGlyphs'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg const='true' declared_type64='CGGlyph * _Nullable' name='g' type64='^S'/>
+<arg declared_type64='size_t' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextShowGlyphsAtPoint'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='x' type64='d'/>
+<arg declared_type64='CGFloat' name='y' type64='d'/>
+<arg const='true' declared_type64='CGGlyph * _Nullable' name='glyphs' type64='^S'/>
+<arg declared_type64='size_t' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextShowGlyphsAtPositions'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg const='true' declared_type64='CGGlyph * _Nullable' name='glyphs' type64='^S'/>
+<arg const='true' declared_type64='CGPoint * _Nullable' name='Lpositions' type64='^{CGPoint=dd}'/>
+<arg declared_type64='size_t' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextShowGlyphsWithAdvances'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg const='true' declared_type64='CGGlyph * _Nullable' name='glyphs' type64='^S'/>
+<arg const='true' declared_type64='CGSize * _Nullable' name='advances' type64='^{CGSize=dd}'/>
+<arg declared_type64='size_t' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextShowText'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg const='true' declared_type64='char * _Nullable' name='string' type64='*'/>
+<arg declared_type64='size_t' name='length' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextShowTextAtPoint'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='x' type64='d'/>
+<arg declared_type64='CGFloat' name='y' type64='d'/>
+<arg const='true' declared_type64='char * _Nullable' name='string' type64='*'/>
+<arg declared_type64='size_t' name='length' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextStrokeEllipseInRect'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextStrokeLineSegments'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg const='true' declared_type64='CGPoint * _Nullable' name='points' type64='^{CGPoint=dd}'/>
+<arg declared_type64='size_t' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextStrokePath'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextStrokeRect'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextStrokeRectWithWidth'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGFloat' name='width' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextSynchronize'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGContextTranslateCTM'>
+<arg declared_type64='CGContextRef _Nullable' name='c' type64='^{CGContext=}'/>
+<arg declared_type64='CGFloat' name='tx' type64='d'/>
+<arg declared_type64='CGFloat' name='ty' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGDataConsumerCreate'>
+<arg declared_type64='void * _Nullable' name='info' type64='^v'/>
+<arg const='true' declared_type64='CGDataConsumerCallbacks * _Nullable' name='cbks' type64='^{CGDataConsumerCallbacks=^?^?}'/>
+<retval declared_type64='CGDataConsumerRef _Nullable' type64='^{CGDataConsumer=}'/>
+</function>
+<function name='CGDataConsumerCreateWithCFData'>
+<arg declared_type64='CFMutableDataRef _Nullable' name='data' type64='^{__CFData=}'/>
+<retval declared_type64='CGDataConsumerRef _Nullable' type64='^{CGDataConsumer=}'/>
+</function>
+<function name='CGDataConsumerCreateWithURL'>
+<arg declared_type64='CFURLRef _Nullable' name='url' type64='^{__CFURL=}'/>
+<retval declared_type64='CGDataConsumerRef _Nullable' type64='^{CGDataConsumer=}'/>
+</function>
+<function name='CGDataConsumerGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='CGDataConsumerRelease'>
+<arg declared_type64='CGDataConsumerRef _Nullable' name='consumer' type64='^{CGDataConsumer=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGDataConsumerRetain'>
+<arg declared_type64='CGDataConsumerRef _Nullable' name='consumer' type64='^{CGDataConsumer=}'/>
+<retval declared_type64='CGDataConsumerRef _Nullable' type64='^{CGDataConsumer=}'/>
+</function>
+<function name='CGDataProviderCopyData'>
+<arg declared_type64='CGDataProviderRef _Nullable' name='provider' type64='^{CGDataProvider=}'/>
+<retval declared_type64='CFDataRef _Nullable' type64='^{__CFData=}'/>
+</function>
+<function name='CGDataProviderCreateDirect'>
+<arg declared_type64='void * _Nullable' name='info' type64='^v'/>
+<arg declared_type64='off_t' name='size' type64='q'/>
+<arg const='true' declared_type64='CGDataProviderDirectCallbacks * _Nullable' name='callbacks' type64='^{CGDataProviderDirectCallbacks=I^?^?^?^?}'/>
+<retval declared_type64='CGDataProviderRef _Nullable' type64='^{CGDataProvider=}'/>
+</function>
+<function name='CGDataProviderCreateSequential'>
+<arg declared_type64='void * _Nullable' name='info' type64='^v'/>
+<arg const='true' declared_type64='CGDataProviderSequentialCallbacks * _Nullable' name='callbacks' type64='^{CGDataProviderSequentialCallbacks=I^?^?^?^?}'/>
+<retval declared_type64='CGDataProviderRef _Nullable' type64='^{CGDataProvider=}'/>
+</function>
+<function name='CGDataProviderCreateWithCFData'>
+<arg declared_type64='CFDataRef _Nullable' name='data' type64='^{__CFData=}'/>
+<retval declared_type64='CGDataProviderRef _Nullable' type64='^{CGDataProvider=}'/>
+</function>
+<function name='CGDataProviderCreateWithData'>
+<arg declared_type64='void * _Nullable' name='info' type64='^v'/>
+<arg const='true' declared_type64='void * _Nullable' name='data' type64='^v'/>
+<arg declared_type64='size_t' name='size' type64='Q'/>
+<arg declared_type64='CGDataProviderReleaseDataCallback _Nullable' function_pointer='true' name='releaseData' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<arg const='true' declared_type64='void * _Nonnull' type64='^v'/>
+<arg declared_type64='size_t' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='CGDataProviderRef _Nullable' type64='^{CGDataProvider=}'/>
+</function>
+<function name='CGDataProviderCreateWithFilename'>
+<arg const='true' declared_type64='char * _Nullable' name='filename' type64='*'/>
+<retval declared_type64='CGDataProviderRef _Nullable' type64='^{CGDataProvider=}'/>
+</function>
+<function name='CGDataProviderCreateWithURL'>
+<arg declared_type64='CFURLRef _Nullable' name='url' type64='^{__CFURL=}'/>
+<retval declared_type64='CGDataProviderRef _Nullable' type64='^{CGDataProvider=}'/>
+</function>
+<function name='CGDataProviderGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='CGDataProviderRelease'>
+<arg declared_type64='CGDataProviderRef _Nullable' name='provider' type64='^{CGDataProvider=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGDataProviderRetain'>
+<arg declared_type64='CGDataProviderRef _Nullable' name='provider' type64='^{CGDataProvider=}'/>
+<retval declared_type64='CGDataProviderRef _Nullable' type64='^{CGDataProvider=}'/>
+</function>
+<function name='CGFontCanCreatePostScriptSubset'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<arg declared_type64='CGFontPostScriptFormat' name='format' type64='i'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGFontCopyFullName'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<retval declared_type64='CFStringRef _Nullable' type64='^{__CFString=}'/>
+</function>
+<function name='CGFontCopyGlyphNameForGlyph'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<arg declared_type64='CGGlyph' name='glyph' type64='S'/>
+<retval declared_type64='CFStringRef _Nullable' type64='^{__CFString=}'/>
+</function>
+<function name='CGFontCopyPostScriptName'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<retval declared_type64='CFStringRef _Nullable' type64='^{__CFString=}'/>
+</function>
+<function name='CGFontCopyTableForTag'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<arg declared_type64='uint32_t' name='tag' type64='I'/>
+<retval declared_type64='CFDataRef _Nullable' type64='^{__CFData=}'/>
+</function>
+<function name='CGFontCopyTableTags'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<retval declared_type64='CFArrayRef _Nullable' type64='^{__CFArray=}'/>
+</function>
+<function name='CGFontCopyVariationAxes'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<retval declared_type64='CFArrayRef _Nullable' type64='^{__CFArray=}'/>
+</function>
+<function name='CGFontCopyVariations'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<retval declared_type64='CFDictionaryRef _Nullable' type64='^{__CFDictionary=}'/>
+</function>
+<function name='CGFontCreateCopyWithVariations'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<arg declared_type64='CFDictionaryRef _Nullable' name='variations' type64='^{__CFDictionary=}'/>
+<retval declared_type64='CGFontRef _Nullable' type64='^{CGFont=}'/>
+</function>
+<function name='CGFontCreatePostScriptEncoding'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<arg const='true' declared_type64='CGGlyph*' name='encoding' type64='^S'/>
+<retval declared_type64='CFDataRef _Nullable' type64='^{__CFData=}'/>
+</function>
+<function name='CGFontCreatePostScriptSubset'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<arg declared_type64='CFStringRef _Nullable' name='subsetName' type64='^{__CFString=}'/>
+<arg declared_type64='CGFontPostScriptFormat' name='format' type64='i'/>
+<arg const='true' declared_type64='CGGlyph * _Nullable' name='glyphs' type64='^S'/>
+<arg declared_type64='size_t' name='count' type64='Q'/>
+<arg const='true' declared_type64='CGGlyph*' name='encoding' type64='^S'/>
+<retval declared_type64='CFDataRef _Nullable' type64='^{__CFData=}'/>
+</function>
+<function name='CGFontCreateWithDataProvider'>
+<arg declared_type64='CGDataProviderRef _Nullable' name='provider' type64='^{CGDataProvider=}'/>
+<retval declared_type64='CGFontRef _Nullable' type64='^{CGFont=}'/>
+</function>
+<function name='CGFontCreateWithFontName'>
+<arg declared_type64='CFStringRef _Nullable' name='name' type64='^{__CFString=}'/>
+<retval declared_type64='CGFontRef _Nullable' type64='^{CGFont=}'/>
+</function>
+<function name='CGFontGetAscent'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<retval declared_type64='int' type64='i'/>
+</function>
+<function name='CGFontGetCapHeight'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<retval declared_type64='int' type64='i'/>
+</function>
+<function name='CGFontGetDescent'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<retval declared_type64='int' type64='i'/>
+</function>
+<function name='CGFontGetFontBBox'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGFontGetGlyphAdvances'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<arg const='true' declared_type64='CGGlyph * _Nonnull' name='glyphs' type64='^S'/>
+<arg declared_type64='size_t' name='count' type64='Q'/>
+<arg declared_type64='int * _Nonnull' name='advances' type64='^i'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGFontGetGlyphBBoxes'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<arg const='true' declared_type64='CGGlyph * _Nonnull' name='glyphs' type64='^S'/>
+<arg declared_type64='size_t' name='count' type64='Q'/>
+<arg declared_type64='CGRect * _Nonnull' name='bboxes' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGFontGetGlyphWithGlyphName'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<arg declared_type64='CFStringRef _Nullable' name='name' type64='^{__CFString=}'/>
+<retval declared_type64='CGGlyph' type64='S'/>
+</function>
+<function name='CGFontGetItalicAngle'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<retval declared_type64='CGFloat' type64='d'/>
+</function>
+<function name='CGFontGetLeading'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<retval declared_type64='int' type64='i'/>
+</function>
+<function name='CGFontGetNumberOfGlyphs'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGFontGetStemV'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<retval declared_type64='CGFloat' type64='d'/>
+</function>
+<function name='CGFontGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='CGFontGetUnitsPerEm'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<retval declared_type64='int' type64='i'/>
+</function>
+<function name='CGFontGetXHeight'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<retval declared_type64='int' type64='i'/>
+</function>
+<function name='CGFontRelease'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGFontRetain'>
+<arg declared_type64='CGFontRef _Nullable' name='font' type64='^{CGFont=}'/>
+<retval declared_type64='CGFontRef _Nullable' type64='^{CGFont=}'/>
+</function>
+<function name='CGFunctionCreate'>
+<arg declared_type64='void * _Nullable' name='info' type64='^v'/>
+<arg declared_type64='size_t' name='domainDimension' type64='Q'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='domain' type64='^d'/>
+<arg declared_type64='size_t' name='rangeDimension' type64='Q'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='range' type64='^d'/>
+<arg const='true' declared_type64='CGFunctionCallbacks * _Nullable' name='callbacks' type64='^{CGFunctionCallbacks=I^?^?}'/>
+<retval declared_type64='CGFunctionRef _Nullable' type64='^{CGFunction=}'/>
+</function>
+<function name='CGFunctionGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='CGFunctionRelease'>
+<arg declared_type64='CGFunctionRef _Nullable' name='function' type64='^{CGFunction=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGFunctionRetain'>
+<arg declared_type64='CGFunctionRef _Nullable' name='function' type64='^{CGFunction=}'/>
+<retval declared_type64='CGFunctionRef _Nullable' type64='^{CGFunction=}'/>
+</function>
+<function name='CGGradientCreateWithColorComponents'>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='components' type64='^d'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='locations' type64='^d'/>
+<arg declared_type64='size_t' name='count' type64='Q'/>
+<retval declared_type64='CGGradientRef _Nullable' type64='^{CGGradient=}'/>
+</function>
+<function name='CGGradientCreateWithColors'>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<arg declared_type64='CFArrayRef _Nullable' name='colors' type64='^{__CFArray=}'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='locations' type64='^d'/>
+<retval declared_type64='CGGradientRef _Nullable' type64='^{CGGradient=}'/>
+</function>
+<function name='CGGradientGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='CGGradientRelease'>
+<arg declared_type64='CGGradientRef _Nullable' name='gradient' type64='^{CGGradient=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGGradientRetain'>
+<arg declared_type64='CGGradientRef _Nullable' name='gradient' type64='^{CGGradient=}'/>
+<retval declared_type64='CGGradientRef _Nullable' type64='^{CGGradient=}'/>
+</function>
+<function name='CGImageCreate'>
+<arg declared_type64='size_t' name='width' type64='Q'/>
+<arg declared_type64='size_t' name='height' type64='Q'/>
+<arg declared_type64='size_t' name='bitsPerComponent' type64='Q'/>
+<arg declared_type64='size_t' name='bitsPerPixel' type64='Q'/>
+<arg declared_type64='size_t' name='bytesPerRow' type64='Q'/>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<arg declared_type64='CGBitmapInfo' name='bitmapInfo' type64='I'/>
+<arg declared_type64='CGDataProviderRef _Nullable' name='provider' type64='^{CGDataProvider=}'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='decode' type64='^d'/>
+<arg declared_type64='_Bool' name='shouldInterpolate' type64='B'/>
+<arg declared_type64='CGColorRenderingIntent' name='intent' type64='i'/>
+<retval declared_type64='CGImageRef _Nullable' type64='^{CGImage=}'/>
+</function>
+<function name='CGImageCreateCopy'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval declared_type64='CGImageRef _Nullable' type64='^{CGImage=}'/>
+</function>
+<function name='CGImageCreateCopyWithColorSpace'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<retval declared_type64='CGImageRef _Nullable' type64='^{CGImage=}'/>
+</function>
+<function name='CGImageCreateWithImageInRect'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='CGImageRef _Nullable' type64='^{CGImage=}'/>
+</function>
+<function name='CGImageCreateWithJPEGDataProvider'>
+<arg declared_type64='CGDataProviderRef _Nullable' name='source' type64='^{CGDataProvider=}'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='decode' type64='^d'/>
+<arg declared_type64='_Bool' name='shouldInterpolate' type64='B'/>
+<arg declared_type64='CGColorRenderingIntent' name='intent' type64='i'/>
+<retval declared_type64='CGImageRef _Nullable' type64='^{CGImage=}'/>
+</function>
+<function name='CGImageCreateWithMask'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<arg declared_type64='CGImageRef _Nullable' name='mask' type64='^{CGImage=}'/>
+<retval declared_type64='CGImageRef _Nullable' type64='^{CGImage=}'/>
+</function>
+<function name='CGImageCreateWithMaskingColors'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='components' type64='^d'/>
+<retval declared_type64='CGImageRef _Nullable' type64='^{CGImage=}'/>
+</function>
+<function name='CGImageCreateWithPNGDataProvider'>
+<arg declared_type64='CGDataProviderRef _Nullable' name='source' type64='^{CGDataProvider=}'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='decode' type64='^d'/>
+<arg declared_type64='_Bool' name='shouldInterpolate' type64='B'/>
+<arg declared_type64='CGColorRenderingIntent' name='intent' type64='i'/>
+<retval declared_type64='CGImageRef _Nullable' type64='^{CGImage=}'/>
+</function>
+<function name='CGImageGetAlphaInfo'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval declared_type64='CGImageAlphaInfo' type64='I'/>
+</function>
+<function name='CGImageGetBitmapInfo'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval declared_type64='CGBitmapInfo' type64='I'/>
+</function>
+<function name='CGImageGetBitsPerComponent'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGImageGetBitsPerPixel'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGImageGetBytesPerRow'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGImageGetColorSpace'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+</function>
+<function name='CGImageGetDataProvider'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval declared_type64='CGDataProviderRef _Nullable' type64='^{CGDataProvider=}'/>
+</function>
+<function name='CGImageGetDecode'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval const='true' declared_type64='CGFloat * _Nullable' type64='^d'/>
+</function>
+<function name='CGImageGetHeight'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGImageGetRenderingIntent'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval declared_type64='CGColorRenderingIntent' type64='i'/>
+</function>
+<function name='CGImageGetShouldInterpolate'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGImageGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='CGImageGetUTType'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval declared_type64='CFStringRef _Nullable' type64='^{__CFString=}'/>
+</function>
+<function name='CGImageGetWidth'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGImageIsMask'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGImageMaskCreate'>
+<arg declared_type64='size_t' name='width' type64='Q'/>
+<arg declared_type64='size_t' name='height' type64='Q'/>
+<arg declared_type64='size_t' name='bitsPerComponent' type64='Q'/>
+<arg declared_type64='size_t' name='bitsPerPixel' type64='Q'/>
+<arg declared_type64='size_t' name='bytesPerRow' type64='Q'/>
+<arg declared_type64='CGDataProviderRef _Nullable' name='provider' type64='^{CGDataProvider=}'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='decode' type64='^d'/>
+<arg declared_type64='_Bool' name='shouldInterpolate' type64='B'/>
+<retval declared_type64='CGImageRef _Nullable' type64='^{CGImage=}'/>
+</function>
+<function name='CGImageRelease'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGImageRetain'>
+<arg declared_type64='CGImageRef _Nullable' name='image' type64='^{CGImage=}'/>
+<retval declared_type64='CGImageRef _Nullable' type64='^{CGImage=}'/>
+</function>
+<function name='CGLayerCreateWithContext'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<arg declared_type64='CGSize' name='size' type64='{CGSize=dd}'/>
+<arg declared_type64='CFDictionaryRef _Nullable' name='auxiliaryInfo' type64='^{__CFDictionary=}'/>
+<retval declared_type64='CGLayerRef _Nullable' type64='^{CGLayer=}'/>
+</function>
+<function name='CGLayerGetContext'>
+<arg declared_type64='CGLayerRef _Nullable' name='layer' type64='^{CGLayer=}'/>
+<retval declared_type64='CGContextRef _Nullable' type64='^{CGContext=}'/>
+</function>
+<function name='CGLayerGetSize'>
+<arg declared_type64='CGLayerRef _Nullable' name='layer' type64='^{CGLayer=}'/>
+<retval declared_type64='CGSize' type64='{CGSize=dd}'/>
+</function>
+<function name='CGLayerGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='CGLayerRelease'>
+<arg declared_type64='CGLayerRef _Nullable' name='layer' type64='^{CGLayer=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGLayerRetain'>
+<arg declared_type64='CGLayerRef _Nullable' name='layer' type64='^{CGLayer=}'/>
+<retval declared_type64='CGLayerRef _Nullable' type64='^{CGLayer=}'/>
+</function>
+<function name='CGPDFArrayGetArray'>
+<arg declared_type64='CGPDFArrayRef _Nullable' name='array' type64='^{CGPDFArray=}'/>
+<arg declared_type64='size_t' name='index' type64='Q'/>
+<arg declared_type64='CGPDFArrayRef _Nullable * _Nullable' name='value' type64='^^{CGPDFArray}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFArrayGetBoolean'>
+<arg declared_type64='CGPDFArrayRef _Nullable' name='array' type64='^{CGPDFArray=}'/>
+<arg declared_type64='size_t' name='index' type64='Q'/>
+<arg declared_type64='CGPDFBoolean * _Nullable' name='value' type64='*'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFArrayGetCount'>
+<arg declared_type64='CGPDFArrayRef _Nullable' name='array' type64='^{CGPDFArray=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGPDFArrayGetDictionary'>
+<arg declared_type64='CGPDFArrayRef _Nullable' name='array' type64='^{CGPDFArray=}'/>
+<arg declared_type64='size_t' name='index' type64='Q'/>
+<arg declared_type64='CGPDFDictionaryRef _Nullable * _Nullable' name='value' type64='^^{CGPDFDictionary}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFArrayGetInteger'>
+<arg declared_type64='CGPDFArrayRef _Nullable' name='array' type64='^{CGPDFArray=}'/>
+<arg declared_type64='size_t' name='index' type64='Q'/>
+<arg declared_type64='CGPDFInteger * _Nullable' name='value' type64='^q'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFArrayGetName'>
+<arg declared_type64='CGPDFArrayRef _Nullable' name='array' type64='^{CGPDFArray=}'/>
+<arg declared_type64='size_t' name='index' type64='Q'/>
+<arg const='true' declared_type64='char * _Nullable * _Nullable' name='value' type64='^*'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFArrayGetNull'>
+<arg declared_type64='CGPDFArrayRef _Nullable' name='array' type64='^{CGPDFArray=}'/>
+<arg declared_type64='size_t' name='index' type64='Q'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFArrayGetNumber'>
+<arg declared_type64='CGPDFArrayRef _Nullable' name='array' type64='^{CGPDFArray=}'/>
+<arg declared_type64='size_t' name='index' type64='Q'/>
+<arg declared_type64='CGPDFReal * _Nullable' name='value' type64='^d'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFArrayGetObject'>
+<arg declared_type64='CGPDFArrayRef _Nullable' name='array' type64='^{CGPDFArray=}'/>
+<arg declared_type64='size_t' name='index' type64='Q'/>
+<arg declared_type64='CGPDFObjectRef _Nullable * _Nullable' name='value' type64='^^(CGPDFObject)'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFArrayGetStream'>
+<arg declared_type64='CGPDFArrayRef _Nullable' name='array' type64='^{CGPDFArray=}'/>
+<arg declared_type64='size_t' name='index' type64='Q'/>
+<arg declared_type64='CGPDFStreamRef _Nullable * _Nullable' name='value' type64='^^{CGPDFStream}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFArrayGetString'>
+<arg declared_type64='CGPDFArrayRef _Nullable' name='array' type64='^{CGPDFArray=}'/>
+<arg declared_type64='size_t' name='index' type64='Q'/>
+<arg declared_type64='CGPDFStringRef _Nullable * _Nullable' name='value' type64='^^{CGPDFString}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFContentStreamCreateWithPage'>
+<arg declared_type64='CGPDFPageRef' name='page' type64='^{CGPDFPage=}'/>
+<retval already_retained='true' declared_type64='CGPDFContentStreamRef' type64='^{CGPDFContentStream=}'/>
+</function>
+<function name='CGPDFContentStreamCreateWithStream'>
+<arg declared_type64='CGPDFStreamRef' name='stream' type64='^{CGPDFStream=}'/>
+<arg declared_type64='CGPDFDictionaryRef' name='streamResources' type64='^{CGPDFDictionary=}'/>
+<arg declared_type64='CGPDFContentStreamRef' name='parent' type64='^{CGPDFContentStream=}'/>
+<retval already_retained='true' declared_type64='CGPDFContentStreamRef' type64='^{CGPDFContentStream=}'/>
+</function>
+<function name='CGPDFContentStreamGetResource'>
+<arg declared_type64='CGPDFContentStreamRef' name='cs' type64='^{CGPDFContentStream=}'/>
+<arg const='true' declared_type64='char*' name='category' type64='*'/>
+<arg const='true' declared_type64='char*' name='name' type64='*'/>
+<retval declared_type64='CGPDFObjectRef' type64='^(CGPDFObject=)'/>
+</function>
+<function name='CGPDFContentStreamGetStreams'>
+<arg declared_type64='CGPDFContentStreamRef' name='cs' type64='^{CGPDFContentStream=}'/>
+<retval declared_type64='CFArrayRef' type64='^{__CFArray=}'/>
+</function>
+<function name='CGPDFContentStreamRelease'>
+<arg declared_type64='CGPDFContentStreamRef' name='cs' type64='^{CGPDFContentStream=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPDFContentStreamRetain'>
+<arg declared_type64='CGPDFContentStreamRef' name='cs' type64='^{CGPDFContentStream=}'/>
+<retval declared_type64='CGPDFContentStreamRef' type64='^{CGPDFContentStream=}'/>
+</function>
+<function name='CGPDFContextAddDestinationAtPoint'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='name' type64='^{__CFString=}'/>
+<arg declared_type64='CGPoint' name='point' type64='{CGPoint=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPDFContextAddDocumentMetadata'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<arg declared_type64='CFDataRef _Nullable' name='metadata' type64='^{__CFData=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPDFContextBeginPage'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<arg declared_type64='CFDictionaryRef _Nullable' name='pageInfo' type64='^{__CFDictionary=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPDFContextClose'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPDFContextCreate'>
+<arg declared_type64='CGDataConsumerRef _Nullable' name='consumer' type64='^{CGDataConsumer=}'/>
+<arg const='true' declared_type64='CGRect * _Nullable' name='mediaBox' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CFDictionaryRef _Nullable' name='auxiliaryInfo' type64='^{__CFDictionary=}'/>
+<retval declared_type64='CGContextRef _Nullable' type64='^{CGContext=}'/>
+</function>
+<function name='CGPDFContextCreateWithURL'>
+<arg declared_type64='CFURLRef _Nullable' name='url' type64='^{__CFURL=}'/>
+<arg const='true' declared_type64='CGRect * _Nullable' name='mediaBox' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CFDictionaryRef _Nullable' name='auxiliaryInfo' type64='^{__CFDictionary=}'/>
+<retval declared_type64='CGContextRef _Nullable' type64='^{CGContext=}'/>
+</function>
+<function name='CGPDFContextEndPage'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPDFContextSetDestinationForRect'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='name' type64='^{__CFString=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPDFContextSetURLForRect'>
+<arg declared_type64='CGContextRef _Nullable' name='context' type64='^{CGContext=}'/>
+<arg declared_type64='CFURLRef _Nonnull' name='url' type64='^{__CFURL=}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPDFDictionaryApplyFunction'>
+<arg declared_type64='CGPDFDictionaryRef _Nullable' name='dict' type64='^{CGPDFDictionary=}'/>
+<arg declared_type64='CGPDFDictionaryApplierFunction _Nullable' function_pointer='true' name='function' type64='^?'>
+<arg const='true' declared_type64='char * _Nonnull' type64='*'/>
+<arg declared_type64='CGPDFObjectRef _Nonnull' type64='^(CGPDFObject=)'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='void * _Nullable' name='info' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPDFDictionaryGetArray'>
+<arg declared_type64='CGPDFDictionaryRef _Nullable' name='dict' type64='^{CGPDFDictionary=}'/>
+<arg const='true' declared_type64='char * _Nonnull' name='key' type64='*'/>
+<arg declared_type64='CGPDFArrayRef _Nullable * _Nullable' name='value' type64='^^{CGPDFArray}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFDictionaryGetBoolean'>
+<arg declared_type64='CGPDFDictionaryRef _Nullable' name='dict' type64='^{CGPDFDictionary=}'/>
+<arg const='true' declared_type64='char * _Nonnull' name='key' type64='*'/>
+<arg declared_type64='CGPDFBoolean * _Nullable' name='value' type64='*'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFDictionaryGetCount'>
+<arg declared_type64='CGPDFDictionaryRef _Nullable' name='dict' type64='^{CGPDFDictionary=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGPDFDictionaryGetDictionary'>
+<arg declared_type64='CGPDFDictionaryRef _Nullable' name='dict' type64='^{CGPDFDictionary=}'/>
+<arg const='true' declared_type64='char * _Nonnull' name='key' type64='*'/>
+<arg declared_type64='CGPDFDictionaryRef _Nullable * _Nullable' name='value' type64='^^{CGPDFDictionary}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFDictionaryGetInteger'>
+<arg declared_type64='CGPDFDictionaryRef _Nullable' name='dict' type64='^{CGPDFDictionary=}'/>
+<arg const='true' declared_type64='char * _Nonnull' name='key' type64='*'/>
+<arg declared_type64='CGPDFInteger * _Nullable' name='value' type64='^q'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFDictionaryGetName'>
+<arg declared_type64='CGPDFDictionaryRef _Nullable' name='dict' type64='^{CGPDFDictionary=}'/>
+<arg const='true' declared_type64='char * _Nonnull' name='key' type64='*'/>
+<arg const='true' declared_type64='char * _Nullable * _Nullable' name='value' type64='^*'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFDictionaryGetNumber'>
+<arg declared_type64='CGPDFDictionaryRef _Nullable' name='dict' type64='^{CGPDFDictionary=}'/>
+<arg const='true' declared_type64='char * _Nonnull' name='key' type64='*'/>
+<arg declared_type64='CGPDFReal * _Nullable' name='value' type64='^d'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFDictionaryGetObject'>
+<arg declared_type64='CGPDFDictionaryRef _Nullable' name='dict' type64='^{CGPDFDictionary=}'/>
+<arg const='true' declared_type64='char * _Nonnull' name='key' type64='*'/>
+<arg declared_type64='CGPDFObjectRef _Nullable * _Nullable' name='value' type64='^^(CGPDFObject)'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFDictionaryGetStream'>
+<arg declared_type64='CGPDFDictionaryRef _Nullable' name='dict' type64='^{CGPDFDictionary=}'/>
+<arg const='true' declared_type64='char * _Nonnull' name='key' type64='*'/>
+<arg declared_type64='CGPDFStreamRef _Nullable * _Nullable' name='value' type64='^^{CGPDFStream}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFDictionaryGetString'>
+<arg declared_type64='CGPDFDictionaryRef _Nullable' name='dict' type64='^{CGPDFDictionary=}'/>
+<arg const='true' declared_type64='char * _Nonnull' name='key' type64='*'/>
+<arg declared_type64='CGPDFStringRef _Nullable * _Nullable' name='value' type64='^^{CGPDFString}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFDocumentAllowsCopying'>
+<arg declared_type64='CGPDFDocumentRef _Nullable' name='document' type64='^{CGPDFDocument=}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFDocumentAllowsPrinting'>
+<arg declared_type64='CGPDFDocumentRef _Nullable' name='document' type64='^{CGPDFDocument=}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFDocumentCreateWithProvider'>
+<arg declared_type64='CGDataProviderRef _Nullable' name='provider' type64='^{CGDataProvider=}'/>
+<retval declared_type64='CGPDFDocumentRef _Nullable' type64='^{CGPDFDocument=}'/>
+</function>
+<function name='CGPDFDocumentCreateWithURL'>
+<arg declared_type64='CFURLRef _Nullable' name='url' type64='^{__CFURL=}'/>
+<retval declared_type64='CGPDFDocumentRef _Nullable' type64='^{CGPDFDocument=}'/>
+</function>
+<function name='CGPDFDocumentGetCatalog'>
+<arg declared_type64='CGPDFDocumentRef _Nullable' name='document' type64='^{CGPDFDocument=}'/>
+<retval declared_type64='CGPDFDictionaryRef _Nullable' type64='^{CGPDFDictionary=}'/>
+</function>
+<function name='CGPDFDocumentGetID'>
+<arg declared_type64='CGPDFDocumentRef _Nullable' name='document' type64='^{CGPDFDocument=}'/>
+<retval declared_type64='CGPDFArrayRef _Nullable' type64='^{CGPDFArray=}'/>
+</function>
+<function name='CGPDFDocumentGetInfo'>
+<arg declared_type64='CGPDFDocumentRef _Nullable' name='document' type64='^{CGPDFDocument=}'/>
+<retval declared_type64='CGPDFDictionaryRef _Nullable' type64='^{CGPDFDictionary=}'/>
+</function>
+<function name='CGPDFDocumentGetNumberOfPages'>
+<arg declared_type64='CGPDFDocumentRef _Nullable' name='document' type64='^{CGPDFDocument=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGPDFDocumentGetPage'>
+<arg declared_type64='CGPDFDocumentRef _Nullable' name='document' type64='^{CGPDFDocument=}'/>
+<arg declared_type64='size_t' name='pageNumber' type64='Q'/>
+<retval declared_type64='CGPDFPageRef _Nullable' type64='^{CGPDFPage=}'/>
+</function>
+<function name='CGPDFDocumentGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='CGPDFDocumentGetVersion'>
+<arg declared_type64='CGPDFDocumentRef _Nullable' name='document' type64='^{CGPDFDocument=}'/>
+<arg declared_type64='int * _Nonnull' name='majorVersion' type64='^i'/>
+<arg declared_type64='int * _Nonnull' name='minorVersion' type64='^i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPDFDocumentIsEncrypted'>
+<arg declared_type64='CGPDFDocumentRef _Nullable' name='document' type64='^{CGPDFDocument=}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFDocumentIsUnlocked'>
+<arg declared_type64='CGPDFDocumentRef _Nullable' name='document' type64='^{CGPDFDocument=}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFDocumentRelease'>
+<arg declared_type64='CGPDFDocumentRef _Nullable' name='document' type64='^{CGPDFDocument=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPDFDocumentRetain'>
+<arg declared_type64='CGPDFDocumentRef _Nullable' name='document' type64='^{CGPDFDocument=}'/>
+<retval declared_type64='CGPDFDocumentRef _Nullable' type64='^{CGPDFDocument=}'/>
+</function>
+<function name='CGPDFDocumentUnlockWithPassword'>
+<arg declared_type64='CGPDFDocumentRef _Nullable' name='document' type64='^{CGPDFDocument=}'/>
+<arg const='true' declared_type64='char * _Nonnull' name='password' type64='*'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFObjectGetType'>
+<arg declared_type64='CGPDFObjectRef _Nullable' name='object' type64='^(CGPDFObject=)'/>
+<retval declared_type64='CGPDFObjectType' type64='i'/>
+</function>
+<function name='CGPDFObjectGetValue'>
+<arg declared_type64='CGPDFObjectRef _Nullable' name='object' type64='^(CGPDFObject=)'/>
+<arg declared_type64='CGPDFObjectType' name='type' type64='i'/>
+<arg declared_type64='void * _Nullable' name='value' type64='^v'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFOperatorTableCreate'>
+<retval declared_type64='CGPDFOperatorTableRef _Nullable' type64='^{CGPDFOperatorTable=}'/>
+</function>
+<function name='CGPDFOperatorTableRelease'>
+<arg declared_type64='CGPDFOperatorTableRef _Nullable' name='table' type64='^{CGPDFOperatorTable=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPDFOperatorTableRetain'>
+<arg declared_type64='CGPDFOperatorTableRef _Nullable' name='table' type64='^{CGPDFOperatorTable=}'/>
+<retval declared_type64='CGPDFOperatorTableRef _Nullable' type64='^{CGPDFOperatorTable=}'/>
+</function>
+<function name='CGPDFOperatorTableSetCallback'>
+<arg declared_type64='CGPDFOperatorTableRef _Nullable' name='table' type64='^{CGPDFOperatorTable=}'/>
+<arg const='true' declared_type64='char * _Nullable' name='name' type64='*'/>
+<arg declared_type64='CGPDFOperatorCallback _Nullable' function_pointer='true' name='callback' type64='^?'>
+<arg declared_type64='CGPDFScannerRef _Nonnull' type64='^{CGPDFScanner=}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPDFPageGetBoxRect'>
+<arg declared_type64='CGPDFPageRef _Nullable' name='page' type64='^{CGPDFPage=}'/>
+<arg declared_type64='CGPDFBox' name='box' type64='i'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGPDFPageGetDictionary'>
+<arg declared_type64='CGPDFPageRef _Nullable' name='page' type64='^{CGPDFPage=}'/>
+<retval declared_type64='CGPDFDictionaryRef _Nullable' type64='^{CGPDFDictionary=}'/>
+</function>
+<function name='CGPDFPageGetDocument'>
+<arg declared_type64='CGPDFPageRef _Nullable' name='page' type64='^{CGPDFPage=}'/>
+<retval declared_type64='CGPDFDocumentRef _Nullable' type64='^{CGPDFDocument=}'/>
+</function>
+<function name='CGPDFPageGetDrawingTransform'>
+<arg declared_type64='CGPDFPageRef _Nullable' name='page' type64='^{CGPDFPage=}'/>
+<arg declared_type64='CGPDFBox' name='box' type64='i'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='int' name='rotate' type64='i'/>
+<arg declared_type64='_Bool' name='preserveAspectRatio' type64='B'/>
+<retval declared_type64='CGAffineTransform' type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function name='CGPDFPageGetPageNumber'>
+<arg declared_type64='CGPDFPageRef _Nullable' name='page' type64='^{CGPDFPage=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGPDFPageGetRotationAngle'>
+<arg declared_type64='CGPDFPageRef _Nullable' name='page' type64='^{CGPDFPage=}'/>
+<retval declared_type64='int' type64='i'/>
+</function>
+<function name='CGPDFPageGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='CGPDFPageRelease'>
+<arg declared_type64='CGPDFPageRef _Nullable' name='page' type64='^{CGPDFPage=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPDFPageRetain'>
+<arg declared_type64='CGPDFPageRef _Nullable' name='page' type64='^{CGPDFPage=}'/>
+<retval declared_type64='CGPDFPageRef _Nullable' type64='^{CGPDFPage=}'/>
+</function>
+<function name='CGPDFScannerCreate'>
+<arg declared_type64='CGPDFContentStreamRef _Nonnull' name='cs' type64='^{CGPDFContentStream=}'/>
+<arg declared_type64='CGPDFOperatorTableRef _Nullable' name='table' type64='^{CGPDFOperatorTable=}'/>
+<arg declared_type64='void * _Nullable' name='info' type64='^v'/>
+<retval declared_type64='CGPDFScannerRef _Nonnull' type64='^{CGPDFScanner=}'/>
+</function>
+<function name='CGPDFScannerGetContentStream'>
+<arg declared_type64='CGPDFScannerRef _Nonnull' name='scanner' type64='^{CGPDFScanner=}'/>
+<retval declared_type64='CGPDFContentStreamRef _Nonnull' type64='^{CGPDFContentStream=}'/>
+</function>
+<function name='CGPDFScannerPopArray'>
+<arg declared_type64='CGPDFScannerRef _Nonnull' name='scanner' type64='^{CGPDFScanner=}'/>
+<arg declared_type64='CGPDFArrayRef _Nullable * _Nullable' name='value' type64='^^{CGPDFArray}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFScannerPopBoolean'>
+<arg declared_type64='CGPDFScannerRef _Nonnull' name='scanner' type64='^{CGPDFScanner=}'/>
+<arg declared_type64='CGPDFBoolean * _Nullable' name='value' type64='*'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFScannerPopDictionary'>
+<arg declared_type64='CGPDFScannerRef _Nonnull' name='scanner' type64='^{CGPDFScanner=}'/>
+<arg declared_type64='CGPDFDictionaryRef _Nullable * _Nullable' name='value' type64='^^{CGPDFDictionary}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFScannerPopInteger'>
+<arg declared_type64='CGPDFScannerRef _Nonnull' name='scanner' type64='^{CGPDFScanner=}'/>
+<arg declared_type64='CGPDFInteger * _Nullable' name='value' type64='^q'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFScannerPopName'>
+<arg declared_type64='CGPDFScannerRef _Nonnull' name='scanner' type64='^{CGPDFScanner=}'/>
+<arg const='true' declared_type64='char * _Nullable * _Nullable' name='value' type64='^*'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFScannerPopNumber'>
+<arg declared_type64='CGPDFScannerRef _Nonnull' name='scanner' type64='^{CGPDFScanner=}'/>
+<arg declared_type64='CGPDFReal * _Nullable' name='value' type64='^d'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFScannerPopObject'>
+<arg declared_type64='CGPDFScannerRef _Nonnull' name='scanner' type64='^{CGPDFScanner=}'/>
+<arg declared_type64='CGPDFObjectRef _Nullable * _Nullable' name='value' type64='^^(CGPDFObject)'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFScannerPopStream'>
+<arg declared_type64='CGPDFScannerRef _Nonnull' name='scanner' type64='^{CGPDFScanner=}'/>
+<arg declared_type64='CGPDFStreamRef _Nullable * _Nullable' name='value' type64='^^{CGPDFStream}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFScannerPopString'>
+<arg declared_type64='CGPDFScannerRef _Nonnull' name='scanner' type64='^{CGPDFScanner=}'/>
+<arg declared_type64='CGPDFStringRef _Nullable * _Nullable' name='value' type64='^^{CGPDFString}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFScannerRelease'>
+<arg declared_type64='CGPDFScannerRef _Nullable' name='scanner' type64='^{CGPDFScanner=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPDFScannerRetain'>
+<arg declared_type64='CGPDFScannerRef _Nullable' name='scanner' type64='^{CGPDFScanner=}'/>
+<retval declared_type64='CGPDFScannerRef _Nullable' type64='^{CGPDFScanner=}'/>
+</function>
+<function name='CGPDFScannerScan'>
+<arg declared_type64='CGPDFScannerRef _Nullable' name='scanner' type64='^{CGPDFScanner=}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPDFStreamCopyData'>
+<arg declared_type64='CGPDFStreamRef _Nullable' name='stream' type64='^{CGPDFStream=}'/>
+<arg declared_type64='CGPDFDataFormat * _Nullable' name='format' type64='^i'/>
+<retval declared_type64='CFDataRef _Nullable' type64='^{__CFData=}'/>
+</function>
+<function name='CGPDFStreamGetDictionary'>
+<arg declared_type64='CGPDFStreamRef _Nullable' name='stream' type64='^{CGPDFStream=}'/>
+<retval declared_type64='CGPDFDictionaryRef _Nullable' type64='^{CGPDFDictionary=}'/>
+</function>
+<function name='CGPDFStringCopyDate'>
+<arg declared_type64='CGPDFStringRef _Nullable' name='string' type64='^{CGPDFString=}'/>
+<retval declared_type64='CFDateRef _Nullable' type64='^{__CFDate=}'/>
+</function>
+<function name='CGPDFStringCopyTextString'>
+<arg declared_type64='CGPDFStringRef _Nullable' name='string' type64='^{CGPDFString=}'/>
+<retval declared_type64='CFStringRef _Nullable' type64='^{__CFString=}'/>
+</function>
+<function name='CGPDFStringGetBytePtr'>
+<arg declared_type64='CGPDFStringRef _Nullable' name='string' type64='^{CGPDFString=}'/>
+<retval const='true' declared_type64='unsigned char * _Nullable' type64='*'/>
+</function>
+<function name='CGPDFStringGetLength'>
+<arg declared_type64='CGPDFStringRef _Nullable' name='string' type64='^{CGPDFString=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGPathAddArc'>
+<arg declared_type64='CGMutablePathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='m' type64='^{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGFloat' name='x' type64='d'/>
+<arg declared_type64='CGFloat' name='y' type64='d'/>
+<arg declared_type64='CGFloat' name='radius' type64='d'/>
+<arg declared_type64='CGFloat' name='startAngle' type64='d'/>
+<arg declared_type64='CGFloat' name='endAngle' type64='d'/>
+<arg declared_type64='_Bool' name='clockwise' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPathAddArcToPoint'>
+<arg declared_type64='CGMutablePathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='m' type64='^{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGFloat' name='x1' type64='d'/>
+<arg declared_type64='CGFloat' name='y1' type64='d'/>
+<arg declared_type64='CGFloat' name='x2' type64='d'/>
+<arg declared_type64='CGFloat' name='y2' type64='d'/>
+<arg declared_type64='CGFloat' name='radius' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPathAddCurveToPoint'>
+<arg declared_type64='CGMutablePathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='m' type64='^{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGFloat' name='cp1x' type64='d'/>
+<arg declared_type64='CGFloat' name='cp1y' type64='d'/>
+<arg declared_type64='CGFloat' name='cp2x' type64='d'/>
+<arg declared_type64='CGFloat' name='cp2y' type64='d'/>
+<arg declared_type64='CGFloat' name='x' type64='d'/>
+<arg declared_type64='CGFloat' name='y' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPathAddEllipseInRect'>
+<arg declared_type64='CGMutablePathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='m' type64='^{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPathAddLineToPoint'>
+<arg declared_type64='CGMutablePathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='m' type64='^{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGFloat' name='x' type64='d'/>
+<arg declared_type64='CGFloat' name='y' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPathAddLines'>
+<arg declared_type64='CGMutablePathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='m' type64='^{CGAffineTransform=dddddd}'/>
+<arg const='true' declared_type64='CGPoint * _Nullable' name='points' type64='^{CGPoint=dd}'/>
+<arg declared_type64='size_t' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPathAddPath'>
+<arg declared_type64='CGMutablePathRef _Nullable' name='path1' type64='^{CGPath=}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='m' type64='^{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGPathRef _Nullable' name='path2' type64='^{CGPath=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPathAddQuadCurveToPoint'>
+<arg declared_type64='CGMutablePathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='m' type64='^{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGFloat' name='cpx' type64='d'/>
+<arg declared_type64='CGFloat' name='cpy' type64='d'/>
+<arg declared_type64='CGFloat' name='x' type64='d'/>
+<arg declared_type64='CGFloat' name='y' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPathAddRect'>
+<arg declared_type64='CGMutablePathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='m' type64='^{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPathAddRects'>
+<arg declared_type64='CGMutablePathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='m' type64='^{CGAffineTransform=dddddd}'/>
+<arg const='true' declared_type64='CGRect * _Nullable' name='rects' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='size_t' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPathAddRelativeArc'>
+<arg declared_type64='CGMutablePathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='matrix' type64='^{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGFloat' name='x' type64='d'/>
+<arg declared_type64='CGFloat' name='y' type64='d'/>
+<arg declared_type64='CGFloat' name='radius' type64='d'/>
+<arg declared_type64='CGFloat' name='startAngle' type64='d'/>
+<arg declared_type64='CGFloat' name='delta' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPathAddRoundedRect'>
+<arg declared_type64='CGMutablePathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='transform' type64='^{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGFloat' name='cornerWidth' type64='d'/>
+<arg declared_type64='CGFloat' name='cornerHeight' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPathApply'>
+<arg declared_type64='CGPathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg declared_type64='void * _Nullable' name='info' type64='^v'/>
+<arg declared_type64='CGPathApplierFunction _Nullable' function_pointer='true' name='function' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<arg const='true' declared_type64='CGPathElement * _Nonnull' type64='^{CGPathElement=i^{CGPoint}}'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPathCloseSubpath'>
+<arg declared_type64='CGMutablePathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPathContainsPoint'>
+<arg declared_type64='CGPathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='m' type64='^{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGPoint' name='point' type64='{CGPoint=dd}'/>
+<arg declared_type64='_Bool' name='eoFill' type64='B'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPathCreateCopy'>
+<arg declared_type64='CGPathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<retval declared_type64='CGPathRef _Nullable' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateCopyByDashingPath'>
+<arg declared_type64='CGPathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='transform' type64='^{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGFloat' name='phase' type64='d'/>
+<arg const='true' declared_type64='CGFloat * _Nullable' name='lengths' type64='^d'/>
+<arg declared_type64='size_t' name='count' type64='Q'/>
+<retval declared_type64='CGPathRef _Nullable' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateCopyByStrokingPath'>
+<arg declared_type64='CGPathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='transform' type64='^{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGFloat' name='lineWidth' type64='d'/>
+<arg declared_type64='CGLineCap' name='lineCap' type64='i'/>
+<arg declared_type64='CGLineJoin' name='lineJoin' type64='i'/>
+<arg declared_type64='CGFloat' name='miterLimit' type64='d'/>
+<retval declared_type64='CGPathRef _Nullable' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateCopyByTransformingPath'>
+<arg declared_type64='CGPathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='transform' type64='^{CGAffineTransform=dddddd}'/>
+<retval declared_type64='CGPathRef _Nullable' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateMutable'>
+<retval declared_type64='CGMutablePathRef _Nonnull' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateMutableCopy'>
+<arg declared_type64='CGPathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<retval declared_type64='CGMutablePathRef _Nullable' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateMutableCopyByTransformingPath'>
+<arg declared_type64='CGPathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='transform' type64='^{CGAffineTransform=dddddd}'/>
+<retval declared_type64='CGMutablePathRef _Nullable' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateWithEllipseInRect'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='transform' type64='^{CGAffineTransform=dddddd}'/>
+<retval declared_type64='CGPathRef _Nonnull' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateWithRect'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='transform' type64='^{CGAffineTransform=dddddd}'/>
+<retval declared_type64='CGPathRef _Nonnull' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathCreateWithRoundedRect'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGFloat' name='cornerWidth' type64='d'/>
+<arg declared_type64='CGFloat' name='cornerHeight' type64='d'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='transform' type64='^{CGAffineTransform=dddddd}'/>
+<retval declared_type64='CGPathRef _Nonnull' type64='^{CGPath=}'/>
+</function>
+<function name='CGPathEqualToPath'>
+<arg declared_type64='CGPathRef _Nullable' name='path1' type64='^{CGPath=}'/>
+<arg declared_type64='CGPathRef _Nullable' name='path2' type64='^{CGPath=}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPathGetBoundingBox'>
+<arg declared_type64='CGPathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGPathGetCurrentPoint'>
+<arg declared_type64='CGPathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</function>
+<function name='CGPathGetPathBoundingBox'>
+<arg declared_type64='CGPathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGPathGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='CGPathIsEmpty'>
+<arg declared_type64='CGPathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPathIsRect'>
+<arg declared_type64='CGPathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg declared_type64='CGRect * _Nullable' name='rect' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGPathMoveToPoint'>
+<arg declared_type64='CGMutablePathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<arg const='true' declared_type64='CGAffineTransform * _Nullable' name='m' type64='^{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGFloat' name='x' type64='d'/>
+<arg declared_type64='CGFloat' name='y' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPathRelease'>
+<arg declared_type64='CGPathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPathRetain'>
+<arg declared_type64='CGPathRef _Nullable' name='path' type64='^{CGPath=}'/>
+<retval declared_type64='CGPathRef _Nullable' type64='^{CGPath=}'/>
+</function>
+<function name='CGPatternCreate'>
+<arg declared_type64='void * _Nullable' name='info' type64='^v'/>
+<arg declared_type64='CGRect' name='bounds' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGAffineTransform' name='matrix' type64='{CGAffineTransform=dddddd}'/>
+<arg declared_type64='CGFloat' name='xStep' type64='d'/>
+<arg declared_type64='CGFloat' name='yStep' type64='d'/>
+<arg declared_type64='CGPatternTiling' name='tiling' type64='i'/>
+<arg declared_type64='_Bool' name='isColored' type64='B'/>
+<arg const='true' declared_type64='CGPatternCallbacks * _Nullable' name='callbacks' type64='^{CGPatternCallbacks=I^?^?}'/>
+<retval declared_type64='CGPatternRef _Nullable' type64='^{CGPattern=}'/>
+</function>
+<function name='CGPatternGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='CGPatternRelease'>
+<arg declared_type64='CGPatternRef _Nullable' name='pattern' type64='^{CGPattern=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGPatternRetain'>
+<arg declared_type64='CGPatternRef _Nullable' name='pattern' type64='^{CGPattern=}'/>
+<retval declared_type64='CGPatternRef _Nullable' type64='^{CGPattern=}'/>
+</function>
+<function name='CGPointApplyAffineTransform'>
+<arg declared_type64='CGPoint' name='point' type64='{CGPoint=dd}'/>
+<arg declared_type64='CGAffineTransform' name='t' type64='{CGAffineTransform=dddddd}'/>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</function>
+<function name='CGPointCreateDictionaryRepresentation'>
+<arg declared_type64='CGPoint' name='point' type64='{CGPoint=dd}'/>
+<retval declared_type64='CFDictionaryRef _Nonnull' type64='^{__CFDictionary=}'/>
+</function>
+<function name='CGPointEqualToPoint'>
+<arg declared_type64='CGPoint' name='point1' type64='{CGPoint=dd}'/>
+<arg declared_type64='CGPoint' name='point2' type64='{CGPoint=dd}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function inline='true' name='CGPointMake'>
+<arg declared_type64='CGFloat' name='x' type64='d'/>
+<arg declared_type64='CGFloat' name='y' type64='d'/>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</function>
+<function name='CGPointMakeWithDictionaryRepresentation'>
+<arg declared_type64='CFDictionaryRef _Nullable' name='dict' type64='^{__CFDictionary=}'/>
+<arg declared_type64='CGPoint * _Nullable' name='point' type64='^{CGPoint=dd}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGRectApplyAffineTransform'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGAffineTransform' name='t' type64='{CGAffineTransform=dddddd}'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGRectContainsPoint'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGPoint' name='point' type64='{CGPoint=dd}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGRectContainsRect'>
+<arg declared_type64='CGRect' name='rect1' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGRect' name='rect2' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGRectCreateDictionaryRepresentation'>
+<arg declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='CFDictionaryRef _Nonnull' type64='^{__CFDictionary=}'/>
+</function>
+<function name='CGRectDivide'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGRect * _Nonnull' name='slice' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGRect * _Nonnull' name='remainder' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGFloat' name='amount' type64='d'/>
+<arg declared_type64='CGRectEdge' name='edge' type64='I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGRectEqualToRect'>
+<arg declared_type64='CGRect' name='rect1' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGRect' name='rect2' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGRectGetHeight'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='CGFloat' type64='d'/>
+</function>
+<function name='CGRectGetMaxX'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='CGFloat' type64='d'/>
+</function>
+<function name='CGRectGetMaxY'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='CGFloat' type64='d'/>
+</function>
+<function name='CGRectGetMidX'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='CGFloat' type64='d'/>
+</function>
+<function name='CGRectGetMidY'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='CGFloat' type64='d'/>
+</function>
+<function name='CGRectGetMinX'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='CGFloat' type64='d'/>
+</function>
+<function name='CGRectGetMinY'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='CGFloat' type64='d'/>
+</function>
+<function name='CGRectGetWidth'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='CGFloat' type64='d'/>
+</function>
+<function name='CGRectInset'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGFloat' name='dx' type64='d'/>
+<arg declared_type64='CGFloat' name='dy' type64='d'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGRectIntegral'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGRectIntersection'>
+<arg declared_type64='CGRect' name='r1' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGRect' name='r2' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGRectIntersectsRect'>
+<arg declared_type64='CGRect' name='rect1' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGRect' name='rect2' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGRectIsEmpty'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGRectIsInfinite'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGRectIsNull'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function inline='true' name='CGRectMake'>
+<arg declared_type64='CGFloat' name='x' type64='d'/>
+<arg declared_type64='CGFloat' name='y' type64='d'/>
+<arg declared_type64='CGFloat' name='width' type64='d'/>
+<arg declared_type64='CGFloat' name='height' type64='d'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGRectMakeWithDictionaryRepresentation'>
+<arg declared_type64='CFDictionaryRef _Nullable' name='dict' type64='^{__CFDictionary=}'/>
+<arg declared_type64='CGRect * _Nullable' name='rect' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='CGRectOffset'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGFloat' name='dx' type64='d'/>
+<arg declared_type64='CGFloat' name='dy' type64='d'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGRectStandardize'>
+<arg declared_type64='CGRect' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGRectUnion'>
+<arg declared_type64='CGRect' name='r1' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGRect' name='r2' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='CGShadingCreateAxial'>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<arg declared_type64='CGPoint' name='start' type64='{CGPoint=dd}'/>
+<arg declared_type64='CGPoint' name='end' type64='{CGPoint=dd}'/>
+<arg declared_type64='CGFunctionRef _Nullable' name='function' type64='^{CGFunction=}'/>
+<arg declared_type64='_Bool' name='extendStart' type64='B'/>
+<arg declared_type64='_Bool' name='extendEnd' type64='B'/>
+<retval declared_type64='CGShadingRef _Nullable' type64='^{CGShading=}'/>
+</function>
+<function name='CGShadingCreateRadial'>
+<arg declared_type64='CGColorSpaceRef _Nullable' name='space' type64='^{CGColorSpace=}'/>
+<arg declared_type64='CGPoint' name='start' type64='{CGPoint=dd}'/>
+<arg declared_type64='CGFloat' name='startRadius' type64='d'/>
+<arg declared_type64='CGPoint' name='end' type64='{CGPoint=dd}'/>
+<arg declared_type64='CGFloat' name='endRadius' type64='d'/>
+<arg declared_type64='CGFunctionRef _Nullable' name='function' type64='^{CGFunction=}'/>
+<arg declared_type64='_Bool' name='extendStart' type64='B'/>
+<arg declared_type64='_Bool' name='extendEnd' type64='B'/>
+<retval declared_type64='CGShadingRef _Nullable' type64='^{CGShading=}'/>
+</function>
+<function name='CGShadingGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='CGShadingRelease'>
+<arg declared_type64='CGShadingRef _Nullable' name='shading' type64='^{CGShading=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='CGShadingRetain'>
+<arg declared_type64='CGShadingRef _Nullable' name='shading' type64='^{CGShading=}'/>
+<retval declared_type64='CGShadingRef _Nullable' type64='^{CGShading=}'/>
+</function>
+<function name='CGSizeApplyAffineTransform'>
+<arg declared_type64='CGSize' name='size' type64='{CGSize=dd}'/>
+<arg declared_type64='CGAffineTransform' name='t' type64='{CGAffineTransform=dddddd}'/>
+<retval declared_type64='CGSize' type64='{CGSize=dd}'/>
+</function>
+<function name='CGSizeCreateDictionaryRepresentation'>
+<arg declared_type64='CGSize' name='size' type64='{CGSize=dd}'/>
+<retval declared_type64='CFDictionaryRef _Nonnull' type64='^{__CFDictionary=}'/>
+</function>
+<function name='CGSizeEqualToSize'>
+<arg declared_type64='CGSize' name='size1' type64='{CGSize=dd}'/>
+<arg declared_type64='CGSize' name='size2' type64='{CGSize=dd}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function inline='true' name='CGSizeMake'>
+<arg declared_type64='CGFloat' name='width' type64='d'/>
+<arg declared_type64='CGFloat' name='height' type64='d'/>
+<retval declared_type64='CGSize' type64='{CGSize=dd}'/>
+</function>
+<function name='CGSizeMakeWithDictionaryRepresentation'>
+<arg declared_type64='CFDictionaryRef _Nullable' name='dict' type64='^{__CFDictionary=}'/>
+<arg declared_type64='CGSize * _Nullable' name='size' type64='^{CGSize=dd}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function inline='true' name='CGVectorMake'>
+<arg declared_type64='CGFloat' name='dx' type64='d'/>
+<arg declared_type64='CGFloat' name='dy' type64='d'/>
+<retval declared_type64='CGVector' type64='{CGVector=dd}'/>
+</function>
+<function inline='true' name='__CGAffineTransformMake'>
+<arg declared_type64='CGFloat' name='a' type64='d'/>
+<arg declared_type64='CGFloat' name='b' type64='d'/>
+<arg declared_type64='CGFloat' name='c' type64='d'/>
+<arg declared_type64='CGFloat' name='d' type64='d'/>
+<arg declared_type64='CGFloat' name='tx' type64='d'/>
+<arg declared_type64='CGFloat' name='ty' type64='d'/>
+<retval declared_type64='CGAffineTransform' type64='{CGAffineTransform=dddddd}'/>
+</function>
+<function inline='true' name='__CGPointApplyAffineTransform'>
+<arg declared_type64='CGPoint' name='point' type64='{CGPoint=dd}'/>
+<arg declared_type64='CGAffineTransform' name='t' type64='{CGAffineTransform=dddddd}'/>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</function>
+<function inline='true' name='__CGPointEqualToPoint'>
+<arg declared_type64='CGPoint' name='point1' type64='{CGPoint=dd}'/>
+<arg declared_type64='CGPoint' name='point2' type64='{CGPoint=dd}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function inline='true' name='__CGSizeApplyAffineTransform'>
+<arg declared_type64='CGSize' name='size' type64='{CGSize=dd}'/>
+<arg declared_type64='CGAffineTransform' name='t' type64='{CGAffineTransform=dddddd}'/>
+<retval declared_type64='CGSize' type64='{CGSize=dd}'/>
+</function>
+<function inline='true' name='__CGSizeEqualToSize'>
+<arg declared_type64='CGSize' name='size1' type64='{CGSize=dd}'/>
+<arg declared_type64='CGSize' name='size2' type64='{CGSize=dd}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function_alias name='CGAffineTransformMake' original='__CGAffineTransformMake'/>
+<function_alias name='CGPointApplyAffineTransform' original='__CGPointApplyAffineTransform'/>
+<function_alias name='CGPointEqualToPoint' original='__CGPointEqualToPoint'/>
+<function_alias name='CGSizeApplyAffineTransform' original='__CGSizeApplyAffineTransform'/>
+<function_alias name='CGSizeEqualToSize' original='__CGSizeEqualToSize'/>
+</signatures>

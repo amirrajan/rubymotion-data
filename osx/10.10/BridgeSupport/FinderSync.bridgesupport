@@ -1,0 +1,95 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<enum name='FIMenuKindContextualMenuForContainer' value64='1'/>
+<enum name='FIMenuKindContextualMenuForItems' value64='0'/>
+<enum name='FIMenuKindContextualMenuForSidebar' value64='2'/>
+<enum name='FIMenuKindToolbarItemMenu' value64='3'/>
+<class name='FIFinderSyncController'>
+<method class_method='true' selector='defaultController'>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='directoryURLs'>
+<retval declared_type64='NSSet*' type64='@'/>
+</method>
+<method selector='selectedItemURLs'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='setBadgeIdentifier:forURL:'>
+<arg declared_type64='NSString*' index='0' name='badgeID' type64='@'/>
+<arg declared_type64='NSURL*' index='1' name='url' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setBadgeImage:label:forBadgeIdentifier:'>
+<arg declared_type64='NSImage*' index='0' name='image' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='label' type64='@'/>
+<arg declared_type64='NSString*' index='2' name='badgeID' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDirectoryURLs:'>
+<arg declared_type64='NSSet*' index='0' name='directoryURLs' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='targetedURL'>
+<retval declared_type64='NSURL*' type64='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='beginObservingDirectoryAtURL:'>
+<arg declared_type64='NSURL*' index='0' name='url' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='endObservingDirectoryAtURL:'>
+<arg declared_type64='NSURL*' index='0' name='url' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='menuForMenuKind:'>
+<arg declared_type64='FIMenuKind' index='0' name='menu' type64='Q'/>
+<retval declared_type64='NSMenu*' type64='@'/>
+</method>
+<method selector='requestBadgeIdentifierForURL:'>
+<arg declared_type64='NSURL*' index='0' name='url' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='toolbarItemImage'>
+<retval declared_type64='NSImage*' type64='@'/>
+</method>
+<method selector='toolbarItemName'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='toolbarItemToolTip'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+</class>
+<informal_protocol name='FIFinderSync'>
+<method selector='beginObservingDirectoryAtURL:' type64='v24@0:8@16'>
+<arg declared_type64='NSURL*' index='0' name='url' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='endObservingDirectoryAtURL:' type64='v24@0:8@16'>
+<arg declared_type64='NSURL*' index='0' name='url' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='menuForMenuKind:' type64='@24@0:8Q16'>
+<arg declared_type64='FIMenuKind' index='0' name='menu' type64='Q'/>
+<retval declared_type64='NSMenu*' type64='@'/>
+</method>
+<method selector='requestBadgeIdentifierForURL:' type64='v24@0:8@16'>
+<arg declared_type64='NSURL*' index='0' name='url' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='toolbarItemImage' type64='@16@0:8'>
+<retval declared_type64='NSImage*' type64='@'/>
+</method>
+<method selector='toolbarItemName' type64='@16@0:8'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='toolbarItemToolTip' type64='@16@0:8'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+</informal_protocol>
+</signatures>

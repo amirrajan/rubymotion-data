@@ -1,0 +1,755 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreImage.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenGL.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreML.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/VideoToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/Metal.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyAztec' type64='@'/>
+<constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyCode128' type64='@'/>
+<constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyCode39' type64='@'/>
+<constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyCode39Checksum' type64='@'/>
+<constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyCode39FullASCII' type64='@'/>
+<constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyCode39FullASCIIChecksum' type64='@'/>
+<constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyCode93' type64='@'/>
+<constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyCode93i' type64='@'/>
+<constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyDataMatrix' type64='@'/>
+<constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyEAN13' type64='@'/>
+<constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyEAN8' type64='@'/>
+<constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyI2of5' type64='@'/>
+<constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyI2of5Checksum' type64='@'/>
+<constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyITF14' type64='@'/>
+<constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyPDF417' type64='@'/>
+<constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyQR' type64='@'/>
+<constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyUPCE' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='VNErrorDomain' type64='@'/>
+<constant const='true' declared_type64='VNImageOption _Nonnull' name='VNImageOptionCIContext' type64='@'/>
+<constant const='true' declared_type64='VNImageOption _Nonnull' name='VNImageOptionCameraIntrinsics' type64='@'/>
+<constant const='true' declared_type64='VNImageOption _Nonnull' name='VNImageOptionProperties' type64='@'/>
+<constant const='true' declared_type64='CGRect' name='VNNormalizedIdentityRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<constant declared_type64='double' name='VNVisionVersionNumber' type64='d'/>
+<enum name='VNErrorIOError' value64='6'/>
+<enum name='VNErrorInternalError' value64='9'/>
+<enum name='VNErrorInvalidArgument' value64='14'/>
+<enum name='VNErrorInvalidFormat' value64='2'/>
+<enum name='VNErrorInvalidImage' value64='13'/>
+<enum name='VNErrorInvalidModel' value64='15'/>
+<enum name='VNErrorInvalidOperation' value64='12'/>
+<enum name='VNErrorInvalidOption' value64='5'/>
+<enum name='VNErrorMissingOption' value64='7'/>
+<enum name='VNErrorNotImplemented' value64='8'/>
+<enum name='VNErrorOK' value64='0'/>
+<enum name='VNErrorOperationFailed' value64='3'/>
+<enum name='VNErrorOutOfBoundsError' value64='4'/>
+<enum name='VNErrorOutOfMemory' value64='10'/>
+<enum name='VNErrorRequestCancelled' value64='1'/>
+<enum name='VNErrorUnknownError' value64='11'/>
+<enum name='VNImageCropAndScaleOptionCenterCrop' value64='0'/>
+<enum name='VNImageCropAndScaleOptionScaleFill' value64='2'/>
+<enum name='VNImageCropAndScaleOptionScaleFit' value64='1'/>
+<enum name='VNRequestTrackingLevelAccurate' value64='0'/>
+<enum name='VNRequestTrackingLevelFast' value64='1'/>
+<function name='VNImagePointForFaceLandmarkPoint'>
+<arg declared_type64='vector_float2' name='faceLandmarkPoint' type64=''/>
+<arg declared_type64='CGRect' name='faceBoundingBox' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='size_t' name='imageWidth' type64='Q'/>
+<arg declared_type64='size_t' name='imageHeight' type64='Q'/>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</function>
+<function name='VNImagePointForNormalizedPoint'>
+<arg declared_type64='CGPoint' name='normalizedPoint' type64='{CGPoint=dd}'/>
+<arg declared_type64='size_t' name='imageWidth' type64='Q'/>
+<arg declared_type64='size_t' name='imageHeight' type64='Q'/>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</function>
+<function name='VNImageRectForNormalizedRect'>
+<arg declared_type64='CGRect' name='normalizedRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='size_t' name='imageWidth' type64='Q'/>
+<arg declared_type64='size_t' name='imageHeight' type64='Q'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='VNNormalizedFaceBoundingBoxPointForLandmarkPoint'>
+<arg declared_type64='vector_float2' name='faceLandmarkPoint' type64=''/>
+<arg declared_type64='CGRect' name='faceBoundingBox' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='size_t' name='imageWidth' type64='Q'/>
+<arg declared_type64='size_t' name='imageHeight' type64='Q'/>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</function>
+<function name='VNNormalizedRectForImageRect'>
+<arg declared_type64='CGRect' name='imageRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='size_t' name='imageWidth' type64='Q'/>
+<arg declared_type64='size_t' name='imageHeight' type64='Q'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='VNNormalizedRectIsIdentityRect'>
+<arg declared_type64='CGRect' name='normalizedRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<class name='NSObject'>
+<method selector='inputFaceObservations'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='setInputFaceObservations:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='inputFaceObservations' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='VNBarcodeObservation'>
+<method selector='barcodeDescriptor'>
+<retval declared_type64='CIBarcodeDescriptor * _Nullable' type64='@'/>
+</method>
+<method selector='payloadStringValue'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='symbology'>
+<retval declared_type64='VNBarcodeSymbology _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='VNClassificationObservation'>
+<method selector='identifier'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='VNCoreMLFeatureValueObservation'>
+<method selector='featureValue'>
+<retval declared_type64='MLFeatureValue * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='VNCoreMLModel'>
+<method class_method='true' selector='modelForMLModel:error:'>
+<arg declared_type64='MLModel * _Nonnull' index='0' name='model' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+</class>
+<class name='VNCoreMLRequest'>
+<method selector='imageCropAndScaleOption'>
+<retval declared_type64='VNImageCropAndScaleOption' type64='Q'/>
+</method>
+<method selector='initWithModel:'>
+<arg declared_type64='VNCoreMLModel * _Nonnull' index='0' name='model' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithModel:completionHandler:'>
+<arg declared_type64='VNCoreMLModel * _Nonnull' index='0' name='model' type64='@'/>
+<arg declared_type64='VNRequestCompletionHandler _Nullable' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='VNRequest * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='model'>
+<retval declared_type64='VNCoreMLModel * _Nonnull' type64='@'/>
+</method>
+<method selector='setImageCropAndScaleOption:'>
+<arg declared_type64='VNImageCropAndScaleOption' index='0' name='imageCropAndScaleOption' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='VNDetectBarcodesRequest'>
+<method selector='setSymbologies:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='symbologies' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='supportedSymbologies'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='symbologies'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='VNDetectRectanglesRequest'>
+<method selector='maximumAspectRatio'>
+<retval declared_type64='VNAspectRatio' type64='f'/>
+</method>
+<method selector='maximumObservations'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='minimumAspectRatio'>
+<retval declared_type64='VNAspectRatio' type64='f'/>
+</method>
+<method selector='minimumConfidence'>
+<retval declared_type64='VNConfidence' type64='f'/>
+</method>
+<method selector='minimumSize'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='quadratureTolerance'>
+<retval declared_type64='VNDegrees' type64='f'/>
+</method>
+<method selector='setMaximumAspectRatio:'>
+<arg declared_type64='VNAspectRatio' index='0' name='maximumAspectRatio' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMaximumObservations:'>
+<arg declared_type64='NSUInteger' index='0' name='maximumObservations' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMinimumAspectRatio:'>
+<arg declared_type64='VNAspectRatio' index='0' name='minimumAspectRatio' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMinimumConfidence:'>
+<arg declared_type64='VNConfidence' index='0' name='minimumConfidence' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMinimumSize:'>
+<arg declared_type64='float' index='0' name='minimumSize' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setQuadratureTolerance:'>
+<arg declared_type64='VNDegrees' index='0' name='quadratureTolerance' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='VNDetectTextRectanglesRequest'>
+<method selector='reportCharacterBoxes'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setReportCharacterBoxes:'>
+<arg declared_type64='BOOL' index='0' name='reportCharacterBoxes' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='VNDetectedObjectObservation'>
+<method selector='boundingBox'>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method class_method='true' selector='observationWithBoundingBox:'>
+<arg declared_type64='CGRect' index='0' name='boundingBox' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='VNFaceLandmarkRegion'>
+<method selector='pointCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+</class>
+<class name='VNFaceLandmarkRegion2D'>
+<method selector='normalizedPoints'>
+<retval const='true' declared_type64='CGPoint * _Nullable' type64='^{CGPoint=dd}'/>
+</method>
+<method selector='pointsInImageOfSize:'>
+<arg declared_type64='CGSize' index='0' name='imageSize' type64='{CGSize=dd}'/>
+<retval const='true' declared_type64='CGPoint * _Nonnull' type64='^{CGPoint=dd}'/>
+</method>
+</class>
+<class name='VNFaceLandmarks'>
+<method selector='confidence'>
+<retval declared_type64='VNConfidence' type64='f'/>
+</method>
+</class>
+<class name='VNFaceLandmarks2D'>
+<method selector='allPoints'>
+<retval declared_type64='VNFaceLandmarkRegion2D * _Nullable' type64='@'/>
+</method>
+<method selector='faceContour'>
+<retval declared_type64='VNFaceLandmarkRegion2D * _Nullable' type64='@'/>
+</method>
+<method selector='innerLips'>
+<retval declared_type64='VNFaceLandmarkRegion2D * _Nullable' type64='@'/>
+</method>
+<method selector='leftEye'>
+<retval declared_type64='VNFaceLandmarkRegion2D * _Nullable' type64='@'/>
+</method>
+<method selector='leftEyebrow'>
+<retval declared_type64='VNFaceLandmarkRegion2D * _Nullable' type64='@'/>
+</method>
+<method selector='leftPupil'>
+<retval declared_type64='VNFaceLandmarkRegion2D * _Nullable' type64='@'/>
+</method>
+<method selector='medianLine'>
+<retval declared_type64='VNFaceLandmarkRegion2D * _Nullable' type64='@'/>
+</method>
+<method selector='nose'>
+<retval declared_type64='VNFaceLandmarkRegion2D * _Nullable' type64='@'/>
+</method>
+<method selector='noseCrest'>
+<retval declared_type64='VNFaceLandmarkRegion2D * _Nullable' type64='@'/>
+</method>
+<method selector='outerLips'>
+<retval declared_type64='VNFaceLandmarkRegion2D * _Nullable' type64='@'/>
+</method>
+<method selector='rightEye'>
+<retval declared_type64='VNFaceLandmarkRegion2D * _Nullable' type64='@'/>
+</method>
+<method selector='rightEyebrow'>
+<retval declared_type64='VNFaceLandmarkRegion2D * _Nullable' type64='@'/>
+</method>
+<method selector='rightPupil'>
+<retval declared_type64='VNFaceLandmarkRegion2D * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='VNFaceObservation'>
+<method selector='landmarks'>
+<retval declared_type64='VNFaceLandmarks2D * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='VNHorizonObservation'>
+<method selector='angle'>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+<method selector='transform'>
+<retval declared_type64='CGAffineTransform' type64='{CGAffineTransform=dddddd}'/>
+</method>
+</class>
+<class name='VNImageBasedRequest'>
+<method selector='regionOfInterest'>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='setRegionOfInterest:'>
+<arg declared_type64='CGRect' index='0' name='regionOfInterest' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='VNImageHomographicAlignmentObservation'>
+<method selector='setWarpTransform:'>
+<arg declared_type64='matrix_float3x3' index='0' name='warpTransform' type64='{_matrix_float3x3=[3]}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='warpTransform'>
+<retval declared_type64='matrix_float3x3' type64='{_matrix_float3x3=[3]}'/>
+</method>
+</class>
+<class name='VNImageRequestHandler'>
+<method selector='initWithCGImage:options:'>
+<arg declared_type64='CGImageRef _Nonnull' index='0' name='image' type64='^{CGImage=}'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='1' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithCGImage:orientation:options:'>
+<arg declared_type64='CGImageRef _Nonnull' index='0' name='image' type64='^{CGImage=}'/>
+<arg declared_type64='CGImagePropertyOrientation' index='1' name='orientation' type64='I'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='2' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithCIImage:options:'>
+<arg declared_type64='CIImage * _Nonnull' index='0' name='image' type64='@'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='1' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithCIImage:orientation:options:'>
+<arg declared_type64='CIImage * _Nonnull' index='0' name='image' type64='@'/>
+<arg declared_type64='CGImagePropertyOrientation' index='1' name='orientation' type64='I'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='2' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithCVPixelBuffer:options:'>
+<arg declared_type64='CVPixelBufferRef _Nonnull' index='0' name='pixelBuffer' type64='^{__CVBuffer=}'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='1' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithCVPixelBuffer:orientation:options:'>
+<arg declared_type64='CVPixelBufferRef _Nonnull' index='0' name='pixelBuffer' type64='^{__CVBuffer=}'/>
+<arg declared_type64='CGImagePropertyOrientation' index='1' name='orientation' type64='I'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='2' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithData:options:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='imageData' type64='@'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='1' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithData:orientation:options:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='imageData' type64='@'/>
+<arg declared_type64='CGImagePropertyOrientation' index='1' name='orientation' type64='I'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='2' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithURL:options:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='imageURL' type64='@'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='1' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithURL:orientation:options:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='imageURL' type64='@'/>
+<arg declared_type64='CGImagePropertyOrientation' index='1' name='orientation' type64='I'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='2' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='performRequests:error:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='requests' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='VNImageTranslationAlignmentObservation'>
+<method selector='alignmentTransform'>
+<retval declared_type64='CGAffineTransform' type64='{CGAffineTransform=dddddd}'/>
+</method>
+<method selector='setAlignmentTransform:'>
+<arg declared_type64='CGAffineTransform' index='0' name='alignmentTransform' type64='{CGAffineTransform=dddddd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='VNObservation'>
+<method selector='confidence'>
+<retval declared_type64='VNConfidence' type64='f'/>
+</method>
+<method selector='uuid'>
+<retval declared_type64='NSUUID * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='VNPixelBufferObservation'>
+<method selector='pixelBuffer'>
+<retval declared_type64='CVPixelBufferRef _Nonnull' type64='^{__CVBuffer=}'/>
+</method>
+</class>
+<class name='VNRectangleObservation'>
+<method selector='bottomLeft'>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</method>
+<method selector='bottomRight'>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</method>
+<method selector='topLeft'>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</method>
+<method selector='topRight'>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</method>
+</class>
+<class name='VNRequest'>
+<method selector='completionHandler'>
+<retval declared_type64='VNRequestCompletionHandler _Nullable' function_pointer='true' type64='@?'>
+<arg declared_type64='VNRequest * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithCompletionHandler:'>
+<arg declared_type64='VNRequestCompletionHandler _Nullable' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='VNRequest * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='preferBackgroundProcessing'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='results'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='setPreferBackgroundProcessing:'>
+<arg declared_type64='BOOL' index='0' name='preferBackgroundProcessing' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setUsesCPUOnly:'>
+<arg declared_type64='BOOL' index='0' name='usesCPUOnly' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='usesCPUOnly'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='VNSequenceRequestHandler'>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='performRequests:onCGImage:error:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='requests' type64='@'/>
+<arg declared_type64='CGImageRef _Nonnull' index='1' name='image' type64='^{CGImage=}'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='performRequests:onCGImage:orientation:error:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='requests' type64='@'/>
+<arg declared_type64='CGImageRef _Nonnull' index='1' name='image' type64='^{CGImage=}'/>
+<arg declared_type64='CGImagePropertyOrientation' index='2' name='orientation' type64='I'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='3' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='performRequests:onCIImage:error:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='requests' type64='@'/>
+<arg declared_type64='CIImage * _Nonnull' index='1' name='image' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='performRequests:onCIImage:orientation:error:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='requests' type64='@'/>
+<arg declared_type64='CIImage * _Nonnull' index='1' name='image' type64='@'/>
+<arg declared_type64='CGImagePropertyOrientation' index='2' name='orientation' type64='I'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='3' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='performRequests:onCVPixelBuffer:error:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='requests' type64='@'/>
+<arg declared_type64='CVPixelBufferRef _Nonnull' index='1' name='pixelBuffer' type64='^{__CVBuffer=}'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='performRequests:onCVPixelBuffer:orientation:error:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='requests' type64='@'/>
+<arg declared_type64='CVPixelBufferRef _Nonnull' index='1' name='pixelBuffer' type64='^{__CVBuffer=}'/>
+<arg declared_type64='CGImagePropertyOrientation' index='2' name='orientation' type64='I'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='3' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='performRequests:onImageData:error:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='requests' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='imageData' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='performRequests:onImageData:orientation:error:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='requests' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='imageData' type64='@'/>
+<arg declared_type64='CGImagePropertyOrientation' index='2' name='orientation' type64='I'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='3' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='performRequests:onImageURL:error:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='requests' type64='@'/>
+<arg declared_type64='NSURL * _Nonnull' index='1' name='imageURL' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='performRequests:onImageURL:orientation:error:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='requests' type64='@'/>
+<arg declared_type64='NSURL * _Nonnull' index='1' name='imageURL' type64='@'/>
+<arg declared_type64='CGImagePropertyOrientation' index='2' name='orientation' type64='I'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='3' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='VNTargetedImageRequest'>
+<method selector='initWithTargetedCGImage:options:'>
+<arg declared_type64='CGImageRef _Nonnull' index='0' name='cgImage' type64='^{CGImage=}'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='1' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedCGImage:options:completionHandler:'>
+<arg declared_type64='CGImageRef _Nonnull' index='0' name='cgImage' type64='^{CGImage=}'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='1' name='options' type64='@'/>
+<arg declared_type64='VNRequestCompletionHandler _Nullable' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='VNRequest * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedCGImage:orientation:options:'>
+<arg declared_type64='CGImageRef _Nonnull' index='0' name='cgImage' type64='^{CGImage=}'/>
+<arg declared_type64='CGImagePropertyOrientation' index='1' name='orientation' type64='I'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='2' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedCGImage:orientation:options:completionHandler:'>
+<arg declared_type64='CGImageRef _Nonnull' index='0' name='cgImage' type64='^{CGImage=}'/>
+<arg declared_type64='CGImagePropertyOrientation' index='1' name='orientation' type64='I'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='2' name='options' type64='@'/>
+<arg declared_type64='VNRequestCompletionHandler _Nullable' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='VNRequest * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedCIImage:options:'>
+<arg declared_type64='CIImage * _Nonnull' index='0' name='ciImage' type64='@'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='1' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedCIImage:options:completionHandler:'>
+<arg declared_type64='CIImage * _Nonnull' index='0' name='ciImage' type64='@'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='1' name='options' type64='@'/>
+<arg declared_type64='VNRequestCompletionHandler _Nullable' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='VNRequest * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedCIImage:orientation:options:'>
+<arg declared_type64='CIImage * _Nonnull' index='0' name='ciImage' type64='@'/>
+<arg declared_type64='CGImagePropertyOrientation' index='1' name='orientation' type64='I'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='2' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedCIImage:orientation:options:completionHandler:'>
+<arg declared_type64='CIImage * _Nonnull' index='0' name='ciImage' type64='@'/>
+<arg declared_type64='CGImagePropertyOrientation' index='1' name='orientation' type64='I'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='2' name='options' type64='@'/>
+<arg declared_type64='VNRequestCompletionHandler _Nullable' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='VNRequest * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedCVPixelBuffer:options:'>
+<arg declared_type64='CVPixelBufferRef _Nonnull' index='0' name='pixelBuffer' type64='^{__CVBuffer=}'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='1' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedCVPixelBuffer:options:completionHandler:'>
+<arg declared_type64='CVPixelBufferRef _Nonnull' index='0' name='pixelBuffer' type64='^{__CVBuffer=}'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='1' name='options' type64='@'/>
+<arg declared_type64='VNRequestCompletionHandler _Nullable' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='VNRequest * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedCVPixelBuffer:orientation:options:'>
+<arg declared_type64='CVPixelBufferRef _Nonnull' index='0' name='pixelBuffer' type64='^{__CVBuffer=}'/>
+<arg declared_type64='CGImagePropertyOrientation' index='1' name='orientation' type64='I'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='2' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedCVPixelBuffer:orientation:options:completionHandler:'>
+<arg declared_type64='CVPixelBufferRef _Nonnull' index='0' name='pixelBuffer' type64='^{__CVBuffer=}'/>
+<arg declared_type64='CGImagePropertyOrientation' index='1' name='orientation' type64='I'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='2' name='options' type64='@'/>
+<arg declared_type64='VNRequestCompletionHandler _Nullable' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='VNRequest * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedImageData:options:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='imageData' type64='@'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='1' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedImageData:options:completionHandler:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='imageData' type64='@'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='1' name='options' type64='@'/>
+<arg declared_type64='VNRequestCompletionHandler _Nullable' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='VNRequest * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedImageData:orientation:options:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='imageData' type64='@'/>
+<arg declared_type64='CGImagePropertyOrientation' index='1' name='orientation' type64='I'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='2' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedImageData:orientation:options:completionHandler:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='imageData' type64='@'/>
+<arg declared_type64='CGImagePropertyOrientation' index='1' name='orientation' type64='I'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='2' name='options' type64='@'/>
+<arg declared_type64='VNRequestCompletionHandler _Nullable' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='VNRequest * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedImageURL:options:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='imageURL' type64='@'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='1' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedImageURL:options:completionHandler:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='imageURL' type64='@'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='1' name='options' type64='@'/>
+<arg declared_type64='VNRequestCompletionHandler _Nullable' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='VNRequest * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedImageURL:orientation:options:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='imageURL' type64='@'/>
+<arg declared_type64='CGImagePropertyOrientation' index='1' name='orientation' type64='I'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='2' name='options' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTargetedImageURL:orientation:options:completionHandler:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='imageURL' type64='@'/>
+<arg declared_type64='CGImagePropertyOrientation' index='1' name='orientation' type64='I'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='2' name='options' type64='@'/>
+<arg declared_type64='VNRequestCompletionHandler _Nullable' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='VNRequest * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='VNTextObservation'>
+<method selector='characterBoxes'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='VNTrackObjectRequest'>
+<method selector='initWithDetectedObjectObservation:'>
+<arg declared_type64='VNDetectedObjectObservation * _Nonnull' index='0' name='observation' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithDetectedObjectObservation:completionHandler:'>
+<arg declared_type64='VNDetectedObjectObservation * _Nonnull' index='0' name='observation' type64='@'/>
+<arg declared_type64='VNRequestCompletionHandler _Nullable' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='VNRequest * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='VNTrackRectangleRequest'>
+<method selector='initWithRectangleObservation:'>
+<arg declared_type64='VNRectangleObservation * _Nonnull' index='0' name='observation' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithRectangleObservation:completionHandler:'>
+<arg declared_type64='VNRectangleObservation * _Nonnull' index='0' name='observation' type64='@'/>
+<arg declared_type64='VNRequestCompletionHandler _Nullable' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='VNRequest * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='VNTrackingRequest'>
+<method selector='inputObservation'>
+<retval declared_type64='VNDetectedObjectObservation * _Nonnull' type64='@'/>
+</method>
+<method selector='isLastFrame'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setInputObservation:'>
+<arg declared_type64='VNDetectedObjectObservation * _Nonnull' index='0' name='inputObservation' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLastFrame:'>
+<arg declared_type64='BOOL' index='0' name='lastFrame' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTrackingLevel:'>
+<arg declared_type64='VNRequestTrackingLevel' index='0' name='trackingLevel' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='trackingLevel'>
+<retval declared_type64='VNRequestTrackingLevel' type64='Q'/>
+</method>
+</class>
+<informal_protocol name='VNFaceObservationAccepting'>
+<method selector='inputFaceObservations' type64='@16@0:8'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='setInputFaceObservations:' type64='v24@0:8@16'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='inputFaceObservations' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

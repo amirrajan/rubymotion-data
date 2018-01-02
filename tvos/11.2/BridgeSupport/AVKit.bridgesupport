@@ -1,0 +1,521 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreAudio.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/MediaAccessibility.framework'/>
+<depends_on path='/System/Library/Frameworks/MediaPlayer.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/UIKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='AVKitMetadataIdentifierApproximateEndDate' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='AVKitMetadataIdentifierApproximateStartDate' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='AVKitMetadataIdentifierExactEndDate' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='AVKitMetadataIdentifierExactStartDate' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='AVKitMetadataIdentifierExternalContentIdentifier' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='AVKitMetadataIdentifierExternalUserProfileIdentifier' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='AVKitMetadataIdentifierPlaybackProgress' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='AVKitMetadataIdentifierServiceIdentifier' type64='@'/>
+<enum name='AVContentProposalActionAccept' value64='0'/>
+<enum name='AVContentProposalActionDefer' value64='2'/>
+<enum name='AVContentProposalActionReject' value64='1'/>
+<enum name='AVPlayerViewControllerSkippingBehaviorDefault' value64='0'/>
+<enum name='AVPlayerViewControllerSkippingBehaviorSkipItem' value64='1'/>
+<enum name='AVRoutePickerViewButtonStyleCustom' value64='2'/>
+<enum name='AVRoutePickerViewButtonStylePlain' value64='1'/>
+<enum name='AVRoutePickerViewButtonStyleSystem' value64='0'/>
+<class name='AVContentProposal'>
+<method selector='URL'>
+<retval declared_type64='NSURL * _Nullable' type64='@'/>
+</method>
+<method selector='automaticAcceptanceInterval'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='contentTimeForTransition'>
+<retval declared_type64='CMTime' type64='{_CMTime=qiIq}'/>
+</method>
+<method selector='initWithContentTimeForTransition:title:previewImage:'>
+<arg declared_type64='CMTime' index='0' name='contentTimeForTransition' type64='{_CMTime=qiIq}'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='title' type64='@'/>
+<arg declared_type64='UIImage * _Nullable' index='2' name='previewImage' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='metadata'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='previewImage'>
+<retval declared_type64='UIImage * _Nullable' type64='@'/>
+</method>
+<method selector='setAutomaticAcceptanceInterval:'>
+<arg declared_type64='NSTimeInterval' index='0' name='automaticAcceptanceInterval' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMetadata:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='metadata' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setURL:'>
+<arg declared_type64='NSURL * _Nullable' index='0' name='URL' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='AVContentProposalViewController'>
+<method selector='contentProposal'>
+<retval declared_type64='AVContentProposal * _Nullable' type64='@'/>
+</method>
+<method selector='dateOfAutomaticAcceptance'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+<method selector='dismissContentProposalForAction:animated:completion:'>
+<arg declared_type64='AVContentProposalAction' index='0' name='action' type64='q'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<arg declared_type64='void (^ _Nullable)(void)' function_pointer='true' index='2' name='block' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerLayoutGuide'>
+<retval declared_type64='UILayoutGuide * _Nonnull' type64='@'/>
+</method>
+<method selector='playerViewController'>
+<retval declared_type64='AVPlayerViewController * _Nullable' type64='@'/>
+</method>
+<method selector='preferredPlayerViewFrame'>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='setDateOfAutomaticAcceptance:'>
+<arg declared_type64='NSDate * _Nullable' index='0' name='dateOfAutomaticAcceptance' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='AVDisplayManager'>
+<method selector='isDisplayModeSwitchInProgress'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='preferredDisplayCriteria'>
+<retval declared_type64='AVDisplayCriteria * _Nullable' type64='@'/>
+</method>
+<method selector='setPreferredDisplayCriteria:'>
+<arg declared_type64='AVDisplayCriteria * _Nullable' index='0' name='preferredDisplayCriteria' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='AVInterstitialTimeRange'>
+<method selector='initWithTimeRange:'>
+<arg declared_type64='CMTimeRange' index='0' name='timeRange' type64='{_CMTimeRange={?=qiIq}{?=qiIq}}'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='timeRange'>
+<retval declared_type64='CMTimeRange' type64='{_CMTimeRange={?=qiIq}{?=qiIq}}'/>
+</method>
+</class>
+<class name='AVNavigationMarkersGroup'>
+<method selector='dateRangeNavigationMarkers'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='initWithTitle:dateRangeNavigationMarkers:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='title' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='navigationMarkers' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTitle:timedNavigationMarkers:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='title' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='navigationMarkers' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='timedNavigationMarkers'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='AVPlayerItem'>
+<method selector='externalMetadata'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='externalSubtitleOptionLanguages'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='interstitialTimeRanges'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='navigationMarkerGroups'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='nextContentProposal'>
+<retval declared_type64='AVContentProposal * _Nullable' type64='@'/>
+</method>
+<method selector='selectedExternalSubtitleOptionLanguage'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='setExternalMetadata:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='externalMetadata' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setExternalSubtitleOptionLanguages:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='externalSubtitleOptionLanguages' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setInterstitialTimeRanges:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='interstitialTimeRanges' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setNavigationMarkerGroups:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='navigationMarkerGroups' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setNextContentProposal:'>
+<arg declared_type64='AVContentProposal * _Nullable' index='0' name='nextContentProposal' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSelectedExternalSubtitleOptionLanguage:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='selectedExternalSubtitleOptionLanguage' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='AVPlayerViewController'>
+<method selector='allowedSubtitleOptionLanguages'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='appliesPreferredDisplayCriteriaAutomatically'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='contentOverlayView'>
+<retval declared_type64='UIView * _Nullable' type64='@'/>
+</method>
+<method selector='contentProposalViewController'>
+<retval declared_type64='__kindof AVContentProposalViewController * _Nonnull' type64='@'/>
+</method>
+<method selector='customInfoViewController'>
+<retval declared_type64='UIViewController * _Nullable' type64='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='isReadyForDisplay'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isSkipBackwardEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isSkipForwardEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='playbackControlsIncludeInfoViews'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='playbackControlsIncludeTransportBar'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='player'>
+<retval declared_type64='AVPlayer * _Nullable' type64='@'/>
+</method>
+<method selector='requiresFullSubtitles'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='requiresLinearPlayback'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setAllowedSubtitleOptionLanguages:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='allowedSubtitleOptionLanguages' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setAppliesPreferredDisplayCriteriaAutomatically:'>
+<arg declared_type64='BOOL' index='0' name='appliesPreferredDisplayCriteriaAutomatically' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setContentProposalViewController:'>
+<arg declared_type64='__kindof AVContentProposalViewController * _Nullable' index='0' name='contentProposalViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCustomInfoViewController:'>
+<arg declared_type64='UIViewController * _Nullable' index='0' name='customInfoViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPlaybackControlsIncludeInfoViews:'>
+<arg declared_type64='BOOL' index='0' name='playbackControlsIncludeInfoViews' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPlaybackControlsIncludeTransportBar:'>
+<arg declared_type64='BOOL' index='0' name='playbackControlsIncludeTransportBar' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPlayer:'>
+<arg declared_type64='AVPlayer * _Nullable' index='0' name='player' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRequiresFullSubtitles:'>
+<arg declared_type64='BOOL' index='0' name='requiresFullSubtitles' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRequiresLinearPlayback:'>
+<arg declared_type64='BOOL' index='0' name='requiresLinearPlayback' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShowsPlaybackControls:'>
+<arg declared_type64='BOOL' index='0' name='showsPlaybackControls' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSkipBackwardEnabled:'>
+<arg declared_type64='BOOL' index='0' name='skipBackwardEnabled' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSkipForwardEnabled:'>
+<arg declared_type64='BOOL' index='0' name='skipForwardEnabled' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSkippingBehavior:'>
+<arg declared_type64='AVPlayerViewControllerSkippingBehavior' index='0' name='skippingBehavior' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVideoGravity:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='videoGravity' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='showsPlaybackControls'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='skippingBehavior'>
+<retval declared_type64='AVPlayerViewControllerSkippingBehavior' type64='q'/>
+</method>
+<method selector='unobscuredContentGuide'>
+<retval declared_type64='UILayoutGuide * _Nonnull' type64='@'/>
+</method>
+<method selector='videoGravity'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='AVRoutePickerView'>
+<method selector='activeTintColor'>
+<retval declared_type64='UIColor * _Nonnull' type64='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='routePickerButtonStyle'>
+<retval declared_type64='AVRoutePickerViewButtonStyle' type64='q'/>
+</method>
+<method selector='setActiveTintColor:'>
+<arg declared_type64='UIColor * _Nullable' index='0' name='activeTintColor' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRoutePickerButtonStyle:'>
+<arg declared_type64='AVRoutePickerViewButtonStyle' index='0' name='routePickerButtonStyle' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='addCoordinatedAnimations:completion:'>
+<arg declared_type64='void (^ _Nullable)(void)' function_pointer='true' index='0' name='animations' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='void (^ _Nullable)(BOOL)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:didAcceptContentProposal:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='AVContentProposal * _Nonnull' index='1' name='proposal' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:didPresentInterstitialTimeRange:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='AVInterstitialTimeRange * _Nonnull' index='1' name='interstitial' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:didRejectContentProposal:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='AVContentProposal * _Nonnull' index='1' name='proposal' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:didSelectExternalSubtitleOptionLanguage:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='language' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:didSelectMediaSelectionOption:inMediaSelectionGroup:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='AVMediaSelectionOption * _Nullable' index='1' name='mediaSelectionOption' type64='@'/>
+<arg declared_type64='AVMediaSelectionGroup * _Nonnull' index='2' name='mediaSelectionGroup' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:shouldPresentContentProposal:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='AVContentProposal * _Nonnull' index='1' name='proposal' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='playerViewController:timeToSeekAfterUserNavigatedFromTime:toTime:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='CMTime' index='1' name='oldTime' type64='{_CMTime=qiIq}'/>
+<arg declared_type64='CMTime' index='2' name='targetTime' type64='{_CMTime=qiIq}'/>
+<retval declared_type64='CMTime' type64='{_CMTime=qiIq}'/>
+</method>
+<method selector='playerViewController:willPresentInterstitialTimeRange:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='AVInterstitialTimeRange * _Nonnull' index='1' name='interstitial' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:willResumePlaybackAfterUserNavigatedFromTime:toTime:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='CMTime' index='1' name='oldTime' type64='{_CMTime=qiIq}'/>
+<arg declared_type64='CMTime' index='2' name='targetTime' type64='{_CMTime=qiIq}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:willTransitionToVisibilityOfTransportBar:withAnimationCoordinator:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='visible' type64='B'/>
+<arg declared_type64='id _Nonnull' index='2' name='coordinator' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewControllerDidEndDismissalTransition:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewControllerShouldDismiss:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='playerViewControllerWillBeginDismissalTransition:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='routePickerViewDidEndPresentingRoutes:'>
+<arg declared_type64='AVRoutePickerView * _Nonnull' index='0' name='routePickerView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='routePickerViewWillBeginPresentingRoutes:'>
+<arg declared_type64='AVRoutePickerView * _Nonnull' index='0' name='routePickerView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='skipToNextItemForPlayerViewController:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='skipToPreviousItemForPlayerViewController:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='UIWindow'>
+<method selector='avDisplayManager'>
+<retval declared_type64='AVDisplayManager * _Nonnull' type64='@'/>
+</method>
+</class>
+<informal_protocol name='AVPlayerViewControllerAnimationCoordinator'>
+<method selector='addCoordinatedAnimations:completion:' type64='v32@0:8@?16@?24'>
+<arg declared_type64='void (^ _Nullable)(void)' function_pointer='true' index='0' name='animations' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='void (^ _Nullable)(BOOL)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='AVPlayerViewControllerDelegate'>
+<method selector='playerViewController:didAcceptContentProposal:' type64='v32@0:8@16@24'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='AVContentProposal * _Nonnull' index='1' name='proposal' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:didPresentInterstitialTimeRange:' type64='v32@0:8@16@24'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='AVInterstitialTimeRange * _Nonnull' index='1' name='interstitial' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:didRejectContentProposal:' type64='v32@0:8@16@24'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='AVContentProposal * _Nonnull' index='1' name='proposal' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:didSelectExternalSubtitleOptionLanguage:' type64='v32@0:8@16@24'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='language' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:didSelectMediaSelectionOption:inMediaSelectionGroup:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='AVMediaSelectionOption * _Nullable' index='1' name='mediaSelectionOption' type64='@'/>
+<arg declared_type64='AVMediaSelectionGroup * _Nonnull' index='2' name='mediaSelectionGroup' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:shouldPresentContentProposal:' type64='B32@0:8@16@24'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='AVContentProposal * _Nonnull' index='1' name='proposal' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='playerViewController:timeToSeekAfterUserNavigatedFromTime:toTime:' type64='{?=qiIq}72@0:8@16{?=qiIq}24{?=qiIq}48'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='CMTime' index='1' name='oldTime' type64='{_CMTime=qiIq}'/>
+<arg declared_type64='CMTime' index='2' name='targetTime' type64='{_CMTime=qiIq}'/>
+<retval declared_type64='CMTime' type64='{_CMTime=qiIq}'/>
+</method>
+<method selector='playerViewController:willPresentInterstitialTimeRange:' type64='v32@0:8@16@24'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='AVInterstitialTimeRange * _Nonnull' index='1' name='interstitial' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:willResumePlaybackAfterUserNavigatedFromTime:toTime:' type64='v72@0:8@16{?=qiIq}24{?=qiIq}48'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='CMTime' index='1' name='oldTime' type64='{_CMTime=qiIq}'/>
+<arg declared_type64='CMTime' index='2' name='targetTime' type64='{_CMTime=qiIq}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:willTransitionToVisibilityOfTransportBar:withAnimationCoordinator:' type64='v36@0:8@16B24@28'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='visible' type64='B'/>
+<arg declared_type64='id _Nonnull' index='2' name='coordinator' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewControllerDidEndDismissalTransition:' type64='v24@0:8@16'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewControllerShouldDismiss:' type64='B24@0:8@16'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='playerViewControllerWillBeginDismissalTransition:' type64='v24@0:8@16'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='skipToNextItemForPlayerViewController:' type64='v24@0:8@16'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='skipToPreviousItemForPlayerViewController:' type64='v24@0:8@16'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='AVRoutePickerViewDelegate'>
+<method selector='routePickerViewDidEndPresentingRoutes:' type64='v24@0:8@16'>
+<arg declared_type64='AVRoutePickerView * _Nonnull' index='0' name='routePickerView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='routePickerViewWillBeginPresentingRoutes:' type64='v24@0:8@16'>
+<arg declared_type64='AVRoutePickerView * _Nonnull' index='0' name='routePickerView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

@@ -1,0 +1,336 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/MobileCoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/QuickLook.framework'/>
+<depends_on path='/System/Library/Frameworks/Accounts.framework'/>
+<depends_on path='/System/Library/Frameworks/AddressBook.framework'/>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/UIKit.framework'/>
+<constant const='true' declared_type='NSString*' name='ABPersonBirthdayProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonDatesProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonDepartmentNameProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonEmailAddressesProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonFamilyNameProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonGivenNameProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonInstantMessageAddressesProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonJobTitleProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonMiddleNameProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonNamePrefixProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonNameSuffixProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonNicknameProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonNoteProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonOrganizationNameProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonPhoneNumbersProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonPhoneticFamilyNameProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonPhoneticGivenNameProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonPhoneticMiddleNameProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonPostalAddressesProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonPreviousFamilyNameProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonRelatedNamesProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonSocialProfilesProperty' type='@'/>
+<constant const='true' declared_type='NSString*' name='ABPersonUrlAddressesProperty' type='@'/>
+<function name='ABCreateStringWithAddressDictionary'>
+<arg declared_type='NSDictionary*' name='address' type='@'/>
+<arg declared_type='BOOL' name='addCountryName' type='B'/>
+<retval already_retained='true' declared_type='NSString*' type='@'/>
+</function>
+<class name='ABNewPersonViewController'>
+<method selector='addressBook'>
+<retval declared_type='ABAddressBookRef' type='@'/>
+</method>
+<method selector='displayedPerson'>
+<retval declared_type='ABRecordRef' type='@'/>
+</method>
+<method selector='newPersonViewDelegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='parentGroup'>
+<retval declared_type='ABRecordRef' type='@'/>
+</method>
+<method selector='setAddressBook:'>
+<arg declared_type='ABAddressBookRef' index='0' name='addressBook' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisplayedPerson:'>
+<arg declared_type='ABRecordRef' index='0' name='displayedPerson' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNewPersonViewDelegate:'>
+<arg declared_type='id' index='0' name='newPersonViewDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setParentGroup:'>
+<arg declared_type='ABRecordRef' index='0' name='parentGroup' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='ABPeoplePickerNavigationController'>
+<method selector='addressBook'>
+<retval declared_type='ABAddressBookRef' type='@'/>
+</method>
+<method selector='displayedProperties'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='peoplePickerDelegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='predicateForEnablingPerson'>
+<retval declared_type='NSPredicate*' type='@'/>
+</method>
+<method selector='predicateForSelectionOfPerson'>
+<retval declared_type='NSPredicate*' type='@'/>
+</method>
+<method selector='predicateForSelectionOfProperty'>
+<retval declared_type='NSPredicate*' type='@'/>
+</method>
+<method selector='setAddressBook:'>
+<arg declared_type='ABAddressBookRef' index='0' name='addressBook' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisplayedProperties:'>
+<arg declared_type='NSArray*' index='0' name='displayedProperties' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPeoplePickerDelegate:'>
+<arg declared_type='id' index='0' name='peoplePickerDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPredicateForEnablingPerson:'>
+<arg declared_type='NSPredicate*' index='0' name='predicateForEnablingPerson' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPredicateForSelectionOfPerson:'>
+<arg declared_type='NSPredicate*' index='0' name='predicateForSelectionOfPerson' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPredicateForSelectionOfProperty:'>
+<arg declared_type='NSPredicate*' index='0' name='predicateForSelectionOfProperty' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='ABPersonViewController'>
+<method selector='addressBook'>
+<retval declared_type='ABAddressBookRef' type='@'/>
+</method>
+<method selector='allowsActions'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='allowsEditing'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='displayedPerson'>
+<retval declared_type='ABRecordRef' type='@'/>
+</method>
+<method selector='displayedProperties'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='personViewDelegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setAddressBook:'>
+<arg declared_type='ABAddressBookRef' index='0' name='addressBook' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAllowsActions:'>
+<arg declared_type='BOOL' index='0' name='allowsActions' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAllowsEditing:'>
+<arg declared_type='BOOL' index='0' name='allowsEditing' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisplayedPerson:'>
+<arg declared_type='ABRecordRef' index='0' name='displayedPerson' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisplayedProperties:'>
+<arg declared_type='NSArray*' index='0' name='displayedProperties' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHighlightedItemForProperty:withIdentifier:'>
+<arg declared_type='ABPropertyID' index='0' name='property' type='i'/>
+<arg declared_type='ABMultiValueIdentifier' index='1' name='identifier' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPersonViewDelegate:'>
+<arg declared_type='id' index='0' name='personViewDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShouldShowLinkedPeople:'>
+<arg declared_type='BOOL' index='0' name='shouldShowLinkedPeople' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldShowLinkedPeople'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='ABUnknownPersonViewController'>
+<method selector='addressBook'>
+<retval declared_type='ABAddressBookRef' type='@'/>
+</method>
+<method selector='allowsActions'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='allowsAddingToAddressBook'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='alternateName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='displayedPerson'>
+<retval declared_type='ABRecordRef' type='@'/>
+</method>
+<method selector='message'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setAddressBook:'>
+<arg declared_type='ABAddressBookRef' index='0' name='addressBook' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAllowsActions:'>
+<arg declared_type='BOOL' index='0' name='allowsActions' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAllowsAddingToAddressBook:'>
+<arg declared_type='BOOL' index='0' name='allowsAddingToAddressBook' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAlternateName:'>
+<arg declared_type='NSString*' index='0' name='alternateName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisplayedPerson:'>
+<arg declared_type='ABRecordRef' index='0' name='displayedPerson' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMessage:'>
+<arg declared_type='NSString*' index='0' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUnknownPersonViewDelegate:'>
+<arg declared_type='id' index='0' name='unknownPersonViewDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='unknownPersonViewDelegate'>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='newPersonViewController:didCompleteWithNewPerson:'>
+<arg declared_type='ABNewPersonViewController*' index='0' name='newPersonView' type='@'/>
+<arg declared_type='ABRecordRef' index='1' name='person' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='peoplePickerNavigationController:didSelectPerson:'>
+<arg declared_type='ABPeoplePickerNavigationController*' index='0' name='peoplePicker' type='@'/>
+<arg declared_type='ABRecordRef' index='1' name='person' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='peoplePickerNavigationController:didSelectPerson:property:identifier:'>
+<arg declared_type='ABPeoplePickerNavigationController*' index='0' name='peoplePicker' type='@'/>
+<arg declared_type='ABRecordRef' index='1' name='person' type='@'/>
+<arg declared_type='ABPropertyID' index='2' name='property' type='i'/>
+<arg declared_type='ABMultiValueIdentifier' index='3' name='identifier' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='peoplePickerNavigationController:shouldContinueAfterSelectingPerson:'>
+<arg declared_type='ABPeoplePickerNavigationController*' index='0' name='peoplePicker' type='@'/>
+<arg declared_type='ABRecordRef' index='1' name='person' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='peoplePickerNavigationController:shouldContinueAfterSelectingPerson:property:identifier:'>
+<arg declared_type='ABPeoplePickerNavigationController*' index='0' name='peoplePicker' type='@'/>
+<arg declared_type='ABRecordRef' index='1' name='person' type='@'/>
+<arg declared_type='ABPropertyID' index='2' name='property' type='i'/>
+<arg declared_type='ABMultiValueIdentifier' index='3' name='identifier' type='i'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='peoplePickerNavigationControllerDidCancel:'>
+<arg declared_type='ABPeoplePickerNavigationController*' index='0' name='peoplePicker' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='personViewController:shouldPerformDefaultActionForPerson:property:identifier:'>
+<arg declared_type='ABPersonViewController*' index='0' name='personViewController' type='@'/>
+<arg declared_type='ABRecordRef' index='1' name='person' type='@'/>
+<arg declared_type='ABPropertyID' index='2' name='property' type='i'/>
+<arg declared_type='ABMultiValueIdentifier' index='3' name='identifier' type='i'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='unknownPersonViewController:didResolveToPerson:'>
+<arg declared_type='ABUnknownPersonViewController*' index='0' name='unknownCardViewController' type='@'/>
+<arg declared_type='ABRecordRef' index='1' name='person' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='unknownPersonViewController:shouldPerformDefaultActionForPerson:property:identifier:'>
+<arg declared_type='ABUnknownPersonViewController*' index='0' name='personViewController' type='@'/>
+<arg declared_type='ABRecordRef' index='1' name='person' type='@'/>
+<arg declared_type='ABPropertyID' index='2' name='property' type='i'/>
+<arg declared_type='ABMultiValueIdentifier' index='3' name='identifier' type='i'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<informal_protocol name='ABNewPersonViewControllerDelegate'>
+<method selector='newPersonViewController:didCompleteWithNewPerson:' type='v16@0:4@8^v12' type64='v32@0:8@16^v24'>
+<arg declared_type='ABNewPersonViewController*' index='0' name='newPersonView' type='@'/>
+<arg declared_type='ABRecordRef' index='1' name='person' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='ABPeoplePickerNavigationControllerDelegate'>
+<method selector='peoplePickerNavigationController:didSelectPerson:' type='v16@0:4@8^v12' type64='v32@0:8@16^v24'>
+<arg declared_type='ABPeoplePickerNavigationController*' index='0' name='peoplePicker' type='@'/>
+<arg declared_type='ABRecordRef' index='1' name='person' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='peoplePickerNavigationController:didSelectPerson:property:identifier:' type='v24@0:4@8^v12i16i20' type64='v40@0:8@16^v24i32i36'>
+<arg declared_type='ABPeoplePickerNavigationController*' index='0' name='peoplePicker' type='@'/>
+<arg declared_type='ABRecordRef' index='1' name='person' type='@'/>
+<arg declared_type='ABPropertyID' index='2' name='property' type='i'/>
+<arg declared_type='ABMultiValueIdentifier' index='3' name='identifier' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='peoplePickerNavigationController:shouldContinueAfterSelectingPerson:' type='B16@0:4@8^v12' type64='B32@0:8@16^v24'>
+<arg declared_type='ABPeoplePickerNavigationController*' index='0' name='peoplePicker' type='@'/>
+<arg declared_type='ABRecordRef' index='1' name='person' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='peoplePickerNavigationController:shouldContinueAfterSelectingPerson:property:identifier:' type='B24@0:4@8^v12i16i20' type64='B40@0:8@16^v24i32i36'>
+<arg declared_type='ABPeoplePickerNavigationController*' index='0' name='peoplePicker' type='@'/>
+<arg declared_type='ABRecordRef' index='1' name='person' type='@'/>
+<arg declared_type='ABPropertyID' index='2' name='property' type='i'/>
+<arg declared_type='ABMultiValueIdentifier' index='3' name='identifier' type='i'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='peoplePickerNavigationControllerDidCancel:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='ABPeoplePickerNavigationController*' index='0' name='peoplePicker' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='ABPersonViewControllerDelegate'>
+<method selector='personViewController:shouldPerformDefaultActionForPerson:property:identifier:' type='B24@0:4@8^v12i16i20' type64='B40@0:8@16^v24i32i36'>
+<arg declared_type='ABPersonViewController*' index='0' name='personViewController' type='@'/>
+<arg declared_type='ABRecordRef' index='1' name='person' type='@'/>
+<arg declared_type='ABPropertyID' index='2' name='property' type='i'/>
+<arg declared_type='ABMultiValueIdentifier' index='3' name='identifier' type='i'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</informal_protocol>
+<informal_protocol name='ABUnknownPersonViewControllerDelegate'>
+<method selector='unknownPersonViewController:didResolveToPerson:' type='v16@0:4@8^v12' type64='v32@0:8@16^v24'>
+<arg declared_type='ABUnknownPersonViewController*' index='0' name='unknownCardViewController' type='@'/>
+<arg declared_type='ABRecordRef' index='1' name='person' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='unknownPersonViewController:shouldPerformDefaultActionForPerson:property:identifier:' type='B24@0:4@8^v12i16i20' type64='B40@0:8@16^v24i32i36'>
+<arg declared_type='ABUnknownPersonViewController*' index='0' name='personViewController' type='@'/>
+<arg declared_type='ABRecordRef' index='1' name='person' type='@'/>
+<arg declared_type='ABPropertyID' index='2' name='property' type='i'/>
+<arg declared_type='ABMultiValueIdentifier' index='3' name='identifier' type='i'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</informal_protocol>
+</signatures>

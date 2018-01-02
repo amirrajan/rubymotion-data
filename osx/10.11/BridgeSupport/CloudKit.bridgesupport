@@ -1,0 +1,1336 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreLocation.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CKAccountChangedNotification' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CKErrorDomain' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CKErrorRetryAfterKey' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CKOwnerDefaultName' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CKPartialErrorsByItemIDKey' type64='@'/>
+<constant const='true' declared_type64='NSUInteger' name='CKQueryOperationMaximumResults' type64='Q'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CKRecordChangedErrorAncestorRecordKey' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CKRecordChangedErrorClientRecordKey' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CKRecordChangedErrorServerRecordKey' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CKRecordTypeUserRecord' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CKRecordZoneDefaultName' type64='@'/>
+<enum name='CKAccountStatusAvailable' value64='1'/>
+<enum name='CKAccountStatusCouldNotDetermine' value64='0'/>
+<enum name='CKAccountStatusNoAccount' value64='3'/>
+<enum name='CKAccountStatusRestricted' value64='2'/>
+<enum name='CKApplicationPermissionStatusCouldNotComplete' value64='1'/>
+<enum name='CKApplicationPermissionStatusDenied' value64='2'/>
+<enum name='CKApplicationPermissionStatusGranted' value64='3'/>
+<enum name='CKApplicationPermissionStatusInitialState' value64='0'/>
+<enum name='CKApplicationPermissionUserDiscoverability' value64='1'/>
+<enum name='CKErrorAssetFileModified' value64='17'/>
+<enum name='CKErrorAssetFileNotFound' value64='16'/>
+<enum name='CKErrorBadContainer' value64='5'/>
+<enum name='CKErrorBadDatabase' value64='24'/>
+<enum name='CKErrorBatchRequestFailed' value64='22'/>
+<enum name='CKErrorChangeTokenExpired' value64='21'/>
+<enum name='CKErrorConstraintViolation' value64='19'/>
+<enum name='CKErrorIncompatibleVersion' value64='18'/>
+<enum name='CKErrorInternalError' value64='1'/>
+<enum name='CKErrorInvalidArguments' value64='12'/>
+<enum name='CKErrorLimitExceeded' value64='27'/>
+<enum name='CKErrorMissingEntitlement' value64='8'/>
+<enum name='CKErrorNetworkFailure' value64='4'/>
+<enum name='CKErrorNetworkUnavailable' value64='3'/>
+<enum name='CKErrorNotAuthenticated' value64='9'/>
+<enum name='CKErrorOperationCancelled' value64='20'/>
+<enum name='CKErrorPartialFailure' value64='2'/>
+<enum name='CKErrorPermissionFailure' value64='10'/>
+<enum name='CKErrorQuotaExceeded' value64='25'/>
+<enum name='CKErrorRequestRateLimited' value64='7'/>
+<enum name='CKErrorResultsTruncated' value64='13'/>
+<enum name='CKErrorServerRecordChanged' value64='14'/>
+<enum name='CKErrorServerRejectedRequest' value64='15'/>
+<enum name='CKErrorServiceUnavailable' value64='6'/>
+<enum name='CKErrorUnknownItem' value64='11'/>
+<enum name='CKErrorUserDeletedZone' value64='28'/>
+<enum name='CKErrorZoneBusy' value64='23'/>
+<enum name='CKErrorZoneNotFound' value64='26'/>
+<enum name='CKNotificationTypeQuery' value64='1'/>
+<enum name='CKNotificationTypeReadNotification' value64='3'/>
+<enum name='CKNotificationTypeRecordZone' value64='2'/>
+<enum name='CKQueryNotificationReasonRecordCreated' value64='1'/>
+<enum name='CKQueryNotificationReasonRecordDeleted' value64='3'/>
+<enum name='CKQueryNotificationReasonRecordUpdated' value64='2'/>
+<enum name='CKRecordSaveAllKeys' value64='2'/>
+<enum name='CKRecordSaveChangedKeys' value64='1'/>
+<enum name='CKRecordSaveIfServerRecordUnchanged' value64='0'/>
+<enum name='CKRecordZoneCapabilityAtomic' value64='2'/>
+<enum name='CKRecordZoneCapabilityFetchChanges' value64='1'/>
+<enum name='CKReferenceActionDeleteSelf' value64='1'/>
+<enum name='CKReferenceActionNone' value64='0'/>
+<enum name='CKSubscriptionOptionsFiresOnRecordCreation' value64='1'/>
+<enum name='CKSubscriptionOptionsFiresOnRecordDeletion' value64='4'/>
+<enum name='CKSubscriptionOptionsFiresOnRecordUpdate' value64='2'/>
+<enum name='CKSubscriptionOptionsFiresOnce' value64='8'/>
+<enum name='CKSubscriptionTypeQuery' value64='1'/>
+<enum name='CKSubscriptionTypeRecordZone' value64='2'/>
+<class name='CKAsset'>
+<method selector='fileURL'>
+<retval declared_type64='NSURL * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithFileURL:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='fileURL' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='CKContainer'>
+<method selector='accountStatusWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(CKAccountStatus, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='CKAccountStatus' type64='q'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='addOperation:'>
+<arg declared_type64='CKOperation * _Nonnull' index='0' name='operation' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='containerIdentifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='containerWithIdentifier:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='containerIdentifier' type64='@'/>
+<retval declared_type64='CKContainer * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='defaultContainer'>
+<retval declared_type64='CKContainer * _Nonnull' type64='@'/>
+</method>
+<method selector='discoverAllContactUserInfosWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='discoverUserInfoWithEmailAddress:completionHandler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='email' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(CKDiscoveredUserInfo * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='CKDiscoveredUserInfo * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='discoverUserInfoWithUserRecordID:completionHandler:'>
+<arg declared_type64='CKRecordID * _Nonnull' index='0' name='userRecordID' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(CKDiscoveredUserInfo * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='CKDiscoveredUserInfo * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='fetchUserRecordIDWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(CKRecordID * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='CKRecordID * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='privateCloudDatabase'>
+<retval declared_type64='CKDatabase * _Nonnull' type64='@'/>
+</method>
+<method selector='publicCloudDatabase'>
+<retval declared_type64='CKDatabase * _Nonnull' type64='@'/>
+</method>
+<method selector='requestApplicationPermission:completionHandler:'>
+<arg declared_type64='CKApplicationPermissions' index='0' name='applicationPermission' type64='Q'/>
+<arg declared_type64='CKApplicationPermissionBlock _Nonnull' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='CKApplicationPermissionStatus' type64='q'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='statusForApplicationPermission:completionHandler:'>
+<arg declared_type64='CKApplicationPermissions' index='0' name='applicationPermission' type64='Q'/>
+<arg declared_type64='CKApplicationPermissionBlock _Nonnull' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='CKApplicationPermissionStatus' type64='q'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CKDatabase'>
+<method selector='addOperation:'>
+<arg declared_type64='CKDatabaseOperation * _Nonnull' index='0' name='operation' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='deleteRecordWithID:completionHandler:'>
+<arg declared_type64='CKRecordID * _Nonnull' index='0' name='recordID' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(CKRecordID * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='CKRecordID * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='deleteRecordZoneWithID:completionHandler:'>
+<arg declared_type64='CKRecordZoneID * _Nonnull' index='0' name='zoneID' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(CKRecordZoneID * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='CKRecordZoneID * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='deleteSubscriptionWithID:completionHandler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='subscriptionID' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSString * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSString * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='fetchAllRecordZonesWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='fetchAllSubscriptionsWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='fetchRecordWithID:completionHandler:'>
+<arg declared_type64='CKRecordID * _Nonnull' index='0' name='recordID' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(CKRecord * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='CKRecord * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='fetchRecordZoneWithID:completionHandler:'>
+<arg declared_type64='CKRecordZoneID * _Nonnull' index='0' name='zoneID' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(CKRecordZone * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='CKRecordZone * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='fetchSubscriptionWithID:completionHandler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='subscriptionID' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(CKSubscription * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='CKSubscription * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='performQuery:inZoneWithID:completionHandler:'>
+<arg declared_type64='CKQuery * _Nonnull' index='0' name='query' type64='@'/>
+<arg declared_type64='CKRecordZoneID * _Nullable' index='1' name='zoneID' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='saveRecord:completionHandler:'>
+<arg declared_type64='CKRecord * _Nonnull' index='0' name='record' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(CKRecord * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='CKRecord * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='saveRecordZone:completionHandler:'>
+<arg declared_type64='CKRecordZone * _Nonnull' index='0' name='zone' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(CKRecordZone * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='CKRecordZone * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='saveSubscription:completionHandler:'>
+<arg declared_type64='CKSubscription * _Nonnull' index='0' name='subscription' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(CKSubscription * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='CKSubscription * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CKDatabaseOperation'>
+<method selector='database'>
+<retval declared_type64='CKDatabase * _Nullable' type64='@'/>
+</method>
+<method selector='setDatabase:'>
+<arg declared_type64='CKDatabase * _Nullable' index='0' name='database' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CKDiscoverAllContactsOperation'>
+<method selector='discoverAllContactsCompletionBlock'>
+<retval declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setDiscoverAllContactsCompletionBlock:'>
+<arg declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='discoverAllContactsCompletionBlock' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CKDiscoverUserInfosOperation'>
+<method selector='discoverUserInfosCompletionBlock'>
+<retval declared_type64='void (^ _Nullable)(NSDictionary * _Nullable, NSDictionary * _Nullable, NSError * _Nullable)' function_pointer='true' type64='@?'>
+<arg declared_type64='NSDictionary * _Nullable' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='emailAddresses'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithEmailAddresses:userRecordIDs:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='emailAddresses' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='1' name='userRecordIDs' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setDiscoverUserInfosCompletionBlock:'>
+<arg declared_type64='void (^ _Nullable)(NSDictionary * _Nullable, NSDictionary * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='discoverUserInfosCompletionBlock' type64='@?'>
+<arg declared_type64='NSDictionary * _Nullable' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setEmailAddresses:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='emailAddresses' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setUserRecordIDs:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='userRecordIDs' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='userRecordIDs'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CKDiscoveredUserInfo'>
+<method selector='displayContact'>
+<retval declared_type64='CNContact * _Nullable' type64='@'/>
+</method>
+<method selector='firstName'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='lastName'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='userRecordID'>
+<retval declared_type64='CKRecordID * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CKFetchNotificationChangesOperation'>
+<method selector='fetchNotificationChangesCompletionBlock'>
+<retval declared_type64='void (^ _Nullable)(CKServerChangeToken * _Nullable, NSError * _Nullable)' function_pointer='true' type64='@?'>
+<arg declared_type64='CKServerChangeToken * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='initWithPreviousServerChangeToken:'>
+<arg declared_type64='CKServerChangeToken * _Nullable' index='0' name='previousServerChangeToken' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='moreComing'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='notificationChangedBlock'>
+<retval declared_type64='void (^ _Nullable)(CKNotification * _Nonnull)' function_pointer='true' type64='@?'>
+<arg declared_type64='CKNotification * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='previousServerChangeToken'>
+<retval declared_type64='CKServerChangeToken * _Nullable' type64='@'/>
+</method>
+<method selector='resultsLimit'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='setFetchNotificationChangesCompletionBlock:'>
+<arg declared_type64='void (^ _Nullable)(CKServerChangeToken * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='fetchNotificationChangesCompletionBlock' type64='@?'>
+<arg declared_type64='CKServerChangeToken * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setNotificationChangedBlock:'>
+<arg declared_type64='void (^ _Nullable)(CKNotification * _Nonnull)' function_pointer='true' index='0' name='notificationChangedBlock' type64='@?'>
+<arg declared_type64='CKNotification * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPreviousServerChangeToken:'>
+<arg declared_type64='CKServerChangeToken * _Nullable' index='0' name='previousServerChangeToken' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setResultsLimit:'>
+<arg declared_type64='NSUInteger' index='0' name='resultsLimit' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CKFetchRecordChangesOperation'>
+<method selector='desiredKeys'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='fetchRecordChangesCompletionBlock'>
+<retval declared_type64='void (^ _Nullable)(CKServerChangeToken * _Nullable, NSData * _Nullable, NSError * _Nullable)' function_pointer='true' type64='@?'>
+<arg declared_type64='CKServerChangeToken * _Nullable' type64='@'/>
+<arg declared_type64='NSData * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='initWithRecordZoneID:previousServerChangeToken:'>
+<arg declared_type64='CKRecordZoneID * _Nonnull' index='0' name='recordZoneID' type64='@'/>
+<arg declared_type64='CKServerChangeToken * _Nullable' index='1' name='previousServerChangeToken' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='moreComing'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='previousServerChangeToken'>
+<retval declared_type64='CKServerChangeToken * _Nullable' type64='@'/>
+</method>
+<method selector='recordChangedBlock'>
+<retval declared_type64='void (^ _Nullable)(CKRecord * _Nonnull)' function_pointer='true' type64='@?'>
+<arg declared_type64='CKRecord * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='recordWithIDWasDeletedBlock'>
+<retval declared_type64='void (^ _Nullable)(CKRecordID * _Nonnull)' function_pointer='true' type64='@?'>
+<arg declared_type64='CKRecordID * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='recordZoneID'>
+<retval declared_type64='CKRecordZoneID * _Nonnull' type64='@'/>
+</method>
+<method selector='resultsLimit'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='setDesiredKeys:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='desiredKeys' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFetchRecordChangesCompletionBlock:'>
+<arg declared_type64='void (^ _Nullable)(CKServerChangeToken * _Nullable, NSData * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='fetchRecordChangesCompletionBlock' type64='@?'>
+<arg declared_type64='CKServerChangeToken * _Nullable' type64='@'/>
+<arg declared_type64='NSData * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPreviousServerChangeToken:'>
+<arg declared_type64='CKServerChangeToken * _Nullable' index='0' name='previousServerChangeToken' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRecordChangedBlock:'>
+<arg declared_type64='void (^ _Nullable)(CKRecord * _Nonnull)' function_pointer='true' index='0' name='recordChangedBlock' type64='@?'>
+<arg declared_type64='CKRecord * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRecordWithIDWasDeletedBlock:'>
+<arg declared_type64='void (^ _Nullable)(CKRecordID * _Nonnull)' function_pointer='true' index='0' name='recordWithIDWasDeletedBlock' type64='@?'>
+<arg declared_type64='CKRecordID * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRecordZoneID:'>
+<arg declared_type64='CKRecordZoneID * _Nonnull' index='0' name='recordZoneID' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setResultsLimit:'>
+<arg declared_type64='NSUInteger' index='0' name='resultsLimit' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CKFetchRecordZonesOperation'>
+<method class_method='true' selector='fetchAllRecordZonesOperation'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='fetchRecordZonesCompletionBlock'>
+<retval declared_type64='void (^ _Nullable)(NSDictionary * _Nullable, NSError * _Nullable)' function_pointer='true' type64='@?'>
+<arg declared_type64='NSDictionary * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithRecordZoneIDs:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='zoneIDs' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='recordZoneIDs'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='setFetchRecordZonesCompletionBlock:'>
+<arg declared_type64='void (^ _Nullable)(NSDictionary * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='fetchRecordZonesCompletionBlock' type64='@?'>
+<arg declared_type64='NSDictionary * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRecordZoneIDs:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='recordZoneIDs' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CKFetchRecordsOperation'>
+<method selector='desiredKeys'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='fetchCurrentUserRecordOperation'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='fetchRecordsCompletionBlock'>
+<retval declared_type64='void (^ _Nullable)(NSDictionary * _Nullable, NSError * _Nullable)' function_pointer='true' type64='@?'>
+<arg declared_type64='NSDictionary * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithRecordIDs:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='recordIDs' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='perRecordCompletionBlock'>
+<retval declared_type64='void (^ _Nullable)(CKRecord * _Nullable, CKRecordID * _Nullable, NSError * _Nullable)' function_pointer='true' type64='@?'>
+<arg declared_type64='CKRecord * _Nullable' type64='@'/>
+<arg declared_type64='CKRecordID * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='perRecordProgressBlock'>
+<retval declared_type64='void (^ _Nullable)(CKRecordID * _Nonnull, double)' function_pointer='true' type64='@?'>
+<arg declared_type64='CKRecordID * _Nonnull' type64='@'/>
+<arg declared_type64='double' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='recordIDs'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='setDesiredKeys:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='desiredKeys' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFetchRecordsCompletionBlock:'>
+<arg declared_type64='void (^ _Nullable)(NSDictionary * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='fetchRecordsCompletionBlock' type64='@?'>
+<arg declared_type64='NSDictionary * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPerRecordCompletionBlock:'>
+<arg declared_type64='void (^ _Nullable)(CKRecord * _Nullable, CKRecordID * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='perRecordCompletionBlock' type64='@?'>
+<arg declared_type64='CKRecord * _Nullable' type64='@'/>
+<arg declared_type64='CKRecordID * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPerRecordProgressBlock:'>
+<arg declared_type64='void (^ _Nullable)(CKRecordID * _Nonnull, double)' function_pointer='true' index='0' name='perRecordProgressBlock' type64='@?'>
+<arg declared_type64='CKRecordID * _Nonnull' type64='@'/>
+<arg declared_type64='double' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRecordIDs:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='recordIDs' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CKFetchSubscriptionsOperation'>
+<method class_method='true' selector='fetchAllSubscriptionsOperation'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='fetchSubscriptionCompletionBlock'>
+<retval declared_type64='void (^ _Nullable)(NSDictionary * _Nullable, NSError * _Nullable)' function_pointer='true' type64='@?'>
+<arg declared_type64='NSDictionary * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithSubscriptionIDs:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='subscriptionIDs' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setFetchSubscriptionCompletionBlock:'>
+<arg declared_type64='void (^ _Nullable)(NSDictionary * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='fetchSubscriptionCompletionBlock' type64='@?'>
+<arg declared_type64='NSDictionary * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSubscriptionIDs:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='subscriptionIDs' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='subscriptionIDs'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CKLocationSortDescriptor'>
+<method selector='initWithCoder:'>
+<arg declared_type64='NSCoder * _Nonnull' index='0' name='aDecoder' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithKey:relativeLocation:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='key' type64='@'/>
+<arg declared_type64='CLLocation * _Nonnull' index='1' name='relativeLocation' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='relativeLocation'>
+<retval declared_type64='CLLocation * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='CKMarkNotificationsReadOperation'>
+<method selector='initWithNotificationIDsToMarkRead:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='notificationIDs' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='markNotificationsReadCompletionBlock'>
+<retval declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='notificationIDs'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='setMarkNotificationsReadCompletionBlock:'>
+<arg declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='markNotificationsReadCompletionBlock' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setNotificationIDs:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='notificationIDs' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CKModifyBadgeOperation'>
+<method selector='badgeValue'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithBadgeValue:'>
+<arg declared_type64='NSUInteger' index='0' name='badgeValue' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='modifyBadgeCompletionBlock'>
+<retval declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='setBadgeValue:'>
+<arg declared_type64='NSUInteger' index='0' name='badgeValue' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setModifyBadgeCompletionBlock:'>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='0' name='modifyBadgeCompletionBlock' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CKModifyRecordZonesOperation'>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithRecordZonesToSave:recordZoneIDsToDelete:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='recordZonesToSave' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='1' name='recordZoneIDsToDelete' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='modifyRecordZonesCompletionBlock'>
+<retval declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='recordZoneIDsToDelete'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='recordZonesToSave'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='setModifyRecordZonesCompletionBlock:'>
+<arg declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='modifyRecordZonesCompletionBlock' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRecordZoneIDsToDelete:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='recordZoneIDsToDelete' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRecordZonesToSave:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='recordZonesToSave' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CKModifyRecordsOperation'>
+<method selector='atomic'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='clientChangeTokenData'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithRecordsToSave:recordIDsToDelete:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='records' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='1' name='recordIDs' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='modifyRecordsCompletionBlock'>
+<retval declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='perRecordCompletionBlock'>
+<retval declared_type64='void (^ _Nullable)(CKRecord * _Nullable, NSError * _Nullable)' function_pointer='true' type64='@?'>
+<arg declared_type64='CKRecord * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='perRecordProgressBlock'>
+<retval declared_type64='void (^ _Nullable)(CKRecord * _Nonnull, double)' function_pointer='true' type64='@?'>
+<arg declared_type64='CKRecord * _Nonnull' type64='@'/>
+<arg declared_type64='double' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='recordIDsToDelete'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='recordsToSave'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='savePolicy'>
+<retval declared_type64='CKRecordSavePolicy' type64='q'/>
+</method>
+<method selector='setAtomic:'>
+<arg declared_type64='BOOL' index='0' name='atomic' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setClientChangeTokenData:'>
+<arg declared_type64='NSData * _Nullable' index='0' name='clientChangeTokenData' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setModifyRecordsCompletionBlock:'>
+<arg declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='modifyRecordsCompletionBlock' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPerRecordCompletionBlock:'>
+<arg declared_type64='void (^ _Nullable)(CKRecord * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='perRecordCompletionBlock' type64='@?'>
+<arg declared_type64='CKRecord * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPerRecordProgressBlock:'>
+<arg declared_type64='void (^ _Nullable)(CKRecord * _Nonnull, double)' function_pointer='true' index='0' name='perRecordProgressBlock' type64='@?'>
+<arg declared_type64='CKRecord * _Nonnull' type64='@'/>
+<arg declared_type64='double' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRecordIDsToDelete:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='recordIDsToDelete' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRecordsToSave:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='recordsToSave' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSavePolicy:'>
+<arg declared_type64='CKRecordSavePolicy' index='0' name='savePolicy' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CKModifySubscriptionsOperation'>
+<method selector='initWithSubscriptionsToSave:subscriptionIDsToDelete:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='subscriptionsToSave' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='1' name='subscriptionIDsToDelete' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='modifySubscriptionsCompletionBlock'>
+<retval declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='setModifySubscriptionsCompletionBlock:'>
+<arg declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='modifySubscriptionsCompletionBlock' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSubscriptionIDsToDelete:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='subscriptionIDsToDelete' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSubscriptionsToSave:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='subscriptionsToSave' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='subscriptionIDsToDelete'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='subscriptionsToSave'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CKNotification'>
+<method selector='alertActionLocalizationKey'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='alertBody'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='alertLaunchImage'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='alertLocalizationArgs'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='alertLocalizationKey'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='badge'>
+<retval declared_type64='NSNumber * _Nullable' type64='@'/>
+</method>
+<method selector='category'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='containerIdentifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='isPruned'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='notificationFromRemoteNotificationDictionary:'>
+<arg declared_type64='NSDictionary * _Nonnull' index='0' name='notificationDictionary' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='notificationID'>
+<retval declared_type64='CKNotificationID * _Nullable' type64='@'/>
+</method>
+<method selector='notificationType'>
+<retval declared_type64='CKNotificationType' type64='q'/>
+</method>
+<method selector='soundName'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='subscriptionID'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CKNotificationInfo'>
+<method selector='alertActionLocalizationKey'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='alertBody'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='alertLaunchImage'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='alertLocalizationArgs'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='alertLocalizationKey'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='category'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='desiredKeys'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='setAlertActionLocalizationKey:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='alertActionLocalizationKey' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setAlertBody:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='alertBody' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setAlertLaunchImage:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='alertLaunchImage' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setAlertLocalizationArgs:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='alertLocalizationArgs' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setAlertLocalizationKey:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='alertLocalizationKey' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCategory:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='category' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDesiredKeys:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='desiredKeys' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShouldBadge:'>
+<arg declared_type64='BOOL' index='0' name='shouldBadge' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShouldSendContentAvailable:'>
+<arg declared_type64='BOOL' index='0' name='shouldSendContentAvailable' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSoundName:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='soundName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='shouldBadge'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='shouldSendContentAvailable'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='soundName'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CKOperation'>
+<method selector='activityStart'>
+<retval declared_type64='os_activity_t' type64='Q'/>
+</method>
+<method selector='allowsCellularAccess'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='container'>
+<retval declared_type64='CKContainer * _Nullable' type64='@'/>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setAllowsCellularAccess:'>
+<arg declared_type64='BOOL' index='0' name='allowsCellularAccess' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setContainer:'>
+<arg declared_type64='CKContainer * _Nullable' index='0' name='container' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setUsesBackgroundSession:'>
+<arg declared_type64='BOOL' index='0' name='usesBackgroundSession' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='usesBackgroundSession'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='CKQuery'>
+<method selector='initWithCoder:'>
+<arg declared_type64='NSCoder * _Nonnull' index='0' name='aDecoder' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithRecordType:predicate:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='recordType' type64='@'/>
+<arg declared_type64='NSPredicate * _Nonnull' index='1' name='predicate' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='predicate'>
+<retval declared_type64='NSPredicate * _Nonnull' type64='@'/>
+</method>
+<method selector='recordType'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='setSortDescriptors:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='sortDescriptors' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sortDescriptors'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CKQueryNotification'>
+<method selector='isPublicDatabase'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='queryNotificationReason'>
+<retval declared_type64='CKQueryNotificationReason' type64='q'/>
+</method>
+<method selector='recordFields'>
+<retval declared_type64='NSDictionary&gt; * _Nullable' type64='@'/>
+</method>
+<method selector='recordID'>
+<retval declared_type64='CKRecordID * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CKQueryOperation'>
+<method selector='cursor'>
+<retval declared_type64='CKQueryCursor * _Nullable' type64='@'/>
+</method>
+<method selector='desiredKeys'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithCursor:'>
+<arg declared_type64='CKQueryCursor * _Nonnull' index='0' name='cursor' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithQuery:'>
+<arg declared_type64='CKQuery * _Nonnull' index='0' name='query' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='query'>
+<retval declared_type64='CKQuery * _Nullable' type64='@'/>
+</method>
+<method selector='queryCompletionBlock'>
+<retval declared_type64='void (^ _Nullable)(CKQueryCursor * _Nullable, NSError * _Nullable)' function_pointer='true' type64='@?'>
+<arg declared_type64='CKQueryCursor * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='recordFetchedBlock'>
+<retval declared_type64='void (^ _Nullable)(CKRecord * _Nonnull)' function_pointer='true' type64='@?'>
+<arg declared_type64='CKRecord * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='resultsLimit'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='setCursor:'>
+<arg declared_type64='CKQueryCursor * _Nullable' index='0' name='cursor' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDesiredKeys:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='desiredKeys' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setQuery:'>
+<arg declared_type64='CKQuery * _Nullable' index='0' name='query' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setQueryCompletionBlock:'>
+<arg declared_type64='void (^ _Nullable)(CKQueryCursor * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='queryCompletionBlock' type64='@?'>
+<arg declared_type64='CKQueryCursor * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRecordFetchedBlock:'>
+<arg declared_type64='void (^ _Nullable)(CKRecord * _Nonnull)' function_pointer='true' index='0' name='recordFetchedBlock' type64='@?'>
+<arg declared_type64='CKRecord * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setResultsLimit:'>
+<arg declared_type64='NSUInteger' index='0' name='resultsLimit' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setZoneID:'>
+<arg declared_type64='CKRecordZoneID * _Nullable' index='0' name='zoneID' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='zoneID'>
+<retval declared_type64='CKRecordZoneID * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CKRecord'>
+<method selector='allKeys'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='allTokens'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='changedKeys'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='creationDate'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+<method selector='creatorUserRecordID'>
+<retval declared_type64='CKRecordID * _Nullable' type64='@'/>
+</method>
+<method selector='encodeSystemFieldsWithCoder:'>
+<arg declared_type64='NSCoder * _Nonnull' index='0' name='coder' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='initWithRecordType:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='recordType' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithRecordType:recordID:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='recordType' type64='@'/>
+<arg declared_type64='CKRecordID * _Nonnull' index='1' name='recordID' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithRecordType:zoneID:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='recordType' type64='@'/>
+<arg declared_type64='CKRecordZoneID * _Nonnull' index='1' name='zoneID' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='lastModifiedUserRecordID'>
+<retval declared_type64='CKRecordID * _Nullable' type64='@'/>
+</method>
+<method selector='modificationDate'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+<method selector='objectForKey:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='key' type64='@'/>
+<retval declared_type64='__kindof id _Nullable' type64='@'/>
+</method>
+<method selector='objectForKeyedSubscript:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='key' type64='@'/>
+<retval declared_type64='__kindof id _Nullable' type64='@'/>
+</method>
+<method selector='recordChangeTag'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='recordID'>
+<retval declared_type64='CKRecordID * _Nonnull' type64='@'/>
+</method>
+<method selector='recordType'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='setObject:forKey:'>
+<arg declared_type64='__kindof id _Nullable' index='0' name='object' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='key' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setObject:forKeyedSubscript:'>
+<arg declared_type64='__kindof id _Nullable' index='0' name='object' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='key' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CKRecordID'>
+<method selector='initWithRecordName:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='recordName' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithRecordName:zoneID:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='recordName' type64='@'/>
+<arg declared_type64='CKRecordZoneID * _Nonnull' index='1' name='zoneID' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='recordName'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='zoneID'>
+<retval declared_type64='CKRecordZoneID * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='CKRecordZone'>
+<method selector='capabilities'>
+<retval declared_type64='CKRecordZoneCapabilities' type64='Q'/>
+</method>
+<method class_method='true' selector='defaultRecordZone'>
+<retval declared_type64='CKRecordZone * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithZoneID:'>
+<arg declared_type64='CKRecordZoneID * _Nonnull' index='0' name='zoneID' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithZoneName:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='zoneName' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='zoneID'>
+<retval declared_type64='CKRecordZoneID * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='CKRecordZoneID'>
+<method selector='initWithZoneName:ownerName:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='zoneName' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='ownerName' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='ownerName'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='zoneName'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='CKRecordZoneNotification'>
+<method selector='recordZoneID'>
+<retval declared_type64='CKRecordZoneID * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CKReference'>
+<method selector='initWithRecord:action:'>
+<arg declared_type64='CKRecord * _Nonnull' index='0' name='record' type64='@'/>
+<arg declared_type64='CKReferenceAction' index='1' name='action' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithRecordID:action:'>
+<arg declared_type64='CKRecordID * _Nonnull' index='0' name='recordID' type64='@'/>
+<arg declared_type64='CKReferenceAction' index='1' name='action' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='recordID'>
+<retval declared_type64='CKRecordID * _Nonnull' type64='@'/>
+</method>
+<method selector='referenceAction'>
+<retval declared_type64='CKReferenceAction' type64='Q'/>
+</method>
+</class>
+<class name='CKSubscription'>
+<method selector='initWithCoder:'>
+<arg declared_type64='NSCoder * _Nonnull' index='0' name='aDecoder' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithRecordType:predicate:options:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='recordType' type64='@'/>
+<arg declared_type64='NSPredicate * _Nonnull' index='1' name='predicate' type64='@'/>
+<arg declared_type64='CKSubscriptionOptions' index='2' name='subscriptionOptions' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithRecordType:predicate:subscriptionID:options:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='recordType' type64='@'/>
+<arg declared_type64='NSPredicate * _Nonnull' index='1' name='predicate' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='2' name='subscriptionID' type64='@'/>
+<arg declared_type64='CKSubscriptionOptions' index='3' name='subscriptionOptions' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithZoneID:options:'>
+<arg declared_type64='CKRecordZoneID * _Nonnull' index='0' name='zoneID' type64='@'/>
+<arg declared_type64='CKSubscriptionOptions' index='1' name='subscriptionOptions' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithZoneID:subscriptionID:options:'>
+<arg declared_type64='CKRecordZoneID * _Nonnull' index='0' name='zoneID' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='subscriptionID' type64='@'/>
+<arg declared_type64='CKSubscriptionOptions' index='2' name='subscriptionOptions' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='notificationInfo'>
+<retval declared_type64='CKNotificationInfo * _Nullable' type64='@'/>
+</method>
+<method selector='predicate'>
+<retval declared_type64='NSPredicate * _Nullable' type64='@'/>
+</method>
+<method selector='recordType'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='setNotificationInfo:'>
+<arg declared_type64='CKNotificationInfo * _Nullable' index='0' name='notificationInfo' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setZoneID:'>
+<arg declared_type64='CKRecordZoneID * _Nullable' index='0' name='zoneID' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='subscriptionID'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='subscriptionOptions'>
+<retval declared_type64='CKSubscriptionOptions' type64='Q'/>
+</method>
+<method selector='subscriptionType'>
+<retval declared_type64='CKSubscriptionType' type64='q'/>
+</method>
+<method selector='zoneID'>
+<retval declared_type64='CKRecordZoneID * _Nullable' type64='@'/>
+</method>
+</class>
+</signatures>

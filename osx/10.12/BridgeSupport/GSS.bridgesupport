@@ -1,0 +1,852 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/OpenDirectory.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<struct name='gss_OID' type='{gss_OID_desc_struct=&quot;length&quot;I&quot;elements&quot;^v}'>
+<field declared_type='OM_uint32' name='length' type='I'/>
+<field declared_type='void*' name='elements' type='^v'/>
+</struct>
+<struct name='gss_OID_desc' type='{gss_OID_desc_struct=&quot;length&quot;I&quot;elements&quot;^v}'>
+<field declared_type='OM_uint32' name='length' type='I'/>
+<field declared_type='void*' name='elements' type='^v'/>
+</struct>
+<struct name='gss_OID_desc_struct' type='{gss_OID_desc_struct=&quot;length&quot;I&quot;elements&quot;^v}'>
+<field declared_type='OM_uint32' name='length' type='I'/>
+<field declared_type='void*' name='elements' type='^v'/>
+</struct>
+<struct name='gss_OID_set' type='{gss_OID_set_desc_struct=&quot;count&quot;I&quot;elements&quot;^{gss_OID_desc_struct}}' type64='{gss_OID_set_desc_struct=&quot;count&quot;Q&quot;elements&quot;^{gss_OID_desc_struct}}'>
+<field declared_type='size_t' name='count' type='L' type64='Q'/>
+<field declared_type='gss_OID' name='elements' type='^{gss_OID_desc_struct=I^v}'/>
+</struct>
+<struct name='gss_OID_set_desc' type='{gss_OID_set_desc_struct=&quot;count&quot;I&quot;elements&quot;^{gss_OID_desc_struct}}' type64='{gss_OID_set_desc_struct=&quot;count&quot;Q&quot;elements&quot;^{gss_OID_desc_struct}}'>
+<field declared_type='size_t' name='count' type='L' type64='Q'/>
+<field declared_type='gss_OID' name='elements' type='^{gss_OID_desc_struct=I^v}'/>
+</struct>
+<struct name='gss_OID_set_desc_struct' type='{gss_OID_set_desc_struct=&quot;count&quot;I&quot;elements&quot;^{gss_OID_desc_struct}}' type64='{gss_OID_set_desc_struct=&quot;count&quot;Q&quot;elements&quot;^{gss_OID_desc_struct}}'>
+<field declared_type='size_t' name='count' type='L' type64='Q'/>
+<field declared_type='gss_OID' name='elements' type='^{gss_OID_desc_struct=I^v}'/>
+</struct>
+<struct name='gss_buffer_desc' type='{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}' type64='{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}'>
+<field declared_type='size_t' name='length' type='L' type64='Q'/>
+<field declared_type='void*' name='value' type='^v'/>
+</struct>
+<struct name='gss_buffer_desc_struct' type='{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}' type64='{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}'>
+<field declared_type='size_t' name='length' type='L' type64='Q'/>
+<field declared_type='void*' name='value' type='^v'/>
+</struct>
+<struct name='gss_buffer_set_desc' type='{gss_buffer_set_desc_struct=&quot;count&quot;I&quot;elements&quot;^{gss_buffer_desc_struct}}' type64='{gss_buffer_set_desc_struct=&quot;count&quot;Q&quot;elements&quot;^{gss_buffer_desc_struct}}'>
+<field declared_type='size_t' name='count' type='L' type64='Q'/>
+<field declared_type='gss_buffer_desc*' name='elements' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+</struct>
+<struct name='gss_buffer_set_desc_struct' type='{gss_buffer_set_desc_struct=&quot;count&quot;I&quot;elements&quot;^{gss_buffer_desc_struct}}' type64='{gss_buffer_set_desc_struct=&quot;count&quot;Q&quot;elements&quot;^{gss_buffer_desc_struct}}'>
+<field declared_type='size_t' name='count' type='L' type64='Q'/>
+<field declared_type='gss_buffer_desc*' name='elements' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+</struct>
+<struct name='gss_buffer_set_t' type='{gss_buffer_set_desc_struct=&quot;count&quot;I&quot;elements&quot;^{gss_buffer_desc_struct}}' type64='{gss_buffer_set_desc_struct=&quot;count&quot;Q&quot;elements&quot;^{gss_buffer_desc_struct}}'>
+<field declared_type='size_t' name='count' type='L' type64='Q'/>
+<field declared_type='gss_buffer_desc*' name='elements' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+</struct>
+<struct name='gss_buffer_t' type='{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}' type64='{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}'>
+<field declared_type='size_t' name='length' type='L' type64='Q'/>
+<field declared_type='void*' name='value' type='^v'/>
+</struct>
+<struct name='gss_channel_bindings_struct' type='{gss_channel_bindings_struct=&quot;initiator_addrtype&quot;I&quot;initiator_address&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}&quot;acceptor_addrtype&quot;I&quot;acceptor_address&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}&quot;application_data&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}}' type64='{gss_channel_bindings_struct=&quot;initiator_addrtype&quot;I&quot;initiator_address&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}&quot;acceptor_addrtype&quot;I&quot;acceptor_address&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}&quot;application_data&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}}'>
+<field declared_type='OM_uint32' name='initiator_addrtype' type='I'/>
+<field declared_type='gss_buffer_desc' name='initiator_address' type='{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}' type64='{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}'/>
+<field declared_type='OM_uint32' name='acceptor_addrtype' type='I'/>
+<field declared_type='gss_buffer_desc' name='acceptor_address' type='{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}' type64='{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}'/>
+<field declared_type='gss_buffer_desc' name='application_data' type='{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}' type64='{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}'/>
+</struct>
+<struct name='gss_channel_bindings_t' type='{gss_channel_bindings_struct=&quot;initiator_addrtype&quot;I&quot;initiator_address&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}&quot;acceptor_addrtype&quot;I&quot;acceptor_address&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}&quot;application_data&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}}' type64='{gss_channel_bindings_struct=&quot;initiator_addrtype&quot;I&quot;initiator_address&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}&quot;acceptor_addrtype&quot;I&quot;acceptor_address&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}&quot;application_data&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}}'>
+<field declared_type='OM_uint32' name='initiator_addrtype' type='I'/>
+<field declared_type='gss_buffer_desc' name='initiator_address' type='{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}' type64='{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}'/>
+<field declared_type='OM_uint32' name='acceptor_addrtype' type='I'/>
+<field declared_type='gss_buffer_desc' name='acceptor_address' type='{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}' type64='{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}'/>
+<field declared_type='gss_buffer_desc' name='application_data' type='{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}' type64='{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}'/>
+</struct>
+<struct name='gss_const_channel_bindings_t' type='{gss_channel_bindings_struct=&quot;initiator_addrtype&quot;I&quot;initiator_address&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}&quot;acceptor_addrtype&quot;I&quot;acceptor_address&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}&quot;application_data&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}}' type64='{gss_channel_bindings_struct=&quot;initiator_addrtype&quot;I&quot;initiator_address&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}&quot;acceptor_addrtype&quot;I&quot;acceptor_address&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}&quot;application_data&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}}'>
+<field declared_type='OM_uint32' name='initiator_addrtype' type='I'/>
+<field declared_type='gss_buffer_desc' name='initiator_address' type='{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}' type64='{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}'/>
+<field declared_type='OM_uint32' name='acceptor_addrtype' type='I'/>
+<field declared_type='gss_buffer_desc' name='acceptor_address' type='{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}' type64='{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}'/>
+<field declared_type='gss_buffer_desc' name='application_data' type='{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}' type64='{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}'/>
+</struct>
+<struct name='gss_iov_buffer_desc' type='{gss_iov_buffer_desc_struct=&quot;type&quot;I&quot;buffer&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}}' type64='{gss_iov_buffer_desc_struct=&quot;type&quot;I&quot;buffer&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}}'>
+<field declared_type='OM_uint32' name='type' type='I'/>
+<field declared_type='gss_buffer_desc' name='buffer' type='{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}' type64='{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}'/>
+</struct>
+<struct name='gss_iov_buffer_desc_struct' type='{gss_iov_buffer_desc_struct=&quot;type&quot;I&quot;buffer&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}}' type64='{gss_iov_buffer_desc_struct=&quot;type&quot;I&quot;buffer&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}}'>
+<field declared_type='OM_uint32' name='type' type='I'/>
+<field declared_type='gss_buffer_desc' name='buffer' type='{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}' type64='{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}'/>
+</struct>
+<struct name='gss_iov_buffer_t' type='{gss_iov_buffer_desc_struct=&quot;type&quot;I&quot;buffer&quot;{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}}' type64='{gss_iov_buffer_desc_struct=&quot;type&quot;I&quot;buffer&quot;{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}}'>
+<field declared_type='OM_uint32' name='type' type='I'/>
+<field declared_type='gss_buffer_desc' name='buffer' type='{gss_buffer_desc_struct=&quot;length&quot;I&quot;value&quot;^v}' type64='{gss_buffer_desc_struct=&quot;length&quot;Q&quot;value&quot;^v}'/>
+</struct>
+<struct name='gss_krb5_cfx_keydata' type='{gss_krb5_cfx_keydata=&quot;have_acceptor_subkey&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}&quot;acceptor_subkey&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}'>
+<field declared_type='OM_uint32' name='have_acceptor_subkey' type='I'/>
+<field declared_type='gss_krb5_lucid_key_t' name='ctx_key' type='{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}'/>
+<field declared_type='gss_krb5_lucid_key_t' name='acceptor_subkey' type='{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}'/>
+</struct>
+<struct name='gss_krb5_cfx_keydata_t' type='{gss_krb5_cfx_keydata=&quot;have_acceptor_subkey&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}&quot;acceptor_subkey&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}'>
+<field declared_type='OM_uint32' name='have_acceptor_subkey' type='I'/>
+<field declared_type='gss_krb5_lucid_key_t' name='ctx_key' type='{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}'/>
+<field declared_type='gss_krb5_lucid_key_t' name='acceptor_subkey' type='{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}'/>
+</struct>
+<struct name='gss_krb5_lucid_context_v1' type='{gss_krb5_lucid_context_v1=&quot;version&quot;I&quot;initiate&quot;I&quot;endtime&quot;I&quot;send_seq&quot;Q&quot;recv_seq&quot;Q&quot;protocol&quot;I&quot;rfc1964_kd&quot;{gss_krb5_rfc1964_keydata=&quot;sign_alg&quot;I&quot;seal_alg&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}&quot;cfx_kd&quot;{gss_krb5_cfx_keydata=&quot;have_acceptor_subkey&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}&quot;acceptor_subkey&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}}'>
+<field declared_type='OM_uint32' name='version' type='I'/>
+<field declared_type='OM_uint32' name='initiate' type='I'/>
+<field declared_type='OM_uint32' name='endtime' type='I'/>
+<field declared_type='OM_uint64' name='send_seq' type='Q'/>
+<field declared_type='OM_uint64' name='recv_seq' type='Q'/>
+<field declared_type='OM_uint32' name='protocol' type='I'/>
+<field declared_type='gss_krb5_rfc1964_keydata_t' name='rfc1964_kd' type='{gss_krb5_rfc1964_keydata=&quot;sign_alg&quot;I&quot;seal_alg&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}'/>
+<field declared_type='gss_krb5_cfx_keydata_t' name='cfx_kd' type='{gss_krb5_cfx_keydata=&quot;have_acceptor_subkey&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}&quot;acceptor_subkey&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}'/>
+</struct>
+<struct name='gss_krb5_lucid_context_v1_t' type='{gss_krb5_lucid_context_v1=&quot;version&quot;I&quot;initiate&quot;I&quot;endtime&quot;I&quot;send_seq&quot;Q&quot;recv_seq&quot;Q&quot;protocol&quot;I&quot;rfc1964_kd&quot;{gss_krb5_rfc1964_keydata=&quot;sign_alg&quot;I&quot;seal_alg&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}&quot;cfx_kd&quot;{gss_krb5_cfx_keydata=&quot;have_acceptor_subkey&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}&quot;acceptor_subkey&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}}'>
+<field declared_type='OM_uint32' name='version' type='I'/>
+<field declared_type='OM_uint32' name='initiate' type='I'/>
+<field declared_type='OM_uint32' name='endtime' type='I'/>
+<field declared_type='OM_uint64' name='send_seq' type='Q'/>
+<field declared_type='OM_uint64' name='recv_seq' type='Q'/>
+<field declared_type='OM_uint32' name='protocol' type='I'/>
+<field declared_type='gss_krb5_rfc1964_keydata_t' name='rfc1964_kd' type='{gss_krb5_rfc1964_keydata=&quot;sign_alg&quot;I&quot;seal_alg&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}'/>
+<field declared_type='gss_krb5_cfx_keydata_t' name='cfx_kd' type='{gss_krb5_cfx_keydata=&quot;have_acceptor_subkey&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}&quot;acceptor_subkey&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}'/>
+</struct>
+<struct name='gss_krb5_lucid_context_version' type='{gss_krb5_lucid_context_version=&quot;version&quot;I}'>
+<field declared_type='OM_uint32' name='version' type='I'/>
+</struct>
+<struct name='gss_krb5_lucid_context_version_t' type='{gss_krb5_lucid_context_version=&quot;version&quot;I}'>
+<field declared_type='OM_uint32' name='version' type='I'/>
+</struct>
+<struct name='gss_krb5_lucid_key' type='{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}'>
+<field declared_type='OM_uint32' name='type' type='I'/>
+<field declared_type='OM_uint32' name='length' type='I'/>
+<field declared_type='void * _Nullable' name='data' type='^v'/>
+</struct>
+<struct name='gss_krb5_lucid_key_t' type='{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}'>
+<field declared_type='OM_uint32' name='type' type='I'/>
+<field declared_type='OM_uint32' name='length' type='I'/>
+<field declared_type='void * _Nullable' name='data' type='^v'/>
+</struct>
+<struct name='gss_krb5_rfc1964_keydata' type='{gss_krb5_rfc1964_keydata=&quot;sign_alg&quot;I&quot;seal_alg&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}'>
+<field declared_type='OM_uint32' name='sign_alg' type='I'/>
+<field declared_type='OM_uint32' name='seal_alg' type='I'/>
+<field declared_type='gss_krb5_lucid_key_t' name='ctx_key' type='{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}'/>
+</struct>
+<struct name='gss_krb5_rfc1964_keydata_t' type='{gss_krb5_rfc1964_keydata=&quot;sign_alg&quot;I&quot;seal_alg&quot;I&quot;ctx_key&quot;{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}}'>
+<field declared_type='OM_uint32' name='sign_alg' type='I'/>
+<field declared_type='OM_uint32' name='seal_alg' type='I'/>
+<field declared_type='gss_krb5_lucid_key_t' name='ctx_key' type='{gss_krb5_lucid_key=&quot;type&quot;I&quot;length&quot;I&quot;data&quot;^v}'/>
+</struct>
+<cftype name='gss_auth_identity_t' type='^{gss_auth_identity=}'/>
+<cftype name='gss_const_cred_id_t' type='^{gss_cred_id_t_desc_struct=}'/>
+<cftype name='gss_const_ctx_id_t' type='^{gss_ctx_id_t_desc_struct=}'/>
+<cftype name='gss_const_name_t' type='^{gss_name_t_desc_struct=}'/>
+<cftype name='gss_cred_id_t' type='^{gss_cred_id_t_desc_struct=}'/>
+<cftype name='gss_ctx_id_t' type='^{gss_ctx_id_t_desc_struct=}'/>
+<cftype name='gss_name_t' type='^{gss_name_t_desc_struct=}'/>
+<string_constant name='kGSSChangePasswordNewPassword' nsstring='true' value='kGSSChangePasswordNewPassword'/>
+<string_constant name='kGSSChangePasswordOldPassword' nsstring='true' value='kGSSChangePasswordOldPassword'/>
+<string_constant name='kGSSCredentialUsage' nsstring='true' value='kGSSCredentialUsage'/>
+<string_constant name='kGSSICAppIdentifierACL' nsstring='true' value='kGSSICAppIdentifierACL'/>
+<string_constant name='kGSSICAppleSourceApp' nsstring='true' value='kGSSICAppleSourceApp'/>
+<string_constant name='kGSSICAppleSourceAppAuditToken' nsstring='true' value='kGSSICAppleSourceAppAuditToken'/>
+<string_constant name='kGSSICAppleSourceAppPID' nsstring='true' value='kGSSICAppleSourceAppPID'/>
+<string_constant name='kGSSICAppleSourceAppSigningIdentity' nsstring='true' value='kGSSICAppleSourceAppSigningIdentity'/>
+<string_constant name='kGSSICAuthenticationContext' nsstring='true' value='kGSSICAuthenticationContext'/>
+<string_constant name='kGSSICCertificate' nsstring='true' value='kGSSICCertificate'/>
+<string_constant name='kGSSICCreateNewCredential' nsstring='true' value='kGSSICCreateNewCredential'/>
+<string_constant name='kGSSICKerberosCacheName' nsstring='true' value='kGSSICKerberosCacheName'/>
+<string_constant name='kGSSICLKDCHostname' nsstring='true' value='kGSSICLKDCHostname'/>
+<string_constant name='kGSSICPassword' nsstring='true' value='kGSSICPassword'/>
+<string_constant name='kGSSICSiteName' nsstring='true' value='kGSSICSiteName'/>
+<string_constant name='kGSSICVerifyCredential' nsstring='true' value='kGSSICVerifyCredential'/>
+<string_constant name='kGSSICVerifyCredentialAcceptorName' nsstring='true' value='kGSSICVerifyCredentialAcceptorName'/>
+<string_constant name='kGSS_C_ACCEPT' nsstring='true' value='kGSS_C_ACCEPT'/>
+<string_constant name='kGSS_C_BOTH' nsstring='true' value='kGSS_C_BOTH'/>
+<string_constant name='kGSS_C_INITIATE' nsstring='true' value='kGSS_C_INITIATE'/>
+<enum name='GSSAPI_GSSAPI_OID' value='1'/>
+<enum name='GSS_C_ACCEPT' value='2'/>
+<enum name='GSS_C_AF_APPLETALK' value='16'/>
+<enum name='GSS_C_AF_BSC' value='17'/>
+<enum name='GSS_C_AF_CCITT' value='10'/>
+<enum name='GSS_C_AF_CHAOS' value='5'/>
+<enum name='GSS_C_AF_DATAKIT' value='9'/>
+<enum name='GSS_C_AF_DECnet' value='12'/>
+<enum name='GSS_C_AF_DLI' value='13'/>
+<enum name='GSS_C_AF_DSS' value='18'/>
+<enum name='GSS_C_AF_ECMA' value='8'/>
+<enum name='GSS_C_AF_HYLINK' value='15'/>
+<enum name='GSS_C_AF_IMPLINK' value='3'/>
+<enum name='GSS_C_AF_INET' value='2'/>
+<enum name='GSS_C_AF_INET6' value='24'/>
+<enum name='GSS_C_AF_LAT' value='14'/>
+<enum name='GSS_C_AF_LOCAL' value='1'/>
+<enum name='GSS_C_AF_NBS' value='7'/>
+<enum name='GSS_C_AF_NS' value='6'/>
+<enum name='GSS_C_AF_NULLADDR' value='255'/>
+<enum name='GSS_C_AF_OSI' value='19'/>
+<enum name='GSS_C_AF_PUP' value='4'/>
+<enum name='GSS_C_AF_SNA' value='11'/>
+<enum name='GSS_C_AF_UNSPEC' value='0'/>
+<enum name='GSS_C_AF_X25' value='21'/>
+<enum name='GSS_C_ANON_FLAG' value='64'/>
+<enum name='GSS_C_BOTH' value='0'/>
+<enum name='GSS_C_CALLING_ERROR_MASK' value='255'/>
+<enum name='GSS_C_CALLING_ERROR_OFFSET' value='24'/>
+<enum name='GSS_C_CONF_FLAG' value='16'/>
+<enum name='GSS_C_CRED_NO_UI' value='65536'/>
+<enum name='GSS_C_DCE_STYLE' value='4096'/>
+<enum name='GSS_C_DELEG_FLAG' value='1'/>
+<enum name='GSS_C_DELEG_POLICY_FLAG' value='32768'/>
+<enum name='GSS_C_EXTENDED_ERROR_FLAG' value='16384'/>
+<enum name='GSS_C_GSS_CODE' value='1'/>
+<enum name='GSS_C_IDENTIFY_FLAG' value='8192'/>
+<enum name='GSS_C_INDEFINITE' value='4294967295'/>
+<enum name='GSS_C_INITIATE' value='1'/>
+<enum name='GSS_C_INTEG_FLAG' value='32'/>
+<enum name='GSS_C_MECH_CODE' value='2'/>
+<enum name='GSS_C_MUTUAL_FLAG' value='2'/>
+<enum name='GSS_C_OPTION_MASK' value='65535'/>
+<enum name='GSS_C_PRF_KEY_FULL' value='0'/>
+<enum name='GSS_C_PRF_KEY_PARTIAL' value='1'/>
+<enum name='GSS_C_PROT_READY_FLAG' value='128'/>
+<enum name='GSS_C_QOP_DEFAULT' value='0'/>
+<enum name='GSS_C_REPLAY_FLAG' value='4'/>
+<enum name='GSS_C_ROUTINE_ERROR_MASK' value='255'/>
+<enum name='GSS_C_ROUTINE_ERROR_OFFSET' value='16'/>
+<enum name='GSS_C_SEQUENCE_FLAG' value='8'/>
+<enum name='GSS_C_SUPPLEMENTARY_MASK' value='65535'/>
+<enum name='GSS_C_SUPPLEMENTARY_OFFSET' value='0'/>
+<enum name='GSS_C_TRANS_FLAG' value='256'/>
+<enum name='GSS_IOV_BUFFER_FLAG_ALLOCATE' value='65536'/>
+<enum name='GSS_IOV_BUFFER_FLAG_ALLOCATED' value='131072'/>
+<enum name='GSS_IOV_BUFFER_TYPE_DATA' value='1'/>
+<enum name='GSS_IOV_BUFFER_TYPE_EMPTY' value='0'/>
+<enum name='GSS_IOV_BUFFER_TYPE_FLAG_ALLOCATE' value='65536'/>
+<enum name='GSS_IOV_BUFFER_TYPE_FLAG_ALLOCATED' value='131072'/>
+<enum name='GSS_IOV_BUFFER_TYPE_FLAG_MASK' value='4294901760'/>
+<enum name='GSS_IOV_BUFFER_TYPE_HEADER' value='2'/>
+<enum name='GSS_IOV_BUFFER_TYPE_MECH_PARAMS' value='3'/>
+<enum name='GSS_IOV_BUFFER_TYPE_PADDING' value='9'/>
+<enum name='GSS_IOV_BUFFER_TYPE_SIGN_ONLY' value='11'/>
+<enum name='GSS_IOV_BUFFER_TYPE_STREAM' value='10'/>
+<enum name='GSS_IOV_BUFFER_TYPE_TRAILER' value='7'/>
+<enum name='GSS_KRB5_CONF_C_QOP_DES' value='256'/>
+<enum name='GSS_KRB5_CONF_C_QOP_DES3_KD' value='512'/>
+<enum name='GSS_S_BAD_BINDINGS' value='262144'/>
+<enum name='GSS_S_BAD_MECH' value='65536'/>
+<enum name='GSS_S_BAD_MECH_ATTR' value='1245184'/>
+<enum name='GSS_S_BAD_MIC' value='393216'/>
+<enum name='GSS_S_BAD_NAME' value='131072'/>
+<enum name='GSS_S_BAD_NAMETYPE' value='196608'/>
+<enum name='GSS_S_BAD_QOP' value='917504'/>
+<enum name='GSS_S_BAD_SIG' value='393216'/>
+<enum name='GSS_S_BAD_STATUS' value='327680'/>
+<enum name='GSS_S_CALL_BAD_STRUCTURE' value='50331648'/>
+<enum name='GSS_S_CALL_INACCESSIBLE_READ' value='16777216'/>
+<enum name='GSS_S_CALL_INACCESSIBLE_WRITE' value='33554432'/>
+<enum name='GSS_S_COMPLETE' value='0'/>
+<enum name='GSS_S_CONTEXT_EXPIRED' value='786432'/>
+<enum name='GSS_S_CONTINUE_NEEDED' value='1'/>
+<enum name='GSS_S_CREDENTIALS_EXPIRED' value='720896'/>
+<enum name='GSS_S_CRED_UNAVAIL' value='851968'/>
+<enum name='GSS_S_DEFECTIVE_CREDENTIAL' value='655360'/>
+<enum name='GSS_S_DEFECTIVE_TOKEN' value='589824'/>
+<enum name='GSS_S_DUPLICATE_ELEMENT' value='1114112'/>
+<enum name='GSS_S_DUPLICATE_TOKEN' value='2'/>
+<enum name='GSS_S_FAILURE' value='851968'/>
+<enum name='GSS_S_GAP_TOKEN' value='16'/>
+<enum name='GSS_S_NAME_NOT_MN' value='1179648'/>
+<enum name='GSS_S_NO_CONTEXT' value='524288'/>
+<enum name='GSS_S_NO_CRED' value='458752'/>
+<enum name='GSS_S_OLD_TOKEN' value='4'/>
+<enum name='GSS_S_UNAUTHORIZED' value='983040'/>
+<enum name='GSS_S_UNAVAILABLE' value='1048576'/>
+<enum name='GSS_S_UNSEQ_TOKEN' value='8'/>
+<function name='GSSCreateCredentialFromUUID'>
+<arg declared_type='CFUUIDRef _Nonnull' name='uuid' type='^{__CFUUID=}'/>
+<retval declared_type='gss_cred_id_t _Nullable' type='^{gss_cred_id_t_desc_struct=}'/>
+</function>
+<function name='GSSCreateError'>
+<arg declared_type='gss_const_OID _Nonnull' name='mech' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='OM_uint32' name='major_status' type='I'/>
+<arg declared_type='OM_uint32' name='minor_status' type='I'/>
+<retval declared_type='CFErrorRef _Nullable' type='^{__CFError=}'/>
+</function>
+<function name='GSSCreateName'>
+<arg declared_type='CFTypeRef _Nonnull' name='name' type='@'/>
+<arg declared_type='gss_const_OID _Nonnull' name='name_type' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='CFErrorRef _Nullable * _Nullable' name='error' type='^^{__CFError}'/>
+<retval declared_type='gss_name_t _Nullable' type='^{gss_name_t_desc_struct=}'/>
+</function>
+<function name='GSSCredentialCopyName'>
+<arg declared_type='gss_cred_id_t _Nonnull' name='cred' type='^{gss_cred_id_t_desc_struct=}'/>
+<retval declared_type='gss_name_t _Nullable' type='^{gss_name_t_desc_struct=}'/>
+</function>
+<function name='GSSCredentialCopyUUID'>
+<arg declared_type='gss_cred_id_t _Nonnull' name='credential' type='^{gss_cred_id_t_desc_struct=}'/>
+<retval declared_type='CFUUIDRef _Nullable' type='^{__CFUUID=}'/>
+</function>
+<function name='GSSCredentialGetLifetime'>
+<arg declared_type='gss_cred_id_t _Nonnull' name='cred' type='^{gss_cred_id_t_desc_struct=}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='GSSNameCreateDisplayString'>
+<arg declared_type='gss_name_t _Nonnull' name='name' type='^{gss_name_t_desc_struct=}'/>
+<retval declared_type='CFStringRef _Nullable' type='^{__CFString=}'/>
+</function>
+<function name='gss_aapl_change_password'>
+<arg const='true' declared_type='gss_name_t _Nonnull' name='name' type='^{gss_name_t_desc_struct=}'/>
+<arg declared_type='gss_const_OID _Nonnull' name='mech' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='CFDictionaryRef _Nonnull' name='attributes' type='^{__CFDictionary=}'/>
+<arg declared_type='CFErrorRef _Nullable * _Nullable' name='error' type='^^{__CFError}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_aapl_initial_cred'>
+<arg const='true' declared_type='gss_name_t _Nonnull' name='desired_name' type='^{gss_name_t_desc_struct=}'/>
+<arg declared_type='gss_const_OID _Nonnull' name='desired_mech' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='attributes' type='^{__CFDictionary=}'/>
+<arg declared_type='gss_cred_id_t _Nonnull * _Nullable' name='output_cred_handle' type='^^{gss_cred_id_t_desc_struct}'/>
+<arg declared_type='CFErrorRef _Nullable * _Nullable' name='error' type='^^{__CFError}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_accept_sec_context'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_ctx_id_t _Nonnull * _Nullable' name='context_handle' type='^^{gss_ctx_id_t_desc_struct}'/>
+<arg const='true' declared_type='gss_cred_id_t _Nullable' name='acceptor_cred_handle' type='^{gss_cred_id_t_desc_struct=}'/>
+<arg const='true' declared_type='gss_buffer_t _Nullable' name='input_token' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg const='true' declared_type='gss_channel_bindings_t _Nullable' name='input_chan_bindings' type='^{gss_channel_bindings_struct=I{gss_buffer_desc_struct=I^v}I{gss_buffer_desc_struct=I^v}{gss_buffer_desc_struct=I^v}}' type64='^{gss_channel_bindings_struct=I{gss_buffer_desc_struct=Q^v}I{gss_buffer_desc_struct=Q^v}{gss_buffer_desc_struct=Q^v}}'/>
+<arg declared_type='gss_name_t _Nullable * _Nullable' name='src_name' type='^^{gss_name_t_desc_struct}'/>
+<arg declared_type='gss_OID _Nullable * _Nullable' name='mech_type' type='^^{gss_OID_desc_struct}'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='output_token' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='OM_uint32 * _Nullable' name='ret_flags' type='^I'/>
+<arg declared_type='OM_uint32 * _Nullable' name='time_rec' type='^I'/>
+<arg declared_type='gss_cred_id_t _Nullable * _Nullable' name='delegated_cred_handle' type='^^{gss_cred_id_t_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_acquire_cred'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_name_t _Nullable' name='desired_name' type='^{gss_name_t_desc_struct=}'/>
+<arg declared_type='OM_uint32' name='time_req' type='I'/>
+<arg const='true' declared_type='gss_OID_set _Nullable' name='desired_mechs' type='^{gss_OID_set_desc_struct=I^{gss_OID_desc_struct}}' type64='^{gss_OID_set_desc_struct=Q^{gss_OID_desc_struct}}'/>
+<arg declared_type='gss_cred_usage_t' name='cred_usage' type='i'/>
+<arg declared_type='gss_cred_id_t _Nonnull * _Nullable' name='output_cred_handle' type='^^{gss_cred_id_t_desc_struct}'/>
+<arg declared_type='gss_OID_set _Nullable * _Nullable' name='actual_mechs' type='^^{gss_OID_set_desc_struct}'/>
+<arg declared_type='OM_uint32 * _Nullable' name='time_rec' type='^I'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_acquire_cred_with_password'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_name_t _Nonnull' name='desired_name' type='^{gss_name_t_desc_struct=}'/>
+<arg const='true' declared_type='gss_buffer_t _Nonnull' name='password' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='OM_uint32' name='time_req' type='I'/>
+<arg const='true' declared_type='gss_OID_set _Nullable' name='desired_mechs' type='^{gss_OID_set_desc_struct=I^{gss_OID_desc_struct}}' type64='^{gss_OID_set_desc_struct=Q^{gss_OID_desc_struct}}'/>
+<arg declared_type='gss_cred_usage_t' name='cred_usage' type='i'/>
+<arg declared_type='gss_cred_id_t _Nonnull * _Nullable' name='output_cred_handle' type='^^{gss_cred_id_t_desc_struct}'/>
+<arg declared_type='gss_OID_set _Nullable * _Nullable' name='actual_mechs' type='^^{gss_OID_set_desc_struct}'/>
+<arg declared_type='OM_uint32 * _Nullable' name='time_rec' type='^I'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_add_buffer_set_member'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_buffer_t _Nonnull' name='member_buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_buffer_set_t _Nonnull * _Nonnull' name='buffer_set' type='^^{gss_buffer_set_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_add_cred'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_cred_id_t _Nullable' name='input_cred_handle' type='^{gss_cred_id_t_desc_struct=}'/>
+<arg const='true' declared_type='gss_name_t _Nullable' name='desired_name' type='^{gss_name_t_desc_struct=}'/>
+<arg const='true' declared_type='gss_OID _Nullable' name='desired_mech' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='gss_cred_usage_t' name='cred_usage' type='i'/>
+<arg declared_type='OM_uint32' name='initiator_time_req' type='I'/>
+<arg declared_type='OM_uint32' name='acceptor_time_req' type='I'/>
+<arg declared_type='gss_cred_id_t _Nonnull * _Nullable' name='output_cred_handle' type='^^{gss_cred_id_t_desc_struct}'/>
+<arg declared_type='gss_OID_set _Nullable * _Nullable' name='actual_mechs' type='^^{gss_OID_set_desc_struct}'/>
+<arg declared_type='OM_uint32 * _Nullable' name='initiator_time_rec' type='^I'/>
+<arg declared_type='OM_uint32 * _Nullable' name='acceptor_time_rec' type='^I'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_add_oid_set_member'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_const_OID _Nonnull' name='member_oid' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='gss_OID_set _Nonnull * _Nonnull' name='oid_set' type='^^{gss_OID_set_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_canonicalize_name'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_name_t _Nonnull' name='input_name' type='^{gss_name_t_desc_struct=}'/>
+<arg const='true' declared_type='gss_OID _Nonnull' name='mech_type' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='gss_name_t _Nonnull * _Nullable' name='output_name' type='^^{gss_name_t_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_compare_name'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_name_t _Nonnull' name='name1_arg' type='^{gss_name_t_desc_struct=}'/>
+<arg const='true' declared_type='gss_name_t _Nonnull' name='name2_arg' type='^{gss_name_t_desc_struct=}'/>
+<arg declared_type='int * _Nonnull' name='name_equal' type='^i'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_context_time'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_ctx_id_t _Nonnull' name='context_handle' type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg declared_type='OM_uint32 * _Nonnull' name='time_rec' type='^I'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_create_empty_buffer_set'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_buffer_set_t _Nonnull * _Nullable' name='buffer_set' type='^^{gss_buffer_set_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_create_empty_oid_set'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_OID_set _Nonnull * _Nullable' name='oid_set' type='^^{gss_OID_set_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_decapsulate_token'>
+<arg declared_type='gss_const_buffer_t _Nonnull' name='input_token' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_const_OID _Nonnull' name='oid' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='output_token' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_delete_sec_context'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_ctx_id_t _Nonnull * _Nullable' name='context_handle' type='^^{gss_ctx_id_t_desc_struct}'/>
+<arg declared_type='gss_buffer_t _Nullable' name='output_token' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_destroy_cred'>
+<arg declared_type='OM_uint32 * _Nonnull' name='min_stat' type='^I'/>
+<arg declared_type='gss_cred_id_t _Nonnull * _Nullable' name='cred_handle' type='^^{gss_cred_id_t_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_display_mech_attr'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_const_OID _Nonnull' name='mech_attr' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='gss_buffer_t _Nullable' name='name' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_buffer_t _Nullable' name='short_desc' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_buffer_t _Nullable' name='long_desc' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_display_name'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_name_t _Nonnull' name='input_name' type='^{gss_name_t_desc_struct=}'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='output_name_buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_OID _Nullable * _Nullable' name='output_name_type' type='^^{gss_OID_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_display_status'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='OM_uint32' name='status_value' type='I'/>
+<arg declared_type='int' name='status_type' type='i'/>
+<arg const='true' declared_type='gss_OID _Nullable' name='mech_type' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='OM_uint32 * _Nonnull' name='message_content' type='^I'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='status_string' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_duplicate_name'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_name_t _Nonnull' name='src_name' type='^{gss_name_t_desc_struct=}'/>
+<arg declared_type='gss_name_t _Nonnull * _Nullable' name='dest_name' type='^^{gss_name_t_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_duplicate_oid'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_OID _Nonnull' name='src_oid' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='gss_OID _Nonnull * _Nullable' name='dest_oid' type='^^{gss_OID_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_encapsulate_token'>
+<arg declared_type='gss_const_buffer_t _Nonnull' name='input_token' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_const_OID _Nonnull' name='oid' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='output_token' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_export_cred'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_cred_id_t _Nonnull' name='cred_handle' type='^{gss_cred_id_t_desc_struct=}'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='token' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_export_name'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_name_t _Nonnull' name='input_name' type='^{gss_name_t_desc_struct=}'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='exported_name' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_export_sec_context'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_ctx_id_t _Nonnull * _Nullable' name='context_handle' type='^^{gss_ctx_id_t_desc_struct}'/>
+<arg declared_type='gss_buffer_t _Nullable' name='interprocess_token' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_get_mic'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_ctx_id_t _Nonnull' name='context_handle' type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg declared_type='gss_qop_t' name='qop_req' type='I'/>
+<arg const='true' declared_type='gss_buffer_t _Nonnull' name='message_buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='message_token' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_import_cred'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='token' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_cred_id_t _Nonnull * _Nullable' name='cred_handle' type='^^{gss_cred_id_t_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_import_name'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_buffer_t _Nonnull' name='input_name_buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_const_OID _Nullable' name='input_name_type' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='gss_name_t _Nonnull * _Nullable' name='output_name' type='^^{gss_name_t_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_import_sec_context'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_buffer_t _Nonnull' name='interprocess_token' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_ctx_id_t _Nonnull * _Nullable' name='context_handle' type='^^{gss_ctx_id_t_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_indicate_mechs'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_OID_set _Nonnull * _Nullable' name='mech_set' type='^^{gss_OID_set_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_indicate_mechs_by_attrs'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_const_OID_set _Nullable' name='desired_mech_attrs' type='^{gss_OID_set_desc_struct=I^{gss_OID_desc_struct}}' type64='^{gss_OID_set_desc_struct=Q^{gss_OID_desc_struct}}'/>
+<arg declared_type='gss_const_OID_set _Nullable' name='except_mech_attrs' type='^{gss_OID_set_desc_struct=I^{gss_OID_desc_struct}}' type64='^{gss_OID_set_desc_struct=Q^{gss_OID_desc_struct}}'/>
+<arg declared_type='gss_const_OID_set _Nullable' name='critical_mech_attrs' type='^{gss_OID_set_desc_struct=I^{gss_OID_desc_struct}}' type64='^{gss_OID_set_desc_struct=Q^{gss_OID_desc_struct}}'/>
+<arg declared_type='gss_OID_set _Nonnull * _Nullable' name='mechs' type='^^{gss_OID_set_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_init_sec_context'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_cred_id_t _Nullable' name='initiator_cred_handle' type='^{gss_cred_id_t_desc_struct=}'/>
+<arg declared_type='gss_ctx_id_t _Nonnull * _Nullable' name='context_handle' type='^^{gss_ctx_id_t_desc_struct}'/>
+<arg const='true' declared_type='gss_name_t _Nonnull' name='target_name' type='^{gss_name_t_desc_struct=}'/>
+<arg const='true' declared_type='gss_OID _Nullable' name='input_mech_type' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='OM_uint32' name='req_flags' type='I'/>
+<arg declared_type='OM_uint32' name='time_req' type='I'/>
+<arg const='true' declared_type='gss_channel_bindings_t _Nullable' name='input_chan_bindings' type='^{gss_channel_bindings_struct=I{gss_buffer_desc_struct=I^v}I{gss_buffer_desc_struct=I^v}{gss_buffer_desc_struct=I^v}}' type64='^{gss_channel_bindings_struct=I{gss_buffer_desc_struct=Q^v}I{gss_buffer_desc_struct=Q^v}{gss_buffer_desc_struct=Q^v}}'/>
+<arg const='true' declared_type='gss_buffer_t _Nullable' name='input_token' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_OID _Nullable * _Nullable' name='actual_mech_type' type='^^{gss_OID_desc_struct}'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='output_token' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='OM_uint32 * _Nullable' name='ret_flags' type='^I'/>
+<arg declared_type='OM_uint32 * _Nullable' name='time_rec' type='^I'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_inquire_attrs_for_mech'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_const_OID _Nonnull' name='mech' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='gss_OID_set _Nullable * _Nullable' name='mech_attr' type='^^{gss_OID_set_desc_struct}'/>
+<arg declared_type='gss_OID_set _Nullable * _Nullable' name='known_mech_attrs' type='^^{gss_OID_set_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_inquire_context'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_ctx_id_t _Nonnull' name='context_handle' type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg declared_type='gss_name_t _Nullable * _Nullable' name='src_name' type='^^{gss_name_t_desc_struct}'/>
+<arg declared_type='gss_name_t _Nullable * _Nullable' name='targ_name' type='^^{gss_name_t_desc_struct}'/>
+<arg declared_type='OM_uint32 * _Nullable' name='lifetime_rec' type='^I'/>
+<arg declared_type='gss_OID _Nullable * _Nullable' name='mech_type' type='^^{gss_OID_desc_struct}'/>
+<arg declared_type='OM_uint32 * _Nullable' name='ctx_flags' type='^I'/>
+<arg declared_type='int * _Nullable' name='locally_initiated' type='^i'/>
+<arg declared_type='int * _Nullable' name='xopen' type='^i'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_inquire_cred'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_cred_id_t _Nullable' name='cred_handle' type='^{gss_cred_id_t_desc_struct=}'/>
+<arg declared_type='gss_name_t _Nullable * _Nullable' name='name_ret' type='^^{gss_name_t_desc_struct}'/>
+<arg declared_type='OM_uint32 * _Nullable' name='lifetime' type='^I'/>
+<arg declared_type='gss_cred_usage_t * _Nullable' name='cred_usage' type='^i'/>
+<arg declared_type='gss_OID_set _Nullable * _Nullable' name='mechanisms' type='^^{gss_OID_set_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_inquire_cred_by_mech'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_cred_id_t _Nullable' name='cred_handle' type='^{gss_cred_id_t_desc_struct=}'/>
+<arg const='true' declared_type='gss_OID _Nonnull' name='mech_type' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='gss_name_t _Nullable * _Nullable' name='cred_name' type='^^{gss_name_t_desc_struct}'/>
+<arg declared_type='OM_uint32 * _Nullable' name='initiator_lifetime' type='^I'/>
+<arg declared_type='OM_uint32 * _Nullable' name='acceptor_lifetime' type='^I'/>
+<arg declared_type='gss_cred_usage_t * _Nullable' name='cred_usage' type='^i'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_inquire_cred_by_oid'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_cred_id_t _Nonnull' name='cred_handle' type='^{gss_cred_id_t_desc_struct=}'/>
+<arg const='true' declared_type='gss_OID _Nonnull' name='desired_object' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='gss_buffer_set_t _Nonnull * _Nullable' name='data_set' type='^^{gss_buffer_set_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_inquire_mech_for_saslname'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_buffer_t _Nullable' name='sasl_mech_name' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_OID _Nullable * _Nullable' name='mech_type' type='^^{gss_OID_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_inquire_mechs_for_name'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_name_t _Nonnull' name='input_name' type='^{gss_name_t_desc_struct=}'/>
+<arg declared_type='gss_OID_set _Nonnull * _Nullable' name='mech_types' type='^^{gss_OID_set_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_inquire_name'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_name_t _Nonnull' name='input_name' type='^{gss_name_t_desc_struct=}'/>
+<arg declared_type='int * _Nonnull' name='name_is_MN' type='^i'/>
+<arg declared_type='gss_OID _Nullable * _Nullable' name='MN_mech' type='^^{gss_OID_desc_struct}'/>
+<arg declared_type='gss_buffer_set_t _Nullable * _Nullable' name='attrs' type='^^{gss_buffer_set_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_inquire_names_for_mech'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_const_OID _Nonnull' name='mechanism' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='gss_OID_set _Nonnull * _Nullable' name='name_types' type='^^{gss_OID_set_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_inquire_saslname_for_mech'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_OID _Nonnull' name='desired_mech' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='gss_buffer_t _Nullable' name='sasl_mech_name' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_buffer_t _Nullable' name='mech_name' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_buffer_t _Nullable' name='mech_description' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_inquire_sec_context_by_oid'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_ctx_id_t _Nonnull' name='context_handle' type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg const='true' declared_type='gss_OID _Nonnull' name='desired_object' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='gss_buffer_set_t _Nonnull * _Nullable' name='data_set' type='^^{gss_buffer_set_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_iter_creds'>
+<arg declared_type='OM_uint32 * _Nonnull' name='min_stat' type='^I'/>
+<arg declared_type='OM_uint32' name='flags' type='I'/>
+<arg declared_type='gss_const_OID _Nullable' name='mech' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='void (^ _Nonnull)(gss_OID _Nullable, gss_cred_id_t _Nullable)' function_pointer='true' name='useriter' type='@?'>
+<arg declared_type='gss_OID _Nullable' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='gss_cred_id_t _Nullable' type='^{gss_cred_id_t_desc_struct=}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_iter_creds_f'>
+<arg declared_type='OM_uint32 * _Nonnull' name='min_stat' type='^I'/>
+<arg declared_type='OM_uint32' name='flags' type='I'/>
+<arg declared_type='gss_const_OID _Nullable' name='mech' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='void * _Nullable' name='userctx' type='^v'/>
+<arg declared_type='void (* _Nonnull)(void * _Nullable, gss_OID _Nullable, gss_cred_id_t _Nullable)' function_pointer='true' name='useriter' type='^?'>
+<arg declared_type='void * _Nullable' type='^v'/>
+<arg declared_type='gss_OID _Nullable' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='gss_cred_id_t _Nullable' type='^{gss_cred_id_t_desc_struct=}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_krb5_ccache_name'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='char * _Nullable' name='name' type='*'/>
+<arg const='true' declared_type='char * _Nullable * _Nullable' name='out_name' type='^*'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_krb5_copy_ccache'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_cred_id_t _Nonnull' name='cred' type='^{gss_cred_id_t_desc_struct=}'/>
+<arg declared_type='struct krb5_ccache_data * _Nonnull' name='out' type='^{krb5_ccache_data=}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_krb5_export_lucid_sec_context'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_ctx_id_t _Nonnull * _Nullable' name='context_handle' type='^^{gss_ctx_id_t_desc_struct}'/>
+<arg declared_type='OM_uint32' name='version' type='I'/>
+<arg declared_type='void * _Nonnull * _Nullable' name='rctx' type='^^v'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_krb5_free_lucid_sec_context'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='void * _Nonnull' name='c' type='^v'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_krb5_set_allowable_enctypes'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_cred_id_t _Nonnull' name='cred' type='^{gss_cred_id_t_desc_struct=}'/>
+<arg declared_type='OM_uint32' name='num_enctypes' type='I'/>
+<arg declared_type='int32_t * _Nonnull' name='enctypes' type='^i'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_oid_equal'>
+<arg declared_type='gss_const_OID _Nullable' name='a' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='gss_const_OID _Nullable' name='b' type='^{gss_OID_desc_struct=I^v}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='gss_oid_to_str'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_OID _Nonnull' name='oid' type='^{gss_OID_desc_struct=I^v}'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='oid_str' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_process_context_token'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_ctx_id_t _Nonnull' name='context_handle' type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg const='true' declared_type='gss_buffer_t _Nonnull' name='token_buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_pseudo_random'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_ctx_id_t _Nonnull' name='context' type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg declared_type='int' name='prf_key' type='i'/>
+<arg const='true' declared_type='gss_buffer_t _Nonnull' name='prf_in' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='ssize_t' name='desired_output_len' type='l' type64='q'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='prf_out' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_release_buffer'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_release_buffer_set'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_buffer_set_t _Nonnull * _Nullable' name='buffer_set' type='^^{gss_buffer_set_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_release_cred'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_cred_id_t _Nonnull * _Nullable' name='cred_handle' type='^^{gss_cred_id_t_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_release_name'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_name_t _Nonnull * _Nullable' name='input_name' type='^^{gss_name_t_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_release_oid'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_OID _Nonnull * _Nullable' name='oid' type='^^{gss_OID_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_release_oid_set'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_OID_set _Nonnull * _Nullable' name='set' type='^^{gss_OID_set_desc_struct}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_seal'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_ctx_id_t _Nonnull' name='context_handle' type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg declared_type='int' name='conf_req_flag' type='i'/>
+<arg declared_type='int' name='qop_req' type='i'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='input_message_buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='int * _Nonnull' name='conf_state' type='^i'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='output_message_buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_set_cred_option'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_cred_id_t _Nullable * _Nullable' name='cred_handle' type='^^{gss_cred_id_t_desc_struct}'/>
+<arg const='true' declared_type='gss_OID _Nonnull' name='object' type='^{gss_OID_desc_struct=I^v}'/>
+<arg const='true' declared_type='gss_buffer_t _Nullable' name='value' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_set_sec_context_option'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_ctx_id_t _Nonnull * _Nullable' name='context_handle' type='^^{gss_ctx_id_t_desc_struct}'/>
+<arg const='true' declared_type='gss_OID _Nonnull' name='object' type='^{gss_OID_desc_struct=I^v}'/>
+<arg const='true' declared_type='gss_buffer_t _Nullable' name='value' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_sign'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_ctx_id_t _Nonnull' name='context_handle' type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg declared_type='int' name='qop_req' type='i'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='message_buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='message_token' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_test_oid_set_member'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_const_OID _Nonnull' name='member' type='^{gss_OID_desc_struct=I^v}'/>
+<arg const='true' declared_type='gss_OID_set _Nonnull' name='set' type='^{gss_OID_set_desc_struct=I^{gss_OID_desc_struct}}' type64='^{gss_OID_set_desc_struct=Q^{gss_OID_desc_struct}}'/>
+<arg declared_type='int * _Nonnull' name='present' type='^i'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_unseal'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_ctx_id_t _Nonnull' name='context_handle' type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='input_message_buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='output_message_buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='int * _Nonnull' name='conf_state' type='^i'/>
+<arg declared_type='int * _Nonnull' name='qop_state' type='^i'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_unwrap'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_ctx_id_t _Nonnull' name='context_handle' type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg const='true' declared_type='gss_buffer_t _Nonnull' name='input_message_buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='output_message_buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='int * _Nullable' name='conf_state' type='^i'/>
+<arg declared_type='gss_qop_t * _Nullable' name='qop_state' type='^I'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_userok'>
+<arg const='true' declared_type='gss_name_t _Nonnull' name='name' type='^{gss_name_t_desc_struct=}'/>
+<arg const='true' declared_type='char * _Nonnull' name='user' type='*'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='gss_verify'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_ctx_id_t _Nonnull' name='context_handle' type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='message_buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='token_buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='int * _Nonnull' name='qop_state' type='^i'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_verify_mic'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_ctx_id_t _Nonnull' name='context_handle' type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg const='true' declared_type='gss_buffer_t _Nonnull' name='message_buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg const='true' declared_type='gss_buffer_t _Nonnull' name='token_buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='gss_qop_t * _Nullable' name='qop_state' type='^I'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_wrap'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_ctx_id_t _Nonnull' name='context_handle' type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg declared_type='int' name='conf_req_flag' type='i'/>
+<arg declared_type='gss_qop_t' name='qop_req' type='I'/>
+<arg const='true' declared_type='gss_buffer_t _Nonnull' name='input_message_buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<arg declared_type='int * _Nullable' name='conf_state' type='^i'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='output_message_buffer' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gss_wrap_size_limit'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg const='true' declared_type='gss_ctx_id_t _Nonnull' name='context_handle' type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg declared_type='int' name='conf_req_flag' type='i'/>
+<arg declared_type='gss_qop_t' name='qop_req' type='I'/>
+<arg declared_type='OM_uint32' name='req_output_size' type='I'/>
+<arg declared_type='OM_uint32 * _Nonnull' name='max_input_size' type='^I'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gsskrb5_extract_authz_data_from_sec_context'>
+<arg declared_type='OM_uint32 * _Nonnull' name='minor_status' type='^I'/>
+<arg declared_type='gss_ctx_id_t _Nonnull' name='context_handle' type='^{gss_ctx_id_t_desc_struct=}'/>
+<arg declared_type='int' name='ad_type' type='i'/>
+<arg declared_type='gss_buffer_t _Nonnull' name='ad_data' type='^{gss_buffer_desc_struct=I^v}' type64='^{gss_buffer_desc_struct=Q^v}'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='gsskrb5_register_acceptor_identity'>
+<arg const='true' declared_type='char * _Nonnull' name='identity' type='*'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+<function name='krb5_gss_register_acceptor_identity'>
+<arg const='true' declared_type='char * _Nonnull' name='identity' type='*'/>
+<retval declared_type='OM_uint32' type='I'/>
+</function>
+</signatures>

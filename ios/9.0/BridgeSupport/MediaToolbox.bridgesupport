@@ -1,0 +1,91 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/MediaAccessibility.framework'/>
+<depends_on path='/System/Library/Frameworks/MobileCoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/VideoToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/CFNetwork.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreAudio.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenGLES.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<struct name='MTAudioProcessingTapCallbacks' type='{_MTAudioProcessingTapCallbacks=&quot;version&quot;i&quot;clientInfo&quot;^v&quot;init&quot;^?&quot;finalize&quot;^?&quot;prepare&quot;^?&quot;unprepare&quot;^?&quot;process&quot;^?}'>
+<field declared_type='int' name='version' type='i'/>
+<field declared_type='void * _Nullable' name='clientInfo' type='^v'/>
+<field declared_type='MTAudioProcessingTapInitCallback _Nullable' function_pointer='true' name='init' type='^?'>
+<arg declared_type='MTAudioProcessingTapRef _Nonnull' type='^{opaqueMTAudioProcessingTap=}'/>
+<arg declared_type='void * _Nullable' type='^v'/>
+<arg declared_type='void * _Nullable * _Nonnull' type='^^v'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field declared_type='MTAudioProcessingTapFinalizeCallback _Nullable' function_pointer='true' name='finalize' type='^?'>
+<arg declared_type='MTAudioProcessingTapRef _Nonnull' type='^{opaqueMTAudioProcessingTap=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field declared_type='MTAudioProcessingTapPrepareCallback _Nullable' function_pointer='true' name='prepare' type='^?'>
+<arg declared_type='MTAudioProcessingTapRef _Nonnull' type='^{opaqueMTAudioProcessingTap=}'/>
+<arg declared_type='CMItemCount' type='l' type64='q'/>
+<arg const='true' declared_type='AudioStreamBasicDescription * _Nonnull' type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field declared_type='MTAudioProcessingTapUnprepareCallback _Nullable' function_pointer='true' name='unprepare' type='^?'>
+<arg declared_type='MTAudioProcessingTapRef _Nonnull' type='^{opaqueMTAudioProcessingTap=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field declared_type='MTAudioProcessingTapProcessCallback _Nonnull' function_pointer='true' name='process' type='^?'>
+<arg declared_type='MTAudioProcessingTapRef _Nonnull' type='^{opaqueMTAudioProcessingTap=}'/>
+<arg declared_type='CMItemCount' type='l' type64='q'/>
+<arg declared_type='MTAudioProcessingTapFlags' type='I'/>
+<arg declared_type='AudioBufferList * _Nonnull' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg declared_type='CMItemCount * _Nonnull' type='^i' type64='^q'/>
+<arg declared_type='MTAudioProcessingTapFlags * _Nonnull' type='^I'/>
+<retval declared_type='void' type='v'/>
+</field>
+</struct>
+<cftype gettypeid_func='MTAudioProcessingTapGetTypeID' name='MTAudioProcessingTapRef' tollfree='__NSCFType' type='^{opaqueMTAudioProcessingTap=}'/>
+<enum name='kMTAudioProcessingTapCallbacksVersion_0' value='0'/>
+<enum name='kMTAudioProcessingTapCreationFlag_PostEffects' value='2'/>
+<enum name='kMTAudioProcessingTapCreationFlag_PreEffects' value='1'/>
+<enum name='kMTAudioProcessingTapFlag_EndOfStream' value='512'/>
+<enum name='kMTAudioProcessingTapFlag_StartOfStream' value='256'/>
+<function name='MTAudioProcessingTapCreate'>
+<arg declared_type='CFAllocatorRef _Nullable' name='allocator' type='^{__CFAllocator=}'/>
+<arg const='true' declared_type='MTAudioProcessingTapCallbacks * _Nonnull' name='callbacks' type='^{_MTAudioProcessingTapCallbacks=i^v^?^?^?^?^?}'/>
+<arg declared_type='MTAudioProcessingTapCreationFlags' name='flags' type='I'/>
+<arg declared_type='MTAudioProcessingTapRef _Nullable * _Nonnull' name='tapOut' type='^^{opaqueMTAudioProcessingTap}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='MTAudioProcessingTapGetSourceAudio'>
+<arg declared_type='MTAudioProcessingTapRef _Nonnull' name='tap' type='^{opaqueMTAudioProcessingTap=}'/>
+<arg declared_type='CMItemCount' name='numberFrames' type='l' type64='q'/>
+<arg declared_type='AudioBufferList * _Nonnull' name='bufferListInOut' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg declared_type='MTAudioProcessingTapFlags * _Nullable' name='flagsOut' type='^I'/>
+<arg declared_type='CMTimeRange * _Nullable' name='timeRangeOut' type='^{_CMTimeRange={?=qiIq}{?=qiIq}}'/>
+<arg declared_type='CMItemCount * _Nullable' name='numberFramesOut' type='^i' type64='^q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='MTAudioProcessingTapGetStorage'>
+<arg declared_type='MTAudioProcessingTapRef _Nonnull' name='tap' type='^{opaqueMTAudioProcessingTap=}'/>
+<retval declared_type='void * _Nonnull' type='^v'/>
+</function>
+<function name='MTAudioProcessingTapGetTypeID'>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
+</function>
+<function name='MTCopyLocalizedNameForMediaSubType'>
+<arg declared_type='CMMediaType' name='mediaType' type='L' type64='I'/>
+<arg declared_type='FourCharCode' name='mediaSubType' type='L' type64='I'/>
+<retval declared_type='CFStringRef _Nullable' type='^{__CFString=}'/>
+</function>
+<function name='MTCopyLocalizedNameForMediaType'>
+<arg declared_type='CMMediaType' name='mediaType' type='L' type64='I'/>
+<retval declared_type='CFStringRef _Nullable' type='^{__CFString=}'/>
+</function>
+</signatures>

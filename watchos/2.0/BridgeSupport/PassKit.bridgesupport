@@ -1,0 +1,202 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Contacts.framework'/>
+<depends_on path='/System/Library/Frameworks/MapKit.framework'/>
+<depends_on path='/System/Library/Frameworks/LocalAuthentication.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/AddressBook.framework'/>
+<depends_on path='/System/Library/Frameworks/Accounts.framework'/>
+<depends_on path='/System/Library/Frameworks/MobileCoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/StoreKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreImage.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/UIKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreLocation.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type='NSString*' name='PKEncryptionSchemeECC_V2' type='@'/>
+<constant const='true' declared_type='NSString*' name='PKPassKitErrorDomain' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='PKPassLibraryAddedPassesUserInfoKey' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='PKPassLibraryDidChangeNotification' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='PKPassLibraryPassTypeIdentifierUserInfoKey' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='PKPassLibraryRemotePaymentPassesDidChangeNotification' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='PKPassLibraryRemovedPassInfosUserInfoKey' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='PKPassLibraryReplacementPassesUserInfoKey' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='PKPassLibrarySerialNumberUserInfoKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='PKPaymentNetworkAmex' type='@'/>
+<constant const='true' declared_type='NSString*' name='PKPaymentNetworkDiscover' type='@'/>
+<constant const='true' declared_type='NSString*' name='PKPaymentNetworkMasterCard' type='@'/>
+<constant const='true' declared_type='NSString*' name='PKPaymentNetworkPrivateLabel' type='@'/>
+<constant const='true' declared_type='NSString*' name='PKPaymentNetworkVisa' type='@'/>
+<enum name='PKInvalidDataError' value='1'/>
+<enum name='PKInvalidSignature' value='3'/>
+<enum name='PKNotEntitledError' value='4'/>
+<enum name='PKPassLibraryDidAddPasses' value='0'/>
+<enum name='PKPassLibraryDidCancelAddPasses' value='2'/>
+<enum name='PKPassLibraryShouldReviewPasses' value='1'/>
+<enum name='PKPassTypeAny' value='4294967295'/>
+<enum name='PKPassTypeBarcode' value='0'/>
+<enum name='PKPassTypePayment' value='1'/>
+<enum name='PKPaymentPassActivationStateActivated' value='0'/>
+<enum name='PKPaymentPassActivationStateActivating' value='2'/>
+<enum name='PKPaymentPassActivationStateDeactivated' value='4'/>
+<enum name='PKPaymentPassActivationStateRequiresActivation' value='1'/>
+<enum name='PKPaymentPassActivationStateSuspended' value='3'/>
+<enum name='PKUnknownError' value='-1'/>
+<enum name='PKUnsupportedVersionError' value='2'/>
+<class name='PKContact'>
+<method selector='emailAddress'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSPersonNameComponents * _Nullable' type='@'/>
+</method>
+<method selector='phoneNumber'>
+<retval declared_type='CNPhoneNumber * _Nullable' type='@'/>
+</method>
+<method selector='postalAddress'>
+<retval declared_type='CNPostalAddress * _Nullable' type='@'/>
+</method>
+<method selector='setEmailAddress:'>
+<arg declared_type='NSString * _Nullable' index='0' name='emailAddress' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setName:'>
+<arg declared_type='NSPersonNameComponents * _Nullable' index='0' name='name' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPhoneNumber:'>
+<arg declared_type='CNPhoneNumber * _Nullable' index='0' name='phoneNumber' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPostalAddress:'>
+<arg declared_type='CNPostalAddress * _Nullable' index='0' name='postalAddress' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='PKPass'>
+<method selector='authenticationToken'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='deviceName'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='initWithData:error:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='data' type='@'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='1' name='error' type='^@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='isRemotePass'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='localizedDescription'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='localizedName'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='localizedValueForFieldKey:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='key' type='@'/>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='organizationName'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='passType'>
+<retval declared_type='PKPassType' type='I'/>
+</method>
+<method selector='passTypeIdentifier'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='passURL'>
+<retval declared_type='NSURL * _Nonnull' type='@'/>
+</method>
+<method selector='paymentPass'>
+<retval declared_type='PKPaymentPass * _Nullable' type='@'/>
+</method>
+<method selector='relevantDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='serialNumber'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='userInfo'>
+<retval declared_type='NSDictionary * _Nullable' type='@'/>
+</method>
+<method selector='webServiceURL'>
+<retval declared_type='NSURL * _Nullable' type='@'/>
+</method>
+</class>
+<class name='PKPassLibrary'>
+<method selector='addPasses:withCompletionHandler:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='passes' type='@'/>
+<arg declared_type='void (^ _Nullable)(PKPassLibraryAddPassesStatus)' function_pointer='true' index='1' name='completion' type='@?'>
+<arg declared_type='PKPassLibraryAddPassesStatus' type='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='canAddPaymentPassWithPrimaryAccountIdentifier:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='primaryAccountIdentifier' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='containsPass:'>
+<arg declared_type='PKPass * _Nonnull' index='0' name='pass' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='isPassLibraryAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='isPaymentPassActivationAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isPaymentPassActivationAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='passWithPassTypeIdentifier:serialNumber:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='identifier' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='serialNumber' type='@'/>
+<retval declared_type='PKPass * _Nullable' type='@'/>
+</method>
+<method selector='passes'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='passesOfType:'>
+<arg declared_type='PKPassType' index='0' name='passType' type='I'/>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='remotePaymentPasses'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='removePass:'>
+<arg declared_type='PKPass * _Nonnull' index='0' name='pass' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='replacePassWithPass:'>
+<arg declared_type='PKPass * _Nonnull' index='0' name='pass' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='PKPaymentPass'>
+<method selector='activationState'>
+<retval declared_type='PKPaymentPassActivationState' type='I'/>
+</method>
+<method selector='deviceAccountIdentifier'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='deviceAccountNumberSuffix'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='primaryAccountIdentifier'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='primaryAccountNumberSuffix'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+</class>
+</signatures>

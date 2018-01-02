@@ -1,0 +1,997 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreData.framework'/>
+<depends_on path='/System/Library/Frameworks/Carbon.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<constant const='true' declared_type='NSString*' name='ISyncAvailabilityChangedNotification' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncChangePropertyActionKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncChangePropertyClear' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncChangePropertyNameKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncChangePropertySet' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncChangePropertyValueIsDefaultKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncChangePropertyValueKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncClientTypeApplication' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncClientTypeDevice' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncClientTypePeer' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncClientTypeServer' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncErrorDomain' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncInvalidArgumentsException' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncInvalidEntityException' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncInvalidRecordException' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncInvalidRecordIdentifiersKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncInvalidRecordReasonsKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncInvalidRecordsKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncInvalidSchemaException' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncRecordEntityNameKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncServerUnavailableException' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncSessionCancelledException' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncSessionUnavailableException' type='@'/>
+<constant const='true' declared_type='NSString*' name='ISyncUnsupportedEntityException' type='@'/>
+<enum name='ISyncChangeTypeAdd' value='1'/>
+<enum name='ISyncChangeTypeDelete' value='3'/>
+<enum name='ISyncChangeTypeModify' value='2'/>
+<enum name='ISyncChangeTypeNone' value='0'/>
+<enum name='ISyncServerDisabledReasonByPreference' value='1001'/>
+<enum name='ISyncServerDisabledReasonNone' value='1000'/>
+<enum name='ISyncServerDisabledReasonSharedNetworkHome' value='1002'/>
+<enum name='ISyncServerDisabledReasonUnknown' value='1004'/>
+<enum name='ISyncServerDisabledReasonUnresponsive' value='1003'/>
+<enum name='ISyncSessionClientAlreadySyncingError' value='100'/>
+<enum name='ISyncSessionDriverChangeAccepted' value='1'/>
+<enum name='ISyncSessionDriverChangeError' value='3'/>
+<enum name='ISyncSessionDriverChangeIgnored' value='2'/>
+<enum name='ISyncSessionDriverChangeRefused' value='0'/>
+<enum name='ISyncSessionDriverFatalError' value='300'/>
+<enum name='ISyncSessionDriverModeFast' value='1'/>
+<enum name='ISyncSessionDriverModeRefresh' value='3'/>
+<enum name='ISyncSessionDriverModeSlow' value='2'/>
+<enum name='ISyncSessionDriverPullFailureError' value='201'/>
+<enum name='ISyncSessionDriverRegistrationError' value='200'/>
+<enum name='ISyncSessionUserCanceledSessionError' value='101'/>
+<enum name='ISyncStatusCancelled' value='5'/>
+<enum name='ISyncStatusErrors' value='4'/>
+<enum name='ISyncStatusFailed' value='6'/>
+<enum name='ISyncStatusNever' value='7'/>
+<enum name='ISyncStatusRunning' value='1'/>
+<enum name='ISyncStatusSuccess' value='2'/>
+<enum name='ISyncStatusWarnings' value='3'/>
+<class name='ISyncChange'>
+<method class_method='true' selector='changeWithType:recordIdentifier:changes:'>
+<arg declared_type='ISyncChangeType' index='0' name='type' type='i'/>
+<arg declared_type='NSString*' index='1' name='recordIdentifier' type='@'/>
+<arg declared_type='NSArray*' index='2' name='changes' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='changes'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='initWithChangeType:recordIdentifier:changes:'>
+<arg declared_type='ISyncChangeType' index='0' name='type' type='i'/>
+<arg declared_type='NSString*' index='1' name='recordIdentifier' type='@'/>
+<arg declared_type='NSArray*' index='2' name='changes' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='record'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='recordIdentifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='type'>
+<retval declared_type='ISyncChangeType' type='i'/>
+</method>
+</class>
+<class name='ISyncClient'>
+<method selector='canPullChangesForEntityName:'>
+<arg declared_type='NSString*' index='0' name='entityName' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='canPushChangesForEntityName:'>
+<arg declared_type='NSString*' index='0' name='entityName' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='clientIdentifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='clientType'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='displayName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='enabledEntityNames'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='filters'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='formatsRelationships'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='imagePath'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='isEnabledForEntityName:'>
+<arg declared_type='NSString*' index='0' name='entityName' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='lastSyncDateForEntityName:'>
+<arg declared_type='NSString*' index='0' name='entityName' type='@'/>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='lastSyncStatusForEntityName:'>
+<arg declared_type='NSString*' index='0' name='entityName' type='@'/>
+<retval declared_type='ISyncStatus' type='l' type64='i'/>
+</method>
+<method selector='objectForKey:'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setDisplayName:'>
+<arg declared_type='NSString*' index='0' name='displayName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEnabled:forEntityNames:'>
+<arg declared_type='BOOL' index='0' name='flag' type='B'/>
+<arg declared_type='NSArray*' index='1' name='entityNames' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFilters:'>
+<arg declared_type='NSArray*' index='0' name='filters' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFormatsRelationships:'>
+<arg declared_type='BOOL' index='0' name='flag' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImagePath:'>
+<arg declared_type='NSString*' index='0' name='path' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setObject:forKey:'>
+<arg declared_type='id' index='0' name='value' type='@'/>
+<arg declared_type='NSString*' index='1' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShouldReplaceClientRecords:forEntityNames:'>
+<arg declared_type='BOOL' index='0' name='flag' type='B'/>
+<arg declared_type='NSArray*' index='1' name='entityNames' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShouldSynchronize:withClientsOfType:'>
+<arg declared_type='BOOL' index='0' name='flag' type='B'/>
+<arg declared_type='NSString*' index='1' name='clientType' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSyncAlertHandler:selector:'>
+<arg declared_type='id' index='0' name='handler' type='@'/>
+<arg declared_type='SEL' index='1' name='selector' type=':'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSyncAlertToolPath:'>
+<arg declared_type='NSString*' index='0' name='path' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldReplaceClientRecordsForEntityName:'>
+<arg declared_type='NSString*' index='0' name='entityName' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='shouldSynchronizeWithClientsOfType:'>
+<arg declared_type='NSString*' index='0' name='clientType' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='supportedEntityNames'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='syncAlertToolPath'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='ISyncFilter'>
+<method class_method='true' selector='filterMatchingAllFilters:'>
+<arg declared_type='NSArray*' index='0' name='filters' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='filterMatchingAtLeastOneFilter:'>
+<arg declared_type='NSArray*' index='0' name='filters' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='ISyncManager'>
+<method selector='addRequestMode:'>
+<arg declared_type='NSString*' index='0' name='mode' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='clientWithIdentifier:'>
+<arg declared_type='NSString*' index='0' name='clientId' type='@'/>
+<retval declared_type='ISyncClient*' type='@'/>
+</method>
+<method selector='clientWithIdentifier:needsSyncing:'>
+<arg declared_type='NSString*' index='0' name='clientId' type='@'/>
+<arg declared_type='BOOL' index='1' name='flag' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='isEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='registerClientWithIdentifier:descriptionFilePath:'>
+<arg declared_type='NSString*' index='0' name='clientId' type='@'/>
+<arg declared_type='NSString*' index='1' name='descriptionFilePath' type='@'/>
+<retval declared_type='ISyncClient*' type='@'/>
+</method>
+<method selector='registerSchemaWithBundlePath:'>
+<arg declared_type='NSString*' index='0' name='bundlePath' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='removeRequestMode:'>
+<arg declared_type='NSString*' index='0' name='mode' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='requestModes'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='sharedManager'>
+<retval declared_type='ISyncManager*' type='@'/>
+</method>
+<method selector='snapshotOfRecordsInTruthWithEntityNames:usingIdentifiersForClient:'>
+<arg declared_type='NSArray*' index='0' name='entityNames' type='@'/>
+<arg declared_type='ISyncClient*' index='1' name='client' type='@'/>
+<retval declared_type='ISyncRecordSnapshot*' type='@'/>
+</method>
+<method selector='syncDisabledReason'>
+<retval declared_type='NSError*' type='@'/>
+</method>
+<method selector='unregisterClient:'>
+<arg declared_type='ISyncClient*' index='0' name='client' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='unregisterSchemaWithName:'>
+<arg declared_type='NSString*' index='0' name='schemaName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='ISyncRecordSnapshot'>
+<method selector='recordIdentifierForReference:isModified:'>
+<arg declared_type='ISyncRecordReference*' index='0' name='reference' type='@'/>
+<arg declared_type='BOOL*' index='1' name='pModified' type='^B'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='recordReferenceForRecordWithIdentifier:'>
+<arg declared_type='NSString*' index='0' name='identifier' type='@'/>
+<retval declared_type='ISyncRecordReference*' type='@'/>
+</method>
+<method selector='recordsWithIdentifiers:'>
+<arg declared_type='NSArray*' index='0' name='recordIds' type='@'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='recordsWithMatchingAttributes:'>
+<arg declared_type='NSDictionary*' index='0' name='attributes' type='@'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='sourceIdentifiersForRelationshipName:withTargetIdentifier:'>
+<arg declared_type='NSString*' index='0' name='relationshipName' type='@'/>
+<arg declared_type='NSString*' index='1' name='sourceId' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='targetIdentifiersForRelationshipName:withSourceIdentifier:'>
+<arg declared_type='NSString*' index='0' name='relationshipName' type='@'/>
+<arg declared_type='NSString*' index='1' name='sourceId' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</class>
+<class name='ISyncSession'>
+<method class_method='true' selector='beginSessionInBackgroundWithClient:entityNames:target:selector:'>
+<arg declared_type='ISyncClient*' index='0' name='client' type='@'/>
+<arg declared_type='NSArray*' index='1' name='entityNames' type='@'/>
+<arg declared_type='id' index='2' name='target' type='@'/>
+<arg declared_type='SEL' index='3' name='selector' type=':'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='beginSessionInBackgroundWithClient:entityNames:target:selector:lastAnchors:'>
+<arg declared_type='ISyncClient*' index='0' name='client' type='@'/>
+<arg declared_type='NSArray*' index='1' name='entityNames' type='@'/>
+<arg declared_type='id' index='2' name='target' type='@'/>
+<arg declared_type='SEL' index='3' name='selector' type=':'/>
+<arg declared_type='NSDictionary*' index='4' name='anchors' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='beginSessionWithClient:entityNames:beforeDate:'>
+<arg declared_type='ISyncClient*' index='0' name='client' type='@'/>
+<arg declared_type='NSArray*' index='1' name='entityNames' type='@'/>
+<arg declared_type='NSDate*' index='2' name='date' type='@'/>
+<retval declared_type='ISyncSession*' type='@'/>
+</method>
+<method class_method='true' selector='beginSessionWithClient:entityNames:beforeDate:lastAnchors:'>
+<arg declared_type='ISyncClient*' index='0' name='client' type='@'/>
+<arg declared_type='NSArray*' index='1' name='entityNames' type='@'/>
+<arg declared_type='NSDate*' index='2' name='date' type='@'/>
+<arg declared_type='NSDictionary*' index='3' name='anchors' type='@'/>
+<retval declared_type='ISyncSession*' type='@'/>
+</method>
+<method class_method='true' selector='cancelPreviousBeginSessionWithClient:'>
+<arg declared_type='ISyncClient*' index='0' name='client' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='cancelSyncing'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='changeEnumeratorForEntityNames:'>
+<arg declared_type='NSArray*' index='0' name='entityNames' type='@'/>
+<retval declared_type='NSEnumerator*' type='@'/>
+</method>
+<method selector='clientAcceptedChangesForRecordWithIdentifier:formattedRecord:newRecordIdentifier:'>
+<arg declared_type='NSString*' index='0' name='recordId' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='formattedRecord' type='@'/>
+<arg declared_type='NSString*' index='2' name='recordId' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='clientChangedRecordIdentifiers:'>
+<arg declared_type='NSDictionary*' index='0' name='oldToNew' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='clientCommittedAcceptedChanges'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='clientCommittedAcceptedChangesWithNextAnchors:'>
+<arg declared_type='NSDictionary*' index='0' name='anchors' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='clientDidResetEntityNames:'>
+<arg declared_type='NSArray*' index='0' name='entityNames' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='clientFinishedPushingChangesWithNextAnchors:'>
+<arg declared_type='NSDictionary*' index='0' name='anchors' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='clientInfoForRecordWithIdentifier:'>
+<arg declared_type='NSString*' index='0' name='recordId' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='clientLostRecordWithIdentifier:shouldReplaceOnNextSync:'>
+<arg declared_type='NSString*' index='0' name='recordId' type='@'/>
+<arg declared_type='BOOL' index='1' name='flag' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='clientRefusedChangesForRecordWithIdentifier:'>
+<arg declared_type='NSString*' index='0' name='recordId' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='clientWantsToPushAllRecordsForEntityNames:'>
+<arg declared_type='NSArray*' index='0' name='entityNames' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='deleteRecordWithIdentifier:'>
+<arg declared_type='NSString*' index='0' name='recordId' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='finishSyncing'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='isCancelled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='ping'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='prepareToPullChangesForEntityNames:beforeDate:'>
+<arg declared_type='NSArray*' index='0' name='entityNames' type='@'/>
+<arg declared_type='NSDate*' index='1' name='date' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='prepareToPullChangesInBackgroundForEntityNames:target:selector:'>
+<arg declared_type='NSArray*' index='0' name='entityNames' type='@'/>
+<arg declared_type='id' index='1' name='target' type='@'/>
+<arg declared_type='SEL' index='2' name='selector' type=':'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='pushChange:'>
+<arg declared_type='ISyncChange*' index='0' name='change' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='pushChangesFromRecord:withIdentifier:'>
+<arg declared_type='NSDictionary*' index='0' name='record' type='@'/>
+<arg declared_type='NSString*' index='1' name='recordId' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setClientInfo:forRecordWithIdentifier:'>
+<arg declared_type='id' index='0' name='clientInfo' type='@'/>
+<arg declared_type='NSString*' index='1' name='recordId' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldPullChangesForEntityName:'>
+<arg declared_type='NSString*' index='0' name='entityName' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='shouldPushAllRecordsForEntityName:'>
+<arg declared_type='NSString*' index='0' name='entityName' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='shouldPushChangesForEntityName:'>
+<arg declared_type='NSString*' index='0' name='entityName' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='shouldReplaceAllRecordsOnClientForEntityName:'>
+<arg declared_type='NSString*' index='0' name='entityName' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='snapshotOfRecordsInTruth'>
+<retval declared_type='ISyncRecordSnapshot*' type='@'/>
+</method>
+</class>
+<class name='ISyncSessionDriver'>
+<method selector='client'>
+<retval declared_type='ISyncClient*' type='@'/>
+</method>
+<method selector='dataSource'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='finishSyncing'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handlesSyncAlerts'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='lastError'>
+<retval declared_type='NSError*' type='@'/>
+</method>
+<method selector='session'>
+<retval declared_type='ISyncSession*' type='@'/>
+</method>
+<method class_method='true' selector='sessionDriverWithDataSource:'>
+<arg declared_type='id' index='0' name='dataSource' type='@'/>
+<retval declared_type='ISyncSessionDriver*' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHandlesSyncAlerts:'>
+<arg declared_type='BOOL' index='0' name='yesOrNo' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startAsynchronousSync:'>
+<arg declared_type='NSError**' index='0' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sync'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='applyChange:forEntityName:remappedRecordIdentifier:formattedRecord:error:'>
+<arg declared_type='ISyncChange*' index='0' name='change' type='@'/>
+<arg declared_type='NSString*' index='1' name='entityName' type='@'/>
+<arg declared_type='NSString**' index='2' name='outRecordIdentifier' type='^@'/>
+<arg declared_type='NSDictionary**' index='3' name='outRecord' type='^@'/>
+<arg declared_type='NSError**' index='4' name='outError' type='^@'/>
+<retval declared_type='ISyncSessionDriverChangeResult' type='i'/>
+</method>
+<method selector='attributedStringForIdentityPropertiesWithNames:inRecord:comparisonRecords:firstLineAttributes:secondLineAttributes:'>
+<arg declared_type='NSArray*' index='0' name='propertyNames' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='record' type='@'/>
+<arg declared_type='NSArray*' index='2' name='comparisonRecords' type='@'/>
+<arg declared_type='NSDictionary*' index='3' name='firstLineAttributes' type='@'/>
+<arg declared_type='NSDictionary*' index='4' name='secondLineAttributes' type='@'/>
+<retval declared_type='NSAttributedString*' type='@'/>
+</method>
+<method selector='attributedStringForPropertiesWithNames:inRecord:comparisonRecords:defaultAttributes:'>
+<arg declared_type='NSArray*' index='0' name='propertyNames' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='record' type='@'/>
+<arg declared_type='NSArray*' index='2' name='comparisonRecords' type='@'/>
+<arg declared_type='NSDictionary*' index='3' name='defaultAttributes' type='@'/>
+<retval declared_type='NSAttributedString*' type='@'/>
+</method>
+<method selector='changedRecordsForEntityName:moreComing:error:'>
+<arg declared_type='NSString*' index='0' name='entity' type='@'/>
+<arg declared_type='BOOL*' index='1' name='moreComing' type='^B'/>
+<arg declared_type='NSError**' index='2' name='outError' type='^@'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='changesForEntityName:moreComing:error:'>
+<arg declared_type='NSString*' index='0' name='entity' type='@'/>
+<arg declared_type='BOOL*' index='1' name='moreComing' type='^B'/>
+<arg declared_type='NSError**' index='2' name='outError' type='^@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='clientDescriptionURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='clientIdentifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='deleteAllRecordsForEntityName:error:'>
+<arg declared_type='NSString*' index='0' name='entityName' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='entityNamesToPull'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='entityNamesToSync'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='enumValues'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='identifiersForRecordsToDeleteForEntityName:moreComing:error:'>
+<arg declared_type='NSString*' index='0' name='entityName' type='@'/>
+<arg declared_type='BOOL*' index='1' name='moreComing' type='^B'/>
+<arg declared_type='NSError**' index='2' name='outError' type='^@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='isEqual:'>
+<arg declared_type='id' index='0' name='anotherFilter' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isRelationship'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isRequired'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isToMany'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='lastAnchorForEntityName:'>
+<arg declared_type='NSString*' index='0' name='entityName' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='managedObjectContextsToMonitorWhenSyncingPersistentStoreCoordinator:'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='managedObjectContextsToReloadAfterSyncingPersistentStoreCoordinator:'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='nextAnchorForEntityName:'>
+<arg declared_type='NSString*' index='0' name='entityName' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='persistentStoreCoordinator:didApplyChange:toManagedObject:inSyncSession:'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='ISyncChange*' index='1' name='change' type='@'/>
+<arg declared_type='NSManagedObject*' index='2' name='managedObject' type='@'/>
+<arg declared_type='ISyncSession*' index='3' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='persistentStoreCoordinator:didCancelSyncSession:error:'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='ISyncSession*' index='1' name='session' type='@'/>
+<arg declared_type='NSError*' index='2' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='persistentStoreCoordinator:didCommitChanges:inSyncSession:'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='changes' type='@'/>
+<arg declared_type='ISyncSession*' index='2' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='persistentStoreCoordinator:didFinishSyncSession:'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='ISyncSession*' index='1' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='persistentStoreCoordinator:didPullChangesInSyncSession:'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='ISyncSession*' index='1' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='persistentStoreCoordinator:didPushChangesInSyncSession:'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='ISyncSession*' index='1' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='persistentStoreCoordinator:willApplyChange:toManagedObject:inSyncSession:'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='ISyncChange*' index='1' name='change' type='@'/>
+<arg declared_type='NSManagedObject*' index='2' name='managedObject' type='@'/>
+<arg declared_type='ISyncSession*' index='3' name='session' type='@'/>
+<retval declared_type='ISyncChange*' type='@'/>
+</method>
+<method selector='persistentStoreCoordinator:willDeleteRecordWithIdentifier:inSyncSession:'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='NSString*' index='1' name='identifier' type='@'/>
+<arg declared_type='ISyncSession*' index='2' name='session' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='persistentStoreCoordinator:willPullChangesInSyncSession:'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='ISyncSession*' index='1' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='persistentStoreCoordinator:willPushChangesInSyncSession:'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='ISyncSession*' index='1' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='persistentStoreCoordinator:willPushRecord:forManagedObject:inSyncSession:'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='record' type='@'/>
+<arg declared_type='NSManagedObject*' index='2' name='managedObject' type='@'/>
+<arg declared_type='ISyncSession*' index='3' name='session' type='@'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='persistentStoreCoordinatorShouldStartSyncing:'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='preferredSyncModeForEntityName:'>
+<arg declared_type='NSString*' index='0' name='entity' type='@'/>
+<retval declared_type='ISyncSessionDriverMode' type='i'/>
+</method>
+<method selector='recordsForEntityName:moreComing:error:'>
+<arg declared_type='NSString*' index='0' name='entity' type='@'/>
+<arg declared_type='BOOL*' index='1' name='moreComing' type='^B'/>
+<arg declared_type='NSError**' index='2' name='outError' type='^@'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='schemaBundleURLs'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='sessionBeginTimeout'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='sessionDriver:didNegotiateAndReturnError:'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionDriver:didPullAndReturnError:'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionDriver:didPushAndReturnError:'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionDriver:didReceiveSyncAlertAndReturnError:'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionDriver:didRegisterClientAndReturnError:'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionDriver:willFinishSessionAndReturnError:'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionDriver:willNegotiateAndReturnError:'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionDriver:willPullAndReturnError:'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionDriver:willPushAndReturnError:'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionDriverDidCancelSession:'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sessionDriverDidFinishSession:'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sessionDriverWillCancelSession:'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sessionPullChangesTimeout'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='shouldApplyRecord:withRecordIdentifier:'>
+<arg declared_type='NSDictionary*' index='0' name='record' type='@'/>
+<arg declared_type='NSString*' index='1' name='recordId' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='subtype'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='supportedEntityNames'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='type'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='NSPersistentStoreCoordinator'>
+<method selector='setStoresFastSyncDetailsAtURL:forPersistentStore:'>
+<arg declared_type='NSURL*' index='0' name='url' type='@'/>
+<arg declared_type='NSPersistentStore*' index='1' name='store' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='syncWithClient:inBackground:handler:error:'>
+<arg declared_type='ISyncClient*' index='0' name='client' type='@'/>
+<arg declared_type='BOOL' index='1' name='flag' type='B'/>
+<arg declared_type='id' index='2' name='syncHandler' type='@'/>
+<arg declared_type='NSError**' index='3' name='rError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<informal_protocol name='ISyncConflictPropertyType'>
+<method selector='enumValues' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='isRelationship' type='B8@0:4' type64='B16@0:8'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isRequired' type='B8@0:4' type64='B16@0:8'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isToMany' type='B8@0:4' type64='B16@0:8'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='name' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='subtype' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='type' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='ISyncFiltering'>
+<method selector='isEqual:' type='B12@0:4@8' type64='B24@0:8@16'>
+<arg declared_type='id' index='0' name='anotherFilter' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='shouldApplyRecord:withRecordIdentifier:' type='B16@0:4@8@12' type64='B32@0:8@16@24'>
+<arg declared_type='NSDictionary*' index='0' name='record' type='@'/>
+<arg declared_type='NSString*' index='1' name='recordId' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='supportedEntityNames' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='ISyncSessionDriverDataSource'>
+<method selector='applyChange:forEntityName:remappedRecordIdentifier:formattedRecord:error:' type='i28@0:4@8@12^@16^@20^@24' type64='i56@0:8@16@24^@32^@40^@48'>
+<arg declared_type='ISyncChange*' index='0' name='change' type='@'/>
+<arg declared_type='NSString*' index='1' name='entityName' type='@'/>
+<arg declared_type='NSString**' index='2' name='outRecordIdentifier' type='^@'/>
+<arg declared_type='NSDictionary**' index='3' name='outRecord' type='^@'/>
+<arg declared_type='NSError**' index='4' name='outError' type='^@'/>
+<retval declared_type='ISyncSessionDriverChangeResult' type='i'/>
+</method>
+<method selector='changedRecordsForEntityName:moreComing:error:' type='@20@0:4@8^B12^@16' type64='@40@0:8@16^B24^@32'>
+<arg declared_type='NSString*' index='0' name='entity' type='@'/>
+<arg declared_type='BOOL*' index='1' name='moreComing' type='^B'/>
+<arg declared_type='NSError**' index='2' name='outError' type='^@'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='changesForEntityName:moreComing:error:' type='@20@0:4@8^B12^@16' type64='@40@0:8@16^B24^@32'>
+<arg declared_type='NSString*' index='0' name='entity' type='@'/>
+<arg declared_type='BOOL*' index='1' name='moreComing' type='^B'/>
+<arg declared_type='NSError**' index='2' name='outError' type='^@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='clientDescriptionURL' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='clientIdentifier' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='deleteAllRecordsForEntityName:error:' type='B16@0:4@8^@12' type64='B32@0:8@16^@24'>
+<arg declared_type='NSString*' index='0' name='entityName' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='entityNamesToPull' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='entityNamesToSync' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='identifiersForRecordsToDeleteForEntityName:moreComing:error:' type='@20@0:4@8^B12^@16' type64='@40@0:8@16^B24^@32'>
+<arg declared_type='NSString*' index='0' name='entityName' type='@'/>
+<arg declared_type='BOOL*' index='1' name='moreComing' type='^B'/>
+<arg declared_type='NSError**' index='2' name='outError' type='^@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='lastAnchorForEntityName:' type='@12@0:4@8' type64='@24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='entityName' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='nextAnchorForEntityName:' type='@12@0:4@8' type64='@24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='entityName' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='preferredSyncModeForEntityName:' type='i12@0:4@8' type64='i24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='entity' type='@'/>
+<retval declared_type='ISyncSessionDriverMode' type='i'/>
+</method>
+<method selector='recordsForEntityName:moreComing:error:' type='@20@0:4@8^B12^@16' type64='@40@0:8@16^B24^@32'>
+<arg declared_type='NSString*' index='0' name='entity' type='@'/>
+<arg declared_type='BOOL*' index='1' name='moreComing' type='^B'/>
+<arg declared_type='NSError**' index='2' name='outError' type='^@'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='schemaBundleURLs' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='sessionBeginTimeout' type='d8@0:4' type64='d16@0:8'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='sessionPullChangesTimeout' type='d8@0:4' type64='d16@0:8'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+</informal_protocol>
+<informal_protocol name='ISyncSessionDriverDelegate'>
+<method selector='sessionDriver:didNegotiateAndReturnError:' type='B16@0:4@8^@12' type64='B32@0:8@16^@24'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionDriver:didPullAndReturnError:' type='B16@0:4@8^@12' type64='B32@0:8@16^@24'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionDriver:didPushAndReturnError:' type='B16@0:4@8^@12' type64='B32@0:8@16^@24'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionDriver:didReceiveSyncAlertAndReturnError:' type='B16@0:4@8^@12' type64='B32@0:8@16^@24'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionDriver:didRegisterClientAndReturnError:' type='B16@0:4@8^@12' type64='B32@0:8@16^@24'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionDriver:willFinishSessionAndReturnError:' type='B16@0:4@8^@12' type64='B32@0:8@16^@24'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionDriver:willNegotiateAndReturnError:' type='B16@0:4@8^@12' type64='B32@0:8@16^@24'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionDriver:willPullAndReturnError:' type='B16@0:4@8^@12' type64='B32@0:8@16^@24'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionDriver:willPushAndReturnError:' type='B16@0:4@8^@12' type64='B32@0:8@16^@24'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<arg declared_type='NSError**' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionDriverDidCancelSession:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sessionDriverDidFinishSession:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sessionDriverWillCancelSession:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='ISyncSessionDriver*' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NSPersistentStoreCoordinatorSyncing'>
+<method selector='managedObjectContextsToMonitorWhenSyncingPersistentStoreCoordinator:' type='@12@0:4@8' type64='@24@0:8@16'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='managedObjectContextsToReloadAfterSyncingPersistentStoreCoordinator:' type='@12@0:4@8' type64='@24@0:8@16'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='persistentStoreCoordinator:didApplyChange:toManagedObject:inSyncSession:' type='v24@0:4@8@12@16@20' type64='v48@0:8@16@24@32@40'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='ISyncChange*' index='1' name='change' type='@'/>
+<arg declared_type='NSManagedObject*' index='2' name='managedObject' type='@'/>
+<arg declared_type='ISyncSession*' index='3' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='persistentStoreCoordinator:didCancelSyncSession:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='ISyncSession*' index='1' name='session' type='@'/>
+<arg declared_type='NSError*' index='2' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='persistentStoreCoordinator:didCommitChanges:inSyncSession:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='changes' type='@'/>
+<arg declared_type='ISyncSession*' index='2' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='persistentStoreCoordinator:didFinishSyncSession:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='ISyncSession*' index='1' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='persistentStoreCoordinator:didPullChangesInSyncSession:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='ISyncSession*' index='1' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='persistentStoreCoordinator:didPushChangesInSyncSession:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='ISyncSession*' index='1' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='persistentStoreCoordinator:willApplyChange:toManagedObject:inSyncSession:' type='@24@0:4@8@12@16@20' type64='@48@0:8@16@24@32@40'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='ISyncChange*' index='1' name='change' type='@'/>
+<arg declared_type='NSManagedObject*' index='2' name='managedObject' type='@'/>
+<arg declared_type='ISyncSession*' index='3' name='session' type='@'/>
+<retval declared_type='ISyncChange*' type='@'/>
+</method>
+<method selector='persistentStoreCoordinator:willDeleteRecordWithIdentifier:inSyncSession:' type='B20@0:4@8@12@16' type64='B40@0:8@16@24@32'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='NSString*' index='1' name='identifier' type='@'/>
+<arg declared_type='ISyncSession*' index='2' name='session' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='persistentStoreCoordinator:willPullChangesInSyncSession:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='ISyncSession*' index='1' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='persistentStoreCoordinator:willPushChangesInSyncSession:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='ISyncSession*' index='1' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='persistentStoreCoordinator:willPushRecord:forManagedObject:inSyncSession:' type='@24@0:4@8@12@16@20' type64='@48@0:8@16@24@32@40'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='record' type='@'/>
+<arg declared_type='NSManagedObject*' index='2' name='managedObject' type='@'/>
+<arg declared_type='ISyncSession*' index='3' name='session' type='@'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='persistentStoreCoordinatorShouldStartSyncing:' type='B12@0:4@8' type64='B24@0:8@16'>
+<arg declared_type='NSPersistentStoreCoordinator*' index='0' name='coordinator' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</informal_protocol>
+<informal_protocol name='SyncUIHelperInformalProtocol'>
+<method selector='attributedStringForIdentityPropertiesWithNames:inRecord:comparisonRecords:firstLineAttributes:secondLineAttributes:' type='@28@0:4@8@12@16@20@24' type64='@56@0:8@16@24@32@40@48'>
+<arg declared_type='NSArray*' index='0' name='propertyNames' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='record' type='@'/>
+<arg declared_type='NSArray*' index='2' name='comparisonRecords' type='@'/>
+<arg declared_type='NSDictionary*' index='3' name='firstLineAttributes' type='@'/>
+<arg declared_type='NSDictionary*' index='4' name='secondLineAttributes' type='@'/>
+<retval declared_type='NSAttributedString*' type='@'/>
+</method>
+<method selector='attributedStringForPropertiesWithNames:inRecord:comparisonRecords:defaultAttributes:' type='@24@0:4@8@12@16@20' type64='@48@0:8@16@24@32@40'>
+<arg declared_type='NSArray*' index='0' name='propertyNames' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='record' type='@'/>
+<arg declared_type='NSArray*' index='2' name='comparisonRecords' type='@'/>
+<arg declared_type='NSDictionary*' index='3' name='defaultAttributes' type='@'/>
+<retval declared_type='NSAttributedString*' type='@'/>
+</method>
+</informal_protocol>
+</signatures>

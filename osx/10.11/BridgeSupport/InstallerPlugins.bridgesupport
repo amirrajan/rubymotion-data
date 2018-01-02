@@ -1,0 +1,163 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<cftype name='InstallerPane_Private' type='^{InstallerPane_Private=}'/>
+<cftype name='InstallerSection_Private' type='^{InstallerSection_Private=}'/>
+<cftype name='InstallerState_Private' type='^{InstallerState_Private=}'/>
+<constant const='true' declared_type='NSString*' name='InstallerState_Choice_CustomLocation' type='@'/>
+<constant const='true' declared_type='NSString*' name='InstallerState_Choice_Identifier' type='@'/>
+<constant const='true' declared_type='NSString*' name='InstallerState_Choice_Installed' type='@'/>
+<enum name='InstallerDirectionBackward' value='1'/>
+<enum name='InstallerDirectionForward' value='0'/>
+<enum name='InstallerDirectionUndefined' value='2'/>
+<class name='InstallerPane'>
+<method selector='contentView'>
+<retval declared_type='NSView*' type='@'/>
+</method>
+<method selector='didEnterPane:'>
+<arg declared_type='InstallerSectionDirection' index='0' name='dir' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='didExitPane:'>
+<arg declared_type='InstallerSectionDirection' index='0' name='dir' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='firstKeyView'>
+<retval declared_type='NSView*' type='@'/>
+</method>
+<method selector='gotoNextPane'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='gotoPreviousPane'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithSection:'>
+<arg declared_type='id' index='0' name='parent' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initialKeyView'>
+<retval declared_type='NSView*' type='@'/>
+</method>
+<method selector='lastKeyView'>
+<retval declared_type='NSView*' type='@'/>
+</method>
+<method selector='nextEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='nextPane'>
+<retval declared_type='InstallerPane*' type='@'/>
+</method>
+<method selector='previousEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='section'>
+<retval declared_type='InstallerSection*' type='@'/>
+</method>
+<method selector='setContentView:'>
+<arg declared_type='NSView*' index='0' name='contentView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFirstKeyView:'>
+<arg declared_type='NSView*' index='0' name='firstKeyView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInitialKeyView:'>
+<arg declared_type='NSView*' index='0' name='initialKeyView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLastKeyView:'>
+<arg declared_type='NSView*' index='0' name='lastKeyView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNextEnabled:'>
+<arg declared_type='BOOL' index='0' name='nextEnabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNextPane:'>
+<arg declared_type='InstallerPane*' index='0' name='nextPane' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPreviousEnabled:'>
+<arg declared_type='BOOL' index='0' name='previousEnabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldExitPane:'>
+<arg declared_type='InstallerSectionDirection' index='0' name='dir' type='i' type64='q'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='willEnterPane:'>
+<arg declared_type='InstallerSectionDirection' index='0' name='dir' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='willExitPane:'>
+<arg declared_type='InstallerSectionDirection' index='0' name='dir' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='InstallerSection'>
+<method selector='activePane'>
+<retval declared_type='InstallerPane*' type='@'/>
+</method>
+<method selector='bundle'>
+<retval declared_type='NSBundle*' type='@'/>
+</method>
+<method selector='didLoadMainNib'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='firstPane'>
+<retval declared_type='InstallerPane*' type='@'/>
+</method>
+<method selector='gotoPane:'>
+<arg declared_type='InstallerPane*' index='0' name='pane' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='installerState'>
+<retval declared_type='InstallerState*' type='@'/>
+</method>
+<method selector='sharedDictionary'>
+<retval declared_type='NSMutableDictionary*' type='@'/>
+</method>
+<method selector='shouldLoad'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='willLoadMainNib'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='InstallerState'>
+<method selector='choiceDictionaries'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='choiceDictionaryForIdentifier:'>
+<arg declared_type='NSString*' index='0' name='choiceIdentifier' type='@'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='installStarted'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='installSucceeded'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='licenseAgreed'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='licenseAgreedLanguage'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='targetPath'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='targetVolumePath'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+</signatures>

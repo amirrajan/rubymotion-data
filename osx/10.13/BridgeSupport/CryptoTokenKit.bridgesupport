@@ -1,0 +1,922 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/LocalAuthentication.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='TKErrorDomain' type64='@'/>
+<enum name='TKErrorAuthenticationFailed' value64='-5'/>
+<enum name='TKErrorCodeAuthenticationFailed' value64='-5'/>
+<enum name='TKErrorCodeAuthenticationNeeded' value64='-9'/>
+<enum name='TKErrorCodeBadParameter' value64='-8'/>
+<enum name='TKErrorCodeCanceledByUser' value64='-4'/>
+<enum name='TKErrorCodeCommunicationError' value64='-2'/>
+<enum name='TKErrorCodeCorruptedData' value64='-3'/>
+<enum name='TKErrorCodeNotImplemented' value64='-1'/>
+<enum name='TKErrorCodeObjectNotFound' value64='-6'/>
+<enum name='TKErrorCodeTokenNotFound' value64='-7'/>
+<enum name='TKErrorObjectNotFound' value64='-6'/>
+<enum name='TKErrorTokenNotFound' value64='-7'/>
+<enum name='TKSmartCardPINCharsetAlphanumeric' value64='1'/>
+<enum name='TKSmartCardPINCharsetNumeric' value64='0'/>
+<enum name='TKSmartCardPINCharsetUpperAlphanumeric' value64='2'/>
+<enum name='TKSmartCardPINCompletionKey' value64='2'/>
+<enum name='TKSmartCardPINCompletionMaxLength' value64='1'/>
+<enum name='TKSmartCardPINCompletionTimeout' value64='4'/>
+<enum name='TKSmartCardPINConfirmationCurrent' value64='2'/>
+<enum name='TKSmartCardPINConfirmationNew' value64='1'/>
+<enum name='TKSmartCardPINConfirmationNone' value64='0'/>
+<enum name='TKSmartCardPINEncodingASCII' value64='1'/>
+<enum name='TKSmartCardPINEncodingBCD' value64='2'/>
+<enum name='TKSmartCardPINEncodingBinary' value64='0'/>
+<enum name='TKSmartCardPINJustificationLeft' value64='0'/>
+<enum name='TKSmartCardPINJustificationRight' value64='1'/>
+<enum name='TKSmartCardProtocolAny' value64='65535'/>
+<enum name='TKSmartCardProtocolNone' value64='0'/>
+<enum name='TKSmartCardProtocolT0' value64='1'/>
+<enum name='TKSmartCardProtocolT1' value64='2'/>
+<enum name='TKSmartCardProtocolT15' value64='32768'/>
+<enum name='TKSmartCardSlotStateEmpty' value64='1'/>
+<enum name='TKSmartCardSlotStateMissing' value64='0'/>
+<enum name='TKSmartCardSlotStateMuteCard' value64='3'/>
+<enum name='TKSmartCardSlotStateProbing' value64='2'/>
+<enum name='TKSmartCardSlotStateValidCard' value64='4'/>
+<enum name='TKTokenOperationDecryptData' value64='3'/>
+<enum name='TKTokenOperationNone' value64='0'/>
+<enum name='TKTokenOperationPerformKeyExchange' value64='4'/>
+<enum name='TKTokenOperationReadData' value64='1'/>
+<enum name='TKTokenOperationSignData' value64='2'/>
+<class name='NSObject'>
+<method selector='characterEnteredInUserInteraction:'>
+<arg declared_type64='TKSmartCardUserInteraction * _Nonnull' index='0' name='interaction' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='correctionKeyPressedInUserInteraction:'>
+<arg declared_type64='TKSmartCardUserInteraction * _Nonnull' index='0' name='interaction' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='invalidCharacterEnteredInUserInteraction:'>
+<arg declared_type64='TKSmartCardUserInteraction * _Nonnull' index='0' name='interaction' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='newPINConfirmationRequestedInUserInteraction:'>
+<arg declared_type64='TKSmartCardUserInteraction * _Nonnull' index='0' name='interaction' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='newPINRequestedInUserInteraction:'>
+<arg declared_type64='TKSmartCardUserInteraction * _Nonnull' index='0' name='interaction' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='oldPINRequestedInUserInteraction:'>
+<arg declared_type64='TKSmartCardUserInteraction * _Nonnull' index='0' name='interaction' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='token:createSessionWithError:'>
+<arg declared_type64='TKToken * _Nonnull' index='0' name='token' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='TKTokenSession * _Nullable' type64='@'/>
+</method>
+<method selector='token:terminateSession:'>
+<arg declared_type64='TKToken * _Nonnull' index='0' name='token' type64='@'/>
+<arg declared_type64='TKTokenSession * _Nonnull' index='1' name='session' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='tokenDriver:createTokenForSmartCard:AID:error:'>
+<arg declared_type64='TKSmartCardTokenDriver * _Nonnull' index='0' name='driver' type64='@'/>
+<arg declared_type64='TKSmartCard * _Nonnull' index='1' name='smartCard' type64='@'/>
+<arg declared_type64='NSData * _Nullable' index='2' name='AID' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='3' name='error' type64='^@'/>
+<retval declared_type64='TKSmartCardToken * _Nullable' type64='@'/>
+</method>
+<method selector='tokenDriver:terminateToken:'>
+<arg declared_type64='TKTokenDriver * _Nonnull' index='0' name='driver' type64='@'/>
+<arg declared_type64='TKToken * _Nonnull' index='1' name='token' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='tokenSession:beginAuthForOperation:constraint:error:'>
+<arg declared_type64='TKTokenSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='TKTokenOperation' index='1' name='operation' type64='q'/>
+<arg declared_type64='TKTokenOperationConstraint _Nonnull' index='2' name='constraint' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='3' name='error' type64='^@'/>
+<retval declared_type64='TKTokenAuthOperation * _Nullable' type64='@'/>
+</method>
+<method selector='tokenSession:decryptData:usingKey:algorithm:error:'>
+<arg declared_type64='TKTokenSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='ciphertext' type64='@'/>
+<arg declared_type64='TKTokenObjectID _Nonnull' index='2' name='keyObjectID' type64='@'/>
+<arg declared_type64='TKTokenKeyAlgorithm * _Nonnull' index='3' name='algorithm' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='4' name='error' type64='^@'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='tokenSession:performKeyExchangeWithPublicKey:usingKey:algorithm:parameters:error:'>
+<arg declared_type64='TKTokenSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='otherPartyPublicKeyData' type64='@'/>
+<arg declared_type64='TKTokenObjectID _Nonnull' index='2' name='objectID' type64='@'/>
+<arg declared_type64='TKTokenKeyAlgorithm * _Nonnull' index='3' name='algorithm' type64='@'/>
+<arg declared_type64='TKTokenKeyExchangeParameters * _Nonnull' index='4' name='parameters' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='5' name='error' type64='^@'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='tokenSession:signData:usingKey:algorithm:error:'>
+<arg declared_type64='TKTokenSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='dataToSign' type64='@'/>
+<arg declared_type64='TKTokenObjectID _Nonnull' index='2' name='keyObjectID' type64='@'/>
+<arg declared_type64='TKTokenKeyAlgorithm * _Nonnull' index='3' name='algorithm' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='4' name='error' type64='^@'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='tokenSession:supportsOperation:usingKey:algorithm:'>
+<arg declared_type64='TKTokenSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='TKTokenOperation' index='1' name='operation' type64='q'/>
+<arg declared_type64='TKTokenObjectID _Nonnull' index='2' name='keyObjectID' type64='@'/>
+<arg declared_type64='TKTokenKeyAlgorithm * _Nonnull' index='3' name='algorithm' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='validationKeyPressedInUserInteraction:'>
+<arg declared_type64='TKSmartCardUserInteraction * _Nonnull' index='0' name='interaction' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='TKBERTLVRecord'>
+<method class_method='true' selector='dataForTag:'>
+<arg declared_type64='TKTLVTag' index='0' name='tag' type64='Q'/>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTag:records:'>
+<arg declared_type64='TKTLVTag' index='0' name='tag' type64='Q'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='records' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTag:value:'>
+<arg declared_type64='TKTLVTag' index='0' name='tag' type64='Q'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='value' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='TKCompactTLVRecord'>
+<method selector='initWithTag:value:'>
+<arg declared_type64='UInt8' index='0' name='tag' type64='C'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='value' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='TKSimpleTLVRecord'>
+<method selector='initWithTag:value:'>
+<arg declared_type64='UInt8' index='0' name='tag' type64='C'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='value' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='TKSmartCard'>
+<method selector='allowedProtocols'>
+<retval declared_type64='TKSmartCardProtocol' type64='Q'/>
+</method>
+<method selector='beginSessionWithReply:'>
+<arg declared_type64='void (^ _Nonnull)(BOOL, NSError * _Nullable)' function_pointer='true' index='0' name='reply' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='cla'>
+<retval declared_type64='UInt8' type64='C'/>
+</method>
+<method selector='context'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='currentProtocol'>
+<retval declared_type64='TKSmartCardProtocol' type64='Q'/>
+</method>
+<method selector='endSession'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='inSessionWithError:executeBlock:'>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='error' type64='^@'/>
+<arg declared_type64='BOOL (^ _Nonnull)(NSError * _Nullable * _Nullable)' function_pointer='true' index='1' name='block' type64='@?'>
+<arg declared_type64='NSError * _Nullable * _Nullable' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='sendIns:p1:p2:data:le:reply:'>
+<arg declared_type64='UInt8' index='0' name='ins' type64='C'/>
+<arg declared_type64='UInt8' index='1' name='p1' type64='C'/>
+<arg declared_type64='UInt8' index='2' name='p2' type64='C'/>
+<arg declared_type64='NSData * _Nullable' index='3' name='requestData' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='4' name='le' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nullable, UInt16, NSError * _Nullable)' function_pointer='true' index='5' name='reply' type64='@?'>
+<arg declared_type64='NSData * _Nullable' type64='@'/>
+<arg declared_type64='UInt16' type64='S'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sendIns:p1:p2:data:le:sw:error:'>
+<arg declared_type64='UInt8' index='0' name='ins' type64='C'/>
+<arg declared_type64='UInt8' index='1' name='p1' type64='C'/>
+<arg declared_type64='UInt8' index='2' name='p2' type64='C'/>
+<arg declared_type64='NSData * _Nullable' index='3' name='requestData' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='4' name='le' type64='@'/>
+<arg declared_type64='UInt16 * _Nonnull' index='5' name='sw' type64='^S'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='6' name='error' type64='^@'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='sensitive'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setAllowedProtocols:'>
+<arg declared_type64='TKSmartCardProtocol' index='0' name='allowedProtocols' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCla:'>
+<arg declared_type64='UInt8' index='0' name='cla' type64='C'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setContext:'>
+<arg declared_type64='id _Nullable' index='0' name='context' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSensitive:'>
+<arg declared_type64='BOOL' index='0' name='sensitive' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setUseCommandChaining:'>
+<arg declared_type64='BOOL' index='0' name='useCommandChaining' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setUseExtendedLength:'>
+<arg declared_type64='BOOL' index='0' name='useExtendedLength' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='slot'>
+<retval declared_type64='TKSmartCardSlot * _Nonnull' type64='@'/>
+</method>
+<method selector='transmitRequest:reply:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='request' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='reply' type64='@?'>
+<arg declared_type64='NSData * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='useCommandChaining'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='useExtendedLength'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='userInteractionForSecurePINChangeWithPINFormat:APDU:currentPINByteOffset:newPINByteOffset:'>
+<arg declared_type64='TKSmartCardPINFormat * _Nonnull' index='0' name='PINFormat' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='APDU' type64='@'/>
+<arg declared_type64='NSInteger' index='2' name='currentPINByteOffset' type64='q'/>
+<arg declared_type64='NSInteger' index='3' name='newPINByteOffset' type64='q'/>
+<retval declared_type64='TKSmartCardUserInteractionForSecurePINChange * _Nullable' type64='@'/>
+</method>
+<method selector='userInteractionForSecurePINVerificationWithPINFormat:APDU:PINByteOffset:'>
+<arg declared_type64='TKSmartCardPINFormat * _Nonnull' index='0' name='PINFormat' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='APDU' type64='@'/>
+<arg declared_type64='NSInteger' index='2' name='PINByteOffset' type64='q'/>
+<retval declared_type64='TKSmartCardUserInteractionForSecurePINVerification * _Nullable' type64='@'/>
+</method>
+<method selector='valid'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='TKSmartCardATR'>
+<method selector='bytes'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='historicalBytes'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='historicalRecords'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='initWithBytes:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='bytes' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='initWithSource:'>
+<arg declared_type64='int (^ _Nonnull)()' function_pointer='true' index='0' name='source' type64='@?'>
+<retval declared_type64='int' type64='i'/>
+</arg>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='interfaceGroupAtIndex:'>
+<arg declared_type64='NSInteger' index='0' name='index' type64='q'/>
+<retval declared_type64='TKSmartCardATRInterfaceGroup * _Nullable' type64='@'/>
+</method>
+<method selector='interfaceGroupForProtocol:'>
+<arg declared_type64='TKSmartCardProtocol' index='0' name='protocol' type64='Q'/>
+<retval declared_type64='TKSmartCardATRInterfaceGroup * _Nullable' type64='@'/>
+</method>
+<method selector='protocols'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='TKSmartCardATRInterfaceGroup'>
+<method selector='TA'>
+<retval declared_type64='NSNumber * _Nullable' type64='@'/>
+</method>
+<method selector='TB'>
+<retval declared_type64='NSNumber * _Nullable' type64='@'/>
+</method>
+<method selector='TC'>
+<retval declared_type64='NSNumber * _Nullable' type64='@'/>
+</method>
+<method selector='protocol'>
+<retval declared_type64='NSNumber * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='TKSmartCardPINFormat'>
+<method selector='PINBitOffset'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='PINBlockByteLength'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='PINJustification'>
+<retval declared_type64='TKSmartCardPINJustification' type64='q'/>
+</method>
+<method selector='PINLengthBitOffset'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='PINLengthBitSize'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='charset'>
+<retval declared_type64='TKSmartCardPINCharset' type64='q'/>
+</method>
+<method selector='encoding'>
+<retval declared_type64='TKSmartCardPINEncoding' type64='q'/>
+</method>
+<method selector='maxPINLength'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='minPINLength'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='setCharset:'>
+<arg declared_type64='TKSmartCardPINCharset' index='0' name='charset' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setEncoding:'>
+<arg declared_type64='TKSmartCardPINEncoding' index='0' name='encoding' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMaxPINLength:'>
+<arg declared_type64='NSInteger' index='0' name='maxPINLength' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMinPINLength:'>
+<arg declared_type64='NSInteger' index='0' name='minPINLength' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPINBitOffset:'>
+<arg declared_type64='NSInteger' index='0' name='PINBitOffset' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPINBlockByteLength:'>
+<arg declared_type64='NSInteger' index='0' name='PINBlockByteLength' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPINJustification:'>
+<arg declared_type64='TKSmartCardPINJustification' index='0' name='PINJustification' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPINLengthBitOffset:'>
+<arg declared_type64='NSInteger' index='0' name='PINLengthBitOffset' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPINLengthBitSize:'>
+<arg declared_type64='NSInteger' index='0' name='PINLengthBitSize' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='TKSmartCardSlot'>
+<method selector='ATR'>
+<retval declared_type64='TKSmartCardATR * _Nullable' type64='@'/>
+</method>
+<method selector='makeSmartCard'>
+<retval declared_type64='TKSmartCard * _Nullable' type64='@'/>
+</method>
+<method selector='maxInputLength'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='maxOutputLength'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='state'>
+<retval declared_type64='TKSmartCardSlotState' type64='q'/>
+</method>
+</class>
+<class name='TKSmartCardSlotManager'>
+<method class_method='true' selector='defaultManager'>
+<retval declared_type64='TKSmartCardSlotManager * _Nullable' type64='@'/>
+</method>
+<method selector='getSlotWithName:reply:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(TKSmartCardSlot * _Nullable)' function_pointer='true' index='1' name='reply' type64='@?'>
+<arg declared_type64='TKSmartCardSlot * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='slotNamed:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='TKSmartCardSlot * _Nullable' type64='@'/>
+</method>
+<method selector='slotNames'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='TKSmartCardToken'>
+<method selector='AID'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='initWithSmartCard:AID:instanceID:tokenDriver:'>
+<arg declared_type64='TKSmartCard * _Nonnull' index='0' name='smartCard' type64='@'/>
+<arg declared_type64='NSData * _Nullable' index='1' name='AID' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='2' name='instanceID' type64='@'/>
+<arg declared_type64='TKSmartCardTokenDriver * _Nonnull' index='3' name='tokenDriver' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='TKSmartCardTokenSession'>
+<method selector='smartCard'>
+<retval declared_type64='TKSmartCard * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='TKSmartCardUserInteraction'>
+<method selector='cancel'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='initialTimeout'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='interactionTimeout'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='runWithReply:'>
+<arg declared_type64='void (^ _Nonnull)(BOOL, NSError * _Nullable)' function_pointer='true' index='0' name='reply' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setInitialTimeout:'>
+<arg declared_type64='NSTimeInterval' index='0' name='initialTimeout' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setInteractionTimeout:'>
+<arg declared_type64='NSTimeInterval' index='0' name='interactionTimeout' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='TKSmartCardUserInteractionForPINOperation'>
+<method selector='PINCompletion'>
+<retval declared_type64='TKSmartCardPINCompletion' type64='Q'/>
+</method>
+<method selector='PINMessageIndices'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='locale'>
+<retval declared_type64='NSLocale * _Nonnull' type64='@'/>
+</method>
+<method selector='resultData'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='resultSW'>
+<retval declared_type64='UInt16' type64='S'/>
+</method>
+<method selector='setLocale:'>
+<arg declared_type64='NSLocale * _Nullable' index='0' name='locale' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPINCompletion:'>
+<arg declared_type64='TKSmartCardPINCompletion' index='0' name='PINCompletion' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPINMessageIndices:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='PINMessageIndices' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setResultData:'>
+<arg declared_type64='NSData * _Nullable' index='0' name='resultData' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setResultSW:'>
+<arg declared_type64='UInt16' index='0' name='resultSW' type64='S'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='TKSmartCardUserInteractionForSecurePINChange'>
+<method selector='PINConfirmation'>
+<retval declared_type64='TKSmartCardPINConfirmation' type64='Q'/>
+</method>
+<method selector='setPINConfirmation:'>
+<arg declared_type64='TKSmartCardPINConfirmation' index='0' name='PINConfirmation' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='TKTLVRecord'>
+<method selector='data'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='recordFromData:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='sequenceOfRecordsFromData:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='tag'>
+<retval declared_type64='TKTLVTag' type64='Q'/>
+</method>
+<method selector='value'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='TKToken'>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='initWithTokenDriver:instanceID:'>
+<arg declared_type64='TKTokenDriver * _Nonnull' index='0' name='tokenDriver' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='instanceID' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='keychainContents'>
+<retval declared_type64='TKTokenKeychainContents * _Nullable' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='tokenDriver'>
+<retval declared_type64='TKTokenDriver * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='TKTokenAuthOperation'>
+<method selector='finishWithError:'>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='TKTokenDriver'>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='TKTokenKeyAlgorithm'>
+<method selector='isAlgorithm:'>
+<arg declared_type64='SecKeyAlgorithm _Nonnull' index='0' name='algorithm' type64='^{__CFString=}'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='supportsAlgorithm:'>
+<arg declared_type64='SecKeyAlgorithm _Nonnull' index='0' name='algorithm' type64='^{__CFString=}'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='TKTokenKeyExchangeParameters'>
+<method selector='requestedSize'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='sharedInfo'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='TKTokenKeychainCertificate'>
+<method selector='data'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithCertificate:objectID:'>
+<arg declared_type64='SecCertificateRef _Nonnull' index='0' name='certificateRef' type64='^{OpaqueSecCertificateRef=}'/>
+<arg declared_type64='TKTokenObjectID _Nonnull' index='1' name='objectID' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+</class>
+<class name='TKTokenKeychainContents'>
+<method selector='certificateForObjectID:error:'>
+<arg declared_type64='TKTokenObjectID _Nonnull' index='0' name='objectID' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='TKTokenKeychainCertificate * _Nullable' type64='@'/>
+</method>
+<method selector='fillWithItems:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='items' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='items'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='keyForObjectID:error:'>
+<arg declared_type64='TKTokenObjectID _Nonnull' index='0' name='objectID' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='TKTokenKeychainKey * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='TKTokenKeychainItem'>
+<method selector='constraints'>
+<retval declared_type64='NSDictionary * _Nullable' type64='@'/>
+</method>
+<method selector='initWithObjectID:'>
+<arg declared_type64='TKTokenObjectID _Nonnull' index='0' name='objectID' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='label'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='objectID'>
+<retval declared_type64='TKTokenObjectID _Nonnull' type64='@'/>
+</method>
+<method selector='setConstraints:'>
+<arg declared_type64='NSDictionary * _Nullable' index='0' name='constraints' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLabel:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='label' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='TKTokenKeychainKey'>
+<method selector='applicationTag'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='canDecrypt'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='canPerformKeyExchange'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='canSign'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='initWithCertificate:objectID:'>
+<arg declared_type64='SecCertificateRef _Nullable' index='0' name='certificateRef' type64='^{OpaqueSecCertificateRef=}'/>
+<arg declared_type64='TKTokenObjectID _Nonnull' index='1' name='objectID' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='isSuitableForLogin'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='keySizeInBits'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='keyType'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='publicKeyData'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='publicKeyHash'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='setApplicationTag:'>
+<arg declared_type64='NSData * _Nullable' index='0' name='applicationTag' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCanDecrypt:'>
+<arg declared_type64='BOOL' index='0' name='canDecrypt' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCanPerformKeyExchange:'>
+<arg declared_type64='BOOL' index='0' name='canPerformKeyExchange' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCanSign:'>
+<arg declared_type64='BOOL' index='0' name='canSign' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setKeySizeInBits:'>
+<arg declared_type64='NSInteger' index='0' name='keySizeInBits' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setKeyType:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='keyType' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPublicKeyData:'>
+<arg declared_type64='NSData * _Nullable' index='0' name='publicKeyData' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPublicKeyHash:'>
+<arg declared_type64='NSData * _Nullable' index='0' name='publicKeyHash' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSuitableForLogin:'>
+<arg declared_type64='BOOL' index='0' name='suitableForLogin' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='TKTokenPasswordAuthOperation'>
+<method selector='password'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='setPassword:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='password' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='TKTokenSession'>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='initWithToken:'>
+<arg declared_type64='TKToken * _Nonnull' index='0' name='token' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='token'>
+<retval declared_type64='TKToken * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='TKTokenSmartCardPINAuthOperation'>
+<method selector='APDUTemplate'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='PIN'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='PINByteOffset'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='PINFormat'>
+<retval declared_type64='TKSmartCardPINFormat * _Nonnull' type64='@'/>
+</method>
+<method selector='setAPDUTemplate:'>
+<arg declared_type64='NSData * _Nullable' index='0' name='APDUTemplate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPIN:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='PIN' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPINByteOffset:'>
+<arg declared_type64='NSInteger' index='0' name='PINByteOffset' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPINFormat:'>
+<arg declared_type64='TKSmartCardPINFormat * _Nonnull' index='0' name='PINFormat' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSmartCard:'>
+<arg declared_type64='TKSmartCard * _Nullable' index='0' name='smartCard' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='smartCard'>
+<retval declared_type64='TKSmartCard * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='TKTokenWatcher'>
+<method selector='addRemovalHandler:forTokenID:'>
+<arg declared_type64='void (^ _Nonnull)(NSString * _Nonnull)' function_pointer='true' index='0' name='removalHandler' type64='@?'>
+<arg declared_type64='NSString * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='NSString * _Nonnull' index='1' name='tokenID' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithInsertionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSString * _Nonnull)' function_pointer='true' index='0' name='insertionHandler' type64='@?'>
+<arg declared_type64='NSString * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setInsertionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSString * _Nonnull)' function_pointer='true' index='0' name='insertionHandler' type64='@?'>
+<arg declared_type64='NSString * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='tokenIDs'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<informal_protocol name='TKSmartCardTokenDriverDelegate'>
+<method selector='tokenDriver:createTokenForSmartCard:AID:error:' type64='@48@0:8@16@24@32^@40'>
+<arg declared_type64='TKSmartCardTokenDriver * _Nonnull' index='0' name='driver' type64='@'/>
+<arg declared_type64='TKSmartCard * _Nonnull' index='1' name='smartCard' type64='@'/>
+<arg declared_type64='NSData * _Nullable' index='2' name='AID' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='3' name='error' type64='^@'/>
+<retval declared_type64='TKSmartCardToken * _Nullable' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='TKSmartCardUserInteractionDelegate'>
+<method selector='characterEnteredInUserInteraction:' type64='v24@0:8@16'>
+<arg declared_type64='TKSmartCardUserInteraction * _Nonnull' index='0' name='interaction' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='correctionKeyPressedInUserInteraction:' type64='v24@0:8@16'>
+<arg declared_type64='TKSmartCardUserInteraction * _Nonnull' index='0' name='interaction' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='invalidCharacterEnteredInUserInteraction:' type64='v24@0:8@16'>
+<arg declared_type64='TKSmartCardUserInteraction * _Nonnull' index='0' name='interaction' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='newPINConfirmationRequestedInUserInteraction:' type64='v24@0:8@16'>
+<arg declared_type64='TKSmartCardUserInteraction * _Nonnull' index='0' name='interaction' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='newPINRequestedInUserInteraction:' type64='v24@0:8@16'>
+<arg declared_type64='TKSmartCardUserInteraction * _Nonnull' index='0' name='interaction' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='oldPINRequestedInUserInteraction:' type64='v24@0:8@16'>
+<arg declared_type64='TKSmartCardUserInteraction * _Nonnull' index='0' name='interaction' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='validationKeyPressedInUserInteraction:' type64='v24@0:8@16'>
+<arg declared_type64='TKSmartCardUserInteraction * _Nonnull' index='0' name='interaction' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='TKTokenDelegate'>
+<method selector='token:createSessionWithError:' type64='@32@0:8@16^@24'>
+<arg declared_type64='TKToken * _Nonnull' index='0' name='token' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='TKTokenSession * _Nullable' type64='@'/>
+</method>
+<method selector='token:terminateSession:' type64='v32@0:8@16@24'>
+<arg declared_type64='TKToken * _Nonnull' index='0' name='token' type64='@'/>
+<arg declared_type64='TKTokenSession * _Nonnull' index='1' name='session' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='TKTokenDriverDelegate'>
+<method selector='tokenDriver:terminateToken:' type64='v32@0:8@16@24'>
+<arg declared_type64='TKTokenDriver * _Nonnull' index='0' name='driver' type64='@'/>
+<arg declared_type64='TKToken * _Nonnull' index='1' name='token' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='TKTokenSessionDelegate'>
+<method selector='tokenSession:beginAuthForOperation:constraint:error:' type64='@48@0:8@16q24@32^@40'>
+<arg declared_type64='TKTokenSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='TKTokenOperation' index='1' name='operation' type64='q'/>
+<arg declared_type64='TKTokenOperationConstraint _Nonnull' index='2' name='constraint' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='3' name='error' type64='^@'/>
+<retval declared_type64='TKTokenAuthOperation * _Nullable' type64='@'/>
+</method>
+<method selector='tokenSession:decryptData:usingKey:algorithm:error:' type64='@56@0:8@16@24@32@40^@48'>
+<arg declared_type64='TKTokenSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='ciphertext' type64='@'/>
+<arg declared_type64='TKTokenObjectID _Nonnull' index='2' name='keyObjectID' type64='@'/>
+<arg declared_type64='TKTokenKeyAlgorithm * _Nonnull' index='3' name='algorithm' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='4' name='error' type64='^@'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='tokenSession:performKeyExchangeWithPublicKey:usingKey:algorithm:parameters:error:' type64='@64@0:8@16@24@32@40@48^@56'>
+<arg declared_type64='TKTokenSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='otherPartyPublicKeyData' type64='@'/>
+<arg declared_type64='TKTokenObjectID _Nonnull' index='2' name='objectID' type64='@'/>
+<arg declared_type64='TKTokenKeyAlgorithm * _Nonnull' index='3' name='algorithm' type64='@'/>
+<arg declared_type64='TKTokenKeyExchangeParameters * _Nonnull' index='4' name='parameters' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='5' name='error' type64='^@'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='tokenSession:signData:usingKey:algorithm:error:' type64='@56@0:8@16@24@32@40^@48'>
+<arg declared_type64='TKTokenSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='dataToSign' type64='@'/>
+<arg declared_type64='TKTokenObjectID _Nonnull' index='2' name='keyObjectID' type64='@'/>
+<arg declared_type64='TKTokenKeyAlgorithm * _Nonnull' index='3' name='algorithm' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='4' name='error' type64='^@'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='tokenSession:supportsOperation:usingKey:algorithm:' type64='B48@0:8@16q24@32@40'>
+<arg declared_type64='TKTokenSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='TKTokenOperation' index='1' name='operation' type64='q'/>
+<arg declared_type64='TKTokenObjectID _Nonnull' index='2' name='keyObjectID' type64='@'/>
+<arg declared_type64='TKTokenKeyAlgorithm * _Nonnull' index='3' name='algorithm' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</informal_protocol>
+</signatures>

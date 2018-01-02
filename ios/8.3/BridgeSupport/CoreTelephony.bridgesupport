@@ -1,0 +1,104 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<struct name='CTError' type='{_CTError=&quot;domain&quot;i&quot;error&quot;i}'>
+<field declared_type='SInt32' name='domain' type='l' type64='i'/>
+<field declared_type='SInt32' name='error' type='l' type64='i'/>
+</struct>
+<constant const='true' declared_type='NSString*' name='CTCallStateConnected' type='@'/>
+<constant const='true' declared_type='NSString*' name='CTCallStateDialing' type='@'/>
+<constant const='true' declared_type='NSString*' name='CTCallStateDisconnected' type='@'/>
+<constant const='true' declared_type='NSString*' name='CTCallStateIncoming' type='@'/>
+<constant const='true' declared_type='NSString*' name='CTRadioAccessTechnologyCDMA1x' type='@'/>
+<constant const='true' declared_type='NSString*' name='CTRadioAccessTechnologyCDMAEVDORev0' type='@'/>
+<constant const='true' declared_type='NSString*' name='CTRadioAccessTechnologyCDMAEVDORevA' type='@'/>
+<constant const='true' declared_type='NSString*' name='CTRadioAccessTechnologyCDMAEVDORevB' type='@'/>
+<constant const='true' declared_type='NSString*' name='CTRadioAccessTechnologyDidChangeNotification' type='@'/>
+<constant const='true' declared_type='NSString*' name='CTRadioAccessTechnologyEdge' type='@'/>
+<constant const='true' declared_type='NSString*' name='CTRadioAccessTechnologyGPRS' type='@'/>
+<constant const='true' declared_type='NSString*' name='CTRadioAccessTechnologyHSDPA' type='@'/>
+<constant const='true' declared_type='NSString*' name='CTRadioAccessTechnologyHSUPA' type='@'/>
+<constant const='true' declared_type='NSString*' name='CTRadioAccessTechnologyLTE' type='@'/>
+<constant const='true' declared_type='NSString*' name='CTRadioAccessTechnologyWCDMA' type='@'/>
+<constant const='true' declared_type='NSString*' name='CTRadioAccessTechnologyeHRPD' type='@'/>
+<constant const='true' declared_type='NSString*' name='CTSubscriberTokenRefreshed' type='@'/>
+<enum name='kCTErrorDomainMach' value='2'/>
+<enum name='kCTErrorDomainNoError' value='0'/>
+<enum name='kCTErrorDomainPOSIX' value='1'/>
+<class name='CTCall'>
+<method selector='callID'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='callState'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='CTCallCenter'>
+<method selector='callEventHandler'>
+<retval declared_type='void (^)(CTCall *)' function_pointer='true' type='@?'>
+<arg declared_type='CTCall*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='currentCalls'>
+<retval declared_type='NSSet*' type='@'/>
+</method>
+<method selector='setCallEventHandler:'>
+<arg declared_type='void (^)(CTCall *)' function_pointer='true' index='0' name='callEventHandler' type='@?'>
+<arg declared_type='CTCall*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CTCarrier'>
+<method selector='allowsVOIP'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='carrierName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='isoCountryCode'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='mobileCountryCode'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='mobileNetworkCode'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='CTSubscriber'>
+<method selector='carrierToken'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+</class>
+<class name='CTSubscriberInfo'>
+<method class_method='true' selector='subscriber'>
+<retval declared_type='CTSubscriber*' type='@'/>
+</method>
+</class>
+<class name='CTTelephonyNetworkInfo'>
+<method selector='currentRadioAccessTechnology'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setSubscriberCellularProviderDidUpdateNotifier:'>
+<arg declared_type='void (^)(CTCarrier *)' function_pointer='true' index='0' name='subscriberCellularProviderDidUpdateNotifier' type='@?'>
+<arg declared_type='CTCarrier*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='subscriberCellularProvider'>
+<retval declared_type='CTCarrier*' type='@'/>
+</method>
+<method selector='subscriberCellularProviderDidUpdateNotifier'>
+<retval declared_type='void (^)(CTCarrier *)' function_pointer='true' type='@?'>
+<arg declared_type='CTCarrier*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+</class>
+</signatures>

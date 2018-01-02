@@ -1,0 +1,685 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<cftype gettypeid_func='CGImageDestinationGetTypeID' name='CGImageDestinationRef' tollfree='__NSCFType' type='^{CGImageDestination=}'/>
+<cftype gettypeid_func='CGImageMetadataGetTypeID' name='CGImageMetadataRef' tollfree='__NSCFType' type='^{CGImageMetadata=}'/>
+<cftype gettypeid_func='CGImageMetadataTagGetTypeID' name='CGImageMetadataTagRef' tollfree='__NSCFType' type='^{CGImageMetadataTag=}'/>
+<cftype gettypeid_func='CGImageSourceGetTypeID' name='CGImageSourceRef' tollfree='__NSCFType' type='^{CGImageSource=}'/>
+<cftype gettypeid_func='CGImageMetadataGetTypeID' name='CGMutableImageMetadataRef' tollfree='__NSCFType' type='^{CGImageMetadata=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCFErrorDomainCGImageMetadata' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageDestinationBackgroundColor' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageDestinationDateTime' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageDestinationEmbedThumbnail' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageDestinationImageMaxPixelSize' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageDestinationLossyCompressionQuality' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageDestinationMergeMetadata' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageDestinationMetadata' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageDestinationOptimizeColorForSharing' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageDestinationOrientation' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataEnumerateRecursively' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataNamespaceDublinCore' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataNamespaceExif' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataNamespaceExifAux' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataNamespaceExifEX' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataNamespaceIPTCCore' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataNamespacePhotoshop' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataNamespaceTIFF' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataNamespaceXMPBasic' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataNamespaceXMPRights' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataPrefixDublinCore' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataPrefixExif' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataPrefixExifAux' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataPrefixExifEX' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataPrefixIPTCCore' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataPrefixPhotoshop' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataPrefixTIFF' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataPrefixXMPBasic' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataPrefixXMPRights' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataShouldExcludeGPS' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageMetadataShouldExcludeXMP' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageProperty8BIMDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageProperty8BIMLayerNames' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageProperty8BIMVersion' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyAPNGDelayTime' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyAPNGLoopCount' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyAPNGUnclampedDelayTime' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFCameraSerialNumber' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFContinuousDrive' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFDescription' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFFirmware' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFFlashExposureComp' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFFocusMode' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFImageFileName' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFImageName' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFImageSerialNumber' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFLensMaxMM' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFLensMinMM' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFLensModel' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFMeasuredEV' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFMeteringMode' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFOwnerName' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFRecordID' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFReleaseMethod' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFReleaseTiming' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFSelfTimingTime' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFShootingMode' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyCIFFWhiteBalanceIndex' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyColorModel' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyColorModelCMYK' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyColorModelGray' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyColorModelLab' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyColorModelRGB' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGAsShotNeutral' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGAsShotWhiteXY' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGBackwardVersion' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGBaselineExposure' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGBaselineNoise' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGBaselineSharpness' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGBlackLevel' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGCalibrationIlluminant1' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGCalibrationIlluminant2' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGCameraCalibration1' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGCameraCalibration2' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGCameraCalibrationSignature' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGCameraSerialNumber' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGColorMatrix1' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGColorMatrix2' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGFixVignetteRadial' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGLensInfo' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGLocalizedCameraModel' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGNoiseProfile' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGPrivateData' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGProfileCalibrationSignature' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGUniqueCameraModel' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGVersion' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGWarpFisheye' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGWarpRectilinear' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDNGWhiteLevel' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDPIHeight' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDPIWidth' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyDepth' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifApertureValue' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifAuxDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifAuxFirmware' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifAuxFlashCompensation' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifAuxImageNumber' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifAuxLensID' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifAuxLensInfo' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifAuxLensModel' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifAuxLensSerialNumber' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifAuxOwnerName' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifAuxSerialNumber' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifBodySerialNumber' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifBrightnessValue' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifCFAPattern' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifCameraOwnerName' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifColorSpace' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifComponentsConfiguration' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifCompressedBitsPerPixel' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifContrast' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifCustomRendered' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifDateTimeDigitized' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifDateTimeOriginal' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifDeviceSettingDescription' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifDigitalZoomRatio' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifExposureBiasValue' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifExposureIndex' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifExposureMode' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifExposureProgram' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifExposureTime' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifFNumber' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifFileSource' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifFlash' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifFlashEnergy' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifFlashPixVersion' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifFocalLenIn35mmFilm' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifFocalLength' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifFocalPlaneResolutionUnit' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifFocalPlaneXResolution' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifFocalPlaneYResolution' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifGainControl' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifGamma' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifISOSpeed' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifISOSpeedLatitudeyyy' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifISOSpeedLatitudezzz' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifISOSpeedRatings' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifImageUniqueID' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifLensMake' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifLensModel' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifLensSerialNumber' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifLensSpecification' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifLightSource' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifMakerNote' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifMaxApertureValue' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifMeteringMode' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifOECF' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifPixelXDimension' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifPixelYDimension' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifRecommendedExposureIndex' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifRelatedSoundFile' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifSaturation' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifSceneCaptureType' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifSceneType' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifSensingMethod' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifSensitivityType' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifSharpness' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifShutterSpeedValue' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifSpatialFrequencyResponse' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifSpectralSensitivity' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifStandardOutputSensitivity' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifSubjectArea' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifSubjectDistRange' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifSubjectDistance' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifSubjectLocation' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifSubsecTime' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifSubsecTimeDigitized' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifSubsecTimeOrginal' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifSubsecTimeOriginal' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifUserComment' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifVersion' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyExifWhiteBalance' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyFileSize' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGIFDelayTime' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGIFDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGIFHasGlobalColorMap' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGIFImageColorMap' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGIFLoopCount' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGIFUnclampedDelayTime' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSAltitude' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSAltitudeRef' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSAreaInformation' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSDOP' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSDateStamp' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSDestBearing' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSDestBearingRef' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSDestDistance' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSDestDistanceRef' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSDestLatitude' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSDestLatitudeRef' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSDestLongitude' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSDestLongitudeRef' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSDifferental' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSHPositioningError' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSImgDirection' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSImgDirectionRef' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSLatitude' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSLatitudeRef' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSLongitude' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSLongitudeRef' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSMapDatum' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSMeasureMode' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSProcessingMethod' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSSatellites' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSSpeed' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSSpeedRef' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSStatus' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSTimeStamp' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSTrack' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSTrackRef' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyGPSVersion' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyHasAlpha' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCActionAdvised' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCByline' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCBylineTitle' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCCaptionAbstract' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCCategory' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCCity' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCContact' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCContactInfoAddress' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCContactInfoCity' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCContactInfoCountry' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCContactInfoEmails' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCContactInfoPhones' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCContactInfoPostalCode' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCContactInfoStateProvince' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCContactInfoWebURLs' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCContentLocationCode' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCContentLocationName' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCCopyrightNotice' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCCountryPrimaryLocationCode' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCCountryPrimaryLocationName' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCCreatorContactInfo' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCCredit' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCDateCreated' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCDigitalCreationDate' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCDigitalCreationTime' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCEditStatus' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCEditorialUpdate' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCExpirationDate' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCExpirationTime' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCFixtureIdentifier' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCHeadline' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCImageOrientation' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCImageType' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCKeywords' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCLanguageIdentifier' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCObjectAttributeReference' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCObjectCycle' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCObjectName' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCObjectTypeReference' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCOriginalTransmissionReference' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCOriginatingProgram' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCProgramVersion' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCProvinceState' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCReferenceDate' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCReferenceNumber' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCReferenceService' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCReleaseDate' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCReleaseTime' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCRightsUsageTerms' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCScene' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCSource' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCSpecialInstructions' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCStarRating' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCSubLocation' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCSubjectReference' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCSupplementalCategory' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCTimeCreated' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCUrgency' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIPTCWriterEditor' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIsFloat' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyIsIndexed' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyJFIFDensityUnit' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyJFIFDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyJFIFIsProgressive' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyJFIFVersion' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyJFIFXDensity' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyJFIFYDensity' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerAppleDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerCanonAspectRatioInfo' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerCanonCameraSerialNumber' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerCanonContinuousDrive' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerCanonDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerCanonFirmware' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerCanonFlashExposureComp' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerCanonImageSerialNumber' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerCanonLensModel' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerCanonOwnerName' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerFujiDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerMinoltaDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonCameraSerialNumber' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonColorMode' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonDigitalZoom' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonFlashExposureComp' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonFlashSetting' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonFocusDistance' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonFocusMode' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonISOSelection' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonISOSetting' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonImageAdjustment' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonLensAdapter' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonLensInfo' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonLensType' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonQuality' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonSharpenMode' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonShootingMode' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonShutterCount' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerNikonWhiteBalanceMode' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerOlympusDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyMakerPentaxDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyOrientation' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyPNGAuthor' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyPNGChromaticities' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyPNGCompressionFilter' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyPNGCopyright' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyPNGCreationTime' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyPNGDescription' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyPNGDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyPNGGamma' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyPNGInterlaceType' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyPNGModificationTime' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyPNGSoftware' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyPNGTitle' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyPNGXPixelsPerMeter' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyPNGYPixelsPerMeter' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyPNGsRGBIntent' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyPixelHeight' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyPixelWidth' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyProfileName' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyRawDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFArtist' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFCompression' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFCopyright' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFDateTime' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFDictionary' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFDocumentName' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFHostComputer' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFImageDescription' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFMake' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFModel' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFOrientation' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFPhotometricInterpretation' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFPrimaryChromaticities' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFResolutionUnit' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFSoftware' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFTileLength' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFTileWidth' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFTransferFunction' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFWhitePoint' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFXResolution' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImagePropertyTIFFYResolution' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageSourceCreateThumbnailFromImageAlways' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageSourceCreateThumbnailFromImageIfAbsent' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageSourceCreateThumbnailWithTransform' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageSourceShouldAllowFloat' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageSourceShouldCache' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageSourceShouldCacheImmediately' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageSourceSubsampleFactor' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageSourceThumbnailMaxPixelSize' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kCGImageSourceTypeIdentifierHint' type='^{__CFString=}'/>
+<enum name='IIO_HAS_IOSURFACE' value='0'/>
+<enum name='IMAGEIO_PNG_ALL_FILTERS' value='248'/>
+<enum name='IMAGEIO_PNG_FILTER_AVG' value='64'/>
+<enum name='IMAGEIO_PNG_FILTER_NONE' value='8'/>
+<enum name='IMAGEIO_PNG_FILTER_PAETH' value='128'/>
+<enum name='IMAGEIO_PNG_FILTER_SUB' value='16'/>
+<enum name='IMAGEIO_PNG_FILTER_UP' value='32'/>
+<enum name='IMAGEIO_PNG_NO_FILTERS' value='0'/>
+<enum name='kCGImageMetadataErrorBadArgument' value='2'/>
+<enum name='kCGImageMetadataErrorConflictingArguments' value='3'/>
+<enum name='kCGImageMetadataErrorPrefixConflict' value='4'/>
+<enum name='kCGImageMetadataErrorUnknown' value='0'/>
+<enum name='kCGImageMetadataErrorUnsupportedFormat' value='1'/>
+<enum name='kCGImageMetadataTypeAlternateArray' value='4'/>
+<enum name='kCGImageMetadataTypeAlternateText' value='5'/>
+<enum name='kCGImageMetadataTypeArrayOrdered' value='3'/>
+<enum name='kCGImageMetadataTypeArrayUnordered' value='2'/>
+<enum name='kCGImageMetadataTypeDefault' value='0'/>
+<enum name='kCGImageMetadataTypeInvalid' value='-1'/>
+<enum name='kCGImageMetadataTypeString' value='1'/>
+<enum name='kCGImageMetadataTypeStructure' value='6'/>
+<enum name='kCGImagePropertyOrientationDown' value='3'/>
+<enum name='kCGImagePropertyOrientationDownMirrored' value='4'/>
+<enum name='kCGImagePropertyOrientationLeft' value='8'/>
+<enum name='kCGImagePropertyOrientationLeftMirrored' value='5'/>
+<enum name='kCGImagePropertyOrientationRight' value='6'/>
+<enum name='kCGImagePropertyOrientationRightMirrored' value='7'/>
+<enum name='kCGImagePropertyOrientationUp' value='1'/>
+<enum name='kCGImagePropertyOrientationUpMirrored' value='2'/>
+<enum name='kCGImageStatusComplete' value='0'/>
+<enum name='kCGImageStatusIncomplete' value='-1'/>
+<enum name='kCGImageStatusInvalidData' value='-4'/>
+<enum name='kCGImageStatusReadingHeader' value='-2'/>
+<enum name='kCGImageStatusUnexpectedEOF' value='-5'/>
+<enum name='kCGImageStatusUnknownType' value='-3'/>
+<function name='CGImageDestinationAddImage'>
+<arg declared_type='CGImageDestinationRef _Nonnull' name='idst' type='^{CGImageDestination=}'/>
+<arg declared_type='CGImageRef _Nonnull' name='image' type='^{CGImage=}'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='properties' type='^{__CFDictionary=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='CGImageDestinationAddImageAndMetadata'>
+<arg declared_type='CGImageDestinationRef _Nonnull' name='idst' type='^{CGImageDestination=}'/>
+<arg declared_type='CGImageRef _Nonnull' name='image' type='^{CGImage=}'/>
+<arg declared_type='CGImageMetadataRef _Nullable' name='metadata' type='^{CGImageMetadata=}'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='options' type='^{__CFDictionary=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='CGImageDestinationAddImageFromSource'>
+<arg declared_type='CGImageDestinationRef _Nonnull' name='idst' type='^{CGImageDestination=}'/>
+<arg declared_type='CGImageSourceRef _Nonnull' name='isrc' type='^{CGImageSource=}'/>
+<arg declared_type='size_t' name='index' type='L'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='properties' type='^{__CFDictionary=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='CGImageDestinationCopyImageSource'>
+<arg declared_type='CGImageDestinationRef _Nonnull' name='idst' type='^{CGImageDestination=}'/>
+<arg declared_type='CGImageSourceRef _Nonnull' name='isrc' type='^{CGImageSource=}'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='options' type='^{__CFDictionary=}'/>
+<arg declared_type='CFErrorRef _Nullable * _Nullable' name='err' type='^^{__CFError}'/>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function name='CGImageDestinationCopyTypeIdentifiers'>
+<retval declared_type='CFArrayRef _Nonnull' type='^{__CFArray=}'/>
+</function>
+<function name='CGImageDestinationCreateWithData'>
+<arg declared_type='CFMutableDataRef _Nonnull' name='data' type='^{__CFData=}'/>
+<arg declared_type='CFStringRef _Nonnull' name='type' type='^{__CFString=}'/>
+<arg declared_type='size_t' name='count' type='L'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='options' type='^{__CFDictionary=}'/>
+<retval declared_type='CGImageDestinationRef _Nullable' type='^{CGImageDestination=}'/>
+</function>
+<function name='CGImageDestinationCreateWithDataConsumer'>
+<arg declared_type='CGDataConsumerRef _Nonnull' name='consumer' type='^{CGDataConsumer=}'/>
+<arg declared_type='CFStringRef _Nonnull' name='type' type='^{__CFString=}'/>
+<arg declared_type='size_t' name='count' type='L'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='options' type='^{__CFDictionary=}'/>
+<retval declared_type='CGImageDestinationRef _Nullable' type='^{CGImageDestination=}'/>
+</function>
+<function name='CGImageDestinationCreateWithURL'>
+<arg declared_type='CFURLRef _Nonnull' name='url' type='^{__CFURL=}'/>
+<arg declared_type='CFStringRef _Nonnull' name='type' type='^{__CFString=}'/>
+<arg declared_type='size_t' name='count' type='L'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='options' type='^{__CFDictionary=}'/>
+<retval declared_type='CGImageDestinationRef _Nullable' type='^{CGImageDestination=}'/>
+</function>
+<function name='CGImageDestinationFinalize'>
+<arg declared_type='CGImageDestinationRef _Nonnull' name='idst' type='^{CGImageDestination=}'/>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function name='CGImageDestinationGetTypeID'>
+<retval declared_type='CFTypeID' type='L'/>
+</function>
+<function name='CGImageDestinationSetProperties'>
+<arg declared_type='CGImageDestinationRef _Nonnull' name='idst' type='^{CGImageDestination=}'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='properties' type='^{__CFDictionary=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='CGImageMetadataCopyStringValueWithPath'>
+<arg declared_type='CGImageMetadataRef _Nonnull' name='metadata' type='^{CGImageMetadata=}'/>
+<arg declared_type='CGImageMetadataTagRef _Nullable' name='parent' type='^{CGImageMetadataTag=}'/>
+<arg declared_type='CFStringRef _Nonnull' name='path' type='^{__CFString=}'/>
+<retval declared_type='CFStringRef _Nullable' type='^{__CFString=}'/>
+</function>
+<function name='CGImageMetadataCopyTagMatchingImageProperty'>
+<arg declared_type='CGImageMetadataRef _Nonnull' name='metadata' type='^{CGImageMetadata=}'/>
+<arg declared_type='CFStringRef _Nonnull' name='dictionaryName' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef _Nonnull' name='propertyName' type='^{__CFString=}'/>
+<retval declared_type='CGImageMetadataTagRef _Nullable' type='^{CGImageMetadataTag=}'/>
+</function>
+<function name='CGImageMetadataCopyTagWithPath'>
+<arg declared_type='CGImageMetadataRef _Nonnull' name='metadata' type='^{CGImageMetadata=}'/>
+<arg declared_type='CGImageMetadataTagRef _Nullable' name='parent' type='^{CGImageMetadataTag=}'/>
+<arg declared_type='CFStringRef _Nonnull' name='path' type='^{__CFString=}'/>
+<retval declared_type='CGImageMetadataTagRef _Nullable' type='^{CGImageMetadataTag=}'/>
+</function>
+<function name='CGImageMetadataCopyTags'>
+<arg declared_type='CGImageMetadataRef _Nonnull' name='metadata' type='^{CGImageMetadata=}'/>
+<retval declared_type='CFArrayRef _Nullable' type='^{__CFArray=}'/>
+</function>
+<function name='CGImageMetadataCreateFromXMPData'>
+<arg declared_type='CFDataRef _Nonnull' name='data' type='^{__CFData=}'/>
+<retval declared_type='CGImageMetadataRef _Nullable' type='^{CGImageMetadata=}'/>
+</function>
+<function name='CGImageMetadataCreateMutable'>
+<retval declared_type='CGMutableImageMetadataRef _Nonnull' type='^{CGImageMetadata=}'/>
+</function>
+<function name='CGImageMetadataCreateMutableCopy'>
+<arg declared_type='CGImageMetadataRef _Nonnull' name='metadata' type='^{CGImageMetadata=}'/>
+<retval declared_type='CGMutableImageMetadataRef _Nullable' type='^{CGImageMetadata=}'/>
+</function>
+<function name='CGImageMetadataCreateXMPData'>
+<arg declared_type='CGImageMetadataRef _Nonnull' name='metadata' type='^{CGImageMetadata=}'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='options' type='^{__CFDictionary=}'/>
+<retval declared_type='CFDataRef _Nullable' type='^{__CFData=}'/>
+</function>
+<function name='CGImageMetadataEnumerateTagsUsingBlock'>
+<arg declared_type='CGImageMetadataRef _Nonnull' name='metadata' type='^{CGImageMetadata=}'/>
+<arg declared_type='CFStringRef _Nullable' name='rootPath' type='^{__CFString=}'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='options' type='^{__CFDictionary=}'/>
+<arg declared_type='CGImageMetadataTagBlock _Nonnull' function_pointer='true' name='block' type='@?'>
+<arg declared_type='CFStringRef _Nonnull' type='^{__CFString=}'/>
+<arg declared_type='CGImageMetadataTagRef _Nonnull' type='^{CGImageMetadataTag=}'/>
+<retval declared_type='_Bool' type='B'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='CGImageMetadataGetTypeID'>
+<retval declared_type='CFTypeID' type='L'/>
+</function>
+<function name='CGImageMetadataRegisterNamespaceForPrefix'>
+<arg declared_type='CGMutableImageMetadataRef _Nonnull' name='metadata' type='^{CGImageMetadata=}'/>
+<arg declared_type='CFStringRef _Nonnull' name='xmlns' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef _Nonnull' name='prefix' type='^{__CFString=}'/>
+<arg declared_type='CFErrorRef _Nullable * _Nullable' name='err' type='^^{__CFError}'/>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function name='CGImageMetadataRemoveTagWithPath'>
+<arg declared_type='CGMutableImageMetadataRef _Nonnull' name='metadata' type='^{CGImageMetadata=}'/>
+<arg declared_type='CGImageMetadataTagRef _Nullable' name='parent' type='^{CGImageMetadataTag=}'/>
+<arg declared_type='CFStringRef _Nonnull' name='path' type='^{__CFString=}'/>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function name='CGImageMetadataSetTagWithPath'>
+<arg declared_type='CGMutableImageMetadataRef _Nonnull' name='metadata' type='^{CGImageMetadata=}'/>
+<arg declared_type='CGImageMetadataTagRef _Nullable' name='parent' type='^{CGImageMetadataTag=}'/>
+<arg declared_type='CFStringRef _Nonnull' name='path' type='^{__CFString=}'/>
+<arg declared_type='CGImageMetadataTagRef _Nonnull' name='tag' type='^{CGImageMetadataTag=}'/>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function name='CGImageMetadataSetValueMatchingImageProperty'>
+<arg declared_type='CGMutableImageMetadataRef _Nonnull' name='metadata' type='^{CGImageMetadata=}'/>
+<arg declared_type='CFStringRef _Nonnull' name='dictionaryName' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef _Nonnull' name='propertyName' type='^{__CFString=}'/>
+<arg declared_type='CFTypeRef _Nonnull' name='value' type='@'/>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function name='CGImageMetadataSetValueWithPath'>
+<arg declared_type='CGMutableImageMetadataRef _Nonnull' name='metadata' type='^{CGImageMetadata=}'/>
+<arg declared_type='CGImageMetadataTagRef _Nullable' name='parent' type='^{CGImageMetadataTag=}'/>
+<arg declared_type='CFStringRef _Nonnull' name='path' type='^{__CFString=}'/>
+<arg declared_type='CFTypeRef _Nonnull' name='value' type='@'/>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function name='CGImageMetadataTagCopyName'>
+<arg declared_type='CGImageMetadataTagRef _Nonnull' name='tag' type='^{CGImageMetadataTag=}'/>
+<retval declared_type='CFStringRef _Nullable' type='^{__CFString=}'/>
+</function>
+<function name='CGImageMetadataTagCopyNamespace'>
+<arg declared_type='CGImageMetadataTagRef _Nonnull' name='tag' type='^{CGImageMetadataTag=}'/>
+<retval declared_type='CFStringRef _Nullable' type='^{__CFString=}'/>
+</function>
+<function name='CGImageMetadataTagCopyPrefix'>
+<arg declared_type='CGImageMetadataTagRef _Nonnull' name='tag' type='^{CGImageMetadataTag=}'/>
+<retval declared_type='CFStringRef _Nullable' type='^{__CFString=}'/>
+</function>
+<function name='CGImageMetadataTagCopyQualifiers'>
+<arg declared_type='CGImageMetadataTagRef _Nonnull' name='tag' type='^{CGImageMetadataTag=}'/>
+<retval declared_type='CFArrayRef _Nullable' type='^{__CFArray=}'/>
+</function>
+<function name='CGImageMetadataTagCopyValue'>
+<arg declared_type='CGImageMetadataTagRef _Nonnull' name='tag' type='^{CGImageMetadataTag=}'/>
+<retval declared_type='CFTypeRef _Nullable' type='@'/>
+</function>
+<function name='CGImageMetadataTagCreate'>
+<arg declared_type='CFStringRef _Nonnull' name='xmlns' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef _Nullable' name='prefix' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef _Nonnull' name='name' type='^{__CFString=}'/>
+<arg declared_type='CGImageMetadataType' name='type' type='i'/>
+<arg declared_type='CFTypeRef _Nonnull' name='value' type='@'/>
+<retval declared_type='CGImageMetadataTagRef _Nullable' type='^{CGImageMetadataTag=}'/>
+</function>
+<function name='CGImageMetadataTagGetType'>
+<arg declared_type='CGImageMetadataTagRef _Nonnull' name='tag' type='^{CGImageMetadataTag=}'/>
+<retval declared_type='CGImageMetadataType' type='i'/>
+</function>
+<function name='CGImageMetadataTagGetTypeID'>
+<retval declared_type='CFTypeID' type='L'/>
+</function>
+<function name='CGImageSourceCopyMetadataAtIndex'>
+<arg declared_type='CGImageSourceRef _Nonnull' name='isrc' type='^{CGImageSource=}'/>
+<arg declared_type='size_t' name='index' type='L'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='options' type='^{__CFDictionary=}'/>
+<retval declared_type='CGImageMetadataRef _Nullable' type='^{CGImageMetadata=}'/>
+</function>
+<function name='CGImageSourceCopyProperties'>
+<arg declared_type='CGImageSourceRef _Nonnull' name='isrc' type='^{CGImageSource=}'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='options' type='^{__CFDictionary=}'/>
+<retval declared_type='CFDictionaryRef _Nullable' type='^{__CFDictionary=}'/>
+</function>
+<function name='CGImageSourceCopyPropertiesAtIndex'>
+<arg declared_type='CGImageSourceRef _Nonnull' name='isrc' type='^{CGImageSource=}'/>
+<arg declared_type='size_t' name='index' type='L'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='options' type='^{__CFDictionary=}'/>
+<retval declared_type='CFDictionaryRef _Nullable' type='^{__CFDictionary=}'/>
+</function>
+<function name='CGImageSourceCopyTypeIdentifiers'>
+<retval declared_type='CFArrayRef _Nonnull' type='^{__CFArray=}'/>
+</function>
+<function name='CGImageSourceCreateImageAtIndex'>
+<arg declared_type='CGImageSourceRef _Nonnull' name='isrc' type='^{CGImageSource=}'/>
+<arg declared_type='size_t' name='index' type='L'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='options' type='^{__CFDictionary=}'/>
+<retval declared_type='CGImageRef _Nullable' type='^{CGImage=}'/>
+</function>
+<function name='CGImageSourceCreateIncremental'>
+<arg declared_type='CFDictionaryRef _Nullable' name='options' type='^{__CFDictionary=}'/>
+<retval declared_type='CGImageSourceRef _Nonnull' type='^{CGImageSource=}'/>
+</function>
+<function name='CGImageSourceCreateThumbnailAtIndex'>
+<arg declared_type='CGImageSourceRef _Nonnull' name='isrc' type='^{CGImageSource=}'/>
+<arg declared_type='size_t' name='index' type='L'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='options' type='^{__CFDictionary=}'/>
+<retval declared_type='CGImageRef _Nullable' type='^{CGImage=}'/>
+</function>
+<function name='CGImageSourceCreateWithData'>
+<arg declared_type='CFDataRef _Nonnull' name='data' type='^{__CFData=}'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='options' type='^{__CFDictionary=}'/>
+<retval declared_type='CGImageSourceRef _Nullable' type='^{CGImageSource=}'/>
+</function>
+<function name='CGImageSourceCreateWithDataProvider'>
+<arg declared_type='CGDataProviderRef _Nonnull' name='provider' type='^{CGDataProvider=}'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='options' type='^{__CFDictionary=}'/>
+<retval declared_type='CGImageSourceRef _Nullable' type='^{CGImageSource=}'/>
+</function>
+<function name='CGImageSourceCreateWithURL'>
+<arg declared_type='CFURLRef _Nonnull' name='url' type='^{__CFURL=}'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='options' type='^{__CFDictionary=}'/>
+<retval declared_type='CGImageSourceRef _Nullable' type='^{CGImageSource=}'/>
+</function>
+<function name='CGImageSourceGetCount'>
+<arg declared_type='CGImageSourceRef _Nonnull' name='isrc' type='^{CGImageSource=}'/>
+<retval declared_type='size_t' type='L'/>
+</function>
+<function name='CGImageSourceGetStatus'>
+<arg declared_type='CGImageSourceRef _Nonnull' name='isrc' type='^{CGImageSource=}'/>
+<retval declared_type='CGImageSourceStatus' type='i'/>
+</function>
+<function name='CGImageSourceGetStatusAtIndex'>
+<arg declared_type='CGImageSourceRef _Nonnull' name='isrc' type='^{CGImageSource=}'/>
+<arg declared_type='size_t' name='index' type='L'/>
+<retval declared_type='CGImageSourceStatus' type='i'/>
+</function>
+<function name='CGImageSourceGetType'>
+<arg declared_type='CGImageSourceRef _Nonnull' name='isrc' type='^{CGImageSource=}'/>
+<retval declared_type='CFStringRef _Nullable' type='^{__CFString=}'/>
+</function>
+<function name='CGImageSourceGetTypeID'>
+<retval declared_type='CFTypeID' type='L'/>
+</function>
+<function name='CGImageSourceRemoveCacheAtIndex'>
+<arg declared_type='CGImageSourceRef _Nonnull' name='isrc' type='^{CGImageSource=}'/>
+<arg declared_type='size_t' name='index' type='L'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='CGImageSourceUpdateData'>
+<arg declared_type='CGImageSourceRef _Nonnull' name='isrc' type='^{CGImageSource=}'/>
+<arg declared_type='CFDataRef _Nonnull' name='data' type='^{__CFData=}'/>
+<arg declared_type='_Bool' name='final' type='B'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='CGImageSourceUpdateDataProvider'>
+<arg declared_type='CGImageSourceRef _Nonnull' name='isrc' type='^{CGImageSource=}'/>
+<arg declared_type='CGDataProviderRef _Nonnull' name='provider' type='^{CGDataProvider=}'/>
+<arg declared_type='_Bool' name='final' type='B'/>
+<retval declared_type='void' type='v'/>
+</function>
+</signatures>

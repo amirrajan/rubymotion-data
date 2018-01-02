@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/LocalAuthentication.framework/Support/SharedInternals.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type64='NSString*' name='LAErrorDomain' type64='@'/>
+<string_constant name='kLAErrorDomain' value='com.apple.LocalAuthentication'/>
+<enum name='LAErrorAuthenticationFailed' value64='-1'/>
+<enum name='LAErrorPasscodeNotSet' value64='-5'/>
+<enum name='LAErrorSystemCancel' value64='-4'/>
+<enum name='LAErrorTouchIDNotAvailable' value64='-6'/>
+<enum name='LAErrorTouchIDNotEnrolled' value64='-7'/>
+<enum name='LAErrorUserCancel' value64='-2'/>
+<enum name='LAErrorUserFallback' value64='-3'/>
+<enum name='LAPolicyDeviceOwnerAuthenticationWithBiometrics' value64='1'/>
+<enum name='kLAErrorAuthenticationFailed' value64='-1'/>
+<enum name='kLAErrorPasscodeNotSet' value64='-5'/>
+<enum name='kLAErrorSystemCancel' value64='-4'/>
+<enum name='kLAErrorTouchIDNotAvailable' value64='-6'/>
+<enum name='kLAErrorTouchIDNotEnrolled' value64='-7'/>
+<enum name='kLAErrorUserCancel' value64='-2'/>
+<enum name='kLAErrorUserFallback' value64='-3'/>
+<enum name='kLAOptionAuthenticationReason' value64='2'/>
+<enum name='kLAOptionUserFallback' value64='1'/>
+<enum name='kLAPolicyDeviceOwnerAuthenticationWithBiometrics' value64='1'/>
+<class name='LAContext'>
+<method selector='canEvaluatePolicy:error:'>
+<arg declared_type64='LAPolicy' index='0' name='policy' type64='q'/>
+<arg declared_type64='NSError**' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='evaluatePolicy:localizedReason:reply:'>
+<arg declared_type64='LAPolicy' index='0' name='policy' type64='q'/>
+<arg declared_type64='NSString*' index='1' name='localizedReason' type64='@'/>
+<arg declared_type64='void (^)(BOOL, NSError *)' function_pointer='true' index='2' name='reply' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='localizedFallbackTitle'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='setLocalizedFallbackTitle:'>
+<arg declared_type64='NSString*' index='0' name='localizedFallbackTitle' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+</signatures>

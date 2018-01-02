@@ -1,0 +1,843 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/MediaAccessibility.framework'/>
+<depends_on path='/System/Library/Frameworks/IOSurface.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreAudio.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenGL.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioUnit.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<cftype name='DVDEventCallBackRef' type='^v'/>
+<enum name='kDVDAMGMDomain' value='5'/>
+<enum name='kDVDAspectRatio16x9' value='3'/>
+<enum name='kDVDAspectRatio4x3' value='1'/>
+<enum name='kDVDAspectRatio4x3PanAndScan' value='2'/>
+<enum name='kDVDAspectRatioLetterBox' value='4'/>
+<enum name='kDVDAspectRatioUninitialized' value='0'/>
+<enum name='kDVDAudioAC3Format' value='1'/>
+<enum name='kDVDAudioDDPlusFormat' value='8'/>
+<enum name='kDVDAudioDTSFormat' value='5'/>
+<enum name='kDVDAudioDTSHDFormat' value='9'/>
+<enum name='kDVDAudioExtensionCodeDirectorsComment1' value='3'/>
+<enum name='kDVDAudioExtensionCodeDirectorsComment2' value='4'/>
+<enum name='kDVDAudioExtensionCodeNVisualImpaired' value='2'/>
+<enum name='kDVDAudioExtensionCodeNormalCaptions' value='1'/>
+<enum name='kDVDAudioExtensionCodeNotSpecified' value='0'/>
+<enum name='kDVDAudioMLPFormat' value='7'/>
+<enum name='kDVDAudioMPEG1Format' value='2'/>
+<enum name='kDVDAudioMPEG2Format' value='3'/>
+<enum name='kDVDAudioModeProLogic' value='1'/>
+<enum name='kDVDAudioModeSPDIF' value='2'/>
+<enum name='kDVDAudioModeUninitialized' value='0'/>
+<enum name='kDVDAudioPCMFormat' value='4'/>
+<enum name='kDVDAudioSDDSFormat' value='6'/>
+<enum name='kDVDAudioUnknownFormat' value='0'/>
+<enum name='kDVDButtonIndexNone' value='-1'/>
+<enum name='kDVDErrorAlreadyPlaying' value='-70006'/>
+<enum name='kDVDErrorAuthentification' value='-70025'/>
+<enum name='kDVDErrorDisplayAuthentification' value='-70034'/>
+<enum name='kDVDErrorDontNeedWakeup' value='-70009'/>
+<enum name='kDVDErrorGraphicsDevice' value='-70018'/>
+<enum name='kDVDErrorInitializingLib' value='-70002'/>
+<enum name='kDVDErrorInvalidBookmarkForMedia' value='-70032'/>
+<enum name='kDVDErrorInvalidBookmarkSize' value='-70031'/>
+<enum name='kDVDErrorInvalidBookmarkVersion' value='-70030'/>
+<enum name='kDVDErrorInvalidRegionCode' value='-70020'/>
+<enum name='kDVDErrorIsAlreadySleeping' value='-70008'/>
+<enum name='kDVDErrorMismatchedRegionCode' value='-70022'/>
+<enum name='kDVDErrorMissingDrive' value='-70012'/>
+<enum name='kDVDErrorMissingGraphicsDevice' value='-70017'/>
+<enum name='kDVDErrorNavigation' value='-70029'/>
+<enum name='kDVDErrorNoAudioOutputDevice' value='-70027'/>
+<enum name='kDVDErrorNoFatalErrCallBack' value='-70007'/>
+<enum name='kDVDErrorNoMoreRegionSets' value='-70023'/>
+<enum name='kDVDErrorNoValidBookmarkForLastPlay' value='-70033'/>
+<enum name='kDVDErrorNoValidMedia' value='-70015'/>
+<enum name='kDVDErrorNotAllowedDuringPlayback' value='-70004'/>
+<enum name='kDVDErrorNotSupportedConfiguration' value='-70013'/>
+<enum name='kDVDErrorNotSupportedFunction' value='-70014'/>
+<enum name='kDVDErrorOutOfVideoMemory' value='-70026'/>
+<enum name='kDVDErrorPlaybackOpen' value='-70019'/>
+<enum name='kDVDErrorRgnMgrInstall' value='-70021'/>
+<enum name='kDVDErrorSystem' value='-70028'/>
+<enum name='kDVDErrorTimeOutOfRange' value='-70010'/>
+<enum name='kDVDErrorUnassignedGrafPort' value='-70005'/>
+<enum name='kDVDErrorUninitializedLib' value='-70003'/>
+<enum name='kDVDErrorUnknown' value='-70001'/>
+<enum name='kDVDErrorUserActionNoOp' value='-70011'/>
+<enum name='kDVDErrorWrongParam' value='-70016'/>
+<enum name='kDVDErrordRegionCodeUninitialized' value='-70024'/>
+<enum name='kDVDEventAngle' value='4'/>
+<enum name='kDVDEventAngleNumbers' value='23'/>
+<enum name='kDVDEventAudioStream' value='5'/>
+<enum name='kDVDEventAudioStreamNumbers' value='22'/>
+<enum name='kDVDEventBitrate' value='9'/>
+<enum name='kDVDEventCCInfo' value='25'/>
+<enum name='kDVDEventChapterTime' value='26'/>
+<enum name='kDVDEventDisplayMode' value='7'/>
+<enum name='kDVDEventDomain' value='8'/>
+<enum name='kDVDEventError' value='24'/>
+<enum name='kDVDEventGPRM' value='18'/>
+<enum name='kDVDEventMenuCalled' value='15'/>
+<enum name='kDVDEventPGC' value='17'/>
+<enum name='kDVDEventPTT' value='2'/>
+<enum name='kDVDEventParental' value='16'/>
+<enum name='kDVDEventPlayback' value='11'/>
+<enum name='kDVDEventRegionMismatch' value='19'/>
+<enum name='kDVDEventScanSpeed' value='14'/>
+<enum name='kDVDEventStill' value='10'/>
+<enum name='kDVDEventStreams' value='13'/>
+<enum name='kDVDEventSubpictureStream' value='6'/>
+<enum name='kDVDEventSubpictureStreamNumbers' value='21'/>
+<enum name='kDVDEventTitle' value='1'/>
+<enum name='kDVDEventTitleTime' value='20'/>
+<enum name='kDVDEventValidUOP' value='3'/>
+<enum name='kDVDEventVideoStandard' value='12'/>
+<enum name='kDVDFPDomain' value='0'/>
+<enum name='kDVDFormatNTSC' value='1'/>
+<enum name='kDVDFormatNTSC_HDTV' value='3'/>
+<enum name='kDVDFormatPAL' value='2'/>
+<enum name='kDVDFormatPAL_HDTV' value='4'/>
+<enum name='kDVDFormatUninitialized' value='0'/>
+<enum name='kDVDLanguageCodeAbkhazian' value='1633820704'/>
+<enum name='kDVDLanguageCodeAfar' value='1633755168'/>
+<enum name='kDVDLanguageCodeAfrikaans' value='1634082848'/>
+<enum name='kDVDLanguageCodeAlbanian' value='1936793632'/>
+<enum name='kDVDLanguageCodeAmharic' value='1634541600'/>
+<enum name='kDVDLanguageCodeArabic' value='1634869280'/>
+<enum name='kDVDLanguageCodeArmenian' value='1752768544'/>
+<enum name='kDVDLanguageCodeAssamese' value='1634934816'/>
+<enum name='kDVDLanguageCodeAymara' value='1635328032'/>
+<enum name='kDVDLanguageCodeAzerbaijani' value='1635393568'/>
+<enum name='kDVDLanguageCodeBashkir' value='1650532384'/>
+<enum name='kDVDLanguageCodeBasque' value='1702174752'/>
+<enum name='kDVDLanguageCodeBengali' value='1651384352'/>
+<enum name='kDVDLanguageCodeBhutani' value='1685725216'/>
+<enum name='kDVDLanguageCodeBihari' value='1650991136'/>
+<enum name='kDVDLanguageCodeBislama' value='1651056672'/>
+<enum name='kDVDLanguageCodeBreton' value='1651646496'/>
+<enum name='kDVDLanguageCodeBulgarian' value='1650925600'/>
+<enum name='kDVDLanguageCodeBurmese' value='1836654624'/>
+<enum name='kDVDLanguageCodeByelorussian' value='1650794528'/>
+<enum name='kDVDLanguageCodeCambodian' value='1802313760'/>
+<enum name='kDVDLanguageCodeCatalan' value='1667309600'/>
+<enum name='kDVDLanguageCodeChinese' value='2053644320'/>
+<enum name='kDVDLanguageCodeCorsican' value='1668227104'/>
+<enum name='kDVDLanguageCodeCroatian' value='1752309792'/>
+<enum name='kDVDLanguageCodeCzech' value='1668489248'/>
+<enum name='kDVDLanguageCodeDanish' value='1684086816'/>
+<enum name='kDVDLanguageCodeDutch' value='1852579872'/>
+<enum name='kDVDLanguageCodeEnglish' value='1701716000'/>
+<enum name='kDVDLanguageCodeEsperanto' value='1701781536'/>
+<enum name='kDVDLanguageCodeEstonian' value='1702109216'/>
+<enum name='kDVDLanguageCodeFaeroese' value='1718558752'/>
+<enum name='kDVDLanguageCodeFiji' value='1718231072'/>
+<enum name='kDVDLanguageCodeFinnish' value='1718165536'/>
+<enum name='kDVDLanguageCodeFrench' value='1718755360'/>
+<enum name='kDVDLanguageCodeFrisian' value='1719214112'/>
+<enum name='kDVDLanguageCodeGalician' value='1735139360'/>
+<enum name='kDVDLanguageCodeGeorgian' value='1801527328'/>
+<enum name='kDVDLanguageCodeGerman' value='1684348960'/>
+<enum name='kDVDLanguageCodeGreek' value='1701584928'/>
+<enum name='kDVDLanguageCodeGreenlandic' value='1802248224'/>
+<enum name='kDVDLanguageCodeGuarani' value='1735270432'/>
+<enum name='kDVDLanguageCodeGujarati' value='1735729184'/>
+<enum name='kDVDLanguageCodeHausa' value='1751195680'/>
+<enum name='kDVDLanguageCodeHebrew' value='1769414688'/>
+<enum name='kDVDLanguageCodeHindi' value='1751719968'/>
+<enum name='kDVDLanguageCodeHungarian' value='1752506400'/>
+<enum name='kDVDLanguageCodeIcelandic' value='1769152544'/>
+<enum name='kDVDLanguageCodeIndonesian' value='1768824864'/>
+<enum name='kDVDLanguageCodeInterlingua' value='1767972896'/>
+<enum name='kDVDLanguageCodeInterlingue' value='1768235040'/>
+<enum name='kDVDLanguageCodeInupiak' value='1768628256'/>
+<enum name='kDVDLanguageCodeIrish' value='1734418464'/>
+<enum name='kDVDLanguageCodeItalian' value='1769218080'/>
+<enum name='kDVDLanguageCodeJapanese' value='1784750112'/>
+<enum name='kDVDLanguageCodeJavanese' value='1786191904'/>
+<enum name='kDVDLanguageCodeKannada' value='1802379296'/>
+<enum name='kDVDLanguageCodeKashmiri' value='1802706976'/>
+<enum name='kDVDLanguageCodeKazakh' value='1802182688'/>
+<enum name='kDVDLanguageCodeKinyarwanda' value='1920409632'/>
+<enum name='kDVDLanguageCodeKirghiz' value='1803100192'/>
+<enum name='kDVDLanguageCodeKirundi' value='1919819808'/>
+<enum name='kDVDLanguageCodeKorean' value='1802444832'/>
+<enum name='kDVDLanguageCodeKurdish' value='1802838048'/>
+<enum name='kDVDLanguageCodeLaothian' value='1819222048'/>
+<enum name='kDVDLanguageCodeLatin' value='1818304544'/>
+<enum name='kDVDLanguageCodeLatvian' value='1819680800'/>
+<enum name='kDVDLanguageCodeLingala' value='1819156512'/>
+<enum name='kDVDLanguageCodeLithuanian' value='1819549728'/>
+<enum name='kDVDLanguageCodeMacedonian' value='1835737120'/>
+<enum name='kDVDLanguageCodeMalagasy' value='1835474976'/>
+<enum name='kDVDLanguageCodeMalay' value='1836261408'/>
+<enum name='kDVDLanguageCodeMalayalam' value='1835802656'/>
+<enum name='kDVDLanguageCodeMaltese' value='1836326944'/>
+<enum name='kDVDLanguageCodeMaori' value='1835606048'/>
+<enum name='kDVDLanguageCodeMarathi' value='1836195872'/>
+<enum name='kDVDLanguageCodeMoldavian' value='1835999264'/>
+<enum name='kDVDLanguageCodeMongolian' value='1835933728'/>
+<enum name='kDVDLanguageCodeNauru' value='1851858976'/>
+<enum name='kDVDLanguageCodeNepali' value='1852121120'/>
+<enum name='kDVDLanguageCodeNone' value='808460320'/>
+<enum name='kDVDLanguageCodeNorwegian' value='1852776480'/>
+<enum name='kDVDLanguageCodeOccitan' value='1868767264'/>
+<enum name='kDVDLanguageCodeOriya' value='1869750304'/>
+<enum name='kDVDLanguageCodeOromo' value='1869422624'/>
+<enum name='kDVDLanguageCodePashto' value='1886593056'/>
+<enum name='kDVDLanguageCodePersian' value='1717641248'/>
+<enum name='kDVDLanguageCodePolish' value='1886134304'/>
+<enum name='kDVDLanguageCodePortugese' value='1886658592'/>
+<enum name='kDVDLanguageCodePunjabi' value='1885413408'/>
+<enum name='kDVDLanguageCodeQuechua' value='1903501344'/>
+<enum name='kDVDLanguageCodeRhaetoRomance' value='1919754272'/>
+<enum name='kDVDLanguageCodeRomanian' value='1919885344'/>
+<enum name='kDVDLanguageCodeRussian' value='1920278560'/>
+<enum name='kDVDLanguageCodeSamoan' value='1936531488'/>
+<enum name='kDVDLanguageCodeSangro' value='1936138272'/>
+<enum name='kDVDLanguageCodeSanskrit' value='1935745056'/>
+<enum name='kDVDLanguageCodeScotsGaelic' value='1734615072'/>
+<enum name='kDVDLanguageCodeSerbian' value='1936859168'/>
+<enum name='kDVDLanguageCodeSerboCroatian' value='1936203808'/>
+<enum name='kDVDLanguageCodeSesotho' value='1936990240'/>
+<enum name='kDVDLanguageCodeSetswana' value='1953374240'/>
+<enum name='kDVDLanguageCodeShona' value='1936597024'/>
+<enum name='kDVDLanguageCodeSindhi' value='1935941664'/>
+<enum name='kDVDLanguageCodeSinghalese' value='1936269344'/>
+<enum name='kDVDLanguageCodeSiswati' value='1936924704'/>
+<enum name='kDVDLanguageCodeSlovak' value='1936400416'/>
+<enum name='kDVDLanguageCodeSlovenian' value='1936465952'/>
+<enum name='kDVDLanguageCodeSomali' value='1936662560'/>
+<enum name='kDVDLanguageCodeSpanish' value='1702043680'/>
+<enum name='kDVDLanguageCodeSudanese' value='1937055776'/>
+<enum name='kDVDLanguageCodeSwahili' value='1937186848'/>
+<enum name='kDVDLanguageCodeSwedish' value='1937121312'/>
+<enum name='kDVDLanguageCodeTagalog' value='1953243168'/>
+<enum name='kDVDLanguageCodeTajik' value='1952915488'/>
+<enum name='kDVDLanguageCodeTamil' value='1952522272'/>
+<enum name='kDVDLanguageCodeTatar' value='1953767456'/>
+<enum name='kDVDLanguageCodeTelugu' value='1952784416'/>
+<enum name='kDVDLanguageCodeThai' value='1952981024'/>
+<enum name='kDVDLanguageCodeTibetan' value='1651449888'/>
+<enum name='kDVDLanguageCodeTigrinya' value='1953046560'/>
+<enum name='kDVDLanguageCodeTonga' value='1953439776'/>
+<enum name='kDVDLanguageCodeTsonga' value='1953701920'/>
+<enum name='kDVDLanguageCodeTurkish' value='1953636384'/>
+<enum name='kDVDLanguageCodeTurkmen' value='1953177632'/>
+<enum name='kDVDLanguageCodeTwi' value='1953964064'/>
+<enum name='kDVDLanguageCodeUkranian' value='1969954848'/>
+<enum name='kDVDLanguageCodeUninitialized' value='1061101600'/>
+<enum name='kDVDLanguageCodeUrdu' value='1970413600'/>
+<enum name='kDVDLanguageCodeUzbek' value='1970937888'/>
+<enum name='kDVDLanguageCodeVietnamese' value='1986600992'/>
+<enum name='kDVDLanguageCodeVolapuk' value='1986994208'/>
+<enum name='kDVDLanguageCodeWelsh' value='1668882464'/>
+<enum name='kDVDLanguageCodeWolof' value='2003771424'/>
+<enum name='kDVDLanguageCodeXhosa' value='2020089888'/>
+<enum name='kDVDLanguageCodeYiddish' value='1785274400'/>
+<enum name='kDVDLanguageCodeYoruba' value='2037325856'/>
+<enum name='kDVDLanguageCodeZulu' value='2054496288'/>
+<enum name='kDVDLanguageNoPreference' value='707403808'/>
+<enum name='kDVDMenuAngle' value='4'/>
+<enum name='kDVDMenuAudio' value='3'/>
+<enum name='kDVDMenuNone' value='6'/>
+<enum name='kDVDMenuPTT' value='5'/>
+<enum name='kDVDMenuRoot' value='1'/>
+<enum name='kDVDMenuSubPicture' value='2'/>
+<enum name='kDVDMenuTitle' value='0'/>
+<enum name='kDVDRegionCode1' value='254'/>
+<enum name='kDVDRegionCode2' value='253'/>
+<enum name='kDVDRegionCode3' value='251'/>
+<enum name='kDVDRegionCode4' value='247'/>
+<enum name='kDVDRegionCode5' value='239'/>
+<enum name='kDVDRegionCode6' value='223'/>
+<enum name='kDVDRegionCode7' value='191'/>
+<enum name='kDVDRegionCode8' value='127'/>
+<enum name='kDVDRegionCodeUninitialized' value='255'/>
+<enum name='kDVDSTOPDomain' value='4'/>
+<enum name='kDVDScanDirectionBackward' value='1'/>
+<enum name='kDVDScanDirectionForward' value='0'/>
+<enum name='kDVDScanRate16x' value='16'/>
+<enum name='kDVDScanRate1x' value='1'/>
+<enum name='kDVDScanRate2x' value='2'/>
+<enum name='kDVDScanRate32x' value='32'/>
+<enum name='kDVDScanRate4x' value='4'/>
+<enum name='kDVDScanRate8x' value='8'/>
+<enum name='kDVDScanRateOneEigth' value='-8'/>
+<enum name='kDVDScanRateOneFourth' value='-4'/>
+<enum name='kDVDScanRateOneHalf' value='-2'/>
+<enum name='kDVDStateIdle' value='6'/>
+<enum name='kDVDStatePaused' value='3'/>
+<enum name='kDVDStatePlaying' value='1'/>
+<enum name='kDVDStatePlayingSlow' value='7'/>
+<enum name='kDVDStatePlayingStill' value='2'/>
+<enum name='kDVDStateScanning' value='5'/>
+<enum name='kDVDStateStopped' value='4'/>
+<enum name='kDVDStateUnknown' value='0'/>
+<enum name='kDVDSubpictureExtensionCodeCaption4Children' value='3'/>
+<enum name='kDVDSubpictureExtensionCodeCaptionBiggerSize' value='2'/>
+<enum name='kDVDSubpictureExtensionCodeCaptionNormalSize' value='1'/>
+<enum name='kDVDSubpictureExtensionCodeClosedCaption4Children' value='7'/>
+<enum name='kDVDSubpictureExtensionCodeClosedCaptionBiggerSize' value='6'/>
+<enum name='kDVDSubpictureExtensionCodeClosedCaptionNormalSize' value='5'/>
+<enum name='kDVDSubpictureExtensionCodeForcedCaption' value='9'/>
+<enum name='kDVDSubpictureExtensionCodeNotSpecified' value='0'/>
+<enum name='kDVDSubpictureExtensionDirectorsComment4Children' value='15'/>
+<enum name='kDVDSubpictureExtensionDirectorsCommentBiggerSize' value='14'/>
+<enum name='kDVDSubpictureExtensionDirectorsCommentNormalSize' value='13'/>
+<enum name='kDVDTTDomain' value='3'/>
+<enum name='kDVDTTGRDomain' value='6'/>
+<enum name='kDVDTimeCodeChapterDurationSeconds' value='6'/>
+<enum name='kDVDTimeCodeChapterElapsedSeconds' value='4'/>
+<enum name='kDVDTimeCodeChapterRemainingSeconds' value='5'/>
+<enum name='kDVDTimeCodeElapsedSeconds' value='1'/>
+<enum name='kDVDTimeCodeRemainingSeconds' value='2'/>
+<enum name='kDVDTimeCodeTitleDurationSeconds' value='3'/>
+<enum name='kDVDTimeCodeUninitialized' value='0'/>
+<enum name='kDVDUOPAngleChange' value='4194304'/>
+<enum name='kDVDUOPAudioStreamChange' value='1048576'/>
+<enum name='kDVDUOPBackwardScan' value='512'/>
+<enum name='kDVDUOPButton' value='131072'/>
+<enum name='kDVDUOPForwardScan' value='256'/>
+<enum name='kDVDUOPGoUp' value='16'/>
+<enum name='kDVDUOPKaraokeModeChange' value='8388608'/>
+<enum name='kDVDUOPMenuCallAngle' value='16384'/>
+<enum name='kDVDUOPMenuCallAudio' value='8192'/>
+<enum name='kDVDUOPMenuCallPTT' value='32768'/>
+<enum name='kDVDUOPMenuCallRoot' value='2048'/>
+<enum name='kDVDUOPMenuCallSubPicture' value='4096'/>
+<enum name='kDVDUOPMenuCallTitle' value='1024'/>
+<enum name='kDVDUOPNextPGSearch' value='128'/>
+<enum name='kDVDUOPPTTPlaySearch' value='2'/>
+<enum name='kDVDUOPPauseOff' value='67108864'/>
+<enum name='kDVDUOPPauseOn' value='524288'/>
+<enum name='kDVDUOPPrevTopPGSearch' value='64'/>
+<enum name='kDVDUOPResume' value='65536'/>
+<enum name='kDVDUOPScanOff' value='33554432'/>
+<enum name='kDVDUOPStillOff' value='262144'/>
+<enum name='kDVDUOPStop' value='8'/>
+<enum name='kDVDUOPSubPictureStreamChange' value='2097152'/>
+<enum name='kDVDUOPTimePTTSearch' value='32'/>
+<enum name='kDVDUOPTimePlaySearch' value='1'/>
+<enum name='kDVDUOPTitlePlay' value='4'/>
+<enum name='kDVDUOPVideoModeChange' value='16777216'/>
+<enum name='kDVDUserNavigationEnter' value='5'/>
+<enum name='kDVDUserNavigationMoveDown' value='2'/>
+<enum name='kDVDUserNavigationMoveLeft' value='3'/>
+<enum name='kDVDUserNavigationMoveRight' value='4'/>
+<enum name='kDVDUserNavigationMoveUp' value='1'/>
+<enum name='kDVDVMGMDomain' value='1'/>
+<enum name='kDVDVTSMDomain' value='2'/>
+<function name='DVDClearLastPlayBookmark'>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDCloseMediaFile'>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDCloseMediaVolume'>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDDisplaySubPicture'>
+<arg declared_type='Boolean' name='inDisplay' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDDispose'>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDDoButtonActivate'>
+<arg declared_type='SInt32' name='inIndex' type='l' type64='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDDoMenuCGClick'>
+<arg declared_type='CGPoint*' name='inPt' type='^{CGPoint=ff}' type64='^{CGPoint=dd}'/>
+<arg declared_type='SInt32*' name='outIndex' type='^i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDDoMenuCGMouseOver'>
+<arg declared_type='CGPoint*' name='inPt' type='^{CGPoint=ff}' type64='^{CGPoint=dd}'/>
+<arg declared_type='SInt32*' name='outIndex' type='^i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDDoUserNavigation'>
+<arg declared_type='DVDUserNavigation' name='inNavigation' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDEnableWebAccess'>
+<arg declared_type='Boolean' name='inEnable' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetAngle'>
+<arg declared_type='UInt16*' name='outAngleNum' type='^S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetAspectRatio'>
+<arg declared_type='DVDAspectRatio*' name='outRatio' type='^s'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetAudioLanguageCode'>
+<arg declared_type='DVDLanguageCode*' name='outCode' type='^I'/>
+<arg declared_type='DVDAudioExtensionCode*' name='outExtension' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetAudioLanguageCodeByStream'>
+<arg declared_type='UInt16' name='inStreamNum' type='S'/>
+<arg declared_type='DVDLanguageCode*' name='outCode' type='^I'/>
+<arg declared_type='DVDAudioExtensionCode*' name='outExtension' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetAudioOutputMode'>
+<arg declared_type='DVDAudioMode*' name='outMode' type='^i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetAudioOutputModeCapabilities'>
+<arg declared_type='DVDAudioMode*' name='outModes' type='^i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetAudioStream'>
+<arg declared_type='UInt16*' name='outStreamNum' type='^S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetAudioStreamFormat'>
+<arg declared_type='DVDAudioFormat*' name='outFormat' type='^s'/>
+<arg declared_type='UInt32*' name='outBitsPerSample' type='^I'/>
+<arg declared_type='UInt32*' name='outSamplesPerSecond' type='^I'/>
+<arg declared_type='UInt32*' name='outChannels' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetAudioStreamFormatByStream'>
+<arg declared_type='UInt32' name='inStreamNum' type='L' type64='I'/>
+<arg declared_type='DVDAudioFormat*' name='outFormat' type='^s'/>
+<arg declared_type='UInt32*' name='outBitsPerSample' type='^I'/>
+<arg declared_type='UInt32*' name='outSamplesPerSecond' type='^I'/>
+<arg declared_type='UInt32*' name='outChannels' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetAudioVolume'>
+<arg declared_type='UInt16*' name='outVolume' type='^S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetAudioVolumeInfo'>
+<arg declared_type='UInt16*' name='outMinVolume' type='^S'/>
+<arg declared_type='UInt16*' name='outCurVolume' type='^S'/>
+<arg declared_type='UInt16*' name='outMaxVolume' type='^S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetBookmark'>
+<arg declared_type='void*' name='outBookMarkData' type='^v'/>
+<arg declared_type='UInt32*' name='ioBookMarkDataSize' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetButtonPosition'>
+<arg declared_type='UInt32' name='index' type='L' type64='I'/>
+<arg declared_type='CGRect*' name='outRect' type='^{CGRect={CGPoint=ff}{CGSize=ff}}' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='UInt32*' name='autoAction' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetButtoninfo'>
+<arg declared_type='UInt32*' name='numberOfButtons' type='^I'/>
+<arg declared_type='UInt32*' name='selectedButton' type='^I'/>
+<arg declared_type='UInt32*' name='forcedActivateButton' type='^I'/>
+<arg declared_type='UInt32*' name='userButtonOffset' type='^I'/>
+<arg declared_type='UInt32*' name='numberOfUserButtons' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetChapter'>
+<arg declared_type='UInt16*' name='outChapterNum' type='^S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetDiscRegionCode'>
+<arg declared_type='DVDRegionCode*' name='outCode' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetDriveRegionCode'>
+<arg declared_type='DVDRegionCode*' name='outCode' type='^I'/>
+<arg declared_type='SInt16*' name='outNumberChangesLeft' type='^s'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetFormatStandard'>
+<arg declared_type='DVDFormat*' name='outFormat' type='^s'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetGPRMValue'>
+<arg declared_type='UInt32' name='index' type='L' type64='I'/>
+<arg declared_type='UInt32*' name='value' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetLastPlayBookmark'>
+<arg declared_type='void*' name='outBookMarkData' type='^v'/>
+<arg declared_type='UInt32*' name='ioBookMarkDataSize' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetMediaUniqueID'>
+<arg declared_type='UInt8*' name='outDiscID' type='*'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetMediaVolumeCFName'>
+<arg declared_type='CFStringRef*' name='outDiscVolumeCFName' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetMediaVolumeName'>
+<arg declared_type='char**' name='outDiscVolumeName' type='^*'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetMenuLanguageCode'>
+<arg declared_type='DVDLanguageCode*' name='outCode' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetNativeVideoSize'>
+<arg declared_type='UInt16*' name='outWidth' type='^S'/>
+<arg declared_type='UInt16*' name='outHeight' type='^S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetNumAngles'>
+<arg declared_type='UInt16*' name='outNumAngles' type='^S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetNumAudioStreams'>
+<arg declared_type='UInt16*' name='outNumStreams' type='^S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetNumChapters'>
+<arg declared_type='UInt16' name='inTitleNum' type='S'/>
+<arg declared_type='UInt16*' name='outNumChapters' type='^S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetNumSubPictureStreams'>
+<arg declared_type='UInt16*' name='outNumStreams' type='^S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetNumTitles'>
+<arg declared_type='UInt16*' name='outNumTitles' type='^S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetSPDIFDataOutDevice'>
+<arg declared_type='UInt32*' name='outIndex' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetSPDIFDataOutDeviceCFName'>
+<arg declared_type='UInt32' name='inIndex' type='L' type64='I'/>
+<arg declared_type='CFStringRef*' name='outName' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetSPDIFDataOutDeviceCount'>
+<arg declared_type='UInt32*' name='outCount' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetScanRate'>
+<arg declared_type='DVDScanRate*' name='outRate' type='^s'/>
+<arg declared_type='DVDScanDirection*' name='outDirection' type='*'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetState'>
+<arg declared_type='DVDState*' name='outState' type='^i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetSubPictureLanguageCode'>
+<arg declared_type='DVDLanguageCode*' name='outCode' type='^I'/>
+<arg declared_type='DVDSubpictureExtensionCode*' name='outExtension' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetSubPictureLanguageCodeByStream'>
+<arg declared_type='UInt16' name='inStreamNum' type='S'/>
+<arg declared_type='DVDLanguageCode*' name='outCode' type='^I'/>
+<arg declared_type='DVDSubpictureExtensionCode*' name='outExtension' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetSubPictureStream'>
+<arg declared_type='UInt16*' name='outStreamNum' type='^S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetTime'>
+<arg declared_type='DVDTimeCode' name='inTimeCode' type='s'/>
+<arg declared_type='DVDTimePosition*' name='outTime' type='^I'/>
+<arg declared_type='UInt16*' name='outFrames' type='^S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetTimeEventRate'>
+<arg declared_type='UInt32*' name='outMilliseconds' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetTitle'>
+<arg declared_type='UInt16*' name='outTitleNum' type='^S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetVideoCGBounds'>
+<arg declared_type='CGRect*' name='outRect' type='^{CGRect={CGPoint=ff}{CGSize=ff}}' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetVideoDisplay'>
+<arg declared_type='CGDirectDisplayID*' name='outDisplay' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetVideoWindowID'>
+<arg declared_type='UInt32*' name='outVidWindowID' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGetVideoWindowRef'>
+<arg declared_type='WindowRef*' name='outWindowRef' type='^^{OpaqueWindowPtr}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGoBackOneLevel'>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGoToMenu'>
+<arg declared_type='DVDMenu' name='inMenu' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDGotoBookmark'>
+<arg declared_type='void*' name='inBookMarkData' type='^v'/>
+<arg declared_type='UInt32' name='inBookMarkDataSize' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDHasMedia'>
+<arg declared_type='Boolean*' name='outHasMedia' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDHasMenu'>
+<arg declared_type='DVDMenu' name='inMenu' type='L' type64='I'/>
+<arg declared_type='Boolean*' name='outHasMenu' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDHasNextChapter'>
+<arg declared_type='Boolean*' name='outHasChapter' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDHasPreviousChapter'>
+<arg declared_type='Boolean*' name='outHasChapter' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDIdle'>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDInitialize'>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDIsDisplayingSubPicture'>
+<arg declared_type='Boolean*' name='outDisplayingSubPicture' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDIsMuted'>
+<arg declared_type='Boolean*' name='outIsMuted' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDIsOnMenu'>
+<arg declared_type='Boolean*' name='outOnMenu' type='^B'/>
+<arg declared_type='DVDMenu*' name='outMenu' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDIsPaused'>
+<arg declared_type='Boolean*' name='outIsPaused' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDIsPlaying'>
+<arg declared_type='Boolean*' name='outIsPlaying' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDIsRegisteredEventCallBack'>
+<arg declared_type='DVDEventCallBackRef' name='inCallBackID' type='@'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='DVDIsSupportedDisplay'>
+<arg declared_type='CGDirectDisplayID' name='inDisplay' type='I'/>
+<arg declared_type='Boolean*' name='outSupported' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDIsValidMediaRef'>
+<arg declared_type='FSRef*' name='inRef' type='^{FSRef=[80C]}'/>
+<arg declared_type='Boolean*' name='outIsValid' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDIsValidMediaURL'>
+<arg declared_type='CFURLRef' name='inRef' type='^{__CFURL=}'/>
+<arg declared_type='Boolean*' name='outIsValid' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDMute'>
+<arg declared_type='Boolean' name='inMute' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDNextChapter'>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDOpenMediaFile'>
+<arg declared_type='FSRef*' name='inFile' type='^{FSRef=[80C]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDOpenMediaFileWithURL'>
+<arg declared_type='CFURLRef' name='inFile' type='^{__CFURL=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDOpenMediaVolume'>
+<arg declared_type='FSRef*' name='inVolume' type='^{FSRef=[80C]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDOpenMediaVolumeWithURL'>
+<arg declared_type='CFURLRef' name='inVolume' type='^{__CFURL=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDPause'>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDPlay'>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDPreviousChapter'>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDRegisterEventCallBack'>
+<arg declared_type='DVDEventCallBackFunctionPtr' function_pointer='true' name='inCallBackProc' type='^?'>
+<arg declared_type='DVDEventCode' type='L' type64='I'/>
+<arg declared_type='DVDEventValue' type='L' type64='Q'/>
+<arg declared_type='DVDEventValue' type='L' type64='Q'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='DVDEventCode*' name='inCode' type='^I'/>
+<arg declared_type='UInt32' name='inCodeCount' type='L' type64='I'/>
+<arg declared_type='void*' name='inRefCon' type='^v'/>
+<arg declared_type='DVDEventCallBackRef*' name='outCallBackID' type='^^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDResume'>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDReturnToTitle'>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDScan'>
+<arg declared_type='DVDScanRate' name='inRate' type='s'/>
+<arg declared_type='DVDScanDirection' name='inDirection' type='c'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetAngle'>
+<arg declared_type='UInt16' name='inAngleNum' type='S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetAspectRatio'>
+<arg declared_type='DVDAspectRatio' name='inRatio' type='s'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetAudioOutputMode'>
+<arg declared_type='DVDAudioMode' name='inMode' type='l' type64='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetAudioStream'>
+<arg declared_type='UInt16' name='inStreamNum' type='S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetAudioVolume'>
+<arg declared_type='UInt16' name='inVolume' type='S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetChapter'>
+<arg declared_type='UInt16' name='inChapterNum' type='S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetDefaultAudioLanguageCode'>
+<arg declared_type='DVDLanguageCode' name='inCode' type='L' type64='I'/>
+<arg declared_type='DVDAudioExtensionCode' name='inExtension' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetDefaultMenuLanguageCode'>
+<arg declared_type='DVDLanguageCode' name='inCode' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetDefaultSubPictureLanguageCode'>
+<arg declared_type='DVDLanguageCode' name='inCode' type='L' type64='I'/>
+<arg declared_type='DVDSubpictureExtensionCode' name='inExtension' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetDriveRegionCode'>
+<arg declared_type='DVDRegionCode' name='inCode' type='L' type64='I'/>
+<arg declared_type='AuthorizationRef' name='inAuthorization' type='^{AuthorizationOpaqueRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetFatalErrorCallBack'>
+<arg declared_type='DVDFatalErrCallBackFunctionPtr' function_pointer='true' name='inCallBackProc' type='^?'>
+<arg declared_type='DVDErrorCode' type='l' type64='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='void*' name='inRefCon' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetLastPlayBookmark'>
+<arg declared_type='void*' name='inBookMarkData' type='^v'/>
+<arg declared_type='UInt32' name='inBookMarkDataSize' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetSPDIFDataOutDevice'>
+<arg declared_type='UInt32' name='inIndex' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetSubPictureStream'>
+<arg declared_type='UInt16' name='inStreamNum' type='S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetTime'>
+<arg declared_type='DVDTimeCode' name='inTimeCode' type='s'/>
+<arg declared_type='DVDTimePosition' name='inTime' type='L' type64='I'/>
+<arg declared_type='UInt16' name='inFrames' type='S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetTimeEventRate'>
+<arg declared_type='UInt32' name='inMilliseconds' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetTitle'>
+<arg declared_type='UInt16' name='inTitleNum' type='S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetVideoCGBounds'>
+<arg declared_type='CGRect*' name='inRect' type='^{CGRect={CGPoint=ff}{CGSize=ff}}' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetVideoDisplay'>
+<arg declared_type='CGDirectDisplayID' name='inDisplay' type='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetVideoWindowID'>
+<arg declared_type='UInt32' name='inVidWindowID' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSetVideoWindowRef'>
+<arg declared_type='WindowRef' name='inWindowRef' type='^{OpaqueWindowPtr=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSleep'>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDStepFrame'>
+<arg declared_type='DVDScanDirection' name='inDirection' type='c'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDStop'>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDSwitchToDisplay'>
+<arg declared_type='CGDirectDisplayID' name='newDisplay' type='I'/>
+<arg declared_type='Boolean*' name='outSupported' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDUnregisterEventCallBack'>
+<arg declared_type='DVDEventCallBackRef' name='inCallBackID' type='@'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDUpdateVideo'>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DVDWakeUp'>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+</signatures>

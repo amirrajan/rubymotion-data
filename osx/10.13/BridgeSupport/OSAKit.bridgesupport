@@ -1,0 +1,363 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/Carbon.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAScriptErrorAppAddressKey' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAScriptErrorAppName' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAScriptErrorAppNameKey' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAScriptErrorBriefMessage' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAScriptErrorBriefMessageKey' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAScriptErrorExpectedTypeKey' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAScriptErrorMessage' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAScriptErrorMessageKey' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAScriptErrorNumber' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAScriptErrorNumberKey' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAScriptErrorOffendingObjectKey' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAScriptErrorPartialResultKey' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAScriptErrorRange' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAScriptErrorRangeKey' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAStorageApplicationBundleType' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAStorageApplicationType' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAStorageScriptBundleType' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAStorageScriptType' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='OSAStorageTextType' type='@'/>
+<enum name='OSACompileIntoContext' value='2'/>
+<enum name='OSADontSetScriptLocation' value='16777216'/>
+<enum name='OSANull' value='0'/>
+<enum name='OSAPreventGetSource' value='1'/>
+<enum name='OSAScriptRecording' value='2'/>
+<enum name='OSAScriptRunning' value='1'/>
+<enum name='OSAScriptStopped' value='0'/>
+<enum name='OSAShowStartupScreen' value='536870912'/>
+<enum name='OSAStayOpenApplet' value='268435456'/>
+<enum name='OSASupportsAECoercion' value='8'/>
+<enum name='OSASupportsAESending' value='16'/>
+<enum name='OSASupportsCompiling' value='2'/>
+<enum name='OSASupportsConvenience' value='64'/>
+<enum name='OSASupportsDialects' value='128'/>
+<enum name='OSASupportsEventHandling' value='256'/>
+<enum name='OSASupportsGetSource' value='4'/>
+<enum name='OSASupportsRecording' value='32'/>
+<class name='OSALanguage'>
+<method class_method='true' selector='availableLanguages'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='componentInstance'>
+<retval declared_type='ComponentInstance _Nonnull' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+</method>
+<method class_method='true' selector='defaultLanguage'>
+<retval declared_type='OSALanguage * _Nullable' type='@'/>
+</method>
+<method selector='features'>
+<retval declared_type='OSALanguageFeatures' type='I' type64='Q'/>
+</method>
+<method selector='info'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='initWithComponent:'>
+<arg declared_type='Component _Nonnull' index='0' name='component' type='^{ComponentRecord=[1l]}' type64='^{ComponentRecord=[1q]}'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='isThreadSafe'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='languageForName:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='name' type='@'/>
+<retval declared_type='OSALanguage * _Nullable' type='@'/>
+</method>
+<method class_method='true' selector='languageForScriptDataDescriptor:'>
+<arg declared_type='NSAppleEventDescriptor * _Nonnull' index='0' name='descriptor' type='@'/>
+<retval declared_type='OSALanguage * _Nullable' type='@'/>
+</method>
+<method selector='manufacturer'>
+<retval declared_type='OSType' type='L' type64='I'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method class_method='true' selector='setDefaultLanguage:'>
+<arg declared_type='OSALanguage * _Nonnull' index='0' name='defaultLanguage' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sharedLanguageInstance'>
+<retval declared_type='OSALanguageInstance * _Nonnull' type='@'/>
+</method>
+<method selector='subType'>
+<retval declared_type='OSType' type='L' type64='I'/>
+</method>
+<method selector='type'>
+<retval declared_type='OSType' type='L' type64='I'/>
+</method>
+<method selector='version'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+</class>
+<class name='OSALanguageInstance'>
+<method selector='componentInstance'>
+<retval declared_type='ComponentInstance _Nonnull' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+</method>
+<method selector='defaultTarget'>
+<retval declared_type='NSAppleEventDescriptor * _Nullable' type='@'/>
+</method>
+<method selector='initWithLanguage:'>
+<arg declared_type='OSALanguage * _Nonnull' index='0' name='language' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='language'>
+<retval declared_type='OSALanguage * _Nonnull' type='@'/>
+</method>
+<method class_method='true' selector='languageInstanceWithLanguage:'>
+<arg declared_type='OSALanguage * _Nonnull' index='0' name='language' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='richTextFromDescriptor:'>
+<arg declared_type='NSAppleEventDescriptor * _Nonnull' index='0' name='descriptor' type='@'/>
+<retval declared_type='NSAttributedString * _Nullable' type='@'/>
+</method>
+<method selector='setDefaultTarget:'>
+<arg declared_type='NSAppleEventDescriptor * _Nullable' index='0' name='defaultTarget' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='OSAScript'>
+<method selector='compileAndReturnError:'>
+<arg declared_type='NSDictionary * _Nullable * _Nullable' index='0' name='errorInfo' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='compiledDataForType:usingStorageOptions:error:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='type' type='@'/>
+<arg declared_type='OSAStorageOptions' index='1' name='storageOptions' type='I' type64='Q'/>
+<arg declared_type='NSDictionary * _Nullable * _Nullable' index='2' name='errorInfo' type='^@'/>
+<retval declared_type='NSData * _Nullable' type='@'/>
+</method>
+<method selector='executeAndReturnDisplayValue:error:'>
+<arg declared_type='NSAttributedString * _Nullable * _Nonnull' index='0' name='displayValue' type='^@'/>
+<arg declared_type='NSDictionary * _Nullable * _Nullable' index='1' name='errorInfo' type='^@'/>
+<retval declared_type='NSAppleEventDescriptor * _Nullable' type='@'/>
+</method>
+<method selector='executeAndReturnError:'>
+<arg declared_type='NSDictionary * _Nullable * _Nullable' index='0' name='errorInfo' type='^@'/>
+<retval declared_type='NSAppleEventDescriptor * _Nullable' type='@'/>
+</method>
+<method selector='executeAppleEvent:error:'>
+<arg declared_type='NSAppleEventDescriptor * _Nonnull' index='0' name='event' type='@'/>
+<arg declared_type='NSDictionary * _Nullable * _Nullable' index='1' name='errorInfo' type='^@'/>
+<retval declared_type='NSAppleEventDescriptor * _Nullable' type='@'/>
+</method>
+<method selector='executeHandlerWithName:arguments:error:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='name' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='arguments' type='@'/>
+<arg declared_type='NSDictionary * _Nullable * _Nullable' index='2' name='errorInfo' type='^@'/>
+<retval declared_type='NSAppleEventDescriptor * _Nullable' type='@'/>
+</method>
+<method selector='initWithCompiledData:error:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='data' type='@'/>
+<arg declared_type='NSDictionary * _Nullable * _Nullable' index='1' name='errorInfo' type='^@'/>
+<retval declared_type='id _Nonnull' type='@'/>
+</method>
+<method selector='initWithCompiledData:fromURL:usingStorageOptions:error:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='data' type='@'/>
+<arg declared_type='NSURL * _Nullable' index='1' name='url' type='@'/>
+<arg declared_type='OSAStorageOptions' index='2' name='storageOptions' type='I' type64='Q'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='3' name='errorInfo' type='^@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='initWithContentsOfURL:error:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='url' type='@'/>
+<arg declared_type='NSDictionary * _Nullable * _Nullable' index='1' name='errorInfo' type='^@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='initWithContentsOfURL:language:error:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='url' type='@'/>
+<arg declared_type='OSALanguage * _Nonnull' index='1' name='language' type='@'/>
+<arg declared_type='NSDictionary * _Nullable * _Nullable' index='2' name='errorInfo' type='^@'/>
+<retval declared_type='id _Nonnull' type='@'/>
+</method>
+<method selector='initWithContentsOfURL:languageInstance:usingStorageOptions:error:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='url' type='@'/>
+<arg declared_type='OSALanguageInstance * _Nullable' index='1' name='instance' type='@'/>
+<arg declared_type='OSAStorageOptions' index='2' name='storageOptions' type='I' type64='Q'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='3' name='errorInfo' type='^@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='initWithScriptDataDescriptor:fromURL:languageInstance:usingStorageOptions:error:'>
+<arg declared_type='NSAppleEventDescriptor * _Nonnull' index='0' name='data' type='@'/>
+<arg declared_type='NSURL * _Nullable' index='1' name='url' type='@'/>
+<arg declared_type='OSALanguageInstance * _Nullable' index='2' name='instance' type='@'/>
+<arg declared_type='OSAStorageOptions' index='3' name='storageOptions' type='I' type64='Q'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='4' name='errorInfo' type='^@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='initWithSource:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='source' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithSource:fromURL:languageInstance:usingStorageOptions:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='source' type='@'/>
+<arg declared_type='NSURL * _Nullable' index='1' name='url' type='@'/>
+<arg declared_type='OSALanguageInstance * _Nullable' index='2' name='instance' type='@'/>
+<arg declared_type='OSAStorageOptions' index='3' name='storageOptions' type='I' type64='Q'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithSource:language:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='source' type='@'/>
+<arg declared_type='OSALanguage * _Nullable' index='1' name='language' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='isCompiled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='language'>
+<retval declared_type='OSALanguage * _Nonnull' type='@'/>
+</method>
+<method selector='languageInstance'>
+<retval declared_type='OSALanguageInstance * _Nonnull' type='@'/>
+</method>
+<method selector='richTextFromDescriptor:'>
+<arg declared_type='NSAppleEventDescriptor * _Nonnull' index='0' name='descriptor' type='@'/>
+<retval declared_type='NSAttributedString * _Nullable' type='@'/>
+</method>
+<method selector='richTextSource'>
+<retval declared_type='NSAttributedString * _Nullable' type='@'/>
+</method>
+<method class_method='true' selector='scriptDataDescriptorWithContentsOfURL:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='url' type='@'/>
+<retval declared_type='NSAppleEventDescriptor * _Nullable' type='@'/>
+</method>
+<method selector='setLanguage:'>
+<arg declared_type='OSALanguage * _Nonnull' index='0' name='language' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLanguageInstance:'>
+<arg declared_type='OSALanguageInstance * _Nonnull' index='0' name='languageInstance' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='source'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='url'>
+<retval declared_type='NSURL * _Nullable' type='@'/>
+</method>
+<method selector='writeToURL:ofType:error:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='url' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='type' type='@'/>
+<arg declared_type='NSDictionary * _Nullable * _Nullable' index='2' name='errorInfo' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='writeToURL:ofType:usingStorageOptions:error:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='url' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='type' type='@'/>
+<arg declared_type='OSAStorageOptions' index='2' name='storageOptions' type='I' type64='Q'/>
+<arg declared_type='NSDictionary * _Nullable * _Nullable' index='3' name='errorInfo' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='OSAScriptController'>
+<method selector='compileScript:'>
+<arg declared_type='id _Nullable' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='isCompiling'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='language'>
+<retval declared_type='OSALanguage * _Nullable' type='@'/>
+</method>
+<method selector='recordScript:'>
+<arg declared_type='id _Nullable' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='resultView'>
+<retval declared_type='NSTextView * _Nullable' type='@'/>
+</method>
+<method selector='runScript:'>
+<arg declared_type='id _Nullable' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='script'>
+<retval declared_type='OSAScript * _Nullable' type='@'/>
+</method>
+<method selector='scriptState'>
+<retval declared_type='OSAScriptState' type='i' type64='q'/>
+</method>
+<method selector='scriptView'>
+<retval declared_type='OSAScriptView * _Nullable' type='@'/>
+</method>
+<method selector='setLanguage:'>
+<arg declared_type='OSALanguage * _Nullable' index='0' name='language' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setResultView:'>
+<arg declared_type='NSTextView * _Nullable' index='0' name='resultView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setScript:'>
+<arg declared_type='OSAScript * _Nullable' index='0' name='script' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setScriptView:'>
+<arg declared_type='OSAScriptView * _Nullable' index='0' name='scriptView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stopScript:'>
+<arg declared_type='id _Nullable' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='OSAScriptView'>
+<method selector='indentWidth'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='indentsWrappedLines'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setIndentWidth:'>
+<arg declared_type='NSUInteger' index='0' name='indentWidth' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setIndentsWrappedLines:'>
+<arg declared_type='BOOL' index='0' name='indentsWrappedLines' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSource:'>
+<arg declared_type='NSString * _Nullable' index='0' name='source' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTabWidth:'>
+<arg declared_type='NSUInteger' index='0' name='tabWidth' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUsesScriptAssistant:'>
+<arg declared_type='BOOL' index='0' name='usesScriptAssistant' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUsesTabs:'>
+<arg declared_type='BOOL' index='0' name='usesTabs' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWrapsLines:'>
+<arg declared_type='BOOL' index='0' name='wrapsLines' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='source'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='tabWidth'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='usesScriptAssistant'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='usesTabs'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='wrapsLines'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+</signatures>

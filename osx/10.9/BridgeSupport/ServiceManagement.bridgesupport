@@ -1,0 +1,59 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<constant const='true' declared_type='CFStringRef' name='kSMDomainSystemLaunchd' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kSMDomainUserLaunchd' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kSMErrorDomainFramework' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kSMErrorDomainIPC' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kSMErrorDomainLaunchd' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kSMInfoKeyAuthorizedClients' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kSMInfoKeyPrivilegedExecutables' type='^{__CFString=}'/>
+<string_constant name='kSMRightBlessPrivilegedHelper' value='com.apple.ServiceManagement.blesshelper'/>
+<string_constant name='kSMRightModifySystemDaemons' value='com.apple.ServiceManagement.daemons.modify'/>
+<enum name='kSMErrorAuthorizationFailure' value='4'/>
+<enum name='kSMErrorInternalFailure' value='2'/>
+<enum name='kSMErrorInvalidSignature' value='3'/>
+<enum name='kSMErrorJobMustBeEnabled' value='9'/>
+<enum name='kSMErrorJobNotFound' value='6'/>
+<enum name='kSMErrorJobPlistNotFound' value='8'/>
+<enum name='kSMErrorServiceUnavailable' value='7'/>
+<enum name='kSMErrorToolNotValid' value='5'/>
+<function name='SMCopyAllJobDictionaries'>
+<arg declared_type='CFStringRef' name='domain' type='^{__CFString=}'/>
+<retval already_retained='true' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+</function>
+<function name='SMJobBless'>
+<arg declared_type='CFStringRef' name='domain' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef' name='executableLabel' type='^{__CFString=}'/>
+<arg declared_type='AuthorizationRef' name='auth' type='^{AuthorizationOpaqueRef=}'/>
+<arg declared_type='CFErrorRef*' name='outError' type='^^{__CFError}'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='SMJobCopyDictionary'>
+<arg declared_type='CFStringRef' name='domain' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef' name='jobLabel' type='^{__CFString=}'/>
+<retval already_retained='true' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+</function>
+<function name='SMJobRemove'>
+<arg declared_type='CFStringRef' name='domain' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef' name='jobLabel' type='^{__CFString=}'/>
+<arg declared_type='AuthorizationRef' name='auth' type='^{AuthorizationOpaqueRef=}'/>
+<arg declared_type='Boolean' name='wait' type='B'/>
+<arg declared_type='CFErrorRef*' name='outError' type='^^{__CFError}'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='SMJobSubmit'>
+<arg declared_type='CFStringRef' name='domain' type='^{__CFString=}'/>
+<arg declared_type='CFDictionaryRef' name='job' type='^{__CFDictionary=}'/>
+<arg declared_type='AuthorizationRef' name='auth' type='^{AuthorizationOpaqueRef=}'/>
+<arg declared_type='CFErrorRef*' name='outError' type='^^{__CFError}'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='SMLoginItemSetEnabled'>
+<arg declared_type='CFStringRef' name='identifier' type='^{__CFString=}'/>
+<arg declared_type='Boolean' name='enabled' type='B'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+</signatures>

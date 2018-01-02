@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/VideoToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+<cftype name='VDADecoder' type='^{OpaqueVDADecoder=}'/>
+<constant const='true' declared_type='CFStringRef' name='kVDADecoderConfiguration_Height' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kVDADecoderConfiguration_SourceFormat' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kVDADecoderConfiguration_Width' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kVDADecoderConfiguration_avcCData' type='^{__CFString=}'/>
+<enum name='kVDADecoderConfigurationError' value='-12472'/>
+<enum name='kVDADecoderDecodeFlags_DontEmitFrame' value='1'/>
+<enum name='kVDADecoderDecoderFailedErr' value='-12473'/>
+<enum name='kVDADecoderFlush_EmitFrames' value='1'/>
+<enum name='kVDADecoderFormatNotSupportedErr' value='-12471'/>
+<enum name='kVDADecoderHardwareNotSupportedErr' value='-12470'/>
+<enum name='kVDADecoderNoErr' value='0'/>
+<function name='VDADecoderCreate'>
+<arg declared_type='CFDictionaryRef' name='decoderConfiguration' type='^{__CFDictionary=}'/>
+<arg declared_type='CFDictionaryRef' name='destinationImageBufferAttributes' type='^{__CFDictionary=}'/>
+<arg declared_type='VDADecoderOutputCallback*' name='outputCallback' type='^^?'/>
+<arg declared_type='void*' name='decoderOutputCallbackRefcon' type='^v'/>
+<arg declared_type='VDADecoder*' name='decoderOut' type='^^{OpaqueVDADecoder}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='VDADecoderDecode'>
+<arg declared_type='VDADecoder' name='decoder' type='^{OpaqueVDADecoder=}'/>
+<arg declared_type='uint32_t' name='decodeFlags' type='I'/>
+<arg declared_type='CFTypeRef' name='compressedBuffer' type='@'/>
+<arg declared_type='CFDictionaryRef' name='frameInfo' type='^{__CFDictionary=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='VDADecoderDestroy'>
+<arg declared_type='VDADecoder' name='decoder' type='^{OpaqueVDADecoder=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='VDADecoderFlush'>
+<arg declared_type='VDADecoder' name='decoder' type='^{OpaqueVDADecoder=}'/>
+<arg declared_type='uint32_t' name='flushFlags' type='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+</signatures>

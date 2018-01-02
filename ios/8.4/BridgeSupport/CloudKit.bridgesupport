@@ -1,0 +1,1314 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreLocation.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<constant const='true' declared_type='NSString*' name='CKErrorDomain' type='@'/>
+<constant const='true' declared_type='NSString*' name='CKErrorRetryAfterKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='CKOwnerDefaultName' type='@'/>
+<constant const='true' declared_type='NSString*' name='CKPartialErrorsByItemIDKey' type='@'/>
+<constant const='true' declared_type='NSUInteger' name='CKQueryOperationMaximumResults' type='I' type64='Q'/>
+<constant const='true' declared_type='NSString*' name='CKRecordChangedErrorAncestorRecordKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='CKRecordChangedErrorClientRecordKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='CKRecordChangedErrorServerRecordKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='CKRecordTypeUserRecord' type='@'/>
+<constant const='true' declared_type='NSString*' name='CKRecordZoneDefaultName' type='@'/>
+<enum name='CKAccountStatusAvailable' value='1'/>
+<enum name='CKAccountStatusCouldNotDetermine' value='0'/>
+<enum name='CKAccountStatusNoAccount' value='3'/>
+<enum name='CKAccountStatusRestricted' value='2'/>
+<enum name='CKApplicationPermissionStatusCouldNotComplete' value='1'/>
+<enum name='CKApplicationPermissionStatusDenied' value='2'/>
+<enum name='CKApplicationPermissionStatusGranted' value='3'/>
+<enum name='CKApplicationPermissionStatusInitialState' value='0'/>
+<enum name='CKApplicationPermissionUserDiscoverability' value='1'/>
+<enum name='CKErrorAssetFileModified' value='17'/>
+<enum name='CKErrorAssetFileNotFound' value='16'/>
+<enum name='CKErrorBadContainer' value='5'/>
+<enum name='CKErrorBadDatabase' value='24'/>
+<enum name='CKErrorBatchRequestFailed' value='22'/>
+<enum name='CKErrorChangeTokenExpired' value='21'/>
+<enum name='CKErrorConstraintViolation' value='19'/>
+<enum name='CKErrorIncompatibleVersion' value='18'/>
+<enum name='CKErrorInternalError' value='1'/>
+<enum name='CKErrorInvalidArguments' value='12'/>
+<enum name='CKErrorLimitExceeded' value='27'/>
+<enum name='CKErrorMissingEntitlement' value='8'/>
+<enum name='CKErrorNetworkFailure' value='4'/>
+<enum name='CKErrorNetworkUnavailable' value='3'/>
+<enum name='CKErrorNotAuthenticated' value='9'/>
+<enum name='CKErrorOperationCancelled' value='20'/>
+<enum name='CKErrorPartialFailure' value='2'/>
+<enum name='CKErrorPermissionFailure' value='10'/>
+<enum name='CKErrorQuotaExceeded' value='25'/>
+<enum name='CKErrorRequestRateLimited' value='7'/>
+<enum name='CKErrorResultsTruncated' value='13'/>
+<enum name='CKErrorServerRecordChanged' value='14'/>
+<enum name='CKErrorServerRejectedRequest' value='15'/>
+<enum name='CKErrorServiceUnavailable' value='6'/>
+<enum name='CKErrorUnknownItem' value='11'/>
+<enum name='CKErrorUserDeletedZone' value='28'/>
+<enum name='CKErrorZoneBusy' value='23'/>
+<enum name='CKErrorZoneNotFound' value='26'/>
+<enum name='CKNotificationTypeQuery' value='1'/>
+<enum name='CKNotificationTypeReadNotification' value='3'/>
+<enum name='CKNotificationTypeRecordZone' value='2'/>
+<enum name='CKQueryNotificationReasonRecordCreated' value='1'/>
+<enum name='CKQueryNotificationReasonRecordDeleted' value='3'/>
+<enum name='CKQueryNotificationReasonRecordUpdated' value='2'/>
+<enum name='CKRecordSaveAllKeys' value='2'/>
+<enum name='CKRecordSaveChangedKeys' value='1'/>
+<enum name='CKRecordSaveIfServerRecordUnchanged' value='0'/>
+<enum name='CKRecordZoneCapabilityAtomic' value='2'/>
+<enum name='CKRecordZoneCapabilityFetchChanges' value='1'/>
+<enum name='CKReferenceActionDeleteSelf' value='1'/>
+<enum name='CKReferenceActionNone' value='0'/>
+<enum name='CKSubscriptionOptionsFiresOnRecordCreation' value='1'/>
+<enum name='CKSubscriptionOptionsFiresOnRecordDeletion' value='4'/>
+<enum name='CKSubscriptionOptionsFiresOnRecordUpdate' value='2'/>
+<enum name='CKSubscriptionOptionsFiresOnce' value='8'/>
+<enum name='CKSubscriptionTypeQuery' value='1'/>
+<enum name='CKSubscriptionTypeRecordZone' value='2'/>
+<class name='CKAsset'>
+<method selector='fileURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='initWithFileURL:'>
+<arg declared_type='NSURL*' index='0' name='fileURL' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+</class>
+<class name='CKContainer'>
+<method selector='accountStatusWithCompletionHandler:'>
+<arg declared_type='void (^)(CKAccountStatus, NSError *)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='CKAccountStatus' type='i' type64='q'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addOperation:'>
+<arg declared_type='CKOperation*' index='0' name='operation' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='containerIdentifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='containerWithIdentifier:'>
+<arg declared_type='NSString*' index='0' name='containerIdentifier' type='@'/>
+<retval declared_type='CKContainer*' type='@'/>
+</method>
+<method class_method='true' selector='defaultContainer'>
+<retval declared_type='CKContainer*' type='@'/>
+</method>
+<method selector='discoverAllContactUserInfosWithCompletionHandler:'>
+<arg declared_type='void (^)(NSArray *, NSError *)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='discoverUserInfoWithEmailAddress:completionHandler:'>
+<arg declared_type='NSString*' index='0' name='email' type='@'/>
+<arg declared_type='void (^)(CKDiscoveredUserInfo *, NSError *)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='CKDiscoveredUserInfo*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='discoverUserInfoWithUserRecordID:completionHandler:'>
+<arg declared_type='CKRecordID*' index='0' name='userRecordID' type='@'/>
+<arg declared_type='void (^)(CKDiscoveredUserInfo *, NSError *)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='CKDiscoveredUserInfo*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='fetchUserRecordIDWithCompletionHandler:'>
+<arg declared_type='void (^)(CKRecordID *, NSError *)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='CKRecordID*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='privateCloudDatabase'>
+<retval declared_type='CKDatabase*' type='@'/>
+</method>
+<method selector='publicCloudDatabase'>
+<retval declared_type='CKDatabase*' type='@'/>
+</method>
+<method selector='requestApplicationPermission:completionHandler:'>
+<arg declared_type='CKApplicationPermissions' index='0' name='applicationPermission' type='I' type64='Q'/>
+<arg declared_type='CKApplicationPermissionBlock' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='CKApplicationPermissionStatus' type='i' type64='q'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='statusForApplicationPermission:completionHandler:'>
+<arg declared_type='CKApplicationPermissions' index='0' name='applicationPermission' type='I' type64='Q'/>
+<arg declared_type='CKApplicationPermissionBlock' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='CKApplicationPermissionStatus' type='i' type64='q'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CKDatabase'>
+<method selector='addOperation:'>
+<arg declared_type='CKDatabaseOperation*' index='0' name='operation' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='deleteRecordWithID:completionHandler:'>
+<arg declared_type='CKRecordID*' index='0' name='recordID' type='@'/>
+<arg declared_type='void (^)(CKRecordID *, NSError *)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='CKRecordID*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='deleteRecordZoneWithID:completionHandler:'>
+<arg declared_type='CKRecordZoneID*' index='0' name='zoneID' type='@'/>
+<arg declared_type='void (^)(CKRecordZoneID *, NSError *)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='CKRecordZoneID*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='deleteSubscriptionWithID:completionHandler:'>
+<arg declared_type='NSString*' index='0' name='subscriptionID' type='@'/>
+<arg declared_type='void (^)(NSString *, NSError *)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSString*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='fetchAllRecordZonesWithCompletionHandler:'>
+<arg declared_type='void (^)(NSArray *, NSError *)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='fetchAllSubscriptionsWithCompletionHandler:'>
+<arg declared_type='void (^)(NSArray *, NSError *)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='fetchRecordWithID:completionHandler:'>
+<arg declared_type='CKRecordID*' index='0' name='recordID' type='@'/>
+<arg declared_type='void (^)(CKRecord *, NSError *)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='CKRecord*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='fetchRecordZoneWithID:completionHandler:'>
+<arg declared_type='CKRecordZoneID*' index='0' name='zoneID' type='@'/>
+<arg declared_type='void (^)(CKRecordZone *, NSError *)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='CKRecordZone*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='fetchSubscriptionWithID:completionHandler:'>
+<arg declared_type='NSString*' index='0' name='subscriptionID' type='@'/>
+<arg declared_type='void (^)(CKSubscription *, NSError *)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='CKSubscription*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='performQuery:inZoneWithID:completionHandler:'>
+<arg declared_type='CKQuery*' index='0' name='query' type='@'/>
+<arg declared_type='CKRecordZoneID*' index='1' name='zoneID' type='@'/>
+<arg declared_type='void (^)(NSArray *, NSError *)' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='saveRecord:completionHandler:'>
+<arg declared_type='CKRecord*' index='0' name='record' type='@'/>
+<arg declared_type='void (^)(CKRecord *, NSError *)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='CKRecord*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='saveRecordZone:completionHandler:'>
+<arg declared_type='CKRecordZone*' index='0' name='zone' type='@'/>
+<arg declared_type='void (^)(CKRecordZone *, NSError *)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='CKRecordZone*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='saveSubscription:completionHandler:'>
+<arg declared_type='CKSubscription*' index='0' name='subscription' type='@'/>
+<arg declared_type='void (^)(CKSubscription *, NSError *)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='CKSubscription*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CKDatabaseOperation'>
+<method selector='database'>
+<retval declared_type='CKDatabase*' type='@'/>
+</method>
+<method selector='setDatabase:'>
+<arg declared_type='CKDatabase*' index='0' name='database' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CKDiscoverAllContactsOperation'>
+<method selector='discoverAllContactsCompletionBlock'>
+<retval declared_type='void (^)(NSArray *, NSError *)' function_pointer='true' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='init'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='setDiscoverAllContactsCompletionBlock:'>
+<arg declared_type='void (^)(NSArray *, NSError *)' function_pointer='true' index='0' name='discoverAllContactsCompletionBlock' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CKDiscoverUserInfosOperation'>
+<method selector='discoverUserInfosCompletionBlock'>
+<retval declared_type='void (^)(NSDictionary *, NSDictionary *, NSError *)' function_pointer='true' type='@?'>
+<arg declared_type='NSDictionary*' type='@'/>
+<arg declared_type='NSDictionary*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='emailAddresses'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='init'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithEmailAddresses:userRecordIDs:'>
+<arg declared_type='NSArray*' index='0' name='emailAddresses' type='@'/>
+<arg declared_type='NSArray*' index='1' name='userRecordIDs' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='setDiscoverUserInfosCompletionBlock:'>
+<arg declared_type='void (^)(NSDictionary *, NSDictionary *, NSError *)' function_pointer='true' index='0' name='discoverUserInfosCompletionBlock' type='@?'>
+<arg declared_type='NSDictionary*' type='@'/>
+<arg declared_type='NSDictionary*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEmailAddresses:'>
+<arg declared_type='NSArray*' index='0' name='emailAddresses' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUserRecordIDs:'>
+<arg declared_type='NSArray*' index='0' name='userRecordIDs' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='userRecordIDs'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</class>
+<class name='CKDiscoveredUserInfo'>
+<method selector='firstName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='lastName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='userRecordID'>
+<retval declared_type='CKRecordID*' type='@'/>
+</method>
+</class>
+<class name='CKFetchNotificationChangesOperation'>
+<method selector='fetchNotificationChangesCompletionBlock'>
+<retval declared_type='void (^)(CKServerChangeToken *, NSError *)' function_pointer='true' type='@?'>
+<arg declared_type='CKServerChangeToken*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='initWithPreviousServerChangeToken:'>
+<arg declared_type='CKServerChangeToken*' index='0' name='previousServerChangeToken' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='moreComing'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='notificationChangedBlock'>
+<retval declared_type='void (^)(CKNotification *)' function_pointer='true' type='@?'>
+<arg declared_type='CKNotification*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='previousServerChangeToken'>
+<retval declared_type='CKServerChangeToken*' type='@'/>
+</method>
+<method selector='resultsLimit'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='setFetchNotificationChangesCompletionBlock:'>
+<arg declared_type='void (^)(CKServerChangeToken *, NSError *)' function_pointer='true' index='0' name='fetchNotificationChangesCompletionBlock' type='@?'>
+<arg declared_type='CKServerChangeToken*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNotificationChangedBlock:'>
+<arg declared_type='void (^)(CKNotification *)' function_pointer='true' index='0' name='notificationChangedBlock' type='@?'>
+<arg declared_type='CKNotification*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPreviousServerChangeToken:'>
+<arg declared_type='CKServerChangeToken*' index='0' name='previousServerChangeToken' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setResultsLimit:'>
+<arg declared_type='NSUInteger' index='0' name='resultsLimit' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CKFetchRecordChangesOperation'>
+<method selector='desiredKeys'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='fetchRecordChangesCompletionBlock'>
+<retval declared_type='void (^)(CKServerChangeToken *, NSData *, NSError *)' function_pointer='true' type='@?'>
+<arg declared_type='CKServerChangeToken*' type='@'/>
+<arg declared_type='NSData*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='initWithRecordZoneID:previousServerChangeToken:'>
+<arg declared_type='CKRecordZoneID*' index='0' name='recordZoneID' type='@'/>
+<arg declared_type='CKServerChangeToken*' index='1' name='previousServerChangeToken' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='moreComing'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='previousServerChangeToken'>
+<retval declared_type='CKServerChangeToken*' type='@'/>
+</method>
+<method selector='recordChangedBlock'>
+<retval declared_type='void (^)(CKRecord *)' function_pointer='true' type='@?'>
+<arg declared_type='CKRecord*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='recordWithIDWasDeletedBlock'>
+<retval declared_type='void (^)(CKRecordID *)' function_pointer='true' type='@?'>
+<arg declared_type='CKRecordID*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='recordZoneID'>
+<retval declared_type='CKRecordZoneID*' type='@'/>
+</method>
+<method selector='resultsLimit'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='setDesiredKeys:'>
+<arg declared_type='NSArray*' index='0' name='desiredKeys' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFetchRecordChangesCompletionBlock:'>
+<arg declared_type='void (^)(CKServerChangeToken *, NSData *, NSError *)' function_pointer='true' index='0' name='fetchRecordChangesCompletionBlock' type='@?'>
+<arg declared_type='CKServerChangeToken*' type='@'/>
+<arg declared_type='NSData*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPreviousServerChangeToken:'>
+<arg declared_type='CKServerChangeToken*' index='0' name='previousServerChangeToken' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecordChangedBlock:'>
+<arg declared_type='void (^)(CKRecord *)' function_pointer='true' index='0' name='recordChangedBlock' type='@?'>
+<arg declared_type='CKRecord*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecordWithIDWasDeletedBlock:'>
+<arg declared_type='void (^)(CKRecordID *)' function_pointer='true' index='0' name='recordWithIDWasDeletedBlock' type='@?'>
+<arg declared_type='CKRecordID*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecordZoneID:'>
+<arg declared_type='CKRecordZoneID*' index='0' name='recordZoneID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setResultsLimit:'>
+<arg declared_type='NSUInteger' index='0' name='resultsLimit' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CKFetchRecordZonesOperation'>
+<method class_method='true' selector='fetchAllRecordZonesOperation'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='fetchRecordZonesCompletionBlock'>
+<retval declared_type='void (^)(NSDictionary *, NSError *)' function_pointer='true' type='@?'>
+<arg declared_type='NSDictionary*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='init'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithRecordZoneIDs:'>
+<arg declared_type='NSArray*' index='0' name='zoneIDs' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='recordZoneIDs'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='setFetchRecordZonesCompletionBlock:'>
+<arg declared_type='void (^)(NSDictionary *, NSError *)' function_pointer='true' index='0' name='fetchRecordZonesCompletionBlock' type='@?'>
+<arg declared_type='NSDictionary*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecordZoneIDs:'>
+<arg declared_type='NSArray*' index='0' name='recordZoneIDs' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CKFetchRecordsOperation'>
+<method selector='desiredKeys'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='fetchCurrentUserRecordOperation'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='fetchRecordsCompletionBlock'>
+<retval declared_type='void (^)(NSDictionary *, NSError *)' function_pointer='true' type='@?'>
+<arg declared_type='NSDictionary*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='init'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithRecordIDs:'>
+<arg declared_type='NSArray*' index='0' name='recordIDs' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='perRecordCompletionBlock'>
+<retval declared_type='void (^)(CKRecord *, CKRecordID *, NSError *)' function_pointer='true' type='@?'>
+<arg declared_type='CKRecord*' type='@'/>
+<arg declared_type='CKRecordID*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='perRecordProgressBlock'>
+<retval declared_type='void (^)(CKRecordID *, double)' function_pointer='true' type='@?'>
+<arg declared_type='CKRecordID*' type='@'/>
+<arg declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='recordIDs'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='setDesiredKeys:'>
+<arg declared_type='NSArray*' index='0' name='desiredKeys' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFetchRecordsCompletionBlock:'>
+<arg declared_type='void (^)(NSDictionary *, NSError *)' function_pointer='true' index='0' name='fetchRecordsCompletionBlock' type='@?'>
+<arg declared_type='NSDictionary*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPerRecordCompletionBlock:'>
+<arg declared_type='void (^)(CKRecord *, CKRecordID *, NSError *)' function_pointer='true' index='0' name='perRecordCompletionBlock' type='@?'>
+<arg declared_type='CKRecord*' type='@'/>
+<arg declared_type='CKRecordID*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPerRecordProgressBlock:'>
+<arg declared_type='void (^)(CKRecordID *, double)' function_pointer='true' index='0' name='perRecordProgressBlock' type='@?'>
+<arg declared_type='CKRecordID*' type='@'/>
+<arg declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecordIDs:'>
+<arg declared_type='NSArray*' index='0' name='recordIDs' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CKFetchSubscriptionsOperation'>
+<method class_method='true' selector='fetchAllSubscriptionsOperation'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='fetchSubscriptionCompletionBlock'>
+<retval declared_type='void (^)(NSDictionary *, NSError *)' function_pointer='true' type='@?'>
+<arg declared_type='NSDictionary*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='init'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithSubscriptionIDs:'>
+<arg declared_type='NSArray*' index='0' name='subscriptionIDs' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='setFetchSubscriptionCompletionBlock:'>
+<arg declared_type='void (^)(NSDictionary *, NSError *)' function_pointer='true' index='0' name='fetchSubscriptionCompletionBlock' type='@?'>
+<arg declared_type='NSDictionary*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSubscriptionIDs:'>
+<arg declared_type='NSArray*' index='0' name='subscriptionIDs' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='subscriptionIDs'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</class>
+<class name='CKLocationSortDescriptor'>
+<method selector='initWithCoder:'>
+<arg declared_type='NSCoder*' index='0' name='aDecoder' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithKey:relativeLocation:'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<arg declared_type='CLLocation*' index='1' name='relativeLocation' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='relativeLocation'>
+<retval declared_type='CLLocation*' type='@'/>
+</method>
+</class>
+<class name='CKMarkNotificationsReadOperation'>
+<method selector='initWithNotificationIDsToMarkRead:'>
+<arg declared_type='NSArray*' index='0' name='notificationIDs' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='markNotificationsReadCompletionBlock'>
+<retval declared_type='void (^)(NSArray *, NSError *)' function_pointer='true' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='notificationIDs'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='setMarkNotificationsReadCompletionBlock:'>
+<arg declared_type='void (^)(NSArray *, NSError *)' function_pointer='true' index='0' name='markNotificationsReadCompletionBlock' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNotificationIDs:'>
+<arg declared_type='NSArray*' index='0' name='notificationIDs' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CKModifyBadgeOperation'>
+<method selector='badgeValue'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='init'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithBadgeValue:'>
+<arg declared_type='NSUInteger' index='0' name='badgeValue' type='I' type64='Q'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='modifyBadgeCompletionBlock'>
+<retval declared_type='void (^)(NSError *)' function_pointer='true' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='setBadgeValue:'>
+<arg declared_type='NSUInteger' index='0' name='badgeValue' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setModifyBadgeCompletionBlock:'>
+<arg declared_type='void (^)(NSError *)' function_pointer='true' index='0' name='modifyBadgeCompletionBlock' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CKModifyRecordZonesOperation'>
+<method selector='init'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithRecordZonesToSave:recordZoneIDsToDelete:'>
+<arg declared_type='NSArray*' index='0' name='recordZonesToSave' type='@'/>
+<arg declared_type='NSArray*' index='1' name='recordZoneIDsToDelete' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='modifyRecordZonesCompletionBlock'>
+<retval declared_type='void (^)(NSArray *, NSArray *, NSError *)' function_pointer='true' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='recordZoneIDsToDelete'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='recordZonesToSave'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='setModifyRecordZonesCompletionBlock:'>
+<arg declared_type='void (^)(NSArray *, NSArray *, NSError *)' function_pointer='true' index='0' name='modifyRecordZonesCompletionBlock' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecordZoneIDsToDelete:'>
+<arg declared_type='NSArray*' index='0' name='recordZoneIDsToDelete' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecordZonesToSave:'>
+<arg declared_type='NSArray*' index='0' name='recordZonesToSave' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CKModifyRecordsOperation'>
+<method selector='atomic'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='clientChangeTokenData'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='init'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithRecordsToSave:recordIDsToDelete:'>
+<arg declared_type='NSArray*' index='0' name='records' type='@'/>
+<arg declared_type='NSArray*' index='1' name='recordIDs' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='modifyRecordsCompletionBlock'>
+<retval declared_type='void (^)(NSArray *, NSArray *, NSError *)' function_pointer='true' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='perRecordCompletionBlock'>
+<retval declared_type='void (^)(CKRecord *, NSError *)' function_pointer='true' type='@?'>
+<arg declared_type='CKRecord*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='perRecordProgressBlock'>
+<retval declared_type='void (^)(CKRecord *, double)' function_pointer='true' type='@?'>
+<arg declared_type='CKRecord*' type='@'/>
+<arg declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='recordIDsToDelete'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='recordsToSave'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='savePolicy'>
+<retval declared_type='CKRecordSavePolicy' type='i' type64='q'/>
+</method>
+<method selector='setAtomic:'>
+<arg declared_type='BOOL' index='0' name='atomic' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setClientChangeTokenData:'>
+<arg declared_type='NSData*' index='0' name='clientChangeTokenData' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setModifyRecordsCompletionBlock:'>
+<arg declared_type='void (^)(NSArray *, NSArray *, NSError *)' function_pointer='true' index='0' name='modifyRecordsCompletionBlock' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPerRecordCompletionBlock:'>
+<arg declared_type='void (^)(CKRecord *, NSError *)' function_pointer='true' index='0' name='perRecordCompletionBlock' type='@?'>
+<arg declared_type='CKRecord*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPerRecordProgressBlock:'>
+<arg declared_type='void (^)(CKRecord *, double)' function_pointer='true' index='0' name='perRecordProgressBlock' type='@?'>
+<arg declared_type='CKRecord*' type='@'/>
+<arg declared_type='double' type='d'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecordIDsToDelete:'>
+<arg declared_type='NSArray*' index='0' name='recordIDsToDelete' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecordsToSave:'>
+<arg declared_type='NSArray*' index='0' name='recordsToSave' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSavePolicy:'>
+<arg declared_type='CKRecordSavePolicy' index='0' name='savePolicy' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CKModifySubscriptionsOperation'>
+<method selector='initWithSubscriptionsToSave:subscriptionIDsToDelete:'>
+<arg declared_type='NSArray*' index='0' name='subscriptionsToSave' type='@'/>
+<arg declared_type='NSArray*' index='1' name='subscriptionIDsToDelete' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='modifySubscriptionsCompletionBlock'>
+<retval declared_type='void (^)(NSArray *, NSArray *, NSError *)' function_pointer='true' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='setModifySubscriptionsCompletionBlock:'>
+<arg declared_type='void (^)(NSArray *, NSArray *, NSError *)' function_pointer='true' index='0' name='modifySubscriptionsCompletionBlock' type='@?'>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSArray*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSubscriptionIDsToDelete:'>
+<arg declared_type='NSArray*' index='0' name='subscriptionIDsToDelete' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSubscriptionsToSave:'>
+<arg declared_type='NSArray*' index='0' name='subscriptionsToSave' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='subscriptionIDsToDelete'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='subscriptionsToSave'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</class>
+<class name='CKNotification'>
+<method selector='alertActionLocalizationKey'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='alertBody'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='alertLaunchImage'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='alertLocalizationArgs'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='alertLocalizationKey'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='badge'>
+<retval declared_type='NSNumber*' type='@'/>
+</method>
+<method selector='containerIdentifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='isPruned'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='notificationFromRemoteNotificationDictionary:'>
+<arg declared_type='NSDictionary*' index='0' name='notificationDictionary' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='notificationID'>
+<retval declared_type='CKNotificationID*' type='@'/>
+</method>
+<method selector='notificationType'>
+<retval declared_type='CKNotificationType' type='i' type64='q'/>
+</method>
+<method selector='soundName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='CKNotificationInfo'>
+<method selector='alertActionLocalizationKey'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='alertBody'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='alertLaunchImage'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='alertLocalizationArgs'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='alertLocalizationKey'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='desiredKeys'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='setAlertActionLocalizationKey:'>
+<arg declared_type='NSString*' index='0' name='alertActionLocalizationKey' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAlertBody:'>
+<arg declared_type='NSString*' index='0' name='alertBody' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAlertLaunchImage:'>
+<arg declared_type='NSString*' index='0' name='alertLaunchImage' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAlertLocalizationArgs:'>
+<arg declared_type='NSArray*' index='0' name='alertLocalizationArgs' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAlertLocalizationKey:'>
+<arg declared_type='NSString*' index='0' name='alertLocalizationKey' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDesiredKeys:'>
+<arg declared_type='NSArray*' index='0' name='desiredKeys' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShouldBadge:'>
+<arg declared_type='BOOL' index='0' name='shouldBadge' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShouldSendContentAvailable:'>
+<arg declared_type='BOOL' index='0' name='shouldSendContentAvailable' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSoundName:'>
+<arg declared_type='NSString*' index='0' name='soundName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldBadge'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='shouldSendContentAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='soundName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='CKOperation'>
+<method selector='allowsCellularAccess'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='container'>
+<retval declared_type='CKContainer*' type='@'/>
+</method>
+<method selector='init'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='setAllowsCellularAccess:'>
+<arg declared_type='BOOL' index='0' name='allowsCellularAccess' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContainer:'>
+<arg declared_type='CKContainer*' index='0' name='container' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUsesBackgroundSession:'>
+<arg declared_type='BOOL' index='0' name='usesBackgroundSession' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='usesBackgroundSession'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='CKQuery'>
+<method selector='initWithCoder:'>
+<arg declared_type='NSCoder*' index='0' name='aDecoder' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithRecordType:predicate:'>
+<arg declared_type='NSString*' index='0' name='recordType' type='@'/>
+<arg declared_type='NSPredicate*' index='1' name='predicate' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='predicate'>
+<retval declared_type='NSPredicate*' type='@'/>
+</method>
+<method selector='recordType'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setSortDescriptors:'>
+<arg declared_type='NSArray*' index='0' name='sortDescriptors' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sortDescriptors'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</class>
+<class name='CKQueryNotification'>
+<method selector='isPublicDatabase'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='queryNotificationReason'>
+<retval declared_type='CKQueryNotificationReason' type='i' type64='q'/>
+</method>
+<method selector='recordFields'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='recordID'>
+<retval declared_type='CKRecordID*' type='@'/>
+</method>
+</class>
+<class name='CKQueryOperation'>
+<method selector='cursor'>
+<retval declared_type='CKQueryCursor*' type='@'/>
+</method>
+<method selector='desiredKeys'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='init'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithCursor:'>
+<arg declared_type='CKQueryCursor*' index='0' name='cursor' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithQuery:'>
+<arg declared_type='CKQuery*' index='0' name='query' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='query'>
+<retval declared_type='CKQuery*' type='@'/>
+</method>
+<method selector='queryCompletionBlock'>
+<retval declared_type='void (^)(CKQueryCursor *, NSError *)' function_pointer='true' type='@?'>
+<arg declared_type='CKQueryCursor*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='recordFetchedBlock'>
+<retval declared_type='void (^)(CKRecord *)' function_pointer='true' type='@?'>
+<arg declared_type='CKRecord*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='resultsLimit'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='setCursor:'>
+<arg declared_type='CKQueryCursor*' index='0' name='cursor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDesiredKeys:'>
+<arg declared_type='NSArray*' index='0' name='desiredKeys' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setQuery:'>
+<arg declared_type='CKQuery*' index='0' name='query' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setQueryCompletionBlock:'>
+<arg declared_type='void (^)(CKQueryCursor *, NSError *)' function_pointer='true' index='0' name='queryCompletionBlock' type='@?'>
+<arg declared_type='CKQueryCursor*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecordFetchedBlock:'>
+<arg declared_type='void (^)(CKRecord *)' function_pointer='true' index='0' name='recordFetchedBlock' type='@?'>
+<arg declared_type='CKRecord*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setResultsLimit:'>
+<arg declared_type='NSUInteger' index='0' name='resultsLimit' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setZoneID:'>
+<arg declared_type='CKRecordZoneID*' index='0' name='zoneID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='zoneID'>
+<retval declared_type='CKRecordZoneID*' type='@'/>
+</method>
+</class>
+<class name='CKRecord'>
+<method selector='allKeys'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='allTokens'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='changedKeys'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='creationDate'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='creatorUserRecordID'>
+<retval declared_type='CKRecordID*' type='@'/>
+</method>
+<method selector='encodeSystemFieldsWithCoder:'>
+<arg declared_type='NSCoder*' index='0' name='coder' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithRecordType:'>
+<arg declared_type='NSString*' index='0' name='recordType' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithRecordType:recordID:'>
+<arg declared_type='NSString*' index='0' name='recordType' type='@'/>
+<arg declared_type='CKRecordID*' index='1' name='recordID' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithRecordType:zoneID:'>
+<arg declared_type='NSString*' index='0' name='recordType' type='@'/>
+<arg declared_type='CKRecordZoneID*' index='1' name='zoneID' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='lastModifiedUserRecordID'>
+<retval declared_type='CKRecordID*' type='@'/>
+</method>
+<method selector='modificationDate'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='objectForKey:'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='objectForKeyedSubscript:'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='recordChangeTag'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='recordID'>
+<retval declared_type='CKRecordID*' type='@'/>
+</method>
+<method selector='recordType'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setObject:forKey:'>
+<arg declared_type='id' index='0' name='object' type='@'/>
+<arg declared_type='NSString*' index='1' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setObject:forKeyedSubscript:'>
+<arg declared_type='id' index='0' name='object' type='@'/>
+<arg declared_type='NSString*' index='1' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CKRecordID'>
+<method selector='initWithRecordName:'>
+<arg declared_type='NSString*' index='0' name='recordName' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithRecordName:zoneID:'>
+<arg declared_type='NSString*' index='0' name='recordName' type='@'/>
+<arg declared_type='CKRecordZoneID*' index='1' name='zoneID' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='recordName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='zoneID'>
+<retval declared_type='CKRecordZoneID*' type='@'/>
+</method>
+</class>
+<class name='CKRecordZone'>
+<method selector='capabilities'>
+<retval declared_type='CKRecordZoneCapabilities' type='I' type64='Q'/>
+</method>
+<method class_method='true' selector='defaultRecordZone'>
+<retval declared_type='CKRecordZone*' type='@'/>
+</method>
+<method selector='initWithZoneID:'>
+<arg declared_type='CKRecordZoneID*' index='0' name='zoneID' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithZoneName:'>
+<arg declared_type='NSString*' index='0' name='zoneName' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='zoneID'>
+<retval declared_type='CKRecordZoneID*' type='@'/>
+</method>
+</class>
+<class name='CKRecordZoneID'>
+<method selector='initWithZoneName:ownerName:'>
+<arg declared_type='NSString*' index='0' name='zoneName' type='@'/>
+<arg declared_type='NSString*' index='1' name='ownerName' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='ownerName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='zoneName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='CKRecordZoneNotification'>
+<method selector='recordZoneID'>
+<retval declared_type='CKRecordZoneID*' type='@'/>
+</method>
+</class>
+<class name='CKReference'>
+<method selector='initWithRecord:action:'>
+<arg declared_type='CKRecord*' index='0' name='record' type='@'/>
+<arg declared_type='CKReferenceAction' index='1' name='action' type='I' type64='Q'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithRecordID:action:'>
+<arg declared_type='CKRecordID*' index='0' name='recordID' type='@'/>
+<arg declared_type='CKReferenceAction' index='1' name='action' type='I' type64='Q'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='recordID'>
+<retval declared_type='CKRecordID*' type='@'/>
+</method>
+<method selector='referenceAction'>
+<retval declared_type='CKReferenceAction' type='I' type64='Q'/>
+</method>
+</class>
+<class name='CKSubscription'>
+<method selector='initWithCoder:'>
+<arg declared_type='NSCoder*' index='0' name='aDecoder' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithRecordType:predicate:options:'>
+<arg declared_type='NSString*' index='0' name='recordType' type='@'/>
+<arg declared_type='NSPredicate*' index='1' name='predicate' type='@'/>
+<arg declared_type='CKSubscriptionOptions' index='2' name='subscriptionOptions' type='I' type64='Q'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithRecordType:predicate:subscriptionID:options:'>
+<arg declared_type='NSString*' index='0' name='recordType' type='@'/>
+<arg declared_type='NSPredicate*' index='1' name='predicate' type='@'/>
+<arg declared_type='NSString*' index='2' name='subscriptionID' type='@'/>
+<arg declared_type='CKSubscriptionOptions' index='3' name='subscriptionOptions' type='I' type64='Q'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithZoneID:options:'>
+<arg declared_type='CKRecordZoneID*' index='0' name='zoneID' type='@'/>
+<arg declared_type='CKSubscriptionOptions' index='1' name='subscriptionOptions' type='I' type64='Q'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithZoneID:subscriptionID:options:'>
+<arg declared_type='CKRecordZoneID*' index='0' name='zoneID' type='@'/>
+<arg declared_type='NSString*' index='1' name='subscriptionID' type='@'/>
+<arg declared_type='CKSubscriptionOptions' index='2' name='subscriptionOptions' type='I' type64='Q'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='notificationInfo'>
+<retval declared_type='CKNotificationInfo*' type='@'/>
+</method>
+<method selector='predicate'>
+<retval declared_type='NSPredicate*' type='@'/>
+</method>
+<method selector='recordType'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setNotificationInfo:'>
+<arg declared_type='CKNotificationInfo*' index='0' name='notificationInfo' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setZoneID:'>
+<arg declared_type='CKRecordZoneID*' index='0' name='zoneID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='subscriptionID'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='subscriptionOptions'>
+<retval declared_type='CKSubscriptionOptions' type='I' type64='Q'/>
+</method>
+<method selector='subscriptionType'>
+<retval declared_type='CKSubscriptionType' type='i' type64='q'/>
+</method>
+<method selector='zoneID'>
+<retval declared_type='CKRecordZoneID*' type='@'/>
+</method>
+</class>
+</signatures>

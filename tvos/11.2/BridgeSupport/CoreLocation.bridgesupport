@@ -1,0 +1,353 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreBluetooth.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<struct name='CLLocationCoordinate2D' type64='{CLLocationCoordinate2D=&quot;latitude&quot;d&quot;longitude&quot;d}'>
+<field declared_type64='CLLocationDegrees' name='latitude' type64='d'/>
+<field declared_type64='CLLocationDegrees' name='longitude' type64='d'/>
+</struct>
+<constant const='true' declared_type64='CLLocationDistance' name='CLLocationDistanceMax' type64='d'/>
+<constant const='true' declared_type64='NSTimeInterval' name='CLTimeIntervalMax' type64='d'/>
+<constant const='true' declared_type64='CLLocationDistance' name='kCLDistanceFilterNone' type64='d'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='kCLErrorDomain' type64='@'/>
+<constant const='true' declared_type64='CLLocationDegrees' name='kCLHeadingFilterNone' type64='d'/>
+<constant const='true' declared_type64='CLLocationAccuracy' name='kCLLocationAccuracyBest' type64='d'/>
+<constant const='true' declared_type64='CLLocationAccuracy' name='kCLLocationAccuracyBestForNavigation' type64='d'/>
+<constant const='true' declared_type64='CLLocationAccuracy' name='kCLLocationAccuracyHundredMeters' type64='d'/>
+<constant const='true' declared_type64='CLLocationAccuracy' name='kCLLocationAccuracyKilometer' type64='d'/>
+<constant const='true' declared_type64='CLLocationAccuracy' name='kCLLocationAccuracyNearestTenMeters' type64='d'/>
+<constant const='true' declared_type64='CLLocationAccuracy' name='kCLLocationAccuracyThreeKilometers' type64='d'/>
+<constant const='true' declared_type64='CLLocationCoordinate2D' name='kCLLocationCoordinate2DInvalid' type64='{CLLocationCoordinate2D=dd}'/>
+<enum name='CLActivityTypeAutomotiveNavigation' value64='2'/>
+<enum name='CLActivityTypeFitness' value64='3'/>
+<enum name='CLActivityTypeOther' value64='1'/>
+<enum name='CLActivityTypeOtherNavigation' value64='4'/>
+<enum name='CLDeviceOrientationFaceDown' value64='6'/>
+<enum name='CLDeviceOrientationFaceUp' value64='5'/>
+<enum name='CLDeviceOrientationLandscapeLeft' value64='3'/>
+<enum name='CLDeviceOrientationLandscapeRight' value64='4'/>
+<enum name='CLDeviceOrientationPortrait' value64='1'/>
+<enum name='CLDeviceOrientationPortraitUpsideDown' value64='2'/>
+<enum name='CLDeviceOrientationUnknown' value64='0'/>
+<enum name='kCLAuthorizationStatusAuthorized' value64='3'/>
+<enum name='kCLAuthorizationStatusAuthorizedAlways' value64='3'/>
+<enum name='kCLAuthorizationStatusAuthorizedWhenInUse' value64='4'/>
+<enum name='kCLAuthorizationStatusDenied' value64='2'/>
+<enum name='kCLAuthorizationStatusNotDetermined' value64='0'/>
+<enum name='kCLAuthorizationStatusRestricted' value64='1'/>
+<enum name='kCLErrorDeferredAccuracyTooLow' value64='13'/>
+<enum name='kCLErrorDeferredCanceled' value64='15'/>
+<enum name='kCLErrorDeferredDistanceFiltered' value64='14'/>
+<enum name='kCLErrorDeferredFailed' value64='11'/>
+<enum name='kCLErrorDeferredNotUpdatingLocation' value64='12'/>
+<enum name='kCLErrorDenied' value64='1'/>
+<enum name='kCLErrorGeocodeCanceled' value64='10'/>
+<enum name='kCLErrorGeocodeFoundNoResult' value64='8'/>
+<enum name='kCLErrorGeocodeFoundPartialResult' value64='9'/>
+<enum name='kCLErrorHeadingFailure' value64='3'/>
+<enum name='kCLErrorLocationUnknown' value64='0'/>
+<enum name='kCLErrorNetwork' value64='2'/>
+<enum name='kCLErrorRangingFailure' value64='17'/>
+<enum name='kCLErrorRangingUnavailable' value64='16'/>
+<enum name='kCLErrorRegionMonitoringDenied' value64='4'/>
+<enum name='kCLErrorRegionMonitoringFailure' value64='5'/>
+<enum name='kCLErrorRegionMonitoringResponseDelayed' value64='7'/>
+<enum name='kCLErrorRegionMonitoringSetupDelayed' value64='6'/>
+<function name='CLLocationCoordinate2DIsValid'>
+<arg declared_type64='CLLocationCoordinate2D' name='coord' type64='{CLLocationCoordinate2D=dd}'/>
+<retval declared_type64='BOOL' type64='B'/>
+</function>
+<function name='CLLocationCoordinate2DMake'>
+<arg declared_type64='CLLocationDegrees' name='latitude' type64='d'/>
+<arg declared_type64='CLLocationDegrees' name='longitude' type64='d'/>
+<retval declared_type64='CLLocationCoordinate2D' type64='{CLLocationCoordinate2D=dd}'/>
+</function>
+<class name='CLCircularRegion'>
+<method selector='center'>
+<retval declared_type64='CLLocationCoordinate2D' type64='{CLLocationCoordinate2D=dd}'/>
+</method>
+<method selector='containsCoordinate:'>
+<arg declared_type64='CLLocationCoordinate2D' index='0' name='coordinate' type64='{CLLocationCoordinate2D=dd}'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='initWithCenter:radius:identifier:'>
+<arg declared_type64='CLLocationCoordinate2D' index='0' name='center' type64='{CLLocationCoordinate2D=dd}'/>
+<arg declared_type64='CLLocationDistance' index='1' name='radius' type64='d'/>
+<arg declared_type64='NSString * _Nonnull' index='2' name='identifier' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='radius'>
+<retval declared_type64='CLLocationDistance' type64='d'/>
+</method>
+</class>
+<class name='CLFloor'>
+<method selector='level'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+</class>
+<class name='CLGeocoder'>
+<method selector='cancelGeocode'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='geocodeAddressDictionary:completionHandler:'>
+<arg declared_type64='NSDictionary * _Nonnull' index='0' name='addressDictionary' type64='@'/>
+<arg declared_type64='CLGeocodeCompletionHandler _Nonnull' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='geocodeAddressString:completionHandler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='addressString' type64='@'/>
+<arg declared_type64='CLGeocodeCompletionHandler _Nonnull' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='geocodeAddressString:inRegion:completionHandler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='addressString' type64='@'/>
+<arg declared_type64='CLRegion * _Nullable' index='1' name='region' type64='@'/>
+<arg declared_type64='CLGeocodeCompletionHandler _Nonnull' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='geocodeAddressString:inRegion:preferredLocale:completionHandler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='addressString' type64='@'/>
+<arg declared_type64='CLRegion * _Nullable' index='1' name='region' type64='@'/>
+<arg declared_type64='NSLocale * _Nullable' index='2' name='locale' type64='@'/>
+<arg declared_type64='CLGeocodeCompletionHandler _Nonnull' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='isGeocoding'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='reverseGeocodeLocation:completionHandler:'>
+<arg declared_type64='CLLocation * _Nonnull' index='0' name='location' type64='@'/>
+<arg declared_type64='CLGeocodeCompletionHandler _Nonnull' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='reverseGeocodeLocation:preferredLocale:completionHandler:'>
+<arg declared_type64='CLLocation * _Nonnull' index='0' name='location' type64='@'/>
+<arg declared_type64='NSLocale * _Nullable' index='1' name='locale' type64='@'/>
+<arg declared_type64='CLGeocodeCompletionHandler _Nonnull' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CLLocation'>
+<method selector='altitude'>
+<retval declared_type64='CLLocationDistance' type64='d'/>
+</method>
+<method selector='coordinate'>
+<retval declared_type64='CLLocationCoordinate2D' type64='{CLLocationCoordinate2D=dd}'/>
+</method>
+<method selector='distanceFromLocation:'>
+<arg const='true' declared_type64='CLLocation * _Nonnull' index='0' name='location' type64='@'/>
+<retval declared_type64='CLLocationDistance' type64='d'/>
+</method>
+<method selector='floor'>
+<retval declared_type64='CLFloor * _Nullable' type64='@'/>
+</method>
+<method selector='horizontalAccuracy'>
+<retval declared_type64='CLLocationAccuracy' type64='d'/>
+</method>
+<method selector='initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:speed:timestamp:'>
+<arg declared_type64='CLLocationCoordinate2D' index='0' name='coordinate' type64='{CLLocationCoordinate2D=dd}'/>
+<arg declared_type64='CLLocationDistance' index='1' name='altitude' type64='d'/>
+<arg declared_type64='CLLocationAccuracy' index='2' name='hAccuracy' type64='d'/>
+<arg declared_type64='CLLocationAccuracy' index='3' name='vAccuracy' type64='d'/>
+<arg declared_type64='CLLocationDirection' index='4' name='course' type64='d'/>
+<arg declared_type64='CLLocationSpeed' index='5' name='speed' type64='d'/>
+<arg declared_type64='NSDate * _Nonnull' index='6' name='timestamp' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:timestamp:'>
+<arg declared_type64='CLLocationCoordinate2D' index='0' name='coordinate' type64='{CLLocationCoordinate2D=dd}'/>
+<arg declared_type64='CLLocationDistance' index='1' name='altitude' type64='d'/>
+<arg declared_type64='CLLocationAccuracy' index='2' name='hAccuracy' type64='d'/>
+<arg declared_type64='CLLocationAccuracy' index='3' name='vAccuracy' type64='d'/>
+<arg declared_type64='NSDate * _Nonnull' index='4' name='timestamp' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithLatitude:longitude:'>
+<arg declared_type64='CLLocationDegrees' index='0' name='latitude' type64='d'/>
+<arg declared_type64='CLLocationDegrees' index='1' name='longitude' type64='d'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='timestamp'>
+<retval declared_type64='NSDate * _Nonnull' type64='@'/>
+</method>
+<method selector='verticalAccuracy'>
+<retval declared_type64='CLLocationAccuracy' type64='d'/>
+</method>
+</class>
+<class name='CLLocationManager'>
+<method class_method='true' selector='authorizationStatus'>
+<retval declared_type64='CLAuthorizationStatus' type64='i'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='desiredAccuracy'>
+<retval declared_type64='CLLocationAccuracy' type64='d'/>
+</method>
+<method selector='distanceFilter'>
+<retval declared_type64='CLLocationDistance' type64='d'/>
+</method>
+<method selector='location'>
+<retval declared_type64='CLLocation * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='locationServicesEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='requestLocation'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='requestWhenInUseAuthorization'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDesiredAccuracy:'>
+<arg declared_type64='CLLocationAccuracy' index='0' name='desiredAccuracy' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDistanceFilter:'>
+<arg declared_type64='CLLocationDistance' index='0' name='distanceFilter' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stopUpdatingLocation'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CLPlacemark'>
+<method selector='ISOcountryCode'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='addressDictionary'>
+<retval declared_type64='NSDictionary * _Nullable' type64='@'/>
+</method>
+<method selector='administrativeArea'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='areasOfInterest'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='country'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='initWithPlacemark:'>
+<arg declared_type64='CLPlacemark * _Nonnull' index='0' name='placemark' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='inlandWater'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='locality'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='location'>
+<retval declared_type64='CLLocation * _Nullable' type64='@'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='ocean'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='postalCode'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='region'>
+<retval declared_type64='CLRegion * _Nullable' type64='@'/>
+</method>
+<method selector='subAdministrativeArea'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='subLocality'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='subThoroughfare'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='thoroughfare'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='timeZone'>
+<retval declared_type64='NSTimeZone * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CLRegion'>
+<method selector='identifier'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='notifyOnEntry'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='notifyOnExit'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setNotifyOnEntry:'>
+<arg declared_type64='BOOL' index='0' name='notifyOnEntry' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setNotifyOnExit:'>
+<arg declared_type64='BOOL' index='0' name='notifyOnExit' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='locationManager:didChangeAuthorizationStatus:'>
+<arg declared_type64='CLLocationManager * _Nonnull' index='0' name='manager' type64='@'/>
+<arg declared_type64='CLAuthorizationStatus' index='1' name='status' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='locationManager:didFailWithError:'>
+<arg declared_type64='CLLocationManager * _Nonnull' index='0' name='manager' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='locationManager:didUpdateLocations:'>
+<arg declared_type64='CLLocationManager * _Nonnull' index='0' name='manager' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='locations' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='CLLocationManagerDelegate'>
+<method selector='locationManager:didChangeAuthorizationStatus:' type64='v28@0:8@16i24'>
+<arg declared_type64='CLLocationManager * _Nonnull' index='0' name='manager' type64='@'/>
+<arg declared_type64='CLAuthorizationStatus' index='1' name='status' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='locationManager:didFailWithError:' type64='v32@0:8@16@24'>
+<arg declared_type64='CLLocationManager * _Nonnull' index='0' name='manager' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='locationManager:didUpdateLocations:' type64='v32@0:8@16@24'>
+<arg declared_type64='CLLocationManager * _Nonnull' index='0' name='manager' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='locations' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

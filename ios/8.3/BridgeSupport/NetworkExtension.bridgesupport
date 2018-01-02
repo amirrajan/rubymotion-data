@@ -1,0 +1,361 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<constant const='true' declared_type='NSString*' name='NEVPNConfigurationChangeNotification' type='@'/>
+<constant const='true' declared_type='NSString*' name='NEVPNErrorDomain' type='@'/>
+<constant const='true' declared_type='NSString*' name='NEVPNStatusDidChangeNotification' type='@'/>
+<enum name='NEEvaluateConnectionRuleActionConnectIfNeeded' value='1'/>
+<enum name='NEEvaluateConnectionRuleActionNeverConnect' value='2'/>
+<enum name='NEOnDemandRuleActionConnect' value='1'/>
+<enum name='NEOnDemandRuleActionDisconnect' value='2'/>
+<enum name='NEOnDemandRuleActionEvaluateConnection' value='3'/>
+<enum name='NEOnDemandRuleActionIgnore' value='4'/>
+<enum name='NEOnDemandRuleInterfaceTypeCellular' value='3'/>
+<enum name='NEOnDemandRuleInterfaceTypeEthernet' value='1'/>
+<enum name='NEOnDemandRuleInterfaceTypeWiFi' value='2'/>
+<enum name='NEVPNErrorConfigurationDisabled' value='2'/>
+<enum name='NEVPNErrorConfigurationInvalid' value='1'/>
+<enum name='NEVPNErrorConfigurationStale' value='4'/>
+<enum name='NEVPNErrorConnectionFailed' value='3'/>
+<enum name='NEVPNIKEAuthenticationMethodCertificate' value='1'/>
+<enum name='NEVPNIKEAuthenticationMethodNone' value='0'/>
+<enum name='NEVPNIKEAuthenticationMethodSharedSecret' value='2'/>
+<enum name='NEVPNIKEv2CertificateTypeECDSA256' value='2'/>
+<enum name='NEVPNIKEv2CertificateTypeECDSA384' value='3'/>
+<enum name='NEVPNIKEv2CertificateTypeECDSA521' value='4'/>
+<enum name='NEVPNIKEv2CertificateTypeRSA' value='1'/>
+<enum name='NEVPNIKEv2DeadPeerDetectionRateHigh' value='3'/>
+<enum name='NEVPNIKEv2DeadPeerDetectionRateLow' value='1'/>
+<enum name='NEVPNIKEv2DeadPeerDetectionRateMedium' value='2'/>
+<enum name='NEVPNIKEv2DeadPeerDetectionRateNone' value='0'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup0' value='0'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup1' value='1'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup14' value='14'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup15' value='15'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup16' value='16'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup17' value='17'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup18' value='18'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup19' value='19'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup2' value='2'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup20' value='20'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup21' value='21'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup5' value='5'/>
+<enum name='NEVPNIKEv2EncryptionAlgorithm3DES' value='2'/>
+<enum name='NEVPNIKEv2EncryptionAlgorithmAES128' value='3'/>
+<enum name='NEVPNIKEv2EncryptionAlgorithmAES128GCM' value='5'/>
+<enum name='NEVPNIKEv2EncryptionAlgorithmAES256' value='4'/>
+<enum name='NEVPNIKEv2EncryptionAlgorithmAES256GCM' value='6'/>
+<enum name='NEVPNIKEv2EncryptionAlgorithmDES' value='1'/>
+<enum name='NEVPNIKEv2IntegrityAlgorithmSHA160' value='2'/>
+<enum name='NEVPNIKEv2IntegrityAlgorithmSHA256' value='3'/>
+<enum name='NEVPNIKEv2IntegrityAlgorithmSHA384' value='4'/>
+<enum name='NEVPNIKEv2IntegrityAlgorithmSHA512' value='5'/>
+<enum name='NEVPNIKEv2IntegrityAlgorithmSHA96' value='1'/>
+<enum name='NEVPNStatusConnected' value='3'/>
+<enum name='NEVPNStatusConnecting' value='2'/>
+<enum name='NEVPNStatusDisconnected' value='1'/>
+<enum name='NEVPNStatusDisconnecting' value='5'/>
+<enum name='NEVPNStatusInvalid' value='0'/>
+<enum name='NEVPNStatusReasserting' value='4'/>
+<class name='NEEvaluateConnectionRule'>
+<method selector='action'>
+<retval declared_type='NEEvaluateConnectionRuleAction' type='i' type64='q'/>
+</method>
+<method selector='initWithMatchDomains:andAction:'>
+<arg declared_type='NSArray*' index='0' name='domains' type='@'/>
+<arg declared_type='NEEvaluateConnectionRuleAction' index='1' name='action' type='i' type64='q'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='matchDomains'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='probeURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='setProbeURL:'>
+<arg declared_type='NSURL*' index='0' name='probeURL' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUseDNSServers:'>
+<arg declared_type='NSArray*' index='0' name='useDNSServers' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='useDNSServers'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</class>
+<class name='NEOnDemandRule'>
+<method selector='DNSSearchDomainMatch'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='DNSServerAddressMatch'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='SSIDMatch'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='action'>
+<retval declared_type='NEOnDemandRuleAction' type='i' type64='q'/>
+</method>
+<method selector='interfaceTypeMatch'>
+<retval declared_type='NEOnDemandRuleInterfaceType' type='i' type64='q'/>
+</method>
+<method selector='probeURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='setDNSSearchDomainMatch:'>
+<arg declared_type='NSArray*' index='0' name='DNSSearchDomainMatch' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDNSServerAddressMatch:'>
+<arg declared_type='NSArray*' index='0' name='DNSServerAddressMatch' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInterfaceTypeMatch:'>
+<arg declared_type='NEOnDemandRuleInterfaceType' index='0' name='interfaceTypeMatch' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setProbeURL:'>
+<arg declared_type='NSURL*' index='0' name='probeURL' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSSIDMatch:'>
+<arg declared_type='NSArray*' index='0' name='SSIDMatch' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NEOnDemandRuleEvaluateConnection'>
+<method selector='connectionRules'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='setConnectionRules:'>
+<arg declared_type='NSArray*' index='0' name='connectionRules' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NEVPNConnection'>
+<method selector='startVPNTunnelAndReturnError:'>
+<arg declared_type='NSError**' index='0' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='status'>
+<retval declared_type='NEVPNStatus' type='i' type64='q'/>
+</method>
+<method selector='stopVPNTunnel'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NEVPNIKEv2SecurityAssociationParameters'>
+<method selector='diffieHellmanGroup'>
+<retval declared_type='NEVPNIKEv2DiffieHellmanGroup' type='i' type64='q'/>
+</method>
+<method selector='encryptionAlgorithm'>
+<retval declared_type='NEVPNIKEv2EncryptionAlgorithm' type='i' type64='q'/>
+</method>
+<method selector='integrityAlgorithm'>
+<retval declared_type='NEVPNIKEv2IntegrityAlgorithm' type='i' type64='q'/>
+</method>
+<method selector='lifetimeMinutes'>
+<retval declared_type='int32_t' type='i'/>
+</method>
+<method selector='setDiffieHellmanGroup:'>
+<arg declared_type='NEVPNIKEv2DiffieHellmanGroup' index='0' name='diffieHellmanGroup' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEncryptionAlgorithm:'>
+<arg declared_type='NEVPNIKEv2EncryptionAlgorithm' index='0' name='encryptionAlgorithm' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setIntegrityAlgorithm:'>
+<arg declared_type='NEVPNIKEv2IntegrityAlgorithm' index='0' name='integrityAlgorithm' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLifetimeMinutes:'>
+<arg declared_type='int32_t' index='0' name='lifetimeMinutes' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NEVPNManager'>
+<method selector='connection'>
+<retval declared_type='NEVPNConnection*' type='@'/>
+</method>
+<method selector='isEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isOnDemandEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='loadFromPreferencesWithCompletionHandler:'>
+<arg declared_type='void (^)(NSError *)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='localizedDescription'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='onDemandRules'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='protocol'>
+<retval declared_type='NEVPNProtocol*' type='@'/>
+</method>
+<method selector='removeFromPreferencesWithCompletionHandler:'>
+<arg declared_type='void (^)(NSError *)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='saveToPreferencesWithCompletionHandler:'>
+<arg declared_type='void (^)(NSError *)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEnabled:'>
+<arg declared_type='BOOL' index='0' name='enabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLocalizedDescription:'>
+<arg declared_type='NSString*' index='0' name='localizedDescription' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOnDemandEnabled:'>
+<arg declared_type='BOOL' index='0' name='onDemandEnabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOnDemandRules:'>
+<arg declared_type='NSArray*' index='0' name='onDemandRules' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setProtocol:'>
+<arg declared_type='NEVPNProtocol*' index='0' name='protocol' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sharedManager'>
+<retval declared_type='NEVPNManager*' type='@'/>
+</method>
+</class>
+<class name='NEVPNProtocol'>
+<method selector='disconnectOnSleep'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='identityData'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='identityDataPassword'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='passwordReference'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='serverAddress'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setDisconnectOnSleep:'>
+<arg declared_type='BOOL' index='0' name='disconnectOnSleep' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setIdentityData:'>
+<arg declared_type='NSData*' index='0' name='identityData' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setIdentityDataPassword:'>
+<arg declared_type='NSString*' index='0' name='identityDataPassword' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPasswordReference:'>
+<arg declared_type='NSData*' index='0' name='passwordReference' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setServerAddress:'>
+<arg declared_type='NSString*' index='0' name='serverAddress' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUsername:'>
+<arg declared_type='NSString*' index='0' name='username' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='username'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='NEVPNProtocolIKEv2'>
+<method selector='IKESecurityAssociationParameters'>
+<retval declared_type='NEVPNIKEv2SecurityAssociationParameters*' type='@'/>
+</method>
+<method selector='certificateType'>
+<retval declared_type='NEVPNIKEv2CertificateType' type='i' type64='q'/>
+</method>
+<method selector='childSecurityAssociationParameters'>
+<retval declared_type='NEVPNIKEv2SecurityAssociationParameters*' type='@'/>
+</method>
+<method selector='deadPeerDetectionRate'>
+<retval declared_type='NEVPNIKEv2DeadPeerDetectionRate' type='i' type64='q'/>
+</method>
+<method selector='serverCertificateCommonName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='serverCertificateIssuerCommonName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setCertificateType:'>
+<arg declared_type='NEVPNIKEv2CertificateType' index='0' name='certificateType' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDeadPeerDetectionRate:'>
+<arg declared_type='NEVPNIKEv2DeadPeerDetectionRate' index='0' name='deadPeerDetectionRate' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setServerCertificateCommonName:'>
+<arg declared_type='NSString*' index='0' name='serverCertificateCommonName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setServerCertificateIssuerCommonName:'>
+<arg declared_type='NSString*' index='0' name='serverCertificateIssuerCommonName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NEVPNProtocolIPSec'>
+<method selector='authenticationMethod'>
+<retval declared_type='NEVPNIKEAuthenticationMethod' type='i' type64='q'/>
+</method>
+<method selector='localIdentifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='remoteIdentifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setAuthenticationMethod:'>
+<arg declared_type='NEVPNIKEAuthenticationMethod' index='0' name='authenticationMethod' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLocalIdentifier:'>
+<arg declared_type='NSString*' index='0' name='localIdentifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRemoteIdentifier:'>
+<arg declared_type='NSString*' index='0' name='remoteIdentifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSharedSecretReference:'>
+<arg declared_type='NSData*' index='0' name='sharedSecretReference' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUseExtendedAuthentication:'>
+<arg declared_type='BOOL' index='0' name='useExtendedAuthentication' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sharedSecretReference'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='useExtendedAuthentication'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+</signatures>

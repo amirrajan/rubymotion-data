@@ -1,0 +1,242 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<cftype gettypeid_func='QLPreviewRequestGetTypeID' name='QLPreviewRequestRef' tollfree='__NSCFType' type='^{__QLPreviewRequest=}'/>
+<cftype gettypeid_func='QLThumbnailGetTypeID' name='QLThumbnailRef' tollfree='__NSCFType' type='^{__QLThumbnail=}'/>
+<cftype gettypeid_func='QLThumbnailRequestGetTypeID' name='QLThumbnailRequestRef' tollfree='__NSCFType' type='^{__QLThumbnailRequest=}'/>
+<constant const='true' declared_type='CFStringRef' name='kQLPreviewContentIDScheme' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kQLPreviewOptionCursorKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kQLPreviewPropertyAttachmentDataKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kQLPreviewPropertyAttachmentsKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kQLPreviewPropertyBaseBundlePathKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kQLPreviewPropertyCursorKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kQLPreviewPropertyDisplayNameKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kQLPreviewPropertyHeightKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kQLPreviewPropertyMIMETypeKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kQLPreviewPropertyPDFStyleKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kQLPreviewPropertyStringEncodingKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kQLPreviewPropertyTextEncodingNameKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kQLPreviewPropertyWidthKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kQLThumbnailOptionIconModeKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kQLThumbnailOptionScaleFactorKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kQLThumbnailPropertyBadgeImageKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kQLThumbnailPropertyBaseBundlePathKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kQLThumbnailPropertyExtensionKey' type='^{__CFString=}'/>
+<enum name='QUICKLOOK_VERSION' value='6220'/>
+<enum name='kQLPreviewPDFPagesWithThumbnailsOnLeftStyle' value='4'/>
+<enum name='kQLPreviewPDFPagesWithThumbnailsOnRightStyle' value='3'/>
+<enum name='kQLPreviewPDFStandardStyle' value='0'/>
+<enum name='kQLReturnHasMore' value='44810'/>
+<enum name='kQLReturnMask' value='44800'/>
+<enum name='kQLReturnNoError' value='0'/>
+<function name='QLPreviewRequestCopyContentUTI'>
+<arg declared_type='QLPreviewRequestRef' name='preview' type='^{__QLPreviewRequest=}'/>
+<retval already_retained='true' declared_type='CFStringRef' type='^{__CFString=}'/>
+</function>
+<function name='QLPreviewRequestCopyOptions'>
+<arg declared_type='QLPreviewRequestRef' name='preview' type='^{__QLPreviewRequest=}'/>
+<retval already_retained='true' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+</function>
+<function name='QLPreviewRequestCopyURL'>
+<arg declared_type='QLPreviewRequestRef' name='preview' type='^{__QLPreviewRequest=}'/>
+<retval already_retained='true' declared_type='CFURLRef' type='^{__CFURL=}'/>
+</function>
+<function name='QLPreviewRequestCreateContext'>
+<arg declared_type='QLPreviewRequestRef' name='preview' type='^{__QLPreviewRequest=}'/>
+<arg declared_type='CGSize' name='size' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+<arg declared_type='Boolean' name='isBitmap' type='B'/>
+<arg declared_type='CFDictionaryRef' name='properties' type='^{__CFDictionary=}'/>
+<retval already_retained='true' declared_type='CGContextRef' type='^{CGContext=}'/>
+</function>
+<function name='QLPreviewRequestCreatePDFContext'>
+<arg declared_type='QLPreviewRequestRef' name='preview' type='^{__QLPreviewRequest=}'/>
+<arg const='true' declared_type='CGRect*' name='mediaBox' type='^{CGRect={CGPoint=ff}{CGSize=ff}}' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='CFDictionaryRef' name='auxiliaryInfo' type='^{__CFDictionary=}'/>
+<arg declared_type='CFDictionaryRef' name='properties' type='^{__CFDictionary=}'/>
+<retval already_retained='true' declared_type='CGContextRef' type='^{CGContext=}'/>
+</function>
+<function name='QLPreviewRequestFlushContext'>
+<arg declared_type='QLPreviewRequestRef' name='preview' type='^{__QLPreviewRequest=}'/>
+<arg declared_type='CGContextRef' name='context' type='^{CGContext=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='QLPreviewRequestGetDocumentObject'>
+<arg declared_type='QLPreviewRequestRef' name='preview' type='^{__QLPreviewRequest=}'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</function>
+<function name='QLPreviewRequestGetGeneratorBundle'>
+<arg declared_type='QLPreviewRequestRef' name='preview' type='^{__QLPreviewRequest=}'/>
+<retval declared_type='CFBundleRef' type='^{__CFBundle=}'/>
+</function>
+<function name='QLPreviewRequestGetTypeID'>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
+</function>
+<function name='QLPreviewRequestIsCancelled'>
+<arg declared_type='QLPreviewRequestRef' name='preview' type='^{__QLPreviewRequest=}'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='QLPreviewRequestSetDataRepresentation'>
+<arg declared_type='QLPreviewRequestRef' name='preview' type='^{__QLPreviewRequest=}'/>
+<arg declared_type='CFDataRef' name='data' type='^{__CFData=}'/>
+<arg declared_type='CFStringRef' name='contentTypeUTI' type='^{__CFString=}'/>
+<arg declared_type='CFDictionaryRef' name='properties' type='^{__CFDictionary=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='QLPreviewRequestSetDocumentObject'>
+<arg declared_type='QLPreviewRequestRef' name='preview' type='^{__QLPreviewRequest=}'/>
+<arg const='true' declared_type='void*' name='object' type='^v'/>
+<arg const='true' declared_type='CFArrayCallBacks*' name='callbacks' type='^{_CFArrayCallBacks=i^?^?^?^?}' type64='^{_CFArrayCallBacks=q^?^?^?^?}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='QLPreviewRequestSetURLRepresentation'>
+<arg declared_type='QLPreviewRequestRef' name='preview' type='^{__QLPreviewRequest=}'/>
+<arg declared_type='CFURLRef' name='url' type='^{__CFURL=}'/>
+<arg declared_type='CFStringRef' name='contentTypeUTI' type='^{__CFString=}'/>
+<arg declared_type='CFDictionaryRef' name='properties' type='^{__CFDictionary=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='QLThumbnailCancel'>
+<arg declared_type='QLThumbnailRef' name='thumbnail' type='^{__QLThumbnail=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='QLThumbnailCopyDocumentURL'>
+<arg declared_type='QLThumbnailRef' name='thumbnail' type='^{__QLThumbnail=}'/>
+<retval already_retained='true' declared_type='CFURLRef' type='^{__CFURL=}'/>
+</function>
+<function name='QLThumbnailCopyImage'>
+<arg declared_type='QLThumbnailRef' name='thumbnail' type='^{__QLThumbnail=}'/>
+<retval already_retained='true' declared_type='CGImageRef' type='^{CGImage=}'/>
+</function>
+<function name='QLThumbnailCopyOptions'>
+<arg declared_type='QLThumbnailRef' name='thumbnail' type='^{__QLThumbnail=}'/>
+<retval already_retained='true' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+</function>
+<function name='QLThumbnailCreate'>
+<arg declared_type='CFAllocatorRef' name='allocator' type='^{__CFAllocator=}'/>
+<arg declared_type='CFURLRef' name='url' type='^{__CFURL=}'/>
+<arg declared_type='CGSize' name='maxThumbnailSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+<arg declared_type='CFDictionaryRef' name='options' type='^{__CFDictionary=}'/>
+<retval already_retained='true' declared_type='QLThumbnailRef' type='^{__QLThumbnail=}'/>
+</function>
+<function name='QLThumbnailDispatchAsync'>
+<arg declared_type='QLThumbnailRef' name='thumbnail' type='^{__QLThumbnail=}'/>
+<arg declared_type='dispatch_queue_t' name='queue' type='@'/>
+<arg declared_type='dispatch_block_t' function_pointer='true' name='completion' type='@?'>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='QLThumbnailGetContentRect'>
+<arg declared_type='QLThumbnailRef' name='thumbnail' type='^{__QLThumbnail=}'/>
+<retval declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='QLThumbnailGetMaximumSize'>
+<arg declared_type='QLThumbnailRef' name='thumbnail' type='^{__QLThumbnail=}'/>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</function>
+<function name='QLThumbnailGetTypeID'>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
+</function>
+<function name='QLThumbnailImageCreate'>
+<arg declared_type='CFAllocatorRef' name='allocator' type='^{__CFAllocator=}'/>
+<arg declared_type='CFURLRef' name='url' type='^{__CFURL=}'/>
+<arg declared_type='CGSize' name='maxThumbnailSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+<arg declared_type='CFDictionaryRef' name='options' type='^{__CFDictionary=}'/>
+<retval already_retained='true' declared_type='CGImageRef' type='^{CGImage=}'/>
+</function>
+<function name='QLThumbnailIsCancelled'>
+<arg declared_type='QLThumbnailRef' name='thumbnail' type='^{__QLThumbnail=}'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='QLThumbnailRequestCopyContentUTI'>
+<arg declared_type='QLThumbnailRequestRef' name='thumbnail' type='^{__QLThumbnailRequest=}'/>
+<retval already_retained='true' declared_type='CFStringRef' type='^{__CFString=}'/>
+</function>
+<function name='QLThumbnailRequestCopyOptions'>
+<arg declared_type='QLThumbnailRequestRef' name='thumbnail' type='^{__QLThumbnailRequest=}'/>
+<retval already_retained='true' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+</function>
+<function name='QLThumbnailRequestCopyURL'>
+<arg declared_type='QLThumbnailRequestRef' name='thumbnail' type='^{__QLThumbnailRequest=}'/>
+<retval already_retained='true' declared_type='CFURLRef' type='^{__CFURL=}'/>
+</function>
+<function name='QLThumbnailRequestCreateContext'>
+<arg declared_type='QLThumbnailRequestRef' name='thumbnail' type='^{__QLThumbnailRequest=}'/>
+<arg declared_type='CGSize' name='size' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+<arg declared_type='Boolean' name='isBitmap' type='B'/>
+<arg declared_type='CFDictionaryRef' name='properties' type='^{__CFDictionary=}'/>
+<retval already_retained='true' declared_type='CGContextRef' type='^{CGContext=}'/>
+</function>
+<function name='QLThumbnailRequestFlushContext'>
+<arg declared_type='QLThumbnailRequestRef' name='thumbnail' type='^{__QLThumbnailRequest=}'/>
+<arg declared_type='CGContextRef' name='context' type='^{CGContext=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='QLThumbnailRequestGetDocumentObject'>
+<arg declared_type='QLThumbnailRequestRef' name='thumbnail' type='^{__QLThumbnailRequest=}'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</function>
+<function name='QLThumbnailRequestGetGeneratorBundle'>
+<arg declared_type='QLThumbnailRequestRef' name='thumbnail' type='^{__QLThumbnailRequest=}'/>
+<retval declared_type='CFBundleRef' type='^{__CFBundle=}'/>
+</function>
+<function name='QLThumbnailRequestGetMaximumSize'>
+<arg declared_type='QLThumbnailRequestRef' name='thumbnail' type='^{__QLThumbnailRequest=}'/>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</function>
+<function name='QLThumbnailRequestGetTypeID'>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
+</function>
+<function name='QLThumbnailRequestIsCancelled'>
+<arg declared_type='QLThumbnailRequestRef' name='thumbnail' type='^{__QLThumbnailRequest=}'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='QLThumbnailRequestSetDocumentObject'>
+<arg declared_type='QLThumbnailRequestRef' name='thumbnail' type='^{__QLThumbnailRequest=}'/>
+<arg const='true' declared_type='void*' name='object' type='^v'/>
+<arg const='true' declared_type='CFArrayCallBacks*' name='callbacks' type='^{_CFArrayCallBacks=i^?^?^?^?}' type64='^{_CFArrayCallBacks=q^?^?^?^?}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='QLThumbnailRequestSetImage'>
+<arg declared_type='QLThumbnailRequestRef' name='thumbnail' type='^{__QLThumbnailRequest=}'/>
+<arg declared_type='CGImageRef' name='image' type='^{CGImage=}'/>
+<arg declared_type='CFDictionaryRef' name='properties' type='^{__CFDictionary=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='QLThumbnailRequestSetImageAtURL'>
+<arg declared_type='QLThumbnailRequestRef' name='thumbnail' type='^{__QLThumbnailRequest=}'/>
+<arg declared_type='CFURLRef' name='url' type='^{__CFURL=}'/>
+<arg declared_type='CFDictionaryRef' name='properties' type='^{__CFDictionary=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='QLThumbnailRequestSetImageWithData'>
+<arg declared_type='QLThumbnailRequestRef' name='thumbnail' type='^{__QLThumbnailRequest=}'/>
+<arg declared_type='CFDataRef' name='data' type='^{__CFData=}'/>
+<arg declared_type='CFDictionaryRef' name='properties' type='^{__CFDictionary=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='QLThumbnailRequestSetThumbnailWithDataRepresentation'>
+<arg declared_type='QLThumbnailRequestRef' name='thumbnail' type='^{__QLThumbnailRequest=}'/>
+<arg declared_type='CFDataRef' name='data' type='^{__CFData=}'/>
+<arg declared_type='CFStringRef' name='contentTypeUTI' type='^{__CFString=}'/>
+<arg declared_type='CFDictionaryRef' name='previewProperties' type='^{__CFDictionary=}'/>
+<arg declared_type='CFDictionaryRef' name='properties' type='^{__CFDictionary=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='QLThumbnailRequestSetThumbnailWithURLRepresentation'>
+<arg declared_type='QLThumbnailRequestRef' name='thumbnail' type='^{__QLThumbnailRequest=}'/>
+<arg declared_type='CFURLRef' name='url' type='^{__CFURL=}'/>
+<arg declared_type='CFStringRef' name='contentTypeUTI' type='^{__CFString=}'/>
+<arg declared_type='CFDictionaryRef' name='previewProperties' type='^{__CFDictionary=}'/>
+<arg declared_type='CFDictionaryRef' name='properties' type='^{__CFDictionary=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+</signatures>

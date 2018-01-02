@@ -1,0 +1,261 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<enum name='NCUpdateResultFailed' value64='2'/>
+<enum name='NCUpdateResultNewData' value64='0'/>
+<enum name='NCUpdateResultNoData' value64='1'/>
+<class name='NCWidgetController'>
+<method class_method='true' selector='defaultWidgetController'>
+<retval declared_type64='NCWidgetController*' type64='@'/>
+</method>
+<method selector='setHasContent:forWidgetWithBundleIdentifier:'>
+<arg declared_type64='BOOL' index='0' name='flag' type64='B'/>
+<arg declared_type64='NSString*' index='1' name='bundleID' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='widgetController'>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+</class>
+<class name='NCWidgetListViewController'>
+<method selector='contents'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='editing'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='hasDividerLines'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='minimumVisibleRowCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='rowForViewController:'>
+<arg declared_type64='NSViewController*' index='0' name='viewController' type64='@'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='setContents:'>
+<arg declared_type64='NSArray*' index='0' name='contents' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setEditing:'>
+<arg declared_type64='BOOL' index='0' name='editing' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setHasDividerLines:'>
+<arg declared_type64='BOOL' index='0' name='hasDividerLines' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMinimumVisibleRowCount:'>
+<arg declared_type64='NSUInteger' index='0' name='minimumVisibleRowCount' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShowsAddButtonWhenEditing:'>
+<arg declared_type64='BOOL' index='0' name='showsAddButtonWhenEditing' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='showsAddButtonWhenEditing'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='viewControllerAtRow:makeIfNecessary:'>
+<arg declared_type64='NSUInteger' index='0' name='row' type64='Q'/>
+<arg declared_type64='BOOL' index='1' name='makeIfNecesary' type64='B'/>
+<retval declared_type64='NSViewController*' type64='@'/>
+</method>
+</class>
+<class name='NCWidgetSearchViewController'>
+<method selector='delegate'>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='searchDescription'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='searchResultKeyPath'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='searchResults'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='searchResultsPlaceholderString'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSearchDescription:'>
+<arg declared_type64='NSString*' index='0' name='searchDescription' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSearchResultKeyPath:'>
+<arg declared_type64='NSString*' index='0' name='searchResultKeyPath' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSearchResults:'>
+<arg declared_type64='NSArray*' index='0' name='searchResults' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSearchResultsPlaceholderString:'>
+<arg declared_type64='NSString*' index='0' name='searchResultsPlaceholderString' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='widgetAllowsEditing'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='widgetDidBeginEditing'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='widgetDidEndEditing'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='widgetList:didRemoveRow:'>
+<arg declared_type64='NCWidgetListViewController*' index='0' name='list' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='row' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='widgetList:didReorderRow:toRow:'>
+<arg declared_type64='NCWidgetListViewController*' index='0' name='list' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='row' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='newIndex' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='widgetList:shouldRemoveRow:'>
+<arg declared_type64='NCWidgetListViewController*' index='0' name='list' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='row' type64='Q'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='widgetList:shouldReorderRow:'>
+<arg declared_type64='NCWidgetListViewController*' index='0' name='list' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='row' type64='Q'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='widgetList:viewControllerForRow:'>
+<arg declared_type64='NCWidgetListViewController*' index='0' name='list' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='row' type64='Q'/>
+<retval declared_type64='NSViewController*' type64='@'/>
+</method>
+<method selector='widgetListPerformAddAction:'>
+<arg declared_type64='NCWidgetListViewController*' index='0' name='list' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='widgetMarginInsetsForProposedMarginInsets:'>
+<arg declared_type64='NSEdgeInsets' index='0' name='defaultMarginInset' type64='{NSEdgeInsets=dddd}'/>
+<retval declared_type64='NSEdgeInsets' type64='{NSEdgeInsets=dddd}'/>
+</method>
+<method selector='widgetPerformUpdateWithCompletionHandler:'>
+<arg declared_type64='void (^)(NCUpdateResult)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NCUpdateResult' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='widgetSearch:resultSelected:'>
+<arg declared_type64='NCWidgetSearchViewController*' index='0' name='controller' type64='@'/>
+<arg declared_type64='id' index='1' name='object' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='widgetSearch:searchForTerm:maxResults:'>
+<arg declared_type64='NCWidgetSearchViewController*' index='0' name='controller' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='searchTerm' type64='@'/>
+<arg declared_type64='NSUInteger' index='2' name='max' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='widgetSearchTermCleared:'>
+<arg declared_type64='NCWidgetSearchViewController*' index='0' name='controller' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NSViewController'>
+<method selector='presentViewControllerInWidget:'>
+<arg declared_type64='NSViewController*' index='0' name='viewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='NCWidgetListViewDelegate'>
+<method selector='widgetList:didRemoveRow:' type64='v32@0:8@16Q24'>
+<arg declared_type64='NCWidgetListViewController*' index='0' name='list' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='row' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='widgetList:didReorderRow:toRow:' type64='v40@0:8@16Q24Q32'>
+<arg declared_type64='NCWidgetListViewController*' index='0' name='list' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='row' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='newIndex' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='widgetList:shouldRemoveRow:' type64='B32@0:8@16Q24'>
+<arg declared_type64='NCWidgetListViewController*' index='0' name='list' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='row' type64='Q'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='widgetList:shouldReorderRow:' type64='B32@0:8@16Q24'>
+<arg declared_type64='NCWidgetListViewController*' index='0' name='list' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='row' type64='Q'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='widgetList:viewControllerForRow:' type64='@32@0:8@16Q24'>
+<arg declared_type64='NCWidgetListViewController*' index='0' name='list' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='row' type64='Q'/>
+<retval declared_type64='NSViewController*' type64='@'/>
+</method>
+<method selector='widgetListPerformAddAction:' type64='v24@0:8@16'>
+<arg declared_type64='NCWidgetListViewController*' index='0' name='list' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NCWidgetProviding'>
+<method selector='widgetAllowsEditing' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='widgetDidBeginEditing' type64='v16@0:8'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='widgetDidEndEditing' type64='v16@0:8'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='widgetMarginInsetsForProposedMarginInsets:' type64='{NSEdgeInsets=dddd}48@0:8{NSEdgeInsets=dddd}16'>
+<arg declared_type64='NSEdgeInsets' index='0' name='defaultMarginInset' type64='{NSEdgeInsets=dddd}'/>
+<retval declared_type64='NSEdgeInsets' type64='{NSEdgeInsets=dddd}'/>
+</method>
+<method selector='widgetPerformUpdateWithCompletionHandler:' type64='v24@0:8@?16'>
+<arg declared_type64='void (^)(NCUpdateResult)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NCUpdateResult' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NCWidgetSearchViewDelegate'>
+<method selector='widgetSearch:resultSelected:' type64='v32@0:8@16@24'>
+<arg declared_type64='NCWidgetSearchViewController*' index='0' name='controller' type64='@'/>
+<arg declared_type64='id' index='1' name='object' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='widgetSearch:searchForTerm:maxResults:' type64='v40@0:8@16@24Q32'>
+<arg declared_type64='NCWidgetSearchViewController*' index='0' name='controller' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='searchTerm' type64='@'/>
+<arg declared_type64='NSUInteger' index='2' name='max' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='widgetSearchTermCleared:' type64='v24@0:8@16'>
+<arg declared_type64='NCWidgetSearchViewController*' index='0' name='controller' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

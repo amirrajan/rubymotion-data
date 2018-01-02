@@ -1,0 +1,1129 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework'/>
+<depends_on path='/System/Library/Frameworks/ServiceManagement.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<struct name='LSApplicationParameters' type='{LSApplicationParameters=&quot;version&quot;i&quot;flags&quot;I&quot;application&quot;^{FSRef}&quot;asyncLaunchRefCon&quot;^v&quot;environment&quot;^{__CFDictionary}&quot;argv&quot;^{__CFArray}&quot;initialEvent&quot;^{AEDesc}}' type64='{LSApplicationParameters=&quot;version&quot;q&quot;flags&quot;I&quot;application&quot;^{FSRef}&quot;asyncLaunchRefCon&quot;^v&quot;environment&quot;^{__CFDictionary}&quot;argv&quot;^{__CFArray}&quot;initialEvent&quot;^{AEDesc}}'>
+<field declared_type='CFIndex' name='version' type='l' type64='q'/>
+<field declared_type='LSLaunchFlags' name='flags' type='L' type64='I'/>
+<field const='true' declared_type='FSRef*' name='application' type='^{FSRef=[80C]}'/>
+<field declared_type='void*' name='asyncLaunchRefCon' type='^v'/>
+<field declared_type='CFDictionaryRef' name='environment' type='^{__CFDictionary=}'/>
+<field declared_type='CFArrayRef' name='argv' type='^{__CFArray=}'/>
+<field declared_type='AppleEvent*' name='initialEvent' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+</struct>
+<struct name='LSItemInfoRecord' type='{LSItemInfoRecord=&quot;flags&quot;I&quot;filetype&quot;I&quot;creator&quot;I&quot;extension&quot;^{__CFString}&quot;iconFileName&quot;^{__CFString}&quot;kindID&quot;I}' type64='{LSItemInfoRecord=&quot;flags&quot;I&quot;filetype&quot;I&quot;creator&quot;I&quot;extension&quot;^{__CFString}}'>
+<field declared_type='LSItemInfoFlags' name='flags' type='L' type64='I'/>
+<field declared_type='OSType' name='filetype' type='L' type64='I'/>
+<field declared_type='OSType' name='creator' type='L' type64='I'/>
+<field declared_type='CFStringRef' name='extension' type='^{__CFString=}'/>
+<field declared_type='CFStringRef' name='iconFileName' type='^{__CFString=}'/>
+<field declared_type='LSKindID' name='kindID' type='L'/>
+</struct>
+<struct name='LSLaunchFSRefSpec' type='{LSLaunchFSRefSpec=&quot;appRef&quot;^{FSRef}&quot;numDocs&quot;I&quot;itemRefs&quot;^{FSRef}&quot;passThruParams&quot;^{AEDesc}&quot;launchFlags&quot;I&quot;asyncRefCon&quot;^v}' type64='{LSLaunchFSRefSpec=&quot;appRef&quot;^{FSRef}&quot;numDocs&quot;Q&quot;itemRefs&quot;^{FSRef}&quot;passThruParams&quot;^{AEDesc}&quot;launchFlags&quot;I&quot;asyncRefCon&quot;^v}'>
+<field const='true' declared_type='FSRef*' name='appRef' type='^{FSRef=[80C]}'/>
+<field declared_type='ItemCount' name='numDocs' type='L' type64='Q'/>
+<field const='true' declared_type='FSRef*' name='itemRefs' type='^{FSRef=[80C]}'/>
+<field const='true' declared_type='AEDesc*' name='passThruParams' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<field declared_type='LSLaunchFlags' name='launchFlags' type='L' type64='I'/>
+<field declared_type='void*' name='asyncRefCon' type='^v'/>
+</struct>
+<struct name='LSLaunchURLSpec' type='{LSLaunchURLSpec=&quot;appURL&quot;^{__CFURL}&quot;itemURLs&quot;^{__CFArray}&quot;passThruParams&quot;^{AEDesc}&quot;launchFlags&quot;I&quot;asyncRefCon&quot;^v}'>
+<field declared_type='CFURLRef' name='appURL' type='^{__CFURL=}'/>
+<field declared_type='CFArrayRef' name='itemURLs' type='^{__CFArray=}'/>
+<field const='true' declared_type='AEDesc*' name='passThruParams' type='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<field declared_type='LSLaunchFlags' name='launchFlags' type='L' type64='I'/>
+<field declared_type='void*' name='asyncRefCon' type='^v'/>
+</struct>
+<cftype gettypeid_func='LSSharedFileListItemGetTypeID' name='LSSharedFileListItemRef' tollfree='__NSCFType' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<cftype gettypeid_func='LSSharedFileListGetTypeID' name='LSSharedFileListRef' tollfree='__NSCFType' type='^{OpaqueLSSharedFileListRef=}'/>
+<cftype name='IconRef' type='^{OpaqueIconRef=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSItemContentType' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSItemDisplayKind' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSItemDisplayName' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSItemExtension' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSItemExtensionIsHidden' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSItemFileCreator' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSItemFileType' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSItemIsInvisible' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSItemQuarantineProperties' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSItemRoleHandlerDisplayName' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSQuarantineAgentBundleIdentifierKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSQuarantineAgentNameKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSQuarantineDataURLKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSQuarantineOriginURLKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSQuarantineTimeStampKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSQuarantineTypeCalendarEventAttachment' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSQuarantineTypeEmailAttachment' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSQuarantineTypeInstantMessageAttachment' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSQuarantineTypeKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSQuarantineTypeOtherAttachment' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSQuarantineTypeOtherDownload' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kLSQuarantineTypeWebDownload' type='^{__CFString=}'/>
+<constant declared_type='CFStringRef' name='kLSSharedFileListFavoriteItems' type='^{__CFString=}'/>
+<constant declared_type='CFStringRef' name='kLSSharedFileListFavoriteVolumes' type='^{__CFString=}'/>
+<constant declared_type='CFStringRef' name='kLSSharedFileListGlobalLoginItems' type='^{__CFString=}'/>
+<constant declared_type='LSSharedFileListItemRef' name='kLSSharedFileListItemBeforeFirst' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<constant declared_type='CFStringRef' name='kLSSharedFileListItemHidden' type='^{__CFString=}'/>
+<constant declared_type='LSSharedFileListItemRef' name='kLSSharedFileListItemLast' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<constant declared_type='CFStringRef' name='kLSSharedFileListLoginItemHidden' type='^{__CFString=}'/>
+<constant declared_type='CFStringRef' name='kLSSharedFileListRecentApplicationItems' type='^{__CFString=}'/>
+<constant declared_type='CFStringRef' name='kLSSharedFileListRecentDocumentItems' type='^{__CFString=}'/>
+<constant declared_type='CFStringRef' name='kLSSharedFileListRecentItemsMaxAmount' type='^{__CFString=}'/>
+<constant declared_type='CFStringRef' name='kLSSharedFileListRecentServerItems' type='^{__CFString=}'/>
+<constant declared_type='CFStringRef' name='kLSSharedFileListSessionLoginItems' type='^{__CFString=}'/>
+<constant declared_type='CFStringRef' name='kLSSharedFileListVolumesComputerVisible' type='^{__CFString=}'/>
+<constant declared_type='CFStringRef' name='kLSSharedFileListVolumesIDiskVisible' type='^{__CFString=}'/>
+<constant declared_type='CFStringRef' name='kLSSharedFileListVolumesNetworkVisible' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTExportedTypeDeclarationsKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTImportedTypeDeclarationsKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTagClassFilenameExtension' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTagClassMIMEType' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTagClassNSPboardType' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTagClassOSType' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTType3DContent' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeAVIMovie' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeAliasFile' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeAliasRecord' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeAppleICNS' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeAppleProtectedMPEG4Audio' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeAppleProtectedMPEG4Video' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeAppleScript' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeApplication' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeApplicationBundle' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeApplicationFile' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeArchive' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeAssemblyLanguageSource' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeAudio' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeAudioInterchangeFileFormat' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeAudiovisualContent' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeBMP' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeBinaryPropertyList' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeBookmark' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeBundle' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeBzip2Archive' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeCHeader' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeCPlusPlusHeader' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeCPlusPlusSource' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeCSource' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeCalendarEvent' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeCommaSeparatedText' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeCompositeContent' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeConformsToKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeContact' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeContent' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeData' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeDatabase' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeDelimitedText' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeDescriptionKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeDirectory' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeDiskImage' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeElectronicPublication' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeEmailMessage' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeExecutable' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeFileURL' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeFlatRTFD' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeFolder' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeFont' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeFramework' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeGIF' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeGNUZipArchive' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeHTML' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeICO' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeIconFileKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeIdentifierKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeImage' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeInkText' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeInternetLocation' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeItem' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeJPEG' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeJPEG2000' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeJSON' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeJavaArchive' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeJavaClass' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeJavaScript' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeJavaSource' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeLog' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeM3UPlaylist' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeMIDIAudio' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeMP3' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeMPEG' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeMPEG2TransportStream' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeMPEG2Video' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeMPEG4' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeMPEG4Audio' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeMessage' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeMountPoint' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeMovie' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeOSAScript' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeOSAScriptBundle' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeObjectiveCPlusPlusSource' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeObjectiveCSource' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypePDF' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypePHPScript' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypePICT' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypePKCS12' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypePNG' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypePackage' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypePerlScript' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypePlainText' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypePlaylist' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypePluginBundle' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypePresentation' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypePropertyList' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypePythonScript' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeQuickLookGenerator' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeQuickTimeImage' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeQuickTimeMovie' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeRTF' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeRTFD' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeRawImage' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeReferenceURLKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeResolvable' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeRubyScript' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeScalableVectorGraphics' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeScript' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeShellScript' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeSourceCode' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeSpotlightImporter' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeSpreadsheet' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeSymLink' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeSystemPreferencesPane' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeTIFF' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeTXNTextAndMultimediaData' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeTabSeparatedText' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeTagSpecificationKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeText' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeToDoItem' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeURL' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeURLBookmarkData' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeUTF16ExternalPlainText' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeUTF16PlainText' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeUTF8PlainText' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeUTF8TabSeparatedText' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeUnixExecutable' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeVCard' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeVersionKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeVideo' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeVolume' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeWaveformAudio' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeWebArchive' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeWindowsExecutable' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeX509Certificate' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeXML' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeXMLPropertyList' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeXPCService' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef' name='kUTTypeZipArchive' type='^{__CFString=}'/>
+<enum name='appleMenuFolderIconResource' value='-3982'/>
+<enum name='controlPanelFolderIconResource' value='-3976'/>
+<enum name='desktopIconResource' value='-3992'/>
+<enum name='dropFolderIconResource' value='-3979'/>
+<enum name='extensionsFolderIconResource' value='-3973'/>
+<enum name='floppyIconResource' value='-3998'/>
+<enum name='fontsFolderIconResource' value='-3968'/>
+<enum name='fullTrashIconResource' value='-3984'/>
+<enum name='genericApplicationIconResource' value='-3996'/>
+<enum name='genericCDROMIconResource' value='-3987'/>
+<enum name='genericDeskAccessoryIconResource' value='-3991'/>
+<enum name='genericDocumentIconResource' value='-4000'/>
+<enum name='genericEditionFileIconResource' value='-3989'/>
+<enum name='genericExtensionIconResource' value='-16415'/>
+<enum name='genericFileServerIconResource' value='-3972'/>
+<enum name='genericFolderIconResource' value='-3999'/>
+<enum name='genericHardDiskIconResource' value='-3995'/>
+<enum name='genericMoverObjectIconResource' value='-3969'/>
+<enum name='genericPreferencesIconResource' value='-3971'/>
+<enum name='genericQueryDocumentIconResource' value='-16506'/>
+<enum name='genericRAMDiskIconResource' value='-3988'/>
+<enum name='genericStationeryIconResource' value='-3985'/>
+<enum name='genericSuitcaseIconResource' value='-3970'/>
+<enum name='kAFPServerIcon' value='1634103411'/>
+<enum name='kAlertCautionBadgeIcon' value='1667392615'/>
+<enum name='kAlertCautionIcon' value='1667331444'/>
+<enum name='kAlertNoteIcon' value='1852798053'/>
+<enum name='kAlertStopIcon' value='1937010544'/>
+<enum name='kAliasBadgeIcon' value='1633838183'/>
+<enum name='kAppearanceFolderIcon' value='1634758770'/>
+<enum name='kAppleExtrasFolderIcon' value='1634040004'/>
+<enum name='kAppleLogoIcon' value='1667330156'/>
+<enum name='kAppleMenuFolderIcon' value='1634561653'/>
+<enum name='kAppleMenuFolderIconResource' value='-3982'/>
+<enum name='kAppleMenuIcon' value='1935765612'/>
+<enum name='kAppleScriptBadgeIcon' value='1935897200'/>
+<enum name='kAppleTalkIcon' value='1635019883'/>
+<enum name='kAppleTalkZoneIcon' value='1635023470'/>
+<enum name='kApplicationSupportFolderIcon' value='1634956656'/>
+<enum name='kApplicationsFolderIcon' value='1634758771'/>
+<enum name='kAssistantsFolderIcon' value='1634956484'/>
+<enum name='kBackwardArrowIcon' value='1650553455'/>
+<enum name='kBurningIcon' value='1651864174'/>
+<enum name='kClipboardIcon' value='1129072976'/>
+<enum name='kClippingPictureTypeIcon' value='1668051056'/>
+<enum name='kClippingSoundTypeIcon' value='1668051059'/>
+<enum name='kClippingTextTypeIcon' value='1668051060'/>
+<enum name='kClippingUnknownTypeIcon' value='1668051061'/>
+<enum name='kColorSyncFolderIcon' value='1886547814'/>
+<enum name='kComputerIcon' value='1919905652'/>
+<enum name='kConnectToIcon' value='1668178804'/>
+<enum name='kContextualMenuItemsFolderIcon' value='1668116085'/>
+<enum name='kControlPanelDisabledFolderIcon' value='1668575812'/>
+<enum name='kControlPanelFolderIcon' value='1668575852'/>
+<enum name='kControlPanelFolderIconResource' value='-3976'/>
+<enum name='kControlStripModulesFolderIcon' value='1935963844'/>
+<enum name='kDeleteAliasIcon' value='1684106345'/>
+<enum name='kDesktopIcon' value='1684370283'/>
+<enum name='kDesktopIconResource' value='-3992'/>
+<enum name='kDocumentsFolderIcon' value='1685021555'/>
+<enum name='kDropFolderIcon' value='1684172664'/>
+<enum name='kDropFolderIconResource' value='-3979'/>
+<enum name='kEjectMediaIcon' value='1701471587'/>
+<enum name='kExtensionsDisabledFolderIcon' value='1702392900'/>
+<enum name='kExtensionsFolderIcon' value='1702392942'/>
+<enum name='kExtensionsFolderIconResource' value='-3973'/>
+<enum name='kFTPServerIcon' value='1718906995'/>
+<enum name='kFavoriteItemsIcon' value='1717663346'/>
+<enum name='kFavoritesFolderIcon' value='1717663347'/>
+<enum name='kFinderIcon' value='1179534418'/>
+<enum name='kFloppyIconResource' value='-3998'/>
+<enum name='kFontSuitcaseIcon' value='1179011404'/>
+<enum name='kFontsFolderIcon' value='1718578804'/>
+<enum name='kFontsFolderIconResource' value='-3968'/>
+<enum name='kForwardArrowIcon' value='1717662319'/>
+<enum name='kFullTrashIcon' value='1718907496'/>
+<enum name='kFullTrashIconResource' value='-3984'/>
+<enum name='kGenericApplicationIcon' value='1095782476'/>
+<enum name='kGenericApplicationIconResource' value='-3996'/>
+<enum name='kGenericCDROMIcon' value='1667523698'/>
+<enum name='kGenericCDROMIconResource' value='-3987'/>
+<enum name='kGenericComponentIcon' value='1953001063'/>
+<enum name='kGenericControlPanelIcon' value='1095782467'/>
+<enum name='kGenericControlStripModuleIcon' value='1935959414'/>
+<enum name='kGenericDeskAccessoryIcon' value='1095782468'/>
+<enum name='kGenericDeskAccessoryIconResource' value='-3991'/>
+<enum name='kGenericDocumentIcon' value='1685021557'/>
+<enum name='kGenericDocumentIconResource' value='-4000'/>
+<enum name='kGenericEditionFileIcon' value='1701082214'/>
+<enum name='kGenericEditionFileIconResource' value='-3989'/>
+<enum name='kGenericExtensionIcon' value='1229867348'/>
+<enum name='kGenericExtensionIconResource' value='-16415'/>
+<enum name='kGenericFileServerIcon' value='1936881266'/>
+<enum name='kGenericFileServerIconResource' value='-3972'/>
+<enum name='kGenericFloppyIcon' value='1718382713'/>
+<enum name='kGenericFolderIcon' value='1718379634'/>
+<enum name='kGenericFolderIconResource' value='-3999'/>
+<enum name='kGenericFontIcon' value='1717987692'/>
+<enum name='kGenericFontScalerIcon' value='1935895666'/>
+<enum name='kGenericHardDiskIcon' value='1751413611'/>
+<enum name='kGenericHardDiskIconResource' value='-3995'/>
+<enum name='kGenericIDiskIcon' value='1768190827'/>
+<enum name='kGenericMoverObjectIcon' value='1836021362'/>
+<enum name='kGenericMoverObjectIconResource' value='-3969'/>
+<enum name='kGenericNetworkIcon' value='1735288180'/>
+<enum name='kGenericPCCardIcon' value='1885564259'/>
+<enum name='kGenericPreferencesIcon' value='1886545254'/>
+<enum name='kGenericPreferencesIconResource' value='-3971'/>
+<enum name='kGenericQueryDocumentIcon' value='1902473849'/>
+<enum name='kGenericQueryDocumentIconResource' value='-16506'/>
+<enum name='kGenericRAMDiskIcon' value='1918987620'/>
+<enum name='kGenericRAMDiskIconResource' value='-3988'/>
+<enum name='kGenericRemovableMediaIcon' value='1919774582'/>
+<enum name='kGenericSharedLibaryIcon' value='1936223330'/>
+<enum name='kGenericStationeryIcon' value='1935961955'/>
+<enum name='kGenericStationeryIconResource' value='-3985'/>
+<enum name='kGenericSuitcaseIcon' value='1937074548'/>
+<enum name='kGenericSuitcaseIconResource' value='-3970'/>
+<enum name='kGenericURLIcon' value='1735750252'/>
+<enum name='kGenericWORMIcon' value='2003792493'/>
+<enum name='kGenericWindowIcon' value='1735879022'/>
+<enum name='kGridIcon' value='1735551332'/>
+<enum name='kGroupIcon' value='1735554416'/>
+<enum name='kGuestUserIcon' value='1735750514'/>
+<enum name='kHTTPServerIcon' value='1752461427'/>
+<enum name='kHelpFolderIcon' value='-999789456'/>
+<enum name='kHelpIcon' value='1751477360'/>
+<enum name='kHelpIconResource' value='-20271'/>
+<enum name='kIPFileServerIcon' value='1769173622'/>
+<enum name='kIconServicesCatalogInfoMask' value='531550'/>
+<enum name='kIconServicesNoBadgeFlag' value='1'/>
+<enum name='kIconServicesNormalUsageFlag' value='0'/>
+<enum name='kIconServicesUpdateIfNeededFlag' value='2'/>
+<enum name='kInternationResourcesIcon' value='1768319340'/>
+<enum name='kInternationalResourcesIcon' value='1768319340'/>
+<enum name='kInternetFolderIcon' value='1768846532'/>
+<enum name='kInternetLocationAppleShareIcon' value='1768710502'/>
+<enum name='kInternetLocationAppleTalkZoneIcon' value='1768710516'/>
+<enum name='kInternetLocationFTPIcon' value='1768711796'/>
+<enum name='kInternetLocationFileIcon' value='1768711785'/>
+<enum name='kInternetLocationGenericIcon' value='1768712037'/>
+<enum name='kInternetLocationHTTPIcon' value='1768712308'/>
+<enum name='kInternetLocationMailIcon' value='1768713569'/>
+<enum name='kInternetLocationNSLNeighborhoodIcon' value='1768713843'/>
+<enum name='kInternetLocationNewsIcon' value='1768713847'/>
+<enum name='kInternetPlugInFolderIcon' value='-999398028'/>
+<enum name='kInternetSearchSitesFolderIcon' value='1769173862'/>
+<enum name='kKeepArrangedIcon' value='1634889319'/>
+<enum name='kKeyboardLayoutIcon' value='1801873772'/>
+<enum name='kLSAcceptAllowLoginUI' value='2'/>
+<enum name='kLSAcceptDefault' value='1'/>
+<enum name='kLSAppDoesNotClaimTypeErr' value='-10820'/>
+<enum name='kLSAppDoesNotSupportSchemeWarning' value='-10821'/>
+<enum name='kLSAppInTrashErr' value='-10660'/>
+<enum name='kLSApplicationNotFoundErr' value='-10814'/>
+<enum name='kLSAttributeNotFoundErr' value='-10662'/>
+<enum name='kLSAttributeNotSettableErr' value='-10663'/>
+<enum name='kLSCannotSetInfoErr' value='-10823'/>
+<enum name='kLSDataErr' value='-10817'/>
+<enum name='kLSDataTooOldErr' value='-10816'/>
+<enum name='kLSDataUnavailableErr' value='-10813'/>
+<enum name='kLSExecutableIncorrectFormat' value='-10661'/>
+<enum name='kLSHandlerOptionsDefault' value='0'/>
+<enum name='kLSHandlerOptionsIgnoreCreator' value='1'/>
+<enum name='kLSIncompatibleApplicationVersionErr' value='-10664'/>
+<enum name='kLSIncompatibleSystemVersionErr' value='-10825'/>
+<enum name='kLSInitializeDefaults' value='1'/>
+<enum name='kLSInvalidExtensionIndex' value='4294967295' value64='18446744073709551615'/>
+<enum name='kLSItemInfoAppIsScriptable' value='2048'/>
+<enum name='kLSItemInfoAppPrefersClassic' value='1024'/>
+<enum name='kLSItemInfoAppPrefersNative' value='512'/>
+<enum name='kLSItemInfoExtensionIsHidden' value='1048576'/>
+<enum name='kLSItemInfoIsAliasFile' value='16'/>
+<enum name='kLSItemInfoIsApplication' value='4'/>
+<enum name='kLSItemInfoIsClassicApp' value='256'/>
+<enum name='kLSItemInfoIsContainer' value='8'/>
+<enum name='kLSItemInfoIsInvisible' value='64'/>
+<enum name='kLSItemInfoIsNativeApp' value='128'/>
+<enum name='kLSItemInfoIsPackage' value='2'/>
+<enum name='kLSItemInfoIsPlainFile' value='1'/>
+<enum name='kLSItemInfoIsSymlink' value='32'/>
+<enum name='kLSItemInfoIsVolume' value='4096'/>
+<enum name='kLSLaunchAndDisplayErrors' value='64'/>
+<enum name='kLSLaunchAndHide' value='1048576'/>
+<enum name='kLSLaunchAndHideOthers' value='2097152'/>
+<enum name='kLSLaunchAndPrint' value='2'/>
+<enum name='kLSLaunchAsync' value='65536'/>
+<enum name='kLSLaunchDefaults' value='1'/>
+<enum name='kLSLaunchDontAddToRecents' value='256'/>
+<enum name='kLSLaunchDontSwitch' value='512'/>
+<enum name='kLSLaunchHasUntrustedContents' value='4194304'/>
+<enum name='kLSLaunchInClassic' value='262144'/>
+<enum name='kLSLaunchInProgressErr' value='-10818'/>
+<enum name='kLSLaunchInhibitBGOnly' value='128'/>
+<enum name='kLSLaunchNewInstance' value='524288'/>
+<enum name='kLSLaunchNoParams' value='2048'/>
+<enum name='kLSLaunchReserved2' value='4'/>
+<enum name='kLSLaunchReserved3' value='8'/>
+<enum name='kLSLaunchReserved4' value='16'/>
+<enum name='kLSLaunchReserved5' value='32'/>
+<enum name='kLSLaunchStartClassic' value='131072'/>
+<enum name='kLSMinCatInfoBitmap' value='6154'/>
+<enum name='kLSMultipleSessionsNotSupportedErr' value='-10829'/>
+<enum name='kLSNoClassicEnvironmentErr' value='-10828'/>
+<enum name='kLSNoExecutableErr' value='-10827'/>
+<enum name='kLSNoLaunchPermissionErr' value='-10826'/>
+<enum name='kLSNoRegistrationInfoErr' value='-10824'/>
+<enum name='kLSNoRosettaEnvironmentErr' value='-10665'/>
+<enum name='kLSNotAnApplicationErr' value='-10811'/>
+<enum name='kLSNotInitializedErr' value='-10812'/>
+<enum name='kLSNotRegisteredErr' value='-10819'/>
+<enum name='kLSRequestAllFlags' value='16'/>
+<enum name='kLSRequestAllInfo' value='4294967295'/>
+<enum name='kLSRequestAppTypeFlags' value='8'/>
+<enum name='kLSRequestBasicFlagsOnly' value='4'/>
+<enum name='kLSRequestExtension' value='1'/>
+<enum name='kLSRequestExtensionFlagsOnly' value='64'/>
+<enum name='kLSRequestIconAndKind' value='32'/>
+<enum name='kLSRequestTypeCreator' value='2'/>
+<enum name='kLSRolesAll' value='4294967295'/>
+<enum name='kLSRolesEditor' value='4'/>
+<enum name='kLSRolesNone' value='1'/>
+<enum name='kLSRolesShell' value='8'/>
+<enum name='kLSRolesViewer' value='2'/>
+<enum name='kLSServerCommunicationErr' value='-10822'/>
+<enum name='kLSSharedFileListDoNotMountVolumes' value='2'/>
+<enum name='kLSSharedFileListNoUserInteraction' value='1'/>
+<enum name='kLSUnknownCreator' value='0'/>
+<enum name='kLSUnknownErr' value='-10810'/>
+<enum name='kLSUnknownType' value='0'/>
+<enum name='kLSUnknownTypeErr' value='-10815'/>
+<enum name='kLocalesFolderIcon' value='-999526557'/>
+<enum name='kLockedBadgeIcon' value='1818387559'/>
+<enum name='kLockedIcon' value='1819239275'/>
+<enum name='kMacOSReadMeFolderIcon' value='1836020420'/>
+<enum name='kMountedBadgeIcon' value='1835164775'/>
+<enum name='kMountedFolderIcon' value='1835955300'/>
+<enum name='kMountedFolderIconResource' value='-3977'/>
+<enum name='kNoFilesIcon' value='1852205420'/>
+<enum name='kNoFolderIcon' value='1852206180'/>
+<enum name='kNoWriteIcon' value='1853321844'/>
+<enum name='kOpenFolderIcon' value='1868983396'/>
+<enum name='kOpenFolderIconResource' value='-3997'/>
+<enum name='kOwnedFolderIcon' value='1870098020'/>
+<enum name='kOwnedFolderIconResource' value='-3980'/>
+<enum name='kOwnerIcon' value='1937077106'/>
+<enum name='kPreferencesFolderIcon' value='1886545604'/>
+<enum name='kPreferencesFolderIconResource' value='-3974'/>
+<enum name='kPrintMonitorFolderIcon' value='1886547572'/>
+<enum name='kPrintMonitorFolderIconResource' value='-3975'/>
+<enum name='kPrinterDescriptionFolderIcon' value='1886413926'/>
+<enum name='kPrinterDriverFolderIcon' value='-999263644'/>
+<enum name='kPrivateFolderIcon' value='1886549606'/>
+<enum name='kPrivateFolderIconResource' value='-3994'/>
+<enum name='kProtectedApplicationFolderIcon' value='1885433968'/>
+<enum name='kProtectedSystemFolderIcon' value='1886615923'/>
+<enum name='kPublicFolderIcon' value='1886741094'/>
+<enum name='kQuestionMarkIcon' value='1903519091'/>
+<enum name='kRecentApplicationsFolderIcon' value='1918988400'/>
+<enum name='kRecentDocumentsFolderIcon' value='1919184739'/>
+<enum name='kRecentItemsIcon' value='1919118964'/>
+<enum name='kRecentServersFolderIcon' value='1920168566'/>
+<enum name='kRightContainerArrowIcon' value='1919115634'/>
+<enum name='kScriptingAdditionsFolderIcon' value='-999070862'/>
+<enum name='kScriptsFolderIcon' value='1935897284'/>
+<enum name='kSharedBadgeIcon' value='1935828071'/>
+<enum name='kSharedFolderIcon' value='1936221804'/>
+<enum name='kSharedFolderIconResource' value='-3978'/>
+<enum name='kSharedLibrariesFolderIcon' value='-999528094'/>
+<enum name='kSharingPrivsNotApplicableIcon' value='1936223841'/>
+<enum name='kSharingPrivsReadOnlyIcon' value='1936224879'/>
+<enum name='kSharingPrivsReadWriteIcon' value='1936224887'/>
+<enum name='kSharingPrivsUnknownIcon' value='1936225643'/>
+<enum name='kSharingPrivsWritableIcon' value='2003986804'/>
+<enum name='kShortcutIcon' value='1936224884'/>
+<enum name='kShutdownItemsDisabledFolderIcon' value='1936221252'/>
+<enum name='kShutdownItemsFolderIcon' value='1936221286'/>
+<enum name='kSortAscendingIcon' value='1634954852'/>
+<enum name='kSortDescendingIcon' value='1685286500'/>
+<enum name='kSoundFileIcon' value='1936091500'/>
+<enum name='kSpeakableItemsFolder' value='1936747369'/>
+<enum name='kStartupFolderIconResource' value='-3981'/>
+<enum name='kStartupItemsDisabledFolderIcon' value='1937011268'/>
+<enum name='kStartupItemsFolderIcon' value='1937011316'/>
+<enum name='kSystemExtensionDisabledFolderIcon' value='1835098948'/>
+<enum name='kSystemFolderIcon' value='1835098995'/>
+<enum name='kSystemFolderIconResource' value='-3983'/>
+<enum name='kSystemIconsCreator' value='1835098995'/>
+<enum name='kSystemSuitcaseIcon' value='2054388083'/>
+<enum name='kTextEncodingsFolderIcon' value='-999004808'/>
+<enum name='kToolbarAdvancedIcon' value='1952604534'/>
+<enum name='kToolbarApplicationsFolderIcon' value='1950445683'/>
+<enum name='kToolbarCustomizeIcon' value='1952675187'/>
+<enum name='kToolbarDeleteIcon' value='1952736620'/>
+<enum name='kToolbarDesktopFolderIcon' value='1950643051'/>
+<enum name='kToolbarDocumentsFolderIcon' value='1950642019'/>
+<enum name='kToolbarDownloadsFolderIcon' value='1950644078'/>
+<enum name='kToolbarFavoritesIcon' value='1952866678'/>
+<enum name='kToolbarHomeIcon' value='1953001325'/>
+<enum name='kToolbarInfoIcon' value='1952606574'/>
+<enum name='kToolbarLabelsIcon' value='1952607330'/>
+<enum name='kToolbarLibraryFolderIcon' value='1951164770'/>
+<enum name='kToolbarMovieFolderIcon' value='1951231862'/>
+<enum name='kToolbarMusicFolderIcon' value='1951233395'/>
+<enum name='kToolbarPicturesFolderIcon' value='1951426915'/>
+<enum name='kToolbarPublicFolderIcon' value='1951429986'/>
+<enum name='kToolbarSitesFolderIcon' value='1951626355'/>
+<enum name='kToolbarUtilitiesFolderIcon' value='1951757420'/>
+<enum name='kTrashIcon' value='1953657704'/>
+<enum name='kTrashIconResource' value='-3993'/>
+<enum name='kTrueTypeFlatFontIcon' value='1936092788'/>
+<enum name='kTrueTypeFontIcon' value='1952868716'/>
+<enum name='kTrueTypeMultiFlatFontIcon' value='1953784678'/>
+<enum name='kUnknownFSObjectIcon' value='1970169459'/>
+<enum name='kUnlockedIcon' value='1970037611'/>
+<enum name='kUserFolderIcon' value='1969646692'/>
+<enum name='kUserIDiskIcon' value='1969517419'/>
+<enum name='kUserIcon' value='1970496882'/>
+<enum name='kUsersFolderIcon' value='1970500292'/>
+<enum name='kUtilitiesFolderIcon' value='1970563524'/>
+<enum name='kVoicesFolderIcon' value='1719037795'/>
+<enum name='kWorkgroupFolderIcon' value='2003201124'/>
+<enum name='mountedFolderIconResource' value='-3977'/>
+<enum name='openFolderIconResource' value='-3997'/>
+<enum name='ownedFolderIconResource' value='-3980'/>
+<enum name='preferencesFolderIconResource' value='-3974'/>
+<enum name='printMonitorFolderIconResource' value='-3975'/>
+<enum name='privateFolderIconResource' value='-3994'/>
+<enum name='sharedFolderIconResource' value='-3978'/>
+<enum name='startupFolderIconResource' value='-3981'/>
+<enum name='systemFolderIconResource' value='-3983'/>
+<enum name='trashIconResource' value='-3993'/>
+<function name='AcquireIconRef'>
+<arg declared_type='IconRef' name='theIconRef' type='^{OpaqueIconRef=}'/>
+<retval declared_type='OSErr' type='s'/>
+</function>
+<function name='CompositeIconRef'>
+<arg declared_type='IconRef' name='backgroundIconRef' type='^{OpaqueIconRef=}'/>
+<arg declared_type='IconRef' name='foregroundIconRef' type='^{OpaqueIconRef=}'/>
+<arg declared_type='IconRef*' name='compositeIconRef' type='^^{OpaqueIconRef}'/>
+<retval declared_type='OSErr' type='s'/>
+</function>
+<function name='GetCustomIconsEnabled'>
+<arg declared_type='SInt16' name='vRefNum' type='s'/>
+<arg declared_type='Boolean*' name='customIconsEnabled' type='^B'/>
+<retval declared_type='OSErr' type='s'/>
+</function>
+<function name='GetIconRef'>
+<arg declared_type='SInt16' name='vRefNum' type='s'/>
+<arg declared_type='OSType' name='creator' type='L' type64='I'/>
+<arg declared_type='OSType' name='iconType' type='L' type64='I'/>
+<arg declared_type='IconRef*' name='theIconRef' type='^^{OpaqueIconRef}'/>
+<retval declared_type='OSErr' type='s'/>
+</function>
+<function name='GetIconRefFromComponent'>
+<arg declared_type='Component' name='inComponent' type='^{ComponentRecord=[1l]}' type64='^{ComponentRecord=[1q]}'/>
+<arg declared_type='IconRef*' name='outIconRef' type='^^{OpaqueIconRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='GetIconRefFromFileInfo'>
+<arg const='true' declared_type='FSRef*' name='inRef' type='^{FSRef=[80C]}'/>
+<arg declared_type='UniCharCount' name='inFileNameLength' type='L' type64='Q'/>
+<arg const='true' declared_type='UniChar*' name='inFileName' type='^S'/>
+<arg declared_type='FSCatalogInfoBitmap' name='inWhichInfo' type='L' type64='I'/>
+<arg const='true' declared_type='FSCatalogInfo*' name='inCatalogInfo' type='^{FSCatalogInfo=SsIICCCC{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}[4L][16C][16C]QQQQII}' type64='^{FSCatalogInfo=SsIICCCC{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{FSPermissionInfo=IICCS^{__FSFileSecurity}}[16C][16C]QQQQII}'/>
+<arg declared_type='IconServicesUsageFlags' name='inUsageFlags' type='L' type64='I'/>
+<arg declared_type='IconRef*' name='outIconRef' type='^^{OpaqueIconRef}'/>
+<arg declared_type='SInt16*' name='outLabel' type='^s'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='GetIconRefFromFolder'>
+<arg declared_type='SInt16' name='vRefNum' type='s'/>
+<arg declared_type='SInt32' name='parentFolderID' type='l' type64='i'/>
+<arg declared_type='SInt32' name='folderID' type='l' type64='i'/>
+<arg declared_type='SInt8' name='attributes' type='c'/>
+<arg declared_type='SInt8' name='accessPrivileges' type='c'/>
+<arg declared_type='IconRef*' name='theIconRef' type='^^{OpaqueIconRef}'/>
+<retval declared_type='OSErr' type='s'/>
+</function>
+<function name='GetIconRefFromIconFamilyPtr'>
+<arg const='true' declared_type='IconFamilyResource*' name='inIconFamilyPtr' type='^{IconFamilyResource=Ii[1{IconFamilyElement=Ii[1C]}]}'/>
+<arg declared_type='Size' name='inSize' type='l' type64='q'/>
+<arg declared_type='IconRef*' name='outIconRef' type='^^{OpaqueIconRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='GetIconRefFromTypeInfo'>
+<arg declared_type='OSType' name='inCreator' type='L' type64='I'/>
+<arg declared_type='OSType' name='inType' type='L' type64='I'/>
+<arg declared_type='CFStringRef' name='inExtension' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef' name='inMIMEType' type='^{__CFString=}'/>
+<arg declared_type='IconServicesUsageFlags' name='inUsageFlags' type='L' type64='I'/>
+<arg declared_type='IconRef*' name='outIconRef' type='^^{OpaqueIconRef}'/>
+<retval declared_type='OSErr' type='s'/>
+</function>
+<function name='GetIconRefOwners'>
+<arg declared_type='IconRef' name='theIconRef' type='^{OpaqueIconRef=}'/>
+<arg declared_type='UInt16*' name='owners' type='^S'/>
+<retval declared_type='OSErr' type='s'/>
+</function>
+<function name='IsDataAvailableInIconRef'>
+<arg declared_type='OSType' name='inIconKind' type='L' type64='I'/>
+<arg declared_type='IconRef' name='inIconRef' type='^{OpaqueIconRef=}'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='IsIconRefComposite'>
+<arg declared_type='IconRef' name='compositeIconRef' type='^{OpaqueIconRef=}'/>
+<arg declared_type='IconRef*' name='backgroundIconRef' type='^^{OpaqueIconRef}'/>
+<arg declared_type='IconRef*' name='foregroundIconRef' type='^^{OpaqueIconRef}'/>
+<retval declared_type='OSErr' type='s'/>
+</function>
+<function name='IsValidIconRef'>
+<arg declared_type='IconRef' name='theIconRef' type='^{OpaqueIconRef=}'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='LSCanRefAcceptItem'>
+<arg const='true' declared_type='FSRef*' name='inItemFSRef' type='^{FSRef=[80C]}'/>
+<arg const='true' declared_type='FSRef*' name='inTargetRef' type='^{FSRef=[80C]}'/>
+<arg declared_type='LSRolesMask' name='inRoleMask' type='L' type64='I'/>
+<arg declared_type='LSAcceptanceFlags' name='inFlags' type='L' type64='I'/>
+<arg declared_type='Boolean*' name='outAcceptsItem' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSCanURLAcceptURL'>
+<arg declared_type='CFURLRef' name='inItemURL' type='^{__CFURL=}'/>
+<arg declared_type='CFURLRef' name='inTargetURL' type='^{__CFURL=}'/>
+<arg declared_type='LSRolesMask' name='inRoleMask' type='L' type64='I'/>
+<arg declared_type='LSAcceptanceFlags' name='inFlags' type='L' type64='I'/>
+<arg declared_type='Boolean*' name='outAcceptsItem' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSCopyAllHandlersForURLScheme'>
+<arg declared_type='CFStringRef' name='inURLScheme' type='^{__CFString=}'/>
+<retval already_retained='true' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+</function>
+<function name='LSCopyAllRoleHandlersForContentType'>
+<arg declared_type='CFStringRef' name='inContentType' type='^{__CFString=}'/>
+<arg declared_type='LSRolesMask' name='inRole' type='L' type64='I'/>
+<retval already_retained='true' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+</function>
+<function name='LSCopyApplicationForMIMEType'>
+<arg declared_type='CFStringRef' name='inMIMEType' type='^{__CFString=}'/>
+<arg declared_type='LSRolesMask' name='inRoleMask' type='L' type64='I'/>
+<arg declared_type='CFURLRef*' name='outAppURL' type='^^{__CFURL}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSCopyApplicationURLsForBundleIdentifier'>
+<arg declared_type='CFStringRef' name='inBundleIdentifier' type='^{__CFString=}'/>
+<arg declared_type='CFErrorRef*' name='outError' type='^^{__CFError}'/>
+<retval already_retained='true' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+</function>
+<function name='LSCopyApplicationURLsForURL'>
+<arg declared_type='CFURLRef' name='inURL' type='^{__CFURL=}'/>
+<arg declared_type='LSRolesMask' name='inRoleMask' type='L' type64='I'/>
+<retval already_retained='true' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+</function>
+<function name='LSCopyDefaultApplicationURLForContentType'>
+<arg declared_type='CFStringRef' name='inContentType' type='^{__CFString=}'/>
+<arg declared_type='LSRolesMask' name='inRoleMask' type='L' type64='I'/>
+<arg declared_type='CFErrorRef*' name='outError' type='^^{__CFError}'/>
+<retval already_retained='true' declared_type='CFURLRef' type='^{__CFURL=}'/>
+</function>
+<function name='LSCopyDefaultApplicationURLForURL'>
+<arg declared_type='CFURLRef' name='inURL' type='^{__CFURL=}'/>
+<arg declared_type='LSRolesMask' name='inRoleMask' type='L' type64='I'/>
+<arg declared_type='CFErrorRef*' name='outError' type='^^{__CFError}'/>
+<retval already_retained='true' declared_type='CFURLRef' type='^{__CFURL=}'/>
+</function>
+<function name='LSCopyDefaultHandlerForURLScheme'>
+<arg declared_type='CFStringRef' name='inURLScheme' type='^{__CFString=}'/>
+<retval already_retained='true' declared_type='CFStringRef' type='^{__CFString=}'/>
+</function>
+<function name='LSCopyDefaultRoleHandlerForContentType'>
+<arg declared_type='CFStringRef' name='inContentType' type='^{__CFString=}'/>
+<arg declared_type='LSRolesMask' name='inRole' type='L' type64='I'/>
+<retval already_retained='true' declared_type='CFStringRef' type='^{__CFString=}'/>
+</function>
+<function name='LSCopyDisplayNameForRef'>
+<arg const='true' declared_type='FSRef*' name='inRef' type='^{FSRef=[80C]}'/>
+<arg declared_type='CFStringRef*' name='outDisplayName' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSCopyDisplayNameForURL'>
+<arg declared_type='CFURLRef' name='inURL' type='^{__CFURL=}'/>
+<arg declared_type='CFStringRef*' name='outDisplayName' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSCopyItemAttribute'>
+<arg const='true' declared_type='FSRef*' name='inItem' type='^{FSRef=[80C]}'/>
+<arg declared_type='LSRolesMask' name='inRoles' type='L' type64='I'/>
+<arg declared_type='CFStringRef' name='inAttributeName' type='^{__CFString=}'/>
+<arg declared_type='CFTypeRef*' name='outValue' type='^^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSCopyItemAttributes'>
+<arg const='true' declared_type='FSRef*' name='inItem' type='^{FSRef=[80C]}'/>
+<arg declared_type='LSRolesMask' name='inRoles' type='L' type64='I'/>
+<arg declared_type='CFArrayRef' name='inAttributeNames' type='^{__CFArray=}'/>
+<arg declared_type='CFDictionaryRef*' name='outValues' type='^^{__CFDictionary}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSCopyItemInfoForRef'>
+<arg const='true' declared_type='FSRef*' name='inItemRef' type='^{FSRef=[80C]}'/>
+<arg declared_type='LSRequestedInfo' name='inWhichInfo' type='L' type64='I'/>
+<arg declared_type='LSItemInfoRecord*' name='outItemInfo' type='^{LSItemInfoRecord=III^{__CFString}^{__CFString}I}' type64='^{LSItemInfoRecord=III^{__CFString}}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSCopyItemInfoForURL'>
+<arg declared_type='CFURLRef' name='inURL' type='^{__CFURL=}'/>
+<arg declared_type='LSRequestedInfo' name='inWhichInfo' type='L' type64='I'/>
+<arg declared_type='LSItemInfoRecord*' name='outItemInfo' type='^{LSItemInfoRecord=III^{__CFString}^{__CFString}I}' type64='^{LSItemInfoRecord=III^{__CFString}}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSCopyKindStringForMIMEType'>
+<arg declared_type='CFStringRef' name='inMIMEType' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef*' name='outKindString' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSCopyKindStringForRef'>
+<arg const='true' declared_type='FSRef*' name='inFSRef' type='^{FSRef=[80C]}'/>
+<arg declared_type='CFStringRef*' name='outKindString' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSCopyKindStringForTypeInfo'>
+<arg declared_type='OSType' name='inType' type='L' type64='I'/>
+<arg declared_type='OSType' name='inCreator' type='L' type64='I'/>
+<arg declared_type='CFStringRef' name='inExtension' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef*' name='outKindString' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSCopyKindStringForURL'>
+<arg declared_type='CFURLRef' name='inURL' type='^{__CFURL=}'/>
+<arg declared_type='CFStringRef*' name='outKindString' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSFindApplicationForInfo'>
+<arg declared_type='OSType' name='inCreator' type='L' type64='I'/>
+<arg declared_type='CFStringRef' name='inBundleID' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef' name='inName' type='^{__CFString=}'/>
+<arg declared_type='FSRef*' name='outAppRef' type='^{FSRef=[80C]}'/>
+<arg declared_type='CFURLRef*' name='outAppURL' type='^^{__CFURL}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSGetApplicationForInfo'>
+<arg declared_type='OSType' name='inType' type='L' type64='I'/>
+<arg declared_type='OSType' name='inCreator' type='L' type64='I'/>
+<arg declared_type='CFStringRef' name='inExtension' type='^{__CFString=}'/>
+<arg declared_type='LSRolesMask' name='inRoleMask' type='L' type64='I'/>
+<arg declared_type='FSRef*' name='outAppRef' type='^{FSRef=[80C]}'/>
+<arg declared_type='CFURLRef*' name='outAppURL' type='^^{__CFURL}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSGetApplicationForItem'>
+<arg const='true' declared_type='FSRef*' name='inItemRef' type='^{FSRef=[80C]}'/>
+<arg declared_type='LSRolesMask' name='inRoleMask' type='L' type64='I'/>
+<arg declared_type='FSRef*' name='outAppRef' type='^{FSRef=[80C]}'/>
+<arg declared_type='CFURLRef*' name='outAppURL' type='^^{__CFURL}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSGetApplicationForURL'>
+<arg declared_type='CFURLRef' name='inURL' type='^{__CFURL=}'/>
+<arg declared_type='LSRolesMask' name='inRoleMask' type='L' type64='I'/>
+<arg declared_type='FSRef*' name='outAppRef' type='^{FSRef=[80C]}'/>
+<arg declared_type='CFURLRef*' name='outAppURL' type='^^{__CFURL}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSGetExtensionInfo'>
+<arg declared_type='UniCharCount' name='inNameLen' type='L' type64='Q'/>
+<arg const='true' declared_type='UniChar*' name='inNameBuffer' type='^S'/>
+<arg declared_type='UniCharCount*' name='outExtStartIndex' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSGetHandlerOptionsForContentType'>
+<arg declared_type='CFStringRef' name='inContentType' type='^{__CFString=}'/>
+<retval declared_type='LSHandlerOptions' type='L' type64='I'/>
+</function>
+<function name='LSInit'>
+<arg declared_type='LSInitializeFlags' name='inFlags' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSOpenApplication'>
+<arg const='true' declared_type='LSApplicationParameters*' name='appParams' type='^{LSApplicationParameters=iI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}' type64='^{LSApplicationParameters=qI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}'/>
+<arg declared_type='ProcessSerialNumber*' name='outPSN' type='^{ProcessSerialNumber=II}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSOpenCFURLRef'>
+<arg declared_type='CFURLRef' name='inURL' type='^{__CFURL=}'/>
+<arg declared_type='CFURLRef*' name='outLaunchedURL' type='^^{__CFURL}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSOpenFSRef'>
+<arg const='true' declared_type='FSRef*' name='inRef' type='^{FSRef=[80C]}'/>
+<arg declared_type='FSRef*' name='outLaunchedRef' type='^{FSRef=[80C]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSOpenFromRefSpec'>
+<arg const='true' declared_type='LSLaunchFSRefSpec*' name='inLaunchSpec' type='^{LSLaunchFSRefSpec=^{FSRef}I^{FSRef}^{AEDesc}I^v}' type64='^{LSLaunchFSRefSpec=^{FSRef}Q^{FSRef}^{AEDesc}I^v}'/>
+<arg declared_type='FSRef*' name='outLaunchedRef' type='^{FSRef=[80C]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSOpenFromURLSpec'>
+<arg const='true' declared_type='LSLaunchURLSpec*' name='inLaunchSpec' type='^{LSLaunchURLSpec=^{__CFURL}^{__CFArray}^{AEDesc}I^v}'/>
+<arg declared_type='CFURLRef*' name='outLaunchedURL' type='^^{__CFURL}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSOpenItemsWithRole'>
+<arg const='true' declared_type='FSRef*' name='inItems' type='^{FSRef=[80C]}'/>
+<arg declared_type='CFIndex' name='inItemCount' type='l' type64='q'/>
+<arg declared_type='LSRolesMask' name='inRole' type='L' type64='I'/>
+<arg const='true' declared_type='AEKeyDesc*' name='inAEParam' type='^{AEKeyDesc=I{AEDesc=I^^{OpaqueAEDataStorageType}}}'/>
+<arg const='true' declared_type='LSApplicationParameters*' name='inAppParams' type='^{LSApplicationParameters=iI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}' type64='^{LSApplicationParameters=qI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}'/>
+<arg declared_type='ProcessSerialNumber*' name='outPSNs' type='^{ProcessSerialNumber=II}'/>
+<arg declared_type='CFIndex' name='inMaxPSNCount' type='l' type64='q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSOpenURLsWithRole'>
+<arg declared_type='CFArrayRef' name='inURLs' type='^{__CFArray=}'/>
+<arg declared_type='LSRolesMask' name='inRole' type='L' type64='I'/>
+<arg const='true' declared_type='AEKeyDesc*' name='inAEParam' type='^{AEKeyDesc=I{AEDesc=I^^{OpaqueAEDataStorageType}}}'/>
+<arg const='true' declared_type='LSApplicationParameters*' name='inAppParams' type='^{LSApplicationParameters=iI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}' type64='^{LSApplicationParameters=qI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}'/>
+<arg declared_type='ProcessSerialNumber*' name='outPSNs' type='^{ProcessSerialNumber=II}'/>
+<arg declared_type='CFIndex' name='inMaxPSNCount' type='l' type64='q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSRegisterFSRef'>
+<arg const='true' declared_type='FSRef*' name='inRef' type='^{FSRef=[80C]}'/>
+<arg declared_type='Boolean' name='inUpdate' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSRegisterURL'>
+<arg declared_type='CFURLRef' name='inURL' type='^{__CFURL=}'/>
+<arg declared_type='Boolean' name='inUpdate' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSSetDefaultHandlerForURLScheme'>
+<arg declared_type='CFStringRef' name='inURLScheme' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef' name='inHandlerBundleID' type='^{__CFString=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSSetDefaultRoleHandlerForContentType'>
+<arg declared_type='CFStringRef' name='inContentType' type='^{__CFString=}'/>
+<arg declared_type='LSRolesMask' name='inRole' type='L' type64='I'/>
+<arg declared_type='CFStringRef' name='inHandlerBundleID' type='^{__CFString=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSSetExtensionHiddenForRef'>
+<arg const='true' declared_type='FSRef*' name='inRef' type='^{FSRef=[80C]}'/>
+<arg declared_type='Boolean' name='inHide' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSSetExtensionHiddenForURL'>
+<arg declared_type='CFURLRef' name='inURL' type='^{__CFURL=}'/>
+<arg declared_type='Boolean' name='inHide' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSSetHandlerOptionsForContentType'>
+<arg declared_type='CFStringRef' name='inContentType' type='^{__CFString=}'/>
+<arg declared_type='LSHandlerOptions' name='inOptions' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSSetItemAttribute'>
+<arg const='true' declared_type='FSRef*' name='inItem' type='^{FSRef=[80C]}'/>
+<arg declared_type='LSRolesMask' name='inRoles' type='L' type64='I'/>
+<arg declared_type='CFStringRef' name='inAttributeName' type='^{__CFString=}'/>
+<arg declared_type='CFTypeRef' name='inValue' type='@'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSSharedFileListAddObserver'>
+<arg declared_type='LSSharedFileListRef' name='inList' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg declared_type='CFRunLoopRef' name='inRunloop' type='^{__CFRunLoop=}'/>
+<arg declared_type='CFStringRef' name='inRunloopMode' type='^{__CFString=}'/>
+<arg declared_type='LSSharedFileListChangedProcPtr' function_pointer='true' name='callback' type='^?'>
+<arg declared_type='LSSharedFileListRef' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='void*' name='context' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='LSSharedFileListCopyProperty'>
+<arg declared_type='LSSharedFileListRef' name='inList' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg declared_type='CFStringRef' name='inPropertyName' type='^{__CFString=}'/>
+<retval already_retained='true' declared_type='CFTypeRef' type='@'/>
+</function>
+<function name='LSSharedFileListCopySnapshot'>
+<arg declared_type='LSSharedFileListRef' name='inList' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg declared_type='UInt32*' name='outSnapshotSeed' type='^I'/>
+<retval already_retained='true' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+</function>
+<function name='LSSharedFileListCreate'>
+<arg declared_type='CFAllocatorRef' name='inAllocator' type='^{__CFAllocator=}'/>
+<arg declared_type='CFStringRef' name='inListType' type='^{__CFString=}'/>
+<arg declared_type='CFTypeRef' name='listOptions' type='@'/>
+<retval already_retained='true' declared_type='LSSharedFileListRef' type='^{OpaqueLSSharedFileListRef=}'/>
+</function>
+<function name='LSSharedFileListGetSeedValue'>
+<arg declared_type='LSSharedFileListRef' name='inList' type='^{OpaqueLSSharedFileListRef=}'/>
+<retval declared_type='UInt32' type='L' type64='I'/>
+</function>
+<function name='LSSharedFileListGetTypeID'>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
+</function>
+<function name='LSSharedFileListInsertItemFSRef'>
+<arg declared_type='LSSharedFileListRef' name='inList' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg declared_type='LSSharedFileListItemRef' name='insertAfterThisItem' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<arg declared_type='CFStringRef' name='inDisplayName' type='^{__CFString=}'/>
+<arg declared_type='IconRef' name='inIconRef' type='^{OpaqueIconRef=}'/>
+<arg const='true' declared_type='FSRef*' name='inFSRef' type='^{FSRef=[80C]}'/>
+<arg declared_type='CFDictionaryRef' name='inPropertiesToSet' type='^{__CFDictionary=}'/>
+<arg declared_type='CFArrayRef' name='inPropertiesToClear' type='^{__CFArray=}'/>
+<retval declared_type='LSSharedFileListItemRef' type='^{OpaqueLSSharedFileListItemRef=}'/>
+</function>
+<function name='LSSharedFileListInsertItemURL'>
+<arg declared_type='LSSharedFileListRef' name='inList' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg declared_type='LSSharedFileListItemRef' name='insertAfterThisItem' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<arg declared_type='CFStringRef' name='inDisplayName' type='^{__CFString=}'/>
+<arg declared_type='IconRef' name='inIconRef' type='^{OpaqueIconRef=}'/>
+<arg declared_type='CFURLRef' name='inURL' type='^{__CFURL=}'/>
+<arg declared_type='CFDictionaryRef' name='inPropertiesToSet' type='^{__CFDictionary=}'/>
+<arg declared_type='CFArrayRef' name='inPropertiesToClear' type='^{__CFArray=}'/>
+<retval declared_type='LSSharedFileListItemRef' type='^{OpaqueLSSharedFileListItemRef=}'/>
+</function>
+<function name='LSSharedFileListItemCopyDisplayName'>
+<arg declared_type='LSSharedFileListItemRef' name='inItem' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<retval already_retained='true' declared_type='CFStringRef' type='^{__CFString=}'/>
+</function>
+<function name='LSSharedFileListItemCopyIconRef'>
+<arg declared_type='LSSharedFileListItemRef' name='inItem' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<retval already_retained='true' declared_type='IconRef' type='^{OpaqueIconRef=}'/>
+</function>
+<function name='LSSharedFileListItemCopyProperty'>
+<arg declared_type='LSSharedFileListItemRef' name='inItem' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<arg declared_type='CFStringRef' name='inPropertyName' type='^{__CFString=}'/>
+<retval already_retained='true' declared_type='CFTypeRef' type='@'/>
+</function>
+<function name='LSSharedFileListItemCopyResolvedURL'>
+<arg declared_type='LSSharedFileListItemRef' name='inItem' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<arg declared_type='LSSharedFileListResolutionFlags' name='inFlags' type='L' type64='I'/>
+<arg declared_type='CFErrorRef*' name='outError' type='^^{__CFError}'/>
+<retval already_retained='true' declared_type='CFURLRef' type='^{__CFURL=}'/>
+</function>
+<function name='LSSharedFileListItemGetID'>
+<arg declared_type='LSSharedFileListItemRef' name='inItem' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<retval declared_type='UInt32' type='L' type64='I'/>
+</function>
+<function name='LSSharedFileListItemGetTypeID'>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
+</function>
+<function name='LSSharedFileListItemMove'>
+<arg declared_type='LSSharedFileListRef' name='inList' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg declared_type='LSSharedFileListItemRef' name='inItem' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<arg declared_type='LSSharedFileListItemRef' name='inMoveAfterItem' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSSharedFileListItemRemove'>
+<arg declared_type='LSSharedFileListRef' name='inList' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg declared_type='LSSharedFileListItemRef' name='inItem' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSSharedFileListItemResolve'>
+<arg declared_type='LSSharedFileListItemRef' name='inItem' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<arg declared_type='LSSharedFileListResolutionFlags' name='inFlags' type='L' type64='I'/>
+<arg declared_type='CFURLRef*' name='outURL' type='^^{__CFURL}'/>
+<arg declared_type='FSRef*' name='outRef' type='^{FSRef=[80C]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSSharedFileListItemSetProperty'>
+<arg declared_type='LSSharedFileListItemRef' name='inItem' type='^{OpaqueLSSharedFileListItemRef=}'/>
+<arg declared_type='CFStringRef' name='inPropertyName' type='^{__CFString=}'/>
+<arg declared_type='CFTypeRef' name='inPropertyData' type='@'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSSharedFileListRemoveAllItems'>
+<arg declared_type='LSSharedFileListRef' name='inList' type='^{OpaqueLSSharedFileListRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSSharedFileListRemoveObserver'>
+<arg declared_type='LSSharedFileListRef' name='inList' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg declared_type='CFRunLoopRef' name='inRunloop' type='^{__CFRunLoop=}'/>
+<arg declared_type='CFStringRef' name='inRunloopMode' type='^{__CFString=}'/>
+<arg declared_type='LSSharedFileListChangedProcPtr' function_pointer='true' name='callback' type='^?'>
+<arg declared_type='LSSharedFileListRef' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='void*' name='context' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='LSSharedFileListSetAuthorization'>
+<arg declared_type='LSSharedFileListRef' name='inList' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg declared_type='AuthorizationRef' name='inAuthorization' type='^{AuthorizationOpaqueRef=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSSharedFileListSetProperty'>
+<arg declared_type='LSSharedFileListRef' name='inList' type='^{OpaqueLSSharedFileListRef=}'/>
+<arg declared_type='CFStringRef' name='inPropertyName' type='^{__CFString=}'/>
+<arg declared_type='CFTypeRef' name='inPropertyData' type='@'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='LSTerm'>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='OverrideIconRef'>
+<arg declared_type='IconRef' name='oldIconRef' type='^{OpaqueIconRef=}'/>
+<arg declared_type='IconRef' name='newIconRef' type='^{OpaqueIconRef=}'/>
+<retval declared_type='OSErr' type='s'/>
+</function>
+<function name='ReadIconFromFSRef'>
+<arg const='true' declared_type='FSRef*' name='ref' type='^{FSRef=[80C]}'/>
+<arg declared_type='IconFamilyHandle*' name='iconFamily' type='^^^{IconFamilyResource}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='RegisterIconRefFromFSRef'>
+<arg declared_type='OSType' name='creator' type='L' type64='I'/>
+<arg declared_type='OSType' name='iconType' type='L' type64='I'/>
+<arg const='true' declared_type='FSRef*' name='iconFile' type='^{FSRef=[80C]}'/>
+<arg declared_type='IconRef*' name='theIconRef' type='^^{OpaqueIconRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='RegisterIconRefFromIconFamily'>
+<arg declared_type='OSType' name='creator' type='L' type64='I'/>
+<arg declared_type='OSType' name='iconType' type='L' type64='I'/>
+<arg declared_type='IconFamilyHandle' name='iconFamily' type='^^{IconFamilyResource}'/>
+<arg declared_type='IconRef*' name='theIconRef' type='^^{OpaqueIconRef}'/>
+<retval declared_type='OSErr' type='s'/>
+</function>
+<function name='ReleaseIconRef'>
+<arg declared_type='IconRef' name='theIconRef' type='^{OpaqueIconRef=}'/>
+<retval declared_type='OSErr' type='s'/>
+</function>
+<function name='RemoveIconRefOverride'>
+<arg declared_type='IconRef' name='theIconRef' type='^{OpaqueIconRef=}'/>
+<retval declared_type='OSErr' type='s'/>
+</function>
+<function name='SetCustomIconsEnabled'>
+<arg declared_type='SInt16' name='vRefNum' type='s'/>
+<arg declared_type='Boolean' name='enableCustomIcons' type='B'/>
+<retval declared_type='OSErr' type='s'/>
+</function>
+<function name='UTCreateStringForOSType'>
+<arg declared_type='OSType' name='inOSType' type='L' type64='I'/>
+<retval already_retained='true' declared_type='CFStringRef' type='^{__CFString=}'/>
+</function>
+<function name='UTGetOSTypeFromString'>
+<arg declared_type='CFStringRef' name='inString' type='^{__CFString=}'/>
+<retval declared_type='OSType' type='L' type64='I'/>
+</function>
+<function name='UTTypeConformsTo'>
+<arg declared_type='CFStringRef' name='inUTI' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef' name='inConformsToUTI' type='^{__CFString=}'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='UTTypeCopyAllTagsWithClass'>
+<arg declared_type='CFStringRef' name='inUTI' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef' name='inTagClass' type='^{__CFString=}'/>
+<retval already_retained='true' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+</function>
+<function name='UTTypeCopyDeclaration'>
+<arg declared_type='CFStringRef' name='inUTI' type='^{__CFString=}'/>
+<retval already_retained='true' declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+</function>
+<function name='UTTypeCopyDeclaringBundleURL'>
+<arg declared_type='CFStringRef' name='inUTI' type='^{__CFString=}'/>
+<retval already_retained='true' declared_type='CFURLRef' type='^{__CFURL=}'/>
+</function>
+<function name='UTTypeCopyDescription'>
+<arg declared_type='CFStringRef' name='inUTI' type='^{__CFString=}'/>
+<retval already_retained='true' declared_type='CFStringRef' type='^{__CFString=}'/>
+</function>
+<function name='UTTypeCopyPreferredTagWithClass'>
+<arg declared_type='CFStringRef' name='inUTI' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef' name='inTagClass' type='^{__CFString=}'/>
+<retval already_retained='true' declared_type='CFStringRef' type='^{__CFString=}'/>
+</function>
+<function name='UTTypeCreateAllIdentifiersForTag'>
+<arg declared_type='CFStringRef' name='inTagClass' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef' name='inTag' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef' name='inConformingToUTI' type='^{__CFString=}'/>
+<retval already_retained='true' declared_type='CFArrayRef' type='^{__CFArray=}'/>
+</function>
+<function name='UTTypeCreatePreferredIdentifierForTag'>
+<arg declared_type='CFStringRef' name='inTagClass' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef' name='inTag' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef' name='inConformingToUTI' type='^{__CFString=}'/>
+<retval already_retained='true' declared_type='CFStringRef' type='^{__CFString=}'/>
+</function>
+<function name='UTTypeEqual'>
+<arg declared_type='CFStringRef' name='inUTI1' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef' name='inUTI2' type='^{__CFString=}'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='UTTypeIsDeclared'>
+<arg declared_type='CFStringRef' name='inUTI' type='^{__CFString=}'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='UTTypeIsDynamic'>
+<arg declared_type='CFStringRef' name='inUTI' type='^{__CFString=}'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='UnregisterIconRef'>
+<arg declared_type='OSType' name='creator' type='L' type64='I'/>
+<arg declared_type='OSType' name='iconType' type='L' type64='I'/>
+<retval declared_type='OSErr' type='s'/>
+</function>
+<function name='UpdateIconRef'>
+<arg declared_type='IconRef' name='theIconRef' type='^{OpaqueIconRef=}'/>
+<retval declared_type='OSErr' type='s'/>
+</function>
+</signatures>

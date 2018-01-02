@@ -1,0 +1,72 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<struct name='vmpktdesc' type64='{vmpktdesc=&quot;vm_pkt_size&quot;Q&quot;vm_pkt_iov&quot;^{iovec}&quot;vm_pkt_iovcnt&quot;I&quot;vm_flags&quot;I}'>
+<field declared_type64='size_t' name='vm_pkt_size' type64='Q'/>
+<field declared_type64='struct iovec * _Nonnull' name='vm_pkt_iov' type64='^{iovec=}'/>
+<field declared_type64='uint32_t' name='vm_pkt_iovcnt' type64='I'/>
+<field declared_type64='uint32_t' name='vm_flags' type64='I'/>
+</struct>
+<cftype name='interface_ref' type64='^{vmnet_interface=}'/>
+<constant const='true' declared_type64='char * _Nonnull' name='vmnet_estimated_packets_available_key' type64='*'/>
+<constant const='true' declared_type64='char * _Nonnull' name='vmnet_interface_id_key' type64='*'/>
+<constant const='true' declared_type64='char * _Nonnull' name='vmnet_mac_address_key' type64='*'/>
+<constant const='true' declared_type64='char * _Nonnull' name='vmnet_max_packet_size_key' type64='*'/>
+<constant const='true' declared_type64='char * _Nonnull' name='vmnet_mtu_key' type64='*'/>
+<constant const='true' declared_type64='char * _Nonnull' name='vmnet_operation_mode_key' type64='*'/>
+<enum name='VMNET_BUFFER_EXHAUSTED' value64='1007'/>
+<enum name='VMNET_FAILURE' value64='1001'/>
+<enum name='VMNET_HOST_MODE' value64='1000'/>
+<enum name='VMNET_INTERFACE_PACKETS_AVAILABLE' value64='1'/>
+<enum name='VMNET_INVALID_ACCESS' value64='1005'/>
+<enum name='VMNET_INVALID_ARGUMENT' value64='1003'/>
+<enum name='VMNET_MEM_FAILURE' value64='1002'/>
+<enum name='VMNET_PACKET_TOO_BIG' value64='1006'/>
+<enum name='VMNET_SETUP_INCOMPLETE' value64='1004'/>
+<enum name='VMNET_SHARED_MODE' value64='1001'/>
+<enum name='VMNET_SUCCESS' value64='1000'/>
+<enum name='VMNET_TOO_MANY_PACKETS' value64='1008'/>
+<function name='vmnet_interface_set_event_callback'>
+<arg declared_type64='interface_ref _Nonnull' name='interface' type64='^{vmnet_interface=}'/>
+<arg declared_type64='interface_event_t' name='flags' type64='I'/>
+<arg declared_type64='dispatch_queue_t _Nullable' name='queue' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(interface_event_t, xpc_object_t _Nonnull)' function_pointer='true' name='handler' type64='@?'>
+<arg declared_type64='interface_event_t' type64='I'/>
+<arg declared_type64='xpc_object_t _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='vmnet_return_t' type64='I'/>
+</function>
+<function name='vmnet_read'>
+<arg declared_type64='interface_ref _Nonnull' name='interface' type64='^{vmnet_interface=}'/>
+<arg declared_type64='struct vmpktdesc * _Nonnull' name='packets' type64='^{vmpktdesc=Q^{iovec}II}'/>
+<arg declared_type64='int * _Nonnull' name='pktcnt' type64='^i'/>
+<retval declared_type64='vmnet_return_t' type64='I'/>
+</function>
+<function name='vmnet_start_interface'>
+<arg declared_type64='xpc_object_t _Nonnull' name='interface_desc' type64='@'/>
+<arg declared_type64='dispatch_queue_t _Nonnull' name='queue' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(vmnet_return_t, xpc_object_t _Nullable)' function_pointer='true' name='handler' type64='@?'>
+<arg declared_type64='vmnet_return_t' type64='I'/>
+<arg declared_type64='xpc_object_t _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='interface_ref _Nullable' type64='^{vmnet_interface=}'/>
+</function>
+<function name='vmnet_stop_interface'>
+<arg declared_type64='interface_ref _Nonnull' name='interface' type64='^{vmnet_interface=}'/>
+<arg declared_type64='dispatch_queue_t _Nonnull' name='queue' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(vmnet_return_t)' function_pointer='true' name='handler' type64='@?'>
+<arg declared_type64='vmnet_return_t' type64='I'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='vmnet_return_t' type64='I'/>
+</function>
+<function name='vmnet_write'>
+<arg declared_type64='interface_ref _Nonnull' name='interface' type64='^{vmnet_interface=}'/>
+<arg declared_type64='struct vmpktdesc * _Nonnull' name='packets' type64='^{vmpktdesc=Q^{iovec}II}'/>
+<arg declared_type64='int * _Nonnull' name='pktcnt' type64='^i'/>
+<retval declared_type64='vmnet_return_t' type64='I'/>
+</function>
+</signatures>

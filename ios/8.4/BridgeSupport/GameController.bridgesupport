@@ -1,0 +1,397 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreMotion.framework'/>
+<depends_on path='/System/Library/Frameworks/MobileCoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreBluetooth.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<struct name='GCAcceleration' type='{_GCAcceleration=&quot;x&quot;d&quot;y&quot;d&quot;z&quot;d}'>
+<field declared_type='double' name='x' type='d'/>
+<field declared_type='double' name='y' type='d'/>
+<field declared_type='double' name='z' type='d'/>
+</struct>
+<struct name='GCExtendedGamepadSnapShotDataV100' type='{_GCExtendedGamepadSnapShotDataV100=&quot;version&quot;S&quot;size&quot;S&quot;dpadX&quot;f&quot;dpadY&quot;f&quot;buttonA&quot;f&quot;buttonB&quot;f&quot;buttonX&quot;f&quot;buttonY&quot;f&quot;leftShoulder&quot;f&quot;rightShoulder&quot;f&quot;leftThumbstickX&quot;f&quot;leftThumbstickY&quot;f&quot;rightThumbstickX&quot;f&quot;rightThumbstickY&quot;f&quot;leftTrigger&quot;f&quot;rightTrigger&quot;f}'>
+<field declared_type='uint16_t' name='version' type='S'/>
+<field declared_type='uint16_t' name='size' type='S'/>
+<field declared_type='float_t' name='dpadX' type='f'/>
+<field declared_type='float_t' name='dpadY' type='f'/>
+<field declared_type='float_t' name='buttonA' type='f'/>
+<field declared_type='float_t' name='buttonB' type='f'/>
+<field declared_type='float_t' name='buttonX' type='f'/>
+<field declared_type='float_t' name='buttonY' type='f'/>
+<field declared_type='float_t' name='leftShoulder' type='f'/>
+<field declared_type='float_t' name='rightShoulder' type='f'/>
+<field declared_type='float_t' name='leftThumbstickX' type='f'/>
+<field declared_type='float_t' name='leftThumbstickY' type='f'/>
+<field declared_type='float_t' name='rightThumbstickX' type='f'/>
+<field declared_type='float_t' name='rightThumbstickY' type='f'/>
+<field declared_type='float_t' name='leftTrigger' type='f'/>
+<field declared_type='float_t' name='rightTrigger' type='f'/>
+</struct>
+<struct name='GCGamepadSnapShotDataV100' type='{_GCGamepadSnapShotDataV100=&quot;version&quot;S&quot;size&quot;S&quot;dpadX&quot;f&quot;dpadY&quot;f&quot;buttonA&quot;f&quot;buttonB&quot;f&quot;buttonX&quot;f&quot;buttonY&quot;f&quot;leftShoulder&quot;f&quot;rightShoulder&quot;f}'>
+<field declared_type='uint16_t' name='version' type='S'/>
+<field declared_type='uint16_t' name='size' type='S'/>
+<field declared_type='float_t' name='dpadX' type='f'/>
+<field declared_type='float_t' name='dpadY' type='f'/>
+<field declared_type='float_t' name='buttonA' type='f'/>
+<field declared_type='float_t' name='buttonB' type='f'/>
+<field declared_type='float_t' name='buttonX' type='f'/>
+<field declared_type='float_t' name='buttonY' type='f'/>
+<field declared_type='float_t' name='leftShoulder' type='f'/>
+<field declared_type='float_t' name='rightShoulder' type='f'/>
+</struct>
+<struct name='GCQuaternion' type='{GCQuaternion=&quot;x&quot;d&quot;y&quot;d&quot;z&quot;d&quot;w&quot;d}'>
+<field declared_type='double' name='x' type='d'/>
+<field declared_type='double' name='y' type='d'/>
+<field declared_type='double' name='z' type='d'/>
+<field declared_type='double' name='w' type='d'/>
+</struct>
+<struct name='GCRotationRate' type='{_GCRotationRate=&quot;x&quot;d&quot;y&quot;d&quot;z&quot;d}'>
+<field declared_type='double' name='x' type='d'/>
+<field declared_type='double' name='y' type='d'/>
+<field declared_type='double' name='z' type='d'/>
+</struct>
+<constant const='true' declared_type='NSString*' name='GCControllerDidConnectNotification' type='@'/>
+<constant const='true' declared_type='NSString*' name='GCControllerDidDisconnectNotification' type='@'/>
+<enum name='GCControllerPlayerIndexUnset' value='-1'/>
+<function name='GCExtendedGamepadSnapShotDataV100FromNSData'>
+<arg declared_type='GCExtendedGamepadSnapShotDataV100*' name='snapshotData' type='^{_GCExtendedGamepadSnapShotDataV100=SSffffffffffffff}'/>
+<arg declared_type='NSData*' name='data' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</function>
+<function name='GCGamepadSnapShotDataV100FromNSData'>
+<arg declared_type='GCGamepadSnapShotDataV100*' name='snapshotData' type='^{_GCGamepadSnapShotDataV100=SSffffffff}'/>
+<arg declared_type='NSData*' name='data' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</function>
+<function name='NSDataFromGCExtendedGamepadSnapShotDataV100'>
+<arg declared_type='GCExtendedGamepadSnapShotDataV100*' name='snapshotData' type='^{_GCExtendedGamepadSnapShotDataV100=SSffffffffffffff}'/>
+<retval declared_type='NSData*' type='@'/>
+</function>
+<function name='NSDataFromGCGamepadSnapShotDataV100'>
+<arg declared_type='GCGamepadSnapShotDataV100*' name='snapshotData' type='^{_GCGamepadSnapShotDataV100=SSffffffff}'/>
+<retval declared_type='NSData*' type='@'/>
+</function>
+<class name='GCController'>
+<method selector='controllerPausedHandler'>
+<retval declared_type='void (^)(GCController *)' function_pointer='true' type='@?'>
+<arg declared_type='GCController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method class_method='true' selector='controllers'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='extendedGamepad'>
+<retval declared_type='GCExtendedGamepad*' type='@'/>
+</method>
+<method selector='gamepad'>
+<retval declared_type='GCGamepad*' type='@'/>
+</method>
+<method selector='isAttachedToDevice'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='motion'>
+<retval declared_type='GCMotion*' type='@'/>
+</method>
+<method selector='playerIndex'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='setControllerPausedHandler:'>
+<arg declared_type='void (^)(GCController *)' function_pointer='true' index='0' name='controllerPausedHandler' type='@?'>
+<arg declared_type='GCController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPlayerIndex:'>
+<arg declared_type='NSInteger' index='0' name='playerIndex' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='startWirelessControllerDiscoveryWithCompletionHandler:'>
+<arg declared_type='void (^)(void)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='stopWirelessControllerDiscovery'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='vendorName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='GCControllerAxisInput'>
+<method selector='setValueChangedHandler:'>
+<arg declared_type='GCControllerAxisValueChangedHandler' function_pointer='true' index='0' name='valueChangedHandler' type='@?'>
+<arg declared_type='GCControllerAxisInput*' type='@'/>
+<arg declared_type='float' type='f'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='value'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='valueChangedHandler'>
+<retval declared_type='GCControllerAxisValueChangedHandler' function_pointer='true' type='@?'>
+<arg declared_type='GCControllerAxisInput*' type='@'/>
+<arg declared_type='float' type='f'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+</class>
+<class name='GCControllerButtonInput'>
+<method selector='isPressed'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='pressedChangedHandler'>
+<retval declared_type='GCControllerButtonValueChangedHandler' function_pointer='true' type='@?'>
+<arg declared_type='GCControllerButtonInput*' type='@'/>
+<arg declared_type='float' type='f'/>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='setPressedChangedHandler:'>
+<arg declared_type='GCControllerButtonValueChangedHandler' function_pointer='true' index='0' name='pressedChangedHandler' type='@?'>
+<arg declared_type='GCControllerButtonInput*' type='@'/>
+<arg declared_type='float' type='f'/>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setValueChangedHandler:'>
+<arg declared_type='GCControllerButtonValueChangedHandler' function_pointer='true' index='0' name='valueChangedHandler' type='@?'>
+<arg declared_type='GCControllerButtonInput*' type='@'/>
+<arg declared_type='float' type='f'/>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='value'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='valueChangedHandler'>
+<retval declared_type='GCControllerButtonValueChangedHandler' function_pointer='true' type='@?'>
+<arg declared_type='GCControllerButtonInput*' type='@'/>
+<arg declared_type='float' type='f'/>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+</class>
+<class name='GCControllerDirectionPad'>
+<method selector='down'>
+<retval declared_type='GCControllerButtonInput*' type='@'/>
+</method>
+<method selector='left'>
+<retval declared_type='GCControllerButtonInput*' type='@'/>
+</method>
+<method selector='right'>
+<retval declared_type='GCControllerButtonInput*' type='@'/>
+</method>
+<method selector='setValueChangedHandler:'>
+<arg declared_type='GCControllerDirectionPadValueChangedHandler' function_pointer='true' index='0' name='valueChangedHandler' type='@?'>
+<arg declared_type='GCControllerDirectionPad*' type='@'/>
+<arg declared_type='float' type='f'/>
+<arg declared_type='float' type='f'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='up'>
+<retval declared_type='GCControllerButtonInput*' type='@'/>
+</method>
+<method selector='valueChangedHandler'>
+<retval declared_type='GCControllerDirectionPadValueChangedHandler' function_pointer='true' type='@?'>
+<arg declared_type='GCControllerDirectionPad*' type='@'/>
+<arg declared_type='float' type='f'/>
+<arg declared_type='float' type='f'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='xAxis'>
+<retval declared_type='GCControllerAxisInput*' type='@'/>
+</method>
+<method selector='yAxis'>
+<retval declared_type='GCControllerAxisInput*' type='@'/>
+</method>
+</class>
+<class name='GCControllerElement'>
+<method selector='collection'>
+<retval declared_type='GCControllerElement*' type='@'/>
+</method>
+<method selector='isAnalog'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='GCExtendedGamepad'>
+<method selector='buttonA'>
+<retval declared_type='GCControllerButtonInput*' type='@'/>
+</method>
+<method selector='buttonB'>
+<retval declared_type='GCControllerButtonInput*' type='@'/>
+</method>
+<method selector='buttonX'>
+<retval declared_type='GCControllerButtonInput*' type='@'/>
+</method>
+<method selector='buttonY'>
+<retval declared_type='GCControllerButtonInput*' type='@'/>
+</method>
+<method selector='controller'>
+<retval declared_type='GCController*' type='@'/>
+</method>
+<method selector='dpad'>
+<retval declared_type='GCControllerDirectionPad*' type='@'/>
+</method>
+<method selector='leftShoulder'>
+<retval declared_type='GCControllerButtonInput*' type='@'/>
+</method>
+<method selector='leftThumbstick'>
+<retval declared_type='GCControllerDirectionPad*' type='@'/>
+</method>
+<method selector='leftTrigger'>
+<retval declared_type='GCControllerButtonInput*' type='@'/>
+</method>
+<method selector='rightShoulder'>
+<retval declared_type='GCControllerButtonInput*' type='@'/>
+</method>
+<method selector='rightThumbstick'>
+<retval declared_type='GCControllerDirectionPad*' type='@'/>
+</method>
+<method selector='rightTrigger'>
+<retval declared_type='GCControllerButtonInput*' type='@'/>
+</method>
+<method selector='saveSnapshot'>
+<retval declared_type='GCExtendedGamepadSnapshot*' type='@'/>
+</method>
+<method selector='setValueChangedHandler:'>
+<arg declared_type='GCExtendedGamepadValueChangedHandler' function_pointer='true' index='0' name='valueChangedHandler' type='@?'>
+<arg declared_type='GCExtendedGamepad*' type='@'/>
+<arg declared_type='GCControllerElement*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='valueChangedHandler'>
+<retval declared_type='GCExtendedGamepadValueChangedHandler' function_pointer='true' type='@?'>
+<arg declared_type='GCExtendedGamepad*' type='@'/>
+<arg declared_type='GCControllerElement*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+</class>
+<class name='GCExtendedGamepadSnapshot'>
+<method selector='initWithController:snapshotData:'>
+<arg declared_type='GCController*' index='0' name='controller' type='@'/>
+<arg declared_type='NSData*' index='1' name='data' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithSnapshotData:'>
+<arg declared_type='NSData*' index='0' name='data' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='setSnapshotData:'>
+<arg declared_type='NSData*' index='0' name='snapshotData' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='snapshotData'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+</class>
+<class name='GCGamepad'>
+<method selector='buttonA'>
+<retval declared_type='GCControllerButtonInput*' type='@'/>
+</method>
+<method selector='buttonB'>
+<retval declared_type='GCControllerButtonInput*' type='@'/>
+</method>
+<method selector='buttonX'>
+<retval declared_type='GCControllerButtonInput*' type='@'/>
+</method>
+<method selector='buttonY'>
+<retval declared_type='GCControllerButtonInput*' type='@'/>
+</method>
+<method selector='controller'>
+<retval declared_type='GCController*' type='@'/>
+</method>
+<method selector='dpad'>
+<retval declared_type='GCControllerDirectionPad*' type='@'/>
+</method>
+<method selector='leftShoulder'>
+<retval declared_type='GCControllerButtonInput*' type='@'/>
+</method>
+<method selector='rightShoulder'>
+<retval declared_type='GCControllerButtonInput*' type='@'/>
+</method>
+<method selector='saveSnapshot'>
+<retval declared_type='GCGamepadSnapshot*' type='@'/>
+</method>
+<method selector='setValueChangedHandler:'>
+<arg declared_type='GCGamepadValueChangedHandler' function_pointer='true' index='0' name='valueChangedHandler' type='@?'>
+<arg declared_type='GCGamepad*' type='@'/>
+<arg declared_type='GCControllerElement*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='valueChangedHandler'>
+<retval declared_type='GCGamepadValueChangedHandler' function_pointer='true' type='@?'>
+<arg declared_type='GCGamepad*' type='@'/>
+<arg declared_type='GCControllerElement*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+</class>
+<class name='GCGamepadSnapshot'>
+<method selector='initWithController:snapshotData:'>
+<arg declared_type='GCController*' index='0' name='controller' type='@'/>
+<arg declared_type='NSData*' index='1' name='data' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='initWithSnapshotData:'>
+<arg declared_type='NSData*' index='0' name='data' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='setSnapshotData:'>
+<arg declared_type='NSData*' index='0' name='snapshotData' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='snapshotData'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+</class>
+<class name='GCMotion'>
+<method selector='attitude'>
+<retval declared_type='GCQuaternion' type='{GCQuaternion=dddd}'/>
+</method>
+<method selector='controller'>
+<retval declared_type='GCController*' type='@'/>
+</method>
+<method selector='gravity'>
+<retval declared_type='GCAcceleration' type='{_GCAcceleration=ddd}'/>
+</method>
+<method selector='rotationRate'>
+<retval declared_type='GCRotationRate' type='{_GCRotationRate=ddd}'/>
+</method>
+<method selector='setValueChangedHandler:'>
+<arg declared_type='GCMotionValueChangedHandler' function_pointer='true' index='0' name='valueChangedHandler' type='@?'>
+<arg declared_type='GCMotion*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='userAcceleration'>
+<retval declared_type='GCAcceleration' type='{_GCAcceleration=ddd}'/>
+</method>
+<method selector='valueChangedHandler'>
+<retval declared_type='GCMotionValueChangedHandler' function_pointer='true' type='@?'>
+<arg declared_type='GCMotion*' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+</class>
+</signatures>

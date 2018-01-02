@@ -1,0 +1,456 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Carbon.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/DiscRecording.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<struct name='DRBurnSessionProgressCallbacks' type='{DRBurnSessionProgressCallbacks=&quot;version&quot;I&quot;progressWillBegin&quot;^?&quot;progressDidFinish&quot;^?&quot;burnDidFinish&quot;^?}'>
+<field declared_type='UInt32' name='version' type='L' type64='I'/>
+<field declared_type='DRBurnSessionProgressBeginNotificationProcPtr' function_pointer='true' name='progressWillBegin' type='^?'>
+<arg declared_type='DRBurnSessionRef' type='^{__DRBurnSession=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field declared_type='DRBurnSessionProgressFinishNotificationProcPtr' function_pointer='true' name='progressDidFinish' type='^?'>
+<arg declared_type='DRBurnSessionRef' type='^{__DRBurnSession=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field declared_type='DRBurnSessionBurnCompleteProcPtr' function_pointer='true' name='burnDidFinish' type='^?'>
+<arg declared_type='DRBurnSessionRef' type='^{__DRBurnSession=}'/>
+<arg declared_type='DRBurnRef' type='^{__DRBurn=}'/>
+<retval declared_type='Boolean' type='B'/>
+</field>
+</struct>
+<struct name='DRBurnSessionProgressDialogOptions' type='{DRBurnSessionProgressDialogOptions=&quot;version&quot;I&quot;dialogOptionFlags&quot;I&quot;description&quot;^{__CFString}}'>
+<field declared_type='UInt32' name='version' type='L' type64='I'/>
+<field declared_type='DRBurnSessionProgressDialogOptionFlags' name='dialogOptionFlags' type='L' type64='I'/>
+<field declared_type='CFStringRef' name='description' type='^{__CFString=}'/>
+</struct>
+<struct name='DRBurnSessionSetupCallbacks' type='{DRBurnSessionSetupCallbacks=&quot;version&quot;I&quot;deviceShouldBeTarget&quot;^?&quot;containsSuitableMedia&quot;^?&quot;deviceSelectionChanged&quot;^?}'>
+<field declared_type='UInt32' name='version' type='L' type64='I'/>
+<field declared_type='DRBurnSessionDeviceCheckProcPtr' function_pointer='true' name='deviceShouldBeTarget' type='^?'>
+<arg declared_type='DRBurnSessionRef' type='^{__DRBurnSession=}'/>
+<arg declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
+<retval declared_type='Boolean' type='B'/>
+</field>
+<field declared_type='DRBurnSessionMediaCheckProcPtr' function_pointer='true' name='containsSuitableMedia' type='^?'>
+<arg declared_type='DRBurnSessionRef' type='^{__DRBurnSession=}'/>
+<arg declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
+<arg declared_type='CFStringRef*' type='^^{__CFString}'/>
+<retval declared_type='Boolean' type='B'/>
+</field>
+<field declared_type='DRBurnSessionDeviceSelectionNotificationProcPtr' function_pointer='true' name='deviceSelectionChanged' type='^?'>
+<arg declared_type='DRBurnSessionRef' type='^{__DRBurnSession=}'/>
+<arg declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+</struct>
+<struct name='DRBurnSessionSetupDialogOptions' type='{DRBurnSessionSetupDialogOptions=&quot;version&quot;I&quot;dialogOptionFlags&quot;I&quot;defaultButtonTitle&quot;^{__CFString}}'>
+<field declared_type='UInt32' name='version' type='L' type64='I'/>
+<field declared_type='DRBurnSessionSetupDialogOptionFlags' name='dialogOptionFlags' type='L' type64='I'/>
+<field declared_type='CFStringRef' name='defaultButtonTitle' type='^{__CFString=}'/>
+</struct>
+<struct name='DREraseSessionProgressCallbacks' type='{DREraseSessionProgressCallbacks=&quot;version&quot;I&quot;progressWillBegin&quot;^?&quot;progressDidFinish&quot;^?&quot;eraseDidFinish&quot;^?}'>
+<field declared_type='UInt32' name='version' type='L' type64='I'/>
+<field declared_type='DREraseSessionProgressBeginNotificationProcPtr' function_pointer='true' name='progressWillBegin' type='^?'>
+<arg declared_type='DREraseSessionRef' type='^{__DREraseSession=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field declared_type='DREraseSessionProgressFinishNotificationProcPtr' function_pointer='true' name='progressDidFinish' type='^?'>
+<arg declared_type='DREraseSessionRef' type='^{__DREraseSession=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field declared_type='DREraseSessionEraseCompleteProcPtr' function_pointer='true' name='eraseDidFinish' type='^?'>
+<arg declared_type='DREraseSessionRef' type='^{__DREraseSession=}'/>
+<arg declared_type='DREraseRef' type='^{__DRErase=}'/>
+<retval declared_type='Boolean' type='B'/>
+</field>
+</struct>
+<struct name='DREraseSessionProgressDialogOptions' type='{DREraseSessionProgressDialogOptions=&quot;version&quot;I&quot;dialogOptionFlags&quot;I&quot;description&quot;^{__CFString}}'>
+<field declared_type='UInt32' name='version' type='L' type64='I'/>
+<field declared_type='DREraseSessionProgressDialogOptionFlags' name='dialogOptionFlags' type='L' type64='I'/>
+<field declared_type='CFStringRef' name='description' type='^{__CFString=}'/>
+</struct>
+<struct name='DREraseSessionSetupCallbacks' type='{DREraseSessionSetupCallbacks=&quot;version&quot;I&quot;deviceShouldBeTarget&quot;^?&quot;containsSuitableMedia&quot;^?&quot;deviceSelectionChanged&quot;^?}'>
+<field declared_type='UInt32' name='version' type='L' type64='I'/>
+<field declared_type='DREraseSessionDeviceCheckProcPtr' function_pointer='true' name='deviceShouldBeTarget' type='^?'>
+<arg declared_type='DREraseSessionRef' type='^{__DREraseSession=}'/>
+<arg declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
+<retval declared_type='Boolean' type='B'/>
+</field>
+<field declared_type='DREraseSessionMediaCheckProcPtr' function_pointer='true' name='containsSuitableMedia' type='^?'>
+<arg declared_type='DREraseSessionRef' type='^{__DREraseSession=}'/>
+<arg declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
+<arg declared_type='CFStringRef*' type='^^{__CFString}'/>
+<retval declared_type='Boolean' type='B'/>
+</field>
+<field declared_type='DREraseSessionDeviceSelectionNotificationProcPtr' function_pointer='true' name='deviceSelectionChanged' type='^?'>
+<arg declared_type='DREraseSessionRef' type='^{__DREraseSession=}'/>
+<arg declared_type='DRDeviceRef' type='^{__DRDevice=}'/>
+<retval declared_type='void' type='v'/>
+</field>
+</struct>
+<struct name='DREraseSessionSetupDialogOptions' type='{DREraseSessionSetupDialogOptions=&quot;version&quot;I&quot;dialogOptionFlags&quot;I}'>
+<field declared_type='UInt32' name='version' type='L' type64='I'/>
+<field declared_type='DREraseSessionSetupDialogOptionFlags' name='dialogOptionFlags' type='L' type64='I'/>
+</struct>
+<cftype gettypeid_func='DRBurnSessionGetTypeID' name='DRBurnSessionRef' type='^{__DRBurnSession=}'/>
+<cftype gettypeid_func='DREraseSessionGetTypeID' name='DREraseSessionRef' type='^{__DREraseSession=}'/>
+<constant const='true' declared_type='NSString*' name='DRBurnIcon' type='@'/>
+<constant const='true' declared_type='NSString*' name='DRBurnProgressPanelDidFinishNotification' type='@'/>
+<constant const='true' declared_type='NSString*' name='DRBurnProgressPanelWillBeginNotification' type='@'/>
+<constant const='true' declared_type='NSString*' name='DRBurnSetupPanelDefaultButtonDefaultTitle' type='@'/>
+<constant const='true' declared_type='NSString*' name='DREraseIcon' type='@'/>
+<constant const='true' declared_type='NSString*' name='DREraseProgressPanelDidFinishNotification' type='@'/>
+<constant const='true' declared_type='NSString*' name='DREraseProgressPanelWillBeginNotification' type='@'/>
+<constant const='true' declared_type='NSString*' name='DRSetupPanelDeviceSelectionChangedNotification' type='@'/>
+<constant const='true' declared_type='NSString*' name='DRSetupPanelSelectedDeviceKey' type='@'/>
+<enum name='kBurnSessionProgressDialogDefaultOptions' value='0'/>
+<enum name='kBurnSessionProgressDialogDisplayVerboseProgress' value='1'/>
+<enum name='kBurnSessionProgressDialogOptionsCurrentVersion' value='1'/>
+<enum name='kBurnSessionSetupDialogAllowTestBurns' value='2147483652'/>
+<enum name='kBurnSessionSetupDialogDefaultOptions' value='0'/>
+<enum name='kBurnSessionSetupDialogDontHandleReservations' value='2'/>
+<enum name='kBurnSessionSetupDialogForceClosedDiscs' value='1'/>
+<enum name='kBurnSessionSetupDialogOptionsCurrentVersion' value='1'/>
+<enum name='kDRBurnProgressSetupCallbacksCurrentVersion' value='1'/>
+<enum name='kDRBurnSessionCancel' value='0'/>
+<enum name='kDRBurnSessionOK' value='1'/>
+<enum name='kDRBurnSessionSetupCallbacksCurrentVersion' value='1'/>
+<enum name='kDREraseProgressSetupCallbacksCurrentVersion' value='1'/>
+<enum name='kDREraseSessionCancel' value='0'/>
+<enum name='kDREraseSessionOK' value='1'/>
+<enum name='kDREraseSessionSetupCallbacksCurrentVersion' value='1'/>
+<enum name='kEraseSessionProgressDialogDefaultOptions' value='0'/>
+<enum name='kEraseSessionProgressDialogOptionsCurrentVersion' value='1'/>
+<enum name='kEraseSessionSetupDialogDefaultOptions' value='0'/>
+<enum name='kEraseSessionSetupDialogDontHandleReservations' value='1'/>
+<enum name='kEraseSessionSetupDialogOptionsCurrentVersion' value='1'/>
+<function name='DRBurnSessionBeginProgressDialog'>
+<arg declared_type='DRBurnSessionRef' name='burnSession' type='^{__DRBurnSession=}'/>
+<arg declared_type='CFTypeRef' name='layout' type='@'/>
+<arg declared_type='DRBurnSessionProgressDialogOptions*' name='options' type='^{DRBurnSessionProgressDialogOptions=II^{__CFString}}'/>
+<arg declared_type='DRBurnSessionProgressCallbacks*' name='progressCallbacks' type='^{DRBurnSessionProgressCallbacks=I^?^?^?}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='DRBurnSessionCreate'>
+<retval already_retained='true' declared_type='DRBurnSessionRef' type='^{__DRBurnSession=}'/>
+</function>
+<function name='DRBurnSessionGetBurn'>
+<arg declared_type='DRBurnSessionRef' name='burnSession' type='^{__DRBurnSession=}'/>
+<retval declared_type='DRBurnRef' type='^{__DRBurn=}'/>
+</function>
+<function name='DRBurnSessionGetTypeID'>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
+</function>
+<function name='DRBurnSessionSetBurn'>
+<arg declared_type='DRBurnSessionRef' name='burnSession' type='^{__DRBurnSession=}'/>
+<arg declared_type='DRBurnRef' name='burn' type='^{__DRBurn=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='DRBurnSessionSetupDialog'>
+<arg declared_type='DRBurnSessionRef' name='burnSession' type='^{__DRBurnSession=}'/>
+<arg declared_type='DRBurnSessionSetupDialogOptions*' name='options' type='^{DRBurnSessionSetupDialogOptions=II^{__CFString}}'/>
+<arg declared_type='DRBurnSessionSetupCallbacks*' name='setupCallbacks' type='^{DRBurnSessionSetupCallbacks=I^?^?^?}'/>
+<retval declared_type='SInt8' type='c'/>
+</function>
+<function name='DREraseSessionBeginProgressDialog'>
+<arg declared_type='DREraseSessionRef' name='eraseSession' type='^{__DREraseSession=}'/>
+<arg declared_type='DREraseSessionProgressDialogOptions*' name='options' type='^{DREraseSessionProgressDialogOptions=II^{__CFString}}'/>
+<arg declared_type='DREraseSessionProgressCallbacks*' name='progressCallbacks' type='^{DREraseSessionProgressCallbacks=I^?^?^?}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='DREraseSessionCreate'>
+<retval already_retained='true' declared_type='DREraseSessionRef' type='^{__DREraseSession=}'/>
+</function>
+<function name='DREraseSessionGetErase'>
+<arg declared_type='DREraseSessionRef' name='eraseSession' type='^{__DREraseSession=}'/>
+<retval declared_type='DREraseRef' type='^{__DRErase=}'/>
+</function>
+<function name='DREraseSessionGetTypeID'>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
+</function>
+<function name='DREraseSessionSetErase'>
+<arg declared_type='DREraseSessionRef' name='eraseSession' type='^{__DREraseSession=}'/>
+<arg declared_type='DREraseRef' name='erase' type='^{__DRErase=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='DREraseSessionSetupDialog'>
+<arg declared_type='DREraseSessionRef' name='eraseSession' type='^{__DREraseSession=}'/>
+<arg declared_type='DREraseSessionSetupDialogOptions*' name='options' type='^{DREraseSessionSetupDialogOptions=II}'/>
+<arg declared_type='DREraseSessionSetupCallbacks*' name='setupCallbacks' type='^{DREraseSessionSetupCallbacks=I^?^?^?}'/>
+<retval declared_type='SInt8' type='c'/>
+</function>
+<class name='DRBurnProgressPanel'>
+<method selector='beginProgressPanelForBurn:layout:'>
+<arg declared_type='DRBurn*' index='0' name='burn' type='@'/>
+<arg declared_type='id' index='1' name='layout' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='beginProgressSheetForBurn:layout:modalForWindow:'>
+<arg declared_type='DRBurn*' index='0' name='burn' type='@'/>
+<arg declared_type='id' index='1' name='layout' type='@'/>
+<arg declared_type='NSWindow*' index='2' name='docWindow' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='description'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='progressPanel'>
+<retval declared_type='DRBurnProgressPanel*' type='@'/>
+</method>
+<method selector='setDescription:'>
+<arg declared_type='NSString*' index='0' name='description' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setVerboseProgressStatus:'>
+<arg declared_type='BOOL' index='0' name='verbose' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stopBurn:'>
+<arg declared_type='id' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='verboseProgressStatus'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='DRBurnSetupPanel'>
+<method selector='appendable:'>
+<arg declared_type='id' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='burnObject'>
+<retval declared_type='DRBurn*' type='@'/>
+</method>
+<method selector='burnSpeed:'>
+<arg declared_type='id' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='completionAction:'>
+<arg declared_type='id' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='expand:'>
+<arg declared_type='id' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCanSelectAppendableMedia:'>
+<arg declared_type='BOOL' index='0' name='flag' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCanSelectTestBurn:'>
+<arg declared_type='BOOL' index='0' name='flag' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDefaultButtonTitle:'>
+<arg declared_type='NSString*' index='0' name='title' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='setupPanel'>
+<retval declared_type='DRBurnSetupPanel*' type='@'/>
+</method>
+<method selector='testBurn:'>
+<arg declared_type='id' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='verifyBurn:'>
+<arg declared_type='id' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='DREraseProgressPanel'>
+<method selector='beginProgressPanelForErase:'>
+<arg declared_type='DRErase*' index='0' name='erase' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='beginProgressSheetForErase:modalForWindow:'>
+<arg declared_type='DRErase*' index='0' name='erase' type='@'/>
+<arg declared_type='NSWindow*' index='1' name='docWindow' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='description'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='progressPanel'>
+<retval declared_type='DREraseProgressPanel*' type='@'/>
+</method>
+<method selector='setDescription:'>
+<arg declared_type='NSString*' index='0' name='description' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='DREraseSetupPanel'>
+<method selector='eraseObject'>
+<retval declared_type='DRErase*' type='@'/>
+</method>
+<method selector='eraseType:'>
+<arg declared_type='id' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='setupPanel'>
+<retval declared_type='DREraseSetupPanel*' type='@'/>
+</method>
+</class>
+<class name='DRSetupPanel'>
+<method selector='beginSetupSheetForWindow:modalDelegate:didEndSelector:contextInfo:'>
+<arg declared_type='NSWindow*' index='0' name='owner' type='@'/>
+<arg declared_type='id' index='1' name='modalDelegate' type='@'/>
+<arg declared_type='SEL' index='2' name='didEndSelector' type=':'/>
+<arg declared_type='void*' index='3' name='contextInfo' type='^v'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='cancel:'>
+<arg declared_type='id' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='close:'>
+<arg declared_type='id' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='deviceSelectionChanged:'>
+<arg declared_type='DRDevice*' index='0' name='device' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='eject:'>
+<arg declared_type='id' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithNibName:'>
+<arg declared_type='NSString*' index='0' name='nibName' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='mediaStateChanged:'>
+<arg declared_type='NSDictionary*' index='0' name='status' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='ok:'>
+<arg declared_type='id' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='open:'>
+<arg declared_type='id' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='runSetupPanel'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='setupForDisplay'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='burnProgressPanel:burnDidFinish:'>
+<arg declared_type='DRBurnProgressPanel*' index='0' name='theBurnPanel' type='@'/>
+<arg declared_type='DRBurn*' index='1' name='burn' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='burnProgressPanelDidFinish:'>
+<arg declared_type='NSNotification*' index='0' name='aNotification' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='burnProgressPanelWillBegin:'>
+<arg declared_type='NSNotification*' index='0' name='aNotification' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='eraseProgressPanel:eraseDidFinish:'>
+<arg declared_type='DREraseProgressPanel*' index='0' name='theErasePanel' type='@'/>
+<arg declared_type='DRErase*' index='1' name='erase' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='eraseProgressPanelDidFinish:'>
+<arg declared_type='NSNotification*' index='0' name='aNotification' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='eraseProgressPanelWillBegin:'>
+<arg declared_type='NSNotification*' index='0' name='aNotification' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setupPanel:determineBestDeviceOfA:orB:'>
+<arg declared_type='DRSetupPanel*' index='0' name='aPanel' type='@'/>
+<arg declared_type='DRDevice*' index='1' name='deviceA' type='@'/>
+<arg declared_type='DRDevice*' index='2' name='device' type='@'/>
+<retval declared_type='DRDevice*' type='@'/>
+</method>
+<method selector='setupPanel:deviceContainsSuitableMedia:promptString:'>
+<arg declared_type='DRSetupPanel*' index='0' name='aPanel' type='@'/>
+<arg declared_type='DRDevice*' index='1' name='device' type='@'/>
+<arg declared_type='NSString**' index='2' name='prompt' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setupPanel:deviceCouldBeTarget:'>
+<arg declared_type='DRSetupPanel*' index='0' name='aPanel' type='@'/>
+<arg declared_type='DRDevice*' index='1' name='device' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setupPanelDeviceSelectionChanged:'>
+<arg declared_type='NSNotification*' index='0' name='aNotification' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setupPanelShouldHandleMediaReservations:'>
+<arg declared_type='DRSetupPanel*' index='0' name='aPanel' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<informal_protocol name='DRBurnProgressPanelDelegateMethods'>
+<method selector='burnProgressPanel:burnDidFinish:' type='B16@0:4@8@12' type64='B32@0:8@16@24'>
+<arg declared_type='DRBurnProgressPanel*' index='0' name='theBurnPanel' type='@'/>
+<arg declared_type='DRBurn*' index='1' name='burn' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='burnProgressPanelDidFinish:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='NSNotification*' index='0' name='aNotification' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='burnProgressPanelWillBegin:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='NSNotification*' index='0' name='aNotification' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='DREraseProgressPanelDelegateMethods'>
+<method selector='eraseProgressPanel:eraseDidFinish:' type='B16@0:4@8@12' type64='B32@0:8@16@24'>
+<arg declared_type='DREraseProgressPanel*' index='0' name='theErasePanel' type='@'/>
+<arg declared_type='DRErase*' index='1' name='erase' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='eraseProgressPanelDidFinish:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='NSNotification*' index='0' name='aNotification' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='eraseProgressPanelWillBegin:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='NSNotification*' index='0' name='aNotification' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='DRSetupPanelDelegate'>
+<method selector='setupPanel:determineBestDeviceOfA:orB:' type='@20@0:4@8@12@16' type64='@40@0:8@16@24@32'>
+<arg declared_type='DRSetupPanel*' index='0' name='aPanel' type='@'/>
+<arg declared_type='DRDevice*' index='1' name='deviceA' type='@'/>
+<arg declared_type='DRDevice*' index='2' name='device' type='@'/>
+<retval declared_type='DRDevice*' type='@'/>
+</method>
+<method selector='setupPanel:deviceContainsSuitableMedia:promptString:' type='B20@0:4@8@12^@16' type64='B40@0:8@16@24^@32'>
+<arg declared_type='DRSetupPanel*' index='0' name='aPanel' type='@'/>
+<arg declared_type='DRDevice*' index='1' name='device' type='@'/>
+<arg declared_type='NSString**' index='2' name='prompt' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setupPanel:deviceCouldBeTarget:' type='B16@0:4@8@12' type64='B32@0:8@16@24'>
+<arg declared_type='DRSetupPanel*' index='0' name='aPanel' type='@'/>
+<arg declared_type='DRDevice*' index='1' name='device' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setupPanelDeviceSelectionChanged:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='NSNotification*' index='0' name='aNotification' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setupPanelShouldHandleMediaReservations:' type='B12@0:4@8' type64='B24@0:8@16'>
+<arg declared_type='DRSetupPanel*' index='0' name='aPanel' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</informal_protocol>
+</signatures>

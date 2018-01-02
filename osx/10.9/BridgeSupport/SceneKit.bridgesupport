@@ -1,0 +1,2343 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenGL.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenCL.framework'/>
+<depends_on path='/System/Library/Frameworks/QTKit.framework'/>
+<depends_on path='/System/Library/Frameworks/JavaScriptCore.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<struct name='SCNVector3' type='{_SCNVector3=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}' type64='{_SCNVector3=&quot;x&quot;d&quot;y&quot;d&quot;z&quot;d}'>
+<field declared_type='CGFloat' name='x' type='f' type64='d'/>
+<field declared_type='CGFloat' name='y' type='f' type64='d'/>
+<field declared_type='CGFloat' name='z' type='f' type64='d'/>
+</struct>
+<struct name='SCNVector4' type='{_SCNVector4=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f&quot;w&quot;f}' type64='{_SCNVector4=&quot;x&quot;d&quot;y&quot;d&quot;z&quot;d&quot;w&quot;d}'>
+<field declared_type='CGFloat' name='x' type='f' type64='d'/>
+<field declared_type='CGFloat' name='y' type='f' type64='d'/>
+<field declared_type='CGFloat' name='z' type='f' type64='d'/>
+<field declared_type='CGFloat' name='w' type='f' type64='d'/>
+</struct>
+<struct name='vector_float2' type='{_vector_float2=&quot;x&quot;f&quot;y&quot;f}'>
+<field declared_type='float' name='x' type='f'/>
+<field declared_type='float' name='y' type='f'/>
+</struct>
+<struct name='vector_float3' type='{_vector_float3=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}'>
+<field declared_type='float' name='x' type='f'/>
+<field declared_type='float' name='y' type='f'/>
+<field declared_type='float' name='z' type='f'/>
+</struct>
+<struct name='vector_float4' type='{_vector_float4=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f&quot;w&quot;f}'>
+<field declared_type='float' name='x' type='f'/>
+<field declared_type='float' name='y' type='f'/>
+<field declared_type='float' name='z' type='f'/>
+<field declared_type='float' name='w' type='f'/>
+</struct>
+<struct name='vector_int2' type='{_vector_int2=&quot;x&quot;i&quot;y&quot;i}'>
+<field declared_type='int' name='x' type='i'/>
+<field declared_type='int' name='y' type='i'/>
+</struct>
+<struct name='vector_int4' type='{_vector_int4=&quot;x&quot;i&quot;y&quot;i&quot;z&quot;i&quot;w&quot;i}'>
+<field declared_type='int' name='x' type='i'/>
+<field declared_type='int' name='y' type='i'/>
+<field declared_type='int' name='z' type='i'/>
+<field declared_type='int' name='w' type='i'/>
+</struct>
+<struct name='vector_uint2' type='{_vector_uint2=&quot;x&quot;I&quot;y&quot;I}'>
+<field declared_type='unsigned int' name='x' type='I'/>
+<field declared_type='unsigned int' name='y' type='I'/>
+</struct>
+<struct name='vector_uint3' type='{_vector_uint3=&quot;x&quot;I&quot;y&quot;I&quot;z&quot;I}'>
+<field declared_type='unsigned int' name='x' type='I'/>
+<field declared_type='unsigned int' name='y' type='I'/>
+<field declared_type='unsigned int' name='z' type='I'/>
+</struct>
+<constant const='true' declared_type='NSString*' name='SCNConsistencyElementIDErrorKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNConsistencyElementTypeErrorKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNConsistencyLineNumberErrorKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNDetailedErrorsKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNErrorDomain' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNGeometrySourceSemanticColor' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNGeometrySourceSemanticNormal' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNGeometrySourceSemanticTexcoord' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNGeometrySourceSemanticVertex' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNHitTestBackFaceCullingKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNHitTestBoundingBoxOnlyKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNHitTestClipToZRangeKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNHitTestFirstFoundOnlyKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNHitTestIgnoreChildNodesKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNHitTestIgnoreHiddenNodesKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNHitTestRootNodeKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNHitTestSortResultsKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNLightAttenuationEndKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNLightAttenuationFalloffExponentKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNLightAttenuationStartKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNLightShadowFarClippingKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNLightShadowNearClippingKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNLightSpotInnerAngleKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNLightSpotOuterAngleKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNLightTypeAmbient' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNLightTypeDirectional' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNLightTypeOmni' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNLightTypeSpot' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNLightingModelBlinn' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNLightingModelConstant' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNLightingModelLambert' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNLightingModelPhong' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNModelTransform' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNModelViewProjectionTransform' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNModelViewTransform' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNNormalTransform' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNProgramMappingChannelKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNProjectionTransform' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneEndTimeAttributeKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneExportDestinationURL' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneFrameRateAttributeKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneSourceAssetAuthorKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneSourceAssetAuthoringToolKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneSourceAssetContributorsKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneSourceAssetCreatedDateKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneSourceAssetDirectoryURLsKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneSourceAssetModifiedDateKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneSourceAssetUnitKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneSourceAssetUnitMeterKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneSourceAssetUnitNameKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneSourceAssetUpAxisKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneSourceCheckConsistencyKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneSourceCreateNormalsIfAbsentKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneSourceFlattenSceneKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneSourceOverrideAssetURLsKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneSourceStrictConformanceKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneSourceUseSafeModeKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNSceneStartTimeAttributeKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNShaderModifierEntryPointFragment' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNShaderModifierEntryPointGeometry' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNShaderModifierEntryPointLightingModel' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNShaderModifierEntryPointSurface' type='@'/>
+<constant const='true' declared_type='NSString*' name='SCNViewTransform' type='@'/>
+<enum name='SCNChamferModeBack' value='2'/>
+<enum name='SCNChamferModeBoth' value='0'/>
+<enum name='SCNChamferModeFront' value='1'/>
+<enum name='SCNClamp' value='1'/>
+<enum name='SCNClampToBorder' value='3'/>
+<enum name='SCNConsistencyInvalidArgumentError' value='1002'/>
+<enum name='SCNConsistencyInvalidCountError' value='1001'/>
+<enum name='SCNConsistencyInvalidURIError' value='1000'/>
+<enum name='SCNConsistencyMissingAttributeError' value='1004'/>
+<enum name='SCNConsistencyMissingElementError' value='1003'/>
+<enum name='SCNConsistencyXMLSchemaValidationError' value='1005'/>
+<enum name='SCNCullBack' value='0'/>
+<enum name='SCNCullFront' value='1'/>
+<enum name='SCNFilterModeLinear' value='2'/>
+<enum name='SCNFilterModeNearest' value='1'/>
+<enum name='SCNFilterModeNone' value='0'/>
+<enum name='SCNGeometryPrimitiveTypeLine' value='2'/>
+<enum name='SCNGeometryPrimitiveTypePoint' value='3'/>
+<enum name='SCNGeometryPrimitiveTypeTriangleStrip' value='1'/>
+<enum name='SCNGeometryPrimitiveTypeTriangles' value='0'/>
+<enum name='SCNLinearFiltering' value='2'/>
+<enum name='SCNMirror' value='4'/>
+<enum name='SCNMorpherCalculationModeAdditive' value='1'/>
+<enum name='SCNMorpherCalculationModeNormalized' value='0'/>
+<enum name='SCNNearestFiltering' value='1'/>
+<enum name='SCNNoFiltering' value='0'/>
+<enum name='SCNProgramCompilationError' value='1'/>
+<enum name='SCNRepeat' value='2'/>
+<enum name='SCNSceneSourceStatusComplete' value='16'/>
+<enum name='SCNSceneSourceStatusError' value='-1'/>
+<enum name='SCNSceneSourceStatusParsing' value='4'/>
+<enum name='SCNSceneSourceStatusProcessing' value='12'/>
+<enum name='SCNSceneSourceStatusValidating' value='8'/>
+<enum name='SCNTransparencyModeAOne' value='0'/>
+<enum name='SCNTransparencyModeRGBZero' value='1'/>
+<enum name='SCNWrapModeClamp' value='1'/>
+<enum name='SCNWrapModeClampToBorder' value='3'/>
+<enum name='SCNWrapModeMirror' value='4'/>
+<enum name='SCNWrapModeRepeat' value='2'/>
+<function name='SCNVector3EqualToVector3'>
+<arg declared_type='SCNVector3' name='a' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+<arg declared_type='SCNVector3' name='b' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function inline='true' name='SCNVector3FromGLKVector3'>
+<arg declared_type='GLKVector3' name='vector' type='(_GLKVector3={?=fff}{?=fff}{?=fff}[3f])'/>
+<retval declared_type='SCNVector3' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+</function>
+<function inline='true' name='SCNVector3Make'>
+<arg declared_type='CGFloat' name='x' type='f' type64='d'/>
+<arg declared_type='CGFloat' name='y' type='f' type64='d'/>
+<arg declared_type='CGFloat' name='z' type='f' type64='d'/>
+<retval declared_type='SCNVector3' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+</function>
+<function inline='true' name='SCNVector3ToGLKVector3'>
+<arg declared_type='SCNVector3' name='vector' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+<retval declared_type='GLKVector3' type='(_GLKVector3={?=fff}{?=fff}{?=fff}[3f])'/>
+</function>
+<function name='SCNVector4EqualToVector4'>
+<arg declared_type='SCNVector4' name='a' type='{_SCNVector4=ffff}' type64='{_SCNVector4=dddd}'/>
+<arg declared_type='SCNVector4' name='b' type='{_SCNVector4=ffff}' type64='{_SCNVector4=dddd}'/>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function inline='true' name='SCNVector4FromGLKVector4'>
+<arg declared_type='GLKVector4' name='vector' type='(_GLKVector4={?=ffff}{?=ffff}{?=ffff}[4f])'/>
+<retval declared_type='SCNVector4' type='{_SCNVector4=ffff}' type64='{_SCNVector4=dddd}'/>
+</function>
+<function inline='true' name='SCNVector4Make'>
+<arg declared_type='CGFloat' name='x' type='f' type64='d'/>
+<arg declared_type='CGFloat' name='y' type='f' type64='d'/>
+<arg declared_type='CGFloat' name='z' type='f' type64='d'/>
+<arg declared_type='CGFloat' name='w' type='f' type64='d'/>
+<retval declared_type='SCNVector4' type='{_SCNVector4=ffff}' type64='{_SCNVector4=dddd}'/>
+</function>
+<function inline='true' name='SCNVector4ToGLKVector4'>
+<arg declared_type='SCNVector4' name='vector' type='{_SCNVector4=ffff}' type64='{_SCNVector4=dddd}'/>
+<retval declared_type='GLKVector4' type='(_GLKVector4={?=ffff}{?=ffff}{?=ffff}[4f])'/>
+</function>
+<class name='CAAnimation'>
+<method selector='animationEvents'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='fadeInDuration'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='fadeOutDuration'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='setAnimationEvents:'>
+<arg declared_type='NSArray*' index='0' name='animationEvents' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFadeInDuration:'>
+<arg declared_type='CGFloat' index='0' name='fadeInDuration' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFadeOutDuration:'>
+<arg declared_type='CGFloat' index='0' name='fadeOutDuration' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUsesSceneTimeBase:'>
+<arg declared_type='BOOL' index='0' name='usesSceneTimeBase' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='usesSceneTimeBase'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='addAnimation:forKey:'>
+<arg declared_type='CAAnimation*' index='0' name='animation' type='@'/>
+<arg declared_type='NSString*' index='1' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='animationForKey:'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='CAAnimation*' type='@'/>
+</method>
+<method selector='animationKeys'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='autoenablesDefaultLighting'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='context'>
+<retval declared_type='void*' type='^v'/>
+</method>
+<method selector='currentTime'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='getBoundingBoxMin:max:'>
+<arg declared_type='SCNVector3*' index='0' name='min' type='^{_SCNVector3=fff}' type64='^{_SCNVector3=ddd}'/>
+<arg declared_type='SCNVector3*' index='1' name='max' type='^{_SCNVector3=fff}' type64='^{_SCNVector3=ddd}'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='getBoundingSphereCenter:radius:'>
+<arg declared_type='SCNVector3*' index='0' name='center' type='^{_SCNVector3=fff}' type64='^{_SCNVector3=ddd}'/>
+<arg declared_type='CGFloat*' index='1' name='radius' type='^f' type64='^d'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='handleBindingOfSymbol:usingBlock:'>
+<arg declared_type='NSString*' index='0' name='symbol' type='@'/>
+<arg declared_type='SCNBindingBlock' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='unsigned int' type='I'/>
+<arg declared_type='unsigned int' type='I'/>
+<arg declared_type='SCNNode*' type='@'/>
+<arg declared_type='SCNRenderer*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handleUnbindingOfSymbol:usingBlock:'>
+<arg declared_type='NSString*' index='0' name='symbol' type='@'/>
+<arg declared_type='SCNBindingBlock' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='unsigned int' type='I'/>
+<arg declared_type='unsigned int' type='I'/>
+<arg declared_type='SCNNode*' type='@'/>
+<arg declared_type='SCNRenderer*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='hitTest:options:'>
+<arg declared_type='CGPoint' index='0' name='thePoint' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+<arg declared_type='NSDictionary*' index='1' name='options' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='isAnimationForKeyPaused:'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isJitteringEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isNodeInsideFrustum:withPointOfView:'>
+<arg declared_type='SCNNode*' index='0' name='node' type='@'/>
+<arg declared_type='SCNNode*' index='1' name='pointOfView' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isPlaying'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='loops'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='pauseAnimationForKey:'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='pointOfView'>
+<retval declared_type='SCNNode*' type='@'/>
+</method>
+<method selector='prepareObject:shouldAbortBlock:'>
+<arg declared_type='id' index='0' name='object' type='@'/>
+<arg declared_type='BOOL (^)()' function_pointer='true' index='1' name='block' type='@?'>
+<retval declared_type='BOOL' type='B'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='program'>
+<retval declared_type='SCNProgram*' type='@'/>
+</method>
+<method selector='program:bindValueForSymbol:atLocation:programID:renderer:'>
+<arg declared_type='SCNProgram*' index='0' name='program' type='@'/>
+<arg declared_type='NSString*' index='1' name='symbol' type='@'/>
+<arg declared_type='unsigned int' index='2' name='location' type='I'/>
+<arg declared_type='unsigned int' index='3' name='programID' type='I'/>
+<arg declared_type='SCNRenderer*' index='4' name='renderer' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='program:handleError:'>
+<arg declared_type='SCNProgram*' index='0' name='program' type='@'/>
+<arg declared_type='NSError*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='program:unbindValueForSymbol:atLocation:programID:renderer:'>
+<arg declared_type='SCNProgram*' index='0' name='program' type='@'/>
+<arg declared_type='NSString*' index='1' name='symbol' type='@'/>
+<arg declared_type='unsigned int' index='2' name='location' type='I'/>
+<arg declared_type='unsigned int' index='3' name='programID' type='I'/>
+<arg declared_type='SCNRenderer*' index='4' name='renderer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='programIsOpaque:'>
+<arg declared_type='SCNProgram*' index='0' name='program' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='projectPoint:'>
+<arg declared_type='SCNVector3' index='0' name='point' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+<retval declared_type='SCNVector3' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+</method>
+<method selector='removeAllAnimations'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeAnimationForKey:'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='renderNode:renderer:arguments:'>
+<arg declared_type='SCNNode*' index='0' name='node' type='@'/>
+<arg declared_type='SCNRenderer*' index='1' name='renderer' type='@'/>
+<arg declared_type='NSDictionary*' index='2' name='arguments' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='renderer:didRenderScene:atTime:'>
+<arg declared_type='id' index='0' name='aRenderer' type='@'/>
+<arg declared_type='SCNScene*' index='1' name='scene' type='@'/>
+<arg declared_type='NSTimeInterval' index='2' name='time' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='renderer:willRenderScene:atTime:'>
+<arg declared_type='id' index='0' name='aRenderer' type='@'/>
+<arg declared_type='SCNScene*' index='1' name='scene' type='@'/>
+<arg declared_type='NSTimeInterval' index='2' name='time' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='resumeAnimationForKey:'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAutoenablesDefaultLighting:'>
+<arg declared_type='BOOL' index='0' name='autoenablesDefaultLighting' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBoundingBoxMin:max:'>
+<arg declared_type='SCNVector3*' index='0' name='min' type='^{_SCNVector3=fff}' type64='^{_SCNVector3=ddd}'/>
+<arg declared_type='SCNVector3*' index='1' name='max' type='^{_SCNVector3=fff}' type64='^{_SCNVector3=ddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCurrentTime:'>
+<arg declared_type='NSTimeInterval' index='0' name='currentTime' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setJitteringEnabled:'>
+<arg declared_type='BOOL' index='0' name='jitteringEnabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLoops:'>
+<arg declared_type='BOOL' index='0' name='loops' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPlaying:'>
+<arg declared_type='BOOL' index='0' name='playing' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPointOfView:'>
+<arg declared_type='SCNNode*' index='0' name='pointOfView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setProgram:'>
+<arg declared_type='SCNProgram*' index='0' name='program' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShaderModifiers:'>
+<arg declared_type='NSDictionary*' index='0' name='shaderModifiers' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShowsStatistics:'>
+<arg declared_type='BOOL' index='0' name='showsStatistics' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shaderModifiers'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='showsStatistics'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='unprojectPoint:'>
+<arg declared_type='SCNVector3' index='0' name='point' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+<retval declared_type='SCNVector3' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+</method>
+<method selector='writeImage:withSceneDocumentURL:originalImageURL:'>
+<arg declared_type='NSImage*' index='0' name='image' type='@'/>
+<arg declared_type='NSURL*' index='1' name='documentURL' type='@'/>
+<arg declared_type='NSURL*' index='2' name='originalImageURL' type='@'/>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+</class>
+<class name='NSValue'>
+<method selector='SCNVector3Value'>
+<retval declared_type='SCNVector3' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+</method>
+<method selector='SCNVector4Value'>
+<retval declared_type='SCNVector4' type='{_SCNVector4=ffff}' type64='{_SCNVector4=dddd}'/>
+</method>
+<method class_method='true' selector='valueWithSCNVector3:'>
+<arg declared_type='SCNVector3' index='0' name='v' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+<retval declared_type='NSValue*' type='@'/>
+</method>
+<method class_method='true' selector='valueWithSCNVector4:'>
+<arg declared_type='SCNVector4' index='0' name='v' type='{_SCNVector4=ffff}' type64='{_SCNVector4=dddd}'/>
+<retval declared_type='NSValue*' type='@'/>
+</method>
+</class>
+<class name='SCNAnimationEvent'>
+<method class_method='true' selector='animationEventWithKeyTime:block:'>
+<arg declared_type='CGFloat' index='0' name='time' type='f' type64='d'/>
+<arg declared_type='SCNAnimationEventBlock' function_pointer='true' index='1' name='eventBlock' type='@?'>
+<arg declared_type='CAAnimation*' type='@'/>
+<arg declared_type='id' type='@'/>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='instancetype' type='@'/>
+</method>
+</class>
+<class name='SCNBox'>
+<method class_method='true' selector='boxWithWidth:height:length:chamferRadius:'>
+<arg declared_type='CGFloat' index='0' name='width' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='1' name='height' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='2' name='length' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='3' name='chamferRadius' type='f' type64='d'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='chamferRadius'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='chamferSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='height'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='heightSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='length'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='lengthSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='setChamferRadius:'>
+<arg declared_type='CGFloat' index='0' name='chamferRadius' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setChamferSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='chamferSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeight:'>
+<arg declared_type='CGFloat' index='0' name='height' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeightSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='heightSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLength:'>
+<arg declared_type='CGFloat' index='0' name='length' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLengthSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='lengthSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWidth:'>
+<arg declared_type='CGFloat' index='0' name='width' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWidthSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='widthSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='width'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='widthSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+</class>
+<class name='SCNCamera'>
+<method selector='aperture'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='automaticallyAdjustsZRange'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='camera'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='focalBlurRadius'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='focalDistance'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='focalSize'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='orthographicScale'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='projectionTransform'>
+<retval declared_type='CATransform3D' type='{CATransform3D=ffffffffffffffff}' type64='{CATransform3D=dddddddddddddddd}'/>
+</method>
+<method selector='setAperture:'>
+<arg declared_type='CGFloat' index='0' name='aperture' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAutomaticallyAdjustsZRange:'>
+<arg declared_type='BOOL' index='0' name='automaticallyAdjustsZRange' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFocalBlurRadius:'>
+<arg declared_type='CGFloat' index='0' name='focalBlurRadius' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFocalDistance:'>
+<arg declared_type='CGFloat' index='0' name='focalDistance' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFocalSize:'>
+<arg declared_type='CGFloat' index='0' name='focalSize' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setName:'>
+<arg declared_type='NSString*' index='0' name='name' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOrthographicScale:'>
+<arg declared_type='double' index='0' name='orthographicScale' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setProjectionTransform:'>
+<arg declared_type='CATransform3D' index='0' name='projectionTransform' type='{CATransform3D=ffffffffffffffff}' type64='{CATransform3D=dddddddddddddddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUsesOrthographicProjection:'>
+<arg declared_type='BOOL' index='0' name='usesOrthographicProjection' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setXFov:'>
+<arg declared_type='double' index='0' name='xFov' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setYFov:'>
+<arg declared_type='double' index='0' name='yFov' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setZFar:'>
+<arg declared_type='double' index='0' name='zFar' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setZNear:'>
+<arg declared_type='double' index='0' name='zNear' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='usesOrthographicProjection'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='xFov'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='yFov'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='zFar'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='zNear'>
+<retval declared_type='double' type='d'/>
+</method>
+</class>
+<class name='SCNCapsule'>
+<method selector='capRadius'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='capSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method class_method='true' selector='capsuleWithCapRadius:height:'>
+<arg declared_type='CGFloat' index='0' name='capRadius' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='1' name='height' type='f' type64='d'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='height'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='heightSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='radialSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='setCapRadius:'>
+<arg declared_type='CGFloat' index='0' name='capRadius' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCapSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='capSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeight:'>
+<arg declared_type='CGFloat' index='0' name='height' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeightSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='heightSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRadialSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='radialSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SCNCone'>
+<method selector='bottomRadius'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method class_method='true' selector='coneWithTopRadius:bottomRadius:height:'>
+<arg declared_type='CGFloat' index='0' name='topRadius' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='1' name='bottomRadius' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='2' name='height' type='f' type64='d'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='height'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='heightSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='radialSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='setBottomRadius:'>
+<arg declared_type='CGFloat' index='0' name='bottomRadius' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeight:'>
+<arg declared_type='CGFloat' index='0' name='height' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeightSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='heightSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRadialSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='radialSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTopRadius:'>
+<arg declared_type='CGFloat' index='0' name='topRadius' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='topRadius'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+</class>
+<class name='SCNCylinder'>
+<method class_method='true' selector='cylinderWithRadius:height:'>
+<arg declared_type='CGFloat' index='0' name='radius' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='1' name='height' type='f' type64='d'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='height'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='heightSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='radialSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='radius'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='setHeight:'>
+<arg declared_type='CGFloat' index='0' name='height' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeightSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='heightSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRadialSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='radialSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRadius:'>
+<arg declared_type='CGFloat' index='0' name='radius' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SCNFloor'>
+<method class_method='true' selector='floor'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='reflectionFalloffEnd'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='reflectionFalloffStart'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='reflectivity'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='setReflectionFalloffEnd:'>
+<arg declared_type='CGFloat' index='0' name='reflectionFalloffEnd' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setReflectionFalloffStart:'>
+<arg declared_type='CGFloat' index='0' name='reflectionFalloffStart' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setReflectivity:'>
+<arg declared_type='CGFloat' index='0' name='reflectivity' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SCNGeometry'>
+<method selector='firstMaterial'>
+<retval declared_type='SCNMaterial*' type='@'/>
+</method>
+<method class_method='true' selector='geometry'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='geometryElementAtIndex:'>
+<arg declared_type='NSInteger' index='0' name='elementIndex' type='i' type64='q'/>
+<retval declared_type='SCNGeometryElement*' type='@'/>
+</method>
+<method selector='geometryElementCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='geometrySourcesForSemantic:'>
+<arg declared_type='NSString*' index='0' name='semantic' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='geometryWithSources:elements:'>
+<arg declared_type='NSArray*' index='0' name='sources' type='@'/>
+<arg declared_type='NSArray*' index='1' name='elements' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='insertMaterial:atIndex:'>
+<arg declared_type='SCNMaterial*' index='0' name='material' type='@'/>
+<arg declared_type='NSUInteger' index='1' name='index' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='levelsOfDetail'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='materialWithName:'>
+<arg declared_type='NSString*' index='0' name='name' type='@'/>
+<retval declared_type='SCNMaterial*' type='@'/>
+</method>
+<method selector='materials'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='removeMaterialAtIndex:'>
+<arg declared_type='NSUInteger' index='0' name='index' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='replaceMaterialAtIndex:withMaterial:'>
+<arg declared_type='NSUInteger' index='0' name='index' type='I' type64='Q'/>
+<arg declared_type='SCNMaterial*' index='1' name='material' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFirstMaterial:'>
+<arg declared_type='SCNMaterial*' index='0' name='firstMaterial' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLevelsOfDetail:'>
+<arg declared_type='NSArray*' index='0' name='levelsOfDetail' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaterials:'>
+<arg declared_type='NSArray*' index='0' name='materials' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setName:'>
+<arg declared_type='NSString*' index='0' name='name' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SCNGeometryElement'>
+<method selector='bytesPerIndex'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='data'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method class_method='true' selector='geometryElementWithData:primitiveType:primitiveCount:bytesPerIndex:'>
+<arg declared_type='NSData*' index='0' name='data' type='@'/>
+<arg declared_type='SCNGeometryPrimitiveType' index='1' name='primitiveType' type='i' type64='q'/>
+<arg declared_type='NSInteger' index='2' name='primitiveCount' type='i' type64='q'/>
+<arg declared_type='NSInteger' index='3' name='bytesPerIndex' type='i' type64='q'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='primitiveCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='primitiveType'>
+<retval declared_type='SCNGeometryPrimitiveType' type='i' type64='q'/>
+</method>
+</class>
+<class name='SCNGeometrySource'>
+<method selector='bytesPerComponent'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='componentsPerVector'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='data'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='dataOffset'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='dataStride'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='floatComponents'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='geometrySourceWithData:semantic:vectorCount:floatComponents:componentsPerVector:bytesPerComponent:dataOffset:dataStride:'>
+<arg declared_type='NSData*' index='0' name='data' type='@'/>
+<arg declared_type='NSString*' index='1' name='semantic' type='@'/>
+<arg declared_type='NSInteger' index='2' name='vectorCount' type='i' type64='q'/>
+<arg declared_type='BOOL' index='3' name='floatComponents' type='B'/>
+<arg declared_type='NSInteger' index='4' name='componentsPerVector' type='i' type64='q'/>
+<arg declared_type='NSInteger' index='5' name='bytesPerComponent' type='i' type64='q'/>
+<arg declared_type='NSInteger' index='6' name='offset' type='i' type64='q'/>
+<arg declared_type='NSInteger' index='7' name='stride' type='i' type64='q'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method class_method='true' selector='geometrySourceWithNormals:count:'>
+<arg declared_type='SCNVector3*' index='0' name='normals' type='^{_SCNVector3=fff}' type64='^{_SCNVector3=ddd}'/>
+<arg declared_type='NSInteger' index='1' name='count' type='i' type64='q'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method class_method='true' selector='geometrySourceWithTextureCoordinates:count:'>
+<arg declared_type='CGPoint*' index='0' name='texcoord' type='^{CGPoint=ff}' type64='^{CGPoint=dd}'/>
+<arg declared_type='NSInteger' index='1' name='count' type='i' type64='q'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method class_method='true' selector='geometrySourceWithVertices:count:'>
+<arg declared_type='SCNVector3*' index='0' name='vertices' type='^{_SCNVector3=fff}' type64='^{_SCNVector3=ddd}'/>
+<arg declared_type='NSInteger' index='1' name='count' type='i' type64='q'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='semantic'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='vectorCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+</class>
+<class name='SCNHitTestResult'>
+<method selector='faceIndex'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='geometryIndex'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='localCoordinates'>
+<retval declared_type='SCNVector3' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+</method>
+<method selector='localNormal'>
+<retval declared_type='SCNVector3' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+</method>
+<method selector='modelTransform'>
+<retval declared_type='CATransform3D' type='{CATransform3D=ffffffffffffffff}' type64='{CATransform3D=dddddddddddddddd}'/>
+</method>
+<method selector='node'>
+<retval declared_type='SCNNode*' type='@'/>
+</method>
+<method selector='textureCoordinatesWithMappingChannel:'>
+<arg declared_type='NSInteger' index='0' name='channel' type='i' type64='q'/>
+<retval declared_type='CGPoint' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+</method>
+<method selector='worldCoordinates'>
+<retval declared_type='SCNVector3' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+</method>
+<method selector='worldNormal'>
+<retval declared_type='SCNVector3' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+</method>
+</class>
+<class name='SCNLayer'>
+<method selector='scene'>
+<retval declared_type='SCNScene*' type='@'/>
+</method>
+<method selector='setScene:'>
+<arg declared_type='SCNScene*' index='0' name='scene' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SCNLevelOfDetail'>
+<method selector='geometry'>
+<retval declared_type='SCNGeometry*' type='@'/>
+</method>
+<method class_method='true' selector='levelOfDetailWithGeometry:screenSpaceRadius:'>
+<arg declared_type='SCNGeometry*' index='0' name='geometry' type='@'/>
+<arg declared_type='CGFloat' index='1' name='radius' type='f' type64='d'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method class_method='true' selector='levelOfDetailWithGeometry:worldSpaceDistance:'>
+<arg declared_type='SCNGeometry*' index='0' name='geometry' type='@'/>
+<arg declared_type='CGFloat' index='1' name='distance' type='f' type64='d'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='screenSpaceRadius'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='worldSpaceDistance'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+</class>
+<class name='SCNLight'>
+<method selector='attributeForKey:'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='castsShadow'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='color'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='gobo'>
+<retval declared_type='SCNMaterialProperty*' type='@'/>
+</method>
+<method class_method='true' selector='light'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setAttribute:forKey:'>
+<arg declared_type='id' index='0' name='attribute' type='@'/>
+<arg declared_type='NSString*' index='1' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCastsShadow:'>
+<arg declared_type='BOOL' index='0' name='castsShadow' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setColor:'>
+<arg declared_type='id' index='0' name='color' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setName:'>
+<arg declared_type='NSString*' index='0' name='name' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShadowColor:'>
+<arg declared_type='id' index='0' name='shadowColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShadowRadius:'>
+<arg declared_type='CGFloat' index='0' name='shadowRadius' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setType:'>
+<arg declared_type='NSString*' index='0' name='type' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shadowColor'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='shadowRadius'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='type'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='SCNLookAtConstraint'>
+<method selector='gimbalLockEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='lookAtConstraintWithTarget:'>
+<arg declared_type='SCNNode*' index='0' name='target' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='setGimbalLockEnabled:'>
+<arg declared_type='BOOL' index='0' name='gimbalLockEnabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='target'>
+<retval declared_type='SCNNode*' type='@'/>
+</method>
+</class>
+<class name='SCNMaterial'>
+<method selector='ambient'>
+<retval declared_type='SCNMaterialProperty*' type='@'/>
+</method>
+<method selector='cullMode'>
+<retval declared_type='SCNCullMode' type='i' type64='q'/>
+</method>
+<method selector='diffuse'>
+<retval declared_type='SCNMaterialProperty*' type='@'/>
+</method>
+<method selector='emission'>
+<retval declared_type='SCNMaterialProperty*' type='@'/>
+</method>
+<method selector='fresnelExponent'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='isDoubleSided'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isLitPerPixel'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='lightingModelName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='locksAmbientWithDiffuse'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='material'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='multiply'>
+<retval declared_type='SCNMaterialProperty*' type='@'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='normal'>
+<retval declared_type='SCNMaterialProperty*' type='@'/>
+</method>
+<method selector='readsFromDepthBuffer'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='reflective'>
+<retval declared_type='SCNMaterialProperty*' type='@'/>
+</method>
+<method selector='setCullMode:'>
+<arg declared_type='SCNCullMode' index='0' name='cullMode' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDoubleSided:'>
+<arg declared_type='BOOL' index='0' name='doubleSided' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFresnelExponent:'>
+<arg declared_type='CGFloat' index='0' name='fresnelExponent' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLightingModelName:'>
+<arg declared_type='NSString*' index='0' name='lightingModelName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLitPerPixel:'>
+<arg declared_type='BOOL' index='0' name='litPerPixel' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLocksAmbientWithDiffuse:'>
+<arg declared_type='BOOL' index='0' name='locksAmbientWithDiffuse' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setName:'>
+<arg declared_type='NSString*' index='0' name='name' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setReadsFromDepthBuffer:'>
+<arg declared_type='BOOL' index='0' name='readsFromDepthBuffer' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShininess:'>
+<arg declared_type='CGFloat' index='0' name='shininess' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTransparency:'>
+<arg declared_type='CGFloat' index='0' name='transparency' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTransparencyMode:'>
+<arg declared_type='SCNTransparencyMode' index='0' name='transparencyMode' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWritesToDepthBuffer:'>
+<arg declared_type='BOOL' index='0' name='writesToDepthBuffer' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shininess'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='specular'>
+<retval declared_type='SCNMaterialProperty*' type='@'/>
+</method>
+<method selector='transparency'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='transparencyMode'>
+<retval declared_type='SCNTransparencyMode' type='i' type64='q'/>
+</method>
+<method selector='transparent'>
+<retval declared_type='SCNMaterialProperty*' type='@'/>
+</method>
+<method selector='writesToDepthBuffer'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='SCNMaterialProperty'>
+<method selector='borderColor'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='contents'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='contentsTransform'>
+<retval declared_type='CATransform3D' type='{CATransform3D=ffffffffffffffff}' type64='{CATransform3D=dddddddddddddddd}'/>
+</method>
+<method selector='intensity'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='magnificationFilter'>
+<retval declared_type='SCNFilterMode' type='i' type64='q'/>
+</method>
+<method selector='mappingChannel'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method class_method='true' selector='materialPropertyWithContents:'>
+<arg declared_type='id' index='0' name='contents' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='maxAnisotropy'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='minificationFilter'>
+<retval declared_type='SCNFilterMode' type='i' type64='q'/>
+</method>
+<method selector='mipFilter'>
+<retval declared_type='SCNFilterMode' type='i' type64='q'/>
+</method>
+<method selector='setBorderColor:'>
+<arg declared_type='id' index='0' name='borderColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContents:'>
+<arg declared_type='id' index='0' name='contents' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContentsTransform:'>
+<arg declared_type='CATransform3D' index='0' name='contentsTransform' type='{CATransform3D=ffffffffffffffff}' type64='{CATransform3D=dddddddddddddddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setIntensity:'>
+<arg declared_type='CGFloat' index='0' name='intensity' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMagnificationFilter:'>
+<arg declared_type='SCNFilterMode' index='0' name='magnificationFilter' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMappingChannel:'>
+<arg declared_type='NSInteger' index='0' name='mappingChannel' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaxAnisotropy:'>
+<arg declared_type='CGFloat' index='0' name='maxAnisotropy' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMinificationFilter:'>
+<arg declared_type='SCNFilterMode' index='0' name='minificationFilter' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMipFilter:'>
+<arg declared_type='SCNFilterMode' index='0' name='mipFilter' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWrapS:'>
+<arg declared_type='SCNWrapMode' index='0' name='wrapS' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWrapT:'>
+<arg declared_type='SCNWrapMode' index='0' name='wrapT' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='wrapS'>
+<retval declared_type='SCNWrapMode' type='i' type64='q'/>
+</method>
+<method selector='wrapT'>
+<retval declared_type='SCNWrapMode' type='i' type64='q'/>
+</method>
+</class>
+<class name='SCNMorpher'>
+<method selector='calculationMode'>
+<retval declared_type='SCNMorpherCalculationMode' type='i' type64='q'/>
+</method>
+<method selector='setCalculationMode:'>
+<arg declared_type='SCNMorpherCalculationMode' index='0' name='calculationMode' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTargets:'>
+<arg declared_type='NSArray*' index='0' name='targets' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWeight:forTargetAtIndex:'>
+<arg declared_type='CGFloat' index='0' name='weight' type='f' type64='d'/>
+<arg declared_type='NSUInteger' index='1' name='targetIndex' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='targets'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='weightForTargetAtIndex:'>
+<arg declared_type='NSUInteger' index='0' name='targetIndex' type='I' type64='Q'/>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+</class>
+<class name='SCNNode'>
+<method selector='addChildNode:'>
+<arg declared_type='SCNNode*' index='0' name='child' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='camera'>
+<retval declared_type='SCNCamera*' type='@'/>
+</method>
+<method selector='childNodeWithName:recursively:'>
+<arg declared_type='NSString*' index='0' name='name' type='@'/>
+<arg declared_type='BOOL' index='1' name='recursively' type='B'/>
+<retval declared_type='SCNNode*' type='@'/>
+</method>
+<method selector='childNodes'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='childNodesPassingTest:'>
+<arg declared_type='BOOL (^)(SCNNode *, BOOL *)' function_pointer='true' index='0' name='predicate' type='@?'>
+<arg declared_type='SCNNode*' type='@'/>
+<arg declared_type='BOOL*' type='^B'/>
+<retval declared_type='BOOL' type='B'/>
+</arg>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='clone'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='constraints'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='convertPosition:fromNode:'>
+<arg declared_type='SCNVector3' index='0' name='position' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+<arg declared_type='SCNNode*' index='1' name='node' type='@'/>
+<retval declared_type='SCNVector3' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+</method>
+<method selector='convertPosition:toNode:'>
+<arg declared_type='SCNVector3' index='0' name='position' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+<arg declared_type='SCNNode*' index='1' name='node' type='@'/>
+<retval declared_type='SCNVector3' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+</method>
+<method selector='convertTransform:fromNode:'>
+<arg declared_type='CATransform3D' index='0' name='transform' type='{CATransform3D=ffffffffffffffff}' type64='{CATransform3D=dddddddddddddddd}'/>
+<arg declared_type='SCNNode*' index='1' name='node' type='@'/>
+<retval declared_type='CATransform3D' type='{CATransform3D=ffffffffffffffff}' type64='{CATransform3D=dddddddddddddddd}'/>
+</method>
+<method selector='convertTransform:toNode:'>
+<arg declared_type='CATransform3D' index='0' name='transform' type='{CATransform3D=ffffffffffffffff}' type64='{CATransform3D=dddddddddddddddd}'/>
+<arg declared_type='SCNNode*' index='1' name='node' type='@'/>
+<retval declared_type='CATransform3D' type='{CATransform3D=ffffffffffffffff}' type64='{CATransform3D=dddddddddddddddd}'/>
+</method>
+<method selector='filters'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='flattenedClone'>
+<retval declared_type='SCNNode*' type='@'/>
+</method>
+<method selector='geometry'>
+<retval declared_type='SCNGeometry*' type='@'/>
+</method>
+<method selector='hitTestWithSegmentFromPoint:toPoint:options:'>
+<arg declared_type='SCNVector3' index='0' name='pointA' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+<arg declared_type='SCNVector3' index='1' name='pointB' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+<arg declared_type='NSDictionary*' index='2' name='options' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='insertChildNode:atIndex:'>
+<arg declared_type='SCNNode*' index='0' name='child' type='@'/>
+<arg declared_type='NSUInteger' index='1' name='index' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='isHidden'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='light'>
+<retval declared_type='SCNLight*' type='@'/>
+</method>
+<method selector='morpher'>
+<retval declared_type='SCNMorpher*' type='@'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='node'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method class_method='true' selector='nodeWithGeometry:'>
+<arg declared_type='SCNGeometry*' index='0' name='geometry' type='@'/>
+<retval declared_type='SCNNode*' type='@'/>
+</method>
+<method selector='opacity'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='parentNode'>
+<retval declared_type='SCNNode*' type='@'/>
+</method>
+<method selector='pivot'>
+<retval declared_type='CATransform3D' type='{CATransform3D=ffffffffffffffff}' type64='{CATransform3D=dddddddddddddddd}'/>
+</method>
+<method selector='position'>
+<retval declared_type='SCNVector3' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+</method>
+<method selector='presentationNode'>
+<retval declared_type='SCNNode*' type='@'/>
+</method>
+<method selector='removeFromParentNode'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='rendererDelegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='renderingOrder'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='replaceChildNode:with:'>
+<arg declared_type='SCNNode*' index='0' name='oldChild' type='@'/>
+<arg declared_type='SCNNode*' index='1' name='newChild' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='rotation'>
+<retval declared_type='SCNVector4' type='{_SCNVector4=ffff}' type64='{_SCNVector4=dddd}'/>
+</method>
+<method selector='scale'>
+<retval declared_type='SCNVector3' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+</method>
+<method selector='setCamera:'>
+<arg declared_type='SCNCamera*' index='0' name='camera' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setConstraints:'>
+<arg declared_type='NSArray*' index='0' name='constraints' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFilters:'>
+<arg declared_type='NSArray*' index='0' name='filters' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGeometry:'>
+<arg declared_type='SCNGeometry*' index='0' name='geometry' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHidden:'>
+<arg declared_type='BOOL' index='0' name='hidden' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLight:'>
+<arg declared_type='SCNLight*' index='0' name='light' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMorpher:'>
+<arg declared_type='SCNMorpher*' index='0' name='morpher' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setName:'>
+<arg declared_type='NSString*' index='0' name='name' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOpacity:'>
+<arg declared_type='CGFloat' index='0' name='opacity' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPivot:'>
+<arg declared_type='CATransform3D' index='0' name='pivot' type='{CATransform3D=ffffffffffffffff}' type64='{CATransform3D=dddddddddddddddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPosition:'>
+<arg declared_type='SCNVector3' index='0' name='position' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRendererDelegate:'>
+<arg declared_type='id' index='0' name='rendererDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRenderingOrder:'>
+<arg declared_type='NSInteger' index='0' name='renderingOrder' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRotation:'>
+<arg declared_type='SCNVector4' index='0' name='rotation' type='{_SCNVector4=ffff}' type64='{_SCNVector4=dddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setScale:'>
+<arg declared_type='SCNVector3' index='0' name='scale' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSkinner:'>
+<arg declared_type='SCNSkinner*' index='0' name='skinner' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTransform:'>
+<arg declared_type='CATransform3D' index='0' name='transform' type='{CATransform3D=ffffffffffffffff}' type64='{CATransform3D=dddddddddddddddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='skinner'>
+<retval declared_type='SCNSkinner*' type='@'/>
+</method>
+<method selector='transform'>
+<retval declared_type='CATransform3D' type='{CATransform3D=ffffffffffffffff}' type64='{CATransform3D=dddddddddddddddd}'/>
+</method>
+<method selector='worldTransform'>
+<retval declared_type='CATransform3D' type='{CATransform3D=ffffffffffffffff}' type64='{CATransform3D=dddddddddddddddd}'/>
+</method>
+</class>
+<class name='SCNPlane'>
+<method selector='cornerRadius'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='cornerSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='height'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='heightSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method class_method='true' selector='planeWithWidth:height:'>
+<arg declared_type='CGFloat' index='0' name='width' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='1' name='height' type='f' type64='d'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='setCornerRadius:'>
+<arg declared_type='CGFloat' index='0' name='cornerRadius' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCornerSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='cornerSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeight:'>
+<arg declared_type='CGFloat' index='0' name='height' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeightSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='heightSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWidth:'>
+<arg declared_type='CGFloat' index='0' name='width' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWidthSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='widthSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='width'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='widthSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+</class>
+<class name='SCNProgram'>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='fragmentShader'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='program'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='semanticForSymbol:'>
+<arg declared_type='NSString*' index='0' name='symbol' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFragmentShader:'>
+<arg declared_type='NSString*' index='0' name='fragmentShader' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSemantic:forSymbol:options:'>
+<arg declared_type='NSString*' index='0' name='semantic' type='@'/>
+<arg declared_type='NSString*' index='1' name='symbol' type='@'/>
+<arg declared_type='NSDictionary*' index='2' name='options' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setVertexShader:'>
+<arg declared_type='NSString*' index='0' name='vertexShader' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='vertexShader'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='SCNPyramid'>
+<method selector='height'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='heightSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='length'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='lengthSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method class_method='true' selector='pyramidWithWidth:height:length:'>
+<arg declared_type='CGFloat' index='0' name='width' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='1' name='height' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='2' name='length' type='f' type64='d'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='setHeight:'>
+<arg declared_type='CGFloat' index='0' name='height' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeightSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='heightSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLength:'>
+<arg declared_type='CGFloat' index='0' name='length' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLengthSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='lengthSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWidth:'>
+<arg declared_type='CGFloat' index='0' name='width' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWidthSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='widthSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='width'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='widthSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+</class>
+<class name='SCNRenderer'>
+<method selector='render'>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='rendererWithContext:options:'>
+<arg declared_type='void*' index='0' name='context' type='^v'/>
+<arg declared_type='NSDictionary*' index='1' name='options' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='scene'>
+<retval declared_type='SCNScene*' type='@'/>
+</method>
+<method selector='setScene:'>
+<arg declared_type='SCNScene*' index='0' name='scene' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SCNScene'>
+<method selector='attributeForKey:'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='background'>
+<retval declared_type='SCNMaterialProperty*' type='@'/>
+</method>
+<method selector='rootNode'>
+<retval declared_type='SCNNode*' type='@'/>
+</method>
+<method class_method='true' selector='scene'>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method class_method='true' selector='sceneNamed:'>
+<arg declared_type='NSString*' index='0' name='name' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method class_method='true' selector='sceneWithURL:options:error:'>
+<arg declared_type='NSURL*' index='0' name='url' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='options' type='@'/>
+<arg declared_type='NSError**' index='2' name='error' type='^@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='setAttribute:forKey:'>
+<arg declared_type='id' index='0' name='attribute' type='@'/>
+<arg declared_type='NSString*' index='1' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='writeToURL:options:delegate:progressHandler:'>
+<arg declared_type='NSURL*' index='0' name='url' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='options' type='@'/>
+<arg declared_type='id' index='2' name='delegate' type='@'/>
+<arg declared_type='SCNSceneExportProgressHandler' function_pointer='true' index='3' name='progressHandler' type='@?'>
+<arg declared_type='float' type='f'/>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='BOOL*' type='^B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='SCNSceneSource'>
+<method selector='data'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='entriesPassingTest:'>
+<arg declared_type='BOOL (^)(id, NSString *, BOOL *)' function_pointer='true' index='0' name='predicate' type='@?'>
+<arg declared_type='id' type='@'/>
+<arg declared_type='NSString*' type='@'/>
+<arg declared_type='BOOL*' type='^B'/>
+<retval declared_type='BOOL' type='B'/>
+</arg>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='entryWithIdentifier:withClass:'>
+<arg declared_type='NSString*' index='0' name='uid' type='@'/>
+<arg declared_type='Class' index='1' name='entryClass' type='#'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='identifiersOfEntriesWithClass:'>
+<arg declared_type='Class' index='0' name='entryClass' type='#'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='initWithData:options:'>
+<arg declared_type='NSData*' index='0' name='data' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='options' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithURL:options:'>
+<arg declared_type='NSURL*' index='0' name='url' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='options' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='propertyForKey:'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='sceneSourceWithData:options:'>
+<arg declared_type='NSData*' index='0' name='data' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='options' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method class_method='true' selector='sceneSourceWithURL:options:'>
+<arg declared_type='NSURL*' index='0' name='url' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='options' type='@'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='sceneWithOptions:error:'>
+<arg declared_type='NSDictionary*' index='0' name='options' type='@'/>
+<arg declared_type='NSError**' index='1' name='error' type='^@'/>
+<retval declared_type='SCNScene*' type='@'/>
+</method>
+<method selector='sceneWithOptions:statusHandler:'>
+<arg declared_type='NSDictionary*' index='0' name='options' type='@'/>
+<arg declared_type='SCNSceneSourceStatusHandler' function_pointer='true' index='1' name='statusHandler' type='@?'>
+<arg declared_type='float' type='f'/>
+<arg declared_type='SCNSceneSourceStatus' type='i' type64='q'/>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='BOOL*' type='^B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='SCNScene*' type='@'/>
+</method>
+<method selector='url'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+</class>
+<class name='SCNShape'>
+<method selector='chamferMode'>
+<retval declared_type='SCNChamferMode' type='i' type64='q'/>
+</method>
+<method selector='chamferProfile'>
+<retval declared_type='NSBezierPath*' type='@'/>
+</method>
+<method selector='chamferRadius'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='extrusionDepth'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='path'>
+<retval declared_type='NSBezierPath*' type='@'/>
+</method>
+<method selector='setChamferMode:'>
+<arg declared_type='SCNChamferMode' index='0' name='chamferMode' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setChamferProfile:'>
+<arg declared_type='NSBezierPath*' index='0' name='chamferProfile' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setChamferRadius:'>
+<arg declared_type='CGFloat' index='0' name='chamferRadius' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setExtrusionDepth:'>
+<arg declared_type='CGFloat' index='0' name='extrusionDepth' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPath:'>
+<arg declared_type='NSBezierPath*' index='0' name='path' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='shapeWithPath:extrusionDepth:'>
+<arg declared_type='NSBezierPath*' index='0' name='path' type='@'/>
+<arg declared_type='CGFloat' index='1' name='extrusionDepth' type='f' type64='d'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+</class>
+<class name='SCNSkinner'>
+<method selector='setSkeleton:'>
+<arg declared_type='SCNNode*' index='0' name='skeleton' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='skeleton'>
+<retval declared_type='SCNNode*' type='@'/>
+</method>
+</class>
+<class name='SCNSphere'>
+<method selector='isGeodesic'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='radius'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='segmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='setGeodesic:'>
+<arg declared_type='BOOL' index='0' name='geodesic' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRadius:'>
+<arg declared_type='CGFloat' index='0' name='radius' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='segmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sphereWithRadius:'>
+<arg declared_type='CGFloat' index='0' name='radius' type='f' type64='d'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+</class>
+<class name='SCNText'>
+<method selector='alignmentMode'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='chamferProfile'>
+<retval declared_type='NSBezierPath*' type='@'/>
+</method>
+<method selector='chamferRadius'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='chamferSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='containerFrame'>
+<retval declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='extrusionDepth'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='flatness'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='font'>
+<retval declared_type='NSFont*' type='@'/>
+</method>
+<method selector='isWrapped'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setAlignmentMode:'>
+<arg declared_type='NSString*' index='0' name='alignmentMode' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setChamferProfile:'>
+<arg declared_type='NSBezierPath*' index='0' name='chamferProfile' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setChamferRadius:'>
+<arg declared_type='CGFloat' index='0' name='chamferRadius' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setChamferSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='chamferSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContainerFrame:'>
+<arg declared_type='CGRect' index='0' name='containerFrame' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setExtrusionDepth:'>
+<arg declared_type='CGFloat' index='0' name='extrusionDepth' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFlatness:'>
+<arg declared_type='CGFloat' index='0' name='flatness' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFont:'>
+<arg declared_type='NSFont*' index='0' name='font' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setString:'>
+<arg declared_type='id' index='0' name='string' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTruncationMode:'>
+<arg declared_type='NSString*' index='0' name='truncationMode' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWrapped:'>
+<arg declared_type='BOOL' index='0' name='wrapped' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='string'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='textSize'>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</method>
+<method class_method='true' selector='textWithString:extrusionDepth:'>
+<arg declared_type='id' index='0' name='string' type='@'/>
+<arg declared_type='CGFloat' index='1' name='extrusionDepth' type='f' type64='d'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='truncationMode'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='SCNTorus'>
+<method selector='pipeRadius'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='pipeSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='ringRadius'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='ringSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='setPipeRadius:'>
+<arg declared_type='CGFloat' index='0' name='pipeRadius' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPipeSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='pipeSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRingRadius:'>
+<arg declared_type='CGFloat' index='0' name='ringRadius' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRingSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='ringSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='torusWithRingRadius:pipeRadius:'>
+<arg declared_type='CGFloat' index='0' name='ringRadius' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='1' name='pipeRadius' type='f' type64='d'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+</class>
+<class name='SCNTransaction'>
+<method class_method='true' selector='animationDuration'>
+<retval declared_type='CFTimeInterval' type='d'/>
+</method>
+<method class_method='true' selector='animationTimingFunction'>
+<retval declared_type='CAMediaTimingFunction*' type='@'/>
+</method>
+<method class_method='true' selector='begin'>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='commit'>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='completionBlock'>
+<retval declared_type='void (^)(void)' function_pointer='true' type='@?'>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method class_method='true' selector='disableActions'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='flush'>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='lock'>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='setAnimationDuration:'>
+<arg declared_type='CFTimeInterval' index='0' name='duration' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='setAnimationTimingFunction:'>
+<arg declared_type='CAMediaTimingFunction*' index='0' name='function' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='setCompletionBlock:'>
+<arg declared_type='void (^)(void)' function_pointer='true' index='0' name='block' type='@?'>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='setDisableActions:'>
+<arg declared_type='BOOL' index='0' name='flag' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='setValue:forKey:'>
+<arg declared_type='id' index='0' name='anObject' type='@'/>
+<arg declared_type='NSString*' index='1' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='unlock'>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='valueForKey:'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='SCNTransformConstraint'>
+<method class_method='true' selector='transformConstraintInWorldSpace:withBlock:'>
+<arg declared_type='BOOL' index='0' name='world' type='B'/>
+<arg declared_type='CATransform3D (^)(SCNNode *, CATransform3D)' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='SCNNode*' type='@'/>
+<arg declared_type='CATransform3D' type='{CATransform3D=ffffffffffffffff}' type64='{CATransform3D=dddddddddddddddd}'/>
+<retval declared_type='CATransform3D' type='{CATransform3D=ffffffffffffffff}' type64='{CATransform3D=dddddddddddddddd}'/>
+</arg>
+<retval declared_type='instancetype' type='@'/>
+</method>
+</class>
+<class name='SCNTube'>
+<method selector='height'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='heightSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='innerRadius'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='outerRadius'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='radialSegmentCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='setHeight:'>
+<arg declared_type='CGFloat' index='0' name='height' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeightSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='heightSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInnerRadius:'>
+<arg declared_type='CGFloat' index='0' name='innerRadius' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOuterRadius:'>
+<arg declared_type='CGFloat' index='0' name='outerRadius' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRadialSegmentCount:'>
+<arg declared_type='NSInteger' index='0' name='radialSegmentCount' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='tubeWithInnerRadius:outerRadius:height:'>
+<arg declared_type='CGFloat' index='0' name='innerRadius' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='1' name='outerRadius' type='f' type64='d'/>
+<arg declared_type='CGFloat' index='2' name='height' type='f' type64='d'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+</class>
+<class name='SCNView'>
+<method selector='allowsCameraControl'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='backgroundColor'>
+<retval declared_type='NSColor*' type='@'/>
+</method>
+<method selector='initWithFrame:options:'>
+<arg declared_type='NSRect' index='0' name='frame' type='{_NSRect={_NSPoint=ff}{_NSSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='NSDictionary*' index='1' name='options' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='openGLContext'>
+<retval declared_type='NSOpenGLContext*' type='@'/>
+</method>
+<method selector='pause:'>
+<arg declared_type='id' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='pixelFormat'>
+<retval declared_type='NSOpenGLPixelFormat*' type='@'/>
+</method>
+<method selector='play:'>
+<arg declared_type='id' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='scene'>
+<retval declared_type='SCNScene*' type='@'/>
+</method>
+<method selector='setAllowsCameraControl:'>
+<arg declared_type='BOOL' index='0' name='allowsCameraControl' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBackgroundColor:'>
+<arg declared_type='NSColor*' index='0' name='backgroundColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOpenGLContext:'>
+<arg declared_type='NSOpenGLContext*' index='0' name='openGLContext' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPixelFormat:'>
+<arg declared_type='NSOpenGLPixelFormat*' index='0' name='pixelFormat' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setScene:'>
+<arg declared_type='SCNScene*' index='0' name='scene' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stop:'>
+<arg declared_type='id' index='0' name='sender' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='SCNAnimatable'>
+<method selector='addAnimation:forKey:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='CAAnimation*' index='0' name='animation' type='@'/>
+<arg declared_type='NSString*' index='1' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='animationForKey:' type='@12@0:4@8' type64='@24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='CAAnimation*' type='@'/>
+</method>
+<method selector='animationKeys' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='isAnimationForKeyPaused:' type='B12@0:4@8' type64='B24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='pauseAnimationForKey:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeAllAnimations' type='v8@0:4' type64='v16@0:8'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeAnimationForKey:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='resumeAnimationForKey:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='SCNBoundingVolume'>
+<method selector='getBoundingBoxMin:max:' type='B16@0:4^{?=fff}8^{?=fff}12' type64='B32@0:8^{?=ddd}16^{?=ddd}24'>
+<arg declared_type='SCNVector3*' index='0' name='min' type='^{_SCNVector3=fff}' type64='^{_SCNVector3=ddd}'/>
+<arg declared_type='SCNVector3*' index='1' name='max' type='^{_SCNVector3=fff}' type64='^{_SCNVector3=ddd}'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='getBoundingSphereCenter:radius:' type='B16@0:4^{?=fff}8^f12' type64='B32@0:8^{?=ddd}16^d24'>
+<arg declared_type='SCNVector3*' index='0' name='center' type='^{_SCNVector3=fff}' type64='^{_SCNVector3=ddd}'/>
+<arg declared_type='CGFloat*' index='1' name='radius' type='^f' type64='^d'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setBoundingBoxMin:max:' type='v16@0:4^{?=fff}8^{?=fff}12' type64='v32@0:8^{?=ddd}16^{?=ddd}24'>
+<arg declared_type='SCNVector3*' index='0' name='min' type='^{_SCNVector3=fff}' type64='^{_SCNVector3=ddd}'/>
+<arg declared_type='SCNVector3*' index='1' name='max' type='^{_SCNVector3=fff}' type64='^{_SCNVector3=ddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='SCNNodeRendererDelegate'>
+<method selector='renderNode:renderer:arguments:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='SCNNode*' index='0' name='node' type='@'/>
+<arg declared_type='SCNRenderer*' index='1' name='renderer' type='@'/>
+<arg declared_type='NSDictionary*' index='2' name='arguments' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='SCNProgramDelegate'>
+<method selector='program:bindValueForSymbol:atLocation:programID:renderer:' type='B28@0:4@8@12I16I20@24' type64='B48@0:8@16@24I32I36@40'>
+<arg declared_type='SCNProgram*' index='0' name='program' type='@'/>
+<arg declared_type='NSString*' index='1' name='symbol' type='@'/>
+<arg declared_type='unsigned int' index='2' name='location' type='I'/>
+<arg declared_type='unsigned int' index='3' name='programID' type='I'/>
+<arg declared_type='SCNRenderer*' index='4' name='renderer' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='program:handleError:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='SCNProgram*' index='0' name='program' type='@'/>
+<arg declared_type='NSError*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='program:unbindValueForSymbol:atLocation:programID:renderer:' type='v28@0:4@8@12I16I20@24' type64='v48@0:8@16@24I32I36@40'>
+<arg declared_type='SCNProgram*' index='0' name='program' type='@'/>
+<arg declared_type='NSString*' index='1' name='symbol' type='@'/>
+<arg declared_type='unsigned int' index='2' name='location' type='I'/>
+<arg declared_type='unsigned int' index='3' name='programID' type='I'/>
+<arg declared_type='SCNRenderer*' index='4' name='renderer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='programIsOpaque:' type='B12@0:4@8' type64='B24@0:8@16'>
+<arg declared_type='SCNProgram*' index='0' name='program' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</informal_protocol>
+<informal_protocol name='SCNSceneExportDelegate'>
+<method selector='writeImage:withSceneDocumentURL:originalImageURL:' type='@20@0:4@8@12@16' type64='@40@0:8@16@24@32'>
+<arg declared_type='NSImage*' index='0' name='image' type='@'/>
+<arg declared_type='NSURL*' index='1' name='documentURL' type='@'/>
+<arg declared_type='NSURL*' index='2' name='originalImageURL' type='@'/>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='SCNSceneRenderer'>
+<method selector='autoenablesDefaultLighting' type='B8@0:4' type64='B16@0:8'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='context' type='^v8@0:4' type64='^v16@0:8'>
+<retval declared_type='void*' type='^v'/>
+</method>
+<method selector='currentTime' type='d8@0:4' type64='d16@0:8'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='delegate' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='hitTest:options:' type='@20@0:4{CGPoint=ff}8@16' type64='@40@0:8{CGPoint=dd}16@32'>
+<arg declared_type='CGPoint' index='0' name='thePoint' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+<arg declared_type='NSDictionary*' index='1' name='options' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='isJitteringEnabled' type='B8@0:4' type64='B16@0:8'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isNodeInsideFrustum:withPointOfView:' type='B16@0:4@8@12' type64='B32@0:8@16@24'>
+<arg declared_type='SCNNode*' index='0' name='node' type='@'/>
+<arg declared_type='SCNNode*' index='1' name='pointOfView' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isPlaying' type='B8@0:4' type64='B16@0:8'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='loops' type='B8@0:4' type64='B16@0:8'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='pointOfView' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='SCNNode*' type='@'/>
+</method>
+<method selector='prepareObject:shouldAbortBlock:' type='B16@0:4@8@?12' type64='B32@0:8@16@?24'>
+<arg declared_type='id' index='0' name='object' type='@'/>
+<arg declared_type='BOOL (^)()' function_pointer='true' index='1' name='block' type='@?'>
+<retval declared_type='BOOL' type='B'/>
+</arg>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='projectPoint:' type='{?=fff}20@0:4{?=fff}8' type64='{?=ddd}40@0:8{?=ddd}16'>
+<arg declared_type='SCNVector3' index='0' name='point' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+<retval declared_type='SCNVector3' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+</method>
+<method selector='setAutoenablesDefaultLighting:' type='v12@0:4B8' type64='v20@0:8B16'>
+<arg declared_type='BOOL' index='0' name='autoenablesDefaultLighting' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCurrentTime:' type='v16@0:4d8' type64='v24@0:8d16'>
+<arg declared_type='NSTimeInterval' index='0' name='currentTime' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setJitteringEnabled:' type='v12@0:4B8' type64='v20@0:8B16'>
+<arg declared_type='BOOL' index='0' name='jitteringEnabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLoops:' type='v12@0:4B8' type64='v20@0:8B16'>
+<arg declared_type='BOOL' index='0' name='loops' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPlaying:' type='v12@0:4B8' type64='v20@0:8B16'>
+<arg declared_type='BOOL' index='0' name='playing' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPointOfView:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SCNNode*' index='0' name='pointOfView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShowsStatistics:' type='v12@0:4B8' type64='v20@0:8B16'>
+<arg declared_type='BOOL' index='0' name='showsStatistics' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='showsStatistics' type='B8@0:4' type64='B16@0:8'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='unprojectPoint:' type='{?=fff}20@0:4{?=fff}8' type64='{?=ddd}40@0:8{?=ddd}16'>
+<arg declared_type='SCNVector3' index='0' name='point' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+<retval declared_type='SCNVector3' type='{_SCNVector3=fff}' type64='{_SCNVector3=ddd}'/>
+</method>
+</informal_protocol>
+<informal_protocol name='SCNSceneRendererDelegate'>
+<method selector='renderer:didRenderScene:atTime:' type='v24@0:4@8@12d16' type64='v40@0:8@16@24d32'>
+<arg declared_type='id' index='0' name='aRenderer' type='@'/>
+<arg declared_type='SCNScene*' index='1' name='scene' type='@'/>
+<arg declared_type='NSTimeInterval' index='2' name='time' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='renderer:willRenderScene:atTime:' type='v24@0:4@8@12d16' type64='v40@0:8@16@24d32'>
+<arg declared_type='id' index='0' name='aRenderer' type='@'/>
+<arg declared_type='SCNScene*' index='1' name='scene' type='@'/>
+<arg declared_type='NSTimeInterval' index='2' name='time' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='SCNShadable'>
+<method selector='handleBindingOfSymbol:usingBlock:' type='v16@0:4@8@?12' type64='v32@0:8@16@?24'>
+<arg declared_type='NSString*' index='0' name='symbol' type='@'/>
+<arg declared_type='SCNBindingBlock' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='unsigned int' type='I'/>
+<arg declared_type='unsigned int' type='I'/>
+<arg declared_type='SCNNode*' type='@'/>
+<arg declared_type='SCNRenderer*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handleUnbindingOfSymbol:usingBlock:' type='v16@0:4@8@?12' type64='v32@0:8@16@?24'>
+<arg declared_type='NSString*' index='0' name='symbol' type='@'/>
+<arg declared_type='SCNBindingBlock' function_pointer='true' index='1' name='block' type='@?'>
+<arg declared_type='unsigned int' type='I'/>
+<arg declared_type='unsigned int' type='I'/>
+<arg declared_type='SCNNode*' type='@'/>
+<arg declared_type='SCNRenderer*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='program' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='SCNProgram*' type='@'/>
+</method>
+<method selector='setProgram:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SCNProgram*' index='0' name='program' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShaderModifiers:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='NSDictionary*' index='0' name='shaderModifiers' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shaderModifiers' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+</informal_protocol>
+</signatures>

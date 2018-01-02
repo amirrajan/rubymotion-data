@@ -1,0 +1,756 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/JavaVM.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<struct name='JNFClassInfo' type='{_JNFClassInfo=&quot;name&quot;*&quot;cls&quot;^{_jobject}}'>
+<field const='true' declared_type='char*' name='name' type='*'/>
+<field declared_type='jclass' name='cls' type='^{_jobject=}'/>
+</struct>
+<struct name='JNFMemberInfo' type='{_JNFMemberInfo=&quot;name&quot;*&quot;sig&quot;*&quot;isStatic&quot;B&quot;classInfo&quot;^{_JNFClassInfo}&quot;j&quot;(_j=&quot;fieldID&quot;^{_jfieldID}&quot;methodID&quot;^{_jmethodID})}'>
+<field const='true' declared_type='char*' name='name' type='*'/>
+<field const='true' declared_type='char*' name='sig' type='*'/>
+<field declared_type='BOOL' name='isStatic' type='B'/>
+<field declared_type='JNFClassInfo*' name='classInfo' type='^{_JNFClassInfo=*^{_jobject}}'/>
+<field declared_type='union _j' name='j' type='(_j=&quot;fieldID&quot;^{_jfieldID}&quot;methodID&quot;^{_jmethodID})'/>
+</struct>
+<constant declared_type='NSString*' name='JNFRunLoopDidStartNotification' type='@'/>
+<constant const='true' declared_type='char*' name='kClassNotFoundException' type='*'/>
+<constant const='true' declared_type='char*' name='kIllegalAccessException' type='*'/>
+<constant const='true' declared_type='char*' name='kIllegalArgumentException' type='*'/>
+<constant const='true' declared_type='char*' name='kNoSuchFieldException' type='*'/>
+<constant const='true' declared_type='char*' name='kNoSuchMethodException' type='*'/>
+<constant const='true' declared_type='char*' name='kNullPointerException' type='*'/>
+<constant const='true' declared_type='char*' name='kOutOfMemoryError' type='*'/>
+<constant const='true' declared_type='char*' name='kRuntimeException' type='*'/>
+<enum name='JNFThreadAttachAsDaemon' value='16'/>
+<enum name='JNFThreadDetachImmediately' value='2'/>
+<enum name='JNFThreadDetachOnThreadDeath' value='4'/>
+<enum name='JNFThreadSetSystemClassLoaderOnAttach' value='8'/>
+<function name='JNFCFToJavaBoolean'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='CFBooleanRef' name='b' type='^{__CFBoolean=}'/>
+<retval declared_type='jobject' type='^{_jobject=}'/>
+</function>
+<function name='JNFCallBooleanMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jboolean' type='C'/>
+</function>
+<function name='JNFCallByteMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jbyte' type='c'/>
+</function>
+<function name='JNFCallCharMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jchar' type='S'/>
+</function>
+<function name='JNFCallDoubleMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jdouble' type='d'/>
+</function>
+<function name='JNFCallFloatMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jfloat' type='f'/>
+</function>
+<function name='JNFCallIntMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jint' type='l' type64='i'/>
+</function>
+<function name='JNFCallLongMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jlong' type='q'/>
+</function>
+<function name='JNFCallObjectMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jobject' type='^{_jobject=}'/>
+</function>
+<function name='JNFCallShortMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jshort' type='s'/>
+</function>
+<function name='JNFCallStaticBooleanMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jboolean' type='C'/>
+</function>
+<function name='JNFCallStaticByteMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jbyte' type='c'/>
+</function>
+<function name='JNFCallStaticCharMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jchar' type='S'/>
+</function>
+<function name='JNFCallStaticDoubleMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jdouble' type='d'/>
+</function>
+<function name='JNFCallStaticFloatMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jfloat' type='f'/>
+</function>
+<function name='JNFCallStaticIntMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jint' type='l' type64='i'/>
+</function>
+<function name='JNFCallStaticLongMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jlong' type='q'/>
+</function>
+<function name='JNFCallStaticObjectMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jobject' type='^{_jobject=}'/>
+</function>
+<function name='JNFCallStaticShortMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jshort' type='s'/>
+</function>
+<function name='JNFCallStaticVoidMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFCallVoidMethod' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='method' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFDebugWarning' variadic='true'>
+<arg const='true' declared_type='char*' name='fmt' type='*'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFDeleteGlobalRef'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='globalRef' type='^{_jobject=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFDeleteWeakGlobalRef'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='globalRef' type='^{_jobject=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFDumpJavaStack'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFGetBooleanField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jboolean' type='C'/>
+</function>
+<function name='JNFGetByteField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jbyte' type='c'/>
+</function>
+<function name='JNFGetCharField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jchar' type='S'/>
+</function>
+<function name='JNFGetDoubleField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jdouble' type='d'/>
+</function>
+<function name='JNFGetFloatField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jfloat' type='f'/>
+</function>
+<function name='JNFGetIntField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jint' type='l' type64='i'/>
+</function>
+<function name='JNFGetLongField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jlong' type='q'/>
+</function>
+<function name='JNFGetObjectField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jobject' type='^{_jobject=}'/>
+</function>
+<function name='JNFGetShortField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jshort' type='s'/>
+</function>
+<function name='JNFGetStaticBooleanField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jboolean' type='C'/>
+</function>
+<function name='JNFGetStaticByteField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jbyte' type='c'/>
+</function>
+<function name='JNFGetStaticCharField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jchar' type='S'/>
+</function>
+<function name='JNFGetStaticDoubleField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jdouble' type='d'/>
+</function>
+<function name='JNFGetStaticFloatField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jfloat' type='f'/>
+</function>
+<function name='JNFGetStaticIntField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jint' type='l' type64='i'/>
+</function>
+<function name='JNFGetStaticLongField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jlong' type='q'/>
+</function>
+<function name='JNFGetStaticObjectField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jobject' type='^{_jobject=}'/>
+</function>
+<function name='JNFGetStaticShortField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jshort' type='s'/>
+</function>
+<function name='JNFGetStringUTF16UniChars'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jstring' name='javaString' type='^{_jobject=}'/>
+<retval const='true' declared_type='unichar*' type='^S'/>
+</function>
+<function name='JNFGetStringUTF8Chars'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jstring' name='javaString' type='^{_jobject=}'/>
+<retval const='true' declared_type='char*' type='*'/>
+</function>
+<function name='JNFIsInstanceOf'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFClassInfo*' name='clazz' type='^{_JNFClassInfo=*^{_jobject}}'/>
+<retval declared_type='BOOL' type='B'/>
+</function>
+<function name='JNFJavaMillisToNSTimeInterval'>
+<arg declared_type='jlong' name='javaMillisSince1970' type='q'/>
+<retval declared_type='NSTimeInterval' type='d'/>
+</function>
+<function name='JNFJavaToCFBoolean'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='b' type='^{_jobject=}'/>
+<retval declared_type='CFBooleanRef' type='^{__CFBoolean=}'/>
+</function>
+<function name='JNFJavaToNSDate'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='date' type='^{_jobject=}'/>
+<retval declared_type='NSDate*' type='@'/>
+</function>
+<function name='JNFJavaToNSNumber'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='n' type='^{_jobject=}'/>
+<retval declared_type='NSNumber*' type='@'/>
+</function>
+<function name='JNFJavaToNSString'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jstring' name='javaString' type='^{_jobject=}'/>
+<retval declared_type='NSString*' type='@'/>
+</function>
+<function name='JNFNSTimeIntervalToJavaMillis'>
+<arg declared_type='NSTimeInterval' name='intervalSince2001' type='d'/>
+<retval declared_type='jlong' type='q'/>
+</function>
+<function name='JNFNSToJavaCalendar'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='NSDate*' name='date' type='@'/>
+<retval declared_type='jobject' type='^{_jobject=}'/>
+</function>
+<function name='JNFNSToJavaNumber'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='NSNumber*' name='n' type='@'/>
+<retval declared_type='jobject' type='^{_jobject=}'/>
+</function>
+<function name='JNFNSToJavaString'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='NSString*' name='nsString' type='@'/>
+<retval declared_type='jstring' type='^{_jobject=}'/>
+</function>
+<function name='JNFNativeMethodEnter'>
+<retval declared_type='JNFAutoreleasePoolToken*' type='@'/>
+</function>
+<function name='JNFNativeMethodExit'>
+<arg declared_type='JNFAutoreleasePoolToken*' name='token' type='@'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFNewBooleanArray'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jsize' name='length' type='l' type64='i'/>
+<retval declared_type='jbooleanArray' type='^{_jobject=}'/>
+</function>
+<function name='JNFNewByteArray'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jsize' name='length' type='l' type64='i'/>
+<retval declared_type='jbyteArray' type='^{_jobject=}'/>
+</function>
+<function name='JNFNewCharArray'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jsize' name='length' type='l' type64='i'/>
+<retval declared_type='jcharArray' type='^{_jobject=}'/>
+</function>
+<function name='JNFNewDoubleArray'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jsize' name='length' type='l' type64='i'/>
+<retval declared_type='jdoubleArray' type='^{_jobject=}'/>
+</function>
+<function name='JNFNewFloatArray'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jsize' name='length' type='l' type64='i'/>
+<retval declared_type='jfloatArray' type='^{_jobject=}'/>
+</function>
+<function name='JNFNewGlobalRef'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<retval declared_type='jobject' type='^{_jobject=}'/>
+</function>
+<function name='JNFNewIntArray'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jsize' name='length' type='l' type64='i'/>
+<retval declared_type='jintArray' type='^{_jobject=}'/>
+</function>
+<function name='JNFNewLongArray'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jsize' name='length' type='l' type64='i'/>
+<retval declared_type='jlongArray' type='^{_jobject=}'/>
+</function>
+<function name='JNFNewObject' variadic='true'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='constructor' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<retval declared_type='jobject' type='^{_jobject=}'/>
+</function>
+<function name='JNFNewObjectArray'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFClassInfo*' name='clazz' type='^{_JNFClassInfo=*^{_jobject}}'/>
+<arg declared_type='jsize' name='length' type='l' type64='i'/>
+<retval declared_type='jobjectArray' type='^{_jobject=}'/>
+</function>
+<function name='JNFNewShortArray'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jsize' name='length' type='l' type64='i'/>
+<retval declared_type='jshortArray' type='^{_jobject=}'/>
+</function>
+<function name='JNFNewWeakGlobalRef'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<retval declared_type='jobject' type='^{_jobject=}'/>
+</function>
+<function name='JNFNormalizedJavaStringForPath'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='NSString*' name='path' type='@'/>
+<retval declared_type='jstring' type='^{_jobject=}'/>
+</function>
+<function name='JNFNormalizedNSStringForPath'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jstring' name='path' type='^{_jobject=}'/>
+<retval declared_type='NSString*' type='@'/>
+</function>
+<function name='JNFObjectClassName'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<retval declared_type='NSString*' type='@'/>
+</function>
+<function name='JNFObjectEquals'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='a' type='^{_jobject=}'/>
+<arg declared_type='jobject' name='b' type='^{_jobject=}'/>
+<retval declared_type='BOOL' type='B'/>
+</function>
+<function name='JNFObjectToString'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<retval declared_type='NSString*' type='@'/>
+</function>
+<function name='JNFObtainEnv'>
+<arg declared_type='JNFThreadContext*' name='context' type='^q'/>
+<retval declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+</function>
+<function name='JNFPerformEnvBlock'>
+<arg declared_type='JNFThreadContext' name='context' type='q'/>
+<arg declared_type='JNIEnvBlock' function_pointer='true' name='block' type='@?'>
+<arg declared_type='JNIEnv*' type='^^{JNINativeInterface_}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFReleaseEnv'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFThreadContext*' name='context' type='^q'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFReleaseStringUTF16UniChars'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jstring' name='javaString' type='^{_jobject=}'/>
+<arg const='true' declared_type='unichar*' name='unichars' type='^S'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFReleaseStringUTF8Chars'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jstring' name='javaString' type='^{_jobject=}'/>
+<arg const='true' declared_type='char*' name='chars' type='*'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFSetBooleanField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg declared_type='jboolean' name='val' type='C'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFSetByteField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg declared_type='jbyte' name='val' type='c'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFSetCharField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg declared_type='jchar' name='val' type='S'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFSetDoubleField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg declared_type='jdouble' name='val' type='d'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFSetFloatField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg declared_type='jfloat' name='val' type='f'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFSetIntField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg declared_type='jint' name='val' type='l' type64='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFSetLongField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg declared_type='jlong' name='val' type='q'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFSetObjectField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg declared_type='jobject' name='val' type='^{_jobject=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFSetShortField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jobject' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg declared_type='jshort' name='val' type='s'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFSetStaticBooleanField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg declared_type='jboolean' name='val' type='C'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFSetStaticByteField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg declared_type='jbyte' name='val' type='c'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFSetStaticCharField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg declared_type='jchar' name='val' type='S'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFSetStaticDoubleField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg declared_type='jdouble' name='val' type='d'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFSetStaticFloatField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg declared_type='jfloat' name='val' type='f'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFSetStaticIntField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg declared_type='jint' name='val' type='l' type64='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFSetStaticLongField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg declared_type='jlong' name='val' type='q'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFSetStaticObjectField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg declared_type='jobject' name='val' type='^{_jobject=}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='JNFSetStaticShortField'>
+<arg declared_type='JNIEnv*' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFMemberInfo*' name='field' type='^{_JNFMemberInfo=**B^{_JNFClassInfo}(_j=^{_jfieldID}^{_jmethodID})}'/>
+<arg declared_type='jshort' name='val' type='s'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function_alias name='JNF_WARN' original='JNFDebugWarning'/>
+<class name='JNFDefaultCoercions'>
+<method class_method='true' selector='addDateCoercionTo:'>
+<arg declared_type='JNFTypeCoercer*' index='0' name='coercer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='addListCoercionTo:'>
+<arg declared_type='JNFTypeCoercer*' index='0' name='coercer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='addMapCoercionTo:'>
+<arg declared_type='JNFTypeCoercer*' index='0' name='coercer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='addNumberCoercionTo:'>
+<arg declared_type='JNFTypeCoercer*' index='0' name='coercer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='addSetCoercionTo:'>
+<arg declared_type='JNFTypeCoercer*' index='0' name='coercer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='addStringCoercionTo:'>
+<arg declared_type='JNFTypeCoercer*' index='0' name='coercer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='defaultCoercer'>
+<retval declared_type='JNFTypeCoercer*' type='@'/>
+</method>
+</class>
+<class name='JNFException'>
+<method selector='init:as:reason:'>
+<arg declared_type='JNIEnv*' index='0' name='env' type='^^{JNINativeInterface_}'/>
+<arg const='true' declared_type='char*' index='1' name='javaExceptionType' type='*'/>
+<arg const='true' declared_type='char*' index='2' name='reasonMsg' type='*'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='init:throwable:'>
+<arg declared_type='JNIEnv*' index='0' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jthrowable' index='1' name='throwable' type='^{_jobject=}'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='raise:as:reason:'>
+<arg declared_type='JNIEnv*' index='0' name='env' type='^^{JNINativeInterface_}'/>
+<arg const='true' declared_type='char*' index='1' name='javaExceptionType' type='*'/>
+<arg const='true' declared_type='char*' index='2' name='reasonMsg' type='*'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='raise:throwable:'>
+<arg declared_type='JNIEnv*' index='0' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='jthrowable' index='1' name='throwable' type='^{_jobject=}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='raiseToJava:'>
+<arg declared_type='JNIEnv*' index='0' name='env' type='^^{JNINativeInterface_}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='raiseUnnamedException:'>
+<arg declared_type='JNIEnv*' index='0' name='env' type='^^{JNINativeInterface_}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='throwToJava:exception:'>
+<arg declared_type='JNIEnv*' index='0' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='NSException*' index='1' name='exception' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='throwToJava:exception:as:'>
+<arg declared_type='JNIEnv*' index='0' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='NSException*' index='1' name='exception' type='@'/>
+<arg const='true' declared_type='char*' index='2' name='javaExceptionType' type='*'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='JNFJObjectWrapper'>
+<method selector='initWithJObject:withEnv:'>
+<arg declared_type='jobject' index='0' name='jObjectIn' type='^{_jobject=}'/>
+<arg declared_type='JNIEnv*' index='1' name='env' type='^^{JNINativeInterface_}'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='jObject'>
+<retval declared_type='jobject' type='^{_jobject=}'/>
+</method>
+<method selector='jObjectWithEnv:'>
+<arg declared_type='JNIEnv*' index='0' name='env' type='^^{JNINativeInterface_}'/>
+<retval declared_type='jobject' type='^{_jobject=}'/>
+</method>
+<method selector='setJObject:withEnv:'>
+<arg declared_type='jobject' index='0' name='jObjectIn' type='^{_jobject=}'/>
+<arg declared_type='JNIEnv*' index='1' name='env' type='^^{JNINativeInterface_}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='wrapperWithJObject:withEnv:'>
+<arg declared_type='jobject' index='0' name='jObjectIn' type='^{_jobject=}'/>
+<arg declared_type='JNIEnv*' index='1' name='env' type='^^{JNINativeInterface_}'/>
+<retval declared_type='JNFJObjectWrapper*' type='@'/>
+</method>
+</class>
+<class name='JNFRunLoop'>
+<method class_method='true' selector='javaRunLoopMode'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='performOnMainThread:on:withObject:waitUntilDone:'>
+<arg declared_type='SEL' index='0' name='aSelector' type=':'/>
+<arg declared_type='id' index='1' name='target' type='@'/>
+<arg declared_type='id' index='2' name='arg' type='@'/>
+<arg declared_type='BOOL' index='3' name='wait' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='performOnMainThreadWaiting:withBlock:'>
+<arg declared_type='BOOL' index='0' name='waitUntilDone' type='B'/>
+<arg declared_type='void (^)()' function_pointer='true' index='1' name='block' type='@?'>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='JNFRunnable'>
+<method class_method='true' selector='blockWithRunnable:withEnv:'>
+<arg declared_type='jobject' index='0' name='runnable' type='^{_jobject=}'/>
+<arg declared_type='JNIEnv*' index='1' name='env' type='^^{JNINativeInterface_}'/>
+<retval declared_type='void (^)()' function_pointer='true' type='@?'>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method class_method='true' selector='invocationWithRunnable:withEnv:'>
+<arg declared_type='jobject' index='0' name='runnable' type='^{_jobject=}'/>
+<arg declared_type='JNIEnv*' index='1' name='env' type='^^{JNINativeInterface_}'/>
+<retval declared_type='NSInvocation*' type='@'/>
+</method>
+</class>
+<class name='JNFTypeCoercer'>
+<method selector='addCoercion:forNSClass:javaClass:'>
+<arg declared_type='NSObject*' index='0' name='coercion' type='@'/>
+<arg declared_type='Class' index='1' name='nsClass' type='#'/>
+<arg declared_type='NSString*' index='2' name='javaClassName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='coerceJavaObject:withEnv:'>
+<arg declared_type='jobject' index='0' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNIEnv*' index='1' name='env' type='^^{JNINativeInterface_}'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='coerceNSObject:withEnv:'>
+<arg declared_type='id' index='0' name='obj' type='@'/>
+<arg declared_type='JNIEnv*' index='1' name='env' type='^^{JNINativeInterface_}'/>
+<retval declared_type='jobject' type='^{_jobject=}'/>
+</method>
+<method selector='deriveCoercer'>
+<retval declared_type='JNFTypeCoercer*' type='@'/>
+</method>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithParent:'>
+<arg declared_type='NSObject*' index='0' name='parentIn' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='JNFWeakJObjectWrapper'>
+<method class_method='true' selector='wrapperWithJObject:withEnv:'>
+<arg declared_type='jobject' index='0' name='jObjectIn' type='^{_jobject=}'/>
+<arg declared_type='JNIEnv*' index='1' name='env' type='^^{JNINativeInterface_}'/>
+<retval declared_type='JNFWeakJObjectWrapper*' type='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='coerceJavaObject:withEnv:usingCoercer:'>
+<arg declared_type='jobject' index='0' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNIEnv*' index='1' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFTypeCoercion*' index='2' name='coercer' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='coerceNSObject:withEnv:usingCoercer:'>
+<arg declared_type='id' index='0' name='obj' type='@'/>
+<arg declared_type='JNIEnv*' index='1' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFTypeCoercion*' index='2' name='coercer' type='@'/>
+<retval declared_type='jobject' type='^{_jobject=}'/>
+</method>
+</class>
+<informal_protocol name='JNFTypeCoercion'>
+<method selector='coerceJavaObject:withEnv:usingCoercer:' type='@20@0:4^{_jobject=}8r^^{JNINativeInterface_}12@16' type64='@40@0:8^{_jobject=}16r^^{JNINativeInterface_}24@32'>
+<arg declared_type='jobject' index='0' name='obj' type='^{_jobject=}'/>
+<arg declared_type='JNIEnv*' index='1' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFTypeCoercion*' index='2' name='coercer' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='coerceNSObject:withEnv:usingCoercer:' type='^{_jobject=}20@0:4@8r^^{JNINativeInterface_}12@16' type64='^{_jobject=}40@0:8@16r^^{JNINativeInterface_}24@32'>
+<arg declared_type='id' index='0' name='obj' type='@'/>
+<arg declared_type='JNIEnv*' index='1' name='env' type='^^{JNINativeInterface_}'/>
+<arg declared_type='JNFTypeCoercion*' index='2' name='coercer' type='@'/>
+<retval declared_type='jobject' type='^{_jobject=}'/>
+</method>
+</informal_protocol>
+</signatures>

@@ -1,0 +1,308 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type='NSString*' name='SFErrorDomain' type='@'/>
+<enum name='SFErrorLoadingInterrupted' value='3'/>
+<enum name='SFErrorNoAttachmentFound' value='2'/>
+<enum name='SFErrorNoExtensionFound' value='1'/>
+<enum name='SFSafariServicesVersion10_0' value='0'/>
+<enum name='SFSafariServicesVersion10_1' value='1'/>
+<enum name='SFSafariServicesVersion11_0' value='2'/>
+<class name='NSObject'>
+<method selector='contextMenuItemSelectedWithCommand:inPage:userInfo:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='command' type='@'/>
+<arg declared_type='SFSafariPage * _Nonnull' index='1' name='page' type='@'/>
+<arg declared_type='NSDictionary * _Nullable' index='2' name='userInfo' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='messageReceivedFromContainingAppWithName:userInfo:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='messageName' type='@'/>
+<arg declared_type='NSDictionary * _Nullable' index='1' name='userInfo' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='messageReceivedWithName:fromPage:userInfo:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='messageName' type='@'/>
+<arg declared_type='SFSafariPage * _Nonnull' index='1' name='page' type='@'/>
+<arg declared_type='NSDictionary * _Nullable' index='2' name='userInfo' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='popoverDidCloseInWindow:'>
+<arg declared_type='SFSafariWindow * _Nonnull' index='0' name='window' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='popoverViewController'>
+<retval declared_type='SFSafariExtensionViewController * _Nonnull' type='@'/>
+</method>
+<method selector='popoverWillShowInWindow:'>
+<arg declared_type='SFSafariWindow * _Nonnull' index='0' name='window' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='toolbarItemClickedInWindow:'>
+<arg declared_type='SFSafariWindow * _Nonnull' index='0' name='window' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='validateContextMenuItemWithCommand:inPage:userInfo:validationHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='command' type='@'/>
+<arg declared_type='SFSafariPage * _Nonnull' index='1' name='page' type='@'/>
+<arg declared_type='NSDictionary * _Nullable' index='2' name='userInfo' type='@'/>
+<arg declared_type='void (^ _Nonnull)(BOOL, NSString * _Nullable)' function_pointer='true' index='3' name='validationHandler' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<arg declared_type='NSString * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='validateToolbarItemInWindow:validationHandler:'>
+<arg declared_type='SFSafariWindow * _Nonnull' index='0' name='window' type='@'/>
+<arg declared_type='void (^ _Nonnull)(BOOL, NSString * _Nonnull)' function_pointer='true' index='1' name='validationHandler' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<arg declared_type='NSString * _Nonnull' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SFContentBlockerManager'>
+<method class_method='true' selector='getStateOfContentBlockerWithIdentifier:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='identifier' type='@'/>
+<arg declared_type='void (^ _Nonnull)(SFContentBlockerState * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='SFContentBlockerState * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='reloadContentBlockerWithIdentifier:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='identifier' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SFContentBlockerState'>
+<method selector='isEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='SFSafariApplication'>
+<method class_method='true' selector='dispatchMessageWithName:toExtensionWithIdentifier:userInfo:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='messageName' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='identifier' type='@'/>
+<arg declared_type='NSDictionary * _Nullable' index='2' name='userInfo' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='getActiveWindowWithCompletionHandler:'>
+<arg declared_type='void (^ _Nonnull)(SFSafariWindow * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='SFSafariWindow * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='getHostApplicationWithCompletionHandler:'>
+<arg declared_type='void (^ _Nonnull)(NSRunningApplication * _Nonnull)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSRunningApplication * _Nonnull' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='openWindowWithURL:completionHandler:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='url' type='@'/>
+<arg declared_type='void (^ _Nullable)(SFSafariWindow * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='SFSafariWindow * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='setToolbarItemsNeedUpdate'>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='showPreferencesForExtensionWithIdentifier:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='identifier' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SFSafariExtensionManager'>
+<method class_method='true' selector='getStateOfSafariExtensionWithIdentifier:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='identifier' type='@'/>
+<arg declared_type='void (^ _Nonnull)(SFSafariExtensionState * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='SFSafariExtensionState * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SFSafariExtensionState'>
+<method selector='isEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='SFSafariPage'>
+<method selector='dispatchMessageToScriptWithName:userInfo:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='messageName' type='@'/>
+<arg declared_type='NSDictionary * _Nullable' index='1' name='userInfo' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='getPagePropertiesWithCompletionHandler:'>
+<arg declared_type='void (^ _Nonnull)(SFSafariPageProperties * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='SFSafariPageProperties * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='reload'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SFSafariPageProperties'>
+<method selector='isActive'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='url'>
+<retval declared_type='NSURL * _Nullable' type='@'/>
+</method>
+<method selector='usesPrivateBrowsing'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='SFSafariTab'>
+<method selector='activateWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)()' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='getActivePageWithCompletionHandler:'>
+<arg declared_type='void (^ _Nonnull)(SFSafariPage * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='SFSafariPage * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='getPagesWithCompletionHandler:'>
+<arg declared_type='void (^ _Nonnull)(NSArray * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SFSafariToolbarItem'>
+<method selector='setBadgeText:'>
+<arg declared_type='NSString * _Nullable' index='0' name='badgeText' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEnabled:'>
+<arg declared_type='BOOL' index='0' name='enabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEnabled:withBadgeText:'>
+<arg declared_type='BOOL' index='0' name='enabled' type='B'/>
+<arg declared_type='NSString * _Nullable' index='1' name='badgeText' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImage:'>
+<arg declared_type='NSImage * _Nullable' index='0' name='image' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLabel:'>
+<arg declared_type='NSString * _Nullable' index='0' name='label' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SFSafariWindow'>
+<method selector='getActiveTabWithCompletionHandler:'>
+<arg declared_type='void (^ _Nonnull)(SFSafariTab * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='SFSafariTab * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='getToolbarItemWithCompletionHandler:'>
+<arg declared_type='void (^ _Nonnull)(SFSafariToolbarItem * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='SFSafariToolbarItem * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='openTabWithURL:makeActiveIfPossible:completionHandler:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='url' type='@'/>
+<arg declared_type='BOOL' index='1' name='activateTab' type='B'/>
+<arg declared_type='void (^ _Nullable)(SFSafariTab * _Nullable)' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='SFSafariTab * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='SFSafariExtensionHandling'>
+<method selector='contextMenuItemSelectedWithCommand:inPage:userInfo:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='NSString * _Nonnull' index='0' name='command' type='@'/>
+<arg declared_type='SFSafariPage * _Nonnull' index='1' name='page' type='@'/>
+<arg declared_type='NSDictionary * _Nullable' index='2' name='userInfo' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='messageReceivedFromContainingAppWithName:userInfo:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='NSString * _Nonnull' index='0' name='messageName' type='@'/>
+<arg declared_type='NSDictionary * _Nullable' index='1' name='userInfo' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='messageReceivedWithName:fromPage:userInfo:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='NSString * _Nonnull' index='0' name='messageName' type='@'/>
+<arg declared_type='SFSafariPage * _Nonnull' index='1' name='page' type='@'/>
+<arg declared_type='NSDictionary * _Nullable' index='2' name='userInfo' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='popoverDidCloseInWindow:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SFSafariWindow * _Nonnull' index='0' name='window' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='popoverViewController' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='SFSafariExtensionViewController * _Nonnull' type='@'/>
+</method>
+<method selector='popoverWillShowInWindow:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SFSafariWindow * _Nonnull' index='0' name='window' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='toolbarItemClickedInWindow:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SFSafariWindow * _Nonnull' index='0' name='window' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='validateContextMenuItemWithCommand:inPage:userInfo:validationHandler:' type='v24@0:4@8@12@16@?20' type64='v48@0:8@16@24@32@?40'>
+<arg declared_type='NSString * _Nonnull' index='0' name='command' type='@'/>
+<arg declared_type='SFSafariPage * _Nonnull' index='1' name='page' type='@'/>
+<arg declared_type='NSDictionary * _Nullable' index='2' name='userInfo' type='@'/>
+<arg declared_type='void (^ _Nonnull)(BOOL, NSString * _Nullable)' function_pointer='true' index='3' name='validationHandler' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<arg declared_type='NSString * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='validateToolbarItemInWindow:validationHandler:' type='v16@0:4@8@?12' type64='v32@0:8@16@?24'>
+<arg declared_type='SFSafariWindow * _Nonnull' index='0' name='window' type='@'/>
+<arg declared_type='void (^ _Nonnull)(BOOL, NSString * _Nonnull)' function_pointer='true' index='1' name='validationHandler' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<arg declared_type='NSString * _Nonnull' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>

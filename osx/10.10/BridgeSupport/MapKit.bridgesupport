@@ -1,0 +1,1727 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreWLAN.framework'/>
+<depends_on path='/System/Library/Frameworks/AddressBook.framework'/>
+<depends_on path='/System/Library/Frameworks/Quartz.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreLocation.framework'/>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<struct name='MKCoordinateRegion' type64='{_MKCoordinateRegion=&quot;center&quot;{?=&quot;latitude&quot;d&quot;longitude&quot;d}&quot;span&quot;{_MKCoordinateSpan=&quot;latitudeDelta&quot;d&quot;longitudeDelta&quot;d}}'>
+<field declared_type64='CLLocationCoordinate2D' name='center' type64='{_CLLocationCoordinate2D=&quot;latitude&quot;d&quot;longitude&quot;d}'/>
+<field declared_type64='MKCoordinateSpan' name='span' type64='{_MKCoordinateSpan=&quot;latitudeDelta&quot;d&quot;longitudeDelta&quot;d}'/>
+</struct>
+<struct name='MKCoordinateSpan' type64='{_MKCoordinateSpan=&quot;latitudeDelta&quot;d&quot;longitudeDelta&quot;d}'>
+<field declared_type64='CLLocationDegrees' name='latitudeDelta' type64='d'/>
+<field declared_type64='CLLocationDegrees' name='longitudeDelta' type64='d'/>
+</struct>
+<struct name='MKMapPoint' type64='{_MKMapPoint=&quot;x&quot;d&quot;y&quot;d}'>
+<field declared_type64='double' name='x' type64='d'/>
+<field declared_type64='double' name='y' type64='d'/>
+</struct>
+<struct name='MKMapRect' type64='{_MKMapRect=&quot;origin&quot;{_MKMapPoint=&quot;x&quot;d&quot;y&quot;d}&quot;size&quot;{_MKMapSize=&quot;width&quot;d&quot;height&quot;d}}'>
+<field declared_type64='MKMapPoint' name='origin' type64='{_MKMapPoint=&quot;x&quot;d&quot;y&quot;d}'/>
+<field declared_type64='MKMapSize' name='size' type64='{_MKMapSize=&quot;width&quot;d&quot;height&quot;d}'/>
+</struct>
+<struct name='MKMapSize' type64='{_MKMapSize=&quot;width&quot;d&quot;height&quot;d}'>
+<field declared_type64='double' name='width' type64='d'/>
+<field declared_type64='double' name='height' type64='d'/>
+</struct>
+<struct name='MKTileOverlayPath' type64='{_MKTileOverlayPath=&quot;x&quot;q&quot;y&quot;q&quot;z&quot;q&quot;contentScaleFactor&quot;d}'>
+<field declared_type64='NSInteger' name='x' type64='q'/>
+<field declared_type64='NSInteger' name='y' type64='q'/>
+<field declared_type64='NSInteger' name='z' type64='q'/>
+<field declared_type64='CGFloat' name='contentScaleFactor' type64='d'/>
+</struct>
+<constant const='true' declared_type64='NSString*' name='MKAnnotationCalloutInfoDidChangeNotification' type64='@'/>
+<constant declared_type64='NSString*' name='MKErrorDomain' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='MKLaunchOptionsCameraKey' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='MKLaunchOptionsDirectionsModeDriving' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='MKLaunchOptionsDirectionsModeKey' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='MKLaunchOptionsDirectionsModeWalking' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='MKLaunchOptionsMapCenterKey' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='MKLaunchOptionsMapSpanKey' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='MKLaunchOptionsMapTypeKey' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='MKLaunchOptionsShowsTrafficKey' type64='@'/>
+<constant const='true' declared_type64='MKMapRect' name='MKMapRectNull' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<constant const='true' declared_type64='MKMapRect' name='MKMapRectWorld' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<constant const='true' declared_type64='MKMapSize' name='MKMapSizeWorld' type64='{_MKMapSize=dd}'/>
+<enum name='MKAnnotationViewDragStateCanceling' value64='3'/>
+<enum name='MKAnnotationViewDragStateDragging' value64='2'/>
+<enum name='MKAnnotationViewDragStateEnding' value64='4'/>
+<enum name='MKAnnotationViewDragStateNone' value64='0'/>
+<enum name='MKAnnotationViewDragStateStarting' value64='1'/>
+<enum name='MKDirectionsTransportTypeAny' value64='268435455'/>
+<enum name='MKDirectionsTransportTypeAutomobile' value64='1'/>
+<enum name='MKDirectionsTransportTypeWalking' value64='2'/>
+<enum name='MKDistanceFormatterUnitStyleAbbreviated' value64='1'/>
+<enum name='MKDistanceFormatterUnitStyleDefault' value64='0'/>
+<enum name='MKDistanceFormatterUnitStyleFull' value64='2'/>
+<enum name='MKDistanceFormatterUnitsDefault' value64='0'/>
+<enum name='MKDistanceFormatterUnitsImperial' value64='2'/>
+<enum name='MKDistanceFormatterUnitsImperialWithYards' value64='3'/>
+<enum name='MKDistanceFormatterUnitsMetric' value64='1'/>
+<enum name='MKErrorDirectionsNotFound' value64='5'/>
+<enum name='MKErrorLoadingThrottled' value64='3'/>
+<enum name='MKErrorPlacemarkNotFound' value64='4'/>
+<enum name='MKErrorServerFailure' value64='2'/>
+<enum name='MKErrorUnknown' value64='1'/>
+<enum name='MKMapTypeHybrid' value64='2'/>
+<enum name='MKMapTypeSatellite' value64='1'/>
+<enum name='MKMapTypeStandard' value64='0'/>
+<enum name='MKOverlayLevelAboveLabels' value64='1'/>
+<enum name='MKOverlayLevelAboveRoads' value64='0'/>
+<enum name='MKPinAnnotationColorGreen' value64='1'/>
+<enum name='MKPinAnnotationColorPurple' value64='2'/>
+<enum name='MKPinAnnotationColorRed' value64='0'/>
+<function name='MKCoordinateForMapPoint'>
+<arg declared_type64='MKMapPoint' name='mapPoint' type64='{_MKMapPoint=dd}'/>
+<retval declared_type64='CLLocationCoordinate2D' type64='{_CLLocationCoordinate2D=dd}'/>
+</function>
+<function name='MKCoordinateRegionForMapRect'>
+<arg declared_type64='MKMapRect' name='rect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='MKCoordinateRegion' type64='{_MKCoordinateRegion={?=dd}{_MKCoordinateSpan=dd}}'/>
+</function>
+<function inline='true' name='MKCoordinateRegionMake'>
+<arg declared_type64='CLLocationCoordinate2D' name='centerCoordinate' type64='{_CLLocationCoordinate2D=dd}'/>
+<arg declared_type64='MKCoordinateSpan' name='span' type64='{_MKCoordinateSpan=dd}'/>
+<retval declared_type64='MKCoordinateRegion' type64='{_MKCoordinateRegion={?=dd}{_MKCoordinateSpan=dd}}'/>
+</function>
+<function name='MKCoordinateRegionMakeWithDistance'>
+<arg declared_type64='CLLocationCoordinate2D' name='centerCoordinate' type64='{_CLLocationCoordinate2D=dd}'/>
+<arg declared_type64='CLLocationDistance' name='latitudinalMeters' type64='d'/>
+<arg declared_type64='CLLocationDistance' name='longitudinalMeters' type64='d'/>
+<retval declared_type64='MKCoordinateRegion' type64='{_MKCoordinateRegion={?=dd}{_MKCoordinateSpan=dd}}'/>
+</function>
+<function inline='true' name='MKCoordinateSpanMake'>
+<arg declared_type64='CLLocationDegrees' name='latitudeDelta' type64='d'/>
+<arg declared_type64='CLLocationDegrees' name='longitudeDelta' type64='d'/>
+<retval declared_type64='MKCoordinateSpan' type64='{_MKCoordinateSpan=dd}'/>
+</function>
+<function inline='true' name='MKMapPointEqualToPoint'>
+<arg declared_type64='MKMapPoint' name='point1' type64='{_MKMapPoint=dd}'/>
+<arg declared_type64='MKMapPoint' name='point2' type64='{_MKMapPoint=dd}'/>
+<retval declared_type64='BOOL' type64='B'/>
+</function>
+<function name='MKMapPointForCoordinate'>
+<arg declared_type64='CLLocationCoordinate2D' name='coordinate' type64='{_CLLocationCoordinate2D=dd}'/>
+<retval declared_type64='MKMapPoint' type64='{_MKMapPoint=dd}'/>
+</function>
+<function inline='true' name='MKMapPointMake'>
+<arg declared_type64='double' name='x' type64='d'/>
+<arg declared_type64='double' name='y' type64='d'/>
+<retval declared_type64='MKMapPoint' type64='{_MKMapPoint=dd}'/>
+</function>
+<function name='MKMapPointsPerMeterAtLatitude'>
+<arg declared_type64='CLLocationDegrees' name='latitude' type64='d'/>
+<retval declared_type64='double' type64='d'/>
+</function>
+<function name='MKMapRectContainsPoint'>
+<arg declared_type64='MKMapRect' name='rect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg declared_type64='MKMapPoint' name='point' type64='{_MKMapPoint=dd}'/>
+<retval declared_type64='BOOL' type64='B'/>
+</function>
+<function name='MKMapRectContainsRect'>
+<arg declared_type64='MKMapRect' name='rect1' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg declared_type64='MKMapRect' name='rect2' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='BOOL' type64='B'/>
+</function>
+<function name='MKMapRectDivide'>
+<arg declared_type64='MKMapRect' name='rect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg declared_type64='MKMapRect*' name='slice' type64='^{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg declared_type64='MKMapRect*' name='remainder' type64='^{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg declared_type64='double' name='amount' type64='d'/>
+<arg declared_type64='CGRectEdge' name='edge' type64='I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function inline='true' name='MKMapRectEqualToRect'>
+<arg declared_type64='MKMapRect' name='rect1' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg declared_type64='MKMapRect' name='rect2' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='BOOL' type64='B'/>
+</function>
+<function inline='true' name='MKMapRectGetHeight'>
+<arg declared_type64='MKMapRect' name='rect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='double' type64='d'/>
+</function>
+<function inline='true' name='MKMapRectGetMaxX'>
+<arg declared_type64='MKMapRect' name='rect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='double' type64='d'/>
+</function>
+<function inline='true' name='MKMapRectGetMaxY'>
+<arg declared_type64='MKMapRect' name='rect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='double' type64='d'/>
+</function>
+<function inline='true' name='MKMapRectGetMidX'>
+<arg declared_type64='MKMapRect' name='rect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='double' type64='d'/>
+</function>
+<function inline='true' name='MKMapRectGetMidY'>
+<arg declared_type64='MKMapRect' name='rect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='double' type64='d'/>
+</function>
+<function inline='true' name='MKMapRectGetMinX'>
+<arg declared_type64='MKMapRect' name='rect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='double' type64='d'/>
+</function>
+<function inline='true' name='MKMapRectGetMinY'>
+<arg declared_type64='MKMapRect' name='rect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='double' type64='d'/>
+</function>
+<function inline='true' name='MKMapRectGetWidth'>
+<arg declared_type64='MKMapRect' name='rect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='double' type64='d'/>
+</function>
+<function name='MKMapRectInset'>
+<arg declared_type64='MKMapRect' name='rect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg declared_type64='double' name='dx' type64='d'/>
+<arg declared_type64='double' name='dy' type64='d'/>
+<retval declared_type64='MKMapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</function>
+<function name='MKMapRectIntersection'>
+<arg declared_type64='MKMapRect' name='rect1' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg declared_type64='MKMapRect' name='rect2' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='MKMapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</function>
+<function name='MKMapRectIntersectsRect'>
+<arg declared_type64='MKMapRect' name='rect1' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg declared_type64='MKMapRect' name='rect2' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='BOOL' type64='B'/>
+</function>
+<function inline='true' name='MKMapRectIsEmpty'>
+<arg declared_type64='MKMapRect' name='rect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='BOOL' type64='B'/>
+</function>
+<function inline='true' name='MKMapRectIsNull'>
+<arg declared_type64='MKMapRect' name='rect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='BOOL' type64='B'/>
+</function>
+<function inline='true' name='MKMapRectMake'>
+<arg declared_type64='double' name='x' type64='d'/>
+<arg declared_type64='double' name='y' type64='d'/>
+<arg declared_type64='double' name='width' type64='d'/>
+<arg declared_type64='double' name='height' type64='d'/>
+<retval declared_type64='MKMapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</function>
+<function name='MKMapRectOffset'>
+<arg declared_type64='MKMapRect' name='rect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg declared_type64='double' name='dx' type64='d'/>
+<arg declared_type64='double' name='dy' type64='d'/>
+<retval declared_type64='MKMapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</function>
+<function name='MKMapRectRemainder'>
+<arg declared_type64='MKMapRect' name='rect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='MKMapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</function>
+<function name='MKMapRectSpans180thMeridian'>
+<arg declared_type64='MKMapRect' name='rect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='BOOL' type64='B'/>
+</function>
+<function name='MKMapRectUnion'>
+<arg declared_type64='MKMapRect' name='rect1' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg declared_type64='MKMapRect' name='rect2' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='MKMapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</function>
+<function inline='true' name='MKMapSizeEqualToSize'>
+<arg declared_type64='MKMapSize' name='size1' type64='{_MKMapSize=dd}'/>
+<arg declared_type64='MKMapSize' name='size2' type64='{_MKMapSize=dd}'/>
+<retval declared_type64='BOOL' type64='B'/>
+</function>
+<function inline='true' name='MKMapSizeMake'>
+<arg declared_type64='double' name='width' type64='d'/>
+<arg declared_type64='double' name='height' type64='d'/>
+<retval declared_type64='MKMapSize' type64='{_MKMapSize=dd}'/>
+</function>
+<function name='MKMetersBetweenMapPoints'>
+<arg declared_type64='MKMapPoint' name='a' type64='{_MKMapPoint=dd}'/>
+<arg declared_type64='MKMapPoint' name='b' type64='{_MKMapPoint=dd}'/>
+<retval declared_type64='CLLocationDistance' type64='d'/>
+</function>
+<function name='MKMetersPerMapPointAtLatitude'>
+<arg declared_type64='CLLocationDegrees' name='latitude' type64='d'/>
+<retval declared_type64='CLLocationDistance' type64='d'/>
+</function>
+<function name='MKRoadWidthAtZoomScale'>
+<arg declared_type64='MKZoomScale' name='zoomScale' type64='d'/>
+<retval declared_type64='CGFloat' type64='d'/>
+</function>
+<function inline='true' name='MKStringFromMapPoint'>
+<arg declared_type64='MKMapPoint' name='point' type64='{_MKMapPoint=dd}'/>
+<retval declared_type64='NSString*' type64='@'/>
+</function>
+<function inline='true' name='MKStringFromMapRect'>
+<arg declared_type64='MKMapRect' name='rect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='NSString*' type64='@'/>
+</function>
+<function inline='true' name='MKStringFromMapSize'>
+<arg declared_type64='MKMapSize' name='size' type64='{_MKMapSize=dd}'/>
+<retval declared_type64='NSString*' type64='@'/>
+</function>
+<class name='MKAnnotationView'>
+<method selector='annotation'>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='calloutOffset'>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</method>
+<method selector='canShowCallout'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='centerOffset'>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</method>
+<method selector='dragState'>
+<retval declared_type64='MKAnnotationViewDragState' type64='Q'/>
+</method>
+<method selector='image'>
+<retval declared_type64='NSImage*' type64='@'/>
+</method>
+<method selector='initWithAnnotation:reuseIdentifier:'>
+<arg declared_type64='id' index='0' name='annotation' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='reuseIdentifier' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='isDraggable'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isHighlighted'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isSelected'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='leftCalloutAccessoryView'>
+<retval declared_type64='NSView*' type64='@'/>
+</method>
+<method selector='leftCalloutOffset'>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</method>
+<method selector='prepareForReuse'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='reuseIdentifier'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='rightCalloutAccessoryView'>
+<retval declared_type64='NSView*' type64='@'/>
+</method>
+<method selector='rightCalloutOffset'>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</method>
+<method selector='setAnnotation:'>
+<arg declared_type64='id' index='0' name='annotation' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCalloutOffset:'>
+<arg declared_type64='CGPoint' index='0' name='calloutOffset' type64='{CGPoint=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCanShowCallout:'>
+<arg declared_type64='BOOL' index='0' name='canShowCallout' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCenterOffset:'>
+<arg declared_type64='CGPoint' index='0' name='centerOffset' type64='{CGPoint=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDragState:'>
+<arg declared_type64='MKAnnotationViewDragState' index='0' name='dragState' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDragState:animated:'>
+<arg declared_type64='MKAnnotationViewDragState' index='0' name='newDragState' type64='Q'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDraggable:'>
+<arg declared_type64='BOOL' index='0' name='draggable' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setEnabled:'>
+<arg declared_type64='BOOL' index='0' name='enabled' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setHighlighted:'>
+<arg declared_type64='BOOL' index='0' name='highlighted' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setImage:'>
+<arg declared_type64='NSImage*' index='0' name='image' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLeftCalloutAccessoryView:'>
+<arg declared_type64='NSView*' index='0' name='leftCalloutAccessoryView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLeftCalloutOffset:'>
+<arg declared_type64='CGPoint' index='0' name='leftCalloutOffset' type64='{CGPoint=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRightCalloutAccessoryView:'>
+<arg declared_type64='NSView*' index='0' name='rightCalloutAccessoryView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRightCalloutOffset:'>
+<arg declared_type64='CGPoint' index='0' name='rightCalloutOffset' type64='{CGPoint=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSelected:'>
+<arg declared_type64='BOOL' index='0' name='selected' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSelected:animated:'>
+<arg declared_type64='BOOL' index='0' name='selected' type64='B'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MKCircle'>
+<method selector='boundingMapRect'>
+<retval declared_type64='MKMapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+<method class_method='true' selector='circleWithCenterCoordinate:radius:'>
+<arg declared_type64='CLLocationCoordinate2D' index='0' name='coord' type64='{_CLLocationCoordinate2D=dd}'/>
+<arg declared_type64='CLLocationDistance' index='1' name='radius' type64='d'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method class_method='true' selector='circleWithMapRect:'>
+<arg declared_type64='MKMapRect' index='0' name='mapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='coordinate'>
+<retval declared_type64='CLLocationCoordinate2D' type64='{_CLLocationCoordinate2D=dd}'/>
+</method>
+<method selector='radius'>
+<retval declared_type64='CLLocationDistance' type64='d'/>
+</method>
+</class>
+<class name='MKCircleRenderer'>
+<method selector='circle'>
+<retval declared_type64='MKCircle*' type64='@'/>
+</method>
+<method selector='initWithCircle:'>
+<arg declared_type64='MKCircle*' index='0' name='circle' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+</class>
+<class name='MKDirections'>
+<method selector='calculateDirectionsWithCompletionHandler:'>
+<arg declared_type64='MKDirectionsHandler' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='MKDirectionsResponse*' type64='@'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='calculateETAWithCompletionHandler:'>
+<arg declared_type64='MKETAHandler' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='MKETAResponse*' type64='@'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='cancel'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='initWithRequest:'>
+<arg declared_type64='MKDirectionsRequest*' index='0' name='request' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='isCalculating'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='MKDirectionsRequest'>
+<method selector='arrivalDate'>
+<retval declared_type64='NSDate*' type64='@'/>
+</method>
+<method selector='departureDate'>
+<retval declared_type64='NSDate*' type64='@'/>
+</method>
+<method selector='destination'>
+<retval declared_type64='MKMapItem*' type64='@'/>
+</method>
+<method selector='initWithContentsOfURL:'>
+<arg declared_type64='NSURL*' index='0' name='url' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method class_method='true' selector='isDirectionsRequestURL:'>
+<arg declared_type64='NSURL*' index='0' name='url' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='requestsAlternateRoutes'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setArrivalDate:'>
+<arg declared_type64='NSDate*' index='0' name='arrivalDate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDepartureDate:'>
+<arg declared_type64='NSDate*' index='0' name='departureDate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDestination:'>
+<arg declared_type64='MKMapItem*' index='0' name='destination' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRequestsAlternateRoutes:'>
+<arg declared_type64='BOOL' index='0' name='requestsAlternateRoutes' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSource:'>
+<arg declared_type64='MKMapItem*' index='0' name='source' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTransportType:'>
+<arg declared_type64='MKDirectionsTransportType' index='0' name='transportType' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='source'>
+<retval declared_type64='MKMapItem*' type64='@'/>
+</method>
+<method selector='transportType'>
+<retval declared_type64='MKDirectionsTransportType' type64='Q'/>
+</method>
+</class>
+<class name='MKDirectionsResponse'>
+<method selector='destination'>
+<retval declared_type64='MKMapItem*' type64='@'/>
+</method>
+<method selector='routes'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='source'>
+<retval declared_type64='MKMapItem*' type64='@'/>
+</method>
+</class>
+<class name='MKDistanceFormatter'>
+<method selector='distanceFromString:'>
+<arg declared_type64='NSString*' index='0' name='distance' type64='@'/>
+<retval declared_type64='CLLocationDistance' type64='d'/>
+</method>
+<method selector='locale'>
+<retval declared_type64='NSLocale*' type64='@'/>
+</method>
+<method selector='setLocale:'>
+<arg declared_type64='NSLocale*' index='0' name='locale' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setUnitStyle:'>
+<arg declared_type64='MKDistanceFormatterUnitStyle' index='0' name='unitStyle' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setUnits:'>
+<arg declared_type64='MKDistanceFormatterUnits' index='0' name='units' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stringFromDistance:'>
+<arg declared_type64='CLLocationDistance' index='0' name='distance' type64='d'/>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='unitStyle'>
+<retval declared_type64='MKDistanceFormatterUnitStyle' type64='Q'/>
+</method>
+<method selector='units'>
+<retval declared_type64='MKDistanceFormatterUnits' type64='Q'/>
+</method>
+</class>
+<class name='MKETAResponse'>
+<method selector='destination'>
+<retval declared_type64='MKMapItem*' type64='@'/>
+</method>
+<method selector='expectedTravelTime'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='source'>
+<retval declared_type64='MKMapItem*' type64='@'/>
+</method>
+</class>
+<class name='MKGeodesicPolyline'>
+<method class_method='true' selector='polylineWithCoordinates:count:'>
+<arg declared_type64='CLLocationCoordinate2D*' index='0' name='coords' type64='^{_CLLocationCoordinate2D=dd}'/>
+<arg declared_type64='NSUInteger' index='1' name='count' type64='Q'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method class_method='true' selector='polylineWithPoints:count:'>
+<arg declared_type64='MKMapPoint*' index='0' name='points' type64='^{_MKMapPoint=dd}'/>
+<arg declared_type64='NSUInteger' index='1' name='count' type64='Q'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+</class>
+<class name='MKLocalSearch'>
+<method selector='cancel'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='initWithRequest:'>
+<arg declared_type64='MKLocalSearchRequest*' index='0' name='request' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='isSearching'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='startWithCompletionHandler:'>
+<arg declared_type64='MKLocalSearchCompletionHandler' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='MKLocalSearchResponse*' type64='@'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MKLocalSearchRequest'>
+<method selector='naturalLanguageQuery'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='region'>
+<retval declared_type64='MKCoordinateRegion' type64='{_MKCoordinateRegion={?=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+<method selector='setNaturalLanguageQuery:'>
+<arg declared_type64='NSString*' index='0' name='naturalLanguageQuery' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRegion:'>
+<arg declared_type64='MKCoordinateRegion' index='0' name='region' type64='{_MKCoordinateRegion={?=dd}{_MKCoordinateSpan=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MKLocalSearchResponse'>
+<method selector='boundingRegion'>
+<retval declared_type64='MKCoordinateRegion' type64='{_MKCoordinateRegion={?=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+<method selector='mapItems'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+</class>
+<class name='MKMapCamera'>
+<method selector='altitude'>
+<retval declared_type64='CLLocationDistance' type64='d'/>
+</method>
+<method class_method='true' selector='camera'>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method class_method='true' selector='cameraLookingAtCenterCoordinate:fromEyeCoordinate:eyeAltitude:'>
+<arg declared_type64='CLLocationCoordinate2D' index='0' name='centerCoordinate' type64='{_CLLocationCoordinate2D=dd}'/>
+<arg declared_type64='CLLocationCoordinate2D' index='1' name='eyeCoordinate' type64='{_CLLocationCoordinate2D=dd}'/>
+<arg declared_type64='CLLocationDistance' index='2' name='eyeAltitude' type64='d'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='centerCoordinate'>
+<retval declared_type64='CLLocationCoordinate2D' type64='{_CLLocationCoordinate2D=dd}'/>
+</method>
+<method selector='heading'>
+<retval declared_type64='CLLocationDirection' type64='d'/>
+</method>
+<method selector='pitch'>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+<method selector='setAltitude:'>
+<arg declared_type64='CLLocationDistance' index='0' name='altitude' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCenterCoordinate:'>
+<arg declared_type64='CLLocationCoordinate2D' index='0' name='centerCoordinate' type64='{_CLLocationCoordinate2D=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setHeading:'>
+<arg declared_type64='CLLocationDirection' index='0' name='heading' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPitch:'>
+<arg declared_type64='CGFloat' index='0' name='pitch' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MKMapItem'>
+<method selector='initWithPlacemark:'>
+<arg declared_type64='MKPlacemark*' index='0' name='placemark' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='isCurrentLocation'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='mapItemForCurrentLocation'>
+<retval declared_type64='MKMapItem*' type64='@'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='openInMapsWithLaunchOptions:'>
+<arg declared_type64='NSDictionary*' index='0' name='launchOptions' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='openMapsWithItems:launchOptions:'>
+<arg declared_type64='NSArray*' index='0' name='mapItems' type64='@'/>
+<arg declared_type64='NSDictionary*' index='1' name='launchOptions' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='phoneNumber'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='placemark'>
+<retval declared_type64='MKPlacemark*' type64='@'/>
+</method>
+<method selector='setName:'>
+<arg declared_type64='NSString*' index='0' name='name' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPhoneNumber:'>
+<arg declared_type64='NSString*' index='0' name='phoneNumber' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setUrl:'>
+<arg declared_type64='NSURL*' index='0' name='url' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='url'>
+<retval declared_type64='NSURL*' type64='@'/>
+</method>
+</class>
+<class name='MKMapSnapshot'>
+<method selector='image'>
+<retval declared_type64='NSImage*' type64='@'/>
+</method>
+<method selector='pointForCoordinate:'>
+<arg declared_type64='CLLocationCoordinate2D' index='0' name='coordinate' type64='{_CLLocationCoordinate2D=dd}'/>
+<retval declared_type64='NSPoint' type64='{CGPoint=dd}'/>
+</method>
+</class>
+<class name='MKMapSnapshotOptions'>
+<method selector='camera'>
+<retval declared_type64='MKMapCamera*' type64='@'/>
+</method>
+<method selector='mapRect'>
+<retval declared_type64='MKMapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+<method selector='mapType'>
+<retval declared_type64='MKMapType' type64='Q'/>
+</method>
+<method selector='region'>
+<retval declared_type64='MKCoordinateRegion' type64='{_MKCoordinateRegion={?=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+<method selector='setCamera:'>
+<arg declared_type64='MKMapCamera*' index='0' name='camera' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMapRect:'>
+<arg declared_type64='MKMapRect' index='0' name='mapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMapType:'>
+<arg declared_type64='MKMapType' index='0' name='mapType' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRegion:'>
+<arg declared_type64='MKCoordinateRegion' index='0' name='region' type64='{_MKCoordinateRegion={?=dd}{_MKCoordinateSpan=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShowsBuildings:'>
+<arg declared_type64='BOOL' index='0' name='showsBuildings' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShowsPointsOfInterest:'>
+<arg declared_type64='BOOL' index='0' name='showsPointsOfInterest' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSize:'>
+<arg declared_type64='NSSize' index='0' name='size' type64='{CGSize=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='showsBuildings'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='showsPointsOfInterest'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='size'>
+<retval declared_type64='NSSize' type64='{CGSize=dd}'/>
+</method>
+</class>
+<class name='MKMapSnapshotter'>
+<method selector='cancel'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='initWithOptions:'>
+<arg declared_type64='MKMapSnapshotOptions*' index='0' name='options' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='isLoading'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='startWithCompletionHandler:'>
+<arg declared_type64='MKMapSnapshotCompletionHandler' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='MKMapSnapshot*' type64='@'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='startWithQueue:completionHandler:'>
+<arg declared_type64='dispatch_queue_t' index='0' name='queue' type64='@'/>
+<arg declared_type64='MKMapSnapshotCompletionHandler' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='MKMapSnapshot*' type64='@'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MKMapView'>
+<method selector='addAnnotation:'>
+<arg declared_type64='id' index='0' name='annotation' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='addAnnotations:'>
+<arg declared_type64='NSArray*' index='0' name='annotations' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='addOverlay:'>
+<arg declared_type64='id' index='0' name='overlay' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='addOverlay:level:'>
+<arg declared_type64='id' index='0' name='overlay' type64='@'/>
+<arg declared_type64='MKOverlayLevel' index='1' name='level' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='addOverlays:'>
+<arg declared_type64='NSArray*' index='0' name='overlays' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='addOverlays:level:'>
+<arg declared_type64='NSArray*' index='0' name='overlays' type64='@'/>
+<arg declared_type64='MKOverlayLevel' index='1' name='level' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='annotationVisibleRect'>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='annotations'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='annotationsInMapRect:'>
+<arg declared_type64='MKMapRect' index='0' name='mapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='NSSet*' type64='@'/>
+</method>
+<method selector='camera'>
+<retval declared_type64='MKMapCamera*' type64='@'/>
+</method>
+<method selector='centerCoordinate'>
+<retval declared_type64='CLLocationCoordinate2D' type64='{_CLLocationCoordinate2D=dd}'/>
+</method>
+<method selector='convertCoordinate:toPointToView:'>
+<arg declared_type64='CLLocationCoordinate2D' index='0' name='coordinate' type64='{_CLLocationCoordinate2D=dd}'/>
+<arg declared_type64='NSView*' index='1' name='view' type64='@'/>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</method>
+<method selector='convertPoint:toCoordinateFromView:'>
+<arg declared_type64='CGPoint' index='0' name='point' type64='{CGPoint=dd}'/>
+<arg declared_type64='NSView*' index='1' name='view' type64='@'/>
+<retval declared_type64='CLLocationCoordinate2D' type64='{_CLLocationCoordinate2D=dd}'/>
+</method>
+<method selector='convertRect:toRegionFromView:'>
+<arg declared_type64='CGRect' index='0' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='NSView*' index='1' name='view' type64='@'/>
+<retval declared_type64='MKCoordinateRegion' type64='{_MKCoordinateRegion={?=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+<method selector='convertRegion:toRectToView:'>
+<arg declared_type64='MKCoordinateRegion' index='0' name='region' type64='{_MKCoordinateRegion={?=dd}{_MKCoordinateSpan=dd}}'/>
+<arg declared_type64='NSView*' index='1' name='view' type64='@'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='dequeueReusableAnnotationViewWithIdentifier:'>
+<arg declared_type64='NSString*' index='0' name='identifier' type64='@'/>
+<retval declared_type64='MKAnnotationView*' type64='@'/>
+</method>
+<method selector='deselectAnnotation:animated:'>
+<arg declared_type64='id' index='0' name='annotation' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='exchangeOverlay:withOverlay:'>
+<arg declared_type64='id' index='0' name='overlay1' type64='@'/>
+<arg declared_type64='id' index='1' name='overlay2' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='exchangeOverlayAtIndex:withOverlayAtIndex:'>
+<arg declared_type64='NSUInteger' index='0' name='index1' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='index2' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='insertOverlay:aboveOverlay:'>
+<arg declared_type64='id' index='0' name='overlay' type64='@'/>
+<arg declared_type64='id' index='1' name='sibling' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='insertOverlay:atIndex:'>
+<arg declared_type64='id' index='0' name='overlay' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='index' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='insertOverlay:atIndex:level:'>
+<arg declared_type64='id' index='0' name='overlay' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='index' type64='Q'/>
+<arg declared_type64='MKOverlayLevel' index='2' name='level' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='insertOverlay:belowOverlay:'>
+<arg declared_type64='id' index='0' name='overlay' type64='@'/>
+<arg declared_type64='id' index='1' name='sibling' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='isPitchEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isRotateEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isScrollEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isUserLocationVisible'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isZoomEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='mapRectThatFits:'>
+<arg declared_type64='MKMapRect' index='0' name='mapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='MKMapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+<method selector='mapRectThatFits:edgePadding:'>
+<arg declared_type64='MKMapRect' index='0' name='mapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg declared_type64='NSEdgeInsets' index='1' name='insets' type64='{NSEdgeInsets=dddd}'/>
+<retval declared_type64='MKMapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+<method selector='mapType'>
+<retval declared_type64='MKMapType' type64='Q'/>
+</method>
+<method selector='overlays'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='overlaysInLevel:'>
+<arg declared_type64='MKOverlayLevel' index='0' name='level' type64='q'/>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='region'>
+<retval declared_type64='MKCoordinateRegion' type64='{_MKCoordinateRegion={?=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+<method selector='regionThatFits:'>
+<arg declared_type64='MKCoordinateRegion' index='0' name='region' type64='{_MKCoordinateRegion={?=dd}{_MKCoordinateSpan=dd}}'/>
+<retval declared_type64='MKCoordinateRegion' type64='{_MKCoordinateRegion={?=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+<method selector='removeAnnotation:'>
+<arg declared_type64='id' index='0' name='annotation' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='removeAnnotations:'>
+<arg declared_type64='NSArray*' index='0' name='annotations' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='removeOverlay:'>
+<arg declared_type64='id' index='0' name='overlay' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='removeOverlays:'>
+<arg declared_type64='NSArray*' index='0' name='overlays' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='rendererForOverlay:'>
+<arg declared_type64='id' index='0' name='overlay' type64='@'/>
+<retval declared_type64='MKOverlayRenderer*' type64='@'/>
+</method>
+<method selector='selectAnnotation:animated:'>
+<arg declared_type64='id' index='0' name='annotation' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='selectedAnnotations'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='setCamera:'>
+<arg declared_type64='MKMapCamera*' index='0' name='camera' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCamera:animated:'>
+<arg declared_type64='MKMapCamera*' index='0' name='camera' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCenterCoordinate:'>
+<arg declared_type64='CLLocationCoordinate2D' index='0' name='centerCoordinate' type64='{_CLLocationCoordinate2D=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCenterCoordinate:animated:'>
+<arg declared_type64='CLLocationCoordinate2D' index='0' name='coordinate' type64='{_CLLocationCoordinate2D=dd}'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMapType:'>
+<arg declared_type64='MKMapType' index='0' name='mapType' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPitchEnabled:'>
+<arg declared_type64='BOOL' index='0' name='pitchEnabled' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRegion:'>
+<arg declared_type64='MKCoordinateRegion' index='0' name='region' type64='{_MKCoordinateRegion={?=dd}{_MKCoordinateSpan=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRegion:animated:'>
+<arg declared_type64='MKCoordinateRegion' index='0' name='region' type64='{_MKCoordinateRegion={?=dd}{_MKCoordinateSpan=dd}}'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRotateEnabled:'>
+<arg declared_type64='BOOL' index='0' name='rotateEnabled' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setScrollEnabled:'>
+<arg declared_type64='BOOL' index='0' name='scrollEnabled' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSelectedAnnotations:'>
+<arg declared_type64='NSArray*' index='0' name='selectedAnnotations' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShowsBuildings:'>
+<arg declared_type64='BOOL' index='0' name='showsBuildings' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShowsCompass:'>
+<arg declared_type64='BOOL' index='0' name='showsCompass' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShowsPointsOfInterest:'>
+<arg declared_type64='BOOL' index='0' name='showsPointsOfInterest' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShowsScale:'>
+<arg declared_type64='BOOL' index='0' name='showsScale' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShowsUserLocation:'>
+<arg declared_type64='BOOL' index='0' name='showsUserLocation' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShowsZoomControls:'>
+<arg declared_type64='BOOL' index='0' name='showsZoomControls' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVisibleMapRect:'>
+<arg declared_type64='MKMapRect' index='0' name='visibleMapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVisibleMapRect:animated:'>
+<arg declared_type64='MKMapRect' index='0' name='mapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg declared_type64='BOOL' index='1' name='animate' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVisibleMapRect:edgePadding:animated:'>
+<arg declared_type64='MKMapRect' index='0' name='mapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg declared_type64='NSEdgeInsets' index='1' name='insets' type64='{NSEdgeInsets=dddd}'/>
+<arg declared_type64='BOOL' index='2' name='animate' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setZoomEnabled:'>
+<arg declared_type64='BOOL' index='0' name='zoomEnabled' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='showAnnotations:animated:'>
+<arg declared_type64='NSArray*' index='0' name='annotations' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='showsBuildings'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='showsCompass'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='showsPointsOfInterest'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='showsScale'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='showsUserLocation'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='showsZoomControls'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='userLocation'>
+<retval declared_type64='MKUserLocation*' type64='@'/>
+</method>
+<method selector='viewForAnnotation:'>
+<arg declared_type64='id' index='0' name='annotation' type64='@'/>
+<retval declared_type64='MKAnnotationView*' type64='@'/>
+</method>
+<method selector='visibleMapRect'>
+<retval declared_type64='MKMapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+</class>
+<class name='MKMultiPoint'>
+<method selector='getCoordinates:range:'>
+<arg declared_type64='CLLocationCoordinate2D*' index='0' name='coords' type64='^{_CLLocationCoordinate2D=dd}'/>
+<arg declared_type64='NSRange' index='1' name='range' type64='{_NSRange=QQ}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='pointCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='points'>
+<retval declared_type64='MKMapPoint*' type64='^{_MKMapPoint=dd}'/>
+</method>
+</class>
+<class name='MKOverlayPathRenderer'>
+<method selector='applyFillPropertiesToContext:atZoomScale:'>
+<arg declared_type64='CGContextRef' index='0' name='context' type64='^{CGContext=}'/>
+<arg declared_type64='MKZoomScale' index='1' name='zoomScale' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='applyStrokePropertiesToContext:atZoomScale:'>
+<arg declared_type64='CGContextRef' index='0' name='context' type64='^{CGContext=}'/>
+<arg declared_type64='MKZoomScale' index='1' name='zoomScale' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='createPath'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='fillColor'>
+<retval declared_type64='NSColor*' type64='@'/>
+</method>
+<method selector='fillPath:inContext:'>
+<arg declared_type64='CGPathRef' index='0' name='path' type64='^{CGPath=}'/>
+<arg declared_type64='CGContextRef' index='1' name='context' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='invalidatePath'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='lineCap'>
+<retval declared_type64='CGLineCap' type64='i'/>
+</method>
+<method selector='lineDashPattern'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='lineDashPhase'>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+<method selector='lineJoin'>
+<retval declared_type64='CGLineJoin' type64='i'/>
+</method>
+<method selector='lineWidth'>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+<method selector='miterLimit'>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+<method selector='path'>
+<retval declared_type64='CGPathRef' type64='^{CGPath=}'/>
+</method>
+<method selector='setFillColor:'>
+<arg declared_type64='NSColor*' index='0' name='fillColor' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLineCap:'>
+<arg declared_type64='CGLineCap' index='0' name='lineCap' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLineDashPattern:'>
+<arg declared_type64='NSArray*' index='0' name='lineDashPattern' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLineDashPhase:'>
+<arg declared_type64='CGFloat' index='0' name='lineDashPhase' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLineJoin:'>
+<arg declared_type64='CGLineJoin' index='0' name='lineJoin' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLineWidth:'>
+<arg declared_type64='CGFloat' index='0' name='lineWidth' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMiterLimit:'>
+<arg declared_type64='CGFloat' index='0' name='miterLimit' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPath:'>
+<arg declared_type64='CGPathRef' index='0' name='path' type64='^{CGPath=}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setStrokeColor:'>
+<arg declared_type64='NSColor*' index='0' name='strokeColor' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='strokeColor'>
+<retval declared_type64='NSColor*' type64='@'/>
+</method>
+<method selector='strokePath:inContext:'>
+<arg declared_type64='CGPathRef' index='0' name='path' type64='^{CGPath=}'/>
+<arg declared_type64='CGContextRef' index='1' name='context' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MKOverlayRenderer'>
+<method selector='alpha'>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+<method selector='canDrawMapRect:zoomScale:'>
+<arg declared_type64='MKMapRect' index='0' name='mapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg declared_type64='MKZoomScale' index='1' name='zoomScale' type64='d'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='contentScaleFactor'>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+<method selector='drawMapRect:zoomScale:inContext:'>
+<arg declared_type64='MKMapRect' index='0' name='mapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg declared_type64='MKZoomScale' index='1' name='zoomScale' type64='d'/>
+<arg declared_type64='CGContextRef' index='2' name='context' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='initWithOverlay:'>
+<arg declared_type64='id' index='0' name='overlay' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='mapPointForPoint:'>
+<arg declared_type64='CGPoint' index='0' name='point' type64='{CGPoint=dd}'/>
+<retval declared_type64='MKMapPoint' type64='{_MKMapPoint=dd}'/>
+</method>
+<method selector='mapRectForRect:'>
+<arg declared_type64='CGRect' index='0' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='MKMapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+<method selector='overlay'>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='pointForMapPoint:'>
+<arg declared_type64='MKMapPoint' index='0' name='mapPoint' type64='{_MKMapPoint=dd}'/>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</method>
+<method selector='rectForMapRect:'>
+<arg declared_type64='MKMapRect' index='0' name='mapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='setAlpha:'>
+<arg declared_type64='CGFloat' index='0' name='alpha' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setNeedsDisplay'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setNeedsDisplayInMapRect:'>
+<arg declared_type64='MKMapRect' index='0' name='mapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setNeedsDisplayInMapRect:zoomScale:'>
+<arg declared_type64='MKMapRect' index='0' name='mapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg declared_type64='MKZoomScale' index='1' name='zoomScale' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MKPinAnnotationView'>
+<method selector='animatesDrop'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='pinColor'>
+<retval declared_type64='MKPinAnnotationColor' type64='Q'/>
+</method>
+<method selector='setAnimatesDrop:'>
+<arg declared_type64='BOOL' index='0' name='animatesDrop' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPinColor:'>
+<arg declared_type64='MKPinAnnotationColor' index='0' name='pinColor' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MKPlacemark'>
+<method selector='countryCode'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='initWithCoordinate:addressDictionary:'>
+<arg declared_type64='CLLocationCoordinate2D' index='0' name='coordinate' type64='{_CLLocationCoordinate2D=dd}'/>
+<arg declared_type64='NSDictionary*' index='1' name='addressDictionary' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+</class>
+<class name='MKPointAnnotation'>
+<method selector='coordinate'>
+<retval declared_type64='CLLocationCoordinate2D' type64='{_CLLocationCoordinate2D=dd}'/>
+</method>
+<method selector='setCoordinate:'>
+<arg declared_type64='CLLocationCoordinate2D' index='0' name='coordinate' type64='{_CLLocationCoordinate2D=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MKPolygon'>
+<method selector='interiorPolygons'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method class_method='true' selector='polygonWithCoordinates:count:'>
+<arg declared_type64='CLLocationCoordinate2D*' index='0' name='coords' type64='^{_CLLocationCoordinate2D=dd}'/>
+<arg declared_type64='NSUInteger' index='1' name='count' type64='Q'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method class_method='true' selector='polygonWithCoordinates:count:interiorPolygons:'>
+<arg declared_type64='CLLocationCoordinate2D*' index='0' name='coords' type64='^{_CLLocationCoordinate2D=dd}'/>
+<arg declared_type64='NSUInteger' index='1' name='count' type64='Q'/>
+<arg declared_type64='NSArray*' index='2' name='interiorPolygons' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method class_method='true' selector='polygonWithPoints:count:'>
+<arg declared_type64='MKMapPoint*' index='0' name='points' type64='^{_MKMapPoint=dd}'/>
+<arg declared_type64='NSUInteger' index='1' name='count' type64='Q'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method class_method='true' selector='polygonWithPoints:count:interiorPolygons:'>
+<arg declared_type64='MKMapPoint*' index='0' name='points' type64='^{_MKMapPoint=dd}'/>
+<arg declared_type64='NSUInteger' index='1' name='count' type64='Q'/>
+<arg declared_type64='NSArray*' index='2' name='interiorPolygons' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+</class>
+<class name='MKPolygonRenderer'>
+<method selector='initWithPolygon:'>
+<arg declared_type64='MKPolygon*' index='0' name='polygon' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='polygon'>
+<retval declared_type64='MKPolygon*' type64='@'/>
+</method>
+</class>
+<class name='MKPolyline'>
+<method class_method='true' selector='polylineWithCoordinates:count:'>
+<arg declared_type64='CLLocationCoordinate2D*' index='0' name='coords' type64='^{_CLLocationCoordinate2D=dd}'/>
+<arg declared_type64='NSUInteger' index='1' name='count' type64='Q'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method class_method='true' selector='polylineWithPoints:count:'>
+<arg declared_type64='MKMapPoint*' index='0' name='points' type64='^{_MKMapPoint=dd}'/>
+<arg declared_type64='NSUInteger' index='1' name='count' type64='Q'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+</class>
+<class name='MKPolylineRenderer'>
+<method selector='initWithPolyline:'>
+<arg declared_type64='MKPolyline*' index='0' name='polyline' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='polyline'>
+<retval declared_type64='MKPolyline*' type64='@'/>
+</method>
+</class>
+<class name='MKRoute'>
+<method selector='advisoryNotices'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='distance'>
+<retval declared_type64='CLLocationDistance' type64='d'/>
+</method>
+<method selector='expectedTravelTime'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='polyline'>
+<retval declared_type64='MKPolyline*' type64='@'/>
+</method>
+<method selector='steps'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='transportType'>
+<retval declared_type64='MKDirectionsTransportType' type64='Q'/>
+</method>
+</class>
+<class name='MKRouteStep'>
+<method selector='distance'>
+<retval declared_type64='CLLocationDistance' type64='d'/>
+</method>
+<method selector='instructions'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='notice'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='polyline'>
+<retval declared_type64='MKPolyline*' type64='@'/>
+</method>
+<method selector='transportType'>
+<retval declared_type64='MKDirectionsTransportType' type64='Q'/>
+</method>
+</class>
+<class name='MKShape'>
+<method selector='setSubtitle:'>
+<arg declared_type64='NSString*' index='0' name='subtitle' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTitle:'>
+<arg declared_type64='NSString*' index='0' name='title' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='subtitle'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+</class>
+<class name='MKTileOverlay'>
+<method selector='URLForTilePath:'>
+<arg declared_type64='MKTileOverlayPath' index='0' name='path' type64='{_MKTileOverlayPath=qqqd}'/>
+<retval declared_type64='NSURL*' type64='@'/>
+</method>
+<method selector='URLTemplate'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='canReplaceMapContent'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='initWithURLTemplate:'>
+<arg declared_type64='NSString*' index='0' name='URLTemplate' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='isGeometryFlipped'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='loadTileAtPath:result:'>
+<arg declared_type64='MKTileOverlayPath' index='0' name='path' type64='{_MKTileOverlayPath=qqqd}'/>
+<arg declared_type64='void (^)(NSData *, NSError *)' function_pointer='true' index='1' name='result' type64='@?'>
+<arg declared_type64='NSData*' type64='@'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='maximumZ'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='minimumZ'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='setCanReplaceMapContent:'>
+<arg declared_type64='BOOL' index='0' name='canReplaceMapContent' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setGeometryFlipped:'>
+<arg declared_type64='BOOL' index='0' name='geometryFlipped' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMaximumZ:'>
+<arg declared_type64='NSInteger' index='0' name='maximumZ' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMinimumZ:'>
+<arg declared_type64='NSInteger' index='0' name='minimumZ' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTileSize:'>
+<arg declared_type64='CGSize' index='0' name='tileSize' type64='{CGSize=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='tileSize'>
+<retval declared_type64='CGSize' type64='{CGSize=dd}'/>
+</method>
+</class>
+<class name='MKTileOverlayRenderer'>
+<method selector='initWithTileOverlay:'>
+<arg declared_type64='MKTileOverlay*' index='0' name='overlay' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='reloadData'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MKUserLocation'>
+<method selector='heading'>
+<retval declared_type64='CLHeading*' type64='@'/>
+</method>
+<method selector='isUpdating'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='location'>
+<retval declared_type64='CLLocation*' type64='@'/>
+</method>
+<method selector='setSubtitle:'>
+<arg declared_type64='NSString*' index='0' name='subtitle' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTitle:'>
+<arg declared_type64='NSString*' index='0' name='title' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='subtitle'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='boundingMapRect'>
+<retval declared_type64='MKMapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+<method selector='canReplaceMapContent'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='coordinate'>
+<retval declared_type64='CLLocationCoordinate2D' type64='{_CLLocationCoordinate2D=dd}'/>
+</method>
+<method selector='intersectsMapRect:'>
+<arg declared_type64='MKMapRect' index='0' name='mapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='mapView:annotationView:didChangeDragState:fromOldState:'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='MKAnnotationView*' index='1' name='view' type64='@'/>
+<arg declared_type64='MKAnnotationViewDragState' index='2' name='newState' type64='Q'/>
+<arg declared_type64='MKAnnotationViewDragState' index='3' name='oldState' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapView:didAddAnnotationViews:'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='NSArray*' index='1' name='views' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapView:didAddOverlayRenderers:'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='NSArray*' index='1' name='renderers' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapView:didDeselectAnnotationView:'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='MKAnnotationView*' index='1' name='view' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapView:didFailToLocateUserWithError:'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='NSError*' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapView:didSelectAnnotationView:'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='MKAnnotationView*' index='1' name='view' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapView:didUpdateUserLocation:'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='MKUserLocation*' index='1' name='userLocation' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapView:regionDidChangeAnimated:'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapView:regionWillChangeAnimated:'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapView:rendererForOverlay:'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='id' index='1' name='overlay' type64='@'/>
+<retval declared_type64='MKOverlayRenderer*' type64='@'/>
+</method>
+<method selector='mapView:viewForAnnotation:'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='id' index='1' name='annotation' type64='@'/>
+<retval declared_type64='MKAnnotationView*' type64='@'/>
+</method>
+<method selector='mapViewDidFailLoadingMap:withError:'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='NSError*' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapViewDidFinishLoadingMap:'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapViewDidFinishRenderingMap:fullyRendered:'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='fullyRendered' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapViewDidStopLocatingUser:'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapViewWillStartLoadingMap:'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapViewWillStartLocatingUser:'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapViewWillStartRenderingMap:'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCoordinate:'>
+<arg declared_type64='CLLocationCoordinate2D' index='0' name='newCoordinate' type64='{_CLLocationCoordinate2D=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='subtitle'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+</class>
+<class name='NSValue'>
+<method selector='MKCoordinateSpanValue'>
+<retval declared_type64='MKCoordinateSpan' type64='{_MKCoordinateSpan=dd}'/>
+</method>
+<method selector='MKCoordinateValue'>
+<retval declared_type64='CLLocationCoordinate2D' type64='{_CLLocationCoordinate2D=dd}'/>
+</method>
+<method class_method='true' selector='valueWithMKCoordinate:'>
+<arg declared_type64='CLLocationCoordinate2D' index='0' name='coordinate' type64='{_CLLocationCoordinate2D=dd}'/>
+<retval declared_type64='NSValue*' type64='@'/>
+</method>
+<method class_method='true' selector='valueWithMKCoordinateSpan:'>
+<arg declared_type64='MKCoordinateSpan' index='0' name='span' type64='{_MKCoordinateSpan=dd}'/>
+<retval declared_type64='NSValue*' type64='@'/>
+</method>
+</class>
+<informal_protocol name='MKAnnotation'>
+<method selector='coordinate' type64='{?=dd}16@0:8'>
+<retval declared_type64='CLLocationCoordinate2D' type64='{_CLLocationCoordinate2D=dd}'/>
+</method>
+<method selector='setCoordinate:' type64='v32@0:8{?=dd}16'>
+<arg declared_type64='CLLocationCoordinate2D' index='0' name='newCoordinate' type64='{_CLLocationCoordinate2D=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='subtitle' type64='@16@0:8'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='title' type64='@16@0:8'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='MKMapViewDelegate'>
+<method selector='mapView:annotationView:didChangeDragState:fromOldState:' type64='v48@0:8@16@24Q32Q40'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='MKAnnotationView*' index='1' name='view' type64='@'/>
+<arg declared_type64='MKAnnotationViewDragState' index='2' name='newState' type64='Q'/>
+<arg declared_type64='MKAnnotationViewDragState' index='3' name='oldState' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapView:didAddAnnotationViews:' type64='v32@0:8@16@24'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='NSArray*' index='1' name='views' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapView:didAddOverlayRenderers:' type64='v32@0:8@16@24'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='NSArray*' index='1' name='renderers' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapView:didDeselectAnnotationView:' type64='v32@0:8@16@24'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='MKAnnotationView*' index='1' name='view' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapView:didFailToLocateUserWithError:' type64='v32@0:8@16@24'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='NSError*' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapView:didSelectAnnotationView:' type64='v32@0:8@16@24'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='MKAnnotationView*' index='1' name='view' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapView:didUpdateUserLocation:' type64='v32@0:8@16@24'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='MKUserLocation*' index='1' name='userLocation' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapView:regionDidChangeAnimated:' type64='v28@0:8@16B24'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapView:regionWillChangeAnimated:' type64='v28@0:8@16B24'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapView:rendererForOverlay:' type64='@32@0:8@16@24'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='id' index='1' name='overlay' type64='@'/>
+<retval declared_type64='MKOverlayRenderer*' type64='@'/>
+</method>
+<method selector='mapView:viewForAnnotation:' type64='@32@0:8@16@24'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='id' index='1' name='annotation' type64='@'/>
+<retval declared_type64='MKAnnotationView*' type64='@'/>
+</method>
+<method selector='mapViewDidFailLoadingMap:withError:' type64='v32@0:8@16@24'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='NSError*' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapViewDidFinishLoadingMap:' type64='v24@0:8@16'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapViewDidFinishRenderingMap:fullyRendered:' type64='v28@0:8@16B24'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='fullyRendered' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapViewDidStopLocatingUser:' type64='v24@0:8@16'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapViewWillStartLoadingMap:' type64='v24@0:8@16'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapViewWillStartLocatingUser:' type64='v24@0:8@16'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapViewWillStartRenderingMap:' type64='v24@0:8@16'>
+<arg declared_type64='MKMapView*' index='0' name='mapView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='MKOverlay'>
+<method selector='boundingMapRect' type64='{?={?=dd}{?=dd}}16@0:8'>
+<retval declared_type64='MKMapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+<method selector='canReplaceMapContent' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='coordinate' type64='{?=dd}16@0:8'>
+<retval declared_type64='CLLocationCoordinate2D' type64='{_CLLocationCoordinate2D=dd}'/>
+</method>
+<method selector='intersectsMapRect:' type64='B48@0:8{?={?=dd}{?=dd}}16'>
+<arg declared_type64='MKMapRect' index='0' name='mapRect' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</informal_protocol>
+</signatures>

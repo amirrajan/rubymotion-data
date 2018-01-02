@@ -1,0 +1,317 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type='NSString*' name='IMAVManagerStateChangedNotification' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMAVManagerURLToShareChangedNotification' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMCapabilityAudioConference' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMCapabilityDirectIM' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMCapabilityFileSharing' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMCapabilityFileTransfer' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMCapabilityText' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMCapabilityVideoConference' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMMyStatusChangedNotification' type='@'/>
+<constant declared_type='NSString*' name='IMPersonAVBusyKey' type='@'/>
+<constant declared_type='NSString*' name='IMPersonCapabilitiesKey' type='@'/>
+<constant declared_type='NSString*' name='IMPersonEmailKey' type='@'/>
+<constant declared_type='NSString*' name='IMPersonFirstNameKey' type='@'/>
+<constant declared_type='NSString*' name='IMPersonIdleSinceKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMPersonInfoChangedNotification' type='@'/>
+<constant declared_type='NSString*' name='IMPersonLastNameKey' type='@'/>
+<constant declared_type='NSString*' name='IMPersonPictureDataKey' type='@'/>
+<constant declared_type='NSString*' name='IMPersonScreenNameKey' type='@'/>
+<constant declared_type='NSString*' name='IMPersonServiceNameKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMPersonStatusChangedNotification' type='@'/>
+<constant declared_type='NSString*' name='IMPersonStatusKey' type='@'/>
+<constant declared_type='NSString*' name='IMPersonStatusMessageKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMServiceStatusChangedNotification' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMStatusImagesChangedAppearanceNotification' type='@'/>
+<enum name='IMAVInactive' value='0'/>
+<enum name='IMAVPending' value='4'/>
+<enum name='IMAVRequested' value='1'/>
+<enum name='IMAVRunning' value='5'/>
+<enum name='IMAVShuttingDown' value='2'/>
+<enum name='IMAVStartingUp' value='3'/>
+<enum name='IMPersonStatusAvailable' value='4'/>
+<enum name='IMPersonStatusAway' value='3'/>
+<enum name='IMPersonStatusIdle' value='2'/>
+<enum name='IMPersonStatusNoStatus' value='5'/>
+<enum name='IMPersonStatusOffline' value='1'/>
+<enum name='IMPersonStatusUnknown' value='0'/>
+<enum name='IMServiceStatusDisconnected' value='1'/>
+<enum name='IMServiceStatusLoggedIn' value='4'/>
+<enum name='IMServiceStatusLoggedOut' value='0'/>
+<enum name='IMServiceStatusLoggingIn' value='3'/>
+<enum name='IMServiceStatusLoggingOut' value='2'/>
+<enum name='IMVideoOptimizationDefault' value='0'/>
+<enum name='IMVideoOptimizationReplacement' value='2'/>
+<enum name='IMVideoOptimizationStills' value='1'/>
+<function name='IMComparePersonStatus'>
+<arg declared_type='IMPersonStatus' name='status' type='I' type64='Q'/>
+<arg declared_type='IMPersonStatus' name='compareTo' type='I' type64='Q'/>
+<retval declared_type='NSComparisonResult' type='i' type64='q'/>
+</function>
+<class name='IMAVButton'>
+<method class_method='true' selector='backwardButton'>
+<retval declared_type='IMAVButton*' type='@'/>
+</method>
+<method class_method='true' selector='forwardButton'>
+<retval declared_type='IMAVButton*' type='@'/>
+</method>
+<method class_method='true' selector='muteButton'>
+<retval declared_type='IMAVButton*' type='@'/>
+</method>
+<method class_method='true' selector='playPauseButton'>
+<retval declared_type='IMAVButton*' type='@'/>
+</method>
+<method selector='setState:'>
+<arg declared_type='NSInteger' index='0' name='value' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='state'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+</class>
+<class name='IMAVControl'>
+<method selector='action'>
+<retval declared_type='SEL' type=':'/>
+</method>
+<method selector='doubleValue'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='floatValue'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='intValue'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='integerValue'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='isEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setAction:'>
+<arg declared_type='SEL' index='0' name='aSelector' type=':'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDoubleValue:'>
+<arg declared_type='double' index='0' name='aDouble' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEnabled:'>
+<arg declared_type='BOOL' index='0' name='flag' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFloatValue:'>
+<arg declared_type='float' index='0' name='aFloat' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setIntValue:'>
+<arg declared_type='int' index='0' name='anInt' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setIntegerValue:'>
+<arg declared_type='NSInteger' index='0' name='anInteger' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTag:'>
+<arg declared_type='NSInteger' index='0' name='anInt' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTarget:'>
+<arg declared_type='id' index='0' name='anObject' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='tag'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='target'>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='IMAVControlBar'>
+<method selector='addControl:'>
+<arg declared_type='IMAVControl*' index='0' name='control' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='controls'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='removeAllControls'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeControl:'>
+<arg declared_type='IMAVControl*' index='0' name='control' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='IMAVManager'>
+<method selector='URLToShare'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='audioDeviceChannels'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='audioDeviceUID'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='controlBar'>
+<retval declared_type='IMAVControlBar*' type='@'/>
+</method>
+<method selector='numberOfAudioChannels'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='setNumberOfAudioChannels:'>
+<arg declared_type='NSInteger' index='0' name='count' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setVideoDataSource:'>
+<arg declared_type='id' index='0' name='dataSource' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setVideoOptimizationOptions:'>
+<arg declared_type='IMVideoOptimizationOptions' index='0' name='options' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sharedAVManager'>
+<retval declared_type='IMAVManager*' type='@'/>
+</method>
+<method selector='start'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='state'>
+<retval declared_type='IMAVManagerState' type='I' type64='Q'/>
+</method>
+<method selector='stop'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='videoDataSource'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='videoOptimizationOptions'>
+<retval declared_type='IMVideoOptimizationOptions' type='I' type64='Q'/>
+</method>
+</class>
+<class name='IMAVSlider'>
+<method selector='maxValue'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='minValue'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='setMaxValue:'>
+<arg declared_type='double' index='0' name='aDouble' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMinValue:'>
+<arg declared_type='double' index='0' name='aDouble' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='timeSlider'>
+<retval declared_type='IMAVSlider*' type='@'/>
+</method>
+</class>
+<class name='IMService'>
+<method class_method='true' selector='allServices'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='imageNameForStatus:'>
+<arg declared_type='IMPersonStatus' index='0' name='status' type='I' type64='Q'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='imageURLForStatus:'>
+<arg declared_type='IMPersonStatus' index='0' name='status' type='I' type64='Q'/>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='infoForAllScreenNames'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='infoForPreferredScreenNames'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='infoForScreenName:'>
+<arg declared_type='NSString*' index='0' name='screenName' type='@'/>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='localizedName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='localizedShortName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='myIdleTime'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method class_method='true' selector='myStatus'>
+<retval declared_type='IMPersonStatus' type='I' type64='Q'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='notificationCenter'>
+<retval declared_type='NSNotificationCenter*' type='@'/>
+</method>
+<method selector='peopleWithScreenName:'>
+<arg declared_type='NSString*' index='0' name='screenName' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='screenNamesForPerson:'>
+<arg declared_type='ABPerson*' index='0' name='person' type='@'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='serviceWithName:'>
+<arg declared_type='NSString*' index='0' name='name' type='@'/>
+<retval declared_type='IMService*' type='@'/>
+</method>
+<method selector='status'>
+<retval declared_type='IMServiceStatus' type='I' type64='Q'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='getOpenGLBufferContext:pixelFormat:'>
+<arg declared_type='CGLContextObj*' index='0' name='contextOut' type='^^{_CGLContextObject}'/>
+<arg declared_type='CGLPixelFormatObj*' index='1' name='pixelFormatOut' type='^^{_CGLPixelFormatObject}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='getPixelBufferPixelFormat:'>
+<arg declared_type='OSType*' index='0' name='pixelFormatOut' type='^I'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='renderIntoOpenGLBuffer:onScreen:forTime:'>
+<arg declared_type='CVOpenGLBufferRef' index='0' name='buffer' type='^{__CVBuffer=}'/>
+<arg declared_type='int*' index='1' name='screenInOut' type='^i'/>
+<arg declared_type='CVTimeStamp*' index='2' name='timeStamp' type='^{_CVTimeStamp=IiqQdq{CVSMPTETime=ssIIIssss}QQ}'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='renderIntoPixelBuffer:forTime:'>
+<arg declared_type='CVPixelBufferRef' index='0' name='buffer' type='^{__CVBuffer=}'/>
+<arg declared_type='CVTimeStamp*' index='1' name='timeStamp' type='^{_CVTimeStamp=IiqQdq{CVSMPTETime=ssIIIssss}QQ}'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<informal_protocol name='IMVideoDataSource'>
+<method selector='getOpenGLBufferContext:pixelFormat:' type='v16@0:4^^{_CGLContextObject}8^^{_CGLPixelFormatObject}12' type64='v32@0:8^^{_CGLContextObject}16^^{_CGLPixelFormatObject}24'>
+<arg declared_type='CGLContextObj*' index='0' name='contextOut' type='^^{_CGLContextObject}'/>
+<arg declared_type='CGLPixelFormatObj*' index='1' name='pixelFormatOut' type='^^{_CGLPixelFormatObject}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='getPixelBufferPixelFormat:' type='v12@0:4^I8' type64='v24@0:8^I16'>
+<arg declared_type='OSType*' index='0' name='pixelFormatOut' type='^I'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='renderIntoOpenGLBuffer:onScreen:forTime:' type='B20@0:4^{__CVBuffer=}8^i12^{?=IiqQdq{CVSMPTETime=ssIIIssss}QQ}16' type64='B40@0:8^{__CVBuffer=}16^i24^{?=IiqQdq{CVSMPTETime=ssIIIssss}QQ}32'>
+<arg declared_type='CVOpenGLBufferRef' index='0' name='buffer' type='^{__CVBuffer=}'/>
+<arg declared_type='int*' index='1' name='screenInOut' type='^i'/>
+<arg declared_type='CVTimeStamp*' index='2' name='timeStamp' type='^{_CVTimeStamp=IiqQdq{CVSMPTETime=ssIIIssss}QQ}'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='renderIntoPixelBuffer:forTime:' type='B16@0:4^{__CVBuffer=}8^{?=IiqQdq{CVSMPTETime=ssIIIssss}QQ}12' type64='B32@0:8^{__CVBuffer=}16^{?=IiqQdq{CVSMPTETime=ssIIIssss}QQ}24'>
+<arg declared_type='CVPixelBufferRef' index='0' name='buffer' type='^{__CVBuffer=}'/>
+<arg declared_type='CVTimeStamp*' index='1' name='timeStamp' type='^{_CVTimeStamp=IiqQdq{CVSMPTETime=ssIIIssss}QQ}'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</informal_protocol>
+</signatures>

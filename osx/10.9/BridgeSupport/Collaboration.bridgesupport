@@ -1,0 +1,149 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/AddressBook.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenDirectory.framework'/>
+<depends_on path='/System/Library/Frameworks/SecurityInterface.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<class name='CBGroupIdentity'>
+<method class_method='true' selector='groupIdentityWithPosixGID:authority:'>
+<arg declared_type='gid_t' index='0' name='gid' type='I'/>
+<arg declared_type='CBIdentityAuthority*' index='1' name='authority' type='@'/>
+<retval declared_type='CBGroupIdentity*' type='@'/>
+</method>
+<method selector='members'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='posixGID'>
+<retval declared_type='gid_t' type='I'/>
+</method>
+</class>
+<class name='CBIdentity'>
+<method selector='CSIdentity'>
+<retval declared_type='CSIdentityRef' type='^{__CSIdentity=}'/>
+</method>
+<method selector='UUIDString'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='aliases'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='authority'>
+<retval declared_type='CBIdentityAuthority*' type='@'/>
+</method>
+<method selector='emailAddress'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='fullName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='identityWithCSIdentity:'>
+<arg declared_type='CSIdentityRef' index='0' name='csIdentity' type='^{__CSIdentity=}'/>
+<retval declared_type='CBIdentity*' type='@'/>
+</method>
+<method class_method='true' selector='identityWithName:authority:'>
+<arg declared_type='NSString*' index='0' name='name' type='@'/>
+<arg declared_type='CBIdentityAuthority*' index='1' name='authority' type='@'/>
+<retval declared_type='CBIdentity*' type='@'/>
+</method>
+<method class_method='true' selector='identityWithPersistentReference:'>
+<arg declared_type='NSData*' index='0' name='data' type='@'/>
+<retval declared_type='CBIdentity*' type='@'/>
+</method>
+<method class_method='true' selector='identityWithUUIDString:authority:'>
+<arg declared_type='NSString*' index='0' name='uuid' type='@'/>
+<arg declared_type='CBIdentityAuthority*' index='1' name='authority' type='@'/>
+<retval declared_type='CBIdentity*' type='@'/>
+</method>
+<method selector='image'>
+<retval declared_type='NSImage*' type='@'/>
+</method>
+<method selector='isHidden'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isMemberOfGroup:'>
+<arg declared_type='CBGroupIdentity*' index='0' name='group' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='persistentReference'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='posixName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='CBIdentityAuthority'>
+<method selector='CSIdentityAuthority'>
+<retval declared_type='CSIdentityAuthorityRef' type='^{__CSIdentityAuthority=}'/>
+</method>
+<method class_method='true' selector='defaultIdentityAuthority'>
+<retval declared_type='CBIdentityAuthority*' type='@'/>
+</method>
+<method class_method='true' selector='identityAuthorityWithCSIdentityAuthority:'>
+<arg declared_type='CSIdentityAuthorityRef' index='0' name='CSIdentityAuthority' type='^{__CSIdentityAuthority=}'/>
+<retval declared_type='CBIdentityAuthority*' type='@'/>
+</method>
+<method class_method='true' selector='localIdentityAuthority'>
+<retval declared_type='CBIdentityAuthority*' type='@'/>
+</method>
+<method selector='localizedName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='managedIdentityAuthority'>
+<retval declared_type='CBIdentityAuthority*' type='@'/>
+</method>
+</class>
+<class name='CBIdentityPicker'>
+<method selector='allowsMultipleSelection'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='identities'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='runModal'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='runModalForWindow:modalDelegate:didEndSelector:contextInfo:'>
+<arg declared_type='NSWindow*' index='0' name='window' type='@'/>
+<arg declared_type='id' index='1' name='delegate' type='@'/>
+<arg declared_type='SEL' index='2' name='didEndSelector' type=':'/>
+<arg declared_type='void*' index='3' name='contextInfo' type='^v'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAllowsMultipleSelection:'>
+<arg declared_type='BOOL' index='0' name='flag' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitle:'>
+<arg declared_type='NSString*' index='0' name='title' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='CBUserIdentity'>
+<method selector='authenticateWithPassword:'>
+<arg declared_type='NSString*' index='0' name='password' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='certificate'>
+<retval declared_type='SecCertificateRef' type='^{OpaqueSecCertificateRef=}'/>
+</method>
+<method selector='isEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='posixUID'>
+<retval declared_type='uid_t' type='I'/>
+</method>
+<method class_method='true' selector='userIdentityWithPosixUID:authority:'>
+<arg declared_type='uid_t' index='0' name='uid' type='I'/>
+<arg declared_type='CBIdentityAuthority*' index='1' name='authority' type='@'/>
+<retval declared_type='CBUserIdentity*' type='@'/>
+</method>
+</class>
+</signatures>

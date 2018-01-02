@@ -1,0 +1,247 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Carbon.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<struct name='DSpAltBufferAttributes' type='{DSpAltBufferAttributes=&quot;width&quot;I&quot;height&quot;I&quot;options&quot;i&quot;reserved&quot;[4L]}'>
+<field declared_type='UInt32' name='width' type='L'/>
+<field declared_type='UInt32' name='height' type='L'/>
+<field declared_type='DSpAltBufferOption' name='options' type='i'/>
+<field declared_type='UInt32*' name='reserved' type='[4L]'/>
+</struct>
+<struct name='DSpBlitInfo' type='{DSpBlitInfo=&quot;completionFlag&quot;B&quot;filler&quot;[3c]&quot;completionProc&quot;^?&quot;srcContext&quot;^{OpaqueDSpContextReference}&quot;srcBuffer&quot;^{OpaqueGrafPtr}&quot;srcRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;srcKey&quot;I&quot;dstContext&quot;^{OpaqueDSpContextReference}&quot;dstBuffer&quot;^{OpaqueGrafPtr}&quot;dstRect&quot;{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}&quot;dstKey&quot;I&quot;mode&quot;i&quot;reserved&quot;[4L]}'>
+<field declared_type='Boolean' name='completionFlag' type='B'/>
+<field declared_type='char*' name='filler' type='[3c]'/>
+<field declared_type='DSpBlitDoneProc' function_pointer='true' name='completionProc' type='^?'>
+<arg declared_type='DSpBlitInfo*' type='^{DSpBlitInfo=B[3c]^?^{OpaqueDSpContextReference}^{OpaqueGrafPtr}{Rect=ssss}I^{OpaqueDSpContextReference}^{OpaqueGrafPtr}{Rect=ssss}Ii[4L]}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field declared_type='DSpContextReference' name='srcContext' type='^{OpaqueDSpContextReference=}'/>
+<field declared_type='CGrafPtr' name='srcBuffer' type='^{OpaqueGrafPtr=}'/>
+<field declared_type='Rect' name='srcRect' type='{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}'/>
+<field declared_type='UInt32' name='srcKey' type='L'/>
+<field declared_type='DSpContextReference' name='dstContext' type='^{OpaqueDSpContextReference=}'/>
+<field declared_type='CGrafPtr' name='dstBuffer' type='^{OpaqueGrafPtr=}'/>
+<field declared_type='Rect' name='dstRect' type='{Rect=&quot;top&quot;s&quot;left&quot;s&quot;bottom&quot;s&quot;right&quot;s}'/>
+<field declared_type='UInt32' name='dstKey' type='L'/>
+<field declared_type='DSpBlitMode' name='mode' type='i'/>
+<field declared_type='UInt32*' name='reserved' type='[4L]'/>
+</struct>
+<struct name='DSpContextAttributes' type='{DSpContextAttributes=&quot;frequency&quot;i&quot;displayWidth&quot;I&quot;displayHeight&quot;I&quot;reserved1&quot;I&quot;reserved2&quot;I&quot;colorNeeds&quot;I&quot;colorTable&quot;^^{ColorTable}&quot;contextOptions&quot;I&quot;backBufferDepthMask&quot;I&quot;displayDepthMask&quot;I&quot;backBufferBestDepth&quot;I&quot;displayBestDepth&quot;I&quot;pageCount&quot;I&quot;filler&quot;[3c]&quot;gameMustConfirmSwitch&quot;B&quot;reserved3&quot;[4L]}'>
+<field declared_type='Fixed' name='frequency' type='l'/>
+<field declared_type='UInt32' name='displayWidth' type='L'/>
+<field declared_type='UInt32' name='displayHeight' type='L'/>
+<field declared_type='UInt32' name='reserved1' type='L'/>
+<field declared_type='UInt32' name='reserved2' type='L'/>
+<field declared_type='UInt32' name='colorNeeds' type='L'/>
+<field declared_type='CTabHandle' name='colorTable' type='^^{ColorTable}'/>
+<field declared_type='OptionBits' name='contextOptions' type='L'/>
+<field declared_type='OptionBits' name='backBufferDepthMask' type='L'/>
+<field declared_type='OptionBits' name='displayDepthMask' type='L'/>
+<field declared_type='UInt32' name='backBufferBestDepth' type='L'/>
+<field declared_type='UInt32' name='displayBestDepth' type='L'/>
+<field declared_type='UInt32' name='pageCount' type='L'/>
+<field declared_type='char*' name='filler' type='[3c]'/>
+<field declared_type='Boolean' name='gameMustConfirmSwitch' type='B'/>
+<field declared_type='UInt32*' name='reserved3' type='[4L]'/>
+</struct>
+<cftype name='DSpAltBufferReference' type='^{OpaqueDSpAltBufferReference=}'/>
+<cftype name='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+<cftype name='DSpContextReferenceConst' type='^{OpaqueDSpContextReference=}'/>
+<enum name='kDSpAltBufferOption_RowBytesEqualsWidth' value='1'/>
+<enum name='kDSpBlitMode_DstKey' value='2'/>
+<enum name='kDSpBlitMode_Interpolation' value='4'/>
+<enum name='kDSpBlitMode_Plain' value='0'/>
+<enum name='kDSpBlitMode_SrcKey' value='1'/>
+<enum name='kDSpBufferKind_Normal' value='0'/>
+<enum name='kDSpColorNeeds_DontCare' value='0'/>
+<enum name='kDSpColorNeeds_Request' value='1'/>
+<enum name='kDSpColorNeeds_Require' value='2'/>
+<enum name='kDSpContextOption_DontSyncVBL' value='4'/>
+<enum name='kDSpContextOption_PageFlip' value='2'/>
+<enum name='kDSpContextOption_Stereoscopic' value='8'/>
+<enum name='kDSpContextState_Active' value='0'/>
+<enum name='kDSpContextState_Inactive' value='2'/>
+<enum name='kDSpContextState_Paused' value='1'/>
+<enum name='kDSpDepthMask_1' value='1'/>
+<enum name='kDSpDepthMask_16' value='16'/>
+<enum name='kDSpDepthMask_2' value='2'/>
+<enum name='kDSpDepthMask_32' value='32'/>
+<enum name='kDSpDepthMask_4' value='4'/>
+<enum name='kDSpDepthMask_8' value='8'/>
+<enum name='kDSpDepthMask_All' value='-1'/>
+<function name='DSpContext_Dispose'>
+<arg declared_type='DSpContextReference' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_FadeGamma'>
+<arg declared_type='DSpContextReference' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='SInt32' name='inPercentOfOriginalIntensity' type='l'/>
+<arg declared_type='RGBColor*' name='inZeroIntensityColor' type='^{RGBColor=SSS}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_FadeGammaIn'>
+<arg declared_type='DSpContextReference' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='RGBColor*' name='inZeroIntensityColor' type='^{RGBColor=SSS}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_FadeGammaOut'>
+<arg declared_type='DSpContextReference' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='RGBColor*' name='inZeroIntensityColor' type='^{RGBColor=SSS}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_GetAttributes'>
+<arg declared_type='DSpContextReferenceConst' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='DSpContextAttributesPtr' name='outAttributes' type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_GetBackBuffer'>
+<arg declared_type='DSpContextReference' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='DSpBufferKind' name='inBufferKind' type='i'/>
+<arg declared_type='CGrafPtr*' name='outBackBuffer' type='^^{OpaqueGrafPtr}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_GetCLUTEntries'>
+<arg declared_type='DSpContextReferenceConst' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='ColorSpec*' name='outEntries' type='^{ColorSpec=s{RGBColor=SSS}}'/>
+<arg declared_type='UInt16' name='inStartingEntry' type='S'/>
+<arg declared_type='UInt16' name='inLastEntry' type='S'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_GetDisplayID'>
+<arg declared_type='DSpContextReferenceConst' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='DisplayIDType*' name='outDisplayID' type='^I'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_GetFrontBuffer'>
+<arg declared_type='DSpContextReferenceConst' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='CGrafPtr*' name='outFrontBuffer' type='^^{OpaqueGrafPtr}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_GetMonitorFrequency'>
+<arg declared_type='DSpContextReferenceConst' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='Fixed*' name='outFrequency' type='^i'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_GetState'>
+<arg declared_type='DSpContextReferenceConst' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='DSpContextState*' name='outState' type='^i'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_GlobalToLocal'>
+<arg declared_type='DSpContextReferenceConst' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='Point*' name='ioPoint' type='^{Point=ss}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_IsBusy'>
+<arg declared_type='DSpContextReferenceConst' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='Boolean*' name='outBusyFlag' type='^B'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_LocalToGlobal'>
+<arg declared_type='DSpContextReferenceConst' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='Point*' name='ioPoint' type='^{Point=ss}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_Queue'>
+<arg declared_type='DSpContextReference' name='inParentContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='DSpContextReference' name='inChildContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='DSpContextAttributesPtr' name='inDesiredAttributes' type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_Release'>
+<arg declared_type='DSpContextReference' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_Reserve'>
+<arg declared_type='DSpContextReference' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='DSpContextAttributesPtr' name='inDesiredAttributes' type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_SetCLUTEntries'>
+<arg declared_type='DSpContextReference' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<arg const='true' declared_type='ColorSpec*' name='inEntries' type='^{ColorSpec=s{RGBColor=SSS}}'/>
+<arg declared_type='UInt16' name='inStartingEntry' type='S'/>
+<arg declared_type='UInt16' name='inLastEntry' type='S'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_SetState'>
+<arg declared_type='DSpContextReference' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='DSpContextState' name='inState' type='i'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_SwapBuffers'>
+<arg declared_type='DSpContextReference' name='inContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='DSpCallbackUPP' function_pointer='true' name='inBusyProc' type='^?'>
+<arg declared_type='DSpContextReference' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='Boolean' type='B'/>
+</arg>
+<arg declared_type='void*' name='inUserRefCon' type='^v'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpContext_Switch'>
+<arg declared_type='DSpContextReference' name='inOldContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='DSpContextReference' name='inNewContext' type='^{OpaqueDSpContextReference=}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpFindBestContext'>
+<arg declared_type='DSpContextAttributesPtr' name='inDesiredAttributes' type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}'/>
+<arg declared_type='DSpContextReference*' name='outContext' type='^^{OpaqueDSpContextReference}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpFindBestContextOnDisplayID'>
+<arg declared_type='DSpContextAttributesPtr' name='inDesiredAttributes' type='^{DSpContextAttributes=iIIIII^^{ColorTable}IIIIII[3c]B[4L]}'/>
+<arg declared_type='DSpContextReference*' name='outContext' type='^^{OpaqueDSpContextReference}'/>
+<arg declared_type='DisplayIDType' name='inDisplayID' type='L'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpFindContextFromPoint'>
+<arg declared_type='Point' name='inGlobalPoint' type='{Point=ss}'/>
+<arg declared_type='DSpContextReference*' name='outContext' type='^^{OpaqueDSpContextReference}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpGetCurrentContext'>
+<arg declared_type='DisplayIDType' name='inDisplayID' type='L'/>
+<arg declared_type='DSpContextReference*' name='outContext' type='^^{OpaqueDSpContextReference}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpGetFirstContext'>
+<arg declared_type='DisplayIDType' name='inDisplayID' type='L'/>
+<arg declared_type='DSpContextReference*' name='outContext' type='^^{OpaqueDSpContextReference}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpGetMouse'>
+<arg declared_type='Point*' name='outGlobalPoint' type='^{Point=ss}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpGetNextContext'>
+<arg declared_type='DSpContextReference' name='inCurrentContext' type='^{OpaqueDSpContextReference=}'/>
+<arg declared_type='DSpContextReference*' name='outContext' type='^^{OpaqueDSpContextReference}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpGetVersion'>
+<retval declared_type='NumVersion' type='{NumVersion=CCCC}'/>
+</function>
+<function name='DSpProcessEvent'>
+<arg declared_type='EventRecord*' name='inEvent' type='^{EventRecord=SLI{Point=ss}S}'/>
+<arg declared_type='Boolean*' name='outEventWasProcessed' type='^B'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpSetBlankingColor'>
+<arg const='true' declared_type='RGBColor*' name='inRGBColor' type='^{RGBColor=SSS}'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpSetDebugMode'>
+<arg declared_type='Boolean' name='inDebugMode' type='B'/>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpShutdown'>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+<function name='DSpStartup'>
+<retval declared_type='OSStatus' type='l'/>
+</function>
+</signatures>

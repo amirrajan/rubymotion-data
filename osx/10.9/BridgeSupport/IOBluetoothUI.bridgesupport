@@ -1,0 +1,443 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/IOBluetooth.framework'/>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<cftype name='IOBluetoothDeviceSelectorControllerRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+<cftype name='IOBluetoothPairingControllerRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+<cftype name='IOBluetoothServiceBrowserControllerRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+<enum name='kBluetoothKeyboardANSIReturn' value='0'/>
+<enum name='kBluetoothKeyboardISOReturn' value='1'/>
+<enum name='kBluetoothKeyboardJISReturn' value='2'/>
+<enum name='kBluetoothKeyboardNoReturn' value='3'/>
+<enum name='kIOBluetoothServiceBrowserControllerOptionsAutoStartInquiry' value='1'/>
+<enum name='kIOBluetoothServiceBrowserControllerOptionsDisconnectWhenDone' value='2'/>
+<enum name='kIOBluetoothServiceBrowserControllerOptionsNone' value='0'/>
+<enum name='kIOBluetoothUISuccess' value='-1000'/>
+<enum name='kIOBluetoothUIUserCanceledErr' value='-1001'/>
+<function name='IOBluetoothDeviceSelectorRunPanelWithAttributes'>
+<arg declared_type='IOBluetoothDeviceSelectorControllerRef' name='deviceSelector' type='^{OpaqueIOBluetoothObjectRef=}'/>
+<arg declared_type='IOBluetoothDeviceSearchAttributes*' name='attributes' type='^{IOBluetoothDeviceSearchAttributes=III^{IOBluetoothDeviceSearchDeviceAttributes}}'/>
+<retval declared_type='CFArrayRef' type='^{__CFArray=}'/>
+</function>
+<function name='IOBluetoothGetDeviceSelectorController'>
+<retval declared_type='IOBluetoothDeviceSelectorControllerRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+</function>
+<function name='IOBluetoothGetPairingController'>
+<retval declared_type='IOBluetoothPairingControllerRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+</function>
+<function name='IOBluetoothPairingControllerRunPanelWithAttributes'>
+<arg declared_type='IOBluetoothPairingControllerRef' name='pairingController' type='^{OpaqueIOBluetoothObjectRef=}'/>
+<arg declared_type='IOBluetoothDeviceSearchAttributes*' name='attributes' type='^{IOBluetoothDeviceSearchAttributes=III^{IOBluetoothDeviceSearchDeviceAttributes}}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='IOBluetoothServiceBrowserControllerBrowseDevices'>
+<arg declared_type='IOBluetoothSDPServiceRecordRef*' name='outRecord' type='^^{OpaqueIOBluetoothObjectRef}'/>
+<arg declared_type='IOBluetoothServiceBrowserControllerOptions' name='inOptions' type='I'/>
+<retval declared_type='IOReturn' type='i'/>
+</function>
+<function name='IOBluetoothServiceBrowserControllerCreate'>
+<arg declared_type='IOBluetoothServiceBrowserControllerOptions' name='inOptions' type='I'/>
+<retval already_retained='true' declared_type='IOBluetoothServiceBrowserControllerRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+</function>
+<function name='IOBluetoothServiceBrowserControllerDiscover'>
+<arg declared_type='IOBluetoothServiceBrowserControllerRef' name='controller' type='^{OpaqueIOBluetoothObjectRef=}'/>
+<arg declared_type='IOBluetoothSDPServiceRecordRef*' name='outRecord' type='^^{OpaqueIOBluetoothObjectRef}'/>
+<retval declared_type='IOReturn' type='i'/>
+</function>
+<function name='IOBluetoothServiceBrowserControllerDiscoverWithDeviceAttributes'>
+<arg declared_type='IOBluetoothServiceBrowserControllerRef' name='controller' type='^{OpaqueIOBluetoothObjectRef=}'/>
+<arg declared_type='IOBluetoothSDPServiceRecordRef*' name='outRecord' type='^^{OpaqueIOBluetoothObjectRef}'/>
+<arg declared_type='IOBluetoothDeviceSearchAttributes*' name='deviceAttributes' type='^{IOBluetoothDeviceSearchAttributes=III^{IOBluetoothDeviceSearchDeviceAttributes}}'/>
+<arg declared_type='CFArrayRef' name='serviceArray' type='^{__CFArray=}'/>
+<retval declared_type='IOReturn' type='i'/>
+</function>
+<function name='IOBluetoothServiceBrowserControllerSetOptions'>
+<arg declared_type='IOBluetoothServiceBrowserControllerRef' name='controller' type='^{OpaqueIOBluetoothObjectRef=}'/>
+<arg declared_type='IOBluetoothServiceBrowserControllerOptions' name='inOptions' type='I'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='IOBluetoothValidateHardware'>
+<arg declared_type='CFStringRef' name='cancelButtonTitle' type='^{__CFString=}'/>
+<retval declared_type='IOReturn' type='i'/>
+</function>
+<function name='IOBluetoothValidateHardwareWithDescription'>
+<arg declared_type='CFStringRef' name='cancelButtonTitle' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef' name='descriptionText' type='^{__CFString=}'/>
+<retval declared_type='IOReturn' type='i'/>
+</function>
+<class name='IOBluetoothDeviceSelectorController'>
+<method selector='addAllowedUUID:'>
+<arg declared_type='IOBluetoothSDPUUID*' index='0' name='allowedUUID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addAllowedUUIDArray:'>
+<arg declared_type='NSArray*' index='0' name='allowedUUIDArray' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='beginSheetModalForWindow:modalDelegate:didEndSelector:contextInfo:'>
+<arg declared_type='NSWindow*' index='0' name='sheetWindow' type='@'/>
+<arg declared_type='id' index='1' name='modalDelegate' type='@'/>
+<arg declared_type='SEL' index='2' name='didEndSelector' type=':'/>
+<arg declared_type='void*' index='3' name='contextInfo' type='^v'/>
+<retval declared_type='IOReturn' type='i'/>
+</method>
+<method selector='clearAllowedUUIDs'>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='deviceSelector'>
+<retval declared_type='IOBluetoothDeviceSelectorController*' type='@'/>
+</method>
+<method selector='getCancel'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='getDescriptionText'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='getDeviceSelectorControllerRef'>
+<retval declared_type='IOBluetoothDeviceSelectorControllerRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+</method>
+<method selector='getHeader'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='getOptions'>
+<retval declared_type='IOBluetoothServiceBrowserControllerOptions' type='I'/>
+</method>
+<method selector='getPrompt'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='getResults'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='getSearchAttributes'>
+<retval const='true' declared_type='IOBluetoothDeviceSearchAttributes*' type='^{IOBluetoothDeviceSearchAttributes=III^{IOBluetoothDeviceSearchDeviceAttributes}}'/>
+</method>
+<method selector='getTitle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='runModal'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='setCancel:'>
+<arg declared_type='NSString*' index='0' name='prompt' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDescriptionText:'>
+<arg declared_type='NSString*' index='0' name='descriptionText' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeader:'>
+<arg declared_type='NSString*' index='0' name='headerText' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOptions:'>
+<arg declared_type='IOBluetoothServiceBrowserControllerOptions' index='0' name='options' type='I'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPrompt:'>
+<arg declared_type='NSString*' index='0' name='prompt' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSearchAttributes:'>
+<arg const='true' declared_type='IOBluetoothDeviceSearchAttributes*' index='0' name='searchAttributes' type='^{IOBluetoothDeviceSearchAttributes=III^{IOBluetoothDeviceSearchDeviceAttributes}}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitle:'>
+<arg declared_type='NSString*' index='0' name='windowTitle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='withDeviceSelectorControllerRef:'>
+<arg declared_type='IOBluetoothDeviceSelectorControllerRef' index='0' name='deviceSelectorControllerRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+<retval declared_type='IOBluetoothDeviceSelectorController*' type='@'/>
+</method>
+</class>
+<class name='IOBluetoothObjectPushUIController'>
+<method selector='beginSheetModalForWindow:modalDelegate:didEndSelector:contextInfo:'>
+<arg declared_type='NSWindow*' index='0' name='sheetWindow' type='@'/>
+<arg declared_type='id' index='1' name='modalDelegate' type='@'/>
+<arg declared_type='SEL' index='2' name='didEndSelector' type=':'/>
+<arg declared_type='void*' index='3' name='contextInfo' type='^v'/>
+<retval declared_type='IOReturn' type='i'/>
+</method>
+<method selector='getDevice'>
+<retval declared_type='IOBluetoothDevice*' type='@'/>
+</method>
+<method selector='getTitle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='initObjectPushWithBluetoothDevice:withFiles:delegate:'>
+<arg declared_type='IOBluetoothDevice*' index='0' name='inDevice' type='@'/>
+<arg declared_type='NSArray*' index='1' name='inFiles' type='@'/>
+<arg declared_type='id' index='2' name='inDelegate' type='@'/>
+<retval declared_type='IOBluetoothObjectPushUIController*' type='@'/>
+</method>
+<method selector='isTransferInProgress'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='runModal'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='runPanel'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setIconImage:'>
+<arg declared_type='NSImage*' index='0' name='image' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitle:'>
+<arg declared_type='NSString*' index='0' name='windowTitle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stop'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='IOBluetoothPairingController'>
+<method selector='addAllowedUUID:'>
+<arg declared_type='IOBluetoothSDPUUID*' index='0' name='allowedUUID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addAllowedUUIDArray:'>
+<arg declared_type='NSArray*' index='0' name='allowedUUIDArray' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='clearAllowedUUIDs'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='getDescriptionText'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='getOptions'>
+<retval declared_type='IOBluetoothServiceBrowserControllerOptions' type='I'/>
+</method>
+<method selector='getPairingControllerRef'>
+<retval declared_type='IOBluetoothPairingControllerRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+</method>
+<method selector='getPrompt'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='getResults'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='getSearchAttributes'>
+<retval const='true' declared_type='IOBluetoothDeviceSearchAttributes*' type='^{IOBluetoothDeviceSearchAttributes=III^{IOBluetoothDeviceSearchDeviceAttributes}}'/>
+</method>
+<method selector='getTitle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method class_method='true' selector='pairingController'>
+<retval declared_type='IOBluetoothPairingController*' type='@'/>
+</method>
+<method selector='runModal'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='setDescriptionText:'>
+<arg declared_type='NSString*' index='0' name='descriptionText' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOptions:'>
+<arg declared_type='IOBluetoothServiceBrowserControllerOptions' index='0' name='options' type='I'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPrompt:'>
+<arg declared_type='NSString*' index='0' name='prompt' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSearchAttributes:'>
+<arg const='true' declared_type='IOBluetoothDeviceSearchAttributes*' index='0' name='searchAttributes' type='^{IOBluetoothDeviceSearchAttributes=III^{IOBluetoothDeviceSearchDeviceAttributes}}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitle:'>
+<arg declared_type='NSString*' index='0' name='windowTitle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='withPairingControllerRef:'>
+<arg declared_type='IOBluetoothPairingControllerRef' index='0' name='pairingControllerRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+<retval declared_type='IOBluetoothPairingController*' type='@'/>
+</method>
+</class>
+<class name='IOBluetoothPasskeyDisplay'>
+<method selector='advancePasskeyIndicator'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='backgroundImageConstraint'>
+<retval declared_type='NSLayoutConstraint*' type='@'/>
+</method>
+<method selector='centeredView'>
+<retval declared_type='NSView*' type='@'/>
+</method>
+<method selector='passkey'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='resetAll'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='resetPasskeyIndicator'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='retreatPasskeyIndicator'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='returnHighlightImage'>
+<retval declared_type='NSImage*' type='@'/>
+</method>
+<method selector='returnImage'>
+<retval declared_type='NSImage*' type='@'/>
+</method>
+<method selector='setBackgroundImageConstraint:'>
+<arg declared_type='NSLayoutConstraint*' index='0' name='backgroundImageConstraint' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCenteredView:'>
+<arg declared_type='NSView*' index='0' name='centeredView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPasskey:'>
+<arg declared_type='NSString*' index='0' name='passkey' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPasskey:forDevice:usingSSP:'>
+<arg declared_type='NSString*' index='0' name='inString' type='@'/>
+<arg declared_type='IOBluetoothDevice*' index='1' name='device' type='@'/>
+<arg declared_type='BOOL' index='2' name='isSSP' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPasskeyIndicatorEnabled:'>
+<arg declared_type='BOOL' index='0' name='inEnabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPasskeyString:'>
+<arg declared_type='NSString*' index='0' name='inString' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setReturnHighlightImage:'>
+<arg declared_type='NSImage*' index='0' name='returnHighlightImage' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setReturnImage:'>
+<arg declared_type='NSImage*' index='0' name='returnImage' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUsePasskeyNotificaitons:'>
+<arg declared_type='BOOL' index='0' name='usePasskeyNotificaitons' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setupUIForDevice:'>
+<arg declared_type='IOBluetoothDevice*' index='0' name='device' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setupUIForSSPDevice:'>
+<arg declared_type='IOBluetoothDevice*' index='0' name='device' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sharedDisplayView'>
+<retval declared_type='IOBluetoothPasskeyDisplay*' type='@'/>
+</method>
+<method selector='usePasskeyNotificaitons'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='IOBluetoothServiceBrowserController'>
+<method selector='addAllowedUUID:'>
+<arg declared_type='IOBluetoothSDPUUID*' index='0' name='allowedUUID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addAllowedUUIDArray:'>
+<arg declared_type='NSArray*' index='0' name='allowedUUIDArray' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='beginSheetModalForWindow:modalDelegate:didEndSelector:contextInfo:'>
+<arg declared_type='NSWindow*' index='0' name='sheetWindow' type='@'/>
+<arg declared_type='id' index='1' name='modalDelegate' type='@'/>
+<arg declared_type='SEL' index='2' name='didEndSelector' type=':'/>
+<arg declared_type='void*' index='3' name='contextInfo' type='^v'/>
+<retval declared_type='IOReturn' type='i'/>
+</method>
+<method class_method='true' selector='browseDevices:options:'>
+<arg declared_type='IOBluetoothSDPServiceRecord**' index='0' name='outRecord' type='^@'/>
+<arg declared_type='IOBluetoothServiceBrowserControllerOptions' index='1' name='inOptions' type='I'/>
+<retval declared_type='IOReturn' type='i'/>
+</method>
+<method class_method='true' selector='browseDevicesAsSheetForWindow:options:window:'>
+<arg declared_type='IOBluetoothSDPServiceRecord**' index='0' name='outRecord' type='^@'/>
+<arg declared_type='IOBluetoothServiceBrowserControllerOptions' index='1' name='inOptions' type='I'/>
+<arg declared_type='NSWindow*' index='2' name='inWindow' type='@'/>
+<retval declared_type='IOReturn' type='i'/>
+</method>
+<method selector='clearAllowedUUIDs'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='discover:'>
+<arg declared_type='IOBluetoothSDPServiceRecord**' index='0' name='outRecord' type='^@'/>
+<retval declared_type='IOReturn' type='i'/>
+</method>
+<method selector='discoverAsSheetForWindow:withRecord:'>
+<arg declared_type='NSWindow*' index='0' name='sheetWindow' type='@'/>
+<arg declared_type='IOBluetoothSDPServiceRecord**' index='1' name='outRecord' type='^@'/>
+<retval declared_type='IOReturn' type='i'/>
+</method>
+<method selector='discoverWithDeviceAttributes:serviceList:serviceRecord:'>
+<arg declared_type='IOBluetoothDeviceSearchAttributes*' index='0' name='deviceAttributes' type='^{IOBluetoothDeviceSearchAttributes=III^{IOBluetoothDeviceSearchDeviceAttributes}}'/>
+<arg declared_type='NSArray*' index='1' name='serviceArray' type='@'/>
+<arg declared_type='IOBluetoothSDPServiceRecord**' index='2' name='outRecord' type='^@'/>
+<retval declared_type='IOReturn' type='i'/>
+</method>
+<method selector='getDescriptionText'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='getOptions'>
+<retval declared_type='IOBluetoothServiceBrowserControllerOptions' type='I'/>
+</method>
+<method selector='getPrompt'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='getResults'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='getSearchAttributes'>
+<retval const='true' declared_type='IOBluetoothDeviceSearchAttributes*' type='^{IOBluetoothDeviceSearchAttributes=III^{IOBluetoothDeviceSearchDeviceAttributes}}'/>
+</method>
+<method selector='getServiceBrowserControllerRef'>
+<retval declared_type='IOBluetoothServiceBrowserControllerRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+</method>
+<method selector='getTitle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='runModal'>
+<retval declared_type='int' type='i'/>
+</method>
+<method class_method='true' selector='serviceBrowserController:'>
+<arg declared_type='IOBluetoothServiceBrowserControllerOptions' index='0' name='inOptions' type='I'/>
+<retval declared_type='IOBluetoothServiceBrowserController*' type='@'/>
+</method>
+<method selector='setDescriptionText:'>
+<arg declared_type='NSString*' index='0' name='descriptionText' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOptions:'>
+<arg declared_type='IOBluetoothServiceBrowserControllerOptions' index='0' name='inOptions' type='I'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPrompt:'>
+<arg declared_type='NSString*' index='0' name='prompt' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSearchAttributes:'>
+<arg const='true' declared_type='IOBluetoothDeviceSearchAttributes*' index='0' name='searchAttributes' type='^{IOBluetoothDeviceSearchAttributes=III^{IOBluetoothDeviceSearchDeviceAttributes}}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitle:'>
+<arg declared_type='NSString*' index='0' name='windowTitle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='withServiceBrowserControllerRef:'>
+<arg declared_type='IOBluetoothServiceBrowserControllerRef' index='0' name='serviceBrowserControllerRef' type='^{OpaqueIOBluetoothObjectRef=}'/>
+<retval declared_type='IOBluetoothServiceBrowserController*' type='@'/>
+</method>
+</class>
+</signatures>

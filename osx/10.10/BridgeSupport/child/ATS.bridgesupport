@@ -1,0 +1,642 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<struct name='ATSFSSpec' type='{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}' type64='{ATSFSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}'>
+<field declared_type='FSVolumeRefNum' name='vRefNum' type='s'/>
+<field declared_type='SInt32' name='parID' type='l' type64='i'/>
+<field declared_type='StrFileName' name='name' type='[64C]'/>
+</struct>
+<struct name='ATSFontFilter' type='{ATSFontFilter=&quot;version&quot;I&quot;filterSelector&quot;i&quot;filter&quot;(?=&quot;generationFilter&quot;I&quot;fontFamilyFilter&quot;I&quot;fontFamilyApplierFunctionFilter&quot;^?&quot;fontApplierFunctionFilter&quot;^?&quot;fontFileRefFilter&quot;^{FSRef})}'>
+<field declared_type='UInt32' name='version' type='L' type64='I'/>
+<field declared_type='ATSFontFilterSelector' name='filterSelector' type='i'/>
+<field declared_type='union (anonymous union at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Headers/ATSFont.h:121:3)' name='filter' type='(?=&quot;generationFilter&quot;I&quot;fontFamilyFilter&quot;I&quot;fontFamilyApplierFunctionFilter&quot;^?&quot;fontApplierFunctionFilter&quot;^?&quot;fontFileRefFilter&quot;^{FSRef})'/>
+</struct>
+<struct name='ATSFontMetrics' type='{ATSFontMetrics=&quot;version&quot;I&quot;ascent&quot;f&quot;descent&quot;f&quot;leading&quot;f&quot;avgAdvanceWidth&quot;f&quot;maxAdvanceWidth&quot;f&quot;minLeftSideBearing&quot;f&quot;minRightSideBearing&quot;f&quot;stemWidth&quot;f&quot;stemHeight&quot;f&quot;capHeight&quot;f&quot;xHeight&quot;f&quot;italicAngle&quot;f&quot;underlinePosition&quot;f&quot;underlineThickness&quot;f}' type64='{ATSFontMetrics=&quot;version&quot;I&quot;ascent&quot;d&quot;descent&quot;d&quot;leading&quot;d&quot;avgAdvanceWidth&quot;d&quot;maxAdvanceWidth&quot;d&quot;minLeftSideBearing&quot;d&quot;minRightSideBearing&quot;d&quot;stemWidth&quot;d&quot;stemHeight&quot;d&quot;capHeight&quot;d&quot;xHeight&quot;d&quot;italicAngle&quot;d&quot;underlinePosition&quot;d&quot;underlineThickness&quot;d}'>
+<field declared_type='UInt32' name='version' type='L' type64='I'/>
+<field declared_type='CGFloat' name='ascent' type='f' type64='d'/>
+<field declared_type='CGFloat' name='descent' type='f' type64='d'/>
+<field declared_type='CGFloat' name='leading' type='f' type64='d'/>
+<field declared_type='CGFloat' name='avgAdvanceWidth' type='f' type64='d'/>
+<field declared_type='CGFloat' name='maxAdvanceWidth' type='f' type64='d'/>
+<field declared_type='CGFloat' name='minLeftSideBearing' type='f' type64='d'/>
+<field declared_type='CGFloat' name='minRightSideBearing' type='f' type64='d'/>
+<field declared_type='CGFloat' name='stemWidth' type='f' type64='d'/>
+<field declared_type='CGFloat' name='stemHeight' type='f' type64='d'/>
+<field declared_type='CGFloat' name='capHeight' type='f' type64='d'/>
+<field declared_type='CGFloat' name='xHeight' type='f' type64='d'/>
+<field declared_type='CGFloat' name='italicAngle' type='f' type64='d'/>
+<field declared_type='CGFloat' name='underlinePosition' type='f' type64='d'/>
+<field declared_type='CGFloat' name='underlineThickness' type='f' type64='d'/>
+</struct>
+<struct name='ATSFontQuerySourceContext' type='{ATSFontQuerySourceContext=&quot;version&quot;I&quot;refCon&quot;^v&quot;retain&quot;^?&quot;release&quot;^?}'>
+<field declared_type='UInt32' name='version' type='L' type64='I'/>
+<field declared_type='void*' name='refCon' type='^v'/>
+<field declared_type='CFAllocatorRetainCallBack' function_pointer='true' name='retain' type='^?'>
+<arg const='true' declared_type='void*' type='^v'/>
+<retval const='true' declared_type='void*' type='^v'/>
+</field>
+<field declared_type='CFAllocatorReleaseCallBack' function_pointer='true' name='release' type='^?'>
+<arg const='true' declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</field>
+</struct>
+<struct name='ATSGlyphIdealMetrics' type='{ATSGlyphIdealMetrics=&quot;advance&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;sideBearing&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;otherSideBearing&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}}' type64='{ATSGlyphIdealMetrics=&quot;advance&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;sideBearing&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;otherSideBearing&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}}'>
+<field declared_type='ATSPoint' name='advance' type='{Float32Point=&quot;x&quot;f&quot;y&quot;f}' type64='{CGPoint=&quot;x&quot;d&quot;y&quot;d}'/>
+<field declared_type='ATSPoint' name='sideBearing' type='{Float32Point=&quot;x&quot;f&quot;y&quot;f}' type64='{CGPoint=&quot;x&quot;d&quot;y&quot;d}'/>
+<field declared_type='ATSPoint' name='otherSideBearing' type='{Float32Point=&quot;x&quot;f&quot;y&quot;f}' type64='{CGPoint=&quot;x&quot;d&quot;y&quot;d}'/>
+</struct>
+<struct name='ATSGlyphScreenMetrics' type='{ATSGlyphScreenMetrics=&quot;deviceAdvance&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;topLeft&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;height&quot;I&quot;width&quot;I&quot;sideBearing&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}&quot;otherSideBearing&quot;{Float32Point=&quot;x&quot;f&quot;y&quot;f}}' type64='{ATSGlyphScreenMetrics=&quot;deviceAdvance&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;topLeft&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;height&quot;I&quot;width&quot;I&quot;sideBearing&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}&quot;otherSideBearing&quot;{CGPoint=&quot;x&quot;d&quot;y&quot;d}}'>
+<field declared_type='ATSPoint' name='deviceAdvance' type='{Float32Point=&quot;x&quot;f&quot;y&quot;f}' type64='{CGPoint=&quot;x&quot;d&quot;y&quot;d}'/>
+<field declared_type='ATSPoint' name='topLeft' type='{Float32Point=&quot;x&quot;f&quot;y&quot;f}' type64='{CGPoint=&quot;x&quot;d&quot;y&quot;d}'/>
+<field declared_type='UInt32' name='height' type='L' type64='I'/>
+<field declared_type='UInt32' name='width' type='L' type64='I'/>
+<field declared_type='ATSPoint' name='sideBearing' type='{Float32Point=&quot;x&quot;f&quot;y&quot;f}' type64='{CGPoint=&quot;x&quot;d&quot;y&quot;d}'/>
+<field declared_type='ATSPoint' name='otherSideBearing' type='{Float32Point=&quot;x&quot;f&quot;y&quot;f}' type64='{CGPoint=&quot;x&quot;d&quot;y&quot;d}'/>
+</struct>
+<struct name='ATSJustWidthDeltaEntryOverride' type='{ATSJustWidthDeltaEntryOverride=&quot;beforeGrowLimit&quot;i&quot;beforeShrinkLimit&quot;i&quot;afterGrowLimit&quot;i&quot;afterShrinkLimit&quot;i&quot;growFlags&quot;S&quot;shrinkFlags&quot;S}'>
+<field declared_type='Fixed' name='beforeGrowLimit' type='l' type64='i'/>
+<field declared_type='Fixed' name='beforeShrinkLimit' type='l' type64='i'/>
+<field declared_type='Fixed' name='afterGrowLimit' type='l' type64='i'/>
+<field declared_type='Fixed' name='afterShrinkLimit' type='l' type64='i'/>
+<field declared_type='JustificationFlags' name='growFlags' type='S'/>
+<field declared_type='JustificationFlags' name='shrinkFlags' type='S'/>
+</struct>
+<struct name='ATSLayoutRecord' type='{ATSLayoutRecord=&quot;glyphID&quot;S&quot;flags&quot;I&quot;originalOffset&quot;I&quot;realPos&quot;i}' type64='{ATSLayoutRecord=&quot;glyphID&quot;S&quot;flags&quot;I&quot;originalOffset&quot;Q&quot;realPos&quot;i}'>
+<field declared_type='ATSGlyphRef' name='glyphID' type='S'/>
+<field declared_type='ATSGlyphInfoFlags' name='flags' type='L' type64='I'/>
+<field declared_type='ByteCount' name='originalOffset' type='L' type64='Q'/>
+<field declared_type='Fixed' name='realPos' type='l' type64='i'/>
+</struct>
+<struct name='ATSPoint' type='{Float32Point=&quot;x&quot;f&quot;y&quot;f}' type64='{CGPoint=&quot;x&quot;d&quot;y&quot;d}'>
+<field declared_type='Float32' declared_type64='CGFloat' name='x' type='f' type64='d'/>
+<field declared_type='Float32' declared_type64='CGFloat' name='y' type='f' type64='d'/>
+</struct>
+<struct name='ATSTrapezoid' type='{ATSTrapezoid=&quot;upperLeft&quot;{FixedPoint=&quot;x&quot;i&quot;y&quot;i}&quot;upperRight&quot;{FixedPoint=&quot;x&quot;i&quot;y&quot;i}&quot;lowerRight&quot;{FixedPoint=&quot;x&quot;i&quot;y&quot;i}&quot;lowerLeft&quot;{FixedPoint=&quot;x&quot;i&quot;y&quot;i}}'>
+<field declared_type='FixedPoint' name='upperLeft' type='{FixedPoint=&quot;x&quot;i&quot;y&quot;i}'/>
+<field declared_type='FixedPoint' name='upperRight' type='{FixedPoint=&quot;x&quot;i&quot;y&quot;i}'/>
+<field declared_type='FixedPoint' name='lowerRight' type='{FixedPoint=&quot;x&quot;i&quot;y&quot;i}'/>
+<field declared_type='FixedPoint' name='lowerLeft' type='{FixedPoint=&quot;x&quot;i&quot;y&quot;i}'/>
+</struct>
+<struct name='ATSUCurvePath' type='{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1L]&quot;vector&quot;[1{Float32Point=&quot;x&quot;f&quot;y&quot;f}]}' type64='{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1I]&quot;vector&quot;[1{CGPoint=&quot;x&quot;d&quot;y&quot;d}]}'>
+<field declared_type='UInt32' name='vectors' type='L' type64='I'/>
+<field declared_type='UInt32*' name='controlBits' type='[1L]' type64='[1I]'/>
+<field declared_type='ATSPoint*' name='vector' type='[1{Float32Point=&quot;x&quot;f&quot;y&quot;f}]' type64='[1{CGPoint=&quot;x&quot;d&quot;y&quot;d}]'/>
+</struct>
+<struct name='ATSUCurvePaths' type='{ATSUCurvePaths=&quot;contours&quot;I&quot;contour&quot;[1{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1L]&quot;vector&quot;[1{Float32Point=&quot;x&quot;f&quot;y&quot;f}]}]}' type64='{ATSUCurvePaths=&quot;contours&quot;I&quot;contour&quot;[1{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1I]&quot;vector&quot;[1{CGPoint=&quot;x&quot;d&quot;y&quot;d}]}]}'>
+<field declared_type='UInt32' name='contours' type='L' type64='I'/>
+<field declared_type='ATSUCurvePath*' name='contour' type='[1{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1L]&quot;vector&quot;[1{Float32Point=&quot;x&quot;f&quot;y&quot;f}]}]' type64='[1{ATSUCurvePath=&quot;vectors&quot;I&quot;controlBits&quot;[1I]&quot;vector&quot;[1{CGPoint=&quot;x&quot;d&quot;y&quot;d}]}]'/>
+</struct>
+<struct name='ATSULayoutOperationOverrideSpecifier' type='{ATSULayoutOperationOverrideSpecifier=&quot;operationSelector&quot;I&quot;overrideUPP&quot;^?}'>
+<field declared_type='ATSULayoutOperationSelector' name='operationSelector' type='L' type64='I'/>
+<field declared_type='ATSUDirectLayoutOperationOverrideUPP' function_pointer='true' name='overrideUPP' type='^?'>
+<arg declared_type='ATSULayoutOperationSelector' type='L' type64='I'/>
+<arg declared_type='ATSULineRef' type='^{ATSGlyphVector=}'/>
+<arg declared_type='URefCon' type='L' type64='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='ATSULayoutOperationCallbackStatus*' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+</struct>
+<struct name='FMFilter' type='{FMFilter=&quot;format&quot;I&quot;selector&quot;I&quot;filter&quot;(?=&quot;fontTechnologyFilter&quot;I&quot;fontContainerFilter&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}&quot;generationFilter&quot;I&quot;fontFamilyCallbackFilter&quot;^?&quot;fontCallbackFilter&quot;^?&quot;fontDirectoryFilter&quot;{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2L]}&quot;fontFileRefFilter&quot;^{FSRef})}' type64='{FMFilter=&quot;format&quot;I&quot;selector&quot;I&quot;filter&quot;(?=&quot;fontTechnologyFilter&quot;I&quot;fontContainerFilter&quot;{ATSFSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}&quot;generationFilter&quot;I&quot;fontFamilyCallbackFilter&quot;^?&quot;fontCallbackFilter&quot;^?&quot;fontDirectoryFilter&quot;{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2I]}&quot;fontFileRefFilter&quot;^{FSRef})}'>
+<field declared_type='UInt32' name='format' type='L' type64='I'/>
+<field declared_type='FMFilterSelector' name='selector' type='L' type64='I'/>
+<field declared_type='union (anonymous union at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Headers/ATSTypes.h:244:3)' name='filter' type='(?=&quot;fontTechnologyFilter&quot;I&quot;fontContainerFilter&quot;{FSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}&quot;generationFilter&quot;I&quot;fontFamilyCallbackFilter&quot;^?&quot;fontCallbackFilter&quot;^?&quot;fontDirectoryFilter&quot;{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2L]}&quot;fontFileRefFilter&quot;^{FSRef})' type64='(?=&quot;fontTechnologyFilter&quot;I&quot;fontContainerFilter&quot;{ATSFSSpec=&quot;vRefNum&quot;s&quot;parID&quot;i&quot;name&quot;[64C]}&quot;generationFilter&quot;I&quot;fontFamilyCallbackFilter&quot;^?&quot;fontCallbackFilter&quot;^?&quot;fontDirectoryFilter&quot;{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2I]}&quot;fontFileRefFilter&quot;^{FSRef})'/>
+</struct>
+<struct name='FMFontDirectoryFilter' type='{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2L]}' type64='{FMFontDirectoryFilter=&quot;fontFolderDomain&quot;s&quot;reserved&quot;[2I]}'>
+<field declared_type='SInt16' name='fontFolderDomain' type='s'/>
+<field declared_type='UInt32*' name='reserved' type='[2L]' type64='[2I]'/>
+</struct>
+<struct name='FMFontFamilyInstance' type='{FMFontFamilyInstance=&quot;fontFamily&quot;s&quot;fontStyle&quot;s}'>
+<field declared_type='FMFontFamily' name='fontFamily' type='s'/>
+<field declared_type='FMFontStyle' name='fontStyle' type='s'/>
+</struct>
+<struct name='FMFontFamilyInstanceIterator' type='{FMFontFamilyInstanceIterator=&quot;reserved&quot;[16L]}' type64='{FMFontFamilyInstanceIterator=&quot;reserved&quot;[16I]}'>
+<field declared_type='UInt32*' name='reserved' type='[16L]' type64='[16I]'/>
+</struct>
+<struct name='FMFontFamilyIterator' type='{FMFontFamilyIterator=&quot;reserved&quot;[16L]}' type64='{FMFontFamilyIterator=&quot;reserved&quot;[16I]}'>
+<field declared_type='UInt32*' name='reserved' type='[16L]' type64='[16I]'/>
+</struct>
+<struct name='FMFontIterator' type='{FMFontIterator=&quot;reserved&quot;[16L]}' type64='{FMFontIterator=&quot;reserved&quot;[16I]}'>
+<field declared_type='UInt32*' name='reserved' type='[16L]' type64='[16I]'/>
+</struct>
+<cftype name='ATSFontFamilyIterator' type='^{ATSFontFamilyIterator_=}'/>
+<cftype name='ATSFontIterator' type='^{ATSFontIterator_=}'/>
+<cftype name='ATSFontNotificationInfoRef' type='^{ATSFontNotificationInfoRef_=}'/>
+<cftype name='ATSFontNotificationRef' type='^{ATSFontNotificationRef_=}'/>
+<cftype name='ATSULineRef' type='^{ATSGlyphVector=}'/>
+<string_constant name='kATSFontNameTableBytes' nsstring='true' value='font name table bytes'/>
+<string_constant name='kATSFontNameTableCode' nsstring='true' value='font name code'/>
+<string_constant name='kATSFontNameTableLanguage' nsstring='true' value='font language code'/>
+<string_constant name='kATSFontNameTablePlatform' nsstring='true' value='font platform code'/>
+<string_constant name='kATSFontNameTableScript' nsstring='true' value='font script code'/>
+<string_constant name='kATSQueryClientPID' nsstring='true' value='ATS client pid'/>
+<string_constant name='kATSQueryFontName' nsstring='true' value='font name'/>
+<string_constant name='kATSQueryFontNameTableEntries' nsstring='true' value='font name table entries'/>
+<string_constant name='kATSQueryFontPostScriptName' nsstring='true' value='font PS name'/>
+<string_constant name='kATSQueryQDFamilyName' nsstring='true' value='font family name'/>
+<enum name='ATSFONTREF_DEFINED' value='1'/>
+<enum name='kATSBoldQDStretch' value='98304'/>
+<enum name='kATSCubicCurveType' value='1'/>
+<enum name='kATSDeletedGlyphcode' value='65535'/>
+<enum name='kATSFileReferenceFilterSelector' value='10'/>
+<enum name='kATSFontAutoActivationAsk' value='4'/>
+<enum name='kATSFontAutoActivationDefault' value='0'/>
+<enum name='kATSFontAutoActivationDisabled' value='1'/>
+<enum name='kATSFontAutoActivationEnabled' value='2'/>
+<enum name='kATSFontContainerRefUnspecified' value='0'/>
+<enum name='kATSFontContextGlobal' value='1'/>
+<enum name='kATSFontContextLocal' value='2'/>
+<enum name='kATSFontContextUnspecified' value='0'/>
+<enum name='kATSFontFamilyRefUnspecified' value='0'/>
+<enum name='kATSFontFilterCurrentVersion' value='0'/>
+<enum name='kATSFontFilterSelectorFontApplierFunction' value='9'/>
+<enum name='kATSFontFilterSelectorFontFamily' value='7'/>
+<enum name='kATSFontFilterSelectorFontFamilyApplierFunction' value='8'/>
+<enum name='kATSFontFilterSelectorGeneration' value='3'/>
+<enum name='kATSFontFilterSelectorUnspecified' value='0'/>
+<enum name='kATSFontFormatUnspecified' value='0'/>
+<enum name='kATSFontNotifyActionDirectoriesChanged' value='2'/>
+<enum name='kATSFontNotifyActionFontsChanged' value='1'/>
+<enum name='kATSFontNotifyOptionDefault' value='0'/>
+<enum name='kATSFontNotifyOptionReceiveWhileSuspended' value='1'/>
+<enum name='kATSFontRefUnspecified' value='0'/>
+<enum name='kATSGenerationUnspecified' value='0'/>
+<enum name='kATSGlyphInfoAppleReserved' value='536608744'/>
+<enum name='kATSGlyphInfoByteSizeMask' value='7'/>
+<enum name='kATSGlyphInfoHasImposedWidth' value='16'/>
+<enum name='kATSGlyphInfoIsAttachment' value='2147483648'/>
+<enum name='kATSGlyphInfoIsLTHanger' value='1073741824'/>
+<enum name='kATSGlyphInfoIsRBHanger' value='536870912'/>
+<enum name='kATSGlyphInfoIsWhiteSpace' value='262144'/>
+<enum name='kATSGlyphInfoTerminatorGlyph' value='524288'/>
+<enum name='kATSInvalidFontAccess' value='-982'/>
+<enum name='kATSInvalidFontContainerAccess' value='-985'/>
+<enum name='kATSInvalidFontFamilyAccess' value='-981'/>
+<enum name='kATSInvalidFontTableAccess' value='-984'/>
+<enum name='kATSInvalidGlyphAccess' value='-986'/>
+<enum name='kATSItalicQDSkew' value='16384'/>
+<enum name='kATSIterationCompleted' value='-980'/>
+<enum name='kATSIterationScopeModified' value='-983'/>
+<enum name='kATSLineAppleReserved' value='4242538496'/>
+<enum name='kATSLineApplyAntiAliasing' value='2048'/>
+<enum name='kATSLineBreakToNearestCharacter' value='33554432'/>
+<enum name='kATSLineDisableAllBaselineAdjustments' value='524288'/>
+<enum name='kATSLineDisableAllGlyphMorphing' value='131072'/>
+<enum name='kATSLineDisableAllJustification' value='65536'/>
+<enum name='kATSLineDisableAllKerningAdjustments' value='262144'/>
+<enum name='kATSLineDisableAllLayoutOperations' value='2031616'/>
+<enum name='kATSLineDisableAllTrackingAdjustments' value='1048576'/>
+<enum name='kATSLineDisableAutoAdjustDisplayPos' value='16384'/>
+<enum name='kATSLineDisableNegativeJustification' value='8192'/>
+<enum name='kATSLineFillOutToWidth' value='256'/>
+<enum name='kATSLineFractDisable' value='64'/>
+<enum name='kATSLineHasNoHangers' value='2'/>
+<enum name='kATSLineHasNoOpticalAlignment' value='4'/>
+<enum name='kATSLineIgnoreFontLeading' value='1024'/>
+<enum name='kATSLineImposeNoAngleForEnds' value='128'/>
+<enum name='kATSLineIsDisplayOnly' value='1'/>
+<enum name='kATSLineKeepSpacesOutOfMargin' value='8'/>
+<enum name='kATSLineLastNoJustification' value='32'/>
+<enum name='kATSLineNoAntiAliasing' value='4096'/>
+<enum name='kATSLineNoLayoutOptions' value='0'/>
+<enum name='kATSLineNoSpecialJustification' value='16'/>
+<enum name='kATSLineTabAdjustEnabled' value='512'/>
+<enum name='kATSLineUseDeviceMetrics' value='16777216'/>
+<enum name='kATSLineUseQDRendering' value='32768'/>
+<enum name='kATSNoTracking' value='-2147483648'/>
+<enum name='kATSOptionFlagsActivateDisabled' value='32'/>
+<enum name='kATSOptionFlagsComposeFontPostScriptName' value='1'/>
+<enum name='kATSOptionFlagsDefault' value='0'/>
+<enum name='kATSOptionFlagsDefaultScope' value='0'/>
+<enum name='kATSOptionFlagsDoNotNotify' value='128'/>
+<enum name='kATSOptionFlagsIncludeDisabledMask' value='128'/>
+<enum name='kATSOptionFlagsIterateByPrecedenceMask' value='32'/>
+<enum name='kATSOptionFlagsIterationScopeMask' value='28672'/>
+<enum name='kATSOptionFlagsProcessSubdirectories' value='64'/>
+<enum name='kATSOptionFlagsRecordPersistently' value='262144'/>
+<enum name='kATSOptionFlagsRestrictedScope' value='8192'/>
+<enum name='kATSOptionFlagsUnRestrictedScope' value='4096'/>
+<enum name='kATSOptionFlagsUseDataFork' value='768'/>
+<enum name='kATSOptionFlagsUseDataForkAsResourceFork' value='256'/>
+<enum name='kATSOptionFlagsUseResourceFork' value='512'/>
+<enum name='kATSOtherCurveType' value='3'/>
+<enum name='kATSQuadCurveType' value='2'/>
+<enum name='kATSQueryActivateFontMessage' value='1635021665'/>
+<enum name='kATSRadiansFactor' value='1144'/>
+<enum name='kATSStyleAppleReserved' value='4294967288'/>
+<enum name='kATSStyleApplyAntiAliasing' value='2'/>
+<enum name='kATSStyleApplyHints' value='0'/>
+<enum name='kATSStyleNoAntiAliasing' value='4'/>
+<enum name='kATSStyleNoHinting' value='1'/>
+<enum name='kATSStyleNoOptions' value='0'/>
+<enum name='kATSULayoutOperationAppleReserved' value='4294967232'/>
+<enum name='kATSULayoutOperationBaselineAdjustment' value='8'/>
+<enum name='kATSULayoutOperationCallbackStatusContinue' value='1'/>
+<enum name='kATSULayoutOperationCallbackStatusHandled' value='0'/>
+<enum name='kATSULayoutOperationJustification' value='1'/>
+<enum name='kATSULayoutOperationKerningAdjustment' value='4'/>
+<enum name='kATSULayoutOperationMorph' value='2'/>
+<enum name='kATSULayoutOperationNone' value='0'/>
+<enum name='kATSULayoutOperationPostLayoutAdjustment' value='32'/>
+<enum name='kATSULayoutOperationTrackingAdjustment' value='16'/>
+<enum name='kATSUseCaretOrigins' value='0'/>
+<enum name='kATSUseDeviceOrigins' value='1'/>
+<enum name='kATSUseFractionalOrigins' value='2'/>
+<enum name='kATSUseGlyphAdvance' value='2147483647'/>
+<enum name='kATSUseLineHeight' value='2147483647'/>
+<enum name='kATSUseOriginFlags' value='3'/>
+<enum name='kFMCurrentFilterFormat' value='0'/>
+<enum name='kFMFontCallbackFilterSelector' value='5'/>
+<enum name='kFMFontContainerFilterSelector' value='2'/>
+<enum name='kFMFontDirectoryFilterSelector' value='6'/>
+<enum name='kFMFontFamilyCallbackFilterSelector' value='4'/>
+<enum name='kFMFontFileRefFilterSelector' value='10'/>
+<enum name='kFMFontTechnologyFilterSelector' value='1'/>
+<enum name='kFMGenerationFilterSelector' value='3'/>
+<enum name='kFMPostScriptFontTechnology' value='1954115633'/>
+<enum name='kFMTrueTypeFontTechnology' value='1953658213'/>
+<enum name='kFontNoLanguage' value='4294967295'/>
+<enum name='kFontNoName' value='4294967295'/>
+<enum name='kFontNoPlatform' value='4294967295'/>
+<enum name='kFontNoScript' value='4294967295'/>
+<enum name='kInvalidFont' value='0'/>
+<enum name='kInvalidFontFamily' value='-1'/>
+<enum name='kInvalidGeneration' value='0'/>
+<function name='ATSCreateFontQueryRunLoopSource'>
+<arg declared_type='CFIndex' name='queryOrder' type='l' type64='q'/>
+<arg declared_type='CFIndex' name='sourceOrder' type='l' type64='q'/>
+<arg declared_type='ATSFontQueryCallback' function_pointer='true' name='callout' type='^?'>
+<arg declared_type='ATSFontQueryMessageID' type='i'/>
+<arg declared_type='CFPropertyListRef' type='@'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='CFPropertyListRef' type='@'/>
+</arg>
+<arg const='true' declared_type='ATSFontQuerySourceContext*' name='context' type='^{ATSFontQuerySourceContext=I^v^?^?}'/>
+<retval already_retained='true' declared_type='CFRunLoopSourceRef' type='^{__CFRunLoopSource=}'/>
+</function>
+<function name='ATSFontActivateFromFileReference'>
+<arg const='true' declared_type='FSRef*' name='iFile' type='^{FSRef=[80C]}'/>
+<arg declared_type='ATSFontContext' name='iContext' type='L' type64='I'/>
+<arg declared_type='ATSFontFormat' name='iFormat' type='L' type64='I'/>
+<arg declared_type='void*' name='iRefCon' type='^v'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<arg declared_type='ATSFontContainerRef*' name='oContainer' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontActivateFromMemory'>
+<arg declared_type='LogicalAddress' name='iData' type='^v'/>
+<arg declared_type='ByteCount' name='iLength' type='L' type64='Q'/>
+<arg declared_type='ATSFontContext' name='iContext' type='L' type64='I'/>
+<arg declared_type='ATSFontFormat' name='iFormat' type='L' type64='I'/>
+<arg declared_type='void*' name='iReserved' type='^v'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<arg declared_type='ATSFontContainerRef*' name='oContainer' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontApplyFunction'>
+<arg declared_type='ATSFontApplierFunction' function_pointer='true' name='iFunction' type='^?'>
+<arg declared_type='ATSFontRef' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</arg>
+<arg declared_type='void*' name='iRefCon' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontDeactivate'>
+<arg declared_type='ATSFontContainerRef' name='iContainer' type='L' type64='I'/>
+<arg declared_type='void*' name='iRefCon' type='^v'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontFamilyApplyFunction'>
+<arg declared_type='ATSFontFamilyApplierFunction' function_pointer='true' name='iFunction' type='^?'>
+<arg declared_type='ATSFontFamilyRef' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</arg>
+<arg declared_type='void*' name='iRefCon' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontFamilyFindFromName'>
+<arg declared_type='CFStringRef' name='iName' type='^{__CFString=}'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<retval declared_type='ATSFontFamilyRef' type='L' type64='I'/>
+</function>
+<function name='ATSFontFamilyFindFromQuickDrawName'>
+<arg declared_type='ConstStr255Param' name='iName' type='*'/>
+<retval declared_type='ATSFontFamilyRef' type='L' type64='I'/>
+</function>
+<function name='ATSFontFamilyGetEncoding'>
+<arg declared_type='ATSFontFamilyRef' name='iFamily' type='L' type64='I'/>
+<retval declared_type='TextEncoding' type='L' type64='I'/>
+</function>
+<function name='ATSFontFamilyGetGeneration'>
+<arg declared_type='ATSFontFamilyRef' name='iFamily' type='L' type64='I'/>
+<retval declared_type='ATSGeneration' type='L' type64='I'/>
+</function>
+<function name='ATSFontFamilyGetName'>
+<arg declared_type='ATSFontFamilyRef' name='iFamily' type='L' type64='I'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<arg declared_type='CFStringRef*' name='oName' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontFamilyGetQuickDrawName'>
+<arg declared_type='ATSFontFamilyRef' name='iFamily' type='L' type64='I'/>
+<arg declared_type='unsigned char*' name='oName' type='*'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontFamilyIteratorCreate'>
+<arg declared_type='ATSFontContext' name='iContext' type='L' type64='I'/>
+<arg const='true' declared_type='ATSFontFilter*' name='iFilter' type='^{ATSFontFilter=Ii(?=II^?^?^{FSRef})}'/>
+<arg declared_type='void*' name='iRefCon' type='^v'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<arg declared_type='ATSFontFamilyIterator*' name='ioIterator' type='^^{ATSFontFamilyIterator_}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontFamilyIteratorNext'>
+<arg declared_type='ATSFontFamilyIterator' name='iIterator' type='^{ATSFontFamilyIterator_=}'/>
+<arg declared_type='ATSFontFamilyRef*' name='oFamily' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontFamilyIteratorRelease'>
+<arg declared_type='ATSFontFamilyIterator*' name='ioIterator' type='^^{ATSFontFamilyIterator_}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontFamilyIteratorReset'>
+<arg declared_type='ATSFontContext' name='iContext' type='L' type64='I'/>
+<arg const='true' declared_type='ATSFontFilter*' name='iFilter' type='^{ATSFontFilter=Ii(?=II^?^?^{FSRef})}'/>
+<arg declared_type='void*' name='iRefCon' type='^v'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<arg declared_type='ATSFontFamilyIterator*' name='ioIterator' type='^^{ATSFontFamilyIterator_}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontFindFromContainer'>
+<arg declared_type='ATSFontContainerRef' name='iContainer' type='L' type64='I'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<arg declared_type='ItemCount' name='iCount' type='L' type64='Q'/>
+<arg declared_type='ATSFontRef*' name='ioArray' type='^I'/>
+<arg declared_type='ItemCount*' name='oCount' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontFindFromName'>
+<arg declared_type='CFStringRef' name='iName' type='^{__CFString=}'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<retval declared_type='ATSFontRef' type='L' type64='I'/>
+</function>
+<function name='ATSFontFindFromPostScriptName'>
+<arg declared_type='CFStringRef' name='iName' type='^{__CFString=}'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<retval declared_type='ATSFontRef' type='L' type64='I'/>
+</function>
+<function name='ATSFontGetAutoActivationSettingForApplication'>
+<arg declared_type='CFURLRef' name='iApplicationFileURL' type='^{__CFURL=}'/>
+<retval declared_type='ATSFontAutoActivationSetting' type='L' type64='I'/>
+</function>
+<function name='ATSFontGetContainer'>
+<arg declared_type='ATSFontRef' name='iFont' type='L' type64='I'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<arg declared_type='ATSFontContainerRef*' name='oContainer' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontGetContainerFromFileReference'>
+<arg const='true' declared_type='FSRef*' name='iFile' type='^{FSRef=[80C]}'/>
+<arg declared_type='ATSFontContext' name='iContext' type='L' type64='I'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<arg declared_type='ATSFontContainerRef*' name='oContainer' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontGetFileReference'>
+<arg declared_type='ATSFontRef' name='iFont' type='L' type64='I'/>
+<arg declared_type='FSRef*' name='oFile' type='^{FSRef=[80C]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontGetFontFamilyResource'>
+<arg declared_type='ATSFontRef' name='iFont' type='L' type64='I'/>
+<arg declared_type='ByteCount' name='iBufferSize' type='L' type64='Q'/>
+<arg declared_type='void*' name='ioBuffer' type='^v'/>
+<arg declared_type='ByteCount*' name='oSize' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontGetGeneration'>
+<arg declared_type='ATSFontRef' name='iFont' type='L' type64='I'/>
+<retval declared_type='ATSGeneration' type='L' type64='I'/>
+</function>
+<function name='ATSFontGetGlobalAutoActivationSetting'>
+<retval declared_type='ATSFontAutoActivationSetting' type='L' type64='I'/>
+</function>
+<function name='ATSFontGetHorizontalMetrics'>
+<arg declared_type='ATSFontRef' name='iFont' type='L' type64='I'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<arg declared_type='ATSFontMetrics*' name='oMetrics' type='^{ATSFontMetrics=Iffffffffffffff}' type64='^{ATSFontMetrics=Idddddddddddddd}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontGetName'>
+<arg declared_type='ATSFontRef' name='iFont' type='L' type64='I'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<arg declared_type='CFStringRef*' name='oName' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontGetPostScriptName'>
+<arg declared_type='ATSFontRef' name='iFont' type='L' type64='I'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<arg declared_type='CFStringRef*' name='oName' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontGetTable'>
+<arg declared_type='ATSFontRef' name='iFont' type='L' type64='I'/>
+<arg declared_type='FourCharCode' name='iTag' type='L' type64='I'/>
+<arg declared_type='ByteOffset' name='iOffset' type='L' type64='Q'/>
+<arg declared_type='ByteCount' name='iBufferSize' type='L' type64='Q'/>
+<arg declared_type='void*' name='ioBuffer' type='^v'/>
+<arg declared_type='ByteCount*' name='oSize' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontGetTableDirectory'>
+<arg declared_type='ATSFontRef' name='iFont' type='L' type64='I'/>
+<arg declared_type='ByteCount' name='iBufferSize' type='L' type64='Q'/>
+<arg declared_type='void*' name='ioBuffer' type='^v'/>
+<arg declared_type='ByteCount*' name='oSize' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontGetVerticalMetrics'>
+<arg declared_type='ATSFontRef' name='iFont' type='L' type64='I'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<arg declared_type='ATSFontMetrics*' name='oMetrics' type='^{ATSFontMetrics=Iffffffffffffff}' type64='^{ATSFontMetrics=Idddddddddddddd}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontIsEnabled'>
+<arg declared_type='ATSFontRef' name='iFont' type='L' type64='I'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='ATSFontIteratorCreate'>
+<arg declared_type='ATSFontContext' name='iContext' type='L' type64='I'/>
+<arg const='true' declared_type='ATSFontFilter*' name='iFilter' type='^{ATSFontFilter=Ii(?=II^?^?^{FSRef})}'/>
+<arg declared_type='void*' name='iRefCon' type='^v'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<arg declared_type='ATSFontIterator*' name='ioIterator' type='^^{ATSFontIterator_}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontIteratorNext'>
+<arg declared_type='ATSFontIterator' name='iIterator' type='^{ATSFontIterator_=}'/>
+<arg declared_type='ATSFontRef*' name='oFont' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontIteratorRelease'>
+<arg declared_type='ATSFontIterator*' name='ioIterator' type='^^{ATSFontIterator_}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontIteratorReset'>
+<arg declared_type='ATSFontContext' name='iContext' type='L' type64='I'/>
+<arg const='true' declared_type='ATSFontFilter*' name='iFilter' type='^{ATSFontFilter=Ii(?=II^?^?^{FSRef})}'/>
+<arg declared_type='void*' name='iRefCon' type='^v'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<arg declared_type='ATSFontIterator*' name='ioIterator' type='^^{ATSFontIterator_}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontNotificationSubscribe'>
+<arg declared_type='ATSNotificationCallback' function_pointer='true' name='callback' type='^?'>
+<arg declared_type='ATSFontNotificationInfoRef' type='^{ATSFontNotificationInfoRef_=}'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='ATSFontNotifyOption' name='options' type='i'/>
+<arg declared_type='void*' name='iRefcon' type='^v'/>
+<arg declared_type='ATSFontNotificationRef*' name='oNotificationRef' type='^^{ATSFontNotificationRef_}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontNotificationUnsubscribe'>
+<arg declared_type='ATSFontNotificationRef' name='notificationRef' type='^{ATSFontNotificationRef_=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontNotify'>
+<arg declared_type='ATSFontNotifyAction' name='action' type='i'/>
+<arg declared_type='void*' name='info' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontSetAutoActivationSettingForApplication'>
+<arg declared_type='ATSFontAutoActivationSetting' name='iSetting' type='L' type64='I'/>
+<arg declared_type='CFURLRef' name='iApplicationFileURL' type='^{__CFURL=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontSetEnabled'>
+<arg declared_type='ATSFontRef' name='iFont' type='L' type64='I'/>
+<arg declared_type='ATSOptionFlags' name='iOptions' type='L' type64='I'/>
+<arg declared_type='Boolean' name='iEnabled' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSFontSetGlobalAutoActivationSetting'>
+<arg declared_type='ATSFontAutoActivationSetting' name='iSetting' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='ATSGetGeneration'>
+<retval declared_type='ATSGeneration' type='L' type64='I'/>
+</function>
+<function name='DisposeATSUDirectLayoutOperationOverrideUPP'>
+<arg declared_type='ATSUDirectLayoutOperationOverrideUPP' function_pointer='true' name='userUPP' type='^?'>
+<arg declared_type='ATSULayoutOperationSelector' type='L' type64='I'/>
+<arg declared_type='ATSULineRef' type='^{ATSGlyphVector=}'/>
+<arg declared_type='URefCon' type='L' type64='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='ATSULayoutOperationCallbackStatus*' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='DisposeFMFontCallbackFilterUPP'>
+<arg declared_type='FMFontCallbackFilterUPP' function_pointer='true' name='userUPP' type='^?'>
+<arg declared_type='FMFont' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='DisposeFMFontFamilyCallbackFilterUPP'>
+<arg declared_type='FMFontFamilyCallbackFilterUPP' function_pointer='true' name='userUPP' type='^?'>
+<arg declared_type='FMFontFamily' type='s'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='InvokeATSUDirectLayoutOperationOverrideUPP'>
+<arg declared_type='ATSULayoutOperationSelector' name='iCurrentOperation' type='L' type64='I'/>
+<arg declared_type='ATSULineRef' name='iLineRef' type='^{ATSGlyphVector=}'/>
+<arg declared_type='URefCon' name='iRefCon' type='L' type64='^v'/>
+<arg declared_type='void*' name='iOperationCallbackParameterPtr' type='^v'/>
+<arg declared_type='ATSULayoutOperationCallbackStatus*' name='oCallbackStatus' type='^I'/>
+<arg declared_type='ATSUDirectLayoutOperationOverrideUPP' function_pointer='true' name='userUPP' type='^?'>
+<arg declared_type='ATSULayoutOperationSelector' type='L' type64='I'/>
+<arg declared_type='ATSULineRef' type='^{ATSGlyphVector=}'/>
+<arg declared_type='URefCon' type='L' type64='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='ATSULayoutOperationCallbackStatus*' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</arg>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='InvokeFMFontCallbackFilterUPP'>
+<arg declared_type='FMFont' name='iFont' type='L' type64='I'/>
+<arg declared_type='void*' name='iRefCon' type='^v'/>
+<arg declared_type='FMFontCallbackFilterUPP' function_pointer='true' name='userUPP' type='^?'>
+<arg declared_type='FMFont' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</arg>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='InvokeFMFontFamilyCallbackFilterUPP'>
+<arg declared_type='FMFontFamily' name='iFontFamily' type='s'/>
+<arg declared_type='void*' name='iRefCon' type='^v'/>
+<arg declared_type='FMFontFamilyCallbackFilterUPP' function_pointer='true' name='userUPP' type='^?'>
+<arg declared_type='FMFontFamily' type='s'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</arg>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='NewATSUDirectLayoutOperationOverrideUPP'>
+<arg declared_type='ATSUDirectLayoutOperationOverrideProcPtr' function_pointer='true' name='userRoutine' type='^?'>
+<arg declared_type='ATSULayoutOperationSelector' type='L' type64='I'/>
+<arg declared_type='ATSULineRef' type='^{ATSGlyphVector=}'/>
+<arg declared_type='URefCon' type='L' type64='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='ATSULayoutOperationCallbackStatus*' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</arg>
+<retval declared_type='ATSUDirectLayoutOperationOverrideUPP' function_pointer='true' type='^?'>
+<arg declared_type='ATSULayoutOperationSelector' type='L' type64='I'/>
+<arg declared_type='ATSULineRef' type='^{ATSGlyphVector=}'/>
+<arg declared_type='URefCon' type='L' type64='^v'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='ATSULayoutOperationCallbackStatus*' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</retval>
+</function>
+<function name='NewFMFontCallbackFilterUPP'>
+<arg declared_type='FMFontCallbackFilterProcPtr' function_pointer='true' name='userRoutine' type='^?'>
+<arg declared_type='FMFont' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</arg>
+<retval declared_type='FMFontCallbackFilterUPP' function_pointer='true' type='^?'>
+<arg declared_type='FMFont' type='L' type64='I'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</retval>
+</function>
+<function name='NewFMFontFamilyCallbackFilterUPP'>
+<arg declared_type='FMFontFamilyCallbackFilterProcPtr' function_pointer='true' name='userRoutine' type='^?'>
+<arg declared_type='FMFontFamily' type='s'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</arg>
+<retval declared_type='FMFontFamilyCallbackFilterUPP' function_pointer='true' type='^?'>
+<arg declared_type='FMFontFamily' type='s'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</retval>
+</function>
+</signatures>

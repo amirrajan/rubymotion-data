@@ -1,0 +1,453 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CFNetwork.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type64='NSString*' name='MCErrorDomain' type64='@'/>
+<constant const='true' declared_type64='NSUInteger' name='kMCSessionMaximumNumberOfPeers' type64='Q'/>
+<constant const='true' declared_type64='NSUInteger' name='kMCSessionMinimumNumberOfPeers' type64='Q'/>
+<enum name='MCEncryptionNone' value64='2'/>
+<enum name='MCEncryptionOptional' value64='0'/>
+<enum name='MCEncryptionRequired' value64='1'/>
+<enum name='MCErrorCancelled' value64='5'/>
+<enum name='MCErrorInvalidParameter' value64='2'/>
+<enum name='MCErrorNotConnected' value64='1'/>
+<enum name='MCErrorTimedOut' value64='4'/>
+<enum name='MCErrorUnavailable' value64='6'/>
+<enum name='MCErrorUnknown' value64='0'/>
+<enum name='MCErrorUnsupported' value64='3'/>
+<enum name='MCSessionSendDataReliable' value64='0'/>
+<enum name='MCSessionSendDataUnreliable' value64='1'/>
+<enum name='MCSessionStateConnected' value64='2'/>
+<enum name='MCSessionStateConnecting' value64='1'/>
+<enum name='MCSessionStateNotConnected' value64='0'/>
+<class name='MCAdvertiserAssistant'>
+<method selector='delegate'>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='discoveryInfo'>
+<retval declared_type64='NSDictionary*' type64='@'/>
+</method>
+<method selector='initWithServiceType:discoveryInfo:session:'>
+<arg declared_type64='NSString*' index='0' name='serviceType' type64='@'/>
+<arg declared_type64='NSDictionary*' index='1' name='info' type64='@'/>
+<arg declared_type64='MCSession*' index='2' name='session' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='serviceType'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='session'>
+<retval declared_type64='MCSession*' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='start'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stop'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MCBrowserViewController'>
+<method selector='browser'>
+<retval declared_type64='MCNearbyServiceBrowser*' type64='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='initWithBrowser:session:'>
+<arg declared_type64='MCNearbyServiceBrowser*' index='0' name='browser' type64='@'/>
+<arg declared_type64='MCSession*' index='1' name='session' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='initWithServiceType:session:'>
+<arg declared_type64='NSString*' index='0' name='serviceType' type64='@'/>
+<arg declared_type64='MCSession*' index='1' name='session' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='maximumNumberOfPeers'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='minimumNumberOfPeers'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='session'>
+<retval declared_type64='MCSession*' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMaximumNumberOfPeers:'>
+<arg declared_type64='NSUInteger' index='0' name='maximumNumberOfPeers' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMinimumNumberOfPeers:'>
+<arg declared_type64='NSUInteger' index='0' name='minimumNumberOfPeers' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MCNearbyServiceAdvertiser'>
+<method selector='delegate'>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='discoveryInfo'>
+<retval declared_type64='NSDictionary*' type64='@'/>
+</method>
+<method selector='initWithPeer:discoveryInfo:serviceType:'>
+<arg declared_type64='MCPeerID*' index='0' name='myPeerID' type64='@'/>
+<arg declared_type64='NSDictionary*' index='1' name='info' type64='@'/>
+<arg declared_type64='NSString*' index='2' name='serviceType' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='myPeerID'>
+<retval declared_type64='MCPeerID*' type64='@'/>
+</method>
+<method selector='serviceType'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='startAdvertisingPeer'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stopAdvertisingPeer'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MCNearbyServiceBrowser'>
+<method selector='delegate'>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='initWithPeer:serviceType:'>
+<arg declared_type64='MCPeerID*' index='0' name='myPeerID' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='serviceType' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='invitePeer:toSession:withContext:timeout:'>
+<arg declared_type64='MCPeerID*' index='0' name='peerID' type64='@'/>
+<arg declared_type64='MCSession*' index='1' name='session' type64='@'/>
+<arg declared_type64='NSData*' index='2' name='context' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='3' name='timeout' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='myPeerID'>
+<retval declared_type64='MCPeerID*' type64='@'/>
+</method>
+<method selector='serviceType'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='startBrowsingForPeers'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stopBrowsingForPeers'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MCPeerID'>
+<method selector='displayName'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='initWithDisplayName:'>
+<arg declared_type64='NSString*' index='0' name='myDisplayName' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+</class>
+<class name='MCSession'>
+<method selector='cancelConnectPeer:'>
+<arg declared_type64='MCPeerID*' index='0' name='peerID' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='connectPeer:withNearbyConnectionData:'>
+<arg declared_type64='MCPeerID*' index='0' name='peerID' type64='@'/>
+<arg declared_type64='NSData*' index='1' name='data' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='connectedPeers'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='disconnect'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='encryptionPreference'>
+<retval declared_type64='MCEncryptionPreference' type64='q'/>
+</method>
+<method selector='initWithPeer:'>
+<arg declared_type64='MCPeerID*' index='0' name='myPeerID' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='initWithPeer:securityIdentity:encryptionPreference:'>
+<arg declared_type64='MCPeerID*' index='0' name='myPeerID' type64='@'/>
+<arg declared_type64='NSArray*' index='1' name='identity' type64='@'/>
+<arg declared_type64='MCEncryptionPreference' index='2' name='encryptionPreference' type64='q'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='myPeerID'>
+<retval declared_type64='MCPeerID*' type64='@'/>
+</method>
+<method selector='nearbyConnectionDataForPeer:withCompletionHandler:'>
+<arg declared_type64='MCPeerID*' index='0' name='peerID' type64='@'/>
+<arg declared_type64='void (^)(NSData *, NSError *)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData*' type64='@'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='securityIdentity'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='sendData:toPeers:withMode:error:'>
+<arg declared_type64='NSData*' index='0' name='data' type64='@'/>
+<arg declared_type64='NSArray*' index='1' name='peerIDs' type64='@'/>
+<arg declared_type64='MCSessionSendDataMode' index='2' name='mode' type64='q'/>
+<arg declared_type64='NSError**' index='3' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='sendResourceAtURL:withName:toPeer:withCompletionHandler:'>
+<arg declared_type64='NSURL*' index='0' name='resourceURL' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='resourceName' type64='@'/>
+<arg declared_type64='MCPeerID*' index='2' name='peerID' type64='@'/>
+<arg declared_type64='void (^)(NSError *)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress*' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='startStreamWithName:toPeer:error:'>
+<arg declared_type64='NSString*' index='0' name='streamName' type64='@'/>
+<arg declared_type64='MCPeerID*' index='1' name='peerID' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='error' type64='^@'/>
+<retval declared_type64='NSOutputStream*' type64='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='advertiser:didNotStartAdvertisingPeer:'>
+<arg declared_type64='MCNearbyServiceAdvertiser*' index='0' name='advertiser' type64='@'/>
+<arg declared_type64='NSError*' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='advertiser:didReceiveInvitationFromPeer:withContext:invitationHandler:'>
+<arg declared_type64='MCNearbyServiceAdvertiser*' index='0' name='advertiser' type64='@'/>
+<arg declared_type64='MCPeerID*' index='1' name='peerID' type64='@'/>
+<arg declared_type64='NSData*' index='2' name='context' type64='@'/>
+<arg declared_type64='void (^)(BOOL, MCSession *)' function_pointer='true' index='3' name='invitationHandler' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<arg declared_type64='MCSession*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='advertiserAssistantDidDismissInvitation:'>
+<arg declared_type64='MCAdvertiserAssistant*' index='0' name='advertiserAssistant' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='advertiserAssistantWillPresentInvitation:'>
+<arg declared_type64='MCAdvertiserAssistant*' index='0' name='advertiserAssistant' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='browser:didNotStartBrowsingForPeers:'>
+<arg declared_type64='MCNearbyServiceBrowser*' index='0' name='browser' type64='@'/>
+<arg declared_type64='NSError*' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='browser:foundPeer:withDiscoveryInfo:'>
+<arg declared_type64='MCNearbyServiceBrowser*' index='0' name='browser' type64='@'/>
+<arg declared_type64='MCPeerID*' index='1' name='peerID' type64='@'/>
+<arg declared_type64='NSDictionary*' index='2' name='info' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='browser:lostPeer:'>
+<arg declared_type64='MCNearbyServiceBrowser*' index='0' name='browser' type64='@'/>
+<arg declared_type64='MCPeerID*' index='1' name='peerID' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='browserViewController:shouldPresentNearbyPeer:withDiscoveryInfo:'>
+<arg declared_type64='MCBrowserViewController*' index='0' name='browserViewController' type64='@'/>
+<arg declared_type64='MCPeerID*' index='1' name='peerID' type64='@'/>
+<arg declared_type64='NSDictionary*' index='2' name='info' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='browserViewControllerDidFinish:'>
+<arg declared_type64='MCBrowserViewController*' index='0' name='browserViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='browserViewControllerWasCancelled:'>
+<arg declared_type64='MCBrowserViewController*' index='0' name='browserViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:didFinishReceivingResourceWithName:fromPeer:atURL:withError:'>
+<arg declared_type64='MCSession*' index='0' name='session' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='resourceName' type64='@'/>
+<arg declared_type64='MCPeerID*' index='2' name='peerID' type64='@'/>
+<arg declared_type64='NSURL*' index='3' name='localURL' type64='@'/>
+<arg declared_type64='NSError*' index='4' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:didReceiveCertificate:fromPeer:certificateHandler:'>
+<arg declared_type64='MCSession*' index='0' name='session' type64='@'/>
+<arg declared_type64='NSArray*' index='1' name='certificate' type64='@'/>
+<arg declared_type64='MCPeerID*' index='2' name='peerID' type64='@'/>
+<arg declared_type64='void (^)(BOOL)' function_pointer='true' index='3' name='certificateHandler' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:didReceiveData:fromPeer:'>
+<arg declared_type64='MCSession*' index='0' name='session' type64='@'/>
+<arg declared_type64='NSData*' index='1' name='data' type64='@'/>
+<arg declared_type64='MCPeerID*' index='2' name='peerID' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:didReceiveStream:withName:fromPeer:'>
+<arg declared_type64='MCSession*' index='0' name='session' type64='@'/>
+<arg declared_type64='NSInputStream*' index='1' name='stream' type64='@'/>
+<arg declared_type64='NSString*' index='2' name='streamName' type64='@'/>
+<arg declared_type64='MCPeerID*' index='3' name='peerID' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:didStartReceivingResourceWithName:fromPeer:withProgress:'>
+<arg declared_type64='MCSession*' index='0' name='session' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='resourceName' type64='@'/>
+<arg declared_type64='MCPeerID*' index='2' name='peerID' type64='@'/>
+<arg declared_type64='NSProgress*' index='3' name='progress' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:peer:didChangeState:'>
+<arg declared_type64='MCSession*' index='0' name='session' type64='@'/>
+<arg declared_type64='MCPeerID*' index='1' name='peerID' type64='@'/>
+<arg declared_type64='MCSessionState' index='2' name='state' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='MCAdvertiserAssistantDelegate'>
+<method selector='advertiserAssistantDidDismissInvitation:' type64='v24@0:8@16'>
+<arg declared_type64='MCAdvertiserAssistant*' index='0' name='advertiserAssistant' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='advertiserAssistantWillPresentInvitation:' type64='v24@0:8@16'>
+<arg declared_type64='MCAdvertiserAssistant*' index='0' name='advertiserAssistant' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='MCBrowserViewControllerDelegate'>
+<method selector='browserViewController:shouldPresentNearbyPeer:withDiscoveryInfo:' type64='B40@0:8@16@24@32'>
+<arg declared_type64='MCBrowserViewController*' index='0' name='browserViewController' type64='@'/>
+<arg declared_type64='MCPeerID*' index='1' name='peerID' type64='@'/>
+<arg declared_type64='NSDictionary*' index='2' name='info' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='browserViewControllerDidFinish:' type64='v24@0:8@16'>
+<arg declared_type64='MCBrowserViewController*' index='0' name='browserViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='browserViewControllerWasCancelled:' type64='v24@0:8@16'>
+<arg declared_type64='MCBrowserViewController*' index='0' name='browserViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='MCNearbyServiceAdvertiserDelegate'>
+<method selector='advertiser:didNotStartAdvertisingPeer:' type64='v32@0:8@16@24'>
+<arg declared_type64='MCNearbyServiceAdvertiser*' index='0' name='advertiser' type64='@'/>
+<arg declared_type64='NSError*' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='advertiser:didReceiveInvitationFromPeer:withContext:invitationHandler:' type64='v48@0:8@16@24@32@?40'>
+<arg declared_type64='MCNearbyServiceAdvertiser*' index='0' name='advertiser' type64='@'/>
+<arg declared_type64='MCPeerID*' index='1' name='peerID' type64='@'/>
+<arg declared_type64='NSData*' index='2' name='context' type64='@'/>
+<arg declared_type64='void (^)(BOOL, MCSession *)' function_pointer='true' index='3' name='invitationHandler' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<arg declared_type64='MCSession*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='MCNearbyServiceBrowserDelegate'>
+<method selector='browser:didNotStartBrowsingForPeers:' type64='v32@0:8@16@24'>
+<arg declared_type64='MCNearbyServiceBrowser*' index='0' name='browser' type64='@'/>
+<arg declared_type64='NSError*' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='browser:foundPeer:withDiscoveryInfo:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='MCNearbyServiceBrowser*' index='0' name='browser' type64='@'/>
+<arg declared_type64='MCPeerID*' index='1' name='peerID' type64='@'/>
+<arg declared_type64='NSDictionary*' index='2' name='info' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='browser:lostPeer:' type64='v32@0:8@16@24'>
+<arg declared_type64='MCNearbyServiceBrowser*' index='0' name='browser' type64='@'/>
+<arg declared_type64='MCPeerID*' index='1' name='peerID' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='MCSessionDelegate'>
+<method selector='session:didFinishReceivingResourceWithName:fromPeer:atURL:withError:' type64='v56@0:8@16@24@32@40@48'>
+<arg declared_type64='MCSession*' index='0' name='session' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='resourceName' type64='@'/>
+<arg declared_type64='MCPeerID*' index='2' name='peerID' type64='@'/>
+<arg declared_type64='NSURL*' index='3' name='localURL' type64='@'/>
+<arg declared_type64='NSError*' index='4' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:didReceiveCertificate:fromPeer:certificateHandler:' type64='v48@0:8@16@24@32@?40'>
+<arg declared_type64='MCSession*' index='0' name='session' type64='@'/>
+<arg declared_type64='NSArray*' index='1' name='certificate' type64='@'/>
+<arg declared_type64='MCPeerID*' index='2' name='peerID' type64='@'/>
+<arg declared_type64='void (^)(BOOL)' function_pointer='true' index='3' name='certificateHandler' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:didReceiveData:fromPeer:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='MCSession*' index='0' name='session' type64='@'/>
+<arg declared_type64='NSData*' index='1' name='data' type64='@'/>
+<arg declared_type64='MCPeerID*' index='2' name='peerID' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:didReceiveStream:withName:fromPeer:' type64='v48@0:8@16@24@32@40'>
+<arg declared_type64='MCSession*' index='0' name='session' type64='@'/>
+<arg declared_type64='NSInputStream*' index='1' name='stream' type64='@'/>
+<arg declared_type64='NSString*' index='2' name='streamName' type64='@'/>
+<arg declared_type64='MCPeerID*' index='3' name='peerID' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:didStartReceivingResourceWithName:fromPeer:withProgress:' type64='v48@0:8@16@24@32@40'>
+<arg declared_type64='MCSession*' index='0' name='session' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='resourceName' type64='@'/>
+<arg declared_type64='MCPeerID*' index='2' name='peerID' type64='@'/>
+<arg declared_type64='NSProgress*' index='3' name='progress' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:peer:didChangeState:' type64='v40@0:8@16@24q32'>
+<arg declared_type64='MCSession*' index='0' name='session' type64='@'/>
+<arg declared_type64='MCPeerID*' index='1' name='peerID' type64='@'/>
+<arg declared_type64='MCSessionState' index='2' name='state' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

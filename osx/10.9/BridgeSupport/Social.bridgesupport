@@ -1,0 +1,71 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Accounts.framework'/>
+<depends_on path='/System/Library/Frameworks/CFNetwork.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreLocation.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreData.framework'/>
+<constant const='true' declared_type64='NSString*' name='SLServiceTypeFacebook' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='SLServiceTypeLinkedIn' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='SLServiceTypeSinaWeibo' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='SLServiceTypeTencentWeibo' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='SLServiceTypeTwitter' type64='@'/>
+<enum name='SLRequestMethodDELETE' value64='2'/>
+<enum name='SLRequestMethodGET' value64='0'/>
+<enum name='SLRequestMethodPOST' value64='1'/>
+<enum name='SLRequestMethodPUT' value64='3'/>
+<class name='SLRequest'>
+<method selector='URL'>
+<retval declared_type64='NSURL*' type64='@'/>
+</method>
+<method selector='account'>
+<retval declared_type64='ACAccount*' type64='@'/>
+</method>
+<method selector='addMultipartData:withName:type:'>
+<arg declared_type64='NSData*' index='0' name='data' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='name' type64='@'/>
+<arg declared_type64='NSString*' index='2' name='type' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='addMultipartData:withName:type:filename:'>
+<arg declared_type64='NSData*' index='0' name='data' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='name' type64='@'/>
+<arg declared_type64='NSString*' index='2' name='type' type64='@'/>
+<arg declared_type64='NSString*' index='3' name='filename' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='parameters'>
+<retval declared_type64='NSDictionary*' type64='@'/>
+</method>
+<method selector='performRequestWithHandler:'>
+<arg declared_type64='SLRequestHandler' function_pointer='true' index='0' name='handler' type64='@?'>
+<arg declared_type64='NSData*' type64='@'/>
+<arg declared_type64='NSHTTPURLResponse*' type64='@'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='preparedURLRequest'>
+<retval declared_type64='NSURLRequest*' type64='@'/>
+</method>
+<method class_method='true' selector='requestForServiceType:requestMethod:URL:parameters:'>
+<arg declared_type64='NSString*' index='0' name='serviceType' type64='@'/>
+<arg declared_type64='SLRequestMethod' index='1' name='requestMethod' type64='q'/>
+<arg declared_type64='NSURL*' index='2' name='url' type64='@'/>
+<arg declared_type64='NSDictionary*' index='3' name='parameters' type64='@'/>
+<retval declared_type64='SLRequest*' type64='@'/>
+</method>
+<method selector='requestMethod'>
+<retval declared_type64='SLRequestMethod' type64='q'/>
+</method>
+<method selector='setAccount:'>
+<arg declared_type64='ACAccount*' index='0' name='account' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+</signatures>

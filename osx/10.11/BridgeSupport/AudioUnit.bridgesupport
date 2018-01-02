@@ -1,0 +1,2327 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
+<struct name='AUChannelInfo' type='{AUChannelInfo=&quot;inChannels&quot;s&quot;outChannels&quot;s}'>
+<field declared_type='SInt16' name='inChannels' type='s'/>
+<field declared_type='SInt16' name='outChannels' type='s'/>
+</struct>
+<struct name='AUDependentParameter' type='{AUDependentParameter=&quot;mScope&quot;I&quot;mParameterID&quot;I}'>
+<field declared_type='AudioUnitScope' name='mScope' type='L' type64='I'/>
+<field declared_type='AudioUnitParameterID' name='mParameterID' type='L' type64='I'/>
+</struct>
+<struct name='AUDistanceAttenuationData' type='{AUDistanceAttenuationData=&quot;inNumberOfPairs&quot;I&quot;pairs&quot;[1{?=&quot;inDistance&quot;f&quot;outGain&quot;f}]}'>
+<field declared_type='UInt32' name='inNumberOfPairs' type='L' type64='I'/>
+<field declared_type='struct (anonymous struct at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/AudioUnit.framework/Headers/AudioUnitProperties.h:1933:2)*' name='pairs' type='[1{?=&quot;inDistance&quot;f&quot;outGain&quot;f}]'/>
+</struct>
+<struct name='AUHostIdentifier' type='{AUHostIdentifier=&quot;hostName&quot;^{__CFString}&quot;hostVersion&quot;{AUNumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}}'>
+<field declared_type='CFStringRef _Nonnull' name='hostName' type='^{__CFString=}'/>
+<field declared_type='AUNumVersion' name='hostVersion' type='{AUNumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}'/>
+</struct>
+<struct name='AUHostVersionIdentifier' type='{AUHostVersionIdentifier=&quot;hostName&quot;^{__CFString}&quot;hostVersion&quot;I}'>
+<field declared_type='CFStringRef _Nonnull' name='hostName' type='^{__CFString=}'/>
+<field declared_type='UInt32' name='hostVersion' type='L' type64='I'/>
+</struct>
+<struct name='AUInputSamplesInOutputCallbackStruct' type='{AUInputSamplesInOutputCallbackStruct=&quot;inputToOutputCallback&quot;^?&quot;userData&quot;^v}'>
+<field declared_type='AUInputSamplesInOutputCallback _Nonnull' function_pointer='true' name='inputToOutputCallback' type='^?'>
+<arg declared_type='void * _Nonnull' type='^v'/>
+<arg const='true' declared_type='AudioTimeStamp * _Nonnull' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='Float64' type='d'/>
+<arg declared_type='Float64' type='d'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field declared_type='void * _Nullable' name='userData' type='^v'/>
+</struct>
+<struct name='AUMIDIEvent' type='{AUMIDIEvent=&quot;next&quot;^(AURenderEvent)&quot;eventSampleTime&quot;q&quot;eventType&quot;C&quot;reserved&quot;C&quot;length&quot;S&quot;cable&quot;C&quot;data&quot;[3C]}'>
+<field declared_type='union AURenderEvent * _Nullable' name='next' type='^(AURenderEvent={AURenderEventHeader=^(AURenderEvent)qCC}{AUParameterEvent=^(AURenderEvent)qC[3C]IQf}{AUMIDIEvent=^(AURenderEvent)qCCSC[3C]})'/>
+<field declared_type='AUEventSampleTime' name='eventSampleTime' type='q'/>
+<field declared_type='AURenderEventType' name='eventType' type='C'/>
+<field declared_type='uint8_t' name='reserved' type='C'/>
+<field declared_type='uint16_t' name='length' type='S'/>
+<field declared_type='uint8_t' name='cable' type='C'/>
+<field declared_type='uint8_t*' name='data' type='[3C]'/>
+</struct>
+<struct name='AUMIDIOutputCallbackStruct' type='{AUMIDIOutputCallbackStruct=&quot;midiOutputCallback&quot;^?&quot;userData&quot;^v}'>
+<field declared_type='AUMIDIOutputCallback _Nonnull' function_pointer='true' name='midiOutputCallback' type='^?'>
+<arg declared_type='void * _Nullable' type='^v'/>
+<arg const='true' declared_type='AudioTimeStamp * _Nonnull' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg const='true' declared_type='struct MIDIPacketList * _Nonnull' type='^{MIDIPacketList=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field declared_type='void * _Nullable' name='userData' type='^v'/>
+</struct>
+<struct name='AUNumVersion' type='{AUNumVersion=&quot;nonRelRev&quot;C&quot;stage&quot;C&quot;minorAndBugRev&quot;C&quot;majorRev&quot;C}'>
+<field declared_type='UInt8' name='nonRelRev' type='C'/>
+<field declared_type='UInt8' name='stage' type='C'/>
+<field declared_type='UInt8' name='minorAndBugRev' type='C'/>
+<field declared_type='UInt8' name='majorRev' type='C'/>
+</struct>
+<struct name='AUParameterEvent' type='{AUParameterEvent=&quot;next&quot;^(AURenderEvent)&quot;eventSampleTime&quot;q&quot;eventType&quot;C&quot;reserved&quot;[3C]&quot;rampDurationSampleFrames&quot;I&quot;parameterAddress&quot;Q&quot;value&quot;f}'>
+<field declared_type='union AURenderEvent * _Nullable' name='next' type='^(AURenderEvent={AURenderEventHeader=^(AURenderEvent)qCC}{AUParameterEvent=^(AURenderEvent)qC[3C]IQf}{AUMIDIEvent=^(AURenderEvent)qCCSC[3C]})'/>
+<field declared_type='AUEventSampleTime' name='eventSampleTime' type='q'/>
+<field declared_type='AURenderEventType' name='eventType' type='C'/>
+<field declared_type='uint8_t*' name='reserved' type='[3C]'/>
+<field declared_type='AUAudioFrameCount' name='rampDurationSampleFrames' type='I'/>
+<field declared_type='AUParameterAddress' name='parameterAddress' type='Q'/>
+<field declared_type='AUValue' name='value' type='f'/>
+</struct>
+<struct name='AUParameterMIDIMapping' type='{AUParameterMIDIMapping=&quot;mScope&quot;I&quot;mElement&quot;I&quot;mParameterID&quot;I&quot;mFlags&quot;L&quot;mSubRangeMin&quot;f&quot;mSubRangeMax&quot;f&quot;mStatus&quot;C&quot;mData1&quot;C&quot;reserved1&quot;C&quot;reserved2&quot;C&quot;reserved3&quot;I}' type64='{AUParameterMIDIMapping=&quot;mScope&quot;I&quot;mElement&quot;I&quot;mParameterID&quot;I&quot;mFlags&quot;I&quot;mSubRangeMin&quot;f&quot;mSubRangeMax&quot;f&quot;mStatus&quot;C&quot;mData1&quot;C&quot;reserved1&quot;C&quot;reserved2&quot;C&quot;reserved3&quot;I}'>
+<field declared_type='AudioUnitScope' name='mScope' type='L' type64='I'/>
+<field declared_type='AudioUnitElement' name='mElement' type='L' type64='I'/>
+<field declared_type='AudioUnitParameterID' name='mParameterID' type='L' type64='I'/>
+<field declared_type='AUParameterMIDIMappingFlags' name='mFlags' type='L' type64='I'/>
+<field declared_type='AudioUnitParameterValue' name='mSubRangeMin' type='f'/>
+<field declared_type='AudioUnitParameterValue' name='mSubRangeMax' type='f'/>
+<field declared_type='UInt8' name='mStatus' type='C'/>
+<field declared_type='UInt8' name='mData1' type='C'/>
+<field declared_type='UInt8' name='reserved1' type='C'/>
+<field declared_type='UInt8' name='reserved2' type='C'/>
+<field declared_type='UInt32' name='reserved3' type='L' type64='I'/>
+</struct>
+<struct name='AUPreset' type='{AUPreset=&quot;presetNumber&quot;i&quot;presetName&quot;^{__CFString}}'>
+<field declared_type='SInt32' name='presetNumber' type='l' type64='i'/>
+<field declared_type='CFStringRef _Nonnull' name='presetName' type='^{__CFString=}'/>
+</struct>
+<struct name='AURecordedParameterEvent' type='{AURecordedParameterEvent=&quot;hostTime&quot;Q&quot;address&quot;Q&quot;value&quot;f}'>
+<field declared_type='uint64_t' name='hostTime' type='Q'/>
+<field declared_type='AUParameterAddress' name='address' type='Q'/>
+<field declared_type='AUValue' name='value' type='f'/>
+</struct>
+<struct name='AURenderCallbackStruct' type='{AURenderCallbackStruct=&quot;inputProc&quot;^?&quot;inputProcRefCon&quot;^v}'>
+<field declared_type='AURenderCallback _Nonnull' function_pointer='true' name='inputProc' type='^?'>
+<arg declared_type='void * _Nonnull' type='^v'/>
+<arg declared_type='AudioUnitRenderActionFlags * _Nonnull' type='^L' type64='^I'/>
+<arg const='true' declared_type='AudioTimeStamp * _Nonnull' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='AudioBufferList * _Nullable' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field declared_type='void * _Nullable' name='inputProcRefCon' type='^v'/>
+</struct>
+<struct name='AURenderEventHeader' type='{AURenderEventHeader=&quot;next&quot;^(AURenderEvent)&quot;eventSampleTime&quot;q&quot;eventType&quot;C&quot;reserved&quot;C}'>
+<field declared_type='union AURenderEvent * _Nullable' name='next' type='^(AURenderEvent={AURenderEventHeader=^(AURenderEvent)qCC}{AUParameterEvent=^(AURenderEvent)qC[3C]IQf}{AUMIDIEvent=^(AURenderEvent)qCCSC[3C]})'/>
+<field declared_type='AUEventSampleTime' name='eventSampleTime' type='q'/>
+<field declared_type='AURenderEventType' name='eventType' type='C'/>
+<field declared_type='uint8_t' name='reserved' type='C'/>
+</struct>
+<struct name='AUSamplerBankPresetData' type='{AUSamplerBankPresetData=&quot;bankURL&quot;^{__CFURL}&quot;bankMSB&quot;C&quot;bankLSB&quot;C&quot;presetID&quot;C&quot;reserved&quot;C}'>
+<field declared_type='CFURLRef _Nonnull' name='bankURL' type='^{__CFURL=}'/>
+<field declared_type='UInt8' name='bankMSB' type='C'/>
+<field declared_type='UInt8' name='bankLSB' type='C'/>
+<field declared_type='UInt8' name='presetID' type='C'/>
+<field declared_type='UInt8' name='reserved' type='C'/>
+</struct>
+<struct name='AUSamplerInstrumentData' type='{AUSamplerInstrumentData=&quot;fileURL&quot;^{__CFURL}&quot;instrumentType&quot;C&quot;bankMSB&quot;C&quot;bankLSB&quot;C&quot;presetID&quot;C}'>
+<field declared_type='CFURLRef _Nonnull' name='fileURL' type='^{__CFURL=}'/>
+<field declared_type='UInt8' name='instrumentType' type='C'/>
+<field declared_type='UInt8' name='bankMSB' type='C'/>
+<field declared_type='UInt8' name='bankLSB' type='C'/>
+<field declared_type='UInt8' name='presetID' type='C'/>
+</struct>
+<struct name='AudioCodecMagicCookieInfo' type='{AudioCodecMagicCookieInfo=&quot;mMagicCookieSize&quot;I&quot;mMagicCookie&quot;^v}'>
+<field declared_type='UInt32' name='mMagicCookieSize' type='L' type64='I'/>
+<field const='true' declared_type='void * _Nullable' name='mMagicCookie' type='^v'/>
+</struct>
+<struct name='AudioCodecPrimeInfo' type='{AudioCodecPrimeInfo=&quot;leadingFrames&quot;I&quot;trailingFrames&quot;I}'>
+<field declared_type='UInt32' name='leadingFrames' type='L' type64='I'/>
+<field declared_type='UInt32' name='trailingFrames' type='L' type64='I'/>
+</struct>
+<struct name='AudioComponentDescription' type='{AudioComponentDescription=&quot;componentType&quot;I&quot;componentSubType&quot;I&quot;componentManufacturer&quot;I&quot;componentFlags&quot;I&quot;componentFlagsMask&quot;I}'>
+<field declared_type='OSType' name='componentType' type='L' type64='I'/>
+<field declared_type='OSType' name='componentSubType' type='L' type64='I'/>
+<field declared_type='OSType' name='componentManufacturer' type='L' type64='I'/>
+<field declared_type='UInt32' name='componentFlags' type='L' type64='I'/>
+<field declared_type='UInt32' name='componentFlagsMask' type='L' type64='I'/>
+</struct>
+<struct name='AudioComponentInstance' type='{ComponentInstanceRecord=&quot;data&quot;[1l]}' type64='{ComponentInstanceRecord=&quot;data&quot;[1q]}'>
+<field declared_type='long*' name='data' type='[1l]' type64='[1q]'/>
+</struct>
+<struct name='AudioComponentPlugInInterface' type='{AudioComponentPlugInInterface=&quot;Open&quot;^?&quot;Close&quot;^?&quot;Lookup&quot;^?&quot;reserved&quot;^v}'>
+<field declared_type='OSStatus (* _Nonnull)(void * _Nonnull, AudioComponentInstance _Nonnull)' function_pointer='true' name='Open' type='^?'>
+<arg declared_type='void * _Nonnull' type='^v'/>
+<arg declared_type='AudioComponentInstance _Nonnull' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field declared_type='OSStatus (* _Nonnull)(void * _Nonnull)' function_pointer='true' name='Close' type='^?'>
+<arg declared_type='void * _Nonnull' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field declared_type='AudioComponentMethod _Nullable (* _Nonnull)(SInt16)' function_pointer='true' name='Lookup' type='^?'>
+<arg declared_type='SInt16' type='s'/>
+<retval declared_type='AudioComponentMethod _Nullable' function_pointer='true' type='^?'>
+<arg declared_type='void * _Nonnull' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</retval>
+</field>
+<field declared_type='void * _Nullable' name='reserved' type='^v'/>
+</struct>
+<struct name='AudioOutputUnitStartAtTimeParams' type='{AudioOutputUnitStartAtTimeParams=&quot;mTimestamp&quot;{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;L&quot;mFlags&quot;L&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;L&quot;mReserved&quot;I}&quot;mFlags&quot;I}' type64='{AudioOutputUnitStartAtTimeParams=&quot;mTimestamp&quot;{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}&quot;mFlags&quot;I}'>
+<field declared_type='AudioTimeStamp' name='mTimestamp' type='{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;L&quot;mFlags&quot;L&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;L&quot;mReserved&quot;I}' type64='{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}'/>
+<field declared_type='UInt32' name='mFlags' type='L' type64='I'/>
+</struct>
+<struct name='AudioUnitCocoaViewInfo' type='{AudioUnitCocoaViewInfo=&quot;mCocoaAUViewBundleLocation&quot;^{__CFURL}&quot;mCocoaAUViewClass&quot;[1^{__CFString}]}'>
+<field declared_type='CFURLRef _Nonnull' name='mCocoaAUViewBundleLocation' type='^{__CFURL=}'/>
+<field declared_type='CFStringRef _Nonnull*' name='mCocoaAUViewClass' type='[1^{__CFString}]'/>
+</struct>
+<struct name='AudioUnitConnection' type='{AudioUnitConnection=&quot;sourceAudioUnit&quot;^{ComponentInstanceRecord}&quot;sourceOutputNumber&quot;I&quot;destInputNumber&quot;I}'>
+<field declared_type='AudioUnit _Nonnull' name='sourceAudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<field declared_type='UInt32' name='sourceOutputNumber' type='L' type64='I'/>
+<field declared_type='UInt32' name='destInputNumber' type='L' type64='I'/>
+</struct>
+<struct name='AudioUnitExternalBuffer' type='{AudioUnitExternalBuffer=&quot;buffer&quot;*&quot;size&quot;I}'>
+<field declared_type='Byte * _Nonnull' name='buffer' type='*'/>
+<field declared_type='UInt32' name='size' type='L' type64='I'/>
+</struct>
+<struct name='AudioUnitFrequencyResponseBin' type='{AudioUnitFrequencyResponseBin=&quot;mFrequency&quot;d&quot;mMagnitude&quot;d}'>
+<field declared_type='Float64' name='mFrequency' type='d'/>
+<field declared_type='Float64' name='mMagnitude' type='d'/>
+</struct>
+<struct name='AudioUnitMIDIControlMapping' type='{AudioUnitMIDIControlMapping=&quot;midiNRPN&quot;S&quot;midiControl&quot;C&quot;scope&quot;C&quot;element&quot;I&quot;parameter&quot;I}'>
+<field declared_type='UInt16' name='midiNRPN' type='S'/>
+<field declared_type='UInt8' name='midiControl' type='C'/>
+<field declared_type='UInt8' name='scope' type='C'/>
+<field declared_type='AudioUnitElement' name='element' type='L' type64='I'/>
+<field declared_type='AudioUnitParameterID' name='parameter' type='L' type64='I'/>
+</struct>
+<struct name='AudioUnitMeterClipping' type='{AudioUnitMeterClipping=&quot;peakValueSinceLastCall&quot;f&quot;sawInfinity&quot;B&quot;sawNotANumber&quot;B}'>
+<field declared_type='Float32' name='peakValueSinceLastCall' type='f'/>
+<field declared_type='Boolean' name='sawInfinity' type='B'/>
+<field declared_type='Boolean' name='sawNotANumber' type='B'/>
+</struct>
+<struct name='AudioUnitOtherPluginDesc' type='{AudioUnitOtherPluginDesc=&quot;format&quot;I&quot;plugin&quot;{AudioClassDescription=&quot;mType&quot;I&quot;mSubType&quot;I&quot;mManufacturer&quot;I}}'>
+<field declared_type='UInt32' name='format' type='L' type64='I'/>
+<field declared_type='AudioClassDescription' name='plugin' type='{AudioClassDescription=&quot;mType&quot;I&quot;mSubType&quot;I&quot;mManufacturer&quot;I}'/>
+</struct>
+<struct name='AudioUnitParameter' type='{AudioUnitParameter=&quot;mAudioUnit&quot;^{ComponentInstanceRecord}&quot;mParameterID&quot;I&quot;mScope&quot;I&quot;mElement&quot;I}'>
+<field declared_type='AudioUnit _Nonnull' name='mAudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<field declared_type='AudioUnitParameterID' name='mParameterID' type='L' type64='I'/>
+<field declared_type='AudioUnitScope' name='mScope' type='L' type64='I'/>
+<field declared_type='AudioUnitElement' name='mElement' type='L' type64='I'/>
+</struct>
+<struct name='AudioUnitParameterEvent' type='{AudioUnitParameterEvent=&quot;scope&quot;I&quot;element&quot;I&quot;parameter&quot;I&quot;eventType&quot;L&quot;eventValues&quot;(?=&quot;ramp&quot;{?=&quot;startBufferOffset&quot;i&quot;durationInFrames&quot;I&quot;startValue&quot;f&quot;endValue&quot;f}&quot;immediate&quot;{?=&quot;bufferOffset&quot;I&quot;value&quot;f})}' type64='{AudioUnitParameterEvent=&quot;scope&quot;I&quot;element&quot;I&quot;parameter&quot;I&quot;eventType&quot;I&quot;eventValues&quot;(?=&quot;ramp&quot;{?=&quot;startBufferOffset&quot;i&quot;durationInFrames&quot;I&quot;startValue&quot;f&quot;endValue&quot;f}&quot;immediate&quot;{?=&quot;bufferOffset&quot;I&quot;value&quot;f})}'>
+<field declared_type='AudioUnitScope' name='scope' type='L' type64='I'/>
+<field declared_type='AudioUnitElement' name='element' type='L' type64='I'/>
+<field declared_type='AudioUnitParameterID' name='parameter' type='L' type64='I'/>
+<field declared_type='AUParameterEventType' name='eventType' type='L' type64='I'/>
+<field declared_type='union (anonymous union at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/AudioUnit.framework/Headers/AUComponent.h:804:2)' name='eventValues' type='(?=&quot;ramp&quot;{?=&quot;startBufferOffset&quot;i&quot;durationInFrames&quot;I&quot;startValue&quot;f&quot;endValue&quot;f}&quot;immediate&quot;{?=&quot;bufferOffset&quot;I&quot;value&quot;f})'/>
+</struct>
+<struct name='AudioUnitParameterHistoryInfo' type='{AudioUnitParameterHistoryInfo=&quot;updatesPerSecond&quot;f&quot;historyDurationInSeconds&quot;f}'>
+<field declared_type='Float32' name='updatesPerSecond' type='f'/>
+<field declared_type='Float32' name='historyDurationInSeconds' type='f'/>
+</struct>
+<struct name='AudioUnitParameterIDName' type='{AudioUnitParameterNameInfo=&quot;inID&quot;I&quot;inDesiredLength&quot;i&quot;outName&quot;^{__CFString}}'>
+<field declared_type='AudioUnitParameterID' name='inID' type='L' type64='I'/>
+<field declared_type='SInt32' name='inDesiredLength' type='l' type64='i'/>
+<field declared_type='CFStringRef _Nullable' name='outName' type='^{__CFString=}'/>
+</struct>
+<struct name='AudioUnitParameterInfo' type='{AudioUnitParameterInfo=&quot;name&quot;[52c]&quot;unitName&quot;^{__CFString}&quot;clumpID&quot;I&quot;cfNameString&quot;^{__CFString}&quot;unit&quot;L&quot;minValue&quot;f&quot;maxValue&quot;f&quot;defaultValue&quot;f&quot;flags&quot;L}' type64='{AudioUnitParameterInfo=&quot;name&quot;[52c]&quot;unitName&quot;^{__CFString}&quot;clumpID&quot;I&quot;cfNameString&quot;^{__CFString}&quot;unit&quot;I&quot;minValue&quot;f&quot;maxValue&quot;f&quot;defaultValue&quot;f&quot;flags&quot;I}'>
+<field declared_type='char*' name='name' type='[52c]'/>
+<field declared_type='CFStringRef _Nullable' name='unitName' type='^{__CFString=}'/>
+<field declared_type='UInt32' name='clumpID' type='L' type64='I'/>
+<field declared_type='CFStringRef _Nullable' name='cfNameString' type='^{__CFString=}'/>
+<field declared_type='AudioUnitParameterUnit' name='unit' type='L' type64='I'/>
+<field declared_type='AudioUnitParameterValue' name='minValue' type='f'/>
+<field declared_type='AudioUnitParameterValue' name='maxValue' type='f'/>
+<field declared_type='AudioUnitParameterValue' name='defaultValue' type='f'/>
+<field declared_type='AudioUnitParameterOptions' name='flags' type='L' type64='I'/>
+</struct>
+<struct name='AudioUnitParameterNameInfo' type='{AudioUnitParameterNameInfo=&quot;inID&quot;I&quot;inDesiredLength&quot;i&quot;outName&quot;^{__CFString}}'>
+<field declared_type='AudioUnitParameterID' name='inID' type='L' type64='I'/>
+<field declared_type='SInt32' name='inDesiredLength' type='l' type64='i'/>
+<field declared_type='CFStringRef _Nullable' name='outName' type='^{__CFString=}'/>
+</struct>
+<struct name='AudioUnitParameterStringFromValue' type='{AudioUnitParameterStringFromValue=&quot;inParamID&quot;I&quot;inValue&quot;^f&quot;outString&quot;^{__CFString}}'>
+<field declared_type='AudioUnitParameterID' name='inParamID' type='L' type64='I'/>
+<field const='true' declared_type='AudioUnitParameterValue * _Nonnull' name='inValue' type='^f'/>
+<field declared_type='CFStringRef _Nullable' name='outString' type='^{__CFString=}'/>
+</struct>
+<struct name='AudioUnitParameterValueFromString' type='{AudioUnitParameterValueFromString=&quot;inParamID&quot;I&quot;inString&quot;^{__CFString}&quot;outValue&quot;f}'>
+<field declared_type='AudioUnitParameterID' name='inParamID' type='L' type64='I'/>
+<field declared_type='CFStringRef _Nonnull' name='inString' type='^{__CFString=}'/>
+<field declared_type='AudioUnitParameterValue' name='outValue' type='f'/>
+</struct>
+<struct name='AudioUnitParameterValueName' type='{AudioUnitParameterValueName=&quot;inParamID&quot;I&quot;inValue&quot;^f&quot;outName&quot;^{__CFString}}'>
+<field declared_type='AudioUnitParameterID' name='inParamID' type='L' type64='I'/>
+<field const='true' declared_type='Float32 * _Nonnull' name='inValue' type='^f'/>
+<field declared_type='CFStringRef _Nonnull' name='outName' type='^{__CFString=}'/>
+</struct>
+<struct name='AudioUnitParameterValueTranslation' type='{AudioUnitParameterValueTranslation=&quot;otherDesc&quot;{AudioUnitOtherPluginDesc=&quot;format&quot;I&quot;plugin&quot;{AudioClassDescription=&quot;mType&quot;I&quot;mSubType&quot;I&quot;mManufacturer&quot;I}}&quot;otherParamID&quot;I&quot;otherValue&quot;f&quot;auParamID&quot;I&quot;auValue&quot;f}'>
+<field declared_type='AudioUnitOtherPluginDesc' name='otherDesc' type='{AudioUnitOtherPluginDesc=&quot;format&quot;I&quot;plugin&quot;{AudioClassDescription=&quot;mType&quot;I&quot;mSubType&quot;I&quot;mManufacturer&quot;I}}'/>
+<field declared_type='UInt32' name='otherParamID' type='L' type64='I'/>
+<field declared_type='Float32' name='otherValue' type='f'/>
+<field declared_type='AudioUnitParameterID' name='auParamID' type='L' type64='I'/>
+<field declared_type='AudioUnitParameterValue' name='auValue' type='f'/>
+</struct>
+<struct name='AudioUnitPresetMAS_SettingData' type='{AudioUnitPresetMAS_SettingData=&quot;isStockSetting&quot;I&quot;settingID&quot;I&quot;dataLen&quot;I&quot;data&quot;[1C]}'>
+<field declared_type='UInt32' name='isStockSetting' type='L' type64='I'/>
+<field declared_type='UInt32' name='settingID' type='L' type64='I'/>
+<field declared_type='UInt32' name='dataLen' type='L' type64='I'/>
+<field declared_type='UInt8*' name='data' type='[1C]'/>
+</struct>
+<struct name='AudioUnitPresetMAS_Settings' type='{AudioUnitPresetMAS_Settings=&quot;manufacturerID&quot;I&quot;effectID&quot;I&quot;variantID&quot;I&quot;settingsVersion&quot;I&quot;numberOfSettings&quot;I&quot;settings&quot;[1{AudioUnitPresetMAS_SettingData=&quot;isStockSetting&quot;I&quot;settingID&quot;I&quot;dataLen&quot;I&quot;data&quot;[1C]}]}'>
+<field declared_type='UInt32' name='manufacturerID' type='L' type64='I'/>
+<field declared_type='UInt32' name='effectID' type='L' type64='I'/>
+<field declared_type='UInt32' name='variantID' type='L' type64='I'/>
+<field declared_type='UInt32' name='settingsVersion' type='L' type64='I'/>
+<field declared_type='UInt32' name='numberOfSettings' type='L' type64='I'/>
+<field declared_type='AudioUnitPresetMAS_SettingData*' name='settings' type='[1{AudioUnitPresetMAS_SettingData=&quot;isStockSetting&quot;I&quot;settingID&quot;I&quot;dataLen&quot;I&quot;data&quot;[1C]}]'/>
+</struct>
+<struct name='AudioUnitProperty' type='{AudioUnitProperty=&quot;mAudioUnit&quot;^{ComponentInstanceRecord}&quot;mPropertyID&quot;I&quot;mScope&quot;I&quot;mElement&quot;I}'>
+<field declared_type='AudioUnit _Nonnull' name='mAudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<field declared_type='AudioUnitPropertyID' name='mPropertyID' type='L' type64='I'/>
+<field declared_type='AudioUnitScope' name='mScope' type='L' type64='I'/>
+<field declared_type='AudioUnitElement' name='mElement' type='L' type64='I'/>
+</struct>
+<struct name='HostCallbackInfo' type='{HostCallbackInfo=&quot;hostUserData&quot;^v&quot;beatAndTempoProc&quot;^?&quot;musicalTimeLocationProc&quot;^?&quot;transportStateProc&quot;^?&quot;transportStateProc2&quot;^?}'>
+<field declared_type='void * _Nullable' name='hostUserData' type='^v'/>
+<field declared_type='HostCallback_GetBeatAndTempo _Nullable' function_pointer='true' name='beatAndTempoProc' type='^?'>
+<arg declared_type='void * _Nullable' type='^v'/>
+<arg declared_type='Float64 * _Nullable' type='^d'/>
+<arg declared_type='Float64 * _Nullable' type='^d'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field declared_type='HostCallback_GetMusicalTimeLocation _Nullable' function_pointer='true' name='musicalTimeLocationProc' type='^?'>
+<arg declared_type='void * _Nullable' type='^v'/>
+<arg declared_type='UInt32 * _Nullable' type='^I'/>
+<arg declared_type='Float32 * _Nullable' type='^f'/>
+<arg declared_type='UInt32 * _Nullable' type='^I'/>
+<arg declared_type='Float64 * _Nullable' type='^d'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field declared_type='HostCallback_GetTransportState _Nullable' function_pointer='true' name='transportStateProc' type='^?'>
+<arg declared_type='void * _Nullable' type='^v'/>
+<arg declared_type='Boolean * _Nullable' type='^B'/>
+<arg declared_type='Boolean * _Nullable' type='^B'/>
+<arg declared_type='Float64 * _Nullable' type='^d'/>
+<arg declared_type='Boolean * _Nullable' type='^B'/>
+<arg declared_type='Float64 * _Nullable' type='^d'/>
+<arg declared_type='Float64 * _Nullable' type='^d'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+<field declared_type='HostCallback_GetTransportState2 _Nullable' function_pointer='true' name='transportStateProc2' type='^?'>
+<arg declared_type='void * _Nullable' type='^v'/>
+<arg declared_type='Boolean * _Nullable' type='^B'/>
+<arg declared_type='Boolean * _Nullable' type='^B'/>
+<arg declared_type='Boolean * _Nullable' type='^B'/>
+<arg declared_type='Float64 * _Nullable' type='^d'/>
+<arg declared_type='Boolean * _Nullable' type='^B'/>
+<arg declared_type='Float64 * _Nullable' type='^d'/>
+<arg declared_type='Float64 * _Nullable' type='^d'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</field>
+</struct>
+<struct name='MagicCookieInfo' type='{AudioCodecMagicCookieInfo=&quot;mMagicCookieSize&quot;I&quot;mMagicCookie&quot;^v}'>
+<field declared_type='UInt32' name='mMagicCookieSize' type='L' type64='I'/>
+<field const='true' declared_type='void * _Nullable' name='mMagicCookie' type='^v'/>
+</struct>
+<struct name='MixerDistanceParams' type='{MixerDistanceParams=&quot;mReferenceDistance&quot;f&quot;mMaxDistance&quot;f&quot;mMaxAttenuation&quot;f}'>
+<field declared_type='Float32' name='mReferenceDistance' type='f'/>
+<field declared_type='Float32' name='mMaxDistance' type='f'/>
+<field declared_type='Float32' name='mMaxAttenuation' type='f'/>
+</struct>
+<struct name='MusicDeviceNoteParams' type='{MusicDeviceNoteParams=&quot;argCount&quot;I&quot;mPitch&quot;f&quot;mVelocity&quot;f&quot;mControls&quot;[1{NoteParamsControlValue=&quot;mID&quot;I&quot;mValue&quot;f}]}'>
+<field declared_type='UInt32' name='argCount' type='L' type64='I'/>
+<field declared_type='Float32' name='mPitch' type='f'/>
+<field declared_type='Float32' name='mVelocity' type='f'/>
+<field declared_type='NoteParamsControlValue*' name='mControls' type='[1{NoteParamsControlValue=&quot;mID&quot;I&quot;mValue&quot;f}]'/>
+</struct>
+<struct name='MusicDeviceStdNoteParams' type='{MusicDeviceStdNoteParams=&quot;argCount&quot;I&quot;mPitch&quot;f&quot;mVelocity&quot;f}'>
+<field declared_type='UInt32' name='argCount' type='L' type64='I'/>
+<field declared_type='Float32' name='mPitch' type='f'/>
+<field declared_type='Float32' name='mVelocity' type='f'/>
+</struct>
+<struct name='NoteParamsControlValue' type='{NoteParamsControlValue=&quot;mID&quot;I&quot;mValue&quot;f}'>
+<field declared_type='AudioUnitParameterID' name='mID' type='L' type64='I'/>
+<field declared_type='AudioUnitParameterValue' name='mValue' type='f'/>
+</struct>
+<struct name='ScheduledAudioFileRegion' type='{ScheduledAudioFileRegion=&quot;mTimeStamp&quot;{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;L&quot;mFlags&quot;L&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;L&quot;mReserved&quot;I}&quot;mCompletionProc&quot;^?&quot;mCompletionProcUserData&quot;^v&quot;mAudioFile&quot;^{OpaqueAudioFileID}&quot;mLoopCount&quot;I&quot;mStartFrame&quot;q&quot;mFramesToPlay&quot;I}' type64='{ScheduledAudioFileRegion=&quot;mTimeStamp&quot;{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}&quot;mCompletionProc&quot;^?&quot;mCompletionProcUserData&quot;^v&quot;mAudioFile&quot;^{OpaqueAudioFileID}&quot;mLoopCount&quot;I&quot;mStartFrame&quot;q&quot;mFramesToPlay&quot;I}'>
+<field declared_type='AudioTimeStamp' name='mTimeStamp' type='{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;L&quot;mFlags&quot;L&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;L&quot;mReserved&quot;I}' type64='{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}'/>
+<field declared_type='ScheduledAudioFileRegionCompletionProc _Nullable' function_pointer='true' name='mCompletionProc' type='^?'>
+<arg declared_type='void * _Nullable' type='^v'/>
+<arg declared_type='ScheduledAudioFileRegion * _Nonnull' type='^{ScheduledAudioFileRegion={AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}^?^v^{OpaqueAudioFileID}IqI}' type64='^{ScheduledAudioFileRegion={AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}^?^v^{OpaqueAudioFileID}IqI}'/>
+<arg declared_type='OSStatus' type='l' type64='i'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field declared_type='void * _Nullable' name='mCompletionProcUserData' type='^v'/>
+<field declared_type='struct OpaqueAudioFileID * _Nonnull' name='mAudioFile' type='^{OpaqueAudioFileID=}'/>
+<field declared_type='UInt32' name='mLoopCount' type='L' type64='I'/>
+<field declared_type='SInt64' name='mStartFrame' type='q'/>
+<field declared_type='UInt32' name='mFramesToPlay' type='L' type64='I'/>
+</struct>
+<struct name='ScheduledAudioSlice' type='{ScheduledAudioSlice=&quot;mTimeStamp&quot;{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;L&quot;mFlags&quot;L&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;L&quot;mReserved&quot;I}&quot;mCompletionProc&quot;^?&quot;mCompletionProcUserData&quot;^v&quot;mFlags&quot;L&quot;mReserved&quot;I&quot;mReserved2&quot;^v&quot;mNumberFrames&quot;I&quot;mBufferList&quot;^{AudioBufferList}}' type64='{ScheduledAudioSlice=&quot;mTimeStamp&quot;{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}&quot;mCompletionProc&quot;^?&quot;mCompletionProcUserData&quot;^v&quot;mFlags&quot;I&quot;mReserved&quot;I&quot;mReserved2&quot;^v&quot;mNumberFrames&quot;I&quot;mBufferList&quot;^{AudioBufferList}}'>
+<field declared_type='AudioTimeStamp' name='mTimeStamp' type='{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;L&quot;mFlags&quot;L&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;L&quot;mReserved&quot;I}' type64='{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}'/>
+<field declared_type='ScheduledAudioSliceCompletionProc _Nullable' function_pointer='true' name='mCompletionProc' type='^?'>
+<arg declared_type='void * _Nullable' type='^v'/>
+<arg declared_type='ScheduledAudioSlice * _Nonnull' type='^{ScheduledAudioSlice={AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}^?^vLI^vI^{AudioBufferList}}' type64='^{ScheduledAudioSlice={AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}^?^vII^vI^{AudioBufferList}}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field declared_type='void * _Nonnull' name='mCompletionProcUserData' type='^v'/>
+<field declared_type='AUScheduledAudioSliceFlags' name='mFlags' type='L' type64='I'/>
+<field declared_type='UInt32' name='mReserved' type='L' type64='I'/>
+<field declared_type='void * _Nullable' name='mReserved2' type='^v'/>
+<field declared_type='UInt32' name='mNumberFrames' type='L' type64='I'/>
+<field declared_type='AudioBufferList * _Nonnull' name='mBufferList' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+</struct>
+<opaque name='AudioComponent' type='^{OpaqueAudioComponent=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kAudioComponentInstanceInvalidationNotification' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kAudioComponentRegistrationsChangedNotification' type='^{__CFString=}'/>
+<string_constant name='kAUPresetCPULoadKey' value='cpu-load'/>
+<string_constant name='kAUPresetDataKey' value='data'/>
+<string_constant name='kAUPresetElementNameKey' value='element-name'/>
+<string_constant name='kAUPresetExternalFileRefs' value='file-references'/>
+<string_constant name='kAUPresetMASDataKey' value='masdata'/>
+<string_constant name='kAUPresetManufacturerKey' value='manufacturer'/>
+<string_constant name='kAUPresetNameKey' value='name'/>
+<string_constant name='kAUPresetPartKey' value='part'/>
+<string_constant name='kAUPresetRenderQualityKey' value='render-quality'/>
+<string_constant name='kAUPresetSubtypeKey' value='subtype'/>
+<string_constant name='kAUPresetTypeKey' value='type'/>
+<string_constant name='kAUPresetVSTDataKey' value='vstdata'/>
+<string_constant name='kAUPresetVSTPresetKey' value='vstpreset'/>
+<string_constant name='kAUPresetVersionKey' value='version'/>
+<string_constant name='kAudioComponentConfigurationInfo_ValidationResult' value='ValidationResult'/>
+<string_constant name='kAudioComponentValidationParameter_ForceValidation' value='ForceValidation'/>
+<string_constant name='kAudioComponentValidationParameter_TimeOut' value='TimeOut'/>
+<string_constant name='kAudioSettings_AvailableValues' value='available values'/>
+<string_constant name='kAudioSettings_CurrentValue' value='current value'/>
+<string_constant name='kAudioSettings_Hint' value='hint'/>
+<string_constant name='kAudioSettings_LimitedValues' value='limited values'/>
+<string_constant name='kAudioSettings_Parameters' value='parameters'/>
+<string_constant name='kAudioSettings_SettingKey' value='key'/>
+<string_constant name='kAudioSettings_SettingName' value='name'/>
+<string_constant name='kAudioSettings_Summary' value='summary'/>
+<string_constant name='kAudioSettings_TopLevelKey' value='name'/>
+<string_constant name='kAudioSettings_Unit' value='unit'/>
+<string_constant name='kAudioSettings_ValueType' value='value type'/>
+<string_constant name='kAudioSettings_Version' value='version'/>
+<string_constant name='kAudioUnitConfigurationInfo_BusCountWritable' value='BusCountWritable'/>
+<string_constant name='kAudioUnitConfigurationInfo_ChannelConfigurations' value='ChannelConfigurations'/>
+<string_constant name='kAudioUnitConfigurationInfo_HasCustomView' value='HasCustomView'/>
+<string_constant name='kAudioUnitConfigurationInfo_IconURL' value='IconURL'/>
+<string_constant name='kAudioUnitConfigurationInfo_InitialInputs' value='InitialInputs'/>
+<string_constant name='kAudioUnitConfigurationInfo_InitialOutputs' value='InitialOutputs'/>
+<string_constant name='kAudioUnitConfigurationInfo_SupportedChannelLayoutTags' value='SupportedChannelLayoutTags'/>
+<enum name='AUAudioUnitBusTypeInput' value='1'/>
+<enum name='AUAudioUnitBusTypeOutput' value='2'/>
+<enum name='AUDIO_UNIT_VERSION' value='1070'/>
+<enum name='AUEventSampleTimeImmediate' value='-4294967296'/>
+<enum name='AUHostTransportStateChanged' value='1'/>
+<enum name='AUHostTransportStateCycling' value='8'/>
+<enum name='AUHostTransportStateMoving' value='2'/>
+<enum name='AUHostTransportStateRecording' value='4'/>
+<enum name='AURenderEventMIDI' value='8'/>
+<enum name='AURenderEventMIDISysEx' value='9'/>
+<enum name='AURenderEventParameter' value='1'/>
+<enum name='AURenderEventParameterRamp' value='2'/>
+<enum name='k3DMixerAttenuationCurve_Exponential' value='1'/>
+<enum name='k3DMixerAttenuationCurve_Inverse' value='2'/>
+<enum name='k3DMixerAttenuationCurve_Linear' value='3'/>
+<enum name='k3DMixerAttenuationCurve_Power' value='0'/>
+<enum name='k3DMixerParam_Azimuth' value='0'/>
+<enum name='k3DMixerParam_Distance' value='2'/>
+<enum name='k3DMixerParam_Elevation' value='1'/>
+<enum name='k3DMixerParam_Gain' value='3'/>
+<enum name='k3DMixerParam_GlobalReverbGain' value='6'/>
+<enum name='k3DMixerParam_MaxGain' value='10'/>
+<enum name='k3DMixerParam_MinGain' value='9'/>
+<enum name='k3DMixerParam_ObstructionAttenuation' value='8'/>
+<enum name='k3DMixerParam_OcclusionAttenuation' value='7'/>
+<enum name='k3DMixerParam_PlaybackRate' value='4'/>
+<enum name='k3DMixerParam_PostAveragePower' value='3000'/>
+<enum name='k3DMixerParam_PostPeakHoldLevel' value='4000'/>
+<enum name='k3DMixerParam_PreAveragePower' value='1000'/>
+<enum name='k3DMixerParam_PrePeakHoldLevel' value='2000'/>
+<enum name='k3DMixerParam_ReverbBlend' value='5'/>
+<enum name='k3DMixerRenderingFlags_ConstantReverbBlend' value='64'/>
+<enum name='k3DMixerRenderingFlags_DistanceAttenuation' value='4'/>
+<enum name='k3DMixerRenderingFlags_DistanceDiffusion' value='16'/>
+<enum name='k3DMixerRenderingFlags_DistanceFilter' value='8'/>
+<enum name='k3DMixerRenderingFlags_DopplerShift' value='2'/>
+<enum name='k3DMixerRenderingFlags_InterAuralDelay' value='1'/>
+<enum name='k3DMixerRenderingFlags_LinearDistanceAttenuation' value='32'/>
+<enum name='kAUCarbonViewSubType_Generic' value='1735291491'/>
+<enum name='kAUGroupParameterID_AllNotesOff' value='123'/>
+<enum name='kAUGroupParameterID_AllSoundOff' value='120'/>
+<enum name='kAUGroupParameterID_ChannelPressure' value='208'/>
+<enum name='kAUGroupParameterID_DataEntry' value='6'/>
+<enum name='kAUGroupParameterID_DataEntry_LSB' value='38'/>
+<enum name='kAUGroupParameterID_Expression' value='11'/>
+<enum name='kAUGroupParameterID_Expression_LSB' value='43'/>
+<enum name='kAUGroupParameterID_Foot' value='4'/>
+<enum name='kAUGroupParameterID_Foot_LSB' value='36'/>
+<enum name='kAUGroupParameterID_KeyPressure' value='160'/>
+<enum name='kAUGroupParameterID_KeyPressure_FirstKey' value='256'/>
+<enum name='kAUGroupParameterID_KeyPressure_LastKey' value='383'/>
+<enum name='kAUGroupParameterID_ModWheel' value='1'/>
+<enum name='kAUGroupParameterID_ModWheel_LSB' value='33'/>
+<enum name='kAUGroupParameterID_Pan' value='10'/>
+<enum name='kAUGroupParameterID_Pan_LSB' value='42'/>
+<enum name='kAUGroupParameterID_PitchBend' value='224'/>
+<enum name='kAUGroupParameterID_ResetAllControllers' value='121'/>
+<enum name='kAUGroupParameterID_Sostenuto' value='66'/>
+<enum name='kAUGroupParameterID_Sustain' value='64'/>
+<enum name='kAUGroupParameterID_Volume' value='7'/>
+<enum name='kAUGroupParameterID_Volume_LSB' value='39'/>
+<enum name='kAULowShelfParam_CutoffFrequency' value='0'/>
+<enum name='kAULowShelfParam_Gain' value='1'/>
+<enum name='kAUMIDISynthProperty_EnablePreload' value='4119'/>
+<enum name='kAUNBandEQFilterType_2ndOrderButterworthHighPass' value='2'/>
+<enum name='kAUNBandEQFilterType_2ndOrderButterworthLowPass' value='1'/>
+<enum name='kAUNBandEQFilterType_BandPass' value='5'/>
+<enum name='kAUNBandEQFilterType_BandStop' value='6'/>
+<enum name='kAUNBandEQFilterType_HighShelf' value='8'/>
+<enum name='kAUNBandEQFilterType_LowShelf' value='7'/>
+<enum name='kAUNBandEQFilterType_Parametric' value='0'/>
+<enum name='kAUNBandEQFilterType_ResonantHighPass' value='4'/>
+<enum name='kAUNBandEQFilterType_ResonantHighShelf' value='10'/>
+<enum name='kAUNBandEQFilterType_ResonantLowPass' value='3'/>
+<enum name='kAUNBandEQFilterType_ResonantLowShelf' value='9'/>
+<enum name='kAUNBandEQParam_Bandwidth' value='5000'/>
+<enum name='kAUNBandEQParam_BypassBand' value='1000'/>
+<enum name='kAUNBandEQParam_FilterType' value='2000'/>
+<enum name='kAUNBandEQParam_Frequency' value='3000'/>
+<enum name='kAUNBandEQParam_Gain' value='4000'/>
+<enum name='kAUNBandEQParam_GlobalGain' value='0'/>
+<enum name='kAUNBandEQProperty_BiquadCoefficients' value='2203'/>
+<enum name='kAUNBandEQProperty_MaxNumberOfBands' value='2201'/>
+<enum name='kAUNBandEQProperty_NumberOfBands' value='2200'/>
+<enum name='kAUNetReceiveParam_NumParameters' value='1'/>
+<enum name='kAUNetReceiveParam_Status' value='0'/>
+<enum name='kAUNetReceiveProperty_Hostname' value='3511'/>
+<enum name='kAUNetReceiveProperty_Password' value='3512'/>
+<enum name='kAUNetSendNumPresetFormats' value='18'/>
+<enum name='kAUNetSendParam_NumParameters' value='1'/>
+<enum name='kAUNetSendParam_Status' value='0'/>
+<enum name='kAUNetSendPresetFormat_AAC_128kbpspc' value='7'/>
+<enum name='kAUNetSendPresetFormat_AAC_32kbpspc' value='13'/>
+<enum name='kAUNetSendPresetFormat_AAC_40kbpspc' value='12'/>
+<enum name='kAUNetSendPresetFormat_AAC_48kbpspc' value='11'/>
+<enum name='kAUNetSendPresetFormat_AAC_64kbpspc' value='10'/>
+<enum name='kAUNetSendPresetFormat_AAC_80kbpspc' value='9'/>
+<enum name='kAUNetSendPresetFormat_AAC_96kbpspc' value='8'/>
+<enum name='kAUNetSendPresetFormat_AAC_LD_32kbpspc' value='17'/>
+<enum name='kAUNetSendPresetFormat_AAC_LD_40kbpspc' value='16'/>
+<enum name='kAUNetSendPresetFormat_AAC_LD_48kbpspc' value='15'/>
+<enum name='kAUNetSendPresetFormat_AAC_LD_64kbpspc' value='14'/>
+<enum name='kAUNetSendPresetFormat_IMA4' value='6'/>
+<enum name='kAUNetSendPresetFormat_Lossless16' value='4'/>
+<enum name='kAUNetSendPresetFormat_Lossless24' value='3'/>
+<enum name='kAUNetSendPresetFormat_PCMFloat32' value='0'/>
+<enum name='kAUNetSendPresetFormat_PCMInt16' value='2'/>
+<enum name='kAUNetSendPresetFormat_PCMInt24' value='1'/>
+<enum name='kAUNetSendPresetFormat_ULaw' value='5'/>
+<enum name='kAUNetSendProperty_Disconnect' value='3517'/>
+<enum name='kAUNetSendProperty_Password' value='3518'/>
+<enum name='kAUNetSendProperty_PortNum' value='3513'/>
+<enum name='kAUNetSendProperty_ServiceName' value='3516'/>
+<enum name='kAUNetSendProperty_TransmissionFormat' value='3514'/>
+<enum name='kAUNetSendProperty_TransmissionFormatIndex' value='3515'/>
+<enum name='kAUNetStatus_Connected' value='1'/>
+<enum name='kAUNetStatus_Connecting' value='4'/>
+<enum name='kAUNetStatus_Listening' value='5'/>
+<enum name='kAUNetStatus_NotConnected' value='0'/>
+<enum name='kAUNetStatus_Overflow' value='2'/>
+<enum name='kAUNetStatus_Underflow' value='3'/>
+<enum name='kAUParameterMIDIMapping_AnyChannelFlag' value='1'/>
+<enum name='kAUParameterMIDIMapping_AnyNoteFlag' value='2'/>
+<enum name='kAUParameterMIDIMapping_Bipolar' value='16'/>
+<enum name='kAUParameterMIDIMapping_Bipolar_On' value='32'/>
+<enum name='kAUParameterMIDIMapping_SubRange' value='4'/>
+<enum name='kAUParameterMIDIMapping_Toggle' value='8'/>
+<enum name='kAUSamplerParam_CoarseTuning' value='901'/>
+<enum name='kAUSamplerParam_FineTuning' value='902'/>
+<enum name='kAUSamplerParam_Gain' value='900'/>
+<enum name='kAUSamplerParam_Pan' value='903'/>
+<enum name='kAUSamplerProperty_BankAndPreset' value='4100'/>
+<enum name='kAUSamplerProperty_LoadAudioFiles' value='4101'/>
+<enum name='kAUSamplerProperty_LoadInstrument' value='4102'/>
+<enum name='kAUSamplerProperty_LoadPresetFromBank' value='4100'/>
+<enum name='kAUSampler_DefaultBankLSB' value='0'/>
+<enum name='kAUSampler_DefaultMelodicBankMSB' value='121'/>
+<enum name='kAUSampler_DefaultPercussionBankMSB' value='120'/>
+<enum name='kAUVoiceIOErr_UnexpectedNumberOfInputChannels' value='-66784'/>
+<enum name='kAUVoiceIOProperty_BypassVoiceProcessing' value='2100'/>
+<enum name='kAUVoiceIOProperty_MuteOutput' value='2104'/>
+<enum name='kAUVoiceIOProperty_VoiceProcessingEnableAGC' value='2101'/>
+<enum name='kAUVoiceIOProperty_VoiceProcessingQuality' value='2103'/>
+<enum name='kAudioCodecAppendInputBufferListSelect' value='9'/>
+<enum name='kAudioCodecAppendInputDataSelect' value='6'/>
+<enum name='kAudioCodecBadPropertySizeError' value='561211770'/>
+<enum name='kAudioCodecBitRateControlMode_Constant' value='0'/>
+<enum name='kAudioCodecBitRateControlMode_LongTermAverage' value='1'/>
+<enum name='kAudioCodecBitRateControlMode_Variable' value='3'/>
+<enum name='kAudioCodecBitRateControlMode_VariableConstrained' value='2'/>
+<enum name='kAudioCodecBitRateFormat' value='1633903206'/>
+<enum name='kAudioCodecBitRateFormat_ABR' value='1'/>
+<enum name='kAudioCodecBitRateFormat_CBR' value='0'/>
+<enum name='kAudioCodecBitRateFormat_VBR' value='2'/>
+<enum name='kAudioCodecDelayMode_Compatibility' value='0'/>
+<enum name='kAudioCodecDelayMode_Minimum' value='1'/>
+<enum name='kAudioCodecDelayMode_Optimal' value='2'/>
+<enum name='kAudioCodecDoesSampleRateConversion' value='1819112035'/>
+<enum name='kAudioCodecExtendFrequencies' value='1633903974'/>
+<enum name='kAudioCodecGetPropertyInfoSelect' value='1'/>
+<enum name='kAudioCodecGetPropertySelect' value='2'/>
+<enum name='kAudioCodecIllegalOperationError' value='1852797029'/>
+<enum name='kAudioCodecInitializeSelect' value='4'/>
+<enum name='kAudioCodecInputFormatsForOutputFormat' value='1768305775'/>
+<enum name='kAudioCodecNoError' value='0'/>
+<enum name='kAudioCodecNotEnoughBufferSpaceError' value='560100710'/>
+<enum name='kAudioCodecOutputFormatsForInputFormat' value='1868969065'/>
+<enum name='kAudioCodecOutputPrecedence' value='1869639794'/>
+<enum name='kAudioCodecOutputPrecedenceBitRate' value='1'/>
+<enum name='kAudioCodecOutputPrecedenceNone' value='0'/>
+<enum name='kAudioCodecOutputPrecedenceSampleRate' value='2'/>
+<enum name='kAudioCodecPrimeMethod_None' value='2'/>
+<enum name='kAudioCodecPrimeMethod_Normal' value='1'/>
+<enum name='kAudioCodecPrimeMethod_Pre' value='0'/>
+<enum name='kAudioCodecProduceOutputBufferListSelect' value='10'/>
+<enum name='kAudioCodecProduceOutputDataSelect' value='7'/>
+<enum name='kAudioCodecProduceOutputPacketAtEOF' value='5'/>
+<enum name='kAudioCodecProduceOutputPacketFailure' value='1'/>
+<enum name='kAudioCodecProduceOutputPacketNeedsMoreInputData' value='4'/>
+<enum name='kAudioCodecProduceOutputPacketSuccess' value='2'/>
+<enum name='kAudioCodecProduceOutputPacketSuccessHasMore' value='3'/>
+<enum name='kAudioCodecPropertyAdjustLocalQuality' value='1584488812'/>
+<enum name='kAudioCodecPropertyApplicableBitRateRange' value='1651668065'/>
+<enum name='kAudioCodecPropertyApplicableInputSampleRates' value='1769173601'/>
+<enum name='kAudioCodecPropertyApplicableOutputSampleRates' value='1869836897'/>
+<enum name='kAudioCodecPropertyAvailableBitRateRange' value='1633841780'/>
+<enum name='kAudioCodecPropertyAvailableBitRates' value='1651668003'/>
+<enum name='kAudioCodecPropertyAvailableInputChannelLayoutTags' value='1634296684'/>
+<enum name='kAudioCodecPropertyAvailableInputChannelLayouts' value='1634296684'/>
+<enum name='kAudioCodecPropertyAvailableInputSampleRates' value='1634300786'/>
+<enum name='kAudioCodecPropertyAvailableNumberChannels' value='1668116067'/>
+<enum name='kAudioCodecPropertyAvailableOutputChannelLayoutTags' value='1634689900'/>
+<enum name='kAudioCodecPropertyAvailableOutputChannelLayouts' value='1634689900'/>
+<enum name='kAudioCodecPropertyAvailableOutputSampleRates' value='1634694002'/>
+<enum name='kAudioCodecPropertyBitRateControlMode' value='1633903206'/>
+<enum name='kAudioCodecPropertyCurrentInputChannelLayout' value='1768123424'/>
+<enum name='kAudioCodecPropertyCurrentInputFormat' value='1768320372'/>
+<enum name='kAudioCodecPropertyCurrentInputSampleRate' value='1667855218'/>
+<enum name='kAudioCodecPropertyCurrentOutputChannelLayout' value='1868786720'/>
+<enum name='kAudioCodecPropertyCurrentOutputFormat' value='1868983668'/>
+<enum name='kAudioCodecPropertyCurrentOutputSampleRate' value='1668248434'/>
+<enum name='kAudioCodecPropertyCurrentTargetBitRate' value='1651663220'/>
+<enum name='kAudioCodecPropertyDelayMode' value='1684893540'/>
+<enum name='kAudioCodecPropertyDoesSampleRateConversion' value='1819112035'/>
+<enum name='kAudioCodecPropertyDynamicRangeControlMode' value='1835299427'/>
+<enum name='kAudioCodecPropertyFormatCFString' value='1818652530'/>
+<enum name='kAudioCodecPropertyFormatInfo' value='1633904233'/>
+<enum name='kAudioCodecPropertyFormatList' value='1633904236'/>
+<enum name='kAudioCodecPropertyHasVariablePacketByteSizes' value='1987078975'/>
+<enum name='kAudioCodecPropertyInputBufferSize' value='1952609638'/>
+<enum name='kAudioCodecPropertyInputChannelLayout' value='1768123424'/>
+<enum name='kAudioCodecPropertyInputFormatsForOutputFormat' value='1768305775'/>
+<enum name='kAudioCodecPropertyIsInitialized' value='1768843636'/>
+<enum name='kAudioCodecPropertyMagicCookie' value='1802857321'/>
+<enum name='kAudioCodecPropertyManufacturerCFString' value='1819107691'/>
+<enum name='kAudioCodecPropertyMaximumPacketByteSize' value='1885432674'/>
+<enum name='kAudioCodecPropertyMinimumDelayMode' value='1835296108'/>
+<enum name='kAudioCodecPropertyMinimumNumberInputPackets' value='1835952496'/>
+<enum name='kAudioCodecPropertyMinimumNumberOutputPackets' value='1835954032'/>
+<enum name='kAudioCodecPropertyNameCFString' value='1819173229'/>
+<enum name='kAudioCodecPropertyOutputChannelLayout' value='1868786720'/>
+<enum name='kAudioCodecPropertyOutputFormatsForInputFormat' value='1868969065'/>
+<enum name='kAudioCodecPropertyPacketFrameSize' value='1885432678'/>
+<enum name='kAudioCodecPropertyPacketSizeLimitForVBR' value='1885432684'/>
+<enum name='kAudioCodecPropertyPaddedZeros' value='1885430832'/>
+<enum name='kAudioCodecPropertyPrimeInfo' value='1886546285'/>
+<enum name='kAudioCodecPropertyPrimeMethod' value='1886547309'/>
+<enum name='kAudioCodecPropertyProgramTargetLevel' value='1886418028'/>
+<enum name='kAudioCodecPropertyProgramTargetLevelConstant' value='1886678115'/>
+<enum name='kAudioCodecPropertyQualitySetting' value='1936876401'/>
+<enum name='kAudioCodecPropertyRecommendedBitRateRange' value='1651668082'/>
+<enum name='kAudioCodecPropertyRequiresPacketDescription' value='1885432676'/>
+<enum name='kAudioCodecPropertySettings' value='1633907488'/>
+<enum name='kAudioCodecPropertySoundQualityForVBR' value='1986163313'/>
+<enum name='kAudioCodecPropertySupportedInputFormats' value='1768320291'/>
+<enum name='kAudioCodecPropertySupportedOutputFormats' value='1868983587'/>
+<enum name='kAudioCodecPropertyUsedInputBufferSize' value='1969386854'/>
+<enum name='kAudioCodecPropertyZeroFramesPadded' value='1885430832'/>
+<enum name='kAudioCodecQuality_High' value='96'/>
+<enum name='kAudioCodecQuality_Low' value='32'/>
+<enum name='kAudioCodecQuality_Max' value='127'/>
+<enum name='kAudioCodecQuality_Medium' value='64'/>
+<enum name='kAudioCodecQuality_Min' value='0'/>
+<enum name='kAudioCodecResetSelect' value='8'/>
+<enum name='kAudioCodecSetPropertySelect' value='3'/>
+<enum name='kAudioCodecStateError' value='561214580'/>
+<enum name='kAudioCodecUninitializeSelect' value='5'/>
+<enum name='kAudioCodecUnknownPropertyError' value='2003332927'/>
+<enum name='kAudioCodecUnspecifiedError' value='2003329396'/>
+<enum name='kAudioCodecUnsupportedFormatError' value='560226676'/>
+<enum name='kAudioCodecUseRecommendedSampleRate' value='1970434930'/>
+<enum name='kAudioComponentErr_InstanceInvalidated' value='-66749'/>
+<enum name='kAudioComponentFlag_CanLoadInProcess' value='16'/>
+<enum name='kAudioComponentFlag_IsV3AudioUnit' value='4'/>
+<enum name='kAudioComponentFlag_RequiresAsyncInstantiation' value='8'/>
+<enum name='kAudioComponentFlag_SandboxSafe' value='2'/>
+<enum name='kAudioComponentFlag_Unsearchable' value='1'/>
+<enum name='kAudioComponentInstantiation_LoadInProcess' value='2'/>
+<enum name='kAudioComponentInstantiation_LoadOutOfProcess' value='1'/>
+<enum name='kAudioComponentValidationResult_Failed' value='2'/>
+<enum name='kAudioComponentValidationResult_Passed' value='1'/>
+<enum name='kAudioComponentValidationResult_TimedOut' value='3'/>
+<enum name='kAudioComponentValidationResult_UnauthorizedError_Init' value='5'/>
+<enum name='kAudioComponentValidationResult_UnauthorizedError_Open' value='4'/>
+<enum name='kAudioComponentValidationResult_Unknown' value='0'/>
+<enum name='kAudioDecoderComponentType' value='1633969507'/>
+<enum name='kAudioEncoderComponentType' value='1634037347'/>
+<enum name='kAudioOfflineUnitProperty_InputSize' value='3020'/>
+<enum name='kAudioOfflineUnitProperty_OutputSize' value='3021'/>
+<enum name='kAudioOfflineUnitRenderAction_Complete' value='128'/>
+<enum name='kAudioOfflineUnitRenderAction_Preflight' value='32'/>
+<enum name='kAudioOfflineUnitRenderAction_Render' value='64'/>
+<enum name='kAudioOutputUnitProperty_ChannelMap' value='2002'/>
+<enum name='kAudioOutputUnitProperty_CurrentDevice' value='2000'/>
+<enum name='kAudioOutputUnitProperty_EnableIO' value='2003'/>
+<enum name='kAudioOutputUnitProperty_HasIO' value='2006'/>
+<enum name='kAudioOutputUnitProperty_IsRunning' value='2001'/>
+<enum name='kAudioOutputUnitProperty_SetInputCallback' value='2005'/>
+<enum name='kAudioOutputUnitProperty_StartTime' value='2004'/>
+<enum name='kAudioOutputUnitProperty_StartTimestampsAtZero' value='2007'/>
+<enum name='kAudioOutputUnitRange' value='512'/>
+<enum name='kAudioOutputUnitStartSelect' value='513'/>
+<enum name='kAudioOutputUnitStopSelect' value='514'/>
+<enum name='kAudioSettingsFlags_ExpertParameter' value='1'/>
+<enum name='kAudioSettingsFlags_InvisibleParameter' value='2'/>
+<enum name='kAudioSettingsFlags_MetaParameter' value='4'/>
+<enum name='kAudioSettingsFlags_UserInterfaceParameter' value='8'/>
+<enum name='kAudioUnitAddPropertyListenerSelect' value='10'/>
+<enum name='kAudioUnitAddRenderNotifySelect' value='15'/>
+<enum name='kAudioUnitCarbonViewComponentType' value='1635087991'/>
+<enum name='kAudioUnitCarbonViewCreateSelect' value='769'/>
+<enum name='kAudioUnitCarbonViewEvent_MouseDownInControl' value='0'/>
+<enum name='kAudioUnitCarbonViewEvent_MouseUpInControl' value='1'/>
+<enum name='kAudioUnitCarbonViewRange' value='768'/>
+<enum name='kAudioUnitCarbonViewSetEventListenerSelect' value='770'/>
+<enum name='kAudioUnitClumpID_System' value='0'/>
+<enum name='kAudioUnitComplexRenderSelect' value='19'/>
+<enum name='kAudioUnitErr_CannotDoInCurrentContext' value='-10863'/>
+<enum name='kAudioUnitErr_FailedInitialization' value='-10875'/>
+<enum name='kAudioUnitErr_FileNotSpecified' value='-10869'/>
+<enum name='kAudioUnitErr_FormatNotSupported' value='-10868'/>
+<enum name='kAudioUnitErr_IllegalInstrument' value='-10873'/>
+<enum name='kAudioUnitErr_Initialized' value='-10849'/>
+<enum name='kAudioUnitErr_InstrumentTypeNotFound' value='-10872'/>
+<enum name='kAudioUnitErr_InvalidElement' value='-10877'/>
+<enum name='kAudioUnitErr_InvalidFile' value='-10871'/>
+<enum name='kAudioUnitErr_InvalidOfflineRender' value='-10848'/>
+<enum name='kAudioUnitErr_InvalidParameter' value='-10878'/>
+<enum name='kAudioUnitErr_InvalidProperty' value='-10879'/>
+<enum name='kAudioUnitErr_InvalidPropertyValue' value='-10851'/>
+<enum name='kAudioUnitErr_InvalidScope' value='-10866'/>
+<enum name='kAudioUnitErr_NoConnection' value='-10876'/>
+<enum name='kAudioUnitErr_PropertyNotInUse' value='-10850'/>
+<enum name='kAudioUnitErr_PropertyNotWritable' value='-10865'/>
+<enum name='kAudioUnitErr_TooManyFramesToProcess' value='-10874'/>
+<enum name='kAudioUnitErr_Unauthorized' value='-10847'/>
+<enum name='kAudioUnitErr_Uninitialized' value='-10867'/>
+<enum name='kAudioUnitErr_UnknownFileType' value='-10870'/>
+<enum name='kAudioUnitGetParameterSelect' value='6'/>
+<enum name='kAudioUnitGetPropertyInfoSelect' value='3'/>
+<enum name='kAudioUnitGetPropertySelect' value='4'/>
+<enum name='kAudioUnitInitializeSelect' value='1'/>
+<enum name='kAudioUnitManufacturer_Apple' value='1634758764'/>
+<enum name='kAudioUnitMigrateProperty_FromPlugin' value='4000'/>
+<enum name='kAudioUnitMigrateProperty_OldAutomation' value='4001'/>
+<enum name='kAudioUnitOfflineProperty_InputSize' value='3020'/>
+<enum name='kAudioUnitOfflineProperty_OutputSize' value='3021'/>
+<enum name='kAudioUnitOfflineProperty_PreflightName' value='3024'/>
+<enum name='kAudioUnitOfflineProperty_PreflightRequirements' value='3023'/>
+<enum name='kAudioUnitOfflineProperty_StartOffset' value='3022'/>
+<enum name='kAudioUnitParameterFlag_CFNameRelease' value='16'/>
+<enum name='kAudioUnitParameterFlag_CanRamp' value='33554432'/>
+<enum name='kAudioUnitParameterFlag_DisplayCubeRoot' value='262144'/>
+<enum name='kAudioUnitParameterFlag_DisplayCubed' value='196608'/>
+<enum name='kAudioUnitParameterFlag_DisplayExponential' value='327680'/>
+<enum name='kAudioUnitParameterFlag_DisplayLogarithmic' value='4194304'/>
+<enum name='kAudioUnitParameterFlag_DisplayMask' value='4653056'/>
+<enum name='kAudioUnitParameterFlag_DisplaySquareRoot' value='65536'/>
+<enum name='kAudioUnitParameterFlag_DisplaySquared' value='131072'/>
+<enum name='kAudioUnitParameterFlag_ExpertMode' value='67108864'/>
+<enum name='kAudioUnitParameterFlag_Global' value='1'/>
+<enum name='kAudioUnitParameterFlag_Group' value='8'/>
+<enum name='kAudioUnitParameterFlag_HasCFNameString' value='134217728'/>
+<enum name='kAudioUnitParameterFlag_HasClump' value='1048576'/>
+<enum name='kAudioUnitParameterFlag_HasName' value='2097152'/>
+<enum name='kAudioUnitParameterFlag_Input' value='2'/>
+<enum name='kAudioUnitParameterFlag_IsElementMeta' value='536870912'/>
+<enum name='kAudioUnitParameterFlag_IsGlobalMeta' value='268435456'/>
+<enum name='kAudioUnitParameterFlag_IsHighResolution' value='8388608'/>
+<enum name='kAudioUnitParameterFlag_IsReadable' value='1073741824'/>
+<enum name='kAudioUnitParameterFlag_IsWritable' value='2147483648'/>
+<enum name='kAudioUnitParameterFlag_MeterReadOnly' value='32768'/>
+<enum name='kAudioUnitParameterFlag_NonRealTime' value='16777216'/>
+<enum name='kAudioUnitParameterFlag_OmitFromPresets' value='8192'/>
+<enum name='kAudioUnitParameterFlag_Output' value='4'/>
+<enum name='kAudioUnitParameterFlag_PlotHistory' value='16384'/>
+<enum name='kAudioUnitParameterFlag_ValuesHaveStrings' value='2097152'/>
+<enum name='kAudioUnitParameterName_Full' value='-1'/>
+<enum name='kAudioUnitParameterUnit_AbsoluteCents' value='20'/>
+<enum name='kAudioUnitParameterUnit_BPM' value='22'/>
+<enum name='kAudioUnitParameterUnit_Beats' value='23'/>
+<enum name='kAudioUnitParameterUnit_Boolean' value='2'/>
+<enum name='kAudioUnitParameterUnit_Cents' value='9'/>
+<enum name='kAudioUnitParameterUnit_CustomUnit' value='26'/>
+<enum name='kAudioUnitParameterUnit_Decibels' value='13'/>
+<enum name='kAudioUnitParameterUnit_Degrees' value='15'/>
+<enum name='kAudioUnitParameterUnit_EqualPowerCrossfade' value='16'/>
+<enum name='kAudioUnitParameterUnit_Generic' value='0'/>
+<enum name='kAudioUnitParameterUnit_Hertz' value='8'/>
+<enum name='kAudioUnitParameterUnit_Indexed' value='1'/>
+<enum name='kAudioUnitParameterUnit_LinearGain' value='14'/>
+<enum name='kAudioUnitParameterUnit_MIDIController' value='12'/>
+<enum name='kAudioUnitParameterUnit_MIDINoteNumber' value='11'/>
+<enum name='kAudioUnitParameterUnit_Meters' value='19'/>
+<enum name='kAudioUnitParameterUnit_Milliseconds' value='24'/>
+<enum name='kAudioUnitParameterUnit_MixerFaderCurve1' value='17'/>
+<enum name='kAudioUnitParameterUnit_Octaves' value='21'/>
+<enum name='kAudioUnitParameterUnit_Pan' value='18'/>
+<enum name='kAudioUnitParameterUnit_Percent' value='3'/>
+<enum name='kAudioUnitParameterUnit_Phase' value='6'/>
+<enum name='kAudioUnitParameterUnit_Rate' value='7'/>
+<enum name='kAudioUnitParameterUnit_Ratio' value='25'/>
+<enum name='kAudioUnitParameterUnit_RelativeSemiTones' value='10'/>
+<enum name='kAudioUnitParameterUnit_SampleFrames' value='5'/>
+<enum name='kAudioUnitParameterUnit_Seconds' value='4'/>
+<enum name='kAudioUnitProcessMultipleSelect' value='21'/>
+<enum name='kAudioUnitProcessSelect' value='20'/>
+<enum name='kAudioUnitProperty_3DMixerAttenuationCurve' value='3013'/>
+<enum name='kAudioUnitProperty_3DMixerDistanceAtten' value='3004'/>
+<enum name='kAudioUnitProperty_3DMixerDistanceParams' value='3010'/>
+<enum name='kAudioUnitProperty_3DMixerRenderingFlags' value='3003'/>
+<enum name='kAudioUnitProperty_AUHostIdentifier' value='46'/>
+<enum name='kAudioUnitProperty_AddParameterMIDIMapping' value='42'/>
+<enum name='kAudioUnitProperty_AllParameterMIDIMappings' value='41'/>
+<enum name='kAudioUnitProperty_AudioChannelLayout' value='19'/>
+<enum name='kAudioUnitProperty_BusCount' value='11'/>
+<enum name='kAudioUnitProperty_BypassEffect' value='21'/>
+<enum name='kAudioUnitProperty_CPULoad' value='6'/>
+<enum name='kAudioUnitProperty_ClassInfo' value='0'/>
+<enum name='kAudioUnitProperty_ClassInfoFromDocument' value='50'/>
+<enum name='kAudioUnitProperty_CocoaUI' value='31'/>
+<enum name='kAudioUnitProperty_ContextName' value='25'/>
+<enum name='kAudioUnitProperty_CurrentPlayTime' value='3302'/>
+<enum name='kAudioUnitProperty_CurrentPreset' value='28'/>
+<enum name='kAudioUnitProperty_DeferredRendererExtraLatency' value='3321'/>
+<enum name='kAudioUnitProperty_DeferredRendererPullSize' value='3320'/>
+<enum name='kAudioUnitProperty_DeferredRendererWaitFrames' value='3322'/>
+<enum name='kAudioUnitProperty_DependentParameters' value='45'/>
+<enum name='kAudioUnitProperty_DistanceAttenuationData' value='3600'/>
+<enum name='kAudioUnitProperty_DopplerShift' value='3002'/>
+<enum name='kAudioUnitProperty_ElementCount' value='11'/>
+<enum name='kAudioUnitProperty_ElementName' value='30'/>
+<enum name='kAudioUnitProperty_FactoryPresets' value='24'/>
+<enum name='kAudioUnitProperty_FastDispatch' value='5'/>
+<enum name='kAudioUnitProperty_FrequencyResponse' value='52'/>
+<enum name='kAudioUnitProperty_GetUIComponentList' value='18'/>
+<enum name='kAudioUnitProperty_HostCallbacks' value='27'/>
+<enum name='kAudioUnitProperty_HotMapParameterMIDIMapping' value='44'/>
+<enum name='kAudioUnitProperty_IconLocation' value='39'/>
+<enum name='kAudioUnitProperty_InPlaceProcessing' value='29'/>
+<enum name='kAudioUnitProperty_InputSamplesInOutput' value='49'/>
+<enum name='kAudioUnitProperty_LastRenderError' value='22'/>
+<enum name='kAudioUnitProperty_Latency' value='12'/>
+<enum name='kAudioUnitProperty_MIDIControlMapping' value='17'/>
+<enum name='kAudioUnitProperty_MIDIOutputCallback' value='48'/>
+<enum name='kAudioUnitProperty_MIDIOutputCallbackInfo' value='47'/>
+<enum name='kAudioUnitProperty_MakeConnection' value='1'/>
+<enum name='kAudioUnitProperty_MatrixDimensions' value='3009'/>
+<enum name='kAudioUnitProperty_MatrixLevels' value='3006'/>
+<enum name='kAudioUnitProperty_MaximumFramesPerSlice' value='14'/>
+<enum name='kAudioUnitProperty_MeterClipping' value='3011'/>
+<enum name='kAudioUnitProperty_MeteringMode' value='3007'/>
+<enum name='kAudioUnitProperty_NickName' value='54'/>
+<enum name='kAudioUnitProperty_OfflineRender' value='37'/>
+<enum name='kAudioUnitProperty_PannerMode' value='3008'/>
+<enum name='kAudioUnitProperty_ParameterClumpName' value='35'/>
+<enum name='kAudioUnitProperty_ParameterHistoryInfo' value='53'/>
+<enum name='kAudioUnitProperty_ParameterIDName' value='34'/>
+<enum name='kAudioUnitProperty_ParameterInfo' value='4'/>
+<enum name='kAudioUnitProperty_ParameterList' value='3'/>
+<enum name='kAudioUnitProperty_ParameterStringFromValue' value='33'/>
+<enum name='kAudioUnitProperty_ParameterValueFromString' value='38'/>
+<enum name='kAudioUnitProperty_ParameterValueName' value='33'/>
+<enum name='kAudioUnitProperty_ParameterValueStrings' value='16'/>
+<enum name='kAudioUnitProperty_ParametersForOverview' value='57'/>
+<enum name='kAudioUnitProperty_PresentPreset' value='36'/>
+<enum name='kAudioUnitProperty_PresentationLatency' value='40'/>
+<enum name='kAudioUnitProperty_RemoveParameterMIDIMapping' value='43'/>
+<enum name='kAudioUnitProperty_RenderQuality' value='26'/>
+<enum name='kAudioUnitProperty_RequestViewController' value='56'/>
+<enum name='kAudioUnitProperty_ReverbPreset' value='3012'/>
+<enum name='kAudioUnitProperty_ReverbRoomType' value='10'/>
+<enum name='kAudioUnitProperty_SRCAlgorithm' value='9'/>
+<enum name='kAudioUnitProperty_SampleRate' value='2'/>
+<enum name='kAudioUnitProperty_SampleRateConverterComplexity' value='3014'/>
+<enum name='kAudioUnitProperty_ScheduleAudioSlice' value='3300'/>
+<enum name='kAudioUnitProperty_ScheduleStartTimeStamp' value='3301'/>
+<enum name='kAudioUnitProperty_ScheduledFileBufferSizeFrames' value='3313'/>
+<enum name='kAudioUnitProperty_ScheduledFileIDs' value='3310'/>
+<enum name='kAudioUnitProperty_ScheduledFileNumberBuffers' value='3314'/>
+<enum name='kAudioUnitProperty_ScheduledFilePrime' value='3312'/>
+<enum name='kAudioUnitProperty_ScheduledFileRegion' value='3311'/>
+<enum name='kAudioUnitProperty_SetExternalBuffer' value='15'/>
+<enum name='kAudioUnitProperty_SetRenderCallback' value='23'/>
+<enum name='kAudioUnitProperty_ShouldAllocateBuffer' value='51'/>
+<enum name='kAudioUnitProperty_SpatialMixerAttenuationCurve' value='3013'/>
+<enum name='kAudioUnitProperty_SpatialMixerDistanceParams' value='3010'/>
+<enum name='kAudioUnitProperty_SpatialMixerRenderingFlags' value='3003'/>
+<enum name='kAudioUnitProperty_SpatializationAlgorithm' value='3000'/>
+<enum name='kAudioUnitProperty_SpeakerConfiguration' value='3001'/>
+<enum name='kAudioUnitProperty_StreamFormat' value='8'/>
+<enum name='kAudioUnitProperty_SupportedChannelLayoutTags' value='32'/>
+<enum name='kAudioUnitProperty_SupportedNumChannels' value='13'/>
+<enum name='kAudioUnitProperty_TailTime' value='20'/>
+<enum name='kAudioUnitProperty_UsesInternalReverb' value='1005'/>
+<enum name='kAudioUnitRange' value='0'/>
+<enum name='kAudioUnitRemovePropertyListenerSelect' value='11'/>
+<enum name='kAudioUnitRemovePropertyListenerWithUserDataSelect' value='18'/>
+<enum name='kAudioUnitRemoveRenderNotifySelect' value='16'/>
+<enum name='kAudioUnitRenderAction_DoNotCheckRenderArgs' value='512'/>
+<enum name='kAudioUnitRenderAction_OutputIsSilence' value='16'/>
+<enum name='kAudioUnitRenderAction_PostRender' value='8'/>
+<enum name='kAudioUnitRenderAction_PostRenderError' value='256'/>
+<enum name='kAudioUnitRenderAction_PreRender' value='4'/>
+<enum name='kAudioUnitRenderSelect' value='14'/>
+<enum name='kAudioUnitResetSelect' value='9'/>
+<enum name='kAudioUnitSRCAlgorithm_MediumQuality' value='1668510307'/>
+<enum name='kAudioUnitSRCAlgorithm_Polyphase' value='1886350457'/>
+<enum name='kAudioUnitSampleRateConverterComplexity_Linear' value='1818848869'/>
+<enum name='kAudioUnitSampleRateConverterComplexity_Mastering' value='1650553971'/>
+<enum name='kAudioUnitSampleRateConverterComplexity_Normal' value='1852797549'/>
+<enum name='kAudioUnitScheduleParametersSelect' value='17'/>
+<enum name='kAudioUnitScope_Global' value='0'/>
+<enum name='kAudioUnitScope_Group' value='3'/>
+<enum name='kAudioUnitScope_Input' value='1'/>
+<enum name='kAudioUnitScope_Layer' value='6'/>
+<enum name='kAudioUnitScope_LayerItem' value='7'/>
+<enum name='kAudioUnitScope_Note' value='5'/>
+<enum name='kAudioUnitScope_Output' value='2'/>
+<enum name='kAudioUnitScope_Part' value='4'/>
+<enum name='kAudioUnitSetParameterSelect' value='7'/>
+<enum name='kAudioUnitSetPropertySelect' value='5'/>
+<enum name='kAudioUnitSubType_3DMixer' value='862219640'/>
+<enum name='kAudioUnitSubType_AUConverter' value='1668247158'/>
+<enum name='kAudioUnitSubType_AUFilter' value='1718185076'/>
+<enum name='kAudioUnitSubType_AUiPodTimeOther' value='1768977519'/>
+<enum name='kAudioUnitSubType_AudioFilePlayer' value='1634103404'/>
+<enum name='kAudioUnitSubType_BandPassFilter' value='1651532147'/>
+<enum name='kAudioUnitSubType_DLSSynth' value='1684828960'/>
+<enum name='kAudioUnitSubType_DefaultOutput' value='1684366880'/>
+<enum name='kAudioUnitSubType_DeferredRenderer' value='1684366962'/>
+<enum name='kAudioUnitSubType_Delay' value='1684368505'/>
+<enum name='kAudioUnitSubType_Distortion' value='1684632436'/>
+<enum name='kAudioUnitSubType_DynamicsProcessor' value='1684237680'/>
+<enum name='kAudioUnitSubType_GenericOutput' value='1734700658'/>
+<enum name='kAudioUnitSubType_GraphicEQ' value='1735550321'/>
+<enum name='kAudioUnitSubType_HALOutput' value='1634230636'/>
+<enum name='kAudioUnitSubType_HRTFPanner' value='1752331366'/>
+<enum name='kAudioUnitSubType_HighPassFilter' value='1752195443'/>
+<enum name='kAudioUnitSubType_HighShelfFilter' value='1752393830'/>
+<enum name='kAudioUnitSubType_LowPassFilter' value='1819304307'/>
+<enum name='kAudioUnitSubType_LowShelfFilter' value='1819502694'/>
+<enum name='kAudioUnitSubType_MIDISynth' value='1836284270'/>
+<enum name='kAudioUnitSubType_MatrixMixer' value='1836608888'/>
+<enum name='kAudioUnitSubType_MatrixReverb' value='1836213622'/>
+<enum name='kAudioUnitSubType_Merger' value='1835364967'/>
+<enum name='kAudioUnitSubType_MultiBandCompressor' value='1835232624'/>
+<enum name='kAudioUnitSubType_MultiChannelMixer' value='1835232632'/>
+<enum name='kAudioUnitSubType_MultiSplitter' value='1836281964'/>
+<enum name='kAudioUnitSubType_NBandEQ' value='1851942257'/>
+<enum name='kAudioUnitSubType_NetReceive' value='1852990326'/>
+<enum name='kAudioUnitSubType_NetSend' value='1853058660'/>
+<enum name='kAudioUnitSubType_NewTimePitch' value='1853191280'/>
+<enum name='kAudioUnitSubType_ParametricEQ' value='1886217585'/>
+<enum name='kAudioUnitSubType_PeakLimiter' value='1819112562'/>
+<enum name='kAudioUnitSubType_Pitch' value='1953329268'/>
+<enum name='kAudioUnitSubType_RogerBeep' value='1919903602'/>
+<enum name='kAudioUnitSubType_RoundTripAAC' value='1918984547'/>
+<enum name='kAudioUnitSubType_SampleDelay' value='1935961209'/>
+<enum name='kAudioUnitSubType_Sampler' value='1935764848'/>
+<enum name='kAudioUnitSubType_ScheduledSoundPlayer' value='1936945260'/>
+<enum name='kAudioUnitSubType_SoundFieldPanner' value='1634558569'/>
+<enum name='kAudioUnitSubType_SpatialMixer' value='862217581'/>
+<enum name='kAudioUnitSubType_SphericalHeadPanner' value='1936746610'/>
+<enum name='kAudioUnitSubType_Splitter' value='1936747636'/>
+<enum name='kAudioUnitSubType_StereoMixer' value='1936554098'/>
+<enum name='kAudioUnitSubType_SystemOutput' value='1937339168'/>
+<enum name='kAudioUnitSubType_TimePitch' value='1953329268'/>
+<enum name='kAudioUnitSubType_Varispeed' value='1986097769'/>
+<enum name='kAudioUnitSubType_VectorPanner' value='1986158963'/>
+<enum name='kAudioUnitSubType_VoiceProcessingIO' value='1987078511'/>
+<enum name='kAudioUnitType_Effect' value='1635083896'/>
+<enum name='kAudioUnitType_FormatConverter' value='1635083875'/>
+<enum name='kAudioUnitType_Generator' value='1635084142'/>
+<enum name='kAudioUnitType_MIDIProcessor' value='1635085673'/>
+<enum name='kAudioUnitType_Mixer' value='1635085688'/>
+<enum name='kAudioUnitType_MusicDevice' value='1635085685'/>
+<enum name='kAudioUnitType_MusicEffect' value='1635085670'/>
+<enum name='kAudioUnitType_OfflineEffect' value='1635086188'/>
+<enum name='kAudioUnitType_Output' value='1635086197'/>
+<enum name='kAudioUnitType_Panner' value='1635086446'/>
+<enum name='kAudioUnitUninitializeSelect' value='2'/>
+<enum name='kAudioUnityCodecComponentType' value='1633903715'/>
+<enum name='kBandpassParam_Bandwidth' value='1'/>
+<enum name='kBandpassParam_CenterFrequency' value='0'/>
+<enum name='kDelayParam_DelayTime' value='1'/>
+<enum name='kDelayParam_Feedback' value='2'/>
+<enum name='kDelayParam_LopassCutoff' value='3'/>
+<enum name='kDelayParam_WetDryMix' value='0'/>
+<enum name='kDistortionParam_CubicTerm' value='8'/>
+<enum name='kDistortionParam_Decay' value='1'/>
+<enum name='kDistortionParam_Decimation' value='3'/>
+<enum name='kDistortionParam_DecimationMix' value='5'/>
+<enum name='kDistortionParam_Delay' value='0'/>
+<enum name='kDistortionParam_DelayMix' value='2'/>
+<enum name='kDistortionParam_FinalMix' value='15'/>
+<enum name='kDistortionParam_LinearTerm' value='6'/>
+<enum name='kDistortionParam_PolynomialMix' value='9'/>
+<enum name='kDistortionParam_RingModBalance' value='12'/>
+<enum name='kDistortionParam_RingModFreq1' value='10'/>
+<enum name='kDistortionParam_RingModFreq2' value='11'/>
+<enum name='kDistortionParam_RingModMix' value='13'/>
+<enum name='kDistortionParam_Rounding' value='4'/>
+<enum name='kDistortionParam_SoftClipGain' value='14'/>
+<enum name='kDistortionParam_SquaredTerm' value='7'/>
+<enum name='kDynamicRangeControlMode_Heavy' value='2'/>
+<enum name='kDynamicRangeControlMode_Light' value='1'/>
+<enum name='kDynamicRangeControlMode_None' value='0'/>
+<enum name='kDynamicsProcessorParam_AttackTime' value='4'/>
+<enum name='kDynamicsProcessorParam_CompressionAmount' value='1000'/>
+<enum name='kDynamicsProcessorParam_ExpansionRatio' value='2'/>
+<enum name='kDynamicsProcessorParam_ExpansionThreshold' value='3'/>
+<enum name='kDynamicsProcessorParam_HeadRoom' value='1'/>
+<enum name='kDynamicsProcessorParam_InputAmplitude' value='2000'/>
+<enum name='kDynamicsProcessorParam_MasterGain' value='6'/>
+<enum name='kDynamicsProcessorParam_OutputAmplitude' value='3000'/>
+<enum name='kDynamicsProcessorParam_ReleaseTime' value='5'/>
+<enum name='kDynamicsProcessorParam_Threshold' value='0'/>
+<enum name='kGraphicEQParam_NumberOfBands' value='10000'/>
+<enum name='kHALOutputParam_Volume' value='14'/>
+<enum name='kHighShelfParam_CutOffFrequency' value='0'/>
+<enum name='kHighShelfParam_Gain' value='1'/>
+<enum name='kHintAdvanced' value='1'/>
+<enum name='kHintBasic' value='0'/>
+<enum name='kHintHidden' value='2'/>
+<enum name='kHipassParam_CutoffFrequency' value='0'/>
+<enum name='kHipassParam_Resonance' value='1'/>
+<enum name='kInstrumentType_AUPreset' value='2'/>
+<enum name='kInstrumentType_Audiofile' value='3'/>
+<enum name='kInstrumentType_DLSPreset' value='1'/>
+<enum name='kInstrumentType_EXS24' value='4'/>
+<enum name='kInstrumentType_SF2Preset' value='1'/>
+<enum name='kLimiterParam_AttackTime' value='0'/>
+<enum name='kLimiterParam_DecayTime' value='1'/>
+<enum name='kLimiterParam_PreGain' value='2'/>
+<enum name='kLowPassParam_CutoffFrequency' value='0'/>
+<enum name='kLowPassParam_Resonance' value='1'/>
+<enum name='kMatrixMixerParam_Enable' value='1'/>
+<enum name='kMatrixMixerParam_PostAveragePower' value='3000'/>
+<enum name='kMatrixMixerParam_PostAveragePowerLinear' value='7000'/>
+<enum name='kMatrixMixerParam_PostPeakHoldLevel' value='4000'/>
+<enum name='kMatrixMixerParam_PostPeakHoldLevelLinear' value='8000'/>
+<enum name='kMatrixMixerParam_PreAveragePower' value='1000'/>
+<enum name='kMatrixMixerParam_PreAveragePowerLinear' value='5000'/>
+<enum name='kMatrixMixerParam_PrePeakHoldLevel' value='2000'/>
+<enum name='kMatrixMixerParam_PrePeakHoldLevelLinear' value='6000'/>
+<enum name='kMatrixMixerParam_Volume' value='0'/>
+<enum name='kMultiChannelMixerParam_Enable' value='1'/>
+<enum name='kMultiChannelMixerParam_Pan' value='2'/>
+<enum name='kMultiChannelMixerParam_PostAveragePower' value='3000'/>
+<enum name='kMultiChannelMixerParam_PostPeakHoldLevel' value='4000'/>
+<enum name='kMultiChannelMixerParam_PreAveragePower' value='1000'/>
+<enum name='kMultiChannelMixerParam_PrePeakHoldLevel' value='2000'/>
+<enum name='kMultiChannelMixerParam_Volume' value='0'/>
+<enum name='kMultibandCompressorParam_AttackTime' value='13'/>
+<enum name='kMultibandCompressorParam_CompressionAmount1' value='1000'/>
+<enum name='kMultibandCompressorParam_CompressionAmount2' value='2000'/>
+<enum name='kMultibandCompressorParam_CompressionAmount3' value='3000'/>
+<enum name='kMultibandCompressorParam_CompressionAmount4' value='4000'/>
+<enum name='kMultibandCompressorParam_Crossover1' value='2'/>
+<enum name='kMultibandCompressorParam_Crossover2' value='3'/>
+<enum name='kMultibandCompressorParam_Crossover3' value='4'/>
+<enum name='kMultibandCompressorParam_EQ1' value='15'/>
+<enum name='kMultibandCompressorParam_EQ2' value='16'/>
+<enum name='kMultibandCompressorParam_EQ3' value='17'/>
+<enum name='kMultibandCompressorParam_EQ4' value='18'/>
+<enum name='kMultibandCompressorParam_Headroom1' value='9'/>
+<enum name='kMultibandCompressorParam_Headroom2' value='10'/>
+<enum name='kMultibandCompressorParam_Headroom3' value='11'/>
+<enum name='kMultibandCompressorParam_Headroom4' value='12'/>
+<enum name='kMultibandCompressorParam_InputAmplitude1' value='5000'/>
+<enum name='kMultibandCompressorParam_InputAmplitude2' value='6000'/>
+<enum name='kMultibandCompressorParam_InputAmplitude3' value='7000'/>
+<enum name='kMultibandCompressorParam_InputAmplitude4' value='8000'/>
+<enum name='kMultibandCompressorParam_OutputAmplitude1' value='9000'/>
+<enum name='kMultibandCompressorParam_OutputAmplitude2' value='10000'/>
+<enum name='kMultibandCompressorParam_OutputAmplitude3' value='11000'/>
+<enum name='kMultibandCompressorParam_OutputAmplitude4' value='12000'/>
+<enum name='kMultibandCompressorParam_Postgain' value='1'/>
+<enum name='kMultibandCompressorParam_Pregain' value='0'/>
+<enum name='kMultibandCompressorParam_ReleaseTime' value='14'/>
+<enum name='kMultibandCompressorParam_Threshold1' value='5'/>
+<enum name='kMultibandCompressorParam_Threshold2' value='6'/>
+<enum name='kMultibandCompressorParam_Threshold3' value='7'/>
+<enum name='kMultibandCompressorParam_Threshold4' value='8'/>
+<enum name='kMultibandFilter_Bandwidth1' value='5'/>
+<enum name='kMultibandFilter_Bandwidth2' value='8'/>
+<enum name='kMultibandFilter_Bandwidth3' value='11'/>
+<enum name='kMultibandFilter_CenterFreq1' value='3'/>
+<enum name='kMultibandFilter_CenterFreq2' value='6'/>
+<enum name='kMultibandFilter_CenterFreq3' value='9'/>
+<enum name='kMultibandFilter_CenterGain1' value='4'/>
+<enum name='kMultibandFilter_CenterGain2' value='7'/>
+<enum name='kMultibandFilter_CenterGain3' value='10'/>
+<enum name='kMultibandFilter_HighFilterType' value='12'/>
+<enum name='kMultibandFilter_HighFrequency' value='13'/>
+<enum name='kMultibandFilter_HighGain' value='14'/>
+<enum name='kMultibandFilter_LowFilterType' value='0'/>
+<enum name='kMultibandFilter_LowFrequency' value='1'/>
+<enum name='kMultibandFilter_LowGain' value='2'/>
+<enum name='kMusicDeviceMIDIEventSelect' value='257'/>
+<enum name='kMusicDeviceParam_ReverbVolume' value='2'/>
+<enum name='kMusicDeviceParam_Tuning' value='0'/>
+<enum name='kMusicDeviceParam_Volume' value='1'/>
+<enum name='kMusicDevicePrepareInstrumentSelect' value='259'/>
+<enum name='kMusicDeviceProperty_BankName' value='1007'/>
+<enum name='kMusicDeviceProperty_DualSchedulingMode' value='1013'/>
+<enum name='kMusicDeviceProperty_GroupOutputBus' value='1002'/>
+<enum name='kMusicDeviceProperty_InstrumentCount' value='1000'/>
+<enum name='kMusicDeviceProperty_InstrumentName' value='1001'/>
+<enum name='kMusicDeviceProperty_InstrumentNumber' value='1004'/>
+<enum name='kMusicDeviceProperty_MIDIXMLNames' value='1006'/>
+<enum name='kMusicDeviceProperty_PartGroup' value='1010'/>
+<enum name='kMusicDeviceProperty_SoundBankData' value='1008'/>
+<enum name='kMusicDeviceProperty_SoundBankFSRef' value='1012'/>
+<enum name='kMusicDeviceProperty_SoundBankFSSpec' value='1003'/>
+<enum name='kMusicDeviceProperty_SoundBankURL' value='1100'/>
+<enum name='kMusicDeviceProperty_StreamFromDisk' value='1011'/>
+<enum name='kMusicDeviceProperty_SupportsStartStopNote' value='1014'/>
+<enum name='kMusicDeviceProperty_UsesInternalReverb' value='1005'/>
+<enum name='kMusicDeviceRange' value='256'/>
+<enum name='kMusicDeviceReleaseInstrumentSelect' value='260'/>
+<enum name='kMusicDeviceSampleFrameMask_IsScheduled' value='16777216'/>
+<enum name='kMusicDeviceSampleFrameMask_SampleOffset' value='16777215'/>
+<enum name='kMusicDeviceStartNoteSelect' value='261'/>
+<enum name='kMusicDeviceStopNoteSelect' value='262'/>
+<enum name='kMusicDeviceSysExSelect' value='258'/>
+<enum name='kMusicNoteEvent_Unused' value='4294967295'/>
+<enum name='kMusicNoteEvent_UseGroupInstrument' value='4294967295'/>
+<enum name='kNewTimePitchParam_EnablePeakLocking' value='6'/>
+<enum name='kNewTimePitchParam_Overlap' value='4'/>
+<enum name='kNewTimePitchParam_Pitch' value='1'/>
+<enum name='kNewTimePitchParam_Rate' value='0'/>
+<enum name='kNumAUNBandEQFilterTypes' value='11'/>
+<enum name='kNumberOfResponseFrequencies' value='1024'/>
+<enum name='kOfflinePreflight_NotRequired' value='0'/>
+<enum name='kOfflinePreflight_Optional' value='1'/>
+<enum name='kOfflinePreflight_Required' value='2'/>
+<enum name='kOtherPluginFormat_AU' value='3'/>
+<enum name='kOtherPluginFormat_Undefined' value='0'/>
+<enum name='kOtherPluginFormat_kMAS' value='1'/>
+<enum name='kOtherPluginFormat_kVST' value='2'/>
+<enum name='kPannerParam_Azimuth' value='1'/>
+<enum name='kPannerParam_CoordScale' value='4'/>
+<enum name='kPannerParam_Distance' value='3'/>
+<enum name='kPannerParam_Elevation' value='2'/>
+<enum name='kPannerParam_Gain' value='0'/>
+<enum name='kPannerParam_RefDistance' value='5'/>
+<enum name='kParameterEvent_Immediate' value='1'/>
+<enum name='kParameterEvent_Ramped' value='2'/>
+<enum name='kParametricEQParam_CenterFreq' value='0'/>
+<enum name='kParametricEQParam_Gain' value='2'/>
+<enum name='kParametricEQParam_Q' value='1'/>
+<enum name='kProgramTargetLevel_Minus20dB' value='3'/>
+<enum name='kProgramTargetLevel_Minus23dB' value='2'/>
+<enum name='kProgramTargetLevel_Minus31dB' value='1'/>
+<enum name='kProgramTargetLevel_None' value='0'/>
+<enum name='kRandomParam_BoundA' value='0'/>
+<enum name='kRandomParam_BoundB' value='1'/>
+<enum name='kRandomParam_Curve' value='2'/>
+<enum name='kRenderQuality_High' value='96'/>
+<enum name='kRenderQuality_Low' value='32'/>
+<enum name='kRenderQuality_Max' value='127'/>
+<enum name='kRenderQuality_Medium' value='64'/>
+<enum name='kRenderQuality_Min' value='0'/>
+<enum name='kReverbParam_DryWetMix' value='0'/>
+<enum name='kReverbParam_FilterBandwidth' value='15'/>
+<enum name='kReverbParam_FilterEnable' value='18'/>
+<enum name='kReverbParam_FilterFrequency' value='14'/>
+<enum name='kReverbParam_FilterGain' value='16'/>
+<enum name='kReverbParam_FilterType' value='17'/>
+<enum name='kReverbParam_LargeBrightness' value='10'/>
+<enum name='kReverbParam_LargeDelay' value='5'/>
+<enum name='kReverbParam_LargeDelayRange' value='8'/>
+<enum name='kReverbParam_LargeDensity' value='7'/>
+<enum name='kReverbParam_LargeSize' value='3'/>
+<enum name='kReverbParam_ModulationDepth' value='13'/>
+<enum name='kReverbParam_ModulationRate' value='12'/>
+<enum name='kReverbParam_PreDelay' value='4'/>
+<enum name='kReverbParam_SmallBrightness' value='9'/>
+<enum name='kReverbParam_SmallDelayRange' value='11'/>
+<enum name='kReverbParam_SmallDensity' value='6'/>
+<enum name='kReverbParam_SmallLargeMix' value='1'/>
+<enum name='kReverbParam_SmallSize' value='2'/>
+<enum name='kReverbRoomType_Cathedral' value='8'/>
+<enum name='kReverbRoomType_LargeChamber' value='7'/>
+<enum name='kReverbRoomType_LargeHall' value='4'/>
+<enum name='kReverbRoomType_LargeHall2' value='12'/>
+<enum name='kReverbRoomType_LargeRoom' value='2'/>
+<enum name='kReverbRoomType_LargeRoom2' value='9'/>
+<enum name='kReverbRoomType_MediumChamber' value='6'/>
+<enum name='kReverbRoomType_MediumHall' value='3'/>
+<enum name='kReverbRoomType_MediumHall2' value='10'/>
+<enum name='kReverbRoomType_MediumHall3' value='11'/>
+<enum name='kReverbRoomType_MediumRoom' value='1'/>
+<enum name='kReverbRoomType_Plate' value='5'/>
+<enum name='kReverbRoomType_SmallRoom' value='0'/>
+<enum name='kRogerBeepParam_InGateThreshold' value='0'/>
+<enum name='kRogerBeepParam_InGateThresholdTime' value='1'/>
+<enum name='kRogerBeepParam_OutGateThreshold' value='2'/>
+<enum name='kRogerBeepParam_OutGateThresholdTime' value='3'/>
+<enum name='kRogerBeepParam_RogerGain' value='6'/>
+<enum name='kRogerBeepParam_RogerType' value='5'/>
+<enum name='kRogerBeepParam_Sensitivity' value='4'/>
+<enum name='kRoundTripAACParam_BitRate' value='1'/>
+<enum name='kRoundTripAACParam_CompressedFormatSampleRate' value='3'/>
+<enum name='kRoundTripAACParam_EncodingStrategy' value='1'/>
+<enum name='kRoundTripAACParam_Format' value='0'/>
+<enum name='kRoundTripAACParam_Quality' value='2'/>
+<enum name='kRoundTripAACParam_RateOrQuality' value='2'/>
+<enum name='kScheduledAudioSliceFlag_BeganToRender' value='2'/>
+<enum name='kScheduledAudioSliceFlag_BeganToRenderLate' value='4'/>
+<enum name='kScheduledAudioSliceFlag_Complete' value='1'/>
+<enum name='kScheduledAudioSliceFlag_Interrupt' value='16'/>
+<enum name='kScheduledAudioSliceFlag_InterruptAtLoop' value='32'/>
+<enum name='kScheduledAudioSliceFlag_Loop' value='8'/>
+<enum name='kSpatialMixerAttenuationCurve_Exponential' value='1'/>
+<enum name='kSpatialMixerAttenuationCurve_Inverse' value='2'/>
+<enum name='kSpatialMixerAttenuationCurve_Linear' value='3'/>
+<enum name='kSpatialMixerAttenuationCurve_Power' value='0'/>
+<enum name='kSpatialMixerParam_Azimuth' value='0'/>
+<enum name='kSpatialMixerParam_Distance' value='2'/>
+<enum name='kSpatialMixerParam_Elevation' value='1'/>
+<enum name='kSpatialMixerParam_Enable' value='5'/>
+<enum name='kSpatialMixerParam_Gain' value='3'/>
+<enum name='kSpatialMixerParam_GlobalReverbGain' value='9'/>
+<enum name='kSpatialMixerParam_MaxGain' value='7'/>
+<enum name='kSpatialMixerParam_MinGain' value='6'/>
+<enum name='kSpatialMixerParam_ObstructionAttenuation' value='11'/>
+<enum name='kSpatialMixerParam_OcclusionAttenuation' value='10'/>
+<enum name='kSpatialMixerParam_PlaybackRate' value='4'/>
+<enum name='kSpatialMixerParam_ReverbBlend' value='8'/>
+<enum name='kSpatialMixerRenderingFlags_DistanceAttenuation' value='4'/>
+<enum name='kSpatialMixerRenderingFlags_InterAuralDelay' value='1'/>
+<enum name='kSpatializationAlgorithm_EqualPowerPanning' value='0'/>
+<enum name='kSpatializationAlgorithm_HRTF' value='2'/>
+<enum name='kSpatializationAlgorithm_SoundField' value='3'/>
+<enum name='kSpatializationAlgorithm_SphericalHead' value='1'/>
+<enum name='kSpatializationAlgorithm_StereoPassThrough' value='5'/>
+<enum name='kSpatializationAlgorithm_VectorBasedPanning' value='4'/>
+<enum name='kSpeakerConfiguration_5_0' value='3'/>
+<enum name='kSpeakerConfiguration_5_1' value='3'/>
+<enum name='kSpeakerConfiguration_HeadPhones' value='0'/>
+<enum name='kSpeakerConfiguration_Quad' value='2'/>
+<enum name='kSpeakerConfiguration_Stereo' value='1'/>
+<enum name='kStereoMixerParam_Pan' value='1'/>
+<enum name='kStereoMixerParam_PostAveragePower' value='3000'/>
+<enum name='kStereoMixerParam_PostPeakHoldLevel' value='4000'/>
+<enum name='kStereoMixerParam_PreAveragePower' value='1000'/>
+<enum name='kStereoMixerParam_PrePeakHoldLevel' value='2000'/>
+<enum name='kStereoMixerParam_Volume' value='0'/>
+<enum name='kTimePitchParam_EffectBlend' value='2'/>
+<enum name='kTimePitchParam_Pitch' value='1'/>
+<enum name='kTimePitchParam_Rate' value='0'/>
+<enum name='kVarispeedParam_PlaybackCents' value='1'/>
+<enum name='kVarispeedParam_PlaybackRate' value='0'/>
+<function name='AudioCodecAppendInputBufferList'>
+<arg declared_type='AudioCodec _Nonnull' name='inCodec' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg const='true' declared_type='AudioBufferList * _Nonnull' name='inBufferList' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg declared_type='UInt32 * _Nonnull' name='ioNumberPackets' type='^I'/>
+<arg const='true' declared_type='AudioStreamPacketDescription * _Nullable' name='inPacketDescription' type='^{AudioStreamPacketDescription=qII}'/>
+<arg declared_type='UInt32 * _Nonnull' name='outBytesConsumed' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioCodecAppendInputData'>
+<arg declared_type='AudioCodec _Nonnull' name='inCodec' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg const='true' declared_type='void * _Nonnull' name='inInputData' type='^v'/>
+<arg declared_type='UInt32 * _Nonnull' name='ioInputDataByteSize' type='^I'/>
+<arg declared_type='UInt32 * _Nonnull' name='ioNumberPackets' type='^I'/>
+<arg const='true' declared_type='AudioStreamPacketDescription * _Nullable' name='inPacketDescription' type='^{AudioStreamPacketDescription=qII}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioCodecGetProperty'>
+<arg declared_type='AudioCodec _Nonnull' name='inCodec' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AudioCodecPropertyID' name='inPropertyID' type='L' type64='I'/>
+<arg declared_type='UInt32 * _Nonnull' name='ioPropertyDataSize' type='^I'/>
+<arg declared_type='void * _Nonnull' name='outPropertyData' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioCodecGetPropertyInfo'>
+<arg declared_type='AudioCodec _Nonnull' name='inCodec' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AudioCodecPropertyID' name='inPropertyID' type='L' type64='I'/>
+<arg declared_type='UInt32 * _Nullable' name='outSize' type='^I'/>
+<arg declared_type='Boolean * _Nullable' name='outWritable' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioCodecInitialize'>
+<arg declared_type='AudioCodec _Nonnull' name='inCodec' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg const='true' declared_type='AudioStreamBasicDescription * _Nullable' name='inInputFormat' type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg const='true' declared_type='AudioStreamBasicDescription * _Nullable' name='inOutputFormat' type='^{AudioStreamBasicDescription=dIIIIIIII}'/>
+<arg const='true' declared_type='void * _Nullable' name='inMagicCookie' type='^v'/>
+<arg declared_type='UInt32' name='inMagicCookieByteSize' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioCodecProduceOutputBufferList'>
+<arg declared_type='AudioCodec _Nonnull' name='inCodec' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AudioBufferList * _Nonnull' name='ioBufferList' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg declared_type='UInt32 * _Nonnull' name='ioNumberPackets' type='^I'/>
+<arg declared_type='AudioStreamPacketDescription * _Nullable' name='outPacketDescription' type='^{AudioStreamPacketDescription=qII}'/>
+<arg declared_type='UInt32 * _Nonnull' name='outStatus' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioCodecProduceOutputPackets'>
+<arg declared_type='AudioCodec _Nonnull' name='inCodec' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='void * _Nonnull' name='outOutputData' type='^v'/>
+<arg declared_type='UInt32 * _Nonnull' name='ioOutputDataByteSize' type='^I'/>
+<arg declared_type='UInt32 * _Nonnull' name='ioNumberPackets' type='^I'/>
+<arg declared_type='AudioStreamPacketDescription * _Nullable' name='outPacketDescription' type='^{AudioStreamPacketDescription=qII}'/>
+<arg declared_type='UInt32 * _Nonnull' name='outStatus' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioCodecReset'>
+<arg declared_type='AudioCodec _Nonnull' name='inCodec' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioCodecSetProperty'>
+<arg declared_type='AudioCodec _Nonnull' name='inCodec' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AudioCodecPropertyID' name='inPropertyID' type='L' type64='I'/>
+<arg declared_type='UInt32' name='inPropertyDataSize' type='L' type64='I'/>
+<arg const='true' declared_type='void * _Nonnull' name='inPropertyData' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioCodecUninitialize'>
+<arg declared_type='AudioCodec _Nonnull' name='inCodec' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioComponentCopyConfigurationInfo'>
+<arg declared_type='AudioComponent _Nonnull' name='inComponent' type='^{OpaqueAudioComponent=}'/>
+<arg declared_type='CFDictionaryRef _Nullable * _Nonnull' name='outConfigurationInfo' type='^^{__CFDictionary}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioComponentCopyName'>
+<arg declared_type='AudioComponent _Nonnull' name='inComponent' type='^{OpaqueAudioComponent=}'/>
+<arg declared_type='CFStringRef _Nullable * _Nonnull' name='outName' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioComponentCount'>
+<arg const='true' declared_type='AudioComponentDescription * _Nonnull' name='inDesc' type='^{AudioComponentDescription=IIIII}'/>
+<retval declared_type='UInt32' type='L' type64='I'/>
+</function>
+<function name='AudioComponentFindNext'>
+<arg declared_type='AudioComponent _Nullable' name='inComponent' type='^{OpaqueAudioComponent=}'/>
+<arg const='true' declared_type='AudioComponentDescription * _Nonnull' name='inDesc' type='^{AudioComponentDescription=IIIII}'/>
+<retval declared_type='AudioComponent _Nullable' type='^{OpaqueAudioComponent=}'/>
+</function>
+<function name='AudioComponentGetDescription'>
+<arg declared_type='AudioComponent _Nonnull' name='inComponent' type='^{OpaqueAudioComponent=}'/>
+<arg declared_type='AudioComponentDescription * _Nonnull' name='outDesc' type='^{AudioComponentDescription=IIIII}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioComponentGetIcon'>
+<arg declared_type='AudioComponent _Nonnull' name='comp' type='^{OpaqueAudioComponent=}'/>
+<retval declared_type='NSImage * _Nullable' type='@'/>
+</function>
+<function name='AudioComponentGetVersion'>
+<arg declared_type='AudioComponent _Nonnull' name='inComponent' type='^{OpaqueAudioComponent=}'/>
+<arg declared_type='UInt32 * _Nonnull' name='outVersion' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioComponentInstanceCanDo'>
+<arg declared_type='AudioComponentInstance _Nonnull' name='inInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='SInt16' name='inSelectorID' type='s'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='AudioComponentInstanceDispose'>
+<arg declared_type='AudioComponentInstance _Nonnull' name='inInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioComponentInstanceGetComponent'>
+<arg declared_type='AudioComponentInstance _Nonnull' name='inInstance' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<retval declared_type='AudioComponent _Nonnull' type='^{OpaqueAudioComponent=}'/>
+</function>
+<function name='AudioComponentInstanceNew'>
+<arg declared_type='AudioComponent _Nonnull' name='inComponent' type='^{OpaqueAudioComponent=}'/>
+<arg declared_type='AudioComponentInstance _Nullable * _Nonnull' name='outInstance' type='^^{ComponentInstanceRecord}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioComponentInstantiate'>
+<arg declared_type='AudioComponent _Nonnull' name='inComponent' type='^{OpaqueAudioComponent=}'/>
+<arg declared_type='AudioComponentInstantiationOptions' name='inOptions' type='L' type64='I'/>
+<arg declared_type='void (^ _Nonnull)(AudioComponentInstance _Nullable, OSStatus)' function_pointer='true' name='inCompletionHandler' type='@?'>
+<arg declared_type='AudioComponentInstance _Nullable' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='OSStatus' type='l' type64='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='AudioComponentRegister'>
+<arg const='true' declared_type='AudioComponentDescription * _Nonnull' name='inDesc' type='^{AudioComponentDescription=IIIII}'/>
+<arg declared_type='CFStringRef _Nonnull' name='inName' type='^{__CFString=}'/>
+<arg declared_type='UInt32' name='inVersion' type='L' type64='I'/>
+<arg declared_type='AudioComponentFactoryFunction _Nonnull' function_pointer='true' name='inFactory' type='^?'>
+<arg const='true' declared_type='AudioComponentDescription * _Nonnull' type='^{AudioComponentDescription=IIIII}'/>
+<retval declared_type='AudioComponentPlugInInterface * _Nullable' type='^{AudioComponentPlugInInterface=^?^?^?^v}'/>
+</arg>
+<retval declared_type='AudioComponent _Nonnull' type='^{OpaqueAudioComponent=}'/>
+</function>
+<function name='AudioComponentValidate'>
+<arg declared_type='AudioComponent _Nonnull' name='inComponent' type='^{OpaqueAudioComponent=}'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='inValidationParameters' type='^{__CFDictionary=}'/>
+<arg declared_type='AudioComponentValidationResult * _Nonnull' name='outValidationResult' type='^L' type64='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioOutputUnitStart'>
+<arg declared_type='AudioUnit _Nonnull' name='ci' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioOutputUnitStop'>
+<arg declared_type='AudioUnit _Nonnull' name='ci' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioUnitAddPropertyListener'>
+<arg declared_type='AudioUnit _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AudioUnitPropertyID' name='inID' type='L' type64='I'/>
+<arg declared_type='AudioUnitPropertyListenerProc _Nonnull' function_pointer='true' name='inProc' type='^?'>
+<arg declared_type='void * _Nonnull' type='^v'/>
+<arg declared_type='AudioUnit _Nonnull' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AudioUnitPropertyID' type='L' type64='I'/>
+<arg declared_type='AudioUnitScope' type='L' type64='I'/>
+<arg declared_type='AudioUnitElement' type='L' type64='I'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='void * _Nullable' name='inProcUserData' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioUnitAddRenderNotify'>
+<arg declared_type='AudioUnit _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AURenderCallback _Nonnull' function_pointer='true' name='inProc' type='^?'>
+<arg declared_type='void * _Nonnull' type='^v'/>
+<arg declared_type='AudioUnitRenderActionFlags * _Nonnull' type='^L' type64='^I'/>
+<arg const='true' declared_type='AudioTimeStamp * _Nonnull' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='AudioBufferList * _Nullable' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</arg>
+<arg declared_type='void * _Nullable' name='inProcUserData' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioUnitCarbonViewCreate'>
+<arg declared_type='AudioUnitCarbonView' name='inView' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AudioUnit' name='inAudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='WindowRef' name='inWindow' type='^{OpaqueWindowPtr=}'/>
+<arg declared_type='ControlRef' name='inParentControl' type='^{OpaqueControlRef=}'/>
+<arg const='true' declared_type='Float32Point*' name='inLocation' type='^{Float32Point=ff}'/>
+<arg const='true' declared_type='Float32Point*' name='inSize' type='^{Float32Point=ff}'/>
+<arg declared_type='ControlRef*' name='outControl' type='^^{OpaqueControlRef}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioUnitGetParameter'>
+<arg declared_type='AudioUnit _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AudioUnitParameterID' name='inID' type='L' type64='I'/>
+<arg declared_type='AudioUnitScope' name='inScope' type='L' type64='I'/>
+<arg declared_type='AudioUnitElement' name='inElement' type='L' type64='I'/>
+<arg declared_type='AudioUnitParameterValue * _Nonnull' name='outValue' type='^f'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioUnitGetProperty'>
+<arg declared_type='AudioUnit _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AudioUnitPropertyID' name='inID' type='L' type64='I'/>
+<arg declared_type='AudioUnitScope' name='inScope' type='L' type64='I'/>
+<arg declared_type='AudioUnitElement' name='inElement' type='L' type64='I'/>
+<arg declared_type='void * _Nonnull' name='outData' type='^v'/>
+<arg declared_type='UInt32 * _Nonnull' name='ioDataSize' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioUnitGetPropertyInfo'>
+<arg declared_type='AudioUnit _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AudioUnitPropertyID' name='inID' type='L' type64='I'/>
+<arg declared_type='AudioUnitScope' name='inScope' type='L' type64='I'/>
+<arg declared_type='AudioUnitElement' name='inElement' type='L' type64='I'/>
+<arg declared_type='UInt32 * _Nullable' name='outDataSize' type='^I'/>
+<arg declared_type='Boolean * _Nullable' name='outWritable' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioUnitInitialize'>
+<arg declared_type='AudioUnit _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioUnitProcess'>
+<arg declared_type='AudioUnit _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AudioUnitRenderActionFlags * _Nullable' name='ioActionFlags' type='^L' type64='^I'/>
+<arg const='true' declared_type='AudioTimeStamp * _Nonnull' name='inTimeStamp' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='UInt32' name='inNumberFrames' type='L' type64='I'/>
+<arg declared_type='AudioBufferList * _Nonnull' name='ioData' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioUnitProcessMultiple'>
+<arg declared_type='AudioUnit _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AudioUnitRenderActionFlags * _Nullable' name='ioActionFlags' type='^L' type64='^I'/>
+<arg const='true' declared_type='AudioTimeStamp * _Nonnull' name='inTimeStamp' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='UInt32' name='inNumberFrames' type='L' type64='I'/>
+<arg declared_type='UInt32' name='inNumberInputBufferLists' type='L' type64='I'/>
+<arg const='true' declared_type='AudioBufferList * _Nonnull * _Nonnull' name='inInputBufferLists' type='^^{AudioBufferList}'/>
+<arg declared_type='UInt32' name='inNumberOutputBufferLists' type='L' type64='I'/>
+<arg declared_type='AudioBufferList * _Nonnull * _Nonnull' name='ioOutputBufferLists' type='^^{AudioBufferList}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioUnitRemovePropertyListenerWithUserData'>
+<arg declared_type='AudioUnit _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AudioUnitPropertyID' name='inID' type='L' type64='I'/>
+<arg declared_type='AudioUnitPropertyListenerProc _Nonnull' function_pointer='true' name='inProc' type='^?'>
+<arg declared_type='void * _Nonnull' type='^v'/>
+<arg declared_type='AudioUnit _Nonnull' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AudioUnitPropertyID' type='L' type64='I'/>
+<arg declared_type='AudioUnitScope' type='L' type64='I'/>
+<arg declared_type='AudioUnitElement' type='L' type64='I'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='void * _Nullable' name='inProcUserData' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioUnitRemoveRenderNotify'>
+<arg declared_type='AudioUnit _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AURenderCallback _Nonnull' function_pointer='true' name='inProc' type='^?'>
+<arg declared_type='void * _Nonnull' type='^v'/>
+<arg declared_type='AudioUnitRenderActionFlags * _Nonnull' type='^L' type64='^I'/>
+<arg const='true' declared_type='AudioTimeStamp * _Nonnull' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type='AudioBufferList * _Nullable' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</arg>
+<arg declared_type='void * _Nullable' name='inProcUserData' type='^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioUnitRender'>
+<arg declared_type='AudioUnit _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AudioUnitRenderActionFlags * _Nullable' name='ioActionFlags' type='^L' type64='^I'/>
+<arg const='true' declared_type='AudioTimeStamp * _Nonnull' name='inTimeStamp' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='UInt32' name='inOutputBusNumber' type='L' type64='I'/>
+<arg declared_type='UInt32' name='inNumberFrames' type='L' type64='I'/>
+<arg declared_type='AudioBufferList * _Nonnull' name='ioData' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioUnitReset'>
+<arg declared_type='AudioUnit _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AudioUnitScope' name='inScope' type='L' type64='I'/>
+<arg declared_type='AudioUnitElement' name='inElement' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioUnitScheduleParameters'>
+<arg declared_type='AudioUnit _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg const='true' declared_type='AudioUnitParameterEvent * _Nonnull' name='inParameterEvent' type='^{AudioUnitParameterEvent=IIIL(?={?=iIff}{?=If})}' type64='^{AudioUnitParameterEvent=IIII(?={?=iIff}{?=If})}'/>
+<arg declared_type='UInt32' name='inNumParamEvents' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioUnitSetParameter'>
+<arg declared_type='AudioUnit _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AudioUnitParameterID' name='inID' type='L' type64='I'/>
+<arg declared_type='AudioUnitScope' name='inScope' type='L' type64='I'/>
+<arg declared_type='AudioUnitElement' name='inElement' type='L' type64='I'/>
+<arg declared_type='AudioUnitParameterValue' name='inValue' type='f'/>
+<arg declared_type='UInt32' name='inBufferOffsetInFrames' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioUnitSetProperty'>
+<arg declared_type='AudioUnit _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='AudioUnitPropertyID' name='inID' type='L' type64='I'/>
+<arg declared_type='AudioUnitScope' name='inScope' type='L' type64='I'/>
+<arg declared_type='AudioUnitElement' name='inElement' type='L' type64='I'/>
+<arg const='true' declared_type='void * _Nullable' name='inData' type='^v'/>
+<arg declared_type='UInt32' name='inDataSize' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='AudioUnitUninitialize'>
+<arg declared_type='AudioUnit _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function inline='true' name='GetAudioUnitParameterDisplayType'>
+<arg declared_type='AudioUnitParameterOptions' name='flags' type='L' type64='I'/>
+<retval declared_type='AudioUnitParameterOptions' type='L' type64='I'/>
+</function>
+<function name='MusicDeviceMIDIEvent'>
+<arg declared_type='MusicDeviceComponent _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='UInt32' name='inStatus' type='L' type64='I'/>
+<arg declared_type='UInt32' name='inData1' type='L' type64='I'/>
+<arg declared_type='UInt32' name='inData2' type='L' type64='I'/>
+<arg declared_type='UInt32' name='inOffsetSampleFrame' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='MusicDevicePrepareInstrument'>
+<arg declared_type='MusicDeviceComponent _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='MusicDeviceInstrumentID' name='inInstrument' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='MusicDeviceReleaseInstrument'>
+<arg declared_type='MusicDeviceComponent _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='MusicDeviceInstrumentID' name='inInstrument' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='MusicDeviceStartNote'>
+<arg declared_type='MusicDeviceComponent _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='MusicDeviceInstrumentID' name='inInstrument' type='L' type64='I'/>
+<arg declared_type='MusicDeviceGroupID' name='inGroupID' type='L' type64='I'/>
+<arg declared_type='NoteInstanceID * _Nonnull' name='outNoteInstanceID' type='^I'/>
+<arg declared_type='UInt32' name='inOffsetSampleFrame' type='L' type64='I'/>
+<arg const='true' declared_type='MusicDeviceNoteParams * _Nonnull' name='inParams' type='^{MusicDeviceNoteParams=Iff[1{NoteParamsControlValue=If}]}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='MusicDeviceStopNote'>
+<arg declared_type='MusicDeviceComponent _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='MusicDeviceGroupID' name='inGroupID' type='L' type64='I'/>
+<arg declared_type='NoteInstanceID' name='inNoteInstanceID' type='L' type64='I'/>
+<arg declared_type='UInt32' name='inOffsetSampleFrame' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='MusicDeviceSysEx'>
+<arg declared_type='MusicDeviceComponent _Nonnull' name='inUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg const='true' declared_type='UInt8 * _Nonnull' name='inData' type='*'/>
+<arg declared_type='UInt32' name='inLength' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function inline='true' name='SetAudioUnitParameterDisplayType'>
+<arg declared_type='AudioUnitParameterOptions' name='flags' type='L' type64='I'/>
+<arg declared_type='AudioUnitParameterOptions' name='displayType' type='L' type64='I'/>
+<retval declared_type='AudioUnitParameterOptions' type='L' type64='I'/>
+</function>
+<class name='AUAudioUnit'>
+<method selector='allParameterValues'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='allocateRenderResourcesAndReturnError:'>
+<arg declared_type='NSError * _Nullable * _Nullable' index='0' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='audioUnitName'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='canPerformInput'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='canPerformOutput'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='canProcessInPlace'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='channelCapabilities'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='component'>
+<retval declared_type='AudioComponent _Nonnull' type='^{OpaqueAudioComponent=}'/>
+</method>
+<method selector='componentDescription'>
+<retval declared_type='AudioComponentDescription' type='{AudioComponentDescription=IIIII}'/>
+</method>
+<method selector='componentName'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='componentVersion'>
+<retval declared_type='uint32_t' type='I'/>
+</method>
+<method selector='contextName'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='currentPreset'>
+<retval declared_type='AUAudioUnitPreset * _Nullable' type='@'/>
+</method>
+<method selector='deallocateRenderResources'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='deviceID'>
+<retval declared_type='AudioObjectID' type='L' type64='I'/>
+</method>
+<method selector='factoryPresets'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='fullState'>
+<retval declared_type='NSDictionary * _Nullable' type='@'/>
+</method>
+<method selector='fullStateForDocument'>
+<retval declared_type='NSDictionary * _Nullable' type='@'/>
+</method>
+<method selector='initWithComponentDescription:error:'>
+<arg declared_type='AudioComponentDescription' index='0' name='componentDescription' type='{AudioComponentDescription=IIIII}'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='1' name='outError' type='^@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='initWithComponentDescription:options:error:'>
+<arg declared_type='AudioComponentDescription' index='0' name='componentDescription' type='{AudioComponentDescription=IIIII}'/>
+<arg declared_type='AudioComponentInstantiationOptions' index='1' name='options' type='L' type64='I'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='2' name='outError' type='^@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='inputBusses'>
+<retval declared_type='AUAudioUnitBusArray * _Nonnull' type='@'/>
+</method>
+<method selector='inputHandler'>
+<retval declared_type='AUInputHandler _Nullable' function_pointer='true' type='@?'>
+<arg declared_type='AudioUnitRenderActionFlags * _Nonnull' type='^L' type64='^I'/>
+<arg const='true' declared_type='AudioTimeStamp * _Nonnull' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='AUAudioFrameCount' type='I'/>
+<arg declared_type='NSInteger' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method class_method='true' selector='instantiateWithComponentDescription:options:completionHandler:'>
+<arg declared_type='AudioComponentDescription' index='0' name='componentDescription' type='{AudioComponentDescription=IIIII}'/>
+<arg declared_type='AudioComponentInstantiationOptions' index='1' name='options' type='L' type64='I'/>
+<arg declared_type='void (^ _Nonnull)(AUAudioUnit * _Nullable, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='AUAudioUnit * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='internalRenderBlock'>
+<retval declared_type='AUInternalRenderBlock _Nonnull' function_pointer='true' type='@?'>
+<arg declared_type='AudioUnitRenderActionFlags * _Nonnull' type='^L' type64='^I'/>
+<arg const='true' declared_type='AudioTimeStamp * _Nonnull' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='AUAudioFrameCount' type='I'/>
+<arg declared_type='NSInteger' type='i' type64='q'/>
+<arg declared_type='AudioBufferList * _Nonnull' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type='AURenderEvent * _Nullable' type='^(AURenderEvent={AURenderEventHeader=^(AURenderEvent)qCC}{AUParameterEvent=^(AURenderEvent)qC[3C]IQf}{AUMIDIEvent=^(AURenderEvent)qCCSC[3C]})'/>
+<arg declared_type='AURenderPullInputBlock _Nullable' function_pointer='true' type='@?'>
+<arg declared_type='AudioUnitRenderActionFlags * _Nonnull' type='^L' type64='^I'/>
+<arg const='true' declared_type='AudioTimeStamp * _Nonnull' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='AUAudioFrameCount' type='I'/>
+<arg declared_type='NSInteger' type='i' type64='q'/>
+<arg declared_type='AudioBufferList * _Nonnull' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval declared_type='AUAudioUnitStatus' type='l' type64='i'/>
+</arg>
+<retval declared_type='AUAudioUnitStatus' type='l' type64='i'/>
+</retval>
+</method>
+<method selector='isInputEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isMusicDeviceOrEffect'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isOutputEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isRenderingOffline'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='latency'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='manufacturerName'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='maximumFramesToRender'>
+<retval declared_type='AUAudioFrameCount' type='I'/>
+</method>
+<method selector='musicalContextBlock'>
+<retval declared_type='AUHostMusicalContextBlock _Nullable' function_pointer='true' type='@?'>
+<arg declared_type='double * _Nullable' type='^d'/>
+<arg declared_type='double * _Nullable' type='^d'/>
+<arg declared_type='NSInteger * _Nullable' type='^i' type64='^q'/>
+<arg declared_type='double * _Nullable' type='^d'/>
+<arg declared_type='NSInteger * _Nullable' type='^i' type64='^q'/>
+<arg declared_type='double * _Nullable' type='^d'/>
+<retval declared_type='BOOL' type='B'/>
+</retval>
+</method>
+<method selector='outputBusses'>
+<retval declared_type='AUAudioUnitBusArray * _Nonnull' type='@'/>
+</method>
+<method selector='outputProvider'>
+<retval declared_type='AURenderPullInputBlock _Nullable' function_pointer='true' type='@?'>
+<arg declared_type='AudioUnitRenderActionFlags * _Nonnull' type='^L' type64='^I'/>
+<arg const='true' declared_type='AudioTimeStamp * _Nonnull' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='AUAudioFrameCount' type='I'/>
+<arg declared_type='NSInteger' type='i' type64='q'/>
+<arg declared_type='AudioBufferList * _Nonnull' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval declared_type='AUAudioUnitStatus' type='l' type64='i'/>
+</retval>
+</method>
+<method selector='parameterTree'>
+<retval declared_type='AUParameterTree * _Nullable' type='@'/>
+</method>
+<method selector='parametersForOverviewWithCount:'>
+<arg declared_type='NSInteger' index='0' name='count' type='i' type64='q'/>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method class_method='true' selector='registerSubclass:asComponentDescription:name:version:'>
+<arg declared_type='Class _Nonnull' index='0' name='cls' type='#'/>
+<arg declared_type='AudioComponentDescription' index='1' name='componentDescription' type='{AudioComponentDescription=IIIII}'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='name' type='@'/>
+<arg declared_type='UInt32' index='3' name='version' type='L' type64='I'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeRenderObserver:'>
+<arg declared_type='NSInteger' index='0' name='token' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='renderBlock'>
+<retval declared_type='AURenderBlock _Nonnull' function_pointer='true' type='@?'>
+<arg declared_type='AudioUnitRenderActionFlags * _Nonnull' type='^L' type64='^I'/>
+<arg const='true' declared_type='AudioTimeStamp * _Nonnull' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='AUAudioFrameCount' type='I'/>
+<arg declared_type='NSInteger' type='i' type64='q'/>
+<arg declared_type='AudioBufferList * _Nonnull' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg declared_type='AURenderPullInputBlock _Nullable' function_pointer='true' type='@?'>
+<arg declared_type='AudioUnitRenderActionFlags * _Nonnull' type='^L' type64='^I'/>
+<arg const='true' declared_type='AudioTimeStamp * _Nonnull' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='AUAudioFrameCount' type='I'/>
+<arg declared_type='NSInteger' type='i' type64='q'/>
+<arg declared_type='AudioBufferList * _Nonnull' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval declared_type='AUAudioUnitStatus' type='l' type64='i'/>
+</arg>
+<retval declared_type='AUAudioUnitStatus' type='l' type64='i'/>
+</retval>
+</method>
+<method selector='renderQuality'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='renderResourcesAllocated'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='reset'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='scheduleMIDIEventBlock'>
+<retval declared_type='AUScheduleMIDIEventBlock _Nullable' function_pointer='true' type='@?'>
+<arg declared_type='AUEventSampleTime' type='q'/>
+<arg declared_type='uint8_t' type='C'/>
+<arg declared_type='NSInteger' type='i' type64='q'/>
+<arg const='true' declared_type='uint8_t * _Nonnull' type='*'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='scheduleParameterBlock'>
+<retval declared_type='AUScheduleParameterBlock _Nonnull' function_pointer='true' type='@?'>
+<arg declared_type='AUEventSampleTime' type='q'/>
+<arg declared_type='AUAudioFrameCount' type='I'/>
+<arg declared_type='AUParameterAddress' type='Q'/>
+<arg declared_type='AUValue' type='f'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='setContextName:'>
+<arg declared_type='NSString * _Nullable' index='0' name='contextName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCurrentPreset:'>
+<arg declared_type='AUAudioUnitPreset * _Nullable' index='0' name='currentPreset' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDeviceID:error:'>
+<arg declared_type='AudioObjectID' index='0' name='deviceID' type='L' type64='I'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setFullState:'>
+<arg declared_type='NSDictionary * _Nullable' index='0' name='fullState' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFullStateForDocument:'>
+<arg declared_type='NSDictionary * _Nullable' index='0' name='fullStateForDocument' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInputEnabled:'>
+<arg declared_type='BOOL' index='0' name='inputEnabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInputHandler:'>
+<arg declared_type='AUInputHandler _Nullable' function_pointer='true' index='0' name='inputHandler' type='@?'>
+<arg declared_type='AudioUnitRenderActionFlags * _Nonnull' type='^L' type64='^I'/>
+<arg const='true' declared_type='AudioTimeStamp * _Nonnull' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='AUAudioFrameCount' type='I'/>
+<arg declared_type='NSInteger' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaximumFramesToRender:'>
+<arg declared_type='AUAudioFrameCount' index='0' name='maximumFramesToRender' type='I'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMusicalContextBlock:'>
+<arg declared_type='AUHostMusicalContextBlock _Nullable' function_pointer='true' index='0' name='musicalContextBlock' type='@?'>
+<arg declared_type='double * _Nullable' type='^d'/>
+<arg declared_type='double * _Nullable' type='^d'/>
+<arg declared_type='NSInteger * _Nullable' type='^i' type64='^q'/>
+<arg declared_type='double * _Nullable' type='^d'/>
+<arg declared_type='NSInteger * _Nullable' type='^i' type64='^q'/>
+<arg declared_type='double * _Nullable' type='^d'/>
+<retval declared_type='BOOL' type='B'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOutputEnabled:'>
+<arg declared_type='BOOL' index='0' name='outputEnabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOutputProvider:'>
+<arg declared_type='AURenderPullInputBlock _Nullable' function_pointer='true' index='0' name='outputProvider' type='@?'>
+<arg declared_type='AudioUnitRenderActionFlags * _Nonnull' type='^L' type64='^I'/>
+<arg const='true' declared_type='AudioTimeStamp * _Nonnull' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='AUAudioFrameCount' type='I'/>
+<arg declared_type='NSInteger' type='i' type64='q'/>
+<arg declared_type='AudioBufferList * _Nonnull' type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval declared_type='AUAudioUnitStatus' type='l' type64='i'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRenderQuality:'>
+<arg declared_type='NSInteger' index='0' name='renderQuality' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRenderResourcesAllocated:'>
+<arg declared_type='BOOL' index='0' name='flag' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRenderingOffline:'>
+<arg declared_type='BOOL' index='0' name='renderingOffline' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShouldBypassEffect:'>
+<arg declared_type='BOOL' index='0' name='shouldBypassEffect' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTransportStateBlock:'>
+<arg declared_type='AUHostTransportStateBlock _Nullable' function_pointer='true' index='0' name='transportStateBlock' type='@?'>
+<arg declared_type='AUHostTransportStateFlags * _Nullable' type='^I' type64='^Q'/>
+<arg declared_type='double * _Nullable' type='^d'/>
+<arg declared_type='double * _Nullable' type='^d'/>
+<arg declared_type='double * _Nullable' type='^d'/>
+<retval declared_type='BOOL' type='B'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldBypassEffect'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='shouldChangeToFormat:forBus:'>
+<arg declared_type='AVAudioFormat * _Nonnull' index='0' name='format' type='@'/>
+<arg declared_type='AUAudioUnitBus * _Nonnull' index='1' name='bus' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='startHardwareAndReturnError:'>
+<arg declared_type='NSError * _Nullable * _Nullable' index='0' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='stopHardware'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='tailTime'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='tokenByAddingRenderObserver:'>
+<arg declared_type='AURenderObserver _Nonnull' function_pointer='true' index='0' name='observer' type='@?'>
+<arg declared_type='AudioUnitRenderActionFlags' type='L' type64='I'/>
+<arg const='true' declared_type='AudioTimeStamp * _Nonnull' type='^{AudioTimeStamp=dQdQ{SMPTETime=ssILLssss}LI}' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type='AUAudioFrameCount' type='I'/>
+<arg declared_type='NSInteger' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='transportStateBlock'>
+<retval declared_type='AUHostTransportStateBlock _Nullable' function_pointer='true' type='@?'>
+<arg declared_type='AUHostTransportStateFlags * _Nullable' type='^I' type64='^Q'/>
+<arg declared_type='double * _Nullable' type='^d'/>
+<arg declared_type='double * _Nullable' type='^d'/>
+<arg declared_type='double * _Nullable' type='^d'/>
+<retval declared_type='BOOL' type='B'/>
+</retval>
+</method>
+<method selector='virtualMIDICableCount'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+</class>
+<class name='AUAudioUnitBus'>
+<method selector='busType'>
+<retval declared_type='AUAudioUnitBusType' type='i' type64='q'/>
+</method>
+<method selector='contextPresentationLatency'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='format'>
+<retval declared_type='AVAudioFormat * _Nonnull' type='@'/>
+</method>
+<method selector='index'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='initWithFormat:error:'>
+<arg declared_type='AVAudioFormat * _Nonnull' index='0' name='format' type='@'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='1' name='outError' type='^@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='isEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='maximumChannelCount'>
+<retval declared_type='AUAudioChannelCount' type='I'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='ownerAudioUnit'>
+<retval declared_type='AUAudioUnit * _Nonnull' type='@'/>
+</method>
+<method selector='setContextPresentationLatency:'>
+<arg declared_type='NSTimeInterval' index='0' name='contextPresentationLatency' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEnabled:'>
+<arg declared_type='BOOL' index='0' name='enabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFormat:error:'>
+<arg declared_type='AVAudioFormat * _Nonnull' index='0' name='format' type='@'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setMaximumChannelCount:'>
+<arg declared_type='AUAudioChannelCount' index='0' name='maximumChannelCount' type='I'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setName:'>
+<arg declared_type='NSString * _Nullable' index='0' name='name' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSupportedChannelCounts:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='supportedChannelCounts' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='supportedChannelCounts'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='supportedChannelLayoutTags'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+</class>
+<class name='AUAudioUnitBusArray'>
+<method selector='addObserverToAllBusses:forKeyPath:options:context:'>
+<arg declared_type='NSObject * _Nonnull' index='0' name='observer' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='keyPath' type='@'/>
+<arg declared_type='NSKeyValueObservingOptions' index='2' name='options' type='I' type64='Q'/>
+<arg declared_type='void * _Nullable' index='3' name='context' type='^v'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='busType'>
+<retval declared_type='AUAudioUnitBusType' type='i' type64='q'/>
+</method>
+<method selector='count'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='initWithAudioUnit:busType:'>
+<arg declared_type='AUAudioUnit * _Nonnull' index='0' name='owner' type='@'/>
+<arg declared_type='AUAudioUnitBusType' index='1' name='busType' type='i' type64='q'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithAudioUnit:busType:busses:'>
+<arg declared_type='AUAudioUnit * _Nonnull' index='0' name='owner' type='@'/>
+<arg declared_type='AUAudioUnitBusType' index='1' name='busType' type='i' type64='q'/>
+<arg declared_type='NSArray * _Nonnull' index='2' name='busArray' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='isCountChangeable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='objectAtIndexedSubscript:'>
+<arg declared_type='NSUInteger' index='0' name='index' type='I' type64='Q'/>
+<retval declared_type='AUAudioUnitBus * _Nonnull' type='@'/>
+</method>
+<method selector='ownerAudioUnit'>
+<retval declared_type='AUAudioUnit * _Nonnull' type='@'/>
+</method>
+<method selector='removeObserverFromAllBusses:forKeyPath:context:'>
+<arg declared_type='NSObject * _Nonnull' index='0' name='observer' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='keyPath' type='@'/>
+<arg declared_type='void * _Nullable' index='2' name='context' type='^v'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='replaceBusses:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='busArray' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBusCount:error:'>
+<arg declared_type='NSUInteger' index='0' name='count' type='I' type64='Q'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='1' name='outError' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='AUAudioUnitPreset'>
+<method selector='name'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='number'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='setName:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='name' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNumber:'>
+<arg declared_type='NSInteger' index='0' name='number' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='AUParameter'>
+<method selector='address'>
+<retval declared_type='AUParameterAddress' type='Q'/>
+</method>
+<method selector='dependentParameters'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='flags'>
+<retval declared_type='AudioUnitParameterOptions' type='L' type64='I'/>
+</method>
+<method selector='maxValue'>
+<retval declared_type='AUValue' type='f'/>
+</method>
+<method selector='minValue'>
+<retval declared_type='AUValue' type='f'/>
+</method>
+<method selector='setValue:'>
+<arg declared_type='AUValue' index='0' name='value' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setValue:originator:'>
+<arg declared_type='AUValue' index='0' name='value' type='f'/>
+<arg declared_type='AUParameterObserverToken _Nullable' index='1' name='originator' type='^v'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setValue:originator:atHostTime:'>
+<arg declared_type='AUValue' index='0' name='value' type='f'/>
+<arg declared_type='AUParameterObserverToken _Nullable' index='1' name='originator' type='^v'/>
+<arg declared_type='uint64_t' index='2' name='hostTime' type='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stringFromValue:'>
+<arg const='true' declared_type='AUValue * _Nullable' index='0' name='value' type='^f'/>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='unit'>
+<retval declared_type='AudioUnitParameterUnit' type='L' type64='I'/>
+</method>
+<method selector='unitName'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='value'>
+<retval declared_type='AUValue' type='f'/>
+</method>
+<method selector='valueFromString:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='string' type='@'/>
+<retval declared_type='AUValue' type='f'/>
+</method>
+<method selector='valueStrings'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+</class>
+<class name='AUParameterGroup'>
+<method selector='allParameters'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='children'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='AUParameterNode'>
+<method selector='displayName'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='displayNameWithLength:'>
+<arg declared_type='NSInteger' index='0' name='maximumLength' type='i' type64='q'/>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='implementorDisplayNameWithLengthCallback'>
+<retval declared_type='AUImplementorDisplayNameWithLengthCallback _Nonnull' function_pointer='true' type='@?'>
+<arg declared_type='AUParameterNode * _Nonnull' type='@'/>
+<arg declared_type='NSInteger' type='i' type64='q'/>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</retval>
+</method>
+<method selector='implementorStringFromValueCallback'>
+<retval declared_type='AUImplementorStringFromValueCallback _Nonnull' function_pointer='true' type='@?'>
+<arg declared_type='AUParameter * _Nonnull' type='@'/>
+<arg const='true' declared_type='AUValue * _Nullable' type='^f'/>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</retval>
+</method>
+<method selector='implementorValueFromStringCallback'>
+<retval declared_type='AUImplementorValueFromStringCallback _Nonnull' function_pointer='true' type='@?'>
+<arg declared_type='AUParameter * _Nonnull' type='@'/>
+<arg declared_type='NSString * _Nonnull' type='@'/>
+<retval declared_type='AUValue' type='f'/>
+</retval>
+</method>
+<method selector='implementorValueObserver'>
+<retval declared_type='AUImplementorValueObserver _Nonnull' function_pointer='true' type='@?'>
+<arg declared_type='AUParameter * _Nonnull' type='@'/>
+<arg declared_type='AUValue' type='f'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='implementorValueProvider'>
+<retval declared_type='AUImplementorValueProvider _Nonnull' function_pointer='true' type='@?'>
+<arg declared_type='AUParameter * _Nonnull' type='@'/>
+<retval declared_type='AUValue' type='f'/>
+</retval>
+</method>
+<method selector='keyPath'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='removeParameterObserver:'>
+<arg declared_type='AUParameterObserverToken _Nonnull' index='0' name='token' type='^v'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImplementorDisplayNameWithLengthCallback:'>
+<arg declared_type='AUImplementorDisplayNameWithLengthCallback _Nonnull' function_pointer='true' index='0' name='implementorDisplayNameWithLengthCallback' type='@?'>
+<arg declared_type='AUParameterNode * _Nonnull' type='@'/>
+<arg declared_type='NSInteger' type='i' type64='q'/>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImplementorStringFromValueCallback:'>
+<arg declared_type='AUImplementorStringFromValueCallback _Nonnull' function_pointer='true' index='0' name='implementorStringFromValueCallback' type='@?'>
+<arg declared_type='AUParameter * _Nonnull' type='@'/>
+<arg const='true' declared_type='AUValue * _Nullable' type='^f'/>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImplementorValueFromStringCallback:'>
+<arg declared_type='AUImplementorValueFromStringCallback _Nonnull' function_pointer='true' index='0' name='implementorValueFromStringCallback' type='@?'>
+<arg declared_type='AUParameter * _Nonnull' type='@'/>
+<arg declared_type='NSString * _Nonnull' type='@'/>
+<retval declared_type='AUValue' type='f'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImplementorValueObserver:'>
+<arg declared_type='AUImplementorValueObserver _Nonnull' function_pointer='true' index='0' name='implementorValueObserver' type='@?'>
+<arg declared_type='AUParameter * _Nonnull' type='@'/>
+<arg declared_type='AUValue' type='f'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImplementorValueProvider:'>
+<arg declared_type='AUImplementorValueProvider _Nonnull' function_pointer='true' index='0' name='implementorValueProvider' type='@?'>
+<arg declared_type='AUParameter * _Nonnull' type='@'/>
+<retval declared_type='AUValue' type='f'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='tokenByAddingParameterObserver:'>
+<arg declared_type='AUParameterObserver _Nonnull' function_pointer='true' index='0' name='observer' type='@?'>
+<arg declared_type='AUParameterAddress' type='Q'/>
+<arg declared_type='AUValue' type='f'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='AUParameterObserverToken _Nonnull' type='^v'/>
+</method>
+<method selector='tokenByAddingParameterRecordingObserver:'>
+<arg declared_type='AUParameterRecordingObserver _Nonnull' function_pointer='true' index='0' name='observer' type='@?'>
+<arg declared_type='NSInteger' type='i' type64='q'/>
+<arg const='true' declared_type='AURecordedParameterEvent * _Nonnull' type='^{AURecordedParameterEvent=QQf}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='AUParameterObserverToken _Nonnull' type='^v'/>
+</method>
+</class>
+<class name='AUParameterTree'>
+<method class_method='true' selector='createGroupFromTemplate:identifier:name:addressOffset:'>
+<arg declared_type='AUParameterGroup * _Nonnull' index='0' name='templateGroup' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='identifier' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='name' type='@'/>
+<arg declared_type='AUParameterAddress' index='3' name='addressOffset' type='Q'/>
+<retval declared_type='AUParameterGroup * _Nonnull' type='@'/>
+</method>
+<method class_method='true' selector='createGroupTemplate:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='children' type='@'/>
+<retval declared_type='AUParameterGroup * _Nonnull' type='@'/>
+</method>
+<method class_method='true' selector='createGroupWithIdentifier:name:children:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='identifier' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='name' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='2' name='children' type='@'/>
+<retval declared_type='AUParameterGroup * _Nonnull' type='@'/>
+</method>
+<method class_method='true' selector='createParameterWithIdentifier:name:address:min:max:unit:unitName:flags:valueStrings:dependentParameters:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='identifier' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='name' type='@'/>
+<arg declared_type='AUParameterAddress' index='2' name='address' type='Q'/>
+<arg declared_type='AUValue' index='3' name='min' type='f'/>
+<arg declared_type='AUValue' index='4' name='max' type='f'/>
+<arg declared_type='AudioUnitParameterUnit' index='5' name='unit' type='L' type64='I'/>
+<arg declared_type='NSString * _Nullable' index='6' name='unitName' type='@'/>
+<arg declared_type='AudioUnitParameterOptions' index='7' name='flags' type='L' type64='I'/>
+<arg declared_type='NSArray * _Nullable' index='8' name='valueStrings' type='@'/>
+<arg declared_type='NSArray * _Nullable' index='9' name='dependentParameters' type='@'/>
+<retval declared_type='AUParameter * _Nonnull' type='@'/>
+</method>
+<method class_method='true' selector='createTreeWithChildren:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='children' type='@'/>
+<retval declared_type='AUParameterTree * _Nonnull' type='@'/>
+</method>
+<method selector='parameterWithAddress:'>
+<arg declared_type='AUParameterAddress' index='0' name='address' type='Q'/>
+<retval declared_type='AUParameter * _Nullable' type='@'/>
+</method>
+<method selector='parameterWithID:scope:element:'>
+<arg declared_type='AudioUnitParameterID' index='0' name='paramID' type='L' type64='I'/>
+<arg declared_type='AudioUnitScope' index='1' name='scope' type='L' type64='I'/>
+<arg declared_type='AudioUnitElement' index='2' name='element' type='L' type64='I'/>
+<retval declared_type='AUParameter * _Nullable' type='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='createAudioUnitWithComponentDescription:error:'>
+<arg declared_type='AudioComponentDescription' index='0' name='desc' type='{AudioComponentDescription=IIIII}'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='1' name='error' type='^@'/>
+<retval declared_type='AUAudioUnit * _Nullable' type='@'/>
+</method>
+<method selector='interfaceVersion'>
+<retval declared_type='unsigned int' type='I'/>
+</method>
+<method selector='uiViewForAudioUnit:withSize:'>
+<arg declared_type='AudioUnit _Nonnull' index='0' name='inAudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='NSSize' index='1' name='inPreferredSize' type='{_NSSize=ff}' type64='{CGSize=dd}'/>
+<retval declared_type='NSView * _Nullable' type='@'/>
+</method>
+</class>
+<informal_protocol name='AUAudioUnitFactory'>
+<method selector='createAudioUnitWithComponentDescription:error:' type='@32@0:4{AudioComponentDescription=IIIII}8^@28' type64='@44@0:8{AudioComponentDescription=IIIII}16^@36'>
+<arg declared_type='AudioComponentDescription' index='0' name='desc' type='{AudioComponentDescription=IIIII}'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='1' name='error' type='^@'/>
+<retval declared_type='AUAudioUnit * _Nullable' type='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='AUCocoaUIBase'>
+<method selector='interfaceVersion' type='I8@0:4' type64='I16@0:8'>
+<retval declared_type='unsigned int' type='I'/>
+</method>
+<method selector='uiViewForAudioUnit:withSize:' type='@20@0:4^{ComponentInstanceRecord=[1l]}8{_NSSize=ff}12' type64='@40@0:8^{ComponentInstanceRecord=[1q]}16{CGSize=dd}24'>
+<arg declared_type='AudioUnit _Nonnull' index='0' name='inAudioUnit' type='^{ComponentInstanceRecord=[1l]}' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type='NSSize' index='1' name='inPreferredSize' type='{_NSSize=ff}' type64='{CGSize=dd}'/>
+<retval declared_type='NSView * _Nullable' type='@'/>
+</method>
+</informal_protocol>
+</signatures>

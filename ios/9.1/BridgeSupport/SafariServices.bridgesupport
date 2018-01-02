@@ -1,0 +1,98 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CFNetwork.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/MobileCoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/JavaScriptCore.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/WebKit.framework'/>
+<depends_on path='/System/Library/Frameworks/UIKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='SFContentBlockerErrorDomain' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='SSReadingListErrorDomain' type='@'/>
+<enum name='SFContentBlockerLoadingInterrupted' value='3'/>
+<enum name='SFContentBlockerNoAttachmentFound' value='2'/>
+<enum name='SFContentBlockerNoExtensionFound' value='1'/>
+<enum name='SSReadingListErrorURLSchemeNotAllowed' value='1'/>
+<class name='NSObject'>
+<method selector='safariViewController:activityItemsForURL:title:'>
+<arg declared_type='SFSafariViewController * _Nonnull' index='0' name='controller' type='@'/>
+<arg declared_type='NSURL * _Nonnull' index='1' name='URL' type='@'/>
+<arg declared_type='NSString * _Nullable' index='2' name='title' type='@'/>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='safariViewController:didCompleteInitialLoad:'>
+<arg declared_type='SFSafariViewController * _Nonnull' index='0' name='controller' type='@'/>
+<arg declared_type='BOOL' index='1' name='didLoadSuccessfully' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='safariViewControllerDidFinish:'>
+<arg declared_type='SFSafariViewController * _Nonnull' index='0' name='controller' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SFContentBlockerManager'>
+<method class_method='true' selector='reloadContentBlockerWithIdentifier:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='identifier' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SFSafariViewController'>
+<method selector='delegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='initWithURL:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='URL' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithURL:entersReaderIfAvailable:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='URL' type='@'/>
+<arg declared_type='BOOL' index='1' name='entersReaderIfAvailable' type='B'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SSReadingList'>
+<method selector='addReadingListItemWithURL:title:previewText:error:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='URL' type='@'/>
+<arg declared_type='NSString * _Nullable' index='1' name='title' type='@'/>
+<arg declared_type='NSString * _Nullable' index='2' name='previewText' type='@'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='3' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='defaultReadingList'>
+<retval declared_type='SSReadingList * _Nullable' type='@'/>
+</method>
+<method class_method='true' selector='supportsURL:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='URL' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<informal_protocol name='SFSafariViewControllerDelegate'>
+<method selector='safariViewController:activityItemsForURL:title:' type='@20@0:4@8@12@16' type64='@40@0:8@16@24@32'>
+<arg declared_type='SFSafariViewController * _Nonnull' index='0' name='controller' type='@'/>
+<arg declared_type='NSURL * _Nonnull' index='1' name='URL' type='@'/>
+<arg declared_type='NSString * _Nullable' index='2' name='title' type='@'/>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='safariViewController:didCompleteInitialLoad:' type='v16@0:4@8B12' type64='v28@0:8@16B24'>
+<arg declared_type='SFSafariViewController * _Nonnull' index='0' name='controller' type='@'/>
+<arg declared_type='BOOL' index='1' name='didLoadSuccessfully' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='safariViewControllerDidFinish:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SFSafariViewController * _Nonnull' index='0' name='controller' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>

@@ -1,0 +1,113 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/GSS.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Kerberos.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/CFNetwork.framework'/>
+<struct name='mountinfo' type='{mountinfo=&quot;length&quot;s&quot;media&quot;I&quot;flags&quot;s&quot;media_specific&quot;[0c]}'>
+<field declared_type='short' name='length' type='s'/>
+<field declared_type='OSType' name='media' type='L' type64='I'/>
+<field declared_type='short' name='flags' type='s'/>
+<field declared_type='char*' name='media_specific' type='[0c]'/>
+</struct>
+<enum name='kAFPAllowSelfConnection' value='13'/>
+<enum name='kAFPAllowUNCHIBit' value='9'/>
+<enum name='kAFPAutomountedBit' value='4'/>
+<enum name='kAFPDontBrowse' value='6'/>
+<enum name='kAFPForceNewSessionBit' value='3'/>
+<enum name='kAFPMountAllVols' value='7'/>
+<enum name='kAFPMountPointProvidedBit' value='2'/>
+<enum name='kAFPNoNewMountBit' value='1'/>
+<enum name='kAFPSoftMountBit' value='12'/>
+<enum name='kAFPSupressKeychainBit' value='8'/>
+<enum name='kAFPUseExistingMountBit' value='0'/>
+<function name='AFPMountURL'>
+<arg const='true' declared_type='char*' name='inURL' type='*'/>
+<arg const='true' declared_type='char*' name='inMountPoint' type='*'/>
+<arg declared_type='UInt32' name='inMountFlags' type='L' type64='I'/>
+<arg declared_type='UInt32' name='inAltFlags' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='DisposeAFPURL'>
+<arg declared_type='char*' name='url' type='*'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='IsAFPURL'>
+<arg const='true' declared_type='char*' name='url' type='*'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='NewAFPURL'>
+<arg declared_type='StringPtr' name='protocolName' type='*'/>
+<arg declared_type='StringPtr' name='serverNameOrHost' type='*'/>
+<arg declared_type='StringPtr' name='zoneNameOrNULL' type='*'/>
+<arg declared_type='StringPtr' name='uamName' type='*'/>
+<arg declared_type='StringPtr' name='userName' type='*'/>
+<arg declared_type='StringPtr' name='password' type='*'/>
+<arg declared_type='StringPtr' name='volume' type='*'/>
+<arg declared_type='StringPtr' name='path' type='*'/>
+<retval declared_type='char*' type='*'/>
+</function>
+<function name='ParseAFPURL'>
+<arg const='true' declared_type='char*' name='url' type='*'/>
+<arg declared_type='StringPtr' name='protocolName' type='*'/>
+<arg declared_type='StringPtr' name='serverNameOrHost' type='*'/>
+<arg declared_type='StringPtr' name='zoneNameOr' type='*'/>
+<arg declared_type='StringPtr' name='uamName' type='*'/>
+<arg declared_type='StringPtr' name='userName' type='*'/>
+<arg declared_type='StringPtr' name='password' type='*'/>
+<arg declared_type='StringPtr' name='volume' type='*'/>
+<arg declared_type='StringPtr' name='path' type='*'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='afp_GetURLFromURLRemountInfo'>
+<arg const='true' declared_type='mountinfo*' name='inRemountinfo' type='^{mountinfo=sIs[0c]}'/>
+<arg declared_type='size_t' name='inMaxURLlength' type='L' type64='Q'/>
+<arg declared_type='char*' name='outComplete_URL' type='*'/>
+<arg declared_type='UInt32' name='inOptions' type='L' type64='I'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='afp_LLMount'>
+<arg const='true' declared_type='char*' name='inFullURL' type='*'/>
+<arg const='true' declared_type='char*' name='inMountDir' type='*'/>
+<arg declared_type='size_t' name='inMaxPath' type='L' type64='Q'/>
+<arg declared_type='char*' name='outMountPoint' type='*'/>
+<arg declared_type='UInt32' name='inOptions' type='L' type64='I'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='afp_LLMountAuth'>
+<arg const='true' declared_type='char*' name='inTargetURL' type='*'/>
+<arg const='true' declared_type='char*' name='inMountDir' type='*'/>
+<arg declared_type='size_t' name='inMaxPath' type='L' type64='Q'/>
+<arg declared_type='char*' name='outMountPoint' type='*'/>
+<arg const='true' declared_type='char*' name='inAuthDomain' type='*'/>
+<arg const='true' declared_type='char*' name='inUserName' type='*'/>
+<arg const='true' declared_type='char*' name='inUAMName' type='*'/>
+<arg declared_type='void*' name='authenticator' type='^v'/>
+<arg declared_type='size_t' name='authenticatorlength' type='L' type64='Q'/>
+<arg declared_type='UInt32' name='inOptions' type='L' type64='I'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='afp_getMountURL'>
+<arg const='true' declared_type='char*' name='inMountPoint' type='*'/>
+<arg declared_type='size_t' name='inMaxURL' type='L' type64='Q'/>
+<arg declared_type='char*' name='outMountURL' type='*'/>
+<arg declared_type='UInt32' name='inOptions' type='L' type64='I'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='afp_getmountinfo'>
+<arg const='true' declared_type='char*' name='inMountPoint' type='*'/>
+<arg declared_type='size_t' name='inMountInfoMaxSize' type='L' type64='Q'/>
+<arg declared_type='mountinfo*' name='outMountInfo' type='^{mountinfo=sIs[0c]}'/>
+<arg declared_type='UInt32' name='inOptions' type='L' type64='I'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='afp_getmountinfosize'>
+<arg const='true' declared_type='char*' name='inMountPoint' type='*'/>
+<arg declared_type='size_t*' name='outSize' type='^I' type64='^Q'/>
+<arg declared_type='UInt32' name='inOptions' type='L' type64='I'/>
+<retval declared_type='int' type='i'/>
+</function>
+</signatures>

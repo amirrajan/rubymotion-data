@@ -1,0 +1,59 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<class name='SFAuthorization'>
+<method class_method='true' selector='authorization'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='authorizationRef'>
+<retval declared_type='AuthorizationRef' type='^{AuthorizationOpaqueRef=}'/>
+</method>
+<method class_method='true' selector='authorizationWithFlags:rights:environment:'>
+<arg declared_type='AuthorizationFlags' index='0' name='flags' type='L' type64='I'/>
+<arg const='true' declared_type='AuthorizationRights*' index='1' name='rights' type='^{_AuthorizationRights=I^{?}}'/>
+<arg const='true' declared_type='AuthorizationEnvironment*' index='2' name='environment' type='^{_AuthorizationEnvironment=I^{?}}'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='init'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithFlags:rights:environment:'>
+<arg declared_type='AuthorizationFlags' index='0' name='flags' type='L' type64='I'/>
+<arg const='true' declared_type='AuthorizationRights*' index='1' name='rights' type='^{_AuthorizationRights=I^{?}}'/>
+<arg const='true' declared_type='AuthorizationEnvironment*' index='2' name='environment' type='^{_AuthorizationEnvironment=I^{?}}'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='invalidateCredentials'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='obtainWithRight:flags:error:'>
+<arg declared_type='AuthorizationString' index='0' name='rightName' type='*'/>
+<arg declared_type='AuthorizationFlags' index='1' name='flags' type='L' type64='I'/>
+<arg declared_type='NSError**' index='2' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='obtainWithRights:flags:environment:authorizedRights:error:'>
+<arg const='true' declared_type='AuthorizationRights*' index='0' name='rights' type='^{_AuthorizationRights=I^{?}}'/>
+<arg declared_type='AuthorizationFlags' index='1' name='flags' type='L' type64='I'/>
+<arg const='true' declared_type='AuthorizationEnvironment*' index='2' name='environment' type='^{_AuthorizationEnvironment=I^{?}}'/>
+<arg declared_type='AuthorizationRights**' index='3' name='authorizedRights' type='^^{?}'/>
+<arg declared_type='NSError**' index='4' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='permitWithRight:flags:'>
+<arg declared_type='AuthorizationString' index='0' name='rightName' type='*'/>
+<arg declared_type='AuthorizationFlags' index='1' name='flags' type='L' type64='I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</method>
+<method selector='permitWithRights:flags:environment:authorizedRights:'>
+<arg const='true' declared_type='AuthorizationRights*' index='0' name='rights' type='^{_AuthorizationRights=I^{?}}'/>
+<arg declared_type='AuthorizationFlags' index='1' name='flags' type='L' type64='I'/>
+<arg const='true' declared_type='AuthorizationEnvironment*' index='2' name='environment' type='^{_AuthorizationEnvironment=I^{?}}'/>
+<arg declared_type='AuthorizationRights*' index='3' name='authorizedRights' type='^{_AuthorizationRights=I^{?}}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</method>
+</class>
+</signatures>

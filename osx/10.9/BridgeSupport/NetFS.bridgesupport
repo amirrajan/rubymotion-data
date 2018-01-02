@@ -1,0 +1,195 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/DiskArbitration.framework'/>
+<struct name='NetFSInterface' type='{_NetFSInterface=&quot;_interface&quot;^v&quot;_factoryID&quot;^{__CFUUID}&quot;_refCount&quot;I}'>
+<field declared_type='void*' name='_interface' type='^v'/>
+<field declared_type='CFUUIDRef' name='_factoryID' type='^{__CFUUID=}'/>
+<field declared_type='UInt32' name='_refCount' type='L' type64='I'/>
+</struct>
+<struct name='NetFSMountInterface_V1' type='{NetFSMountInterface_V1=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?&quot;CreateSessionRef&quot;^?&quot;GetServerInfo&quot;^?&quot;ParseURL&quot;^?&quot;CreateURL&quot;^?&quot;OpenSession&quot;^?&quot;EnumerateShares&quot;^?&quot;Mount&quot;^?&quot;Cancel&quot;^?&quot;CloseSession&quot;^?&quot;GetMountInfo&quot;^?}'>
+<field declared_type='void*' name='_reserved' type='^v'/>
+<field declared_type='HRESULT (*)(void *, REFIID, LPVOID *)' function_pointer='true' name='QueryInterface' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='REFIID' type='{_REFIID=CCCCCCCCCCCCCCCC}'/>
+<arg declared_type='LPVOID*' type='^^v'/>
+<retval declared_type='HRESULT' type='l' type64='i'/>
+</field>
+<field declared_type='ULONG (*)(void *)' function_pointer='true' name='AddRef' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='ULONG' type='L' type64='I'/>
+</field>
+<field declared_type='ULONG (*)(void *)' function_pointer='true' name='Release' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='ULONG' type='L' type64='I'/>
+</field>
+<field declared_type='netfsError (*)(void **)' function_pointer='true' name='CreateSessionRef' type='^?'>
+<arg declared_type='void**' type='^^v'/>
+<retval declared_type='netfsError' type='l' type64='i'/>
+</field>
+<field declared_type='netfsError (*)(CFURLRef, void *, CFDictionaryRef, CFDictionaryRef *)' function_pointer='true' name='GetServerInfo' type='^?'>
+<arg declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg declared_type='CFDictionaryRef*' type='^^{__CFDictionary}'/>
+<retval declared_type='netfsError' type='l' type64='i'/>
+</field>
+<field declared_type='netfsError (*)(CFURLRef, CFDictionaryRef *)' function_pointer='true' name='ParseURL' type='^?'>
+<arg declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg declared_type='CFDictionaryRef*' type='^^{__CFDictionary}'/>
+<retval declared_type='netfsError' type='l' type64='i'/>
+</field>
+<field declared_type='netfsError (*)(CFDictionaryRef, CFURLRef *)' function_pointer='true' name='CreateURL' type='^?'>
+<arg declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg declared_type='CFURLRef*' type='^^{__CFURL}'/>
+<retval declared_type='netfsError' type='l' type64='i'/>
+</field>
+<field declared_type='netfsError (*)(CFURLRef, void *, CFDictionaryRef, CFDictionaryRef *)' function_pointer='true' name='OpenSession' type='^?'>
+<arg declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg declared_type='CFDictionaryRef*' type='^^{__CFDictionary}'/>
+<retval declared_type='netfsError' type='l' type64='i'/>
+</field>
+<field declared_type='netfsError (*)(void *, CFDictionaryRef, CFDictionaryRef *)' function_pointer='true' name='EnumerateShares' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg declared_type='CFDictionaryRef*' type='^^{__CFDictionary}'/>
+<retval declared_type='netfsError' type='l' type64='i'/>
+</field>
+<field declared_type='netfsError (*)(void *, CFURLRef, CFStringRef, CFDictionaryRef, CFDictionaryRef *)' function_pointer='true' name='Mount' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='CFURLRef' type='^{__CFURL=}'/>
+<arg declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg declared_type='CFDictionaryRef' type='^{__CFDictionary=}'/>
+<arg declared_type='CFDictionaryRef*' type='^^{__CFDictionary}'/>
+<retval declared_type='netfsError' type='l' type64='i'/>
+</field>
+<field declared_type='netfsError (*)(void *)' function_pointer='true' name='Cancel' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='netfsError' type='l' type64='i'/>
+</field>
+<field declared_type='netfsError (*)(void *)' function_pointer='true' name='CloseSession' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='netfsError' type='l' type64='i'/>
+</field>
+<field declared_type='netfsError (*)(CFStringRef, CFDictionaryRef *)' function_pointer='true' name='GetMountInfo' type='^?'>
+<arg declared_type='CFStringRef' type='^{__CFString=}'/>
+<arg declared_type='CFDictionaryRef*' type='^^{__CFDictionary}'/>
+<retval declared_type='netfsError' type='l' type64='i'/>
+</field>
+</struct>
+<string_constant name='kNAUIOptionAllowUI' nsstring='true' value='AllowUI'/>
+<string_constant name='kNAUIOptionForceUI' nsstring='true' value='ForceUI'/>
+<string_constant name='kNAUIOptionKey' nsstring='true' value='UIOption'/>
+<string_constant name='kNAUIOptionNoUI' nsstring='true' value='NoUI'/>
+<string_constant name='kNetFSAccessRightsKey' nsstring='true' value='AccessRights'/>
+<string_constant name='kNetFSAllowLoopbackKey' nsstring='true' value='AllowLoopback'/>
+<string_constant name='kNetFSAllowSubMountsKey' nsstring='true' value='AllowSubMounts'/>
+<string_constant name='kNetFSAlreadyMountedKey' nsstring='true' value='AlreadyMounted'/>
+<string_constant name='kNetFSAlternatePortKey' nsstring='true' value='AlternatePort'/>
+<string_constant name='kNetFSAuthenticationInfoKey' nsstring='true' value='AuthenticationInfo'/>
+<string_constant name='kNetFSAuthorityParamsKey' nsstring='true' value='AuthorityParams'/>
+<string_constant name='kNetFSChangePasswordKey' nsstring='true' value='ChangePassword'/>
+<string_constant name='kNetFSConnectedAsGuestKey' nsstring='true' value='MountedByGuest'/>
+<string_constant name='kNetFSConnectedAsUserKey' nsstring='true' value='MountedByUser'/>
+<string_constant name='kNetFSConnectedMultiUserKey' nsstring='true' value='ConnectedMultiUser'/>
+<string_constant name='kNetFSConnectedWithAuthenticationInfoKey' nsstring='true' value='ConnectedWithAuthenticationInfo'/>
+<string_constant name='kNetFSDisplayNameKey' nsstring='true' value='DisplayName'/>
+<string_constant name='kNetFSForceNewSessionKey' nsstring='true' value='ForceNewSession'/>
+<string_constant name='kNetFSGetAccessRightsKey' nsstring='true' value='GetAccessRights'/>
+<string_constant name='kNetFSGuestOnlyKey' nsstring='true' value='GuestOnly'/>
+<string_constant name='kNetFSHasPasswordKey' nsstring='true' value='HasPassword'/>
+<string_constant name='kNetFSHostKey' nsstring='true' value='Host'/>
+<string_constant name='kNetFSIsHiddenKey' nsstring='true' value='IsHidden'/>
+<string_constant name='kNetFSMechTypesSupportedKey' nsstring='true' value='MechTypesSupported'/>
+<string_constant name='kNetFSMountAtMountDirKey' nsstring='true' value='MountAtMountDir'/>
+<string_constant name='kNetFSMountFlagsKey' nsstring='true' value='MountFlags'/>
+<string_constant name='kNetFSMountPathKey' nsstring='true' value='MountPath'/>
+<string_constant name='kNetFSMountedByGuestKey' nsstring='true' value='MountedByGuest'/>
+<string_constant name='kNetFSMountedByKerberosKey' nsstring='true' value='MountedByKerberos'/>
+<string_constant name='kNetFSMountedByUserKey' nsstring='true' value='MountedByUser'/>
+<string_constant name='kNetFSMountedMultiUserKey' nsstring='true' value='MountedMultiUser'/>
+<string_constant name='kNetFSMountedURLKey' nsstring='true' value='MountedURL'/>
+<string_constant name='kNetFSMountedWithAuthenticationInfoKey' nsstring='true' value='MountedWithAuthenticationInfo'/>
+<string_constant name='kNetFSNoMountAuthenticationKey' nsstring='true' value='NoMountAuthentication'/>
+<string_constant name='kNetFSNoUserPreferencesKey' nsstring='true' value='NoUserPreferences'/>
+<string_constant name='kNetFSPasswordKey' nsstring='true' value='Password'/>
+<string_constant name='kNetFSPathKey' nsstring='true' value='Path'/>
+<string_constant name='kNetFSPrinterShareKey' nsstring='true' value='PrinterShare'/>
+<string_constant name='kNetFSSchemeKey' nsstring='true' value='Scheme'/>
+<string_constant name='kNetFSServerDisplayNameKey' nsstring='true' value='ServerDisplayName'/>
+<string_constant name='kNetFSSoftMountKey' nsstring='true' value='SoftMount'/>
+<string_constant name='kNetFSSupportsChangePasswordKey' nsstring='true' value='SupportsChangePassword'/>
+<string_constant name='kNetFSSupportsGuestKey' nsstring='true' value='SupportsGuest'/>
+<string_constant name='kNetFSSupportsKerberosKey' nsstring='true' value='SupportsKerberos'/>
+<string_constant name='kNetFSUseAuthenticationInfoKey' nsstring='true' value='UseAuthenticationInfo'/>
+<string_constant name='kNetFSUseGuestKey' nsstring='true' value='Guest'/>
+<string_constant name='kNetFSUseKerberosKey' nsstring='true' value='Kerberos'/>
+<string_constant name='kNetFSUserNameKey' nsstring='true' value='UserName'/>
+<enum name='ENETFSACCOUNTRESTRICTED' value='-5999'/>
+<enum name='ENETFSNOAUTHMECHSUPP' value='-5997'/>
+<enum name='ENETFSNOPROTOVERSSUPP' value='-5996'/>
+<enum name='ENETFSNOSHARESAVAIL' value='-5998'/>
+<enum name='ENETFSPWDNEEDSCHANGE' value='-5045'/>
+<enum name='ENETFSPWDPOLICY' value='-5046'/>
+<function name='NetFSCFStringtoCString'>
+<arg declared_type='CFStringRef' type='^{__CFString=}'/>
+<retval declared_type='char*' type='*'/>
+</function>
+<function name='NetFSInterface_AddRef'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='ULONG' type='L' type64='I'/>
+</function>
+<function name='NetFSInterface_Release'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='ULONG' type='L' type64='I'/>
+</function>
+<function name='NetFSMountURLAsync'>
+<arg declared_type='CFURLRef' name='url' type='^{__CFURL=}'/>
+<arg declared_type='CFURLRef' name='mountpath' type='^{__CFURL=}'/>
+<arg declared_type='CFStringRef' name='user' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef' name='passwd' type='^{__CFString=}'/>
+<arg declared_type='CFMutableDictionaryRef' name='open_options' type='^{__CFDictionary=}'/>
+<arg declared_type='CFMutableDictionaryRef' name='mount_options' type='^{__CFDictionary=}'/>
+<arg declared_type='AsyncRequestID*' name='requestID' type='^^v'/>
+<arg declared_type='dispatch_queue_t' name='dispatchq' type='@'/>
+<arg declared_type='NetFSMountURLBlock' function_pointer='true' name='mount_report' type='@?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='AsyncRequestID' type='^v'/>
+<arg declared_type='CFArrayRef' type='^{__CFArray=}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='NetFSMountURLCancel'>
+<arg declared_type='AsyncRequestID' name='requestID' type='^v'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='NetFSMountURLProbe'>
+<arg declared_type='CFStringRef' name='hostname' type='^{__CFString=}'/>
+<retval declared_type='CFStringRef' type='^{__CFString=}'/>
+</function>
+<function name='NetFSMountURLSync'>
+<arg declared_type='CFURLRef' name='url' type='^{__CFURL=}'/>
+<arg declared_type='CFURLRef' name='mountpath' type='^{__CFURL=}'/>
+<arg declared_type='CFStringRef' name='user' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef' name='passwd' type='^{__CFString=}'/>
+<arg declared_type='CFMutableDictionaryRef' name='open_options' type='^{__CFDictionary=}'/>
+<arg declared_type='CFMutableDictionaryRef' name='mount_options' type='^{__CFDictionary=}'/>
+<arg declared_type='CFArrayRef*' name='mountpoints' type='^^{__CFArray}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='NetFSQueryInterface'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='REFIID' name='iid' type='{_REFIID=CCCCCCCCCCCCCCCC}'/>
+<arg declared_type='LPVOID*' name='ppv' type='^^v'/>
+<retval declared_type='HRESULT' type='l' type64='i'/>
+</function>
+<function name='NetFS_CreateInterface'>
+<arg declared_type='CFUUIDRef' name='factoryID' type='^{__CFUUID=}'/>
+<arg declared_type='void*' name='interfaceFTbl' type='^v'/>
+<retval declared_type='NetFSInterface*' type='^{_NetFSInterface=^v^{__CFUUID}I}'/>
+</function>
+</signatures>

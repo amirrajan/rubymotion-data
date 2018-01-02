@@ -1,0 +1,56 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/LocalAuthentication.framework/Support/SharedUtils.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<constant const='true' declared_type='NSString*' name='LAErrorDomain' type='@'/>
+<string_constant name='kLAErrorDomain' value='com.apple.LocalAuthentication'/>
+<enum name='LAErrorAuthenticationFailed' value='-1'/>
+<enum name='LAErrorPasscodeNotSet' value='-5'/>
+<enum name='LAErrorSystemCancel' value='-4'/>
+<enum name='LAErrorTouchIDNotAvailable' value='-6'/>
+<enum name='LAErrorTouchIDNotEnrolled' value='-7'/>
+<enum name='LAErrorUserCancel' value='-2'/>
+<enum name='LAErrorUserFallback' value='-3'/>
+<enum name='LAPolicyDeviceOwnerAuthenticationWithBiometrics' value='1'/>
+<enum name='kLAErrorAuthenticationFailed' value='-1'/>
+<enum name='kLAErrorPasscodeNotSet' value='-5'/>
+<enum name='kLAErrorSystemCancel' value='-4'/>
+<enum name='kLAErrorTouchIDNotAvailable' value='-6'/>
+<enum name='kLAErrorTouchIDNotEnrolled' value='-7'/>
+<enum name='kLAErrorUserCancel' value='-2'/>
+<enum name='kLAErrorUserFallback' value='-3'/>
+<enum name='kLAOptionAuthenticationReason' value='2'/>
+<enum name='kLAOptionUserFallback' value='1'/>
+<enum name='kLAPolicyDeviceOwnerAuthenticationWithBiometrics' value='1'/>
+<class name='LAContext'>
+<method selector='canEvaluatePolicy:error:'>
+<arg declared_type='LAPolicy' index='0' name='policy' type='i' type64='q'/>
+<arg declared_type='NSError**' index='1' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='evaluatePolicy:localizedReason:reply:'>
+<arg declared_type='LAPolicy' index='0' name='policy' type='i' type64='q'/>
+<arg declared_type='NSString*' index='1' name='localizedReason' type='@'/>
+<arg declared_type='void (^)(BOOL, NSError *)' function_pointer='true' index='2' name='reply' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='localizedFallbackTitle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='maxBiometryFailures'>
+<retval declared_type='NSNumber*' type='@'/>
+</method>
+<method selector='setLocalizedFallbackTitle:'>
+<arg declared_type='NSString*' index='0' name='localizedFallbackTitle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaxBiometryFailures:'>
+<arg declared_type='NSNumber*' index='0' name='maxBiometryFailures' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+</signatures>

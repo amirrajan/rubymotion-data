@@ -1,0 +1,656 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IMServicePlugIn.framework/Versions/A/Frameworks/IMServicePlugInSupport.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<cftype name='IMServicePlugInFileTransferInternal' type='^{_IMServicePlugInFileTransferInternal=}'/>
+<cftype name='IMServicePlugInFileTransferSessionInternal' type='^{_IMServicePlugInFileTransferSessionInternal=}'/>
+<cftype name='IMServicePlugInMessageInternal' type='^{_IMServicePlugInMessageInternal=}'/>
+<constant const='true' declared_type='NSString*' name='IMAccountSettingLoginHandle' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMAccountSettingPassword' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMAccountSettingServerHost' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMAccountSettingServerPort' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMAccountSettingUsesSSL' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMAttributeBackgroundColor' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMAttributeBaseWritingDirection' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMAttributeBold' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMAttributeFontFamily' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMAttributeFontSize' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMAttributeForegroundColor' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMAttributeItalic' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMAttributeLink' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMAttributeMessageBackgroundColor' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMAttributePreformatted' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMAttributeStrikethrough' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMAttributeUnderline' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMGroupListDefaultGroup' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMGroupListHandlesKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMGroupListNameKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMGroupListPermissionsKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMHandleCapabilityChatRoom' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMHandleCapabilityFileTransfer' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMHandleCapabilityHandlePicture' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMHandleCapabilityMessaging' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMHandleCapabilityOfflineMessaging' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMHandlePropertyAlias' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMHandlePropertyAuthorizationStatus' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMHandlePropertyAvailability' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMHandlePropertyCapabilities' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMHandlePropertyEmailAddress' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMHandlePropertyFirstName' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMHandlePropertyIdleDate' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMHandlePropertyLastName' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMHandlePropertyPictureData' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMHandlePropertyPictureIdentifier' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMHandlePropertyStatusMessage' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMSessionPropertyAvailability' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMSessionPropertyIdleDate' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMSessionPropertyIsInvisible' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMSessionPropertyPictureData' type='@'/>
+<constant const='true' declared_type='NSString*' name='IMSessionPropertyStatusMessage' type='@'/>
+<enum name='IMGroupListCanAddNewMembers' value='4'/>
+<enum name='IMGroupListCanRemoveMembers' value='8'/>
+<enum name='IMGroupListCanRenameGroup' value='2'/>
+<enum name='IMGroupListCanReorderGroup' value='1'/>
+<enum name='IMGroupListCanReorderMembers' value='16'/>
+<enum name='IMHandleAuthorizationStatusAccepted' value='0'/>
+<enum name='IMHandleAuthorizationStatusDeclined' value='2'/>
+<enum name='IMHandleAuthorizationStatusPending' value='1'/>
+<enum name='IMHandleAvailabilityAvailable' value='1'/>
+<enum name='IMHandleAvailabilityAway' value='0'/>
+<enum name='IMHandleAvailabilityOffline' value='-1'/>
+<enum name='IMHandleAvailabilityUnknown' value='-2'/>
+<enum name='IMSessionAvailabilityAvailable' value='1'/>
+<enum name='IMSessionAvailabilityAway' value='0'/>
+<class name='IMServicePlugInFileTransfer'>
+<method class_method='true' selector='fileTransferWithPath:type:totalBytes:'>
+<arg declared_type='NSString*' index='0' name='path' type='@'/>
+<arg declared_type='NSString*' index='1' name='type' type='@'/>
+<arg declared_type='uint64_t' index='2' name='totalBytes' type='Q'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='guid'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='initWithPath:type:totalBytes:'>
+<arg declared_type='NSString*' index='0' name='path' type='@'/>
+<arg declared_type='NSString*' index='1' name='type' type='@'/>
+<arg declared_type='uint64_t' index='2' name='totalBytes' type='Q'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='path'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='session'>
+<retval declared_type='IMServicePlugInFileTransferSession*' type='@'/>
+</method>
+<method selector='totalBytes'>
+<retval declared_type='uint64_t' type='Q'/>
+</method>
+<method selector='transferredBytes'>
+<retval declared_type='uint64_t' type='Q'/>
+</method>
+<method selector='type'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='IMServicePlugInFileTransferSession'>
+<method selector='containerName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='guid'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='IMServicePlugInIncomingFileTransfer'>
+<method selector='outputStream'>
+<retval declared_type='NSOutputStream*' type='@'/>
+</method>
+<method selector='resetOutputStream'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='IMServicePlugInIncomingFileTransferSession'>
+<method selector='addIncomingFileTransfer:'>
+<arg declared_type='IMServicePlugInIncomingFileTransfer*' index='0' name='fileTransfer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='incomingFileTransferForPath:'>
+<arg declared_type='NSString*' index='0' name='path' type='@'/>
+<retval declared_type='IMServicePlugInIncomingFileTransfer*' type='@'/>
+</method>
+<method selector='incomingFileTransfers'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='setContainerName:'>
+<arg declared_type='NSString*' index='0' name='containerName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='IMServicePlugInMessage'>
+<method selector='content'>
+<retval declared_type='NSAttributedString*' type='@'/>
+</method>
+<method selector='date'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='guid'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='initWithContent:'>
+<arg declared_type='NSAttributedString*' index='0' name='content' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithContent:date:'>
+<arg declared_type='NSAttributedString*' index='0' name='content' type='@'/>
+<arg declared_type='NSDate*' index='1' name='date' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='servicePlugInMessageWithContent:'>
+<arg declared_type='NSAttributedString*' index='0' name='content' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='servicePlugInMessageWithContent:date:'>
+<arg declared_type='NSAttributedString*' index='0' name='content' type='@'/>
+<arg declared_type='NSDate*' index='1' name='date' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setContent:'>
+<arg declared_type='NSAttributedString*' index='0' name='content' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDate:'>
+<arg declared_type='NSDate*' index='0' name='date' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='IMServicePlugInOutgoingFileTransfer'>
+<method selector='inputStream'>
+<retval declared_type='NSInputStream*' type='@'/>
+</method>
+<method selector='resetInputStream'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='IMServicePlugInOutgoingFileTransferSession'>
+<method selector='outgoingFileTransferForPath:'>
+<arg declared_type='NSString*' index='0' name='path' type='@'/>
+<retval declared_type='IMServicePlugInOutgoingFileTransfer*' type='@'/>
+</method>
+<method selector='outgoingFileTransfers'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='acceptAuthorizationRequestFromHandle:'>
+<arg declared_type='NSString*' index='0' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='acceptIncomingFileTransferSession:'>
+<arg declared_type='IMServicePlugInIncomingFileTransferSession*' index='0' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addGroups:'>
+<arg declared_type='NSArray*' index='0' name='groupNames' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addHandles:toGroup:'>
+<arg declared_type='NSArray*' index='0' name='handles' type='@'/>
+<arg declared_type='NSString*' index='1' name='groupName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='cancelFileTransferSession:'>
+<arg declared_type='IMServicePlugInFileTransferSession*' index='0' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='declineAuthorizationRequestFromHandle:'>
+<arg declared_type='NSString*' index='0' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='declineChatRoomInvitation:'>
+<arg declared_type='NSString*' index='0' name='roomName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handleDidStartTyping:'>
+<arg declared_type='NSString*' index='0' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handleDidStopTyping:'>
+<arg declared_type='NSString*' index='0' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handles:didJoinChatRoom:'>
+<arg declared_type='NSArray*' index='0' name='handles' type='@'/>
+<arg declared_type='NSString*' index='1' name='roomName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handles:didLeaveChatRoom:'>
+<arg declared_type='NSArray*' index='0' name='handles' type='@'/>
+<arg declared_type='NSString*' index='1' name='roomName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithServiceApplication:'>
+<arg declared_type='id' index='0' name='serviceApplication' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='inviteHandles:toChatRoom:withMessage:'>
+<arg declared_type='NSArray*' index='0' name='handles' type='@'/>
+<arg declared_type='NSString*' index='1' name='roomName' type='@'/>
+<arg declared_type='IMServicePlugInMessage*' index='2' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='joinChatRoom:'>
+<arg declared_type='NSString*' index='0' name='roomName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='leaveChatRoom:'>
+<arg declared_type='NSString*' index='0' name='roomName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='login'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='logout'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidAcceptOutgoingFileTransferSession:'>
+<arg declared_type='IMServicePlugInOutgoingFileTransferSession*' index='0' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidFailToAuthenticate'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidFinishFileTransferSession:error:'>
+<arg declared_type='IMServicePlugInFileTransferSession*' index='0' name='session' type='@'/>
+<arg declared_type='NSError*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidJoinChatRoom:'>
+<arg declared_type='NSString*' index='0' name='roomName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidLeaveChatRoom:error:'>
+<arg declared_type='NSString*' index='0' name='roomName' type='@'/>
+<arg declared_type='NSError*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidLogIn'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidLogOutWithError:reconnect:'>
+<arg declared_type='NSError*' index='0' name='error' type='@'/>
+<arg declared_type='BOOL' index='1' name='reconnect' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidReceiveAuthorizationRequestFromHandle:'>
+<arg declared_type='NSString*' index='0' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidReceiveIncomingFileTransferSession:fromHandle:'>
+<arg declared_type='IMServicePlugInIncomingFileTransferSession*' index='0' name='session' type='@'/>
+<arg declared_type='NSString*' index='1' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidReceiveInvitation:forChatRoom:fromHandle:'>
+<arg declared_type='IMServicePlugInMessage*' index='0' name='invitation' type='@'/>
+<arg declared_type='NSString*' index='1' name='roomName' type='@'/>
+<arg declared_type='NSString*' index='2' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidReceiveMessage:forChatRoom:fromHandle:'>
+<arg declared_type='IMServicePlugInMessage*' index='0' name='message' type='@'/>
+<arg declared_type='NSString*' index='1' name='roomName' type='@'/>
+<arg declared_type='NSString*' index='2' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidReceiveMessage:fromHandle:'>
+<arg declared_type='IMServicePlugInMessage*' index='0' name='message' type='@'/>
+<arg declared_type='NSString*' index='1' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidReceiveNotice:forChatRoom:'>
+<arg declared_type='NSString*' index='0' name='notice' type='@'/>
+<arg declared_type='NSString*' index='1' name='roomName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidSendMessage:toChatRoom:error:'>
+<arg declared_type='IMServicePlugInMessage*' index='0' name='message' type='@'/>
+<arg declared_type='NSString*' index='1' name='roomName' type='@'/>
+<arg declared_type='NSError*' index='2' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidSendMessage:toHandle:error:'>
+<arg declared_type='IMServicePlugInMessage*' index='0' name='message' type='@'/>
+<arg declared_type='NSString*' index='1' name='handle' type='@'/>
+<arg declared_type='NSError*' index='2' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidUpdateGroupList:error:'>
+<arg declared_type='NSArray*' index='0' name='groups' type='@'/>
+<arg declared_type='NSError*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidUpdateProperties:ofHandle:'>
+<arg declared_type='NSDictionary*' index='0' name='changes' type='@'/>
+<arg declared_type='NSString*' index='1' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeGroups:'>
+<arg declared_type='NSArray*' index='0' name='groupNames' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeHandles:fromGroup:'>
+<arg declared_type='NSArray*' index='0' name='handles' type='@'/>
+<arg declared_type='NSString*' index='1' name='groupName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='renameGroup:toGroup:'>
+<arg declared_type='NSString*' index='0' name='oldGroupName' type='@'/>
+<arg declared_type='NSString*' index='1' name='newGroupName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='reorderGroups:'>
+<arg declared_type='NSArray*' index='0' name='groupNames' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='reorderHandles:inGroup:'>
+<arg declared_type='NSArray*' index='0' name='handles' type='@'/>
+<arg declared_type='NSString*' index='1' name='groupName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='requestGroupList'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='requestPictureForHandle:withIdentifier:'>
+<arg declared_type='NSString*' index='0' name='handle' type='@'/>
+<arg declared_type='NSString*' index='1' name='identifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendAuthorizationRequestToHandle:'>
+<arg declared_type='NSString*' index='0' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendMessage:toChatRoom:'>
+<arg declared_type='IMServicePlugInMessage*' index='0' name='message' type='@'/>
+<arg declared_type='NSString*' index='1' name='roomName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendMessage:toHandle:'>
+<arg declared_type='IMServicePlugInMessage*' index='0' name='message' type='@'/>
+<arg declared_type='NSString*' index='1' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startOutgoingFileTransferSession:toHandle:'>
+<arg declared_type='IMServicePlugInOutgoingFileTransferSession*' index='0' name='session' type='@'/>
+<arg declared_type='NSString*' index='1' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateAccountSettings:'>
+<arg declared_type='NSDictionary*' index='0' name='accountSettings' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateSessionProperties:'>
+<arg declared_type='NSDictionary*' index='0' name='properties' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='userDidStartTypingToHandle:'>
+<arg declared_type='NSString*' index='0' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='userDidStopTypingToHandle:'>
+<arg declared_type='NSString*' index='0' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='IMServiceApplication'>
+<method selector='plugInDidFailToAuthenticate' type='Vv8@0:4' type64='Vv16@0:8'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidLogIn' type='Vv8@0:4' type64='Vv16@0:8'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidLogOutWithError:reconnect:' type='Vv16@0:4@8B12' type64='Vv28@0:8@16B24'>
+<arg declared_type='NSError*' index='0' name='error' type='@'/>
+<arg declared_type='BOOL' index='1' name='reconnect' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidUpdateProperties:ofHandle:' type='Vv16@0:4@8@12' type64='Vv32@0:8@16@24'>
+<arg declared_type='NSDictionary*' index='0' name='changes' type='@'/>
+<arg declared_type='NSString*' index='1' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='IMServiceApplicationChatRoomSupport'>
+<method selector='handles:didJoinChatRoom:' type='Vv16@0:4@8@12' type64='Vv32@0:8@16@24'>
+<arg declared_type='NSArray*' index='0' name='handles' type='@'/>
+<arg declared_type='NSString*' index='1' name='roomName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handles:didLeaveChatRoom:' type='Vv16@0:4@8@12' type64='Vv32@0:8@16@24'>
+<arg declared_type='NSArray*' index='0' name='handles' type='@'/>
+<arg declared_type='NSString*' index='1' name='roomName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidJoinChatRoom:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='roomName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidLeaveChatRoom:error:' type='Vv16@0:4@8@12' type64='Vv32@0:8@16@24'>
+<arg declared_type='NSString*' index='0' name='roomName' type='@'/>
+<arg declared_type='NSError*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidReceiveInvitation:forChatRoom:fromHandle:' type='Vv20@0:4@8@12@16' type64='Vv40@0:8@16@24@32'>
+<arg declared_type='IMServicePlugInMessage*' index='0' name='invitation' type='@'/>
+<arg declared_type='NSString*' index='1' name='roomName' type='@'/>
+<arg declared_type='NSString*' index='2' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidReceiveMessage:forChatRoom:fromHandle:' type='Vv20@0:4@8@12@16' type64='Vv40@0:8@16@24@32'>
+<arg declared_type='IMServicePlugInMessage*' index='0' name='message' type='@'/>
+<arg declared_type='NSString*' index='1' name='roomName' type='@'/>
+<arg declared_type='NSString*' index='2' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidReceiveNotice:forChatRoom:' type='Vv16@0:4@8@12' type64='Vv32@0:8@16@24'>
+<arg declared_type='NSString*' index='0' name='notice' type='@'/>
+<arg declared_type='NSString*' index='1' name='roomName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidSendMessage:toChatRoom:error:' type='Vv20@0:4@8@12@16' type64='Vv40@0:8@16@24@32'>
+<arg declared_type='IMServicePlugInMessage*' index='0' name='message' type='@'/>
+<arg declared_type='NSString*' index='1' name='roomName' type='@'/>
+<arg declared_type='NSError*' index='2' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='IMServiceApplicationFileTransferSessionSupport'>
+<method selector='plugInDidAcceptOutgoingFileTransferSession:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='IMServicePlugInOutgoingFileTransferSession*' index='0' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidFinishFileTransferSession:error:' type='Vv16@0:4@8@12' type64='Vv32@0:8@16@24'>
+<arg declared_type='IMServicePlugInFileTransferSession*' index='0' name='session' type='@'/>
+<arg declared_type='NSError*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidReceiveIncomingFileTransferSession:fromHandle:' type='Vv16@0:4@8@12' type64='Vv32@0:8@16@24'>
+<arg declared_type='IMServicePlugInIncomingFileTransferSession*' index='0' name='session' type='@'/>
+<arg declared_type='NSString*' index='1' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='IMServiceApplicationGroupListAuthorizationSupport'>
+<method selector='plugInDidReceiveAuthorizationRequestFromHandle:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='IMServiceApplicationGroupListSupport'>
+<method selector='plugInDidUpdateGroupList:error:' type='Vv16@0:4@8@12' type64='Vv32@0:8@16@24'>
+<arg declared_type='NSArray*' index='0' name='groups' type='@'/>
+<arg declared_type='NSError*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='IMServiceApplicationInstantMessagingSupport'>
+<method selector='handleDidStartTyping:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handleDidStopTyping:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidReceiveMessage:fromHandle:' type='Vv16@0:4@8@12' type64='Vv32@0:8@16@24'>
+<arg declared_type='IMServicePlugInMessage*' index='0' name='message' type='@'/>
+<arg declared_type='NSString*' index='1' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='plugInDidSendMessage:toHandle:error:' type='Vv20@0:4@8@12@16' type64='Vv40@0:8@16@24@32'>
+<arg declared_type='IMServicePlugInMessage*' index='0' name='message' type='@'/>
+<arg declared_type='NSString*' index='1' name='handle' type='@'/>
+<arg declared_type='NSError*' index='2' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='IMServicePlugIn'>
+<method selector='initWithServiceApplication:' type='@12@0:4@8' type64='@24@0:8@16'>
+<arg declared_type='id' index='0' name='serviceApplication' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='login' type='Vv8@0:4' type64='Vv16@0:8'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='logout' type='Vv8@0:4' type64='Vv16@0:8'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateAccountSettings:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='NSDictionary*' index='0' name='accountSettings' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='IMServicePlugInChatRoomSupport'>
+<method selector='declineChatRoomInvitation:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='roomName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='inviteHandles:toChatRoom:withMessage:' type='Vv20@0:4@8@12@16' type64='Vv40@0:8@16@24@32'>
+<arg declared_type='NSArray*' index='0' name='handles' type='@'/>
+<arg declared_type='NSString*' index='1' name='roomName' type='@'/>
+<arg declared_type='IMServicePlugInMessage*' index='2' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='joinChatRoom:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='roomName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='leaveChatRoom:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='roomName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendMessage:toChatRoom:' type='Vv16@0:4@8@12' type64='Vv32@0:8@16@24'>
+<arg declared_type='IMServicePlugInMessage*' index='0' name='message' type='@'/>
+<arg declared_type='NSString*' index='1' name='roomName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='IMServicePlugInFileTransferSessionSupport'>
+<method selector='acceptIncomingFileTransferSession:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='IMServicePlugInIncomingFileTransferSession*' index='0' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='cancelFileTransferSession:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='IMServicePlugInFileTransferSession*' index='0' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startOutgoingFileTransferSession:toHandle:' type='Vv16@0:4@8@12' type64='Vv32@0:8@16@24'>
+<arg declared_type='IMServicePlugInOutgoingFileTransferSession*' index='0' name='session' type='@'/>
+<arg declared_type='NSString*' index='1' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='IMServicePlugInGroupListAuthorizationSupport'>
+<method selector='acceptAuthorizationRequestFromHandle:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='declineAuthorizationRequestFromHandle:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendAuthorizationRequestToHandle:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='IMServicePlugInGroupListEditingSupport'>
+<method selector='addGroups:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='NSArray*' index='0' name='groupNames' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addHandles:toGroup:' type='Vv16@0:4@8@12' type64='Vv32@0:8@16@24'>
+<arg declared_type='NSArray*' index='0' name='handles' type='@'/>
+<arg declared_type='NSString*' index='1' name='groupName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeGroups:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='NSArray*' index='0' name='groupNames' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeHandles:fromGroup:' type='Vv16@0:4@8@12' type64='Vv32@0:8@16@24'>
+<arg declared_type='NSArray*' index='0' name='handles' type='@'/>
+<arg declared_type='NSString*' index='1' name='groupName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='renameGroup:toGroup:' type='Vv16@0:4@8@12' type64='Vv32@0:8@16@24'>
+<arg declared_type='NSString*' index='0' name='oldGroupName' type='@'/>
+<arg declared_type='NSString*' index='1' name='newGroupName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='IMServicePlugInGroupListHandlePictureSupport'>
+<method selector='requestPictureForHandle:withIdentifier:' type='Vv16@0:4@8@12' type64='Vv32@0:8@16@24'>
+<arg declared_type='NSString*' index='0' name='handle' type='@'/>
+<arg declared_type='NSString*' index='1' name='identifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='IMServicePlugInGroupListOrderingSupport'>
+<method selector='reorderGroups:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='NSArray*' index='0' name='groupNames' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='reorderHandles:inGroup:' type='Vv16@0:4@8@12' type64='Vv32@0:8@16@24'>
+<arg declared_type='NSArray*' index='0' name='handles' type='@'/>
+<arg declared_type='NSString*' index='1' name='groupName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='IMServicePlugInGroupListSupport'>
+<method selector='requestGroupList' type='Vv8@0:4' type64='Vv16@0:8'>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='IMServicePlugInInstantMessagingSupport'>
+<method selector='sendMessage:toHandle:' type='Vv16@0:4@8@12' type64='Vv32@0:8@16@24'>
+<arg declared_type='IMServicePlugInMessage*' index='0' name='message' type='@'/>
+<arg declared_type='NSString*' index='1' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='userDidStartTypingToHandle:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='userDidStopTypingToHandle:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='IMServicePlugInPresenceSupport'>
+<method selector='updateSessionProperties:' type='Vv12@0:4@8' type64='Vv24@0:8@16'>
+<arg declared_type='NSDictionary*' index='0' name='properties' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>
