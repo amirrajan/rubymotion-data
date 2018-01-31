@@ -1,0 +1,269 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CFNetwork.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/CallKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<enum name='SFSpeechRecognitionTaskHintConfirmation' value='3'/>
+<enum name='SFSpeechRecognitionTaskHintDictation' value='1'/>
+<enum name='SFSpeechRecognitionTaskHintSearch' value='2'/>
+<enum name='SFSpeechRecognitionTaskHintUnspecified' value='0'/>
+<enum name='SFSpeechRecognitionTaskStateCanceling' value='3'/>
+<enum name='SFSpeechRecognitionTaskStateCompleted' value='4'/>
+<enum name='SFSpeechRecognitionTaskStateFinishing' value='2'/>
+<enum name='SFSpeechRecognitionTaskStateRunning' value='1'/>
+<enum name='SFSpeechRecognitionTaskStateStarting' value='0'/>
+<enum name='SFSpeechRecognizerAuthorizationStatusAuthorized' value='3'/>
+<enum name='SFSpeechRecognizerAuthorizationStatusDenied' value='1'/>
+<enum name='SFSpeechRecognizerAuthorizationStatusNotDetermined' value='0'/>
+<enum name='SFSpeechRecognizerAuthorizationStatusRestricted' value='2'/>
+<class name='NSObject'>
+<method selector='speechRecognitionDidDetectSpeech:'>
+<arg declared_type='SFSpeechRecognitionTask * _Nonnull' index='0' name='task' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='speechRecognitionTask:didFinishRecognition:'>
+<arg declared_type='SFSpeechRecognitionTask * _Nonnull' index='0' name='task' type='@'/>
+<arg declared_type='SFSpeechRecognitionResult * _Nonnull' index='1' name='recognitionResult' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='speechRecognitionTask:didFinishSuccessfully:'>
+<arg declared_type='SFSpeechRecognitionTask * _Nonnull' index='0' name='task' type='@'/>
+<arg declared_type='BOOL' index='1' name='successfully' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='speechRecognitionTask:didHypothesizeTranscription:'>
+<arg declared_type='SFSpeechRecognitionTask * _Nonnull' index='0' name='task' type='@'/>
+<arg declared_type='SFTranscription * _Nonnull' index='1' name='transcription' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='speechRecognitionTaskFinishedReadingAudio:'>
+<arg declared_type='SFSpeechRecognitionTask * _Nonnull' index='0' name='task' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='speechRecognitionTaskWasCancelled:'>
+<arg declared_type='SFSpeechRecognitionTask * _Nonnull' index='0' name='task' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='speechRecognizer:availabilityDidChange:'>
+<arg declared_type='SFSpeechRecognizer * _Nonnull' index='0' name='speechRecognizer' type='@'/>
+<arg declared_type='BOOL' index='1' name='available' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SFSpeechAudioBufferRecognitionRequest'>
+<method selector='appendAudioPCMBuffer:'>
+<arg declared_type='AVAudioPCMBuffer * _Nonnull' index='0' name='audioPCMBuffer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='appendAudioSampleBuffer:'>
+<arg declared_type='CMSampleBufferRef _Nonnull' index='0' name='sampleBuffer' type='^{opaqueCMSampleBuffer=}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='endAudio'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='nativeAudioFormat'>
+<retval declared_type='AVAudioFormat * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='SFSpeechRecognitionRequest'>
+<method selector='contextualStrings'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='interactionIdentifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='setContextualStrings:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='contextualStrings' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInteractionIdentifier:'>
+<arg declared_type='NSString * _Nullable' index='0' name='interactionIdentifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShouldReportPartialResults:'>
+<arg declared_type='BOOL' index='0' name='shouldReportPartialResults' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTaskHint:'>
+<arg declared_type='SFSpeechRecognitionTaskHint' index='0' name='taskHint' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldReportPartialResults'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='taskHint'>
+<retval declared_type='SFSpeechRecognitionTaskHint' type='i' type64='q'/>
+</method>
+</class>
+<class name='SFSpeechRecognitionResult'>
+<method selector='bestTranscription'>
+<retval declared_type='SFTranscription * _Nonnull' type='@'/>
+</method>
+<method selector='isFinal'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='transcriptions'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='SFSpeechRecognitionTask'>
+<method selector='cancel'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='error'>
+<retval declared_type='NSError * _Nullable' type='@'/>
+</method>
+<method selector='finish'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='isCancelled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isFinishing'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='state'>
+<retval declared_type='SFSpeechRecognitionTaskState' type='i' type64='q'/>
+</method>
+</class>
+<class name='SFSpeechRecognizer'>
+<method class_method='true' selector='authorizationStatus'>
+<retval declared_type='SFSpeechRecognizerAuthorizationStatus' type='i' type64='q'/>
+</method>
+<method selector='defaultTaskHint'>
+<retval declared_type='SFSpeechRecognitionTaskHint' type='i' type64='q'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='init'>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='initWithLocale:'>
+<arg declared_type='NSLocale * _Nonnull' index='0' name='locale' type='@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='isAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='locale'>
+<retval declared_type='NSLocale * _Nonnull' type='@'/>
+</method>
+<method selector='queue'>
+<retval declared_type='NSOperationQueue * _Nonnull' type='@'/>
+</method>
+<method selector='recognitionTaskWithRequest:delegate:'>
+<arg declared_type='SFSpeechRecognitionRequest * _Nonnull' index='0' name='request' type='@'/>
+<arg declared_type='id _Nonnull' index='1' name='delegate' type='@'/>
+<retval declared_type='SFSpeechRecognitionTask * _Nonnull' type='@'/>
+</method>
+<method selector='recognitionTaskWithRequest:resultHandler:'>
+<arg declared_type='SFSpeechRecognitionRequest * _Nonnull' index='0' name='request' type='@'/>
+<arg declared_type='void (^ _Nonnull)(SFSpeechRecognitionResult * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='resultHandler' type='@?'>
+<arg declared_type='SFSpeechRecognitionResult * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='SFSpeechRecognitionTask * _Nonnull' type='@'/>
+</method>
+<method class_method='true' selector='requestAuthorization:'>
+<arg declared_type='void (^ _Nonnull)(SFSpeechRecognizerAuthorizationStatus)' function_pointer='true' index='0' name='handler' type='@?'>
+<arg declared_type='SFSpeechRecognizerAuthorizationStatus' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDefaultTaskHint:'>
+<arg declared_type='SFSpeechRecognitionTaskHint' index='0' name='defaultTaskHint' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setQueue:'>
+<arg declared_type='NSOperationQueue * _Nonnull' index='0' name='queue' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='supportedLocales'>
+<retval declared_type='NSSet * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='SFSpeechURLRecognitionRequest'>
+<method selector='URL'>
+<retval declared_type='NSURL * _Nonnull' type='@'/>
+</method>
+<method selector='initWithURL:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='URL' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+</class>
+<class name='SFTranscription'>
+<method selector='formattedString'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='segments'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='SFTranscriptionSegment'>
+<method selector='alternativeSubstrings'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='confidence'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='duration'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='substring'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='substringRange'>
+<retval declared_type='NSRange' type='{_NSRange=II}' type64='{_NSRange=QQ}'/>
+</method>
+<method selector='timestamp'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+</class>
+<informal_protocol name='SFSpeechRecognitionTaskDelegate'>
+<method selector='speechRecognitionDidDetectSpeech:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SFSpeechRecognitionTask * _Nonnull' index='0' name='task' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='speechRecognitionTask:didFinishRecognition:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='SFSpeechRecognitionTask * _Nonnull' index='0' name='task' type='@'/>
+<arg declared_type='SFSpeechRecognitionResult * _Nonnull' index='1' name='recognitionResult' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='speechRecognitionTask:didFinishSuccessfully:' type='v16@0:4@8B12' type64='v28@0:8@16B24'>
+<arg declared_type='SFSpeechRecognitionTask * _Nonnull' index='0' name='task' type='@'/>
+<arg declared_type='BOOL' index='1' name='successfully' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='speechRecognitionTask:didHypothesizeTranscription:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='SFSpeechRecognitionTask * _Nonnull' index='0' name='task' type='@'/>
+<arg declared_type='SFTranscription * _Nonnull' index='1' name='transcription' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='speechRecognitionTaskFinishedReadingAudio:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SFSpeechRecognitionTask * _Nonnull' index='0' name='task' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='speechRecognitionTaskWasCancelled:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='SFSpeechRecognitionTask * _Nonnull' index='0' name='task' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='SFSpeechRecognizerDelegate'>
+<method selector='speechRecognizer:availabilityDidChange:' type='v16@0:4@8B12' type64='v28@0:8@16B24'>
+<arg declared_type='SFSpeechRecognizer * _Nonnull' index='0' name='speechRecognizer' type='@'/>
+<arg declared_type='BOOL' index='1' name='available' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>

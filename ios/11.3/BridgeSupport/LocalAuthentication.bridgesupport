@@ -1,0 +1,144 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/LocalAuthentication.framework/Support/SharedUtils.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='LAErrorDomain' type='@'/>
+<constant const='true' declared_type='NSTimeInterval' name='LATouchIDAuthenticationMaximumAllowableReuseDuration' type='d'/>
+<string_constant name='kLAErrorDomain' value='com.apple.LocalAuthentication'/>
+<enum name='LAAccessControlOperationCreateItem' value='0'/>
+<enum name='LAAccessControlOperationCreateKey' value='2'/>
+<enum name='LAAccessControlOperationUseItem' value='1'/>
+<enum name='LAAccessControlOperationUseKeyDecrypt' value='4'/>
+<enum name='LAAccessControlOperationUseKeyKeyExchange' value='5'/>
+<enum name='LAAccessControlOperationUseKeySign' value='3'/>
+<enum name='LABiometryNone' value='0'/>
+<enum name='LABiometryTypeFaceID' value='2'/>
+<enum name='LABiometryTypeNone' value='0'/>
+<enum name='LABiometryTypeTouchID' value='1'/>
+<enum name='LACredentialTypeApplicationPassword' value='0'/>
+<enum name='LAErrorAppCancel' value='-9'/>
+<enum name='LAErrorAuthenticationFailed' value='-1'/>
+<enum name='LAErrorBiometryLockout' value='-8'/>
+<enum name='LAErrorBiometryNotAvailable' value='-6'/>
+<enum name='LAErrorBiometryNotEnrolled' value='-7'/>
+<enum name='LAErrorInvalidContext' value='-10'/>
+<enum name='LAErrorNotInteractive' value='-1004'/>
+<enum name='LAErrorPasscodeNotSet' value='-5'/>
+<enum name='LAErrorSystemCancel' value='-4'/>
+<enum name='LAErrorTouchIDLockout' value='-8'/>
+<enum name='LAErrorTouchIDNotAvailable' value='-6'/>
+<enum name='LAErrorTouchIDNotEnrolled' value='-7'/>
+<enum name='LAErrorUserCancel' value='-2'/>
+<enum name='LAErrorUserFallback' value='-3'/>
+<enum name='LAPolicyDeviceOwnerAuthentication' value='2'/>
+<enum name='LAPolicyDeviceOwnerAuthenticationWithBiometrics' value='1'/>
+<enum name='kLACredentialTypeApplicationPassword' value='0'/>
+<enum name='kLAErrorAppCancel' value='-9'/>
+<enum name='kLAErrorAuthenticationFailed' value='-1'/>
+<enum name='kLAErrorBiometryLockout' value='-8'/>
+<enum name='kLAErrorBiometryNotAvailable' value='-6'/>
+<enum name='kLAErrorBiometryNotEnrolled' value='-7'/>
+<enum name='kLAErrorInvalidContext' value='-10'/>
+<enum name='kLAErrorNotInteractive' value='-1004'/>
+<enum name='kLAErrorPasscodeNotSet' value='-5'/>
+<enum name='kLAErrorSystemCancel' value='-4'/>
+<enum name='kLAErrorTouchIDLockout' value='-8'/>
+<enum name='kLAErrorTouchIDNotAvailable' value='-6'/>
+<enum name='kLAErrorTouchIDNotEnrolled' value='-7'/>
+<enum name='kLAErrorUserCancel' value='-2'/>
+<enum name='kLAErrorUserFallback' value='-3'/>
+<enum name='kLAOptionAuthenticationReason' value='2'/>
+<enum name='kLAOptionUserFallback' value='1'/>
+<enum name='kLAPolicyDeviceOwnerAuthentication' value='2'/>
+<enum name='kLAPolicyDeviceOwnerAuthenticationWithBiometrics' value='1'/>
+<class name='LAContext'>
+<method selector='biometryType'>
+<retval declared_type='LABiometryType' type='i' type64='q'/>
+</method>
+<method selector='canEvaluatePolicy:error:'>
+<arg declared_type='LAPolicy' index='0' name='policy' type='i' type64='q'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='1' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='evaluateAccessControl:operation:localizedReason:reply:'>
+<arg declared_type='SecAccessControlRef _Nonnull' index='0' name='accessControl' type='^{__SecAccessControl=}'/>
+<arg declared_type='LAAccessControlOperation' index='1' name='operation' type='i' type64='q'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='localizedReason' type='@'/>
+<arg declared_type='void (^ _Nonnull)(BOOL, NSError * _Nullable)' function_pointer='true' index='3' name='reply' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='evaluatePolicy:localizedReason:reply:'>
+<arg declared_type='LAPolicy' index='0' name='policy' type='i' type64='q'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='localizedReason' type='@'/>
+<arg declared_type='void (^ _Nonnull)(BOOL, NSError * _Nullable)' function_pointer='true' index='2' name='reply' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='evaluatedPolicyDomainState'>
+<retval declared_type='NSData * _Nullable' type='@'/>
+</method>
+<method selector='interactionNotAllowed'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='invalidate'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='isCredentialSet:'>
+<arg declared_type='LACredentialType' index='0' name='type' type='i' type64='q'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='localizedCancelTitle'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='localizedFallbackTitle'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='localizedReason'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='maxBiometryFailures'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='setCredential:type:'>
+<arg declared_type='NSData * _Nullable' index='0' name='credential' type='@'/>
+<arg declared_type='LACredentialType' index='1' name='type' type='i' type64='q'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setInteractionNotAllowed:'>
+<arg declared_type='BOOL' index='0' name='interactionNotAllowed' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLocalizedCancelTitle:'>
+<arg declared_type='NSString * _Nullable' index='0' name='localizedCancelTitle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLocalizedFallbackTitle:'>
+<arg declared_type='NSString * _Nullable' index='0' name='localizedFallbackTitle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLocalizedReason:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='localizedReason' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaxBiometryFailures:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='maxBiometryFailures' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTouchIDAuthenticationAllowableReuseDuration:'>
+<arg declared_type='NSTimeInterval' index='0' name='touchIDAuthenticationAllowableReuseDuration' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='touchIDAuthenticationAllowableReuseDuration'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+</class>
+</signatures>
