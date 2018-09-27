@@ -1,0 +1,155 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<class name='NSObject'>
+<method selector='eventDidFail:withError:'>
+<arg const='true' declared_type64='AppleEvent * _Nonnull' index='0' name='event' type64='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+</class>
+<class name='SBApplication'>
+<method selector='activate'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='applicationWithBundleIdentifier:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='ident' type64='@'/>
+<retval declared_type64='__kindof SBApplication * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='applicationWithProcessIdentifier:'>
+<arg declared_type64='pid_t' index='0' name='pid' type64='i'/>
+<retval declared_type64='__kindof SBApplication * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='applicationWithURL:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='url' type64='@'/>
+<retval declared_type64='__kindof SBApplication * _Nullable' type64='@'/>
+</method>
+<method selector='classForScriptingClass:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='className' type64='@'/>
+<retval declared_type64='Class _Nullable' type64='#'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='initWithBundleIdentifier:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='ident' type64='@'/>
+<retval declared_type64='__kindof SBApplication * _Nullable' type64='@'/>
+</method>
+<method selector='initWithProcessIdentifier:'>
+<arg declared_type64='pid_t' index='0' name='pid' type64='i'/>
+<retval declared_type64='__kindof SBApplication * _Nullable' type64='@'/>
+</method>
+<method selector='initWithURL:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='url' type64='@'/>
+<retval declared_type64='__kindof SBApplication * _Nullable' type64='@'/>
+</method>
+<method selector='isRunning'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='launchFlags'>
+<retval declared_type64='LSLaunchFlags' type64='I'/>
+</method>
+<method selector='sendMode'>
+<retval declared_type64='AESendMode' type64='i'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLaunchFlags:'>
+<arg declared_type64='LSLaunchFlags' index='0' name='launchFlags' type64='I'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSendMode:'>
+<arg declared_type64='AESendMode' index='0' name='sendMode' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTimeout:'>
+<arg declared_type64='long' index='0' name='timeout' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='timeout'>
+<retval declared_type64='long' type64='q'/>
+</method>
+</class>
+<class name='SBElementArray'>
+<method selector='arrayByApplyingSelector:'>
+<arg declared_type64='SEL _Nonnull' index='0' name='selector' type64=':'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='arrayByApplyingSelector:withObject:'>
+<arg declared_type64='SEL _Nonnull' index='0' name='aSelector' type64=':'/>
+<arg declared_type64='id _Nonnull' index='1' name='argument' type64='@'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='get'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='objectAtLocation:'>
+<arg declared_type64='id _Nonnull' index='0' name='location' type64='@'/>
+<retval declared_type64='ObjectType _Nonnull' type64='@'/>
+</method>
+<method selector='objectWithID:'>
+<arg declared_type64='id _Nonnull' index='0' name='identifier' type64='@'/>
+<retval declared_type64='ObjectType _Nonnull' type64='@'/>
+</method>
+<method selector='objectWithName:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='ObjectType _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='SBObject'>
+<method selector='elementArrayWithCode:'>
+<arg declared_type64='DescType' index='0' name='code' type64='I'/>
+<retval declared_type64='SBElementArray * _Nonnull' type64='@'/>
+</method>
+<method selector='get'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithData:'>
+<arg declared_type64='id _Nonnull' index='0' name='data' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithElementCode:properties:data:'>
+<arg declared_type64='DescType' index='0' name='code' type64='I'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='properties' type64='@'/>
+<arg declared_type64='id _Nullable' index='2' name='data' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithProperties:'>
+<arg declared_type64='NSDictionary * _Nonnull' index='0' name='properties' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='lastError'>
+<retval declared_type64='NSError * _Nullable' type64='@'/>
+</method>
+<method selector='propertyWithClass:code:'>
+<arg declared_type64='Class _Nonnull' index='0' name='cls' type64='#'/>
+<arg declared_type64='AEKeyword' index='1' name='code' type64='I'/>
+<retval declared_type64='SBObject * _Nonnull' type64='@'/>
+</method>
+<method selector='propertyWithCode:'>
+<arg declared_type64='AEKeyword' index='0' name='code' type64='I'/>
+<retval declared_type64='SBObject * _Nonnull' type64='@'/>
+</method>
+<method selector='sendEvent:id:parameters:' variadic='true'>
+<arg declared_type64='AEEventClass' index='0' name='eventClass' type64='I'/>
+<arg declared_type64='AEEventID' index='1' name='eventID' type64='I'/>
+<arg declared_type64='DescType' index='2' name='firstParamCode' type64='I'/>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='setTo:'>
+<arg declared_type64='id _Nullable' index='0' name='value' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='SBApplicationDelegate'>
+<method selector='eventDidFail:withError:' type64='@32@0:8r^{AEDesc=I^^{OpaqueAEDataStorageType}}16@24'>
+<arg const='true' declared_type64='AppleEvent * _Nonnull' index='0' name='event' type64='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+</informal_protocol>
+</signatures>

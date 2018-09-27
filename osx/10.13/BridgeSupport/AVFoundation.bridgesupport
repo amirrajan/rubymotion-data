@@ -751,6 +751,7 @@
 <constant const='true' declared_type='AVPlayerWaitingReason _Nonnull' name='AVPlayerWaitingToMinimizeStallsReason' type='@'/>
 <constant const='true' declared_type='AVPlayerWaitingReason _Nonnull' name='AVPlayerWaitingWhileEvaluatingBufferingRateReason' type='@'/>
 <constant const='true' declared_type='AVPlayerWaitingReason _Nonnull' name='AVPlayerWaitingWithNoItemToPlayReason' type='@'/>
+<constant const='true' declared_type='NSNotificationName _Nonnull' name='AVRouteDetectorMultipleRoutesDetectedDidChangeNotification' type='@'/>
 <constant const='true' declared_type='NSString * _Nonnull' name='AVSampleBufferAudioRendererFlushTimeKey' type='@'/>
 <constant const='true' declared_type='NSNotificationName _Nonnull' name='AVSampleBufferAudioRendererWasFlushedAutomaticallyNotification' type='@'/>
 <constant const='true' declared_type='NSString * _Nonnull' name='AVSampleBufferDisplayLayerFailedToDecodeNotification' type='@'/>
@@ -953,6 +954,7 @@
 <enum name='AVErrorNoDataCaptured' value='-11805'/>
 <enum name='AVErrorNoImageAtTime' value='-11832'/>
 <enum name='AVErrorNoLongerPlayable' value='-11867'/>
+<enum name='AVErrorNoSourceTrack' value='-11869'/>
 <enum name='AVErrorOperationNotAllowed' value='-11862'/>
 <enum name='AVErrorOperationNotSupportedForAsset' value='-11838'/>
 <enum name='AVErrorOutOfMemory' value='-11801'/>
@@ -1571,6 +1573,9 @@
 </method>
 </class>
 <class name='AVAssetResourceLoadingContentInformationRequest'>
+<method selector='allowedContentTypes'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
 <method selector='contentLength'>
 <retval declared_type='long long' type='q'/>
 </method>
@@ -5527,6 +5532,18 @@
 </method>
 <method selector='removeItem:'>
 <arg declared_type='AVPlayerItem * _Nonnull' index='0' name='item' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='AVRouteDetector'>
+<method selector='isRouteDetectionEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='multipleRoutesDetected'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setRouteDetectionEnabled:'>
+<arg declared_type='BOOL' index='0' name='routeDetectionEnabled' type='B'/>
 <retval declared_type='void' type='v'/>
 </method>
 </class>

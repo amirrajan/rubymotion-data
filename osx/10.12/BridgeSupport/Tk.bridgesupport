@@ -289,7 +289,7 @@
 <field declared_type='int' name='underlinePos' type='i'/>
 <field declared_type='int' name='underlineHeight' type='i'/>
 <field declared_type='int' name='fid' type='i'/>
-<field declared_type='TkFontAttributes' name='fa' type='{TkFontAttributes=&quot;family&quot;*&quot;size&quot;i&quot;weight&quot;i&quot;slant&quot;i&quot;underline&quot;i&quot;overstrike&quot;i}'/>
+<field declared_type='struct TkFontAttributes' name='fa' type='{TkFontAttributes=&quot;family&quot;*&quot;size&quot;i&quot;weight&quot;i&quot;slant&quot;i&quot;underline&quot;i&quot;overstrike&quot;i}'/>
 <field declared_type='TkFontMetrics' name='fm' type='{TkFontMetrics=&quot;ascent&quot;i&quot;descent&quot;i&quot;maxWidth&quot;i&quot;fixed&quot;i}'/>
 <field declared_type='struct TkFont*' name='nextPtr' type='^{TkFont=}'/>
 </struct>
@@ -4634,8 +4634,8 @@
 <field declared_type='int' name='base_height' type='i'/>
 <field declared_type='int' name='win_gravity' type='i'/>
 </struct>
-<struct name='XStandardColormap' type='{_XStandardColormap=}'>
-<field declared_type='int' name='colormap' type='i'/>
+<struct name='XStandardColormap' type='{_XStandardColormap=&quot;colormap&quot;I&quot;red_max&quot;L&quot;red_mult&quot;L&quot;green_max&quot;L&quot;green_mult&quot;L&quot;blue_max&quot;L&quot;blue_mult&quot;L&quot;base_pixel&quot;L&quot;visualid&quot;I&quot;killid&quot;I}' type64='{_XStandardColormap=&quot;colormap&quot;Q&quot;red_max&quot;Q&quot;red_mult&quot;Q&quot;green_max&quot;Q&quot;green_mult&quot;Q&quot;blue_max&quot;Q&quot;blue_mult&quot;Q&quot;base_pixel&quot;Q&quot;visualid&quot;Q&quot;killid&quot;Q}'>
+<field declared_type='Colormap' name='colormap' type='L' type64='Q'/>
 <field declared_type='unsigned long' name='red_max' type='L' type64='Q'/>
 <field declared_type='unsigned long' name='red_mult' type='L' type64='Q'/>
 <field declared_type='unsigned long' name='green_max' type='L' type64='Q'/>
@@ -4643,8 +4643,8 @@
 <field declared_type='unsigned long' name='blue_max' type='L' type64='Q'/>
 <field declared_type='unsigned long' name='blue_mult' type='L' type64='Q'/>
 <field declared_type='unsigned long' name='base_pixel' type='L' type64='Q'/>
-<field declared_type='int' name='visualid' type='i'/>
-<field declared_type='int' name='killid' type='i'/>
+<field declared_type='VisualID' name='visualid' type='L' type64='Q'/>
+<field declared_type='XID' name='killid' type='L' type64='Q'/>
 </struct>
 <struct name='XTextItem' type='{_XTextItem=}'>
 <field declared_type='char*' name='chars' type='*'/>
@@ -4658,9 +4658,9 @@
 <field declared_type='int' name='delta' type='i'/>
 <field declared_type='int' name='font' type='i'/>
 </struct>
-<struct name='XTextProperty' type='{_XTextProperty=}'>
+<struct name='XTextProperty' type='{_XTextProperty=&quot;value&quot;*&quot;encoding&quot;I&quot;format&quot;i&quot;nitems&quot;L}' type64='{_XTextProperty=&quot;value&quot;*&quot;encoding&quot;Q&quot;format&quot;i&quot;nitems&quot;Q}'>
 <field declared_type='unsigned char*' name='value' type='*'/>
-<field declared_type='int' name='encoding' type='i'/>
+<field declared_type='Atom' name='encoding' type='L' type64='Q'/>
 <field declared_type='int' name='format' type='i'/>
 <field declared_type='unsigned long' name='nitems' type='L' type64='Q'/>
 </struct>
@@ -4704,9 +4704,9 @@
 <field declared_type='int' name='window' type='i'/>
 <field declared_type='int' name='state' type='i'/>
 </struct>
-<struct name='XVisualInfo' type='{_XVisualInfo=}'>
+<struct name='XVisualInfo' type='{_XVisualInfo=&quot;visual&quot;^{_Visual=}&quot;visualid&quot;I&quot;screen&quot;i&quot;depth&quot;i&quot;class&quot;i&quot;red_mask&quot;L&quot;green_mask&quot;L&quot;blue_mask&quot;L&quot;colormap_size&quot;i&quot;bits_per_rgb&quot;i}' type64='{_XVisualInfo=&quot;visual&quot;^{_Visual=}&quot;visualid&quot;Q&quot;screen&quot;i&quot;depth&quot;i&quot;class&quot;i&quot;red_mask&quot;Q&quot;green_mask&quot;Q&quot;blue_mask&quot;Q&quot;colormap_size&quot;i&quot;bits_per_rgb&quot;i}'>
 <field declared_type='Visual*' name='visual' type='^{_Visual=}'/>
-<field declared_type='int' name='visualid' type='i'/>
+<field declared_type='VisualID' name='visualid' type='L' type64='Q'/>
 <field declared_type='int' name='screen' type='i'/>
 <field declared_type='int' name='depth' type='i'/>
 <field declared_type='int' name='class' type='i'/>
@@ -4720,12 +4720,12 @@
 <field declared_type='long' name='flags' type='l' type64='q'/>
 <field declared_type='int' name='input' type='i'/>
 <field declared_type='int' name='initial_state' type='i'/>
-<field declared_type='int' name='icon_pixmap' type='i'/>
+<field declared_type='Pixmap' name='icon_pixmap' type='L' type64='Q'/>
 <field declared_type='Window' name='icon_window' type='?'/>
 <field declared_type='int' name='icon_x' type='i'/>
 <field declared_type='int' name='icon_y' type='i'/>
-<field declared_type='int' name='icon_mask' type='i'/>
-<field declared_type='int' name='window_group' type='i'/>
+<field declared_type='Pixmap' name='icon_mask' type='L' type64='Q'/>
+<field declared_type='XID' name='window_group' type='L' type64='Q'/>
 </struct>
 <struct name='XWindowAttributes' type='{_XWindowAttributes=}'>
 <field declared_type='int' name='x' type='i'/>
@@ -4805,6 +4805,7 @@
 <cftype name='XIC' type='^{_XIC=}'/>
 <cftype name='XIM' type='^{_XIM=}'/>
 <constant declared_type='int' name='Tcl_Obj' type='i'/>
+<constant declared_type='int' name='TkFont' type='i'/>
 <constant declared_type='Ttk_ElementOptionSpec*' name='TtkNullElementOptions' type='^{Ttk_ElementOptionSpec=*ii*}'/>
 <constant declared_type='int' name='Ttk_Box' type='i'/>
 <constant declared_type='int' name='Ttk_ElementClass' type='i'/>
@@ -5615,6 +5616,7 @@
 <enum name='RectangleIn' value='1'/>
 <enum name='RectangleOut' value='0'/>
 <enum name='RectanglePart' value='2'/>
+<enum name='ReleaseByFreeingColormap' value='1'/>
 <enum name='ReparentNotify' value='21'/>
 <enum name='ReplayKeyboard' value='5'/>
 <enum name='ReplayPointer' value='2'/>
@@ -6129,7 +6131,558 @@
 <enum name='XIMTertiary' value='128'/>
 <enum name='XIMTextType' value='0'/>
 <enum name='XIMUnderline' value='2'/>
+<enum name='XK_0' value='48'/>
+<enum name='XK_1' value='49'/>
+<enum name='XK_2' value='50'/>
+<enum name='XK_3' value='51'/>
+<enum name='XK_4' value='52'/>
+<enum name='XK_5' value='53'/>
+<enum name='XK_6' value='54'/>
+<enum name='XK_7' value='55'/>
+<enum name='XK_8' value='56'/>
+<enum name='XK_9' value='57'/>
+<enum name='XK_A' value='65'/>
+<enum name='XK_AE' value='198'/>
+<enum name='XK_Aacute' value='193'/>
+<enum name='XK_Abreve' value='451'/>
+<enum name='XK_Acircumflex' value='194'/>
+<enum name='XK_Adiaeresis' value='196'/>
+<enum name='XK_Agrave' value='192'/>
+<enum name='XK_Alt_L' value='65513'/>
+<enum name='XK_Alt_R' value='65514'/>
+<enum name='XK_Amacron' value='960'/>
+<enum name='XK_Aogonek' value='417'/>
+<enum name='XK_App' value='65373'/>
+<enum name='XK_Aring' value='197'/>
+<enum name='XK_Atilde' value='195'/>
+<enum name='XK_B' value='66'/>
+<enum name='XK_BackSpace' value='65288'/>
+<enum name='XK_Begin' value='65368'/>
+<enum name='XK_Break' value='65387'/>
+<enum name='XK_C' value='67'/>
+<enum name='XK_Cabovedot' value='709'/>
+<enum name='XK_Cacute' value='454'/>
+<enum name='XK_Cancel' value='65385'/>
+<enum name='XK_Caps_Lock' value='65509'/>
+<enum name='XK_Ccaron' value='456'/>
+<enum name='XK_Ccedilla' value='199'/>
+<enum name='XK_Ccircumflex' value='710'/>
+<enum name='XK_Clear' value='65291'/>
+<enum name='XK_Control_L' value='65507'/>
+<enum name='XK_Control_R' value='65508'/>
+<enum name='XK_D' value='68'/>
+<enum name='XK_Dcaron' value='463'/>
+<enum name='XK_Delete' value='65535'/>
+<enum name='XK_Down' value='65364'/>
+<enum name='XK_Dstroke' value='464'/>
+<enum name='XK_E' value='69'/>
+<enum name='XK_ENG' value='957'/>
+<enum name='XK_ETH' value='208'/>
+<enum name='XK_Eabovedot' value='972'/>
+<enum name='XK_Eacute' value='201'/>
+<enum name='XK_Ecaron' value='460'/>
+<enum name='XK_Ecircumflex' value='202'/>
+<enum name='XK_Ediaeresis' value='203'/>
+<enum name='XK_Egrave' value='200'/>
+<enum name='XK_Eisu_Shift' value='65327'/>
+<enum name='XK_Eisu_toggle' value='65328'/>
+<enum name='XK_Emacron' value='938'/>
+<enum name='XK_End' value='65367'/>
+<enum name='XK_Eogonek' value='458'/>
+<enum name='XK_Escape' value='65307'/>
+<enum name='XK_Eth' value='208'/>
+<enum name='XK_Execute' value='65378'/>
+<enum name='XK_F' value='70'/>
+<enum name='XK_F1' value='65470'/>
+<enum name='XK_F10' value='65479'/>
+<enum name='XK_F11' value='65480'/>
+<enum name='XK_F12' value='65481'/>
+<enum name='XK_F13' value='65482'/>
+<enum name='XK_F14' value='65483'/>
+<enum name='XK_F15' value='65484'/>
+<enum name='XK_F16' value='65485'/>
+<enum name='XK_F17' value='65486'/>
+<enum name='XK_F18' value='65487'/>
+<enum name='XK_F19' value='65488'/>
+<enum name='XK_F2' value='65471'/>
+<enum name='XK_F20' value='65489'/>
+<enum name='XK_F21' value='65490'/>
+<enum name='XK_F22' value='65491'/>
+<enum name='XK_F23' value='65492'/>
+<enum name='XK_F24' value='65493'/>
+<enum name='XK_F25' value='65494'/>
+<enum name='XK_F26' value='65495'/>
+<enum name='XK_F27' value='65496'/>
+<enum name='XK_F28' value='65497'/>
+<enum name='XK_F29' value='65498'/>
+<enum name='XK_F3' value='65472'/>
+<enum name='XK_F30' value='65499'/>
+<enum name='XK_F31' value='65500'/>
+<enum name='XK_F32' value='65501'/>
+<enum name='XK_F33' value='65502'/>
+<enum name='XK_F34' value='65503'/>
+<enum name='XK_F35' value='65504'/>
+<enum name='XK_F4' value='65473'/>
+<enum name='XK_F5' value='65474'/>
+<enum name='XK_F6' value='65475'/>
+<enum name='XK_F7' value='65476'/>
+<enum name='XK_F8' value='65477'/>
+<enum name='XK_F9' value='65478'/>
+<enum name='XK_Find' value='65384'/>
+<enum name='XK_G' value='71'/>
+<enum name='XK_Gabovedot' value='725'/>
+<enum name='XK_Gbreve' value='683'/>
+<enum name='XK_Gcedilla' value='939'/>
+<enum name='XK_Gcircumflex' value='728'/>
+<enum name='XK_Greek_ALPHA' value='1985'/>
+<enum name='XK_Greek_ALPHAaccent' value='1953'/>
+<enum name='XK_Greek_BETA' value='1986'/>
+<enum name='XK_Greek_CHI' value='2007'/>
+<enum name='XK_Greek_DELTA' value='1988'/>
+<enum name='XK_Greek_EPSILON' value='1989'/>
+<enum name='XK_Greek_EPSILONaccent' value='1954'/>
+<enum name='XK_Greek_ETA' value='1991'/>
+<enum name='XK_Greek_ETAaccent' value='1955'/>
+<enum name='XK_Greek_GAMMA' value='1987'/>
+<enum name='XK_Greek_IOTA' value='1993'/>
+<enum name='XK_Greek_IOTAaccent' value='1956'/>
+<enum name='XK_Greek_IOTAdiaeresis' value='1957'/>
+<enum name='XK_Greek_KAPPA' value='1994'/>
+<enum name='XK_Greek_LAMBDA' value='1995'/>
+<enum name='XK_Greek_LAMDA' value='1995'/>
+<enum name='XK_Greek_MU' value='1996'/>
+<enum name='XK_Greek_NU' value='1997'/>
+<enum name='XK_Greek_OMEGA' value='2009'/>
+<enum name='XK_Greek_OMEGAaccent' value='1963'/>
+<enum name='XK_Greek_OMICRON' value='1999'/>
+<enum name='XK_Greek_OMICRONaccent' value='1959'/>
+<enum name='XK_Greek_PHI' value='2006'/>
+<enum name='XK_Greek_PI' value='2000'/>
+<enum name='XK_Greek_PSI' value='2008'/>
+<enum name='XK_Greek_RHO' value='2001'/>
+<enum name='XK_Greek_SIGMA' value='2002'/>
+<enum name='XK_Greek_TAU' value='2004'/>
+<enum name='XK_Greek_THETA' value='1992'/>
+<enum name='XK_Greek_UPSILON' value='2005'/>
+<enum name='XK_Greek_UPSILONaccent' value='1960'/>
+<enum name='XK_Greek_UPSILONdieresis' value='1961'/>
+<enum name='XK_Greek_XI' value='1998'/>
+<enum name='XK_Greek_ZETA' value='1990'/>
+<enum name='XK_Greek_accentdieresis' value='1966'/>
+<enum name='XK_Greek_alpha' value='2017'/>
+<enum name='XK_Greek_alphaaccent' value='1969'/>
+<enum name='XK_Greek_beta' value='2018'/>
+<enum name='XK_Greek_chi' value='2039'/>
+<enum name='XK_Greek_delta' value='2020'/>
+<enum name='XK_Greek_epsilon' value='2021'/>
+<enum name='XK_Greek_epsilonaccent' value='1970'/>
+<enum name='XK_Greek_eta' value='2023'/>
+<enum name='XK_Greek_etaaccent' value='1971'/>
+<enum name='XK_Greek_finalsmallsigma' value='2035'/>
+<enum name='XK_Greek_gamma' value='2019'/>
+<enum name='XK_Greek_horizbar' value='1967'/>
+<enum name='XK_Greek_iota' value='2025'/>
+<enum name='XK_Greek_iotaaccent' value='1972'/>
+<enum name='XK_Greek_iotaaccentdieresis' value='1974'/>
+<enum name='XK_Greek_iotadieresis' value='1973'/>
+<enum name='XK_Greek_kappa' value='2026'/>
+<enum name='XK_Greek_lambda' value='2027'/>
+<enum name='XK_Greek_lamda' value='2027'/>
+<enum name='XK_Greek_mu' value='2028'/>
+<enum name='XK_Greek_nu' value='2029'/>
+<enum name='XK_Greek_omega' value='2041'/>
+<enum name='XK_Greek_omegaaccent' value='1979'/>
+<enum name='XK_Greek_omicron' value='2031'/>
+<enum name='XK_Greek_omicronaccent' value='1975'/>
+<enum name='XK_Greek_phi' value='2038'/>
+<enum name='XK_Greek_pi' value='2032'/>
+<enum name='XK_Greek_psi' value='2040'/>
+<enum name='XK_Greek_rho' value='2033'/>
+<enum name='XK_Greek_sigma' value='2034'/>
+<enum name='XK_Greek_switch' value='65406'/>
+<enum name='XK_Greek_tau' value='2036'/>
+<enum name='XK_Greek_theta' value='2024'/>
+<enum name='XK_Greek_upsilon' value='2037'/>
+<enum name='XK_Greek_upsilonaccent' value='1976'/>
+<enum name='XK_Greek_upsilonaccentdieresis' value='1978'/>
+<enum name='XK_Greek_upsilondieresis' value='1977'/>
+<enum name='XK_Greek_xi' value='2030'/>
+<enum name='XK_Greek_zeta' value='2022'/>
+<enum name='XK_H' value='72'/>
+<enum name='XK_Hankaku' value='65321'/>
+<enum name='XK_Hcircumflex' value='678'/>
+<enum name='XK_Help' value='65386'/>
+<enum name='XK_Henkan' value='65315'/>
+<enum name='XK_Henkan_Mode' value='65315'/>
+<enum name='XK_Hiragana' value='65317'/>
+<enum name='XK_Hiragana_Katakana' value='65319'/>
+<enum name='XK_Home' value='65360'/>
+<enum name='XK_Hstroke' value='673'/>
+<enum name='XK_Hyper_L' value='65517'/>
+<enum name='XK_Hyper_R' value='65518'/>
+<enum name='XK_I' value='73'/>
+<enum name='XK_Iabovedot' value='681'/>
+<enum name='XK_Iacute' value='205'/>
+<enum name='XK_Icircumflex' value='206'/>
+<enum name='XK_Idiaeresis' value='207'/>
+<enum name='XK_Igrave' value='204'/>
+<enum name='XK_Imacron' value='975'/>
+<enum name='XK_Insert' value='65379'/>
+<enum name='XK_Iogonek' value='967'/>
+<enum name='XK_Itilde' value='933'/>
+<enum name='XK_J' value='74'/>
+<enum name='XK_Jcircumflex' value='684'/>
+<enum name='XK_K' value='75'/>
+<enum name='XK_KP_0' value='65456'/>
+<enum name='XK_KP_1' value='65457'/>
+<enum name='XK_KP_2' value='65458'/>
+<enum name='XK_KP_3' value='65459'/>
+<enum name='XK_KP_4' value='65460'/>
+<enum name='XK_KP_5' value='65461'/>
+<enum name='XK_KP_6' value='65462'/>
+<enum name='XK_KP_7' value='65463'/>
+<enum name='XK_KP_8' value='65464'/>
+<enum name='XK_KP_9' value='65465'/>
+<enum name='XK_KP_Add' value='65451'/>
+<enum name='XK_KP_Begin' value='65437'/>
+<enum name='XK_KP_Decimal' value='65454'/>
+<enum name='XK_KP_Delete' value='65439'/>
+<enum name='XK_KP_Divide' value='65455'/>
+<enum name='XK_KP_Down' value='65433'/>
+<enum name='XK_KP_End' value='65436'/>
+<enum name='XK_KP_Enter' value='65421'/>
+<enum name='XK_KP_Equal' value='65469'/>
+<enum name='XK_KP_F1' value='65425'/>
+<enum name='XK_KP_F2' value='65426'/>
+<enum name='XK_KP_F3' value='65427'/>
+<enum name='XK_KP_F4' value='65428'/>
+<enum name='XK_KP_Home' value='65429'/>
+<enum name='XK_KP_Insert' value='65438'/>
+<enum name='XK_KP_Left' value='65430'/>
+<enum name='XK_KP_Multiply' value='65450'/>
+<enum name='XK_KP_Next' value='65435'/>
+<enum name='XK_KP_Page_Down' value='65435'/>
+<enum name='XK_KP_Page_Up' value='65434'/>
+<enum name='XK_KP_Prior' value='65434'/>
+<enum name='XK_KP_Right' value='65432'/>
+<enum name='XK_KP_Separator' value='65452'/>
+<enum name='XK_KP_Space' value='65408'/>
+<enum name='XK_KP_Subtract' value='65453'/>
+<enum name='XK_KP_Tab' value='65417'/>
+<enum name='XK_KP_Up' value='65431'/>
+<enum name='XK_Kana_Lock' value='65325'/>
+<enum name='XK_Kana_Shift' value='65326'/>
+<enum name='XK_Kanji' value='65313'/>
+<enum name='XK_Katakana' value='65318'/>
+<enum name='XK_Kcedilla' value='979'/>
+<enum name='XK_L' value='76'/>
+<enum name='XK_L1' value='65480'/>
+<enum name='XK_L10' value='65489'/>
+<enum name='XK_L2' value='65481'/>
+<enum name='XK_L3' value='65482'/>
+<enum name='XK_L4' value='65483'/>
+<enum name='XK_L5' value='65484'/>
+<enum name='XK_L6' value='65485'/>
+<enum name='XK_L7' value='65486'/>
+<enum name='XK_L8' value='65487'/>
+<enum name='XK_L9' value='65488'/>
+<enum name='XK_Lacute' value='453'/>
+<enum name='XK_Lcaron' value='421'/>
+<enum name='XK_Lcedilla' value='934'/>
+<enum name='XK_Left' value='65361'/>
+<enum name='XK_Linefeed' value='65290'/>
+<enum name='XK_Lstroke' value='419'/>
+<enum name='XK_M' value='77'/>
+<enum name='XK_Massyo' value='65324'/>
+<enum name='XK_Menu' value='65383'/>
+<enum name='XK_Meta_L' value='65511'/>
+<enum name='XK_Meta_R' value='65512'/>
+<enum name='XK_Mode_switch' value='65406'/>
+<enum name='XK_Muhenkan' value='65314'/>
+<enum name='XK_Multi_key' value='65312'/>
+<enum name='XK_N' value='78'/>
+<enum name='XK_Nacute' value='465'/>
+<enum name='XK_Ncaron' value='466'/>
+<enum name='XK_Ncedilla' value='977'/>
+<enum name='XK_Next' value='65366'/>
+<enum name='XK_Ntilde' value='209'/>
+<enum name='XK_Num_Lock' value='65407'/>
+<enum name='XK_O' value='79'/>
+<enum name='XK_Oacute' value='211'/>
+<enum name='XK_Ocircumflex' value='212'/>
+<enum name='XK_Odiaeresis' value='214'/>
+<enum name='XK_Odoubleacute' value='469'/>
+<enum name='XK_Ograve' value='210'/>
+<enum name='XK_Omacron' value='978'/>
+<enum name='XK_Ooblique' value='216'/>
+<enum name='XK_Otilde' value='213'/>
+<enum name='XK_P' value='80'/>
+<enum name='XK_Page_Down' value='65366'/>
+<enum name='XK_Page_Up' value='65365'/>
+<enum name='XK_Pause' value='65299'/>
+<enum name='XK_Print' value='65377'/>
+<enum name='XK_Prior' value='65365'/>
+<enum name='XK_Q' value='81'/>
+<enum name='XK_R' value='82'/>
+<enum name='XK_R1' value='65490'/>
+<enum name='XK_R10' value='65499'/>
+<enum name='XK_R11' value='65500'/>
+<enum name='XK_R12' value='65501'/>
+<enum name='XK_R13' value='65502'/>
+<enum name='XK_R14' value='65503'/>
+<enum name='XK_R15' value='65504'/>
+<enum name='XK_R2' value='65491'/>
+<enum name='XK_R3' value='65492'/>
+<enum name='XK_R4' value='65493'/>
+<enum name='XK_R5' value='65494'/>
+<enum name='XK_R6' value='65495'/>
+<enum name='XK_R7' value='65496'/>
+<enum name='XK_R8' value='65497'/>
+<enum name='XK_R9' value='65498'/>
+<enum name='XK_Racute' value='448'/>
+<enum name='XK_Rcaron' value='472'/>
+<enum name='XK_Rcedilla' value='931'/>
+<enum name='XK_Redo' value='65382'/>
+<enum name='XK_Return' value='65293'/>
+<enum name='XK_Right' value='65363'/>
+<enum name='XK_Romaji' value='65316'/>
+<enum name='XK_S' value='83'/>
+<enum name='XK_Sacute' value='422'/>
+<enum name='XK_Scaron' value='425'/>
+<enum name='XK_Scedilla' value='426'/>
+<enum name='XK_Scircumflex' value='734'/>
+<enum name='XK_Scroll_Lock' value='65300'/>
+<enum name='XK_Select' value='65376'/>
+<enum name='XK_Shift_L' value='65505'/>
+<enum name='XK_Shift_Lock' value='65510'/>
+<enum name='XK_Shift_R' value='65506'/>
+<enum name='XK_Super_L' value='65515'/>
+<enum name='XK_Super_R' value='65516'/>
+<enum name='XK_Sys_Req' value='65301'/>
+<enum name='XK_T' value='84'/>
+<enum name='XK_THORN' value='222'/>
+<enum name='XK_Tab' value='65289'/>
+<enum name='XK_Tcaron' value='427'/>
+<enum name='XK_Tcedilla' value='478'/>
+<enum name='XK_Thorn' value='222'/>
+<enum name='XK_Touroku' value='65323'/>
+<enum name='XK_Tslash' value='940'/>
+<enum name='XK_U' value='85'/>
+<enum name='XK_Uacute' value='218'/>
+<enum name='XK_Ubreve' value='733'/>
+<enum name='XK_Ucircumflex' value='219'/>
+<enum name='XK_Udiaeresis' value='220'/>
+<enum name='XK_Udoubleacute' value='475'/>
+<enum name='XK_Ugrave' value='217'/>
+<enum name='XK_Umacron' value='990'/>
+<enum name='XK_Undo' value='65381'/>
+<enum name='XK_Uogonek' value='985'/>
+<enum name='XK_Up' value='65362'/>
+<enum name='XK_Uring' value='473'/>
+<enum name='XK_Utilde' value='989'/>
+<enum name='XK_V' value='86'/>
 <enum name='XK_VoidSymbol' value='16777215'/>
+<enum name='XK_W' value='87'/>
+<enum name='XK_Win_L' value='65371'/>
+<enum name='XK_Win_R' value='65372'/>
+<enum name='XK_X' value='88'/>
+<enum name='XK_Y' value='89'/>
+<enum name='XK_Yacute' value='221'/>
+<enum name='XK_Z' value='90'/>
+<enum name='XK_Zabovedot' value='431'/>
+<enum name='XK_Zacute' value='428'/>
+<enum name='XK_Zcaron' value='430'/>
+<enum name='XK_Zenkaku' value='65320'/>
+<enum name='XK_Zenkaku_Hankaku' value='65322'/>
+<enum name='XK_a' value='97'/>
+<enum name='XK_aacute' value='225'/>
+<enum name='XK_abovedot' value='511'/>
+<enum name='XK_abreve' value='483'/>
+<enum name='XK_acircumflex' value='226'/>
+<enum name='XK_acute' value='180'/>
+<enum name='XK_adiaeresis' value='228'/>
+<enum name='XK_ae' value='230'/>
+<enum name='XK_agrave' value='224'/>
+<enum name='XK_amacron' value='992'/>
+<enum name='XK_ampersand' value='38'/>
+<enum name='XK_aogonek' value='433'/>
+<enum name='XK_apostrophe' value='39'/>
+<enum name='XK_aring' value='229'/>
+<enum name='XK_asciicircum' value='94'/>
+<enum name='XK_asciitilde' value='126'/>
+<enum name='XK_asterisk' value='42'/>
+<enum name='XK_at' value='64'/>
+<enum name='XK_atilde' value='227'/>
+<enum name='XK_b' value='98'/>
+<enum name='XK_backslash' value='92'/>
+<enum name='XK_bar' value='124'/>
+<enum name='XK_braceleft' value='123'/>
+<enum name='XK_braceright' value='125'/>
+<enum name='XK_bracketleft' value='91'/>
+<enum name='XK_bracketright' value='93'/>
+<enum name='XK_breve' value='418'/>
+<enum name='XK_brokenbar' value='166'/>
+<enum name='XK_c' value='99'/>
+<enum name='XK_cabovedot' value='741'/>
+<enum name='XK_cacute' value='486'/>
+<enum name='XK_caron' value='439'/>
+<enum name='XK_ccaron' value='488'/>
+<enum name='XK_ccedilla' value='231'/>
+<enum name='XK_ccircumflex' value='742'/>
+<enum name='XK_cedilla' value='184'/>
+<enum name='XK_cent' value='162'/>
+<enum name='XK_colon' value='58'/>
+<enum name='XK_comma' value='44'/>
+<enum name='XK_copyright' value='169'/>
+<enum name='XK_currency' value='164'/>
+<enum name='XK_d' value='100'/>
+<enum name='XK_dcaron' value='495'/>
+<enum name='XK_degree' value='176'/>
+<enum name='XK_diaeresis' value='168'/>
+<enum name='XK_division' value='247'/>
+<enum name='XK_dollar' value='36'/>
+<enum name='XK_doubleacute' value='445'/>
+<enum name='XK_dstroke' value='496'/>
+<enum name='XK_e' value='101'/>
+<enum name='XK_eabovedot' value='1004'/>
+<enum name='XK_eacute' value='233'/>
+<enum name='XK_ecaron' value='492'/>
+<enum name='XK_ecircumflex' value='234'/>
+<enum name='XK_ediaeresis' value='235'/>
+<enum name='XK_egrave' value='232'/>
+<enum name='XK_emacron' value='954'/>
+<enum name='XK_eng' value='959'/>
+<enum name='XK_eogonek' value='490'/>
+<enum name='XK_equal' value='61'/>
+<enum name='XK_eth' value='240'/>
+<enum name='XK_exclam' value='33'/>
+<enum name='XK_exclamdown' value='161'/>
+<enum name='XK_f' value='102'/>
+<enum name='XK_g' value='103'/>
+<enum name='XK_gabovedot' value='757'/>
+<enum name='XK_gbreve' value='699'/>
+<enum name='XK_gcedilla' value='955'/>
+<enum name='XK_gcircumflex' value='760'/>
+<enum name='XK_grave' value='96'/>
+<enum name='XK_greater' value='62'/>
+<enum name='XK_guillemotleft' value='171'/>
+<enum name='XK_guillemotright' value='187'/>
+<enum name='XK_h' value='104'/>
+<enum name='XK_hcircumflex' value='694'/>
+<enum name='XK_hstroke' value='689'/>
+<enum name='XK_hyphen' value='173'/>
+<enum name='XK_i' value='105'/>
+<enum name='XK_iacute' value='237'/>
+<enum name='XK_icircumflex' value='238'/>
+<enum name='XK_idiaeresis' value='239'/>
+<enum name='XK_idotless' value='697'/>
+<enum name='XK_igrave' value='236'/>
+<enum name='XK_imacron' value='1007'/>
+<enum name='XK_iogonek' value='999'/>
+<enum name='XK_itilde' value='949'/>
+<enum name='XK_j' value='106'/>
+<enum name='XK_jcircumflex' value='700'/>
+<enum name='XK_k' value='107'/>
+<enum name='XK_kappa' value='930'/>
+<enum name='XK_kcedilla' value='1011'/>
+<enum name='XK_kra' value='930'/>
+<enum name='XK_l' value='108'/>
+<enum name='XK_lacute' value='485'/>
+<enum name='XK_lcaron' value='437'/>
+<enum name='XK_lcedilla' value='950'/>
+<enum name='XK_less' value='60'/>
+<enum name='XK_lstroke' value='435'/>
+<enum name='XK_m' value='109'/>
+<enum name='XK_macron' value='175'/>
+<enum name='XK_masculine' value='186'/>
+<enum name='XK_minus' value='45'/>
+<enum name='XK_mu' value='181'/>
+<enum name='XK_multiply' value='215'/>
+<enum name='XK_n' value='110'/>
+<enum name='XK_nacute' value='497'/>
+<enum name='XK_ncaron' value='498'/>
+<enum name='XK_ncedilla' value='1009'/>
+<enum name='XK_nobreakspace' value='160'/>
+<enum name='XK_notsign' value='172'/>
+<enum name='XK_ntilde' value='241'/>
+<enum name='XK_numbersign' value='35'/>
+<enum name='XK_o' value='111'/>
+<enum name='XK_oacute' value='243'/>
+<enum name='XK_ocircumflex' value='244'/>
+<enum name='XK_odiaeresis' value='246'/>
+<enum name='XK_odoubleacute' value='501'/>
+<enum name='XK_ogonek' value='434'/>
+<enum name='XK_ograve' value='242'/>
+<enum name='XK_omacron' value='1010'/>
+<enum name='XK_onehalf' value='189'/>
+<enum name='XK_onequarter' value='188'/>
+<enum name='XK_onesuperior' value='185'/>
+<enum name='XK_ordfeminine' value='170'/>
+<enum name='XK_oslash' value='248'/>
+<enum name='XK_otilde' value='245'/>
+<enum name='XK_p' value='112'/>
+<enum name='XK_paragraph' value='182'/>
+<enum name='XK_parenleft' value='40'/>
+<enum name='XK_parenright' value='41'/>
+<enum name='XK_percent' value='37'/>
+<enum name='XK_period' value='46'/>
+<enum name='XK_periodcentered' value='183'/>
+<enum name='XK_plus' value='43'/>
+<enum name='XK_plusminus' value='177'/>
+<enum name='XK_q' value='113'/>
+<enum name='XK_question' value='63'/>
+<enum name='XK_questiondown' value='191'/>
+<enum name='XK_quotedbl' value='34'/>
+<enum name='XK_quoteleft' value='96'/>
+<enum name='XK_quoteright' value='39'/>
+<enum name='XK_r' value='114'/>
+<enum name='XK_racute' value='480'/>
+<enum name='XK_rcaron' value='504'/>
+<enum name='XK_rcedilla' value='947'/>
+<enum name='XK_registered' value='174'/>
+<enum name='XK_s' value='115'/>
+<enum name='XK_sacute' value='438'/>
+<enum name='XK_scaron' value='441'/>
+<enum name='XK_scedilla' value='442'/>
+<enum name='XK_scircumflex' value='766'/>
+<enum name='XK_script_switch' value='65406'/>
+<enum name='XK_section' value='167'/>
+<enum name='XK_semicolon' value='59'/>
+<enum name='XK_slash' value='47'/>
+<enum name='XK_space' value='32'/>
+<enum name='XK_ssharp' value='223'/>
+<enum name='XK_sterling' value='163'/>
+<enum name='XK_t' value='116'/>
+<enum name='XK_tcaron' value='443'/>
+<enum name='XK_tcedilla' value='510'/>
+<enum name='XK_thorn' value='254'/>
+<enum name='XK_threequarters' value='190'/>
+<enum name='XK_threesuperior' value='179'/>
+<enum name='XK_tslash' value='956'/>
+<enum name='XK_twosuperior' value='178'/>
+<enum name='XK_u' value='117'/>
+<enum name='XK_uacute' value='250'/>
+<enum name='XK_ubreve' value='765'/>
+<enum name='XK_ucircumflex' value='251'/>
+<enum name='XK_udiaeresis' value='252'/>
+<enum name='XK_udoubleacute' value='507'/>
+<enum name='XK_ugrave' value='249'/>
+<enum name='XK_umacron' value='1022'/>
+<enum name='XK_underscore' value='95'/>
+<enum name='XK_uogonek' value='1017'/>
+<enum name='XK_uring' value='505'/>
+<enum name='XK_utilde' value='1021'/>
+<enum name='XK_v' value='118'/>
+<enum name='XK_w' value='119'/>
+<enum name='XK_x' value='120'/>
+<enum name='XK_y' value='121'/>
+<enum name='XK_yacute' value='253'/>
+<enum name='XK_ydiaeresis' value='255'/>
+<enum name='XK_yen' value='165'/>
+<enum name='XK_z' value='122'/>
+<enum name='XK_zabovedot' value='447'/>
+<enum name='XK_zacute' value='444'/>
+<enum name='XK_zcaron' value='446'/>
 <enum name='XLFD_ADD_STYLE' value='5'/>
 <enum name='XLFD_AVERAGE_WIDTH' value='11'/>
 <enum name='XLFD_CHARSET' value='12'/>
@@ -6324,13 +6877,6 @@
 <arg declared_type='Tcl_Interp*' name='interp' type='^{Tcl_Interp=*^?i}'/>
 <retval declared_type='int' type='i'/>
 </function>
-<function name='TkCreateNamedFont'>
-<arg declared_type='Tcl_Interp*' name='interp' type='^{Tcl_Interp=*^?i}'/>
-<arg declared_type='Tk_Window' name='tkwin' type='^{Tk_Window_=}'/>
-<arg const='true' declared_type='char*' name='name' type='*'/>
-<arg declared_type='TkFontAttributes*' name='faPtr' type='^{TkFontAttributes=*iiiii}'/>
-<retval declared_type='int' type='i'/>
-</function>
 <function name='TkCreateThreadExitHandler'>
 <arg declared_type='Tcl_ExitProc*' function_pointer='true' name='proc' type='^?'>
 <arg declared_type='ClientData' type='^v'/>
@@ -6394,12 +6940,6 @@
 </arg>
 <arg declared_type='ClientData' name='clientData' type='^v'/>
 <retval declared_type='void' type='v'/>
-</function>
-<function name='TkDeleteNamedFont'>
-<arg declared_type='Tcl_Interp*' name='interp' type='^{Tcl_Interp=*^?i}'/>
-<arg declared_type='Tk_Window' name='tkwin' type='^{Tk_Window_=}'/>
-<arg const='true' declared_type='char*' name='name' type='*'/>
-<retval declared_type='int' type='i'/>
 </function>
 <function name='TkDeleteThreadExitHandler'>
 <arg declared_type='Tcl_ExitProc*' function_pointer='true' name='proc' type='^?'>
@@ -6490,41 +7030,6 @@
 <function name='TkFocusSplit'>
 <arg declared_type='TkWindow*' name='winPtr' type='^{TkWindow=}'/>
 <retval declared_type='void' type='v'/>
-</function>
-<function name='TkFontGetAliasList'>
-<arg const='true' declared_type='char*' name='faceName' type='*'/>
-<retval declared_type='char**' type='^*'/>
-</function>
-<function name='TkFontGetFallbacks'>
-<retval declared_type='char***' type='^^*'/>
-</function>
-<function name='TkFontGetFirstTextLayout'>
-<arg declared_type='Tk_TextLayout' name='layout' type='^{Tk_TextLayout_=}'/>
-<arg declared_type='Tk_Font*' name='font' type='^^{Tk_Font_}'/>
-<arg declared_type='char*' name='dst' type='*'/>
-<retval declared_type='int' type='i'/>
-</function>
-<function name='TkFontGetGlobalClass'>
-<retval declared_type='char**' type='^*'/>
-</function>
-<function name='TkFontGetPixels'>
-<arg declared_type='Tk_Window' name='tkwin' type='^{Tk_Window_=}'/>
-<arg declared_type='int' name='size' type='i'/>
-<retval declared_type='int' type='i'/>
-</function>
-<function name='TkFontGetPoints'>
-<arg declared_type='Tk_Window' name='tkwin' type='^{Tk_Window_=}'/>
-<arg declared_type='int' name='size' type='i'/>
-<retval declared_type='int' type='i'/>
-</function>
-<function name='TkFontGetSymbolClass'>
-<retval declared_type='char**' type='^*'/>
-</function>
-<function name='TkFontParseXLFD'>
-<arg const='true' declared_type='char*' name='string' type='*'/>
-<arg declared_type='TkFontAttributes*' name='faPtr' type='^{TkFontAttributes=*iiiii}'/>
-<arg declared_type='TkXLFDAttributes*' name='xaPtr' type='^{TkXLFDAttributes=*ii*}'/>
-<retval declared_type='int' type='i'/>
 </function>
 <function name='TkFontPkgFree'>
 <arg declared_type='TkMainInfo*' name='mainPtr' type='^{TkMainInfo=}'/>
@@ -9235,10 +9740,6 @@
 <arg declared_type='int' name='colormap' type='i'/>
 <retval declared_type='int' type='i'/>
 </function>
-<function name='TkpDeleteFont'>
-<arg declared_type='TkFont*' name='tkFontPtr' type='^{TkFont=}'/>
-<retval declared_type='void' type='v'/>
-</function>
 <function name='TkpDisplayWarning'>
 <arg const='true' declared_type='char*' name='msg' type='*'/>
 <arg const='true' declared_type='char*' name='title' type='*'/>
@@ -9273,10 +9774,6 @@
 <arg declared_type='int' name='drawable' type='i'/>
 <retval declared_type='void' type='v'/>
 </function>
-<function name='TkpFontPkgInit'>
-<arg declared_type='TkMainInfo*' name='mainPtr' type='^{TkMainInfo=}'/>
-<retval declared_type='void' type='v'/>
-</function>
 <function name='TkpFreeCursor'>
 <arg declared_type='TkCursor*' name='cursorPtr' type='^{TkCursor=^{Tk_Cursor_}^{_XDisplay}ii^{Tcl_HashTable}^{Tcl_HashEntry}^{Tcl_HashEntry}^{TkCursor}}'/>
 <retval declared_type='void' type='v'/>
@@ -9301,17 +9798,6 @@
 <arg declared_type='struct TkFontAttributes*' name='faPtr' type='^{TkFontAttributes=*iiiii}'/>
 <retval declared_type='void' type='v'/>
 </function>
-<function name='TkpGetFontFamilies'>
-<arg declared_type='Tcl_Interp*' name='interp' type='^{Tcl_Interp=*^?i}'/>
-<arg declared_type='Tk_Window' name='tkwin' type='^{Tk_Window_=}'/>
-<retval declared_type='void' type='v'/>
-</function>
-<function name='TkpGetFontFromAttributes'>
-<arg declared_type='TkFont*' name='tkFontPtr' type='^{TkFont=}'/>
-<arg declared_type='Tk_Window' name='tkwin' type='^{Tk_Window_=}'/>
-<arg const='true' declared_type='TkFontAttributes*' name='faPtr' type='^{TkFontAttributes=*iiiii}'/>
-<retval declared_type='TkFont*' type='^{TkFont=}'/>
-</function>
 <function name='TkpGetGCCache'>
 <arg declared_type='GC' name='gc' type='^{_GC=}'/>
 <retval declared_type='TkpGCCache*' type='^{_TkpGCCache=L^{CGColor}L^{CGColor}}' type64='^{_TkpGCCache=Q^{CGColor}Q^{CGColor}}'/>
@@ -9320,11 +9806,6 @@
 <arg declared_type='TkDisplay*' name='dispPtr' type='^{TkDisplay=}'/>
 <arg declared_type='XEvent*' name='eventPtr' type='^(_XEvent=i{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}[24l])' type64='^(_XEvent=i{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}{?=}[24q])'/>
 <retval declared_type='int' type='i'/>
-</function>
-<function name='TkpGetNativeFont'>
-<arg declared_type='Tk_Window' name='tkwin' type='^{Tk_Window_=}'/>
-<arg const='true' declared_type='char*' name='name' type='*'/>
-<retval declared_type='TkFont*' type='^{TkFont=}'/>
 </function>
 <function name='TkpGetOtherWindow'>
 <arg declared_type='TkWindow*' name='winPtr' type='^{TkWindow=}'/>
@@ -9927,6 +10408,9 @@
 <arg declared_type='int' name='Ttk_Theme' type='i'/>
 <retval declared_type='int' type='i'/>
 </function>
+<function name='XAllocClassHint'>
+<retval declared_type='XClassHint*' type='^{_XClassHint=**}'/>
+</function>
 <function name='XAllocIconSize'>
 <retval declared_type='XIconSize*' type='^{_XIconSize=iiiiii}'/>
 </function>
@@ -9934,12 +10418,14 @@
 <retval declared_type='XSizeHints*' type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
 </function>
 <function name='XAllocStandardColormap'>
-<retval declared_type='XStandardColormap*' type='^{_XStandardColormap=}'/>
+<retval declared_type='XStandardColormap*' type='^{_XStandardColormap=ILLLLLLLII}' type64='^{_XStandardColormap=QQQQQQQQQQ}'/>
 </function>
 <function name='XAllocWMHints'>
 <retval declared_type='XWMHints*' type='^{_XWMHints=}'/>
 </function>
 <function name='XClipBox'>
+<arg declared_type='Region' type='^{_XRegion=}'/>
+<arg declared_type='XRectangle*' type='^{_XRectangle=ssSS}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XCreateRegion'>
@@ -9949,171 +10435,446 @@
 <retval declared_type='char*' type='*'/>
 </function>
 <function name='XDeleteContext'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='XID' type='L' type64='Q'/>
+<arg declared_type='XContext' type='i'/>
 <retval declared_type='int' type='i'/>
 </function>
 <function name='XDestroyRegion'>
+<arg declared_type='Region' type='^{_XRegion=}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XEmptyRegion'>
+<arg declared_type='Region' type='^{_XRegion=}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XEqualRegion'>
+<arg declared_type='Region' type='^{_XRegion=}'/>
+<arg declared_type='Region' type='^{_XRegion=}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XFindContext'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='XID' type='L' type64='Q'/>
+<arg declared_type='XContext' type='i'/>
+<arg declared_type='XPointer*' type='^*'/>
 <retval declared_type='int' type='i'/>
 </function>
 <function name='XGetClassHint'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XClassHint*' type='^{_XClassHint=**}'/>
 <retval declared_type='Status' type='i'/>
 </function>
 <function name='XGetIconSizes'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XIconSize**' type='^^{?}'/>
+<arg declared_type='int*' type='^i'/>
 <retval declared_type='Status' type='i'/>
 </function>
 <function name='XGetNormalHints'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XSizeHints*' type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
 <retval declared_type='Status' type='i'/>
 </function>
 <function name='XGetRGBColormaps'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XStandardColormap**' type='^^{?}'/>
+<arg declared_type='int*' type='^i'/>
+<arg declared_type='Atom' type='L' type64='Q'/>
 <retval declared_type='Status' type='i'/>
 </function>
 <function name='XGetSizeHints'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XSizeHints*' type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+<arg declared_type='Atom' type='L' type64='Q'/>
 <retval declared_type='Status' type='i'/>
 </function>
 <function name='XGetStandardColormap'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XStandardColormap*' type='^{_XStandardColormap=ILLLLLLLII}' type64='^{_XStandardColormap=QQQQQQQQQQ}'/>
+<arg declared_type='Atom' type='L' type64='Q'/>
 <retval declared_type='Status' type='i'/>
 </function>
 <function name='XGetTextProperty'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XTextProperty*' type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+<arg declared_type='Atom' type='L' type64='Q'/>
 <retval declared_type='Status' type='i'/>
 </function>
 <function name='XGetWMClientMachine'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XTextProperty*' type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
 <retval declared_type='Status' type='i'/>
 </function>
 <function name='XGetWMHints'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
 <retval declared_type='XWMHints*' type='^{_XWMHints=}'/>
 </function>
 <function name='XGetWMIconName'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XTextProperty*' type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
 <retval declared_type='Status' type='i'/>
 </function>
 <function name='XGetWMName'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XTextProperty*' type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
 <retval declared_type='Status' type='i'/>
 </function>
 <function name='XGetWMNormalHints'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XSizeHints*' type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+<arg declared_type='long*' type='^l' type64='^q'/>
 <retval declared_type='Status' type='i'/>
 </function>
 <function name='XGetWMSizeHints'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XSizeHints*' type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+<arg declared_type='long*' type='^l' type64='^q'/>
+<arg declared_type='Atom' type='L' type64='Q'/>
 <retval declared_type='Status' type='i'/>
 </function>
 <function name='XGetZoomHints'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XSizeHints*' type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
 <retval declared_type='Status' type='i'/>
 </function>
 <function name='XIntersectRegion'>
+<arg declared_type='Region' type='^{_XRegion=}'/>
+<arg declared_type='Region' type='^{_XRegion=}'/>
+<arg declared_type='Region' type='^{_XRegion=}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XLookupString'>
+<arg declared_type='XKeyEvent*' type='^{_XKeyEvent=}'/>
+<arg declared_type='char*' type='*'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='KeySym*' type='^I' type64='^Q'/>
+<arg declared_type='XComposeStatus*' type='^{_XComposeStatus=*i}'/>
 <retval declared_type='int' type='i'/>
 </function>
 <function name='XMatchVisualInfo'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='XVisualInfo*' type='^{_XVisualInfo=^{_Visual=}IiiiLLLii}' type64='^{_XVisualInfo=^{_Visual=}QiiiQQQii}'/>
 <retval declared_type='Status' type='i'/>
 </function>
 <function name='XOffsetRegion'>
+<arg declared_type='Region' type='^{_XRegion=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XPointInRegion'>
+<arg declared_type='Region' type='^{_XRegion=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
 <retval declared_type='int' type='i'/>
 </function>
 <function name='XPolygonRegion'>
+<arg declared_type='XPoint*' type='^{_XPoint=ss}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
 <retval declared_type='Region' type='^{_XRegion=}'/>
 </function>
 <function name='XRectInRegion'>
+<arg declared_type='Region' type='^{_XRegion=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='unsigned int' type='I'/>
+<arg declared_type='unsigned int' type='I'/>
 <retval declared_type='int' type='i'/>
 </function>
 <function name='XSaveContext'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='XID' type='L' type64='Q'/>
+<arg declared_type='XContext' type='i'/>
+<arg const='true' declared_type='char*' type='*'/>
 <retval declared_type='int' type='i'/>
 </function>
 <function name='XSetClassHint'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XClassHint*' type='^{_XClassHint=**}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XSetIconSizes'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XIconSize*' type='^{_XIconSize=iiiiii}'/>
+<arg declared_type='int' type='i'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XSetNormalHints'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XSizeHints*' type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XSetRGBColormaps'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XStandardColormap*' type='^{_XStandardColormap=ILLLLLLLII}' type64='^{_XStandardColormap=QQQQQQQQQQ}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='Atom' type='L' type64='Q'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XSetRegion'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='GC' type='^{_GC=}'/>
+<arg declared_type='Region' type='^{_XRegion=}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XSetSizeHints'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XSizeHints*' type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+<arg declared_type='Atom' type='L' type64='Q'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XSetStandardColormap'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XStandardColormap*' type='^{_XStandardColormap=ILLLLLLLII}' type64='^{_XStandardColormap=QQQQQQQQQQ}'/>
+<arg declared_type='Atom' type='L' type64='Q'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XSetStandardProperties'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg const='true' declared_type='char*' type='*'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='Pixmap' type='L' type64='Q'/>
+<arg declared_type='char**' type='^*'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='XSizeHints*' type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XSetTextProperty'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XTextProperty*' type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+<arg declared_type='Atom' type='L' type64='Q'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XSetWMHints'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XWMHints*' type='^{_XWMHints=}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XSetWMIconName'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XTextProperty*' type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XSetWMName'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XTextProperty*' type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XSetWMNormalHints'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XSizeHints*' type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XSetWMProperties'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XTextProperty*' type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+<arg declared_type='XTextProperty*' type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+<arg declared_type='char**' type='^*'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='XSizeHints*' type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+<arg declared_type='XWMHints*' type='^{_XWMHints=}'/>
+<arg declared_type='XClassHint*' type='^{_XClassHint=**}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XSetWMSizeHints'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XSizeHints*' type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+<arg declared_type='Atom' type='L' type64='Q'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XSetZoomHints'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='XSizeHints*' type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XShrinkRegion'>
+<arg declared_type='Region' type='^{_XRegion=}'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XSubtractRegion'>
+<arg declared_type='Region' type='^{_XRegion=}'/>
+<arg declared_type='Region' type='^{_XRegion=}'/>
+<arg declared_type='Region' type='^{_XRegion=}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XTextPropertyToStringList'>
+<arg declared_type='XTextProperty*' type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+<arg declared_type='char***' type='^^*'/>
+<arg declared_type='int*' type='^i'/>
 <retval declared_type='Status' type='i'/>
 </function>
 <function name='XUnionRectWithRegion'>
+<arg declared_type='XRectangle*' type='^{_XRectangle=ssSS}'/>
+<arg declared_type='Region' type='^{_XRegion=}'/>
+<arg declared_type='Region' type='^{_XRegion=}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XUnionRegion'>
+<arg declared_type='Region' type='^{_XRegion=}'/>
+<arg declared_type='Region' type='^{_XRegion=}'/>
+<arg declared_type='Region' type='^{_XRegion=}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XWMGeometry'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='int' type='i'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='unsigned int' type='I'/>
+<arg declared_type='XSizeHints*' type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+<arg declared_type='int*' type='^i'/>
+<arg declared_type='int*' type='^i'/>
+<arg declared_type='int*' type='^i'/>
+<arg declared_type='int*' type='^i'/>
+<arg declared_type='int*' type='^i'/>
 <retval declared_type='int' type='i'/>
 </function>
 <function name='XXorRegion'>
+<arg declared_type='Region' type='^{_XRegion=}'/>
+<arg declared_type='Region' type='^{_XRegion=}'/>
+<arg declared_type='Region' type='^{_XRegion=}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XmbSetWMProperties'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='Window*' function_pointer='true' type='^?'>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg const='true' declared_type='char*' type='*'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='char**' type='^*'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='XSizeHints*' type='^{_XSizeHints=liiiiiiiiii{?=ii}{?=ii}iii}' type64='^{_XSizeHints=qiiiiiiiiii{?=ii}{?=ii}iii}'/>
+<arg declared_type='XWMHints*' type='^{_XWMHints=}'/>
+<arg declared_type='XClassHint*' type='^{_XClassHint=**}'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XmbTextListToTextProperty'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='char**' type='^*'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='XICCEncodingStyle' type='i'/>
+<arg declared_type='XTextProperty*' type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
 <retval declared_type='int' type='i'/>
 </function>
 <function name='XmbTextPropertyToTextList'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='XTextProperty*' type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+<arg declared_type='char***' type='^^*'/>
+<arg declared_type='int*' type='^i'/>
 <retval declared_type='int' type='i'/>
 </function>
 <function name='XwcFreeStringList'>
+<arg declared_type='wchar_t**' type='^^i'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='XwcTextListToTextProperty'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='wchar_t**' type='^^i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='XICCEncodingStyle' type='i'/>
+<arg declared_type='XTextProperty*' type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
 <retval declared_type='int' type='i'/>
 </function>
 <function name='XwcTextPropertyToTextList'>
+<arg declared_type='Display*' type='^{_XDisplay=}'/>
+<arg declared_type='XTextProperty*' type='^{_XTextProperty=*IiL}' type64='^{_XTextProperty=*QiQ}'/>
+<arg declared_type='wchar_t***' type='^^^i'/>
+<arg declared_type='int*' type='^i'/>
 <retval declared_type='int' type='i'/>
 </function>
 <function_alias name='Tk_BackgroundError' original='Tcl_BackgroundError'/>

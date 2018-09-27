@@ -1,0 +1,124 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<constant declared_type64='Boolean' name='globalUpdateOK' type64='B'/>
+<constant declared_type64='NSString*' name='kQuartzFilterApplicationDomain' type64='@'/>
+<constant declared_type64='NSString*' name='kQuartzFilterManagerDidAddFilterNotification' type64='@'/>
+<constant declared_type64='NSString*' name='kQuartzFilterManagerDidModifyFilterNotification' type64='@'/>
+<constant declared_type64='NSString*' name='kQuartzFilterManagerDidRemoveFilterNotification' type64='@'/>
+<constant declared_type64='NSString*' name='kQuartzFilterManagerDidSelectFilterNotification' type64='@'/>
+<constant declared_type64='NSString*' name='kQuartzFilterPDFWorkflowDomain' type64='@'/>
+<constant declared_type64='NSString*' name='kQuartzFilterPrintingDomain' type64='@'/>
+<class name='NSObject'>
+<method selector='quartzFilterManager:didAddFilter:'>
+<arg declared_type64='QuartzFilterManager*' index='0' name='sender' type64='@'/>
+<arg declared_type64='QuartzFilter*' index='1' name='filter' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='quartzFilterManager:didModifyFilter:'>
+<arg declared_type64='QuartzFilterManager*' index='0' name='sender' type64='@'/>
+<arg declared_type64='QuartzFilter*' index='1' name='filter' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='quartzFilterManager:didRemoveFilter:'>
+<arg declared_type64='QuartzFilterManager*' index='0' name='sender' type64='@'/>
+<arg declared_type64='QuartzFilter*' index='1' name='filter' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='quartzFilterManager:didSelectFilter:'>
+<arg declared_type64='QuartzFilterManager*' index='0' name='sender' type64='@'/>
+<arg declared_type64='QuartzFilter*' index='1' name='filter' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='QuartzFilter'>
+<method selector='applyToContext:'>
+<arg declared_type64='CGContextRef' index='0' name='aContext' type64='^{CGContext=}'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='localizedName'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='properties'>
+<retval declared_type64='NSDictionary*' type64='@'/>
+</method>
+<method class_method='true' selector='quartzFilterWithOutputIntents:'>
+<arg declared_type64='NSArray*' index='0' name='outputIntents' type64='@'/>
+<retval declared_type64='QuartzFilter*' type64='@'/>
+</method>
+<method class_method='true' selector='quartzFilterWithProperties:'>
+<arg declared_type64='NSDictionary*' index='0' name='properties' type64='@'/>
+<retval declared_type64='QuartzFilter*' type64='@'/>
+</method>
+<method class_method='true' selector='quartzFilterWithURL:'>
+<arg declared_type64='NSURL*' index='0' name='aURL' type64='@'/>
+<retval declared_type64='QuartzFilter*' type64='@'/>
+</method>
+<method selector='removeFromContext:'>
+<arg declared_type64='CGContextRef' index='0' name='aContext' type64='^{CGContext=}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='url'>
+<retval declared_type64='NSURL*' type64='@'/>
+</method>
+</class>
+<class name='QuartzFilterManager'>
+<method selector='delegate'>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method class_method='true' selector='filterManager'>
+<retval declared_type64='QuartzFilterManager*' type64='@'/>
+</method>
+<method selector='filterPanel'>
+<retval declared_type64='NSPanel*' type64='@'/>
+</method>
+<method selector='filterView'>
+<retval declared_type64='QuartzFilterView*' type64='@'/>
+</method>
+<method class_method='true' selector='filtersInDomains:'>
+<arg declared_type64='NSArray*' index='0' name='domains' type64='@'/>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='importFilter:'>
+<arg declared_type64='NSDictionary*' index='0' name='filterProperties' type64='@'/>
+<retval declared_type64='QuartzFilter*' type64='@'/>
+</method>
+<method selector='selectFilter:'>
+<arg declared_type64='QuartzFilter*' index='0' name='filter' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='selectedFilter'>
+<retval declared_type64='QuartzFilter*' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id' index='0' name='aDelegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='QuartzFilterView'>
+<method selector='sizeToFit'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='QuartzFilterManagerDelegate'>
+<method selector='quartzFilterManager:didAddFilter:' type64='v32@0:8@16@24'>
+<arg declared_type64='QuartzFilterManager*' index='0' name='sender' type64='@'/>
+<arg declared_type64='QuartzFilter*' index='1' name='filter' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='quartzFilterManager:didModifyFilter:' type64='v32@0:8@16@24'>
+<arg declared_type64='QuartzFilterManager*' index='0' name='sender' type64='@'/>
+<arg declared_type64='QuartzFilter*' index='1' name='filter' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='quartzFilterManager:didRemoveFilter:' type64='v32@0:8@16@24'>
+<arg declared_type64='QuartzFilterManager*' index='0' name='sender' type64='@'/>
+<arg declared_type64='QuartzFilter*' index='1' name='filter' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='quartzFilterManager:didSelectFilter:' type64='v32@0:8@16@24'>
+<arg declared_type64='QuartzFilterManager*' index='0' name='sender' type64='@'/>
+<arg declared_type64='QuartzFilter*' index='1' name='filter' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

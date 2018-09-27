@@ -13,6 +13,10 @@
 <enum name='LAAccessControlOperationUseKeyDecrypt' value64='4'/>
 <enum name='LAAccessControlOperationUseKeyKeyExchange' value64='5'/>
 <enum name='LAAccessControlOperationUseKeySign' value64='3'/>
+<enum name='LABiometryNone' value64='0'/>
+<enum name='LABiometryTypeFaceID' value64='2'/>
+<enum name='LABiometryTypeNone' value64='0'/>
+<enum name='LABiometryTypeTouchID' value64='1'/>
 <enum name='LACredentialTypeApplicationPassword' value64='0'/>
 <enum name='LAErrorAppCancel' value64='-9'/>
 <enum name='LAErrorAuthenticationFailed' value64='-1'/>
@@ -50,6 +54,9 @@
 <enum name='kLAPolicyDeviceOwnerAuthentication' value64='2'/>
 <enum name='kLAPolicyDeviceOwnerAuthenticationWithBiometrics' value64='1'/>
 <class name='LAContext'>
+<method selector='biometryType'>
+<retval declared_type64='LABiometryType' type64='q'/>
+</method>
 <method selector='canEvaluatePolicy:error:'>
 <arg declared_type64='LAPolicy' index='0' name='policy' type64='q'/>
 <arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>

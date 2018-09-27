@@ -1,0 +1,1932 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<struct name='AudioBuffer' type64='{AudioBuffer=&quot;mNumberChannels&quot;I&quot;mDataByteSize&quot;I&quot;mData&quot;^v}'>
+<field declared_type64='UInt32' name='mNumberChannels' type64='I'/>
+<field declared_type64='UInt32' name='mDataByteSize' type64='I'/>
+<field declared_type64='void * _Nullable' name='mData' type64='^v'/>
+</struct>
+<struct name='AudioBufferList' type64='{AudioBufferList=&quot;mNumberBuffers&quot;I&quot;mBuffers&quot;[1{AudioBuffer=&quot;mNumberChannels&quot;I&quot;mDataByteSize&quot;I&quot;mData&quot;^v}]}'>
+<field declared_type64='UInt32' name='mNumberBuffers' type64='I'/>
+<field declared_type64='AudioBuffer*' name='mBuffers' type64='[1{AudioBuffer=&quot;mNumberChannels&quot;I&quot;mDataByteSize&quot;I&quot;mData&quot;^v}]'/>
+</struct>
+<struct name='AudioChannelDescription' type64='{AudioChannelDescription=&quot;mChannelLabel&quot;I&quot;mChannelFlags&quot;I&quot;mCoordinates&quot;[3f]}'>
+<field declared_type64='AudioChannelLabel' name='mChannelLabel' type64='I'/>
+<field declared_type64='AudioChannelFlags' name='mChannelFlags' type64='I'/>
+<field declared_type64='Float32*' name='mCoordinates' type64='[3f]'/>
+</struct>
+<struct name='AudioChannelLayout' type64='{AudioChannelLayout=&quot;mChannelLayoutTag&quot;I&quot;mChannelBitmap&quot;I&quot;mNumberChannelDescriptions&quot;I&quot;mChannelDescriptions&quot;[1{AudioChannelDescription=&quot;mChannelLabel&quot;I&quot;mChannelFlags&quot;I&quot;mCoordinates&quot;[3f]}]}'>
+<field declared_type64='AudioChannelLayoutTag' name='mChannelLayoutTag' type64='I'/>
+<field declared_type64='AudioChannelBitmap' name='mChannelBitmap' type64='I'/>
+<field declared_type64='UInt32' name='mNumberChannelDescriptions' type64='I'/>
+<field declared_type64='AudioChannelDescription*' name='mChannelDescriptions' type64='[1{AudioChannelDescription=&quot;mChannelLabel&quot;I&quot;mChannelFlags&quot;I&quot;mCoordinates&quot;[3f]}]'/>
+</struct>
+<struct name='AudioClassDescription' type64='{AudioClassDescription=&quot;mType&quot;I&quot;mSubType&quot;I&quot;mManufacturer&quot;I}'>
+<field declared_type64='OSType' name='mType' type64='I'/>
+<field declared_type64='OSType' name='mSubType' type64='I'/>
+<field declared_type64='OSType' name='mManufacturer' type64='I'/>
+</struct>
+<struct name='AudioDriverPlugInHostInfo' type64='{AudioDriverPlugInHostInfo=&quot;mDeviceID&quot;I&quot;mIOAudioDevice&quot;I&quot;mIOAudioEngine&quot;I&quot;mDevicePropertyChangedProc&quot;^?&quot;mStreamPropertyChangedProc&quot;^?}'>
+<field declared_type64='AudioDeviceID' name='mDeviceID' type64='I'/>
+<field declared_type64='io_object_t' name='mIOAudioDevice' type64='I'/>
+<field declared_type64='io_object_t' name='mIOAudioEngine' type64='I'/>
+<field declared_type64='AudioDriverPlugInDevicePropertyChangedProc _Nonnull' function_pointer='true' name='mDevicePropertyChangedProc' type64='^?'>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='Boolean' type64='B'/>
+<arg declared_type64='AudioDevicePropertyID' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='AudioDriverPlugInStreamPropertyChangedProc _Nonnull' function_pointer='true' name='mStreamPropertyChangedProc' type64='^?'>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg declared_type64='io_object_t' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='AudioDevicePropertyID' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+</struct>
+<struct name='AudioHardwareIOProcStreamUsage' type64='{AudioHardwareIOProcStreamUsage=&quot;mIOProc&quot;^v&quot;mNumberStreams&quot;I&quot;mStreamIsOn&quot;[1I]}'>
+<field declared_type64='void * _Nonnull' name='mIOProc' type64='^v'/>
+<field declared_type64='UInt32' name='mNumberStreams' type64='I'/>
+<field declared_type64='UInt32*' name='mStreamIsOn' type64='[1I]'/>
+</struct>
+<struct name='AudioHardwarePlugInInterface' type64='{AudioHardwarePlugInInterface=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?&quot;Initialize&quot;^?&quot;Teardown&quot;^?&quot;DeviceAddIOProc&quot;^?&quot;DeviceRemoveIOProc&quot;^?&quot;DeviceStart&quot;^?&quot;DeviceStop&quot;^?&quot;DeviceRead&quot;^?&quot;DeviceGetCurrentTime&quot;^?&quot;DeviceTranslateTime&quot;^?&quot;DeviceGetPropertyInfo&quot;^?&quot;DeviceGetProperty&quot;^?&quot;DeviceSetProperty&quot;^?&quot;StreamGetPropertyInfo&quot;^?&quot;StreamGetProperty&quot;^?&quot;StreamSetProperty&quot;^?&quot;DeviceStartAtTime&quot;^?&quot;DeviceGetNearestStartTime&quot;^?&quot;InitializeWithObjectID&quot;^?&quot;ObjectShow&quot;^?&quot;ObjectHasProperty&quot;^?&quot;ObjectIsPropertySettable&quot;^?&quot;ObjectGetPropertyDataSize&quot;^?&quot;ObjectGetPropertyData&quot;^?&quot;ObjectSetPropertyData&quot;^?&quot;DeviceCreateIOProcID&quot;^?&quot;DeviceDestroyIOProcID&quot;^?&quot;DeviceCreateIOProcIDWithBlock&quot;^?}'>
+<field declared_type64='void * _Nullable' name='_reserved' type64='^v'/>
+<field declared_type64='HRESULT (* _Nonnull)(void * _Nullable, REFIID, LPVOID _Nullable * _Nullable)' function_pointer='true' name='QueryInterface' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<arg declared_type64='REFIID' type64='{_REFIID=CCCCCCCCCCCCCCCC}'/>
+<arg declared_type64='LPVOID _Nullable * _Nullable' type64='^^v'/>
+<retval declared_type64='HRESULT' type64='i'/>
+</field>
+<field declared_type64='ULONG (* _Nonnull)(void * _Nullable)' function_pointer='true' name='AddRef' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='ULONG' type64='I'/>
+</field>
+<field declared_type64='ULONG (* _Nonnull)(void * _Nullable)' function_pointer='true' name='Release' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='ULONG' type64='I'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull)' function_pointer='true' name='Initialize' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull)' function_pointer='true' name='Teardown' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioDeviceID, AudioDeviceIOProc _Nonnull, void * _Nullable)' function_pointer='true' name='DeviceAddIOProc' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg declared_type64='AudioDeviceIOProc _Nonnull' function_pointer='true' type64='^?'>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg const='true' declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioDeviceID, AudioDeviceIOProc _Nonnull)' function_pointer='true' name='DeviceRemoveIOProc' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg declared_type64='AudioDeviceIOProc _Nonnull' function_pointer='true' type64='^?'>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg const='true' declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioDeviceID, AudioDeviceIOProcID _Nullable)' function_pointer='true' name='DeviceStart' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg declared_type64='AudioDeviceIOProcID _Nullable' function_pointer='true' type64='^?'>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg const='true' declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioDeviceID, AudioDeviceIOProcID _Nullable)' function_pointer='true' name='DeviceStop' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg declared_type64='AudioDeviceIOProcID _Nullable' function_pointer='true' type64='^?'>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg const='true' declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioDeviceID, AudioTimeStamp * _Nonnull, AudioBufferList * _Nonnull)' function_pointer='true' name='DeviceRead' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioDeviceID, AudioTimeStamp * _Nonnull)' function_pointer='true' name='DeviceGetCurrentTime' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioDeviceID, AudioTimeStamp * _Nonnull, AudioTimeStamp * _Nonnull)' function_pointer='true' name='DeviceTranslateTime' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioDeviceID, UInt32, Boolean, AudioDevicePropertyID, UInt32 * _Nullable, Boolean * _Nullable)' function_pointer='true' name='DeviceGetPropertyInfo' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='Boolean' type64='B'/>
+<arg declared_type64='AudioDevicePropertyID' type64='I'/>
+<arg declared_type64='UInt32 * _Nullable' type64='^I'/>
+<arg declared_type64='Boolean * _Nullable' type64='^B'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioDeviceID, UInt32, Boolean, AudioDevicePropertyID, UInt32 * _Nonnull, void * _Nonnull)' function_pointer='true' name='DeviceGetProperty' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='Boolean' type64='B'/>
+<arg declared_type64='AudioDevicePropertyID' type64='I'/>
+<arg declared_type64='UInt32 * _Nonnull' type64='^I'/>
+<arg declared_type64='void * _Nonnull' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioDeviceID, AudioTimeStamp * _Nullable, UInt32, Boolean, AudioDevicePropertyID, UInt32, void * _Nonnull)' function_pointer='true' name='DeviceSetProperty' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nullable' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='Boolean' type64='B'/>
+<arg declared_type64='AudioDevicePropertyID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='void * _Nonnull' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioStreamID, UInt32, AudioDevicePropertyID, UInt32 * _Nonnull, Boolean * _Nonnull)' function_pointer='true' name='StreamGetPropertyInfo' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioStreamID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='AudioDevicePropertyID' type64='I'/>
+<arg declared_type64='UInt32 * _Nonnull' type64='^I'/>
+<arg declared_type64='Boolean * _Nonnull' type64='^B'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioStreamID, UInt32, AudioDevicePropertyID, UInt32 * _Nonnull, void * _Nonnull)' function_pointer='true' name='StreamGetProperty' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioStreamID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='AudioDevicePropertyID' type64='I'/>
+<arg declared_type64='UInt32 * _Nonnull' type64='^I'/>
+<arg declared_type64='void * _Nonnull' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioStreamID, AudioTimeStamp * _Nullable, UInt32, AudioDevicePropertyID, UInt32, void * _Nonnull)' function_pointer='true' name='StreamSetProperty' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioStreamID' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nullable' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='AudioDevicePropertyID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='void * _Nonnull' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioDeviceID, AudioDeviceIOProcID _Nonnull, AudioTimeStamp * _Nonnull, UInt32)' function_pointer='true' name='DeviceStartAtTime' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg declared_type64='AudioDeviceIOProcID _Nonnull' function_pointer='true' type64='^?'>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg const='true' declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<arg declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='UInt32' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioDeviceID, AudioTimeStamp * _Nonnull, UInt32)' function_pointer='true' name='DeviceGetNearestStartTime' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='UInt32' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioObjectID)' function_pointer='true' name='InitializeWithObjectID' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='void (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioObjectID)' function_pointer='true' name='ObjectShow' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<retval declared_type64='void' type64='v'/>
+</field>
+<field declared_type64='Boolean (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioObjectID, AudioObjectPropertyAddress * _Nonnull)' function_pointer='true' name='ObjectHasProperty' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' type64='^{AudioObjectPropertyAddress=III}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioObjectID, AudioObjectPropertyAddress * _Nonnull, Boolean * _Nonnull)' function_pointer='true' name='ObjectIsPropertySettable' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' type64='^{AudioObjectPropertyAddress=III}'/>
+<arg declared_type64='Boolean * _Nonnull' type64='^B'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioObjectID, AudioObjectPropertyAddress * _Nonnull, UInt32, void * _Nullable, UInt32 * _Nonnull)' function_pointer='true' name='ObjectGetPropertyDataSize' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' type64='^{AudioObjectPropertyAddress=III}'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='void * _Nullable' type64='^v'/>
+<arg declared_type64='UInt32 * _Nonnull' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioObjectID, AudioObjectPropertyAddress * _Nonnull, UInt32, void * _Nullable, UInt32 * _Nonnull, void * _Nonnull)' function_pointer='true' name='ObjectGetPropertyData' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' type64='^{AudioObjectPropertyAddress=III}'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='void * _Nullable' type64='^v'/>
+<arg declared_type64='UInt32 * _Nonnull' type64='^I'/>
+<arg declared_type64='void * _Nonnull' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioObjectID, AudioObjectPropertyAddress * _Nonnull, UInt32, void * _Nullable, UInt32, void * _Nonnull)' function_pointer='true' name='ObjectSetPropertyData' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' type64='^{AudioObjectPropertyAddress=III}'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='void * _Nullable' type64='^v'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='void * _Nonnull' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioDeviceID, AudioDeviceIOProc _Nonnull, void * _Nullable, AudioDeviceIOProcID _Nullable * _Nonnull)' function_pointer='true' name='DeviceCreateIOProcID' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg declared_type64='AudioDeviceIOProc _Nonnull' function_pointer='true' type64='^?'>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg const='true' declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<arg declared_type64='AudioDeviceIOProcID _Nullable * _Nonnull' type64='^^?'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioDeviceID, AudioDeviceIOProcID _Nonnull)' function_pointer='true' name='DeviceDestroyIOProcID' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg declared_type64='AudioDeviceIOProcID _Nonnull' function_pointer='true' type64='^?'>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg const='true' declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioHardwarePlugInRef _Nonnull, AudioDeviceIOProcID _Nullable * _Nonnull, AudioDeviceID, dispatch_queue_t _Nullable, AudioDeviceIOBlock _Nonnull)' function_pointer='true' name='DeviceCreateIOProcIDWithBlock' type64='^?'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceIOProcID _Nullable * _Nonnull' type64='^^?'/>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg declared_type64='dispatch_queue_t _Nullable' type64='@'/>
+<arg declared_type64='AudioDeviceIOBlock _Nonnull' function_pointer='true' type64='@?'>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg const='true' declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+</struct>
+<struct name='AudioObjectPropertyAddress' type64='{AudioObjectPropertyAddress=&quot;mSelector&quot;I&quot;mScope&quot;I&quot;mElement&quot;I}'>
+<field declared_type64='AudioObjectPropertySelector' name='mSelector' type64='I'/>
+<field declared_type64='AudioObjectPropertyScope' name='mScope' type64='I'/>
+<field declared_type64='AudioObjectPropertyElement' name='mElement' type64='I'/>
+</struct>
+<struct name='AudioServerPlugInClientInfo' type64='{AudioServerPlugInClientInfo=&quot;mClientID&quot;I&quot;mProcessID&quot;i&quot;mIsNativeEndian&quot;B&quot;mBundleID&quot;^{__CFString}}'>
+<field declared_type64='UInt32' name='mClientID' type64='I'/>
+<field declared_type64='pid_t' name='mProcessID' type64='i'/>
+<field declared_type64='Boolean' name='mIsNativeEndian' type64='B'/>
+<field declared_type64='CFStringRef _Nullable' name='mBundleID' type64='^{__CFString=}'/>
+</struct>
+<struct name='AudioServerPlugInCustomPropertyInfo' type64='{AudioServerPlugInCustomPropertyInfo=&quot;mSelector&quot;I&quot;mPropertyDataType&quot;I&quot;mQualifierDataType&quot;I}'>
+<field declared_type64='AudioObjectPropertySelector' name='mSelector' type64='I'/>
+<field declared_type64='UInt32' name='mPropertyDataType' type64='I'/>
+<field declared_type64='UInt32' name='mQualifierDataType' type64='I'/>
+</struct>
+<struct name='AudioServerPlugInDriverInterface' type64='{AudioServerPlugInDriverInterface=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?&quot;Initialize&quot;^?&quot;CreateDevice&quot;^?&quot;DestroyDevice&quot;^?&quot;AddDeviceClient&quot;^?&quot;RemoveDeviceClient&quot;^?&quot;PerformDeviceConfigurationChange&quot;^?&quot;AbortDeviceConfigurationChange&quot;^?&quot;HasProperty&quot;^?&quot;IsPropertySettable&quot;^?&quot;GetPropertyDataSize&quot;^?&quot;GetPropertyData&quot;^?&quot;SetPropertyData&quot;^?&quot;StartIO&quot;^?&quot;StopIO&quot;^?&quot;GetZeroTimeStamp&quot;^?&quot;WillDoIOOperation&quot;^?&quot;BeginIOOperation&quot;^?&quot;DoIOOperation&quot;^?&quot;EndIOOperation&quot;^?}'>
+<field declared_type64='void * _Nullable' name='_reserved' type64='^v'/>
+<field declared_type64='HRESULT (* _Nonnull)(void * _Nullable, REFIID, LPVOID _Nullable * _Nullable)' function_pointer='true' name='QueryInterface' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<arg declared_type64='REFIID' type64='{_REFIID=CCCCCCCCCCCCCCCC}'/>
+<arg declared_type64='LPVOID _Nullable * _Nullable' type64='^^v'/>
+<retval declared_type64='HRESULT' type64='i'/>
+</field>
+<field declared_type64='ULONG (* _Nonnull)(void * _Nullable)' function_pointer='true' name='AddRef' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='ULONG' type64='I'/>
+</field>
+<field declared_type64='ULONG (* _Nonnull)(void * _Nullable)' function_pointer='true' name='Release' type64='^?'>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='ULONG' type64='I'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, AudioServerPlugInHostRef _Nonnull)' function_pointer='true' name='Initialize' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='AudioServerPlugInHostRef _Nonnull' type64='^{AudioServerPlugInHostInterface=^?^?^?^?^?}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, CFDictionaryRef _Nonnull, AudioServerPlugInClientInfo * _Nonnull, AudioObjectID * _Nonnull)' function_pointer='true' name='CreateDevice' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='CFDictionaryRef _Nonnull' type64='^{__CFDictionary=}'/>
+<arg const='true' declared_type64='AudioServerPlugInClientInfo * _Nonnull' type64='^{AudioServerPlugInClientInfo=IiB^{__CFString}}'/>
+<arg declared_type64='AudioObjectID * _Nonnull' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, AudioObjectID)' function_pointer='true' name='DestroyDevice' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, AudioObjectID, AudioServerPlugInClientInfo * _Nonnull)' function_pointer='true' name='AddDeviceClient' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioServerPlugInClientInfo * _Nonnull' type64='^{AudioServerPlugInClientInfo=IiB^{__CFString}}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, AudioObjectID, AudioServerPlugInClientInfo * _Nonnull)' function_pointer='true' name='RemoveDeviceClient' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioServerPlugInClientInfo * _Nonnull' type64='^{AudioServerPlugInClientInfo=IiB^{__CFString}}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, AudioObjectID, UInt64, void * _Nullable)' function_pointer='true' name='PerformDeviceConfigurationChange' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='UInt64' type64='Q'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, AudioObjectID, UInt64, void * _Nullable)' function_pointer='true' name='AbortDeviceConfigurationChange' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='UInt64' type64='Q'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='Boolean (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, AudioObjectID, pid_t, AudioObjectPropertyAddress * _Nonnull)' function_pointer='true' name='HasProperty' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='pid_t' type64='i'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' type64='^{AudioObjectPropertyAddress=III}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, AudioObjectID, pid_t, AudioObjectPropertyAddress * _Nonnull, Boolean * _Nonnull)' function_pointer='true' name='IsPropertySettable' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='pid_t' type64='i'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' type64='^{AudioObjectPropertyAddress=III}'/>
+<arg declared_type64='Boolean * _Nonnull' type64='^B'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, AudioObjectID, pid_t, AudioObjectPropertyAddress * _Nonnull, UInt32, void * _Nullable, UInt32 * _Nonnull)' function_pointer='true' name='GetPropertyDataSize' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='pid_t' type64='i'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' type64='^{AudioObjectPropertyAddress=III}'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='void * _Nullable' type64='^v'/>
+<arg declared_type64='UInt32 * _Nonnull' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, AudioObjectID, pid_t, AudioObjectPropertyAddress * _Nonnull, UInt32, void * _Nullable, UInt32, UInt32 * _Nonnull, void * _Nonnull)' function_pointer='true' name='GetPropertyData' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='pid_t' type64='i'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' type64='^{AudioObjectPropertyAddress=III}'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='void * _Nullable' type64='^v'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='UInt32 * _Nonnull' type64='^I'/>
+<arg declared_type64='void * _Nonnull' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, AudioObjectID, pid_t, AudioObjectPropertyAddress * _Nonnull, UInt32, void * _Nullable, UInt32, void * _Nonnull)' function_pointer='true' name='SetPropertyData' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='pid_t' type64='i'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' type64='^{AudioObjectPropertyAddress=III}'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='void * _Nullable' type64='^v'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='void * _Nonnull' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, AudioObjectID, UInt32)' function_pointer='true' name='StartIO' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, AudioObjectID, UInt32)' function_pointer='true' name='StopIO' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, AudioObjectID, UInt32, Float64 * _Nonnull, UInt64 * _Nonnull, UInt64 * _Nonnull)' function_pointer='true' name='GetZeroTimeStamp' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='Float64 * _Nonnull' type64='^d'/>
+<arg declared_type64='UInt64 * _Nonnull' type64='^Q'/>
+<arg declared_type64='UInt64 * _Nonnull' type64='^Q'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, AudioObjectID, UInt32, UInt32, Boolean * _Nonnull, Boolean * _Nonnull)' function_pointer='true' name='WillDoIOOperation' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='Boolean * _Nonnull' type64='^B'/>
+<arg declared_type64='Boolean * _Nonnull' type64='^B'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, AudioObjectID, UInt32, UInt32, UInt32, AudioServerPlugInIOCycleInfo * _Nonnull)' function_pointer='true' name='BeginIOOperation' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='AudioServerPlugInIOCycleInfo * _Nonnull' type64='^{AudioServerPlugInIOCycleInfo=QI{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}dd}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, AudioObjectID, AudioObjectID, UInt32, UInt32, UInt32, AudioServerPlugInIOCycleInfo * _Nonnull, void * _Nullable, void * _Nullable)' function_pointer='true' name='DoIOOperation' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='AudioServerPlugInIOCycleInfo * _Nonnull' type64='^{AudioServerPlugInIOCycleInfo=QI{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}dd}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInDriverRef _Nonnull, AudioObjectID, UInt32, UInt32, UInt32, AudioServerPlugInIOCycleInfo * _Nonnull)' function_pointer='true' name='EndIOOperation' type64='^?'>
+<arg declared_type64='AudioServerPlugInDriverRef _Nonnull' type64='^^{AudioServerPlugInDriverInterface}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='AudioServerPlugInIOCycleInfo * _Nonnull' type64='^{AudioServerPlugInIOCycleInfo=QI{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}dd}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+</struct>
+<struct name='AudioServerPlugInHostInterface' type64='{AudioServerPlugInHostInterface=&quot;PropertiesChanged&quot;^?&quot;CopyFromStorage&quot;^?&quot;WriteToStorage&quot;^?&quot;DeleteFromStorage&quot;^?&quot;RequestDeviceConfigurationChange&quot;^?}'>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInHostRef _Nonnull, AudioObjectID, UInt32, AudioObjectPropertyAddress * _Nonnull)' function_pointer='true' name='PropertiesChanged' type64='^?'>
+<arg declared_type64='AudioServerPlugInHostRef _Nonnull' type64='^{AudioServerPlugInHostInterface=^?^?^?^?^?}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' type64='^{AudioObjectPropertyAddress=III}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInHostRef _Nonnull, CFStringRef _Nonnull, CFPropertyListRef _Nullable * _Nonnull)' function_pointer='true' name='CopyFromStorage' type64='^?'>
+<arg declared_type64='AudioServerPlugInHostRef _Nonnull' type64='^{AudioServerPlugInHostInterface=^?^?^?^?^?}'/>
+<arg declared_type64='CFStringRef _Nonnull' type64='^{__CFString=}'/>
+<arg declared_type64='CFPropertyListRef _Nullable * _Nonnull' type64='^^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInHostRef _Nonnull, CFStringRef _Nonnull, CFPropertyListRef _Nonnull)' function_pointer='true' name='WriteToStorage' type64='^?'>
+<arg declared_type64='AudioServerPlugInHostRef _Nonnull' type64='^{AudioServerPlugInHostInterface=^?^?^?^?^?}'/>
+<arg declared_type64='CFStringRef _Nonnull' type64='^{__CFString=}'/>
+<arg declared_type64='CFPropertyListRef _Nonnull' type64='@'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInHostRef _Nonnull, CFStringRef _Nonnull)' function_pointer='true' name='DeleteFromStorage' type64='^?'>
+<arg declared_type64='AudioServerPlugInHostRef _Nonnull' type64='^{AudioServerPlugInHostInterface=^?^?^?^?^?}'/>
+<arg declared_type64='CFStringRef _Nonnull' type64='^{__CFString=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+<field declared_type64='OSStatus (* _Nonnull)(AudioServerPlugInHostRef _Nonnull, AudioObjectID, UInt64, void * _Nullable)' function_pointer='true' name='RequestDeviceConfigurationChange' type64='^?'>
+<arg declared_type64='AudioServerPlugInHostRef _Nonnull' type64='^{AudioServerPlugInHostInterface=^?^?^?^?^?}'/>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='UInt64' type64='Q'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</field>
+</struct>
+<struct name='AudioServerPlugInIOCycleInfo' type64='{AudioServerPlugInIOCycleInfo=&quot;mIOCycleCounter&quot;Q&quot;mNominalIOBufferFrameSize&quot;I&quot;mCurrentTime&quot;{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}&quot;mInputTime&quot;{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}&quot;mOutputTime&quot;{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}&quot;mMasterHostTicksPerFrame&quot;d&quot;mDeviceHostTicksPerFrame&quot;d}'>
+<field declared_type64='UInt64' name='mIOCycleCounter' type64='Q'/>
+<field declared_type64='UInt32' name='mNominalIOBufferFrameSize' type64='I'/>
+<field declared_type64='AudioTimeStamp' name='mCurrentTime' type64='{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}'/>
+<field declared_type64='AudioTimeStamp' name='mInputTime' type64='{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}'/>
+<field declared_type64='AudioTimeStamp' name='mOutputTime' type64='{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}'/>
+<field declared_type64='Float64' name='mMasterHostTicksPerFrame' type64='d'/>
+<field declared_type64='Float64' name='mDeviceHostTicksPerFrame' type64='d'/>
+</struct>
+<struct name='AudioStreamBasicDescription' type64='{AudioStreamBasicDescription=&quot;mSampleRate&quot;d&quot;mFormatID&quot;I&quot;mFormatFlags&quot;I&quot;mBytesPerPacket&quot;I&quot;mFramesPerPacket&quot;I&quot;mBytesPerFrame&quot;I&quot;mChannelsPerFrame&quot;I&quot;mBitsPerChannel&quot;I&quot;mReserved&quot;I}'>
+<field declared_type64='Float64' name='mSampleRate' type64='d'/>
+<field declared_type64='AudioFormatID' name='mFormatID' type64='I'/>
+<field declared_type64='AudioFormatFlags' name='mFormatFlags' type64='I'/>
+<field declared_type64='UInt32' name='mBytesPerPacket' type64='I'/>
+<field declared_type64='UInt32' name='mFramesPerPacket' type64='I'/>
+<field declared_type64='UInt32' name='mBytesPerFrame' type64='I'/>
+<field declared_type64='UInt32' name='mChannelsPerFrame' type64='I'/>
+<field declared_type64='UInt32' name='mBitsPerChannel' type64='I'/>
+<field declared_type64='UInt32' name='mReserved' type64='I'/>
+</struct>
+<struct name='AudioStreamPacketDescription' type64='{AudioStreamPacketDescription=&quot;mStartOffset&quot;q&quot;mVariableFramesInPacket&quot;I&quot;mDataByteSize&quot;I}'>
+<field declared_type64='SInt64' name='mStartOffset' type64='q'/>
+<field declared_type64='UInt32' name='mVariableFramesInPacket' type64='I'/>
+<field declared_type64='UInt32' name='mDataByteSize' type64='I'/>
+</struct>
+<struct name='AudioStreamRangedDescription' type64='{AudioStreamRangedDescription=&quot;mFormat&quot;{AudioStreamBasicDescription=&quot;mSampleRate&quot;d&quot;mFormatID&quot;I&quot;mFormatFlags&quot;I&quot;mBytesPerPacket&quot;I&quot;mFramesPerPacket&quot;I&quot;mBytesPerFrame&quot;I&quot;mChannelsPerFrame&quot;I&quot;mBitsPerChannel&quot;I&quot;mReserved&quot;I}&quot;mSampleRateRange&quot;{AudioValueRange=&quot;mMinimum&quot;d&quot;mMaximum&quot;d}}'>
+<field declared_type64='AudioStreamBasicDescription' name='mFormat' type64='{AudioStreamBasicDescription=&quot;mSampleRate&quot;d&quot;mFormatID&quot;I&quot;mFormatFlags&quot;I&quot;mBytesPerPacket&quot;I&quot;mFramesPerPacket&quot;I&quot;mBytesPerFrame&quot;I&quot;mChannelsPerFrame&quot;I&quot;mBitsPerChannel&quot;I&quot;mReserved&quot;I}'/>
+<field declared_type64='AudioValueRange' name='mSampleRateRange' type64='{AudioValueRange=&quot;mMinimum&quot;d&quot;mMaximum&quot;d}'/>
+</struct>
+<struct name='AudioTimeStamp' type64='{AudioTimeStamp=&quot;mSampleTime&quot;d&quot;mHostTime&quot;Q&quot;mRateScalar&quot;d&quot;mWordClockTime&quot;Q&quot;mSMPTETime&quot;{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}&quot;mFlags&quot;I&quot;mReserved&quot;I}'>
+<field declared_type64='Float64' name='mSampleTime' type64='d'/>
+<field declared_type64='UInt64' name='mHostTime' type64='Q'/>
+<field declared_type64='Float64' name='mRateScalar' type64='d'/>
+<field declared_type64='UInt64' name='mWordClockTime' type64='Q'/>
+<field declared_type64='SMPTETime' name='mSMPTETime' type64='{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}'/>
+<field declared_type64='AudioTimeStampFlags' name='mFlags' type64='I'/>
+<field declared_type64='UInt32' name='mReserved' type64='I'/>
+</struct>
+<struct name='AudioValueRange' type64='{AudioValueRange=&quot;mMinimum&quot;d&quot;mMaximum&quot;d}'>
+<field declared_type64='Float64' name='mMinimum' type64='d'/>
+<field declared_type64='Float64' name='mMaximum' type64='d'/>
+</struct>
+<struct name='AudioValueTranslation' type64='{AudioValueTranslation=&quot;mInputData&quot;^v&quot;mInputDataSize&quot;I&quot;mOutputData&quot;^v&quot;mOutputDataSize&quot;I}'>
+<field declared_type64='void * _Nonnull' name='mInputData' type64='^v'/>
+<field declared_type64='UInt32' name='mInputDataSize' type64='I'/>
+<field declared_type64='void * _Nonnull' name='mOutputData' type64='^v'/>
+<field declared_type64='UInt32' name='mOutputDataSize' type64='I'/>
+</struct>
+<struct name='SMPTETime' type64='{SMPTETime=&quot;mSubframes&quot;s&quot;mSubframeDivisor&quot;s&quot;mCounter&quot;I&quot;mType&quot;I&quot;mFlags&quot;I&quot;mHours&quot;s&quot;mMinutes&quot;s&quot;mSeconds&quot;s&quot;mFrames&quot;s}'>
+<field declared_type64='SInt16' name='mSubframes' type64='s'/>
+<field declared_type64='SInt16' name='mSubframeDivisor' type64='s'/>
+<field declared_type64='UInt32' name='mCounter' type64='I'/>
+<field declared_type64='SMPTETimeType' name='mType' type64='I'/>
+<field declared_type64='SMPTETimeFlags' name='mFlags' type64='I'/>
+<field declared_type64='SInt16' name='mHours' type64='s'/>
+<field declared_type64='SInt16' name='mMinutes' type64='s'/>
+<field declared_type64='SInt16' name='mSeconds' type64='s'/>
+<field declared_type64='SInt16' name='mFrames' type64='s'/>
+</struct>
+<cftype name='AudioHardwarePlugInRef' type64='^^{AudioHardwarePlugInInterface}'/>
+<cftype name='AudioServerPlugInDriverRef' type64='^^{AudioServerPlugInDriverInterface}'/>
+<cftype name='AudioServerPlugInHostRef' type64='^{AudioServerPlugInHostInterface=^?^?^?^?^?}'/>
+<constant const='true' declared_type64='Float64' name='kAudioStreamAnyRate' type64='d'/>
+<string_constant name='kAudioAggregateDeviceClockDeviceKey' value='clock'/>
+<string_constant name='kAudioAggregateDeviceIsPrivateKey' value='private'/>
+<string_constant name='kAudioAggregateDeviceIsStackedKey' value='stacked'/>
+<string_constant name='kAudioAggregateDeviceMasterSubDeviceKey' value='master'/>
+<string_constant name='kAudioAggregateDeviceNameKey' value='name'/>
+<string_constant name='kAudioAggregateDeviceSubDeviceListKey' value='subdevices'/>
+<string_constant name='kAudioAggregateDeviceUIDKey' value='uid'/>
+<string_constant name='kAudioEndPointDeviceEndPointListKey' value='endpoints'/>
+<string_constant name='kAudioEndPointDeviceIsPrivateKey' value='private'/>
+<string_constant name='kAudioEndPointDeviceMasterEndPointKey' value='master'/>
+<string_constant name='kAudioEndPointDeviceNameKey' value='name'/>
+<string_constant name='kAudioEndPointDeviceUIDKey' value='uid'/>
+<string_constant name='kAudioEndPointInputChannelsKey' value='channels-in'/>
+<string_constant name='kAudioEndPointNameKey' value='name'/>
+<string_constant name='kAudioEndPointOutputChannelsKey' value='channels-out'/>
+<string_constant name='kAudioEndPointUIDKey' value='uid'/>
+<string_constant name='kAudioHardwareRunLoopMode' value='com.apple.audio.CoreAudio'/>
+<string_constant name='kAudioSubDeviceDriftCompensationKey' value='drift'/>
+<string_constant name='kAudioSubDeviceDriftCompensationQualityKey' value='drift quality'/>
+<string_constant name='kAudioSubDeviceExtraInputLatencyKey' value='latency-in'/>
+<string_constant name='kAudioSubDeviceExtraOutputLatencyKey' value='latency-out'/>
+<string_constant name='kAudioSubDeviceInputChannelsKey' value='channels-in'/>
+<string_constant name='kAudioSubDeviceNameKey' value='name'/>
+<string_constant name='kAudioSubDeviceOutputChannelsKey' value='channels-out'/>
+<string_constant name='kAudioSubDeviceUIDKey' value='uid'/>
+<enum name='CA_PREFER_FIXED_POINT' value64='0'/>
+<enum name='COREAUDIOTYPES_VERSION' value64='20150414'/>
+<enum name='kAppleLosslessFormatFlag_16BitSourceData' value64='1'/>
+<enum name='kAppleLosslessFormatFlag_20BitSourceData' value64='2'/>
+<enum name='kAppleLosslessFormatFlag_24BitSourceData' value64='3'/>
+<enum name='kAppleLosslessFormatFlag_32BitSourceData' value64='4'/>
+<enum name='kAudioAggregateDeviceClassID' value64='1633773415'/>
+<enum name='kAudioAggregateDevicePropertyActiveSubDeviceList' value64='1634169456'/>
+<enum name='kAudioAggregateDevicePropertyClockDevice' value64='1634755428'/>
+<enum name='kAudioAggregateDevicePropertyComposition' value64='1633906541'/>
+<enum name='kAudioAggregateDevicePropertyFullSubDeviceList' value64='1735554416'/>
+<enum name='kAudioAggregateDevicePropertyMasterSubDevice' value64='1634562932'/>
+<enum name='kAudioBooleanControlClassID' value64='1953458028'/>
+<enum name='kAudioBooleanControlPropertyValue' value64='1650685548'/>
+<enum name='kAudioBootChimeVolumeControlClassID' value64='1886544237'/>
+<enum name='kAudioBoxClassID' value64='1633841016'/>
+<enum name='kAudioBoxPropertyAcquired' value64='1652060014'/>
+<enum name='kAudioBoxPropertyAcquisitionFailed' value64='1652060006'/>
+<enum name='kAudioBoxPropertyBoxUID' value64='1651861860'/>
+<enum name='kAudioBoxPropertyClockDeviceList' value64='1650682915'/>
+<enum name='kAudioBoxPropertyDeviceList' value64='1650751011'/>
+<enum name='kAudioBoxPropertyHasAudio' value64='1651007861'/>
+<enum name='kAudioBoxPropertyHasMIDI' value64='1651010921'/>
+<enum name='kAudioBoxPropertyHasVideo' value64='1651013225'/>
+<enum name='kAudioBoxPropertyIsProtected' value64='1651536495'/>
+<enum name='kAudioBoxPropertyTransportType' value64='1953653102'/>
+<enum name='kAudioChannelBit_Center' value64='4'/>
+<enum name='kAudioChannelBit_CenterSurround' value64='256'/>
+<enum name='kAudioChannelBit_LFEScreen' value64='8'/>
+<enum name='kAudioChannelBit_Left' value64='1'/>
+<enum name='kAudioChannelBit_LeftCenter' value64='64'/>
+<enum name='kAudioChannelBit_LeftSurround' value64='16'/>
+<enum name='kAudioChannelBit_LeftSurroundDirect' value64='512'/>
+<enum name='kAudioChannelBit_Right' value64='2'/>
+<enum name='kAudioChannelBit_RightCenter' value64='128'/>
+<enum name='kAudioChannelBit_RightSurround' value64='32'/>
+<enum name='kAudioChannelBit_RightSurroundDirect' value64='1024'/>
+<enum name='kAudioChannelBit_TopBackCenter' value64='65536'/>
+<enum name='kAudioChannelBit_TopBackLeft' value64='32768'/>
+<enum name='kAudioChannelBit_TopBackRight' value64='131072'/>
+<enum name='kAudioChannelBit_TopCenterSurround' value64='2048'/>
+<enum name='kAudioChannelBit_VerticalHeightCenter' value64='8192'/>
+<enum name='kAudioChannelBit_VerticalHeightLeft' value64='4096'/>
+<enum name='kAudioChannelBit_VerticalHeightRight' value64='16384'/>
+<enum name='kAudioChannelCoordinates_Azimuth' value64='0'/>
+<enum name='kAudioChannelCoordinates_BackFront' value64='1'/>
+<enum name='kAudioChannelCoordinates_Distance' value64='2'/>
+<enum name='kAudioChannelCoordinates_DownUp' value64='2'/>
+<enum name='kAudioChannelCoordinates_Elevation' value64='1'/>
+<enum name='kAudioChannelCoordinates_LeftRight' value64='0'/>
+<enum name='kAudioChannelFlags_AllOff' value64='0'/>
+<enum name='kAudioChannelFlags_Meters' value64='4'/>
+<enum name='kAudioChannelFlags_RectangularCoordinates' value64='1'/>
+<enum name='kAudioChannelFlags_SphericalCoordinates' value64='2'/>
+<enum name='kAudioChannelLabel_Ambisonic_W' value64='200'/>
+<enum name='kAudioChannelLabel_Ambisonic_X' value64='201'/>
+<enum name='kAudioChannelLabel_Ambisonic_Y' value64='202'/>
+<enum name='kAudioChannelLabel_Ambisonic_Z' value64='203'/>
+<enum name='kAudioChannelLabel_BeginReserved' value64='4026531840'/>
+<enum name='kAudioChannelLabel_BinauralLeft' value64='208'/>
+<enum name='kAudioChannelLabel_BinauralRight' value64='209'/>
+<enum name='kAudioChannelLabel_Center' value64='3'/>
+<enum name='kAudioChannelLabel_CenterSurround' value64='9'/>
+<enum name='kAudioChannelLabel_CenterSurroundDirect' value64='44'/>
+<enum name='kAudioChannelLabel_ClickTrack' value64='304'/>
+<enum name='kAudioChannelLabel_DialogCentricMix' value64='43'/>
+<enum name='kAudioChannelLabel_Discrete' value64='400'/>
+<enum name='kAudioChannelLabel_Discrete_0' value64='65536'/>
+<enum name='kAudioChannelLabel_Discrete_1' value64='65537'/>
+<enum name='kAudioChannelLabel_Discrete_10' value64='65546'/>
+<enum name='kAudioChannelLabel_Discrete_11' value64='65547'/>
+<enum name='kAudioChannelLabel_Discrete_12' value64='65548'/>
+<enum name='kAudioChannelLabel_Discrete_13' value64='65549'/>
+<enum name='kAudioChannelLabel_Discrete_14' value64='65550'/>
+<enum name='kAudioChannelLabel_Discrete_15' value64='65551'/>
+<enum name='kAudioChannelLabel_Discrete_2' value64='65538'/>
+<enum name='kAudioChannelLabel_Discrete_3' value64='65539'/>
+<enum name='kAudioChannelLabel_Discrete_4' value64='65540'/>
+<enum name='kAudioChannelLabel_Discrete_5' value64='65541'/>
+<enum name='kAudioChannelLabel_Discrete_6' value64='65542'/>
+<enum name='kAudioChannelLabel_Discrete_65535' value64='131071'/>
+<enum name='kAudioChannelLabel_Discrete_7' value64='65543'/>
+<enum name='kAudioChannelLabel_Discrete_8' value64='65544'/>
+<enum name='kAudioChannelLabel_Discrete_9' value64='65545'/>
+<enum name='kAudioChannelLabel_EndReserved' value64='4294967294'/>
+<enum name='kAudioChannelLabel_ForeignLanguage' value64='305'/>
+<enum name='kAudioChannelLabel_HOA_ACN' value64='500'/>
+<enum name='kAudioChannelLabel_HOA_ACN_0' value64='131072'/>
+<enum name='kAudioChannelLabel_HOA_ACN_1' value64='131073'/>
+<enum name='kAudioChannelLabel_HOA_ACN_10' value64='131082'/>
+<enum name='kAudioChannelLabel_HOA_ACN_11' value64='131083'/>
+<enum name='kAudioChannelLabel_HOA_ACN_12' value64='131084'/>
+<enum name='kAudioChannelLabel_HOA_ACN_13' value64='131085'/>
+<enum name='kAudioChannelLabel_HOA_ACN_14' value64='131086'/>
+<enum name='kAudioChannelLabel_HOA_ACN_15' value64='131087'/>
+<enum name='kAudioChannelLabel_HOA_ACN_2' value64='131074'/>
+<enum name='kAudioChannelLabel_HOA_ACN_3' value64='131075'/>
+<enum name='kAudioChannelLabel_HOA_ACN_4' value64='131076'/>
+<enum name='kAudioChannelLabel_HOA_ACN_5' value64='131077'/>
+<enum name='kAudioChannelLabel_HOA_ACN_6' value64='131078'/>
+<enum name='kAudioChannelLabel_HOA_ACN_65024' value64='196096'/>
+<enum name='kAudioChannelLabel_HOA_ACN_7' value64='131079'/>
+<enum name='kAudioChannelLabel_HOA_ACN_8' value64='131080'/>
+<enum name='kAudioChannelLabel_HOA_ACN_9' value64='131081'/>
+<enum name='kAudioChannelLabel_Haptic' value64='45'/>
+<enum name='kAudioChannelLabel_HeadphonesLeft' value64='301'/>
+<enum name='kAudioChannelLabel_HeadphonesRight' value64='302'/>
+<enum name='kAudioChannelLabel_HearingImpaired' value64='40'/>
+<enum name='kAudioChannelLabel_LFE2' value64='37'/>
+<enum name='kAudioChannelLabel_LFEScreen' value64='4'/>
+<enum name='kAudioChannelLabel_Left' value64='1'/>
+<enum name='kAudioChannelLabel_LeftCenter' value64='7'/>
+<enum name='kAudioChannelLabel_LeftSurround' value64='5'/>
+<enum name='kAudioChannelLabel_LeftSurroundDirect' value64='10'/>
+<enum name='kAudioChannelLabel_LeftTotal' value64='38'/>
+<enum name='kAudioChannelLabel_LeftWide' value64='35'/>
+<enum name='kAudioChannelLabel_MS_Mid' value64='204'/>
+<enum name='kAudioChannelLabel_MS_Side' value64='205'/>
+<enum name='kAudioChannelLabel_Mono' value64='42'/>
+<enum name='kAudioChannelLabel_Narration' value64='41'/>
+<enum name='kAudioChannelLabel_RearSurroundLeft' value64='33'/>
+<enum name='kAudioChannelLabel_RearSurroundRight' value64='34'/>
+<enum name='kAudioChannelLabel_Right' value64='2'/>
+<enum name='kAudioChannelLabel_RightCenter' value64='8'/>
+<enum name='kAudioChannelLabel_RightSurround' value64='6'/>
+<enum name='kAudioChannelLabel_RightSurroundDirect' value64='11'/>
+<enum name='kAudioChannelLabel_RightTotal' value64='39'/>
+<enum name='kAudioChannelLabel_RightWide' value64='36'/>
+<enum name='kAudioChannelLabel_TopBackCenter' value64='17'/>
+<enum name='kAudioChannelLabel_TopBackLeft' value64='16'/>
+<enum name='kAudioChannelLabel_TopBackRight' value64='18'/>
+<enum name='kAudioChannelLabel_TopCenterSurround' value64='12'/>
+<enum name='kAudioChannelLabel_Unknown' value64='4294967295'/>
+<enum name='kAudioChannelLabel_Unused' value64='0'/>
+<enum name='kAudioChannelLabel_UseCoordinates' value64='100'/>
+<enum name='kAudioChannelLabel_VerticalHeightCenter' value64='14'/>
+<enum name='kAudioChannelLabel_VerticalHeightLeft' value64='13'/>
+<enum name='kAudioChannelLabel_VerticalHeightRight' value64='15'/>
+<enum name='kAudioChannelLabel_XY_X' value64='206'/>
+<enum name='kAudioChannelLabel_XY_Y' value64='207'/>
+<enum name='kAudioChannelLayoutTag_AAC_3_0' value64='7471107'/>
+<enum name='kAudioChannelLayoutTag_AAC_4_0' value64='7602180'/>
+<enum name='kAudioChannelLayoutTag_AAC_5_0' value64='7864325'/>
+<enum name='kAudioChannelLayoutTag_AAC_5_1' value64='8126470'/>
+<enum name='kAudioChannelLayoutTag_AAC_6_0' value64='9240582'/>
+<enum name='kAudioChannelLayoutTag_AAC_6_1' value64='9306119'/>
+<enum name='kAudioChannelLayoutTag_AAC_7_0' value64='9371655'/>
+<enum name='kAudioChannelLayoutTag_AAC_7_1' value64='8323080'/>
+<enum name='kAudioChannelLayoutTag_AAC_7_1_B' value64='11993096'/>
+<enum name='kAudioChannelLayoutTag_AAC_7_1_C' value64='12058632'/>
+<enum name='kAudioChannelLayoutTag_AAC_Octagonal' value64='9437192'/>
+<enum name='kAudioChannelLayoutTag_AAC_Quadraphonic' value64='7077892'/>
+<enum name='kAudioChannelLayoutTag_AC3_1_0_1' value64='9764866'/>
+<enum name='kAudioChannelLayoutTag_AC3_2_1_1' value64='10027012'/>
+<enum name='kAudioChannelLayoutTag_AC3_3_0' value64='9830403'/>
+<enum name='kAudioChannelLayoutTag_AC3_3_0_1' value64='9961476'/>
+<enum name='kAudioChannelLayoutTag_AC3_3_1' value64='9895940'/>
+<enum name='kAudioChannelLayoutTag_AC3_3_1_1' value64='10092549'/>
+<enum name='kAudioChannelLayoutTag_Ambisonic_B_Format' value64='7012356'/>
+<enum name='kAudioChannelLayoutTag_AudioUnit_4' value64='7077892'/>
+<enum name='kAudioChannelLayoutTag_AudioUnit_5' value64='7143429'/>
+<enum name='kAudioChannelLayoutTag_AudioUnit_5_0' value64='7733253'/>
+<enum name='kAudioChannelLayoutTag_AudioUnit_5_1' value64='7929862'/>
+<enum name='kAudioChannelLayoutTag_AudioUnit_6' value64='7208966'/>
+<enum name='kAudioChannelLayoutTag_AudioUnit_6_0' value64='9109510'/>
+<enum name='kAudioChannelLayoutTag_AudioUnit_6_1' value64='8192007'/>
+<enum name='kAudioChannelLayoutTag_AudioUnit_7_0' value64='9175047'/>
+<enum name='kAudioChannelLayoutTag_AudioUnit_7_0_Front' value64='9699335'/>
+<enum name='kAudioChannelLayoutTag_AudioUnit_7_1' value64='8388616'/>
+<enum name='kAudioChannelLayoutTag_AudioUnit_7_1_Front' value64='8257544'/>
+<enum name='kAudioChannelLayoutTag_AudioUnit_8' value64='7274504'/>
+<enum name='kAudioChannelLayoutTag_BeginReserved' value64='4026531840'/>
+<enum name='kAudioChannelLayoutTag_Binaural' value64='6946818'/>
+<enum name='kAudioChannelLayoutTag_Cube' value64='7340040'/>
+<enum name='kAudioChannelLayoutTag_DTS_3_1' value64='11010052'/>
+<enum name='kAudioChannelLayoutTag_DTS_4_1' value64='11075589'/>
+<enum name='kAudioChannelLayoutTag_DTS_6_0_A' value64='11141126'/>
+<enum name='kAudioChannelLayoutTag_DTS_6_0_B' value64='11206662'/>
+<enum name='kAudioChannelLayoutTag_DTS_6_0_C' value64='11272198'/>
+<enum name='kAudioChannelLayoutTag_DTS_6_1_A' value64='11337735'/>
+<enum name='kAudioChannelLayoutTag_DTS_6_1_B' value64='11403271'/>
+<enum name='kAudioChannelLayoutTag_DTS_6_1_C' value64='11468807'/>
+<enum name='kAudioChannelLayoutTag_DTS_6_1_D' value64='11927559'/>
+<enum name='kAudioChannelLayoutTag_DTS_7_0' value64='11534343'/>
+<enum name='kAudioChannelLayoutTag_DTS_7_1' value64='11599880'/>
+<enum name='kAudioChannelLayoutTag_DTS_8_0_A' value64='11665416'/>
+<enum name='kAudioChannelLayoutTag_DTS_8_0_B' value64='11730952'/>
+<enum name='kAudioChannelLayoutTag_DTS_8_1_A' value64='11796489'/>
+<enum name='kAudioChannelLayoutTag_DTS_8_1_B' value64='11862025'/>
+<enum name='kAudioChannelLayoutTag_DVD_0' value64='6553601'/>
+<enum name='kAudioChannelLayoutTag_DVD_1' value64='6619138'/>
+<enum name='kAudioChannelLayoutTag_DVD_10' value64='8912900'/>
+<enum name='kAudioChannelLayoutTag_DVD_11' value64='8978437'/>
+<enum name='kAudioChannelLayoutTag_DVD_12' value64='7929862'/>
+<enum name='kAudioChannelLayoutTag_DVD_13' value64='7536644'/>
+<enum name='kAudioChannelLayoutTag_DVD_14' value64='7667717'/>
+<enum name='kAudioChannelLayoutTag_DVD_15' value64='8912900'/>
+<enum name='kAudioChannelLayoutTag_DVD_16' value64='8978437'/>
+<enum name='kAudioChannelLayoutTag_DVD_17' value64='7929862'/>
+<enum name='kAudioChannelLayoutTag_DVD_18' value64='9043973'/>
+<enum name='kAudioChannelLayoutTag_DVD_19' value64='7733253'/>
+<enum name='kAudioChannelLayoutTag_DVD_2' value64='8585219'/>
+<enum name='kAudioChannelLayoutTag_DVD_20' value64='7995398'/>
+<enum name='kAudioChannelLayoutTag_DVD_3' value64='8650756'/>
+<enum name='kAudioChannelLayoutTag_DVD_4' value64='8716291'/>
+<enum name='kAudioChannelLayoutTag_DVD_5' value64='8781828'/>
+<enum name='kAudioChannelLayoutTag_DVD_6' value64='8847365'/>
+<enum name='kAudioChannelLayoutTag_DVD_7' value64='7405571'/>
+<enum name='kAudioChannelLayoutTag_DVD_8' value64='7536644'/>
+<enum name='kAudioChannelLayoutTag_DVD_9' value64='7667717'/>
+<enum name='kAudioChannelLayoutTag_DiscreteInOrder' value64='9633792'/>
+<enum name='kAudioChannelLayoutTag_EAC3_6_1_A' value64='10289159'/>
+<enum name='kAudioChannelLayoutTag_EAC3_6_1_B' value64='10354695'/>
+<enum name='kAudioChannelLayoutTag_EAC3_6_1_C' value64='10420231'/>
+<enum name='kAudioChannelLayoutTag_EAC3_7_1_A' value64='10485768'/>
+<enum name='kAudioChannelLayoutTag_EAC3_7_1_B' value64='10551304'/>
+<enum name='kAudioChannelLayoutTag_EAC3_7_1_C' value64='10616840'/>
+<enum name='kAudioChannelLayoutTag_EAC3_7_1_D' value64='10682376'/>
+<enum name='kAudioChannelLayoutTag_EAC3_7_1_E' value64='10747912'/>
+<enum name='kAudioChannelLayoutTag_EAC3_7_1_F' value64='10813448'/>
+<enum name='kAudioChannelLayoutTag_EAC3_7_1_G' value64='10878984'/>
+<enum name='kAudioChannelLayoutTag_EAC3_7_1_H' value64='10944520'/>
+<enum name='kAudioChannelLayoutTag_EAC_6_0_A' value64='10158086'/>
+<enum name='kAudioChannelLayoutTag_EAC_7_0_A' value64='10223623'/>
+<enum name='kAudioChannelLayoutTag_Emagic_Default_7_1' value64='8454152'/>
+<enum name='kAudioChannelLayoutTag_EndReserved' value64='4294901759'/>
+<enum name='kAudioChannelLayoutTag_HOA_ACN_N3D' value64='12517376'/>
+<enum name='kAudioChannelLayoutTag_HOA_ACN_SN3D' value64='12451840'/>
+<enum name='kAudioChannelLayoutTag_Hexagonal' value64='7208966'/>
+<enum name='kAudioChannelLayoutTag_ITU_1_0' value64='6553601'/>
+<enum name='kAudioChannelLayoutTag_ITU_2_0' value64='6619138'/>
+<enum name='kAudioChannelLayoutTag_ITU_2_1' value64='8585219'/>
+<enum name='kAudioChannelLayoutTag_ITU_2_2' value64='8650756'/>
+<enum name='kAudioChannelLayoutTag_ITU_3_0' value64='7405571'/>
+<enum name='kAudioChannelLayoutTag_ITU_3_1' value64='7536644'/>
+<enum name='kAudioChannelLayoutTag_ITU_3_2' value64='7667717'/>
+<enum name='kAudioChannelLayoutTag_ITU_3_2_1' value64='7929862'/>
+<enum name='kAudioChannelLayoutTag_ITU_3_4_1' value64='8388616'/>
+<enum name='kAudioChannelLayoutTag_MPEG_1_0' value64='6553601'/>
+<enum name='kAudioChannelLayoutTag_MPEG_2_0' value64='6619138'/>
+<enum name='kAudioChannelLayoutTag_MPEG_3_0_A' value64='7405571'/>
+<enum name='kAudioChannelLayoutTag_MPEG_3_0_B' value64='7471107'/>
+<enum name='kAudioChannelLayoutTag_MPEG_4_0_A' value64='7536644'/>
+<enum name='kAudioChannelLayoutTag_MPEG_4_0_B' value64='7602180'/>
+<enum name='kAudioChannelLayoutTag_MPEG_5_0_A' value64='7667717'/>
+<enum name='kAudioChannelLayoutTag_MPEG_5_0_B' value64='7733253'/>
+<enum name='kAudioChannelLayoutTag_MPEG_5_0_C' value64='7798789'/>
+<enum name='kAudioChannelLayoutTag_MPEG_5_0_D' value64='7864325'/>
+<enum name='kAudioChannelLayoutTag_MPEG_5_1_A' value64='7929862'/>
+<enum name='kAudioChannelLayoutTag_MPEG_5_1_B' value64='7995398'/>
+<enum name='kAudioChannelLayoutTag_MPEG_5_1_C' value64='8060934'/>
+<enum name='kAudioChannelLayoutTag_MPEG_5_1_D' value64='8126470'/>
+<enum name='kAudioChannelLayoutTag_MPEG_6_1_A' value64='8192007'/>
+<enum name='kAudioChannelLayoutTag_MPEG_7_1_A' value64='8257544'/>
+<enum name='kAudioChannelLayoutTag_MPEG_7_1_B' value64='8323080'/>
+<enum name='kAudioChannelLayoutTag_MPEG_7_1_C' value64='8388616'/>
+<enum name='kAudioChannelLayoutTag_MatrixStereo' value64='6750210'/>
+<enum name='kAudioChannelLayoutTag_MidSide' value64='6815746'/>
+<enum name='kAudioChannelLayoutTag_Mono' value64='6553601'/>
+<enum name='kAudioChannelLayoutTag_Octagonal' value64='7274504'/>
+<enum name='kAudioChannelLayoutTag_Pentagonal' value64='7143429'/>
+<enum name='kAudioChannelLayoutTag_Quadraphonic' value64='7077892'/>
+<enum name='kAudioChannelLayoutTag_SMPTE_DTV' value64='8519688'/>
+<enum name='kAudioChannelLayoutTag_Stereo' value64='6619138'/>
+<enum name='kAudioChannelLayoutTag_StereoHeadphones' value64='6684674'/>
+<enum name='kAudioChannelLayoutTag_TMH_10_2_full' value64='9568277'/>
+<enum name='kAudioChannelLayoutTag_TMH_10_2_std' value64='9502736'/>
+<enum name='kAudioChannelLayoutTag_Unknown' value64='4294901760'/>
+<enum name='kAudioChannelLayoutTag_UseChannelBitmap' value64='65536'/>
+<enum name='kAudioChannelLayoutTag_UseChannelDescriptions' value64='0'/>
+<enum name='kAudioChannelLayoutTag_XY' value64='6881282'/>
+<enum name='kAudioClipLightControlClassID' value64='1668049264'/>
+<enum name='kAudioClockDeviceClassID' value64='1633905771'/>
+<enum name='kAudioClockDevicePropertyAvailableNominalSampleRates' value64='1853059619'/>
+<enum name='kAudioClockDevicePropertyClockDomain' value64='1668049764'/>
+<enum name='kAudioClockDevicePropertyControlList' value64='1668575852'/>
+<enum name='kAudioClockDevicePropertyDeviceIsAlive' value64='1818850926'/>
+<enum name='kAudioClockDevicePropertyDeviceIsRunning' value64='1735354734'/>
+<enum name='kAudioClockDevicePropertyDeviceUID' value64='1668639076'/>
+<enum name='kAudioClockDevicePropertyLatency' value64='1819569763'/>
+<enum name='kAudioClockDevicePropertyNominalSampleRate' value64='1853059700'/>
+<enum name='kAudioClockDevicePropertyTransportType' value64='1953653102'/>
+<enum name='kAudioClockSourceControlClassID' value64='1668047723'/>
+<enum name='kAudioClockSourceControlPropertyItemKind' value64='1668049771'/>
+<enum name='kAudioClockSourceItemKindInternal' value64='1768846368'/>
+<enum name='kAudioControlClassID' value64='1633907820'/>
+<enum name='kAudioControlPropertyElement' value64='1667591277'/>
+<enum name='kAudioControlPropertyScope' value64='1668506480'/>
+<enum name='kAudioControlPropertyVariant' value64='1668702578'/>
+<enum name='kAudioDataDestinationControlClassID' value64='1684370292'/>
+<enum name='kAudioDataSourceControlClassID' value64='1685287523'/>
+<enum name='kAudioDeviceClassID' value64='1633969526'/>
+<enum name='kAudioDeviceClockAlgorithm12PtMovingWindowAverage' value64='1835103847'/>
+<enum name='kAudioDeviceClockAlgorithmRaw' value64='1918990199'/>
+<enum name='kAudioDeviceClockAlgorithmSimpleIIR' value64='1768518246'/>
+<enum name='kAudioDevicePermissionsError' value64='560492391'/>
+<enum name='kAudioDeviceProcessorOverload' value64='1870030194'/>
+<enum name='kAudioDevicePropertyActualSampleRate' value64='1634955892'/>
+<enum name='kAudioDevicePropertyAvailableNominalSampleRates' value64='1853059619'/>
+<enum name='kAudioDevicePropertyBufferFrameSize' value64='1718839674'/>
+<enum name='kAudioDevicePropertyBufferFrameSizeRange' value64='1718843939'/>
+<enum name='kAudioDevicePropertyBufferSize' value64='1651730810'/>
+<enum name='kAudioDevicePropertyBufferSizeRange' value64='1651735075'/>
+<enum name='kAudioDevicePropertyChannelCategoryName' value64='1667460717'/>
+<enum name='kAudioDevicePropertyChannelCategoryNameCFString' value64='1818452846'/>
+<enum name='kAudioDevicePropertyChannelName' value64='1667788397'/>
+<enum name='kAudioDevicePropertyChannelNameCFString' value64='1818454126'/>
+<enum name='kAudioDevicePropertyChannelNominalLineLevel' value64='1852601964'/>
+<enum name='kAudioDevicePropertyChannelNominalLineLevelNameForID' value64='1668181110'/>
+<enum name='kAudioDevicePropertyChannelNominalLineLevelNameForIDCFString' value64='1818455660'/>
+<enum name='kAudioDevicePropertyChannelNominalLineLevels' value64='1852601891'/>
+<enum name='kAudioDevicePropertyChannelNumberName' value64='1668181613'/>
+<enum name='kAudioDevicePropertyChannelNumberNameCFString' value64='1818455662'/>
+<enum name='kAudioDevicePropertyClipLight' value64='1668049264'/>
+<enum name='kAudioDevicePropertyClockAlgorithm' value64='1668050795'/>
+<enum name='kAudioDevicePropertyClockDevice' value64='1634755428'/>
+<enum name='kAudioDevicePropertyClockDomain' value64='1668049764'/>
+<enum name='kAudioDevicePropertyClockIsStable' value64='1668510818'/>
+<enum name='kAudioDevicePropertyClockSource' value64='1668510307'/>
+<enum name='kAudioDevicePropertyClockSourceKindForID' value64='1668506475'/>
+<enum name='kAudioDevicePropertyClockSourceNameForID' value64='1668506478'/>
+<enum name='kAudioDevicePropertyClockSourceNameForIDCFString' value64='1818456942'/>
+<enum name='kAudioDevicePropertyClockSources' value64='1668506403'/>
+<enum name='kAudioDevicePropertyConfigurationApplication' value64='1667330160'/>
+<enum name='kAudioDevicePropertyDataSource' value64='1936945763'/>
+<enum name='kAudioDevicePropertyDataSourceKindForID' value64='1936941931'/>
+<enum name='kAudioDevicePropertyDataSourceNameForID' value64='1936941934'/>
+<enum name='kAudioDevicePropertyDataSourceNameForIDCFString' value64='1819501422'/>
+<enum name='kAudioDevicePropertyDataSources' value64='1936941859'/>
+<enum name='kAudioDevicePropertyDeviceCanBeDefaultDevice' value64='1684434036'/>
+<enum name='kAudioDevicePropertyDeviceCanBeDefaultSystemDevice' value64='1936092276'/>
+<enum name='kAudioDevicePropertyDeviceHasChanged' value64='1684629094'/>
+<enum name='kAudioDevicePropertyDeviceIsAlive' value64='1818850926'/>
+<enum name='kAudioDevicePropertyDeviceIsRunning' value64='1735354734'/>
+<enum name='kAudioDevicePropertyDeviceIsRunningSomewhere' value64='1735356005'/>
+<enum name='kAudioDevicePropertyDeviceManufacturer' value64='1835101042'/>
+<enum name='kAudioDevicePropertyDeviceManufacturerCFString' value64='1819107691'/>
+<enum name='kAudioDevicePropertyDeviceName' value64='1851878757'/>
+<enum name='kAudioDevicePropertyDeviceNameCFString' value64='1819173229'/>
+<enum name='kAudioDevicePropertyDeviceUID' value64='1969841184'/>
+<enum name='kAudioDevicePropertyDriverShouldOwniSub' value64='1769174370'/>
+<enum name='kAudioDevicePropertyHighPassFilterSetting' value64='1751740518'/>
+<enum name='kAudioDevicePropertyHighPassFilterSettingNameForID' value64='1667787120'/>
+<enum name='kAudioDevicePropertyHighPassFilterSettingNameForIDCFString' value64='1751740524'/>
+<enum name='kAudioDevicePropertyHighPassFilterSettings' value64='1751740451'/>
+<enum name='kAudioDevicePropertyHogMode' value64='1869180523'/>
+<enum name='kAudioDevicePropertyIOCycleUsage' value64='1852012899'/>
+<enum name='kAudioDevicePropertyIOProcStreamUsage' value64='1937077093'/>
+<enum name='kAudioDevicePropertyIOStoppedAbnormally' value64='1937010788'/>
+<enum name='kAudioDevicePropertyIcon' value64='1768124270'/>
+<enum name='kAudioDevicePropertyIsHidden' value64='1751737454'/>
+<enum name='kAudioDevicePropertyJackIsConnected' value64='1784767339'/>
+<enum name='kAudioDevicePropertyLatency' value64='1819569763'/>
+<enum name='kAudioDevicePropertyListenback' value64='1819504226'/>
+<enum name='kAudioDevicePropertyModelUID' value64='1836411236'/>
+<enum name='kAudioDevicePropertyMute' value64='1836414053'/>
+<enum name='kAudioDevicePropertyNominalSampleRate' value64='1853059700'/>
+<enum name='kAudioDevicePropertyPhantomPower' value64='1885888878'/>
+<enum name='kAudioDevicePropertyPhaseInvert' value64='1885893481'/>
+<enum name='kAudioDevicePropertyPlayThru' value64='1953002101'/>
+<enum name='kAudioDevicePropertyPlayThruDestination' value64='1835295859'/>
+<enum name='kAudioDevicePropertyPlayThruDestinationNameForID' value64='1835295854'/>
+<enum name='kAudioDevicePropertyPlayThruDestinationNameForIDCFString' value64='1835295843'/>
+<enum name='kAudioDevicePropertyPlayThruDestinations' value64='1835295779'/>
+<enum name='kAudioDevicePropertyPlayThruSolo' value64='1953002099'/>
+<enum name='kAudioDevicePropertyPlayThruStereoPan' value64='1836281966'/>
+<enum name='kAudioDevicePropertyPlayThruStereoPanChannels' value64='1836281891'/>
+<enum name='kAudioDevicePropertyPlayThruVolumeDecibels' value64='1836475490'/>
+<enum name='kAudioDevicePropertyPlayThruVolumeDecibelsToScalar' value64='1836462707'/>
+<enum name='kAudioDevicePropertyPlayThruVolumeDecibelsToScalarTransferFunction' value64='1836479590'/>
+<enum name='kAudioDevicePropertyPlayThruVolumeRangeDecibels' value64='1836475427'/>
+<enum name='kAudioDevicePropertyPlayThruVolumeScalar' value64='1836479331'/>
+<enum name='kAudioDevicePropertyPlayThruVolumeScalarToDecibels' value64='1836462692'/>
+<enum name='kAudioDevicePropertyPlugIn' value64='1886156135'/>
+<enum name='kAudioDevicePropertyPreferredChannelLayout' value64='1936879204'/>
+<enum name='kAudioDevicePropertyPreferredChannelsForStereo' value64='1684236338'/>
+<enum name='kAudioDevicePropertyRegisterBufferList' value64='1919055206'/>
+<enum name='kAudioDevicePropertyRelatedDevices' value64='1634429294'/>
+<enum name='kAudioDevicePropertySafetyOffset' value64='1935763060'/>
+<enum name='kAudioDevicePropertyScopeInput' value64='1768845428'/>
+<enum name='kAudioDevicePropertyScopeOutput' value64='1869968496'/>
+<enum name='kAudioDevicePropertyScopePlayThrough' value64='1886679669'/>
+<enum name='kAudioDevicePropertySolo' value64='1936682095'/>
+<enum name='kAudioDevicePropertyStereoPan' value64='1936744814'/>
+<enum name='kAudioDevicePropertyStereoPanChannels' value64='1936748067'/>
+<enum name='kAudioDevicePropertyStreamConfiguration' value64='1936482681'/>
+<enum name='kAudioDevicePropertyStreamFormat' value64='1936092532'/>
+<enum name='kAudioDevicePropertyStreamFormatMatch' value64='1936092525'/>
+<enum name='kAudioDevicePropertyStreamFormatSupported' value64='1936092479'/>
+<enum name='kAudioDevicePropertyStreamFormats' value64='1936092451'/>
+<enum name='kAudioDevicePropertyStreams' value64='1937009955'/>
+<enum name='kAudioDevicePropertySubMute' value64='1936553332'/>
+<enum name='kAudioDevicePropertySubVolumeDecibels' value64='1937140836'/>
+<enum name='kAudioDevicePropertySubVolumeDecibelsToScalar' value64='1935946358'/>
+<enum name='kAudioDevicePropertySubVolumeDecibelsToScalarTransferFunction' value64='1937142886'/>
+<enum name='kAudioDevicePropertySubVolumeRangeDecibels' value64='1937138723'/>
+<enum name='kAudioDevicePropertySubVolumeScalar' value64='1937140845'/>
+<enum name='kAudioDevicePropertySubVolumeScalarToDecibels' value64='1937125988'/>
+<enum name='kAudioDevicePropertySupportsMixing' value64='1835628607'/>
+<enum name='kAudioDevicePropertyTalkback' value64='1952541794'/>
+<enum name='kAudioDevicePropertyTransportType' value64='1953653102'/>
+<enum name='kAudioDevicePropertyUsesVariableBufferFrameSizes' value64='1986425722'/>
+<enum name='kAudioDevicePropertyVolumeDecibels' value64='1987013732'/>
+<enum name='kAudioDevicePropertyVolumeDecibelsToScalar' value64='1684157046'/>
+<enum name='kAudioDevicePropertyVolumeDecibelsToScalarTransferFunction' value64='1986229350'/>
+<enum name='kAudioDevicePropertyVolumeRangeDecibels' value64='1986290211'/>
+<enum name='kAudioDevicePropertyVolumeScalar' value64='1987013741'/>
+<enum name='kAudioDevicePropertyVolumeScalarToDecibels' value64='1983013986'/>
+<enum name='kAudioDevicePropertyZeroTimeStampPeriod' value64='1919512167'/>
+<enum name='kAudioDeviceStartTimeDontConsultDeviceFlag' value64='2'/>
+<enum name='kAudioDeviceStartTimeDontConsultHALFlag' value64='4'/>
+<enum name='kAudioDeviceStartTimeIsInputFlag' value64='1'/>
+<enum name='kAudioDeviceTransportTypeAVB' value64='1700886114'/>
+<enum name='kAudioDeviceTransportTypeAggregate' value64='1735554416'/>
+<enum name='kAudioDeviceTransportTypeAirPlay' value64='1634300528'/>
+<enum name='kAudioDeviceTransportTypeAutoAggregate' value64='1718055536'/>
+<enum name='kAudioDeviceTransportTypeBluetooth' value64='1651275109'/>
+<enum name='kAudioDeviceTransportTypeBluetoothLE' value64='1651271009'/>
+<enum name='kAudioDeviceTransportTypeBuiltIn' value64='1651274862'/>
+<enum name='kAudioDeviceTransportTypeDisplayPort' value64='1685090932'/>
+<enum name='kAudioDeviceTransportTypeFireWire' value64='825440564'/>
+<enum name='kAudioDeviceTransportTypeHDMI' value64='1751412073'/>
+<enum name='kAudioDeviceTransportTypePCI' value64='1885563168'/>
+<enum name='kAudioDeviceTransportTypeThunderbolt' value64='1953002862'/>
+<enum name='kAudioDeviceTransportTypeUSB' value64='1970496032'/>
+<enum name='kAudioDeviceTransportTypeUnknown' value64='0'/>
+<enum name='kAudioDeviceTransportTypeVirtual' value64='1986622068'/>
+<enum name='kAudioDeviceUnknown' value64='0'/>
+<enum name='kAudioDeviceUnsupportedFormatError' value64='560226676'/>
+<enum name='kAudioEndPointClassID' value64='1701733488'/>
+<enum name='kAudioEndPointDeviceClassID' value64='1701078390'/>
+<enum name='kAudioEndPointDevicePropertyComposition' value64='1633906541'/>
+<enum name='kAudioEndPointDevicePropertyEndPointList' value64='1634169456'/>
+<enum name='kAudioEndPointDevicePropertyIsPrivate' value64='1886546294'/>
+<enum name='kAudioFormat60958AC3' value64='1667326771'/>
+<enum name='kAudioFormatAC3' value64='1633889587'/>
+<enum name='kAudioFormatAES3' value64='1634038579'/>
+<enum name='kAudioFormatALaw' value64='1634492791'/>
+<enum name='kAudioFormatAMR' value64='1935764850'/>
+<enum name='kAudioFormatAMR_WB' value64='1935767394'/>
+<enum name='kAudioFormatAppleIMA4' value64='1768775988'/>
+<enum name='kAudioFormatAppleLossless' value64='1634492771'/>
+<enum name='kAudioFormatAudible' value64='1096107074'/>
+<enum name='kAudioFormatDVIIntelIMA' value64='1836253201'/>
+<enum name='kAudioFormatEnhancedAC3' value64='1700998451'/>
+<enum name='kAudioFormatFLAC' value64='1718378851'/>
+<enum name='kAudioFormatFlagIsAlignedHigh' value64='16'/>
+<enum name='kAudioFormatFlagIsBigEndian' value64='2'/>
+<enum name='kAudioFormatFlagIsFloat' value64='1'/>
+<enum name='kAudioFormatFlagIsNonInterleaved' value64='32'/>
+<enum name='kAudioFormatFlagIsNonMixable' value64='64'/>
+<enum name='kAudioFormatFlagIsPacked' value64='8'/>
+<enum name='kAudioFormatFlagIsSignedInteger' value64='4'/>
+<enum name='kAudioFormatFlagsAreAllClear' value64='2147483648'/>
+<enum name='kAudioFormatFlagsAudioUnitCanonical' value64='41'/>
+<enum name='kAudioFormatFlagsCanonical' value64='9'/>
+<enum name='kAudioFormatFlagsNativeEndian' value64='0'/>
+<enum name='kAudioFormatFlagsNativeFloatPacked' value64='9'/>
+<enum name='kAudioFormatLinearPCM' value64='1819304813'/>
+<enum name='kAudioFormatMACE3' value64='1296122675'/>
+<enum name='kAudioFormatMACE6' value64='1296122678'/>
+<enum name='kAudioFormatMIDIStream' value64='1835623529'/>
+<enum name='kAudioFormatMPEG4AAC' value64='1633772320'/>
+<enum name='kAudioFormatMPEG4AAC_ELD' value64='1633772389'/>
+<enum name='kAudioFormatMPEG4AAC_ELD_SBR' value64='1633772390'/>
+<enum name='kAudioFormatMPEG4AAC_ELD_V2' value64='1633772391'/>
+<enum name='kAudioFormatMPEG4AAC_HE' value64='1633772392'/>
+<enum name='kAudioFormatMPEG4AAC_HE_V2' value64='1633772400'/>
+<enum name='kAudioFormatMPEG4AAC_LD' value64='1633772396'/>
+<enum name='kAudioFormatMPEG4AAC_Spatial' value64='1633772403'/>
+<enum name='kAudioFormatMPEG4CELP' value64='1667591280'/>
+<enum name='kAudioFormatMPEG4HVXC' value64='1752594531'/>
+<enum name='kAudioFormatMPEG4TwinVQ' value64='1953986161'/>
+<enum name='kAudioFormatMPEGLayer1' value64='778924081'/>
+<enum name='kAudioFormatMPEGLayer2' value64='778924082'/>
+<enum name='kAudioFormatMPEGLayer3' value64='778924083'/>
+<enum name='kAudioFormatMicrosoftGSM' value64='1836253233'/>
+<enum name='kAudioFormatOpus' value64='1869641075'/>
+<enum name='kAudioFormatParameterValueStream' value64='1634760307'/>
+<enum name='kAudioFormatQDesign' value64='1363430723'/>
+<enum name='kAudioFormatQDesign2' value64='1363430706'/>
+<enum name='kAudioFormatQUALCOMM' value64='1365470320'/>
+<enum name='kAudioFormatTimeCode' value64='1953066341'/>
+<enum name='kAudioFormatULaw' value64='1970037111'/>
+<enum name='kAudioFormatiLBC' value64='1768710755'/>
+<enum name='kAudioHardwareBadDeviceError' value64='560227702'/>
+<enum name='kAudioHardwareBadObjectError' value64='560947818'/>
+<enum name='kAudioHardwareBadPropertySizeError' value64='561211770'/>
+<enum name='kAudioHardwareBadStreamError' value64='561214578'/>
+<enum name='kAudioHardwareIllegalOperationError' value64='1852797029'/>
+<enum name='kAudioHardwareNoError' value64='0'/>
+<enum name='kAudioHardwareNotRunningError' value64='1937010544'/>
+<enum name='kAudioHardwarePowerHintFavorSavingPower' value64='1'/>
+<enum name='kAudioHardwarePowerHintNone' value64='0'/>
+<enum name='kAudioHardwarePropertyBootChimeVolumeDecibels' value64='1650620004'/>
+<enum name='kAudioHardwarePropertyBootChimeVolumeDecibelsToScalar' value64='1650733686'/>
+<enum name='kAudioHardwarePropertyBootChimeVolumeDecibelsToScalarTransferFunction' value64='1651930214'/>
+<enum name='kAudioHardwarePropertyBootChimeVolumeRangeDecibels' value64='1650615331'/>
+<enum name='kAudioHardwarePropertyBootChimeVolumeScalar' value64='1650620019'/>
+<enum name='kAudioHardwarePropertyBootChimeVolumeScalarToDecibels' value64='1651913316'/>
+<enum name='kAudioHardwarePropertyBoxList' value64='1651472419'/>
+<enum name='kAudioHardwarePropertyClockDeviceList' value64='1668049699'/>
+<enum name='kAudioHardwarePropertyDefaultInputDevice' value64='1682533920'/>
+<enum name='kAudioHardwarePropertyDefaultOutputDevice' value64='1682929012'/>
+<enum name='kAudioHardwarePropertyDefaultSystemOutputDevice' value64='1934587252'/>
+<enum name='kAudioHardwarePropertyDeviceForUID' value64='1685416292'/>
+<enum name='kAudioHardwarePropertyDevices' value64='1684370979'/>
+<enum name='kAudioHardwarePropertyHogModeIsAllowed' value64='1752131442'/>
+<enum name='kAudioHardwarePropertyIsInitingOrExiting' value64='1768845172'/>
+<enum name='kAudioHardwarePropertyMixStereoToMono' value64='1937010031'/>
+<enum name='kAudioHardwarePropertyPlugInForBundleID' value64='1885954665'/>
+<enum name='kAudioHardwarePropertyPlugInList' value64='1886152483'/>
+<enum name='kAudioHardwarePropertyPowerHint' value64='1886353256'/>
+<enum name='kAudioHardwarePropertyProcessIsAudible' value64='1886221684'/>
+<enum name='kAudioHardwarePropertyProcessIsMaster' value64='1835103092'/>
+<enum name='kAudioHardwarePropertyRunLoop' value64='1919839344'/>
+<enum name='kAudioHardwarePropertyServiceRestarted' value64='1936880500'/>
+<enum name='kAudioHardwarePropertySleepingIsAllowed' value64='1936483696'/>
+<enum name='kAudioHardwarePropertyTranslateBundleIDToPlugIn' value64='1651074160'/>
+<enum name='kAudioHardwarePropertyTranslateBundleIDToTransportManager' value64='1953325673'/>
+<enum name='kAudioHardwarePropertyTranslateUIDToBox' value64='1969841250'/>
+<enum name='kAudioHardwarePropertyTranslateUIDToClockDevice' value64='1969841251'/>
+<enum name='kAudioHardwarePropertyTranslateUIDToDevice' value64='1969841252'/>
+<enum name='kAudioHardwarePropertyTransportManagerList' value64='1953326883'/>
+<enum name='kAudioHardwarePropertyUnloadingIsAllowed' value64='1970170980'/>
+<enum name='kAudioHardwarePropertyUserIDChanged' value64='1702193508'/>
+<enum name='kAudioHardwarePropertyUserSessionIsActiveOrHeadless' value64='1970496882'/>
+<enum name='kAudioHardwareUnknownPropertyError' value64='2003332927'/>
+<enum name='kAudioHardwareUnspecifiedError' value64='2003329396'/>
+<enum name='kAudioHardwareUnsupportedOperationError' value64='1970171760'/>
+<enum name='kAudioHighPassFilterControlClassID' value64='1751740518'/>
+<enum name='kAudioISubOwnerControlClassID' value64='1635017576'/>
+<enum name='kAudioJackControlClassID' value64='1784767339'/>
+<enum name='kAudioLFEMuteControlClassID' value64='1937072749'/>
+<enum name='kAudioLFEVolumeControlClassID' value64='1937072758'/>
+<enum name='kAudioLevelControlClassID' value64='1818588780'/>
+<enum name='kAudioLevelControlPropertyConvertDecibelsToScalar' value64='1818453107'/>
+<enum name='kAudioLevelControlPropertyConvertScalarToDecibels' value64='1818456932'/>
+<enum name='kAudioLevelControlPropertyDecibelRange' value64='1818453106'/>
+<enum name='kAudioLevelControlPropertyDecibelValue' value64='1818453110'/>
+<enum name='kAudioLevelControlPropertyDecibelsToScalarTransferFunction' value64='1818457190'/>
+<enum name='kAudioLevelControlPropertyScalarValue' value64='1818456950'/>
+<enum name='kAudioLevelControlTranferFunction10Over1' value64='13'/>
+<enum name='kAudioLevelControlTranferFunction11Over1' value64='14'/>
+<enum name='kAudioLevelControlTranferFunction12Over1' value64='15'/>
+<enum name='kAudioLevelControlTranferFunction1Over2' value64='2'/>
+<enum name='kAudioLevelControlTranferFunction1Over3' value64='1'/>
+<enum name='kAudioLevelControlTranferFunction2Over1' value64='5'/>
+<enum name='kAudioLevelControlTranferFunction3Over1' value64='6'/>
+<enum name='kAudioLevelControlTranferFunction3Over2' value64='4'/>
+<enum name='kAudioLevelControlTranferFunction3Over4' value64='3'/>
+<enum name='kAudioLevelControlTranferFunction4Over1' value64='7'/>
+<enum name='kAudioLevelControlTranferFunction5Over1' value64='8'/>
+<enum name='kAudioLevelControlTranferFunction6Over1' value64='9'/>
+<enum name='kAudioLevelControlTranferFunction7Over1' value64='10'/>
+<enum name='kAudioLevelControlTranferFunction8Over1' value64='11'/>
+<enum name='kAudioLevelControlTranferFunction9Over1' value64='12'/>
+<enum name='kAudioLevelControlTranferFunctionLinear' value64='0'/>
+<enum name='kAudioLineLevelControlClassID' value64='1852601964'/>
+<enum name='kAudioListenbackControlClassID' value64='1819504226'/>
+<enum name='kAudioMuteControlClassID' value64='1836414053'/>
+<enum name='kAudioObjectClassID' value64='1634689642'/>
+<enum name='kAudioObjectClassIDWildcard' value64='707406378'/>
+<enum name='kAudioObjectPlugInObject' value64='1'/>
+<enum name='kAudioObjectPropertyBaseClass' value64='1650682995'/>
+<enum name='kAudioObjectPropertyClass' value64='1668047219'/>
+<enum name='kAudioObjectPropertyControlList' value64='1668575852'/>
+<enum name='kAudioObjectPropertyCreator' value64='1869638759'/>
+<enum name='kAudioObjectPropertyCustomPropertyInfoList' value64='1668641652'/>
+<enum name='kAudioObjectPropertyElementCategoryName' value64='1818452846'/>
+<enum name='kAudioObjectPropertyElementMaster' value64='0'/>
+<enum name='kAudioObjectPropertyElementName' value64='1818454126'/>
+<enum name='kAudioObjectPropertyElementNumberName' value64='1818455662'/>
+<enum name='kAudioObjectPropertyElementWildcard' value64='4294967295'/>
+<enum name='kAudioObjectPropertyFirmwareVersion' value64='1719105134'/>
+<enum name='kAudioObjectPropertyIdentify' value64='1768187246'/>
+<enum name='kAudioObjectPropertyListenerAdded' value64='1818850145'/>
+<enum name='kAudioObjectPropertyListenerRemoved' value64='1818850162'/>
+<enum name='kAudioObjectPropertyManufacturer' value64='1819107691'/>
+<enum name='kAudioObjectPropertyModelName' value64='1819111268'/>
+<enum name='kAudioObjectPropertyName' value64='1819173229'/>
+<enum name='kAudioObjectPropertyOwnedObjects' value64='1870098020'/>
+<enum name='kAudioObjectPropertyOwner' value64='1937007734'/>
+<enum name='kAudioObjectPropertyScopeGlobal' value64='1735159650'/>
+<enum name='kAudioObjectPropertyScopeInput' value64='1768845428'/>
+<enum name='kAudioObjectPropertyScopeOutput' value64='1869968496'/>
+<enum name='kAudioObjectPropertyScopePlayThrough' value64='1886679669'/>
+<enum name='kAudioObjectPropertyScopeWildcard' value64='707406378'/>
+<enum name='kAudioObjectPropertySelectorWildcard' value64='707406378'/>
+<enum name='kAudioObjectPropertySerialNumber' value64='1936618861'/>
+<enum name='kAudioObjectSystemObject' value64='1'/>
+<enum name='kAudioObjectUnknown' value64='0'/>
+<enum name='kAudioPhantomPowerControlClassID' value64='1885888878'/>
+<enum name='kAudioPhaseInvertControlClassID' value64='1885893481'/>
+<enum name='kAudioPlugInClassID' value64='1634757735'/>
+<enum name='kAudioPlugInCreateAggregateDevice' value64='1667327847'/>
+<enum name='kAudioPlugInDestroyAggregateDevice' value64='1684105063'/>
+<enum name='kAudioPlugInPropertyBoxList' value64='1651472419'/>
+<enum name='kAudioPlugInPropertyBundleID' value64='1885956452'/>
+<enum name='kAudioPlugInPropertyClockDeviceList' value64='1668049699'/>
+<enum name='kAudioPlugInPropertyDeviceList' value64='1684370979'/>
+<enum name='kAudioPlugInPropertyResourceBundle' value64='1920168547'/>
+<enum name='kAudioPlugInPropertyTranslateUIDToBox' value64='1969841250'/>
+<enum name='kAudioPlugInPropertyTranslateUIDToClockDevice' value64='1969841251'/>
+<enum name='kAudioPlugInPropertyTranslateUIDToDevice' value64='1969841252'/>
+<enum name='kAudioPropertyWildcardChannel' value64='4294967295'/>
+<enum name='kAudioPropertyWildcardPropertyID' value64='707406378'/>
+<enum name='kAudioPropertyWildcardSection' value64='255'/>
+<enum name='kAudioSelectorControlClassID' value64='1936483188'/>
+<enum name='kAudioSelectorControlItemKindSpacer' value64='1936745330'/>
+<enum name='kAudioSelectorControlPropertyAvailableItems' value64='1935892841'/>
+<enum name='kAudioSelectorControlPropertyCurrentItem' value64='1935893353'/>
+<enum name='kAudioSelectorControlPropertyItemKind' value64='1668049771'/>
+<enum name='kAudioSelectorControlPropertyItemName' value64='1935894894'/>
+<enum name='kAudioServerPlugInCustomPropertyDataTypeCFPropertyList' value64='1886155636'/>
+<enum name='kAudioServerPlugInCustomPropertyDataTypeCFString' value64='1667658612'/>
+<enum name='kAudioServerPlugInCustomPropertyDataTypeNone' value64='0'/>
+<enum name='kAudioServerPlugInHostClientID' value64='0'/>
+<enum name='kAudioServerPlugInIOOperationConvertInput' value64='1667853936'/>
+<enum name='kAudioServerPlugInIOOperationConvertMix' value64='1668114808'/>
+<enum name='kAudioServerPlugInIOOperationCycle' value64='1668899692'/>
+<enum name='kAudioServerPlugInIOOperationMixOutput' value64='1835628655'/>
+<enum name='kAudioServerPlugInIOOperationProcessInput' value64='1885957744'/>
+<enum name='kAudioServerPlugInIOOperationProcessMix' value64='1886218616'/>
+<enum name='kAudioServerPlugInIOOperationProcessOutput' value64='1886352756'/>
+<enum name='kAudioServerPlugInIOOperationReadInput' value64='1919246692'/>
+<enum name='kAudioServerPlugInIOOperationThread' value64='1953002084'/>
+<enum name='kAudioServerPlugInIOOperationWriteMix' value64='1919513701'/>
+<enum name='kAudioSliderControlClassID' value64='1936483442'/>
+<enum name='kAudioSliderControlPropertyRange' value64='1935962738'/>
+<enum name='kAudioSliderControlPropertyValue' value64='1935962742'/>
+<enum name='kAudioSoloControlClassID' value64='1936682095'/>
+<enum name='kAudioStereoPanControlClassID' value64='1936744814'/>
+<enum name='kAudioStereoPanControlPropertyPanningChannels' value64='1936745315'/>
+<enum name='kAudioStereoPanControlPropertyValue' value64='1936745334'/>
+<enum name='kAudioStreamClassID' value64='1634956402'/>
+<enum name='kAudioStreamPropertyAvailablePhysicalFormats' value64='1885762657'/>
+<enum name='kAudioStreamPropertyAvailableVirtualFormats' value64='1936092513'/>
+<enum name='kAudioStreamPropertyDirection' value64='1935960434'/>
+<enum name='kAudioStreamPropertyIsActive' value64='1935762292'/>
+<enum name='kAudioStreamPropertyLatency' value64='1819569763'/>
+<enum name='kAudioStreamPropertyOwningDevice' value64='1937007734'/>
+<enum name='kAudioStreamPropertyPhysicalFormat' value64='1885762592'/>
+<enum name='kAudioStreamPropertyPhysicalFormatMatch' value64='1885762669'/>
+<enum name='kAudioStreamPropertyPhysicalFormatSupported' value64='1885762623'/>
+<enum name='kAudioStreamPropertyPhysicalFormats' value64='1885762595'/>
+<enum name='kAudioStreamPropertyStartingChannel' value64='1935894638'/>
+<enum name='kAudioStreamPropertyTerminalType' value64='1952805485'/>
+<enum name='kAudioStreamPropertyVirtualFormat' value64='1936092532'/>
+<enum name='kAudioStreamTerminalTypeDigitalAudioInterface' value64='1936745574'/>
+<enum name='kAudioStreamTerminalTypeDisplayPort' value64='1685090932'/>
+<enum name='kAudioStreamTerminalTypeHDMI' value64='1751412073'/>
+<enum name='kAudioStreamTerminalTypeHeadphones' value64='1751412840'/>
+<enum name='kAudioStreamTerminalTypeHeadsetMicrophone' value64='1752000867'/>
+<enum name='kAudioStreamTerminalTypeLFESpeaker' value64='1818649971'/>
+<enum name='kAudioStreamTerminalTypeLine' value64='1818848869'/>
+<enum name='kAudioStreamTerminalTypeMicrophone' value64='1835623282'/>
+<enum name='kAudioStreamTerminalTypeReceiverMicrophone' value64='1919773027'/>
+<enum name='kAudioStreamTerminalTypeReceiverSpeaker' value64='1920168043'/>
+<enum name='kAudioStreamTerminalTypeSpeaker' value64='1936747378'/>
+<enum name='kAudioStreamTerminalTypeTTY' value64='1953790303'/>
+<enum name='kAudioStreamTerminalTypeUnknown' value64='0'/>
+<enum name='kAudioStreamUnknown' value64='0'/>
+<enum name='kAudioSubDeviceClassID' value64='1634956642'/>
+<enum name='kAudioSubDeviceDriftCompensationHighQuality' value64='96'/>
+<enum name='kAudioSubDeviceDriftCompensationLowQuality' value64='32'/>
+<enum name='kAudioSubDeviceDriftCompensationMaxQuality' value64='127'/>
+<enum name='kAudioSubDeviceDriftCompensationMediumQuality' value64='64'/>
+<enum name='kAudioSubDeviceDriftCompensationMinQuality' value64='0'/>
+<enum name='kAudioSubDevicePropertyDriftCompensation' value64='1685218932'/>
+<enum name='kAudioSubDevicePropertyDriftCompensationQuality' value64='1685218929'/>
+<enum name='kAudioSubDevicePropertyExtraLatency' value64='2020373603'/>
+<enum name='kAudioSystemObjectClassID' value64='1634957683'/>
+<enum name='kAudioTalkbackControlClassID' value64='1952541794'/>
+<enum name='kAudioTimeStampHostTimeValid' value64='2'/>
+<enum name='kAudioTimeStampNothingValid' value64='0'/>
+<enum name='kAudioTimeStampRateScalarValid' value64='4'/>
+<enum name='kAudioTimeStampSMPTETimeValid' value64='16'/>
+<enum name='kAudioTimeStampSampleHostTimeValid' value64='3'/>
+<enum name='kAudioTimeStampSampleTimeValid' value64='1'/>
+<enum name='kAudioTimeStampWordClockTimeValid' value64='8'/>
+<enum name='kAudioTransportManagerClassID' value64='1953656941'/>
+<enum name='kAudioTransportManagerCreateEndPointDevice' value64='1667523958'/>
+<enum name='kAudioTransportManagerDestroyEndPointDevice' value64='1684301174'/>
+<enum name='kAudioTransportManagerPropertyEndPointList' value64='1701733411'/>
+<enum name='kAudioTransportManagerPropertyTranslateUIDToEndPoint' value64='1969841253'/>
+<enum name='kAudioTransportManagerPropertyTransportType' value64='1953653102'/>
+<enum name='kAudioVolumeControlClassID' value64='1986817381'/>
+<enum name='kAudio_BadFilePathError' value64='561017960'/>
+<enum name='kAudio_FileNotFoundError' value64='-43'/>
+<enum name='kAudio_FilePermissionError' value64='-54'/>
+<enum name='kAudio_MemFullError' value64='-108'/>
+<enum name='kAudio_ParamError' value64='-50'/>
+<enum name='kAudio_TooManyFilesOpenError' value64='-42'/>
+<enum name='kAudio_UnimplementedError' value64='-4'/>
+<enum name='kLinearPCMFormatFlagIsAlignedHigh' value64='16'/>
+<enum name='kLinearPCMFormatFlagIsBigEndian' value64='2'/>
+<enum name='kLinearPCMFormatFlagIsFloat' value64='1'/>
+<enum name='kLinearPCMFormatFlagIsNonInterleaved' value64='32'/>
+<enum name='kLinearPCMFormatFlagIsNonMixable' value64='64'/>
+<enum name='kLinearPCMFormatFlagIsPacked' value64='8'/>
+<enum name='kLinearPCMFormatFlagIsSignedInteger' value64='4'/>
+<enum name='kLinearPCMFormatFlagsAreAllClear' value64='2147483648'/>
+<enum name='kLinearPCMFormatFlagsSampleFractionMask' value64='8064'/>
+<enum name='kLinearPCMFormatFlagsSampleFractionShift' value64='7'/>
+<enum name='kMPEG4Object_AAC_LC' value64='2'/>
+<enum name='kMPEG4Object_AAC_LTP' value64='4'/>
+<enum name='kMPEG4Object_AAC_Main' value64='1'/>
+<enum name='kMPEG4Object_AAC_SBR' value64='5'/>
+<enum name='kMPEG4Object_AAC_SSR' value64='3'/>
+<enum name='kMPEG4Object_AAC_Scalable' value64='6'/>
+<enum name='kMPEG4Object_CELP' value64='8'/>
+<enum name='kMPEG4Object_HVXC' value64='9'/>
+<enum name='kMPEG4Object_TwinVQ' value64='7'/>
+<enum name='kSMPTETimeRunning' value64='2'/>
+<enum name='kSMPTETimeType2398' value64='11'/>
+<enum name='kSMPTETimeType24' value64='0'/>
+<enum name='kSMPTETimeType25' value64='1'/>
+<enum name='kSMPTETimeType2997' value64='4'/>
+<enum name='kSMPTETimeType2997Drop' value64='5'/>
+<enum name='kSMPTETimeType30' value64='3'/>
+<enum name='kSMPTETimeType30Drop' value64='2'/>
+<enum name='kSMPTETimeType50' value64='10'/>
+<enum name='kSMPTETimeType5994' value64='7'/>
+<enum name='kSMPTETimeType5994Drop' value64='9'/>
+<enum name='kSMPTETimeType60' value64='6'/>
+<enum name='kSMPTETimeType60Drop' value64='8'/>
+<enum name='kSMPTETimeUnknown' value64='0'/>
+<enum name='kSMPTETimeValid' value64='1'/>
+<function inline='true' name='AudioChannelLayoutTag_GetNumberOfChannels'>
+<arg declared_type64='AudioChannelLayoutTag' name='inLayoutTag' type64='I'/>
+<retval declared_type64='UInt32' type64='I'/>
+</function>
+<function name='AudioConvertHostTimeToNanos'>
+<arg declared_type64='UInt64' name='inHostTime' type64='Q'/>
+<retval declared_type64='UInt64' type64='Q'/>
+</function>
+<function name='AudioConvertNanosToHostTime'>
+<arg declared_type64='UInt64' name='inNanos' type64='Q'/>
+<retval declared_type64='UInt64' type64='Q'/>
+</function>
+<function name='AudioDeviceAddIOProc'>
+<arg declared_type64='AudioDeviceID' name='inDevice' type64='I'/>
+<arg declared_type64='AudioDeviceIOProc _Nonnull' function_pointer='true' name='inProc' type64='^?'>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg const='true' declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<arg declared_type64='void * _Nullable' name='inClientData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDeviceAddPropertyListener'>
+<arg declared_type64='AudioDeviceID' name='inDevice' type64='I'/>
+<arg declared_type64='UInt32' name='inChannel' type64='I'/>
+<arg declared_type64='Boolean' name='isInput' type64='B'/>
+<arg declared_type64='AudioDevicePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='AudioDevicePropertyListenerProc _Nonnull' function_pointer='true' name='inProc' type64='^?'>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='Boolean' type64='B'/>
+<arg declared_type64='AudioDevicePropertyID' type64='I'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<arg declared_type64='void * _Nullable' name='inClientData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDeviceCreateIOProcID'>
+<arg declared_type64='AudioObjectID' name='inDevice' type64='I'/>
+<arg declared_type64='AudioDeviceIOProc _Nonnull' function_pointer='true' name='inProc' type64='^?'>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg const='true' declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<arg declared_type64='void * _Nullable' name='inClientData' type64='^v'/>
+<arg declared_type64='AudioDeviceIOProcID _Nullable * _Nonnull' name='outIOProcID' type64='^^?'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDeviceCreateIOProcIDWithBlock'>
+<arg declared_type64='AudioDeviceIOProcID _Nullable * _Nonnull' name='outIOProcID' type64='^^?'/>
+<arg declared_type64='AudioObjectID' name='inDevice' type64='I'/>
+<arg declared_type64='dispatch_queue_t _Nullable' name='inDispatchQueue' type64='@'/>
+<arg declared_type64='AudioDeviceIOBlock _Nonnull' function_pointer='true' name='inIOBlock' type64='@?'>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg const='true' declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDeviceDestroyIOProcID'>
+<arg declared_type64='AudioObjectID' name='inDevice' type64='I'/>
+<arg declared_type64='AudioDeviceIOProcID _Nonnull' function_pointer='true' name='inIOProcID' type64='^?'>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg const='true' declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDeviceGetCurrentTime'>
+<arg declared_type64='AudioObjectID' name='inDevice' type64='I'/>
+<arg declared_type64='AudioTimeStamp * _Nonnull' name='outTime' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDeviceGetNearestStartTime'>
+<arg declared_type64='AudioObjectID' name='inDevice' type64='I'/>
+<arg declared_type64='AudioTimeStamp * _Nonnull' name='ioRequestedStartTime' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='UInt32' name='inFlags' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDeviceGetProperty'>
+<arg declared_type64='AudioDeviceID' name='inDevice' type64='I'/>
+<arg declared_type64='UInt32' name='inChannel' type64='I'/>
+<arg declared_type64='Boolean' name='isInput' type64='B'/>
+<arg declared_type64='AudioDevicePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='UInt32 * _Nonnull' name='ioPropertyDataSize' type64='^I'/>
+<arg declared_type64='void * _Nonnull' name='outPropertyData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDeviceGetPropertyInfo'>
+<arg declared_type64='AudioDeviceID' name='inDevice' type64='I'/>
+<arg declared_type64='UInt32' name='inChannel' type64='I'/>
+<arg declared_type64='Boolean' name='isInput' type64='B'/>
+<arg declared_type64='AudioDevicePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='UInt32 * _Nullable' name='outSize' type64='^I'/>
+<arg declared_type64='Boolean * _Nullable' name='outWritable' type64='^B'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDeviceRead'>
+<arg declared_type64='AudioDeviceID' name='inDevice' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' name='inStartTime' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioBufferList * _Nonnull' name='outData' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDeviceRemoveIOProc'>
+<arg declared_type64='AudioDeviceID' name='inDevice' type64='I'/>
+<arg declared_type64='AudioDeviceIOProc _Nonnull' function_pointer='true' name='inProc' type64='^?'>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg const='true' declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDeviceRemovePropertyListener'>
+<arg declared_type64='AudioDeviceID' name='inDevice' type64='I'/>
+<arg declared_type64='UInt32' name='inChannel' type64='I'/>
+<arg declared_type64='Boolean' name='isInput' type64='B'/>
+<arg declared_type64='AudioDevicePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='AudioDevicePropertyListenerProc _Nonnull' function_pointer='true' name='inProc' type64='^?'>
+<arg declared_type64='AudioDeviceID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='Boolean' type64='B'/>
+<arg declared_type64='AudioDevicePropertyID' type64='I'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDeviceSetProperty'>
+<arg declared_type64='AudioDeviceID' name='inDevice' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nullable' name='inWhen' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='UInt32' name='inChannel' type64='I'/>
+<arg declared_type64='Boolean' name='isInput' type64='B'/>
+<arg declared_type64='AudioDevicePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='UInt32' name='inPropertyDataSize' type64='I'/>
+<arg const='true' declared_type64='void * _Nonnull' name='inPropertyData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDeviceStart'>
+<arg declared_type64='AudioObjectID' name='inDevice' type64='I'/>
+<arg declared_type64='AudioDeviceIOProcID _Nullable' function_pointer='true' name='inProcID' type64='^?'>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg const='true' declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDeviceStartAtTime'>
+<arg declared_type64='AudioObjectID' name='inDevice' type64='I'/>
+<arg declared_type64='AudioDeviceIOProcID _Nullable' function_pointer='true' name='inProcID' type64='^?'>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg const='true' declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<arg declared_type64='AudioTimeStamp * _Nonnull' name='ioRequestedStartTime' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='UInt32' name='inFlags' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDeviceStop'>
+<arg declared_type64='AudioObjectID' name='inDevice' type64='I'/>
+<arg declared_type64='AudioDeviceIOProcID _Nullable' function_pointer='true' name='inProcID' type64='^?'>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg const='true' declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioBufferList * _Nonnull' type64='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDeviceTranslateTime'>
+<arg declared_type64='AudioObjectID' name='inDevice' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nonnull' name='inTime' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='AudioTimeStamp * _Nonnull' name='outTime' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDriverPlugInClose'>
+<arg declared_type64='AudioDeviceID' name='inDevice' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDriverPlugInDeviceGetProperty'>
+<arg declared_type64='AudioDeviceID' name='inDevice' type64='I'/>
+<arg declared_type64='UInt32' name='inChannel' type64='I'/>
+<arg declared_type64='Boolean' name='isInput' type64='B'/>
+<arg declared_type64='AudioDevicePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='UInt32 * _Nonnull' name='ioPropertyDataSize' type64='^I'/>
+<arg declared_type64='void * _Nonnull' name='outPropertyData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDriverPlugInDeviceGetPropertyInfo'>
+<arg declared_type64='AudioDeviceID' name='inDevice' type64='I'/>
+<arg declared_type64='UInt32' name='inChannel' type64='I'/>
+<arg declared_type64='Boolean' name='isInput' type64='B'/>
+<arg declared_type64='AudioDevicePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='UInt32 * _Nullable' name='outSize' type64='^I'/>
+<arg declared_type64='Boolean * _Nullable' name='outWritable' type64='^B'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDriverPlugInDeviceSetProperty'>
+<arg declared_type64='AudioDeviceID' name='inDevice' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nullable' name='inWhen' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='UInt32' name='inChannel' type64='I'/>
+<arg declared_type64='Boolean' name='isInput' type64='B'/>
+<arg declared_type64='AudioDevicePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='UInt32' name='inPropertyDataSize' type64='I'/>
+<arg const='true' declared_type64='void * _Nonnull' name='inPropertyData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDriverPlugInOpen'>
+<arg declared_type64='AudioDriverPlugInHostInfo * _Nonnull' name='inHostInfo' type64='^{AudioDriverPlugInHostInfo=III^?^?}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDriverPlugInStreamGetProperty'>
+<arg declared_type64='AudioDeviceID' name='inDevice' type64='I'/>
+<arg declared_type64='io_object_t' name='inIOAudioStream' type64='I'/>
+<arg declared_type64='UInt32' name='inChannel' type64='I'/>
+<arg declared_type64='AudioDevicePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='UInt32 * _Nonnull' name='ioPropertyDataSize' type64='^I'/>
+<arg declared_type64='void * _Nonnull' name='outPropertyData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDriverPlugInStreamGetPropertyInfo'>
+<arg declared_type64='AudioDeviceID' name='inDevice' type64='I'/>
+<arg declared_type64='io_object_t' name='inIOAudioStream' type64='I'/>
+<arg declared_type64='UInt32' name='inChannel' type64='I'/>
+<arg declared_type64='AudioDevicePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='UInt32 * _Nullable' name='outSize' type64='^I'/>
+<arg declared_type64='Boolean * _Nullable' name='outWritable' type64='^B'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioDriverPlugInStreamSetProperty'>
+<arg declared_type64='AudioDeviceID' name='inDevice' type64='I'/>
+<arg declared_type64='io_object_t' name='inIOAudioStream' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nullable' name='inWhen' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='UInt32' name='inChannel' type64='I'/>
+<arg declared_type64='AudioDevicePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='UInt32' name='inPropertyDataSize' type64='I'/>
+<arg const='true' declared_type64='void * _Nonnull' name='inPropertyData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioGetCurrentHostTime'>
+<retval declared_type64='UInt64' type64='Q'/>
+</function>
+<function name='AudioGetHostClockFrequency'>
+<retval declared_type64='Float64' type64='d'/>
+</function>
+<function name='AudioGetHostClockMinimumTimeDelta'>
+<retval declared_type64='UInt32' type64='I'/>
+</function>
+<function name='AudioHardwareAddPropertyListener'>
+<arg declared_type64='AudioHardwarePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='AudioHardwarePropertyListenerProc _Nonnull' function_pointer='true' name='inProc' type64='^?'>
+<arg declared_type64='AudioHardwarePropertyID' type64='I'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<arg declared_type64='void * _Nullable' name='inClientData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioHardwareAddRunLoopSource'>
+<arg declared_type64='CFRunLoopSourceRef _Nonnull' name='inRunLoopSource' type64='^{__CFRunLoopSource=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioHardwareClaimAudioDeviceID'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' name='inOwner' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID * _Nonnull' name='outAudioDeviceID' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioHardwareClaimAudioStreamID'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' name='inOwner' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' name='inOwningDeviceID' type64='I'/>
+<arg declared_type64='AudioStreamID * _Nonnull' name='outAudioStreamID' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioHardwareCreateAggregateDevice'>
+<arg declared_type64='CFDictionaryRef _Nonnull' name='inDescription' type64='^{__CFDictionary=}'/>
+<arg declared_type64='AudioObjectID * _Nonnull' name='outDeviceID' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioHardwareDestroyAggregateDevice'>
+<arg declared_type64='AudioObjectID' name='inDeviceID' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioHardwareDevicePropertyChanged'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' name='inOwner' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' name='inDeviceID' type64='I'/>
+<arg declared_type64='UInt32' name='inChannel' type64='I'/>
+<arg declared_type64='Boolean' name='isInput' type64='B'/>
+<arg declared_type64='AudioDevicePropertyID' name='inPropertyID' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioHardwareDevicesCreated'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' name='inOwner' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='UInt32' name='inNumberDevices' type64='I'/>
+<arg const='true' declared_type64='AudioDeviceID * _Nonnull' name='inAudioDeviceIDs' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioHardwareDevicesDied'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' name='inOwner' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='UInt32' name='inNumberDevices' type64='I'/>
+<arg const='true' declared_type64='AudioDeviceID * _Nonnull' name='inAudioDeviceIDs' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioHardwareGetProperty'>
+<arg declared_type64='AudioHardwarePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='UInt32 * _Nonnull' name='ioPropertyDataSize' type64='^I'/>
+<arg declared_type64='void * _Nonnull' name='outPropertyData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioHardwareGetPropertyInfo'>
+<arg declared_type64='AudioHardwarePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='UInt32 * _Nullable' name='outSize' type64='^I'/>
+<arg declared_type64='Boolean * _Nullable' name='outWritable' type64='^B'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioHardwareRemovePropertyListener'>
+<arg declared_type64='AudioHardwarePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='AudioHardwarePropertyListenerProc _Nonnull' function_pointer='true' name='inProc' type64='^?'>
+<arg declared_type64='AudioHardwarePropertyID' type64='I'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioHardwareRemoveRunLoopSource'>
+<arg declared_type64='CFRunLoopSourceRef _Nonnull' name='inRunLoopSource' type64='^{__CFRunLoopSource=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioHardwareSetProperty'>
+<arg declared_type64='AudioHardwarePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='UInt32' name='inPropertyDataSize' type64='I'/>
+<arg const='true' declared_type64='void * _Nonnull' name='inPropertyData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioHardwareStreamPropertyChanged'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' name='inOwner' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' name='inOwningDeviceID' type64='I'/>
+<arg declared_type64='AudioStreamID' name='inStreamID' type64='I'/>
+<arg declared_type64='UInt32' name='inChannel' type64='I'/>
+<arg declared_type64='AudioDevicePropertyID' name='inPropertyID' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioHardwareStreamsCreated'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' name='inOwner' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' name='inOwningDeviceID' type64='I'/>
+<arg declared_type64='UInt32' name='inNumberStreams' type64='I'/>
+<arg const='true' declared_type64='AudioStreamID * _Nonnull' name='inAudioStreamIDs' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioHardwareStreamsDied'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' name='inOwner' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioDeviceID' name='inOwningDeviceID' type64='I'/>
+<arg declared_type64='UInt32' name='inNumberStreams' type64='I'/>
+<arg const='true' declared_type64='AudioStreamID * _Nonnull' name='inAudioStreamIDs' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioHardwareUnload'>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioObjectAddPropertyListener'>
+<arg declared_type64='AudioObjectID' name='inObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' name='inAddress' type64='^{AudioObjectPropertyAddress=III}'/>
+<arg declared_type64='AudioObjectPropertyListenerProc _Nonnull' function_pointer='true' name='inListener' type64='^?'>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' type64='^{AudioObjectPropertyAddress=III}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<arg declared_type64='void * _Nullable' name='inClientData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioObjectAddPropertyListenerBlock'>
+<arg declared_type64='AudioObjectID' name='inObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' name='inAddress' type64='^{AudioObjectPropertyAddress=III}'/>
+<arg declared_type64='dispatch_queue_t _Nullable' name='inDispatchQueue' type64='@'/>
+<arg declared_type64='AudioObjectPropertyListenerBlock _Nonnull' function_pointer='true' name='inListener' type64='@?'>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' type64='^{AudioObjectPropertyAddress=III}'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioObjectCreate'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' name='inOwningPlugIn' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioObjectID' name='inOwningObjectID' type64='I'/>
+<arg declared_type64='AudioClassID' name='inClassID' type64='I'/>
+<arg declared_type64='AudioObjectID * _Nonnull' name='outAudioObjectID' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioObjectGetPropertyData'>
+<arg declared_type64='AudioObjectID' name='inObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' name='inAddress' type64='^{AudioObjectPropertyAddress=III}'/>
+<arg declared_type64='UInt32' name='inQualifierDataSize' type64='I'/>
+<arg const='true' declared_type64='void * _Nullable' name='inQualifierData' type64='^v'/>
+<arg declared_type64='UInt32 * _Nonnull' name='ioDataSize' type64='^I'/>
+<arg declared_type64='void * _Nonnull' name='outData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioObjectGetPropertyDataSize'>
+<arg declared_type64='AudioObjectID' name='inObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' name='inAddress' type64='^{AudioObjectPropertyAddress=III}'/>
+<arg declared_type64='UInt32' name='inQualifierDataSize' type64='I'/>
+<arg const='true' declared_type64='void * _Nullable' name='inQualifierData' type64='^v'/>
+<arg declared_type64='UInt32 * _Nonnull' name='outDataSize' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioObjectHasProperty'>
+<arg declared_type64='AudioObjectID' name='inObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' name='inAddress' type64='^{AudioObjectPropertyAddress=III}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='AudioObjectIsPropertySettable'>
+<arg declared_type64='AudioObjectID' name='inObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' name='inAddress' type64='^{AudioObjectPropertyAddress=III}'/>
+<arg declared_type64='Boolean * _Nonnull' name='outIsSettable' type64='^B'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioObjectPropertiesChanged'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' name='inOwningPlugIn' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioObjectID' name='inObjectID' type64='I'/>
+<arg declared_type64='UInt32' name='inNumberAddresses' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' name='inAddresses' type64='^{AudioObjectPropertyAddress=III}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioObjectRemovePropertyListener'>
+<arg declared_type64='AudioObjectID' name='inObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' name='inAddress' type64='^{AudioObjectPropertyAddress=III}'/>
+<arg declared_type64='AudioObjectPropertyListenerProc _Nonnull' function_pointer='true' name='inListener' type64='^?'>
+<arg declared_type64='AudioObjectID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' type64='^{AudioObjectPropertyAddress=III}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<arg declared_type64='void * _Nullable' name='inClientData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioObjectRemovePropertyListenerBlock'>
+<arg declared_type64='AudioObjectID' name='inObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' name='inAddress' type64='^{AudioObjectPropertyAddress=III}'/>
+<arg declared_type64='dispatch_queue_t _Nullable' name='inDispatchQueue' type64='@'/>
+<arg declared_type64='AudioObjectPropertyListenerBlock _Nonnull' function_pointer='true' name='inListener' type64='@?'>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' type64='^{AudioObjectPropertyAddress=III}'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioObjectSetPropertyData'>
+<arg declared_type64='AudioObjectID' name='inObjectID' type64='I'/>
+<arg const='true' declared_type64='AudioObjectPropertyAddress * _Nonnull' name='inAddress' type64='^{AudioObjectPropertyAddress=III}'/>
+<arg declared_type64='UInt32' name='inQualifierDataSize' type64='I'/>
+<arg const='true' declared_type64='void * _Nullable' name='inQualifierData' type64='^v'/>
+<arg declared_type64='UInt32' name='inDataSize' type64='I'/>
+<arg const='true' declared_type64='void * _Nonnull' name='inData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioObjectShow'>
+<arg declared_type64='AudioObjectID' name='inObjectID' type64='I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='AudioObjectsPublishedAndDied'>
+<arg declared_type64='AudioHardwarePlugInRef _Nonnull' name='inOwningPlugIn' type64='^^{AudioHardwarePlugInInterface}'/>
+<arg declared_type64='AudioObjectID' name='inOwningObjectID' type64='I'/>
+<arg declared_type64='UInt32' name='inNumberPublishedAudioObjects' type64='I'/>
+<arg const='true' declared_type64='AudioObjectID * _Nullable' name='inPublishedAudioObjects' type64='^I'/>
+<arg declared_type64='UInt32' name='inNumberDeadAudioObjects' type64='I'/>
+<arg const='true' declared_type64='AudioObjectID * _Nullable' name='inDeadAudioObjects' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioStreamAddPropertyListener'>
+<arg declared_type64='AudioStreamID' name='inStream' type64='I'/>
+<arg declared_type64='UInt32' name='inChannel' type64='I'/>
+<arg declared_type64='AudioDevicePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='AudioStreamPropertyListenerProc _Nonnull' function_pointer='true' name='inProc' type64='^?'>
+<arg declared_type64='AudioStreamID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='AudioDevicePropertyID' type64='I'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<arg declared_type64='void * _Nullable' name='inClientData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioStreamGetProperty'>
+<arg declared_type64='AudioStreamID' name='inStream' type64='I'/>
+<arg declared_type64='UInt32' name='inChannel' type64='I'/>
+<arg declared_type64='AudioDevicePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='UInt32 * _Nonnull' name='ioPropertyDataSize' type64='^I'/>
+<arg declared_type64='void * _Nonnull' name='outPropertyData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioStreamGetPropertyInfo'>
+<arg declared_type64='AudioStreamID' name='inStream' type64='I'/>
+<arg declared_type64='UInt32' name='inChannel' type64='I'/>
+<arg declared_type64='AudioDevicePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='UInt32 * _Nullable' name='outSize' type64='^I'/>
+<arg declared_type64='Boolean * _Nullable' name='outWritable' type64='^B'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioStreamRemovePropertyListener'>
+<arg declared_type64='AudioStreamID' name='inStream' type64='I'/>
+<arg declared_type64='UInt32' name='inChannel' type64='I'/>
+<arg declared_type64='AudioDevicePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='AudioStreamPropertyListenerProc _Nonnull' function_pointer='true' name='inProc' type64='^?'>
+<arg declared_type64='AudioStreamID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='AudioDevicePropertyID' type64='I'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='AudioStreamSetProperty'>
+<arg declared_type64='AudioStreamID' name='inStream' type64='I'/>
+<arg const='true' declared_type64='AudioTimeStamp * _Nullable' name='inWhen' type64='^{AudioTimeStamp=dQdQ{SMPTETime=ssIIIssss}II}'/>
+<arg declared_type64='UInt32' name='inChannel' type64='I'/>
+<arg declared_type64='AudioDevicePropertyID' name='inPropertyID' type64='I'/>
+<arg declared_type64='UInt32' name='inPropertyDataSize' type64='I'/>
+<arg const='true' declared_type64='void * _Nonnull' name='inPropertyData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+</signatures>

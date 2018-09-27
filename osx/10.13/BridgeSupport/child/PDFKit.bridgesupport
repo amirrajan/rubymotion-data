@@ -487,6 +487,9 @@
 <arg declared_type='PDFPage * _Nullable' index='1' name='page' type='@'/>
 <retval declared_type='instancetype _Nonnull' type='@'/>
 </method>
+<method selector='interiorColor'>
+<retval declared_type='NSColor * _Nullable' type='@'/>
+</method>
 <method selector='isHighlighted'>
 <retval declared_type='BOOL' type='B'/>
 </method>
@@ -640,6 +643,10 @@
 <arg declared_type='PDFTextAnnotationIconType' index='0' name='iconType' type='i' type64='q'/>
 <retval declared_type='void' type='v'/>
 </method>
+<method selector='setInteriorColor:'>
+<arg declared_type='NSColor * _Nullable' index='0' name='interiorColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
 <method selector='setListChoice:'>
 <arg declared_type='BOOL' index='0' name='listChoice' type='B'/>
 <retval declared_type='void' type='v'/>
@@ -701,6 +708,10 @@
 <arg declared_type='BOOL' index='0' name='shouldPrint' type='B'/>
 <retval declared_type='void' type='v'/>
 </method>
+<method selector='setStampName:'>
+<arg declared_type='NSString * _Nullable' index='0' name='stampName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
 <method selector='setStartLineStyle:'>
 <arg declared_type='PDFLineStyle' index='0' name='startLineStyle' type='i' type64='q'/>
 <retval declared_type='void' type='v'/>
@@ -751,6 +762,9 @@
 </method>
 <method selector='shouldPrint'>
 <retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='stampName'>
+<retval declared_type='NSString * _Nullable' type='@'/>
 </method>
 <method selector='startLineStyle'>
 <retval declared_type='PDFLineStyle' type='i' type64='q'/>
@@ -1079,7 +1093,7 @@
 <retval declared_type='NSUInteger' type='I' type64='Q'/>
 </method>
 <method selector='rotation'>
-<retval declared_type='int' type='i'/>
+<retval declared_type='NSInteger' type='i' type64='q'/>
 </method>
 <method selector='setAlignment:'>
 <arg declared_type='NSTextAlignment' index='0' name='alignment' type='I' type64='Q'/>
@@ -1429,7 +1443,7 @@
 </method>
 <method selector='childAtIndex:'>
 <arg declared_type='NSUInteger' index='0' name='index' type='I' type64='Q'/>
-<retval declared_type='PDFOutline * _Nonnull' type='@'/>
+<retval declared_type='PDFOutline * _Nullable' type='@'/>
 </method>
 <method selector='destination'>
 <retval declared_type='PDFDestination * _Nullable' type='@'/>
@@ -1508,7 +1522,7 @@
 <retval declared_type='NSInteger' type='i' type64='q'/>
 </method>
 <method selector='dataRepresentation'>
-<retval declared_type='NSData * _Nonnull' type='@'/>
+<retval declared_type='NSData * _Nullable' type='@'/>
 </method>
 <method selector='displaysAnnotations'>
 <retval declared_type='BOOL' type='B'/>

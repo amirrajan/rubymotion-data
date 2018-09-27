@@ -1,0 +1,806 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<constant const='true' declared_type='VNBarcodeSymbology' name='VNBarcodeSymbologyAztec' type='@'/>
+<constant const='true' declared_type='VNBarcodeSymbology' name='VNBarcodeSymbologyCode128' type='@'/>
+<constant const='true' declared_type='VNBarcodeSymbology' name='VNBarcodeSymbologyCode39' type='@'/>
+<constant const='true' declared_type='VNBarcodeSymbology' name='VNBarcodeSymbologyCode39Checksum' type='@'/>
+<constant const='true' declared_type='VNBarcodeSymbology' name='VNBarcodeSymbologyCode39FullASCII' type='@'/>
+<constant const='true' declared_type='VNBarcodeSymbology' name='VNBarcodeSymbologyCode39FullASCIIChecksum' type='@'/>
+<constant const='true' declared_type='VNBarcodeSymbology' name='VNBarcodeSymbologyCode93' type='@'/>
+<constant const='true' declared_type='VNBarcodeSymbology' name='VNBarcodeSymbologyCode93i' type='@'/>
+<constant const='true' declared_type='VNBarcodeSymbology' name='VNBarcodeSymbologyDataMatrix' type='@'/>
+<constant const='true' declared_type='VNBarcodeSymbology' name='VNBarcodeSymbologyEAN13' type='@'/>
+<constant const='true' declared_type='VNBarcodeSymbology' name='VNBarcodeSymbologyEAN8' type='@'/>
+<constant const='true' declared_type='VNBarcodeSymbology' name='VNBarcodeSymbologyI2of5' type='@'/>
+<constant const='true' declared_type='VNBarcodeSymbology' name='VNBarcodeSymbologyI2of5Checksum' type='@'/>
+<constant const='true' declared_type='VNBarcodeSymbology' name='VNBarcodeSymbologyITF14' type='@'/>
+<constant const='true' declared_type='VNBarcodeSymbology' name='VNBarcodeSymbologyPDF417' type='@'/>
+<constant const='true' declared_type='VNBarcodeSymbology' name='VNBarcodeSymbologyQR' type='@'/>
+<constant const='true' declared_type='VNBarcodeSymbology' name='VNBarcodeSymbologyUPCE' type='@'/>
+<constant const='true' declared_type='NSUInteger' name='VNCoreMLRequestRevision1' type='I' type64='Q'/>
+<constant const='true' declared_type='NSUInteger' name='VNDetectBarcodesRequestRevision1' type='I' type64='Q'/>
+<constant const='true' declared_type='NSUInteger' name='VNDetectFaceLandmarksRequestRevision1' type='I' type64='Q'/>
+<constant const='true' declared_type='NSUInteger' name='VNDetectFaceLandmarksRequestRevision2' type='I' type64='Q'/>
+<constant const='true' declared_type='NSUInteger' name='VNDetectFaceRectanglesRequestRevision1' type='I' type64='Q'/>
+<constant const='true' declared_type='NSUInteger' name='VNDetectFaceRectanglesRequestRevision2' type='I' type64='Q'/>
+<constant const='true' declared_type='NSUInteger' name='VNDetectHorizonRequestRevision1' type='I' type64='Q'/>
+<constant const='true' declared_type='NSUInteger' name='VNDetectRectanglesRequestRevision1' type='I' type64='Q'/>
+<constant const='true' declared_type='NSUInteger' name='VNDetectTextRectanglesRequestRevision1' type='I' type64='Q'/>
+<constant const='true' declared_type='NSString*' name='VNErrorDomain' type='@'/>
+<constant const='true' declared_type='NSUInteger' name='VNHomographicImageRegistrationRequestRevision1' type='I' type64='Q'/>
+<constant const='true' declared_type='VNImageOption _Nonnull' name='VNImageOptionCIContext' type='@'/>
+<constant const='true' declared_type='VNImageOption _Nonnull' name='VNImageOptionCameraIntrinsics' type='@'/>
+<constant const='true' declared_type='VNImageOption _Nonnull' name='VNImageOptionProperties' type='@'/>
+<constant const='true' declared_type='CGRect' name='VNNormalizedIdentityRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<constant const='true' declared_type='NSUInteger' name='VNRequestRevisionUnspecified' type='I' type64='Q'/>
+<constant const='true' declared_type='NSUInteger' name='VNTrackObjectRequestRevision1' type='I' type64='Q'/>
+<constant const='true' declared_type='NSUInteger' name='VNTrackRectangleRequestRevision1' type='I' type64='Q'/>
+<constant const='true' declared_type='NSUInteger' name='VNTranslationalImageRegistrationRequestRevision1' type='I' type64='Q'/>
+<constant declared_type='double' name='VNVisionVersionNumber' type='d'/>
+<enum name='VNErrorIOError' value='6'/>
+<enum name='VNErrorInternalError' value='9'/>
+<enum name='VNErrorInvalidArgument' value='14'/>
+<enum name='VNErrorInvalidFormat' value='2'/>
+<enum name='VNErrorInvalidImage' value='13'/>
+<enum name='VNErrorInvalidModel' value='15'/>
+<enum name='VNErrorInvalidOperation' value='12'/>
+<enum name='VNErrorInvalidOption' value='5'/>
+<enum name='VNErrorMissingOption' value='7'/>
+<enum name='VNErrorNotImplemented' value='8'/>
+<enum name='VNErrorOK' value='0'/>
+<enum name='VNErrorOperationFailed' value='3'/>
+<enum name='VNErrorOutOfBoundsError' value='4'/>
+<enum name='VNErrorOutOfMemory' value='10'/>
+<enum name='VNErrorRequestCancelled' value='1'/>
+<enum name='VNErrorUnknownError' value='11'/>
+<enum name='VNErrorUnsupportedRevision' value='16'/>
+<enum name='VNImageCropAndScaleOptionCenterCrop' value='0'/>
+<enum name='VNImageCropAndScaleOptionScaleFill' value='2'/>
+<enum name='VNImageCropAndScaleOptionScaleFit' value='1'/>
+<enum name='VNRequestTrackingLevelAccurate' value='0'/>
+<enum name='VNRequestTrackingLevelFast' value='1'/>
+<function name='VNImagePointForFaceLandmarkPoint'>
+<arg declared_type='vector_float2' name='faceLandmarkPoint' type=''/>
+<arg declared_type='CGRect' name='faceBoundingBox' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='size_t' name='imageWidth' type='L' type64='Q'/>
+<arg declared_type='size_t' name='imageHeight' type='L' type64='Q'/>
+<retval declared_type='CGPoint' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+</function>
+<function name='VNImagePointForNormalizedPoint'>
+<arg declared_type='CGPoint' name='normalizedPoint' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+<arg declared_type='size_t' name='imageWidth' type='L' type64='Q'/>
+<arg declared_type='size_t' name='imageHeight' type='L' type64='Q'/>
+<retval declared_type='CGPoint' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+</function>
+<function name='VNImageRectForNormalizedRect'>
+<arg declared_type='CGRect' name='normalizedRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='size_t' name='imageWidth' type='L' type64='Q'/>
+<arg declared_type='size_t' name='imageHeight' type='L' type64='Q'/>
+<retval declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='VNNormalizedFaceBoundingBoxPointForLandmarkPoint'>
+<arg declared_type='vector_float2' name='faceLandmarkPoint' type=''/>
+<arg declared_type='CGRect' name='faceBoundingBox' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='size_t' name='imageWidth' type='L' type64='Q'/>
+<arg declared_type='size_t' name='imageHeight' type='L' type64='Q'/>
+<retval declared_type='CGPoint' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+</function>
+<function name='VNNormalizedRectForImageRect'>
+<arg declared_type='CGRect' name='imageRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='size_t' name='imageWidth' type='L' type64='Q'/>
+<arg declared_type='size_t' name='imageHeight' type='L' type64='Q'/>
+<retval declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='VNNormalizedRectIsIdentityRect'>
+<arg declared_type='CGRect' name='normalizedRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<class name='NSObject'>
+<method selector='inputFaceObservations'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='requestRevision'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='setInputFaceObservations:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='inputFaceObservations' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='VNBarcodeObservation'>
+<method selector='barcodeDescriptor'>
+<retval declared_type='CIBarcodeDescriptor * _Nullable' type='@'/>
+</method>
+<method selector='payloadStringValue'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='symbology'>
+<retval declared_type='VNBarcodeSymbology _Nonnull' type='@'/>
+</method>
+</class>
+<class name='VNClassificationObservation'>
+<method selector='identifier'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='VNCoreMLFeatureValueObservation'>
+<method selector='featureValue'>
+<retval declared_type='MLFeatureValue * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='VNCoreMLModel'>
+<method class_method='true' selector='modelForMLModel:error:'>
+<arg declared_type='MLModel * _Nonnull' index='0' name='model' type='@'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='1' name='error' type='^@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+</class>
+<class name='VNCoreMLRequest'>
+<method selector='imageCropAndScaleOption'>
+<retval declared_type='VNImageCropAndScaleOption' type='I' type64='Q'/>
+</method>
+<method selector='initWithModel:'>
+<arg declared_type='VNCoreMLModel * _Nonnull' index='0' name='model' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithModel:completionHandler:'>
+<arg declared_type='VNCoreMLModel * _Nonnull' index='0' name='model' type='@'/>
+<arg declared_type='VNRequestCompletionHandler _Nullable' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='VNRequest * _Nonnull' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='model'>
+<retval declared_type='VNCoreMLModel * _Nonnull' type='@'/>
+</method>
+<method selector='setImageCropAndScaleOption:'>
+<arg declared_type='VNImageCropAndScaleOption' index='0' name='imageCropAndScaleOption' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='VNDetectBarcodesRequest'>
+<method selector='setSymbologies:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='symbologies' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='supportedSymbologies'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='symbologies'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='VNDetectRectanglesRequest'>
+<method selector='maximumAspectRatio'>
+<retval declared_type='VNAspectRatio' type='f'/>
+</method>
+<method selector='maximumObservations'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='minimumAspectRatio'>
+<retval declared_type='VNAspectRatio' type='f'/>
+</method>
+<method selector='minimumConfidence'>
+<retval declared_type='VNConfidence' type='f'/>
+</method>
+<method selector='minimumSize'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='quadratureTolerance'>
+<retval declared_type='VNDegrees' type='f'/>
+</method>
+<method selector='setMaximumAspectRatio:'>
+<arg declared_type='VNAspectRatio' index='0' name='maximumAspectRatio' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaximumObservations:'>
+<arg declared_type='NSUInteger' index='0' name='maximumObservations' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMinimumAspectRatio:'>
+<arg declared_type='VNAspectRatio' index='0' name='minimumAspectRatio' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMinimumConfidence:'>
+<arg declared_type='VNConfidence' index='0' name='minimumConfidence' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMinimumSize:'>
+<arg declared_type='float' index='0' name='minimumSize' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setQuadratureTolerance:'>
+<arg declared_type='VNDegrees' index='0' name='quadratureTolerance' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='VNDetectTextRectanglesRequest'>
+<method selector='reportCharacterBoxes'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setReportCharacterBoxes:'>
+<arg declared_type='BOOL' index='0' name='reportCharacterBoxes' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='VNDetectedObjectObservation'>
+<method selector='boundingBox'>
+<retval declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method class_method='true' selector='observationWithBoundingBox:'>
+<arg declared_type='CGRect' index='0' name='boundingBox' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method class_method='true' selector='observationWithRequestRevision:boundingBox:'>
+<arg declared_type='NSUInteger' index='0' name='requestRevision' type='I' type64='Q'/>
+<arg declared_type='CGRect' index='1' name='boundingBox' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+</class>
+<class name='VNFaceLandmarkRegion'>
+<method selector='pointCount'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+</class>
+<class name='VNFaceLandmarkRegion2D'>
+<method selector='normalizedPoints'>
+<retval const='true' declared_type='CGPoint * _Nullable' type='^{CGPoint=ff}' type64='^{CGPoint=dd}'/>
+</method>
+<method selector='pointsInImageOfSize:'>
+<arg declared_type='CGSize' index='0' name='imageSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+<retval const='true' declared_type='CGPoint * _Nonnull' type='^{CGPoint=ff}' type64='^{CGPoint=dd}'/>
+</method>
+</class>
+<class name='VNFaceLandmarks'>
+<method selector='confidence'>
+<retval declared_type='VNConfidence' type='f'/>
+</method>
+</class>
+<class name='VNFaceLandmarks2D'>
+<method selector='allPoints'>
+<retval declared_type='VNFaceLandmarkRegion2D * _Nullable' type='@'/>
+</method>
+<method selector='faceContour'>
+<retval declared_type='VNFaceLandmarkRegion2D * _Nullable' type='@'/>
+</method>
+<method selector='innerLips'>
+<retval declared_type='VNFaceLandmarkRegion2D * _Nullable' type='@'/>
+</method>
+<method selector='leftEye'>
+<retval declared_type='VNFaceLandmarkRegion2D * _Nullable' type='@'/>
+</method>
+<method selector='leftEyebrow'>
+<retval declared_type='VNFaceLandmarkRegion2D * _Nullable' type='@'/>
+</method>
+<method selector='leftPupil'>
+<retval declared_type='VNFaceLandmarkRegion2D * _Nullable' type='@'/>
+</method>
+<method selector='medianLine'>
+<retval declared_type='VNFaceLandmarkRegion2D * _Nullable' type='@'/>
+</method>
+<method selector='nose'>
+<retval declared_type='VNFaceLandmarkRegion2D * _Nullable' type='@'/>
+</method>
+<method selector='noseCrest'>
+<retval declared_type='VNFaceLandmarkRegion2D * _Nullable' type='@'/>
+</method>
+<method selector='outerLips'>
+<retval declared_type='VNFaceLandmarkRegion2D * _Nullable' type='@'/>
+</method>
+<method selector='rightEye'>
+<retval declared_type='VNFaceLandmarkRegion2D * _Nullable' type='@'/>
+</method>
+<method selector='rightEyebrow'>
+<retval declared_type='VNFaceLandmarkRegion2D * _Nullable' type='@'/>
+</method>
+<method selector='rightPupil'>
+<retval declared_type='VNFaceLandmarkRegion2D * _Nullable' type='@'/>
+</method>
+</class>
+<class name='VNFaceObservation'>
+<method class_method='true' selector='faceObservationWithRequestRevision:boundingBox:roll:yaw:'>
+<arg declared_type='NSUInteger' index='0' name='requestRevision' type='I' type64='Q'/>
+<arg declared_type='CGRect' index='1' name='boundingBox' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='NSNumber * _Nullable' index='2' name='roll' type='@'/>
+<arg declared_type='NSNumber * _Nullable' index='3' name='yaw' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='landmarks'>
+<retval declared_type='VNFaceLandmarks2D * _Nullable' type='@'/>
+</method>
+<method selector='roll'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='yaw'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+</class>
+<class name='VNHorizonObservation'>
+<method selector='angle'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='transform'>
+<retval declared_type='CGAffineTransform' type='{CGAffineTransform=ffffff}' type64='{CGAffineTransform=dddddd}'/>
+</method>
+</class>
+<class name='VNImageBasedRequest'>
+<method selector='regionOfInterest'>
+<retval declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='setRegionOfInterest:'>
+<arg declared_type='CGRect' index='0' name='regionOfInterest' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='VNImageHomographicAlignmentObservation'>
+<method selector='setWarpTransform:'>
+<arg declared_type='matrix_float3x3' index='0' name='warpTransform' type='{_matrix_float3x3=[3]}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='warpTransform'>
+<retval declared_type='matrix_float3x3' type='{_matrix_float3x3=[3]}'/>
+</method>
+</class>
+<class name='VNImageRequestHandler'>
+<method selector='initWithCGImage:options:'>
+<arg declared_type='CGImageRef _Nonnull' index='0' name='image' type='^{CGImage=}'/>
+<arg declared_type='NSDictionary * _Nonnull' index='1' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithCGImage:orientation:options:'>
+<arg declared_type='CGImageRef _Nonnull' index='0' name='image' type='^{CGImage=}'/>
+<arg declared_type='CGImagePropertyOrientation' index='1' name='orientation' type='I'/>
+<arg declared_type='NSDictionary * _Nonnull' index='2' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithCIImage:options:'>
+<arg declared_type='CIImage * _Nonnull' index='0' name='image' type='@'/>
+<arg declared_type='NSDictionary * _Nonnull' index='1' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithCIImage:orientation:options:'>
+<arg declared_type='CIImage * _Nonnull' index='0' name='image' type='@'/>
+<arg declared_type='CGImagePropertyOrientation' index='1' name='orientation' type='I'/>
+<arg declared_type='NSDictionary * _Nonnull' index='2' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithCVPixelBuffer:options:'>
+<arg declared_type='CVPixelBufferRef _Nonnull' index='0' name='pixelBuffer' type='^{__CVBuffer=}'/>
+<arg declared_type='NSDictionary * _Nonnull' index='1' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithCVPixelBuffer:orientation:options:'>
+<arg declared_type='CVPixelBufferRef _Nonnull' index='0' name='pixelBuffer' type='^{__CVBuffer=}'/>
+<arg declared_type='CGImagePropertyOrientation' index='1' name='orientation' type='I'/>
+<arg declared_type='NSDictionary * _Nonnull' index='2' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithData:options:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='imageData' type='@'/>
+<arg declared_type='NSDictionary * _Nonnull' index='1' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithData:orientation:options:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='imageData' type='@'/>
+<arg declared_type='CGImagePropertyOrientation' index='1' name='orientation' type='I'/>
+<arg declared_type='NSDictionary * _Nonnull' index='2' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithURL:options:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='imageURL' type='@'/>
+<arg declared_type='NSDictionary * _Nonnull' index='1' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithURL:orientation:options:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='imageURL' type='@'/>
+<arg declared_type='CGImagePropertyOrientation' index='1' name='orientation' type='I'/>
+<arg declared_type='NSDictionary * _Nonnull' index='2' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='performRequests:error:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='requests' type='@'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='1' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='VNImageTranslationAlignmentObservation'>
+<method selector='alignmentTransform'>
+<retval declared_type='CGAffineTransform' type='{CGAffineTransform=ffffff}' type64='{CGAffineTransform=dddddd}'/>
+</method>
+<method selector='setAlignmentTransform:'>
+<arg declared_type='CGAffineTransform' index='0' name='alignmentTransform' type='{CGAffineTransform=ffffff}' type64='{CGAffineTransform=dddddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='VNObservation'>
+<method selector='confidence'>
+<retval declared_type='VNConfidence' type='f'/>
+</method>
+<method selector='uuid'>
+<retval declared_type='NSUUID * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='VNPixelBufferObservation'>
+<method selector='pixelBuffer'>
+<retval declared_type='CVPixelBufferRef _Nonnull' type='^{__CVBuffer=}'/>
+</method>
+</class>
+<class name='VNRecognizedObjectObservation'>
+<method selector='labels'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='VNRectangleObservation'>
+<method selector='bottomLeft'>
+<retval declared_type='CGPoint' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+</method>
+<method selector='bottomRight'>
+<retval declared_type='CGPoint' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+</method>
+<method selector='topLeft'>
+<retval declared_type='CGPoint' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+</method>
+<method selector='topRight'>
+<retval declared_type='CGPoint' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+</method>
+</class>
+<class name='VNRequest'>
+<method selector='completionHandler'>
+<retval declared_type='VNRequestCompletionHandler _Nullable' function_pointer='true' type='@?'>
+<arg declared_type='VNRequest * _Nonnull' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method class_method='true' selector='currentRevision'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method class_method='true' selector='defaultRevision'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='init'>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithCompletionHandler:'>
+<arg declared_type='VNRequestCompletionHandler _Nullable' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='VNRequest * _Nonnull' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='preferBackgroundProcessing'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='results'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='revision'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='setPreferBackgroundProcessing:'>
+<arg declared_type='BOOL' index='0' name='preferBackgroundProcessing' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRevision:'>
+<arg declared_type='NSUInteger' index='0' name='revision' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUsesCPUOnly:'>
+<arg declared_type='BOOL' index='0' name='usesCPUOnly' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='supportedRevisions'>
+<retval declared_type='NSIndexSet * _Nonnull' type='@'/>
+</method>
+<method selector='usesCPUOnly'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='VNSequenceRequestHandler'>
+<method selector='init'>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='performRequests:onCGImage:error:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='requests' type='@'/>
+<arg declared_type='CGImageRef _Nonnull' index='1' name='image' type='^{CGImage=}'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='2' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='performRequests:onCGImage:orientation:error:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='requests' type='@'/>
+<arg declared_type='CGImageRef _Nonnull' index='1' name='image' type='^{CGImage=}'/>
+<arg declared_type='CGImagePropertyOrientation' index='2' name='orientation' type='I'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='3' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='performRequests:onCIImage:error:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='requests' type='@'/>
+<arg declared_type='CIImage * _Nonnull' index='1' name='image' type='@'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='2' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='performRequests:onCIImage:orientation:error:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='requests' type='@'/>
+<arg declared_type='CIImage * _Nonnull' index='1' name='image' type='@'/>
+<arg declared_type='CGImagePropertyOrientation' index='2' name='orientation' type='I'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='3' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='performRequests:onCVPixelBuffer:error:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='requests' type='@'/>
+<arg declared_type='CVPixelBufferRef _Nonnull' index='1' name='pixelBuffer' type='^{__CVBuffer=}'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='2' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='performRequests:onCVPixelBuffer:orientation:error:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='requests' type='@'/>
+<arg declared_type='CVPixelBufferRef _Nonnull' index='1' name='pixelBuffer' type='^{__CVBuffer=}'/>
+<arg declared_type='CGImagePropertyOrientation' index='2' name='orientation' type='I'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='3' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='performRequests:onImageData:error:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='requests' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='1' name='imageData' type='@'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='2' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='performRequests:onImageData:orientation:error:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='requests' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='1' name='imageData' type='@'/>
+<arg declared_type='CGImagePropertyOrientation' index='2' name='orientation' type='I'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='3' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='performRequests:onImageURL:error:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='requests' type='@'/>
+<arg declared_type='NSURL * _Nonnull' index='1' name='imageURL' type='@'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='2' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='performRequests:onImageURL:orientation:error:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='requests' type='@'/>
+<arg declared_type='NSURL * _Nonnull' index='1' name='imageURL' type='@'/>
+<arg declared_type='CGImagePropertyOrientation' index='2' name='orientation' type='I'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='3' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='VNTargetedImageRequest'>
+<method selector='initWithTargetedCGImage:options:'>
+<arg declared_type='CGImageRef _Nonnull' index='0' name='cgImage' type='^{CGImage=}'/>
+<arg declared_type='NSDictionary * _Nonnull' index='1' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedCGImage:options:completionHandler:'>
+<arg declared_type='CGImageRef _Nonnull' index='0' name='cgImage' type='^{CGImage=}'/>
+<arg declared_type='NSDictionary * _Nonnull' index='1' name='options' type='@'/>
+<arg declared_type='VNRequestCompletionHandler _Nullable' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='VNRequest * _Nonnull' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedCGImage:orientation:options:'>
+<arg declared_type='CGImageRef _Nonnull' index='0' name='cgImage' type='^{CGImage=}'/>
+<arg declared_type='CGImagePropertyOrientation' index='1' name='orientation' type='I'/>
+<arg declared_type='NSDictionary * _Nonnull' index='2' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedCGImage:orientation:options:completionHandler:'>
+<arg declared_type='CGImageRef _Nonnull' index='0' name='cgImage' type='^{CGImage=}'/>
+<arg declared_type='CGImagePropertyOrientation' index='1' name='orientation' type='I'/>
+<arg declared_type='NSDictionary * _Nonnull' index='2' name='options' type='@'/>
+<arg declared_type='VNRequestCompletionHandler _Nullable' function_pointer='true' index='3' name='completionHandler' type='@?'>
+<arg declared_type='VNRequest * _Nonnull' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedCIImage:options:'>
+<arg declared_type='CIImage * _Nonnull' index='0' name='ciImage' type='@'/>
+<arg declared_type='NSDictionary * _Nonnull' index='1' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedCIImage:options:completionHandler:'>
+<arg declared_type='CIImage * _Nonnull' index='0' name='ciImage' type='@'/>
+<arg declared_type='NSDictionary * _Nonnull' index='1' name='options' type='@'/>
+<arg declared_type='VNRequestCompletionHandler _Nullable' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='VNRequest * _Nonnull' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedCIImage:orientation:options:'>
+<arg declared_type='CIImage * _Nonnull' index='0' name='ciImage' type='@'/>
+<arg declared_type='CGImagePropertyOrientation' index='1' name='orientation' type='I'/>
+<arg declared_type='NSDictionary * _Nonnull' index='2' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedCIImage:orientation:options:completionHandler:'>
+<arg declared_type='CIImage * _Nonnull' index='0' name='ciImage' type='@'/>
+<arg declared_type='CGImagePropertyOrientation' index='1' name='orientation' type='I'/>
+<arg declared_type='NSDictionary * _Nonnull' index='2' name='options' type='@'/>
+<arg declared_type='VNRequestCompletionHandler _Nullable' function_pointer='true' index='3' name='completionHandler' type='@?'>
+<arg declared_type='VNRequest * _Nonnull' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedCVPixelBuffer:options:'>
+<arg declared_type='CVPixelBufferRef _Nonnull' index='0' name='pixelBuffer' type='^{__CVBuffer=}'/>
+<arg declared_type='NSDictionary * _Nonnull' index='1' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedCVPixelBuffer:options:completionHandler:'>
+<arg declared_type='CVPixelBufferRef _Nonnull' index='0' name='pixelBuffer' type='^{__CVBuffer=}'/>
+<arg declared_type='NSDictionary * _Nonnull' index='1' name='options' type='@'/>
+<arg declared_type='VNRequestCompletionHandler _Nullable' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='VNRequest * _Nonnull' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedCVPixelBuffer:orientation:options:'>
+<arg declared_type='CVPixelBufferRef _Nonnull' index='0' name='pixelBuffer' type='^{__CVBuffer=}'/>
+<arg declared_type='CGImagePropertyOrientation' index='1' name='orientation' type='I'/>
+<arg declared_type='NSDictionary * _Nonnull' index='2' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedCVPixelBuffer:orientation:options:completionHandler:'>
+<arg declared_type='CVPixelBufferRef _Nonnull' index='0' name='pixelBuffer' type='^{__CVBuffer=}'/>
+<arg declared_type='CGImagePropertyOrientation' index='1' name='orientation' type='I'/>
+<arg declared_type='NSDictionary * _Nonnull' index='2' name='options' type='@'/>
+<arg declared_type='VNRequestCompletionHandler _Nullable' function_pointer='true' index='3' name='completionHandler' type='@?'>
+<arg declared_type='VNRequest * _Nonnull' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedImageData:options:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='imageData' type='@'/>
+<arg declared_type='NSDictionary * _Nonnull' index='1' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedImageData:options:completionHandler:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='imageData' type='@'/>
+<arg declared_type='NSDictionary * _Nonnull' index='1' name='options' type='@'/>
+<arg declared_type='VNRequestCompletionHandler _Nullable' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='VNRequest * _Nonnull' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedImageData:orientation:options:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='imageData' type='@'/>
+<arg declared_type='CGImagePropertyOrientation' index='1' name='orientation' type='I'/>
+<arg declared_type='NSDictionary * _Nonnull' index='2' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedImageData:orientation:options:completionHandler:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='imageData' type='@'/>
+<arg declared_type='CGImagePropertyOrientation' index='1' name='orientation' type='I'/>
+<arg declared_type='NSDictionary * _Nonnull' index='2' name='options' type='@'/>
+<arg declared_type='VNRequestCompletionHandler _Nullable' function_pointer='true' index='3' name='completionHandler' type='@?'>
+<arg declared_type='VNRequest * _Nonnull' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedImageURL:options:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='imageURL' type='@'/>
+<arg declared_type='NSDictionary * _Nonnull' index='1' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedImageURL:options:completionHandler:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='imageURL' type='@'/>
+<arg declared_type='NSDictionary * _Nonnull' index='1' name='options' type='@'/>
+<arg declared_type='VNRequestCompletionHandler _Nullable' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='VNRequest * _Nonnull' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedImageURL:orientation:options:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='imageURL' type='@'/>
+<arg declared_type='CGImagePropertyOrientation' index='1' name='orientation' type='I'/>
+<arg declared_type='NSDictionary * _Nonnull' index='2' name='options' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithTargetedImageURL:orientation:options:completionHandler:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='imageURL' type='@'/>
+<arg declared_type='CGImagePropertyOrientation' index='1' name='orientation' type='I'/>
+<arg declared_type='NSDictionary * _Nonnull' index='2' name='options' type='@'/>
+<arg declared_type='VNRequestCompletionHandler _Nullable' function_pointer='true' index='3' name='completionHandler' type='@?'>
+<arg declared_type='VNRequest * _Nonnull' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+</class>
+<class name='VNTextObservation'>
+<method selector='characterBoxes'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+</class>
+<class name='VNTrackObjectRequest'>
+<method selector='initWithDetectedObjectObservation:'>
+<arg declared_type='VNDetectedObjectObservation * _Nonnull' index='0' name='observation' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithDetectedObjectObservation:completionHandler:'>
+<arg declared_type='VNDetectedObjectObservation * _Nonnull' index='0' name='observation' type='@'/>
+<arg declared_type='VNRequestCompletionHandler _Nullable' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='VNRequest * _Nonnull' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+</class>
+<class name='VNTrackRectangleRequest'>
+<method selector='initWithRectangleObservation:'>
+<arg declared_type='VNRectangleObservation * _Nonnull' index='0' name='observation' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithRectangleObservation:completionHandler:'>
+<arg declared_type='VNRectangleObservation * _Nonnull' index='0' name='observation' type='@'/>
+<arg declared_type='VNRequestCompletionHandler _Nullable' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='VNRequest * _Nonnull' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+</class>
+<class name='VNTrackingRequest'>
+<method selector='inputObservation'>
+<retval declared_type='VNDetectedObjectObservation * _Nonnull' type='@'/>
+</method>
+<method selector='isLastFrame'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setInputObservation:'>
+<arg declared_type='VNDetectedObjectObservation * _Nonnull' index='0' name='inputObservation' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLastFrame:'>
+<arg declared_type='BOOL' index='0' name='lastFrame' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTrackingLevel:'>
+<arg declared_type='VNRequestTrackingLevel' index='0' name='trackingLevel' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='trackingLevel'>
+<retval declared_type='VNRequestTrackingLevel' type='I' type64='Q'/>
+</method>
+</class>
+<informal_protocol name='VNFaceObservationAccepting'>
+<method selector='inputFaceObservations' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='setInputFaceObservations:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='NSArray * _Nullable' index='0' name='inputFaceObservations' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='VNRequestRevisionProviding'>
+<method selector='requestRevision' type='I8@0:4' type64='Q16@0:8'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+</informal_protocol>
+</signatures>

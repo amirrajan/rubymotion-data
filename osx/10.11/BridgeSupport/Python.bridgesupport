@@ -283,13 +283,9 @@
 <arg declared_type='int' type='i'/>
 <retval declared_type='void' type='v'/>
 </field>
-<field declared_type='void (*)(NSXMLParser *, CommentHandler)' declared_type64='void (*)(NSXMLParser *, int)' function_pointer='true' name='SetCommentHandler' type='^?'>
+<field declared_type='void (*)(NSXMLParser *, int)' function_pointer='true' name='SetCommentHandler' type='^?'>
 <arg declared_type='NSXMLParser*' type='@'/>
-<arg declared_type='CommentHandler' declared_type64='int' function_pointer='true' type='^?' type64='i'>
-<arg const='true' declared_type='char*' type='*'/>
-<arg declared_type='long' type='l'/>
-<retval declared_type='ComponentResult' type='l'/>
-</arg>
+<arg declared_type='int' type='i'/>
 <retval declared_type='void' type='v'/>
 </field>
 <field declared_type='void (*)(NSXMLParser *, int)' function_pointer='true' name='SetDefaultHandlerExpand' type='^?'>
@@ -297,19 +293,10 @@
 <arg declared_type='int' type='i'/>
 <retval declared_type='void' type='v'/>
 </field>
-<field declared_type='void (*)(NSXMLParser *, StartElementHandler, EndElementHandler)' declared_type64='void (*)(NSXMLParser *, int, int)' function_pointer='true' name='SetElementHandler' type='^?'>
+<field declared_type='void (*)(NSXMLParser *, int, int)' function_pointer='true' name='SetElementHandler' type='^?'>
 <arg declared_type='NSXMLParser*' type='@'/>
-<arg declared_type='StartElementHandler' declared_type64='int' function_pointer='true' type='^?' type64='i'>
-<arg const='true' declared_type='char*' type='*'/>
-<arg const='true' declared_type='char**' type='^*'/>
-<arg declared_type='long' type='l'/>
-<retval declared_type='ComponentResult' type='l'/>
-</arg>
-<arg declared_type='EndElementHandler' declared_type64='int' function_pointer='true' type='^?' type64='i'>
-<arg const='true' declared_type='char*' type='*'/>
-<arg declared_type='long' type='l'/>
-<retval declared_type='ComponentResult' type='l'/>
-</arg>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
 <retval declared_type='void' type='v'/>
 </field>
 <field declared_type='void (*)(NSXMLParser *, int, int)' function_pointer='true' name='SetNamespaceDeclHandler' type='^?'>
@@ -318,14 +305,9 @@
 <arg declared_type='int' type='i'/>
 <retval declared_type='void' type='v'/>
 </field>
-<field declared_type='void (*)(NSXMLParser *, PreprocessInstructionHandler)' declared_type64='void (*)(NSXMLParser *, CFXMLProcessingInstructionInfo)' function_pointer='true' name='SetProcessingInstructionHandler' type='^?'>
+<field declared_type='void (*)(NSXMLParser *, CFXMLProcessingInstructionInfo)' function_pointer='true' name='SetProcessingInstructionHandler' type='^?'>
 <arg declared_type='NSXMLParser*' type='@'/>
-<arg declared_type='PreprocessInstructionHandler' declared_type64='CFXMLProcessingInstructionInfo' function_pointer='true' type='^?' type64='{_CFXMLProcessingInstructionInfo=^{__CFString}}'>
-<arg const='true' declared_type='char*' type='*'/>
-<arg const='true' declared_type='char **' type='^*'/>
-<arg declared_type='long' type='l'/>
-<retval declared_type='ComponentResult' type='l'/>
-</arg>
+<arg declared_type='CFXMLProcessingInstructionInfo' type='{_CFXMLProcessingInstructionInfo=^{__CFString}}'/>
 <retval declared_type='void' type='v'/>
 </field>
 <field declared_type='void (*)(NSXMLParser *, int, void *)' function_pointer='true' name='SetUnknownEncodingHandler' type='^?'>
@@ -1227,9 +1209,9 @@
 <field declared_type='Py_ssize_t*' name='smalltable' type='[2l]' type64='[2q]'/>
 <field declared_type='void*' name='internal' type='^v'/>
 </struct>
-<struct name='comprehension_ty' type='{_comprehension=&quot;target&quot;^{_expr=&quot;kind&quot;i&quot;v&quot;(?=&quot;BoolOp&quot;{?=&quot;op&quot;i&quot;values&quot;^{?}}&quot;BinOp&quot;{?=&quot;left&quot;^{_expr}&quot;op&quot;i&quot;right&quot;^{_expr}}&quot;UnaryOp&quot;{?=&quot;op&quot;i&quot;operand&quot;^{_expr}}&quot;Lambda&quot;{?=&quot;args&quot;^{_arguments}&quot;body&quot;^{_expr}}&quot;IfExp&quot;{?=&quot;test&quot;^{_expr}&quot;body&quot;^{_expr}&quot;orelse&quot;^{_expr}}&quot;Dict&quot;{?=&quot;keys&quot;^{?}&quot;values&quot;^{?}}&quot;Set&quot;{?=&quot;elts&quot;^{?}}&quot;ListComp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;SetComp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;DictComp&quot;{?=&quot;key&quot;^{_expr}&quot;value&quot;^{_expr}&quot;generators&quot;^{?}}&quot;GeneratorExp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;Yield&quot;{?=&quot;value&quot;^{_expr}}&quot;Compare&quot;{?=&quot;left&quot;^{_expr}&quot;ops&quot;^{?}&quot;comparators&quot;^{?}}&quot;Call&quot;{?=&quot;func&quot;^{_expr}&quot;args&quot;^{?}&quot;keywords&quot;^{?}&quot;starargs&quot;^{_expr}&quot;kwargs&quot;^{_expr}}&quot;Repr&quot;{?=&quot;value&quot;^{_expr}}&quot;Num&quot;{?=&quot;n&quot;^{_object}}&quot;Str&quot;{?=&quot;s&quot;^{_object}}&quot;Attribute&quot;{?=&quot;value&quot;^{_expr}&quot;attr&quot;^{_object}&quot;ctx&quot;i}&quot;Subscript&quot;{?=&quot;value&quot;^{_expr}&quot;slice&quot;^{_slice}&quot;ctx&quot;i}&quot;Name&quot;{?=&quot;id&quot;^{_object}&quot;ctx&quot;i}&quot;List&quot;{?=&quot;elts&quot;^{?}&quot;ctx&quot;i}&quot;Tuple&quot;{?=&quot;elts&quot;^{?}&quot;ctx&quot;i})&quot;lineno&quot;i&quot;col_offset&quot;i}&quot;iter&quot;^{_expr=&quot;kind&quot;i&quot;v&quot;(?=&quot;BoolOp&quot;{?=&quot;op&quot;i&quot;values&quot;^{?}}&quot;BinOp&quot;{?=&quot;left&quot;^{_expr}&quot;op&quot;i&quot;right&quot;^{_expr}}&quot;UnaryOp&quot;{?=&quot;op&quot;i&quot;operand&quot;^{_expr}}&quot;Lambda&quot;{?=&quot;args&quot;^{_arguments}&quot;body&quot;^{_expr}}&quot;IfExp&quot;{?=&quot;test&quot;^{_expr}&quot;body&quot;^{_expr}&quot;orelse&quot;^{_expr}}&quot;Dict&quot;{?=&quot;keys&quot;^{?}&quot;values&quot;^{?}}&quot;Set&quot;{?=&quot;elts&quot;^{?}}&quot;ListComp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;SetComp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;DictComp&quot;{?=&quot;key&quot;^{_expr}&quot;value&quot;^{_expr}&quot;generators&quot;^{?}}&quot;GeneratorExp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;Yield&quot;{?=&quot;value&quot;^{_expr}}&quot;Compare&quot;{?=&quot;left&quot;^{_expr}&quot;ops&quot;^{?}&quot;comparators&quot;^{?}}&quot;Call&quot;{?=&quot;func&quot;^{_expr}&quot;args&quot;^{?}&quot;keywords&quot;^{?}&quot;starargs&quot;^{_expr}&quot;kwargs&quot;^{_expr}}&quot;Repr&quot;{?=&quot;value&quot;^{_expr}}&quot;Num&quot;{?=&quot;n&quot;^{_object}}&quot;Str&quot;{?=&quot;s&quot;^{_object}}&quot;Attribute&quot;{?=&quot;value&quot;^{_expr}&quot;attr&quot;^{_object}&quot;ctx&quot;i}&quot;Subscript&quot;{?=&quot;value&quot;^{_expr}&quot;slice&quot;^{_slice}&quot;ctx&quot;i}&quot;Name&quot;{?=&quot;id&quot;^{_object}&quot;ctx&quot;i}&quot;List&quot;{?=&quot;elts&quot;^{?}&quot;ctx&quot;i}&quot;Tuple&quot;{?=&quot;elts&quot;^{?}&quot;ctx&quot;i})&quot;lineno&quot;i&quot;col_offset&quot;i}&quot;ifs&quot;^{_asdl_seq=&quot;size&quot;i&quot;elements&quot;[1^v]}}'>
-<field declared_type='expr_ty' name='target' type='^{_expr=&quot;kind&quot;i&quot;v&quot;(?=&quot;BoolOp&quot;{?=&quot;op&quot;i&quot;values&quot;^{?}}&quot;BinOp&quot;{?=&quot;left&quot;^{_expr}&quot;op&quot;i&quot;right&quot;^{_expr}}&quot;UnaryOp&quot;{?=&quot;op&quot;i&quot;operand&quot;^{_expr}}&quot;Lambda&quot;{?=&quot;args&quot;^{_arguments}&quot;body&quot;^{_expr}}&quot;IfExp&quot;{?=&quot;test&quot;^{_expr}&quot;body&quot;^{_expr}&quot;orelse&quot;^{_expr}}&quot;Dict&quot;{?=&quot;keys&quot;^{?}&quot;values&quot;^{?}}&quot;Set&quot;{?=&quot;elts&quot;^{?}}&quot;ListComp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;SetComp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;DictComp&quot;{?=&quot;key&quot;^{_expr}&quot;value&quot;^{_expr}&quot;generators&quot;^{?}}&quot;GeneratorExp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;Yield&quot;{?=&quot;value&quot;^{_expr}}&quot;Compare&quot;{?=&quot;left&quot;^{_expr}&quot;ops&quot;^{?}&quot;comparators&quot;^{?}}&quot;Call&quot;{?=&quot;func&quot;^{_expr}&quot;args&quot;^{?}&quot;keywords&quot;^{?}&quot;starargs&quot;^{_expr}&quot;kwargs&quot;^{_expr}}&quot;Repr&quot;{?=&quot;value&quot;^{_expr}}&quot;Num&quot;{?=&quot;n&quot;^{_object}}&quot;Str&quot;{?=&quot;s&quot;^{_object}}&quot;Attribute&quot;{?=&quot;value&quot;^{_expr}&quot;attr&quot;^{_object}&quot;ctx&quot;i}&quot;Subscript&quot;{?=&quot;value&quot;^{_expr}&quot;slice&quot;^{_slice}&quot;ctx&quot;i}&quot;Name&quot;{?=&quot;id&quot;^{_object}&quot;ctx&quot;i}&quot;List&quot;{?=&quot;elts&quot;^{?}&quot;ctx&quot;i}&quot;Tuple&quot;{?=&quot;elts&quot;^{?}&quot;ctx&quot;i})&quot;lineno&quot;i&quot;col_offset&quot;i}'/>
-<field declared_type='expr_ty' name='iter' type='^{_expr=&quot;kind&quot;i&quot;v&quot;(?=&quot;BoolOp&quot;{?=&quot;op&quot;i&quot;values&quot;^{?}}&quot;BinOp&quot;{?=&quot;left&quot;^{_expr}&quot;op&quot;i&quot;right&quot;^{_expr}}&quot;UnaryOp&quot;{?=&quot;op&quot;i&quot;operand&quot;^{_expr}}&quot;Lambda&quot;{?=&quot;args&quot;^{_arguments}&quot;body&quot;^{_expr}}&quot;IfExp&quot;{?=&quot;test&quot;^{_expr}&quot;body&quot;^{_expr}&quot;orelse&quot;^{_expr}}&quot;Dict&quot;{?=&quot;keys&quot;^{?}&quot;values&quot;^{?}}&quot;Set&quot;{?=&quot;elts&quot;^{?}}&quot;ListComp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;SetComp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;DictComp&quot;{?=&quot;key&quot;^{_expr}&quot;value&quot;^{_expr}&quot;generators&quot;^{?}}&quot;GeneratorExp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;Yield&quot;{?=&quot;value&quot;^{_expr}}&quot;Compare&quot;{?=&quot;left&quot;^{_expr}&quot;ops&quot;^{?}&quot;comparators&quot;^{?}}&quot;Call&quot;{?=&quot;func&quot;^{_expr}&quot;args&quot;^{?}&quot;keywords&quot;^{?}&quot;starargs&quot;^{_expr}&quot;kwargs&quot;^{_expr}}&quot;Repr&quot;{?=&quot;value&quot;^{_expr}}&quot;Num&quot;{?=&quot;n&quot;^{_object}}&quot;Str&quot;{?=&quot;s&quot;^{_object}}&quot;Attribute&quot;{?=&quot;value&quot;^{_expr}&quot;attr&quot;^{_object}&quot;ctx&quot;i}&quot;Subscript&quot;{?=&quot;value&quot;^{_expr}&quot;slice&quot;^{_slice}&quot;ctx&quot;i}&quot;Name&quot;{?=&quot;id&quot;^{_object}&quot;ctx&quot;i}&quot;List&quot;{?=&quot;elts&quot;^{?}&quot;ctx&quot;i}&quot;Tuple&quot;{?=&quot;elts&quot;^{?}&quot;ctx&quot;i})&quot;lineno&quot;i&quot;col_offset&quot;i}'/>
+<struct name='comprehension_ty' type='{_comprehension=&quot;target&quot;^{_expr=}&quot;iter&quot;^{_expr=}&quot;ifs&quot;^{_asdl_seq=&quot;size&quot;i&quot;elements&quot;[1^v]}}'>
+<field declared_type='expr_ty' name='target' type='^{_expr=}'/>
+<field declared_type='expr_ty' name='iter' type='^{_expr=}'/>
 <field declared_type='asdl_seq*' name='ifs' type='^{_asdl_seq=&quot;size&quot;i&quot;elements&quot;[1^v]}'/>
 </struct>
 <struct name='dfa' type='{_dfa=&quot;d_type&quot;i&quot;d_name&quot;*&quot;d_initial&quot;i&quot;d_nstates&quot;i&quot;d_state&quot;^{_state=&quot;s_narcs&quot;i&quot;s_arc&quot;^{_arc=&quot;a_lbl&quot;s&quot;a_arrow&quot;s}&quot;s_lower&quot;i&quot;s_upper&quot;i&quot;s_accel&quot;^i&quot;s_accept&quot;i}&quot;d_first&quot;*}'>
@@ -1246,9 +1228,9 @@
 <field declared_type='int' name='lineno' type='i'/>
 <field declared_type='int' name='col_offset' type='i'/>
 </struct>
-<struct name='expr_ty' type='{_expr=&quot;kind&quot;i&quot;v&quot;(?=&quot;BoolOp&quot;{?=&quot;op&quot;i&quot;values&quot;^{?}}&quot;BinOp&quot;{?=&quot;left&quot;^{_expr}&quot;op&quot;i&quot;right&quot;^{_expr}}&quot;UnaryOp&quot;{?=&quot;op&quot;i&quot;operand&quot;^{_expr}}&quot;Lambda&quot;{?=&quot;args&quot;^{_arguments}&quot;body&quot;^{_expr}}&quot;IfExp&quot;{?=&quot;test&quot;^{_expr}&quot;body&quot;^{_expr}&quot;orelse&quot;^{_expr}}&quot;Dict&quot;{?=&quot;keys&quot;^{?}&quot;values&quot;^{?}}&quot;Set&quot;{?=&quot;elts&quot;^{?}}&quot;ListComp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;SetComp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;DictComp&quot;{?=&quot;key&quot;^{_expr}&quot;value&quot;^{_expr}&quot;generators&quot;^{?}}&quot;GeneratorExp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;Yield&quot;{?=&quot;value&quot;^{_expr}}&quot;Compare&quot;{?=&quot;left&quot;^{_expr}&quot;ops&quot;^{?}&quot;comparators&quot;^{?}}&quot;Call&quot;{?=&quot;func&quot;^{_expr}&quot;args&quot;^{?}&quot;keywords&quot;^{?}&quot;starargs&quot;^{_expr}&quot;kwargs&quot;^{_expr}}&quot;Repr&quot;{?=&quot;value&quot;^{_expr}}&quot;Num&quot;{?=&quot;n&quot;^{_object}}&quot;Str&quot;{?=&quot;s&quot;^{_object}}&quot;Attribute&quot;{?=&quot;value&quot;^{_expr}&quot;attr&quot;^{_object}&quot;ctx&quot;i}&quot;Subscript&quot;{?=&quot;value&quot;^{_expr}&quot;slice&quot;^{_slice}&quot;ctx&quot;i}&quot;Name&quot;{?=&quot;id&quot;^{_object}&quot;ctx&quot;i}&quot;List&quot;{?=&quot;elts&quot;^{?}&quot;ctx&quot;i}&quot;Tuple&quot;{?=&quot;elts&quot;^{?}&quot;ctx&quot;i})&quot;lineno&quot;i&quot;col_offset&quot;i}'>
+<struct name='expr_ty' type='{_expr=}'>
 <field declared_type='enum _expr_kind' name='kind' type='i'/>
-<field declared_type='union (anonymous union at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Python.framework/Headers/Python-ast.h:195:9)' name='v' type='(?=&quot;BoolOp&quot;{?=&quot;op&quot;i&quot;values&quot;^{?}}&quot;BinOp&quot;{?=&quot;left&quot;^{_expr}&quot;op&quot;i&quot;right&quot;^{_expr}}&quot;UnaryOp&quot;{?=&quot;op&quot;i&quot;operand&quot;^{_expr}}&quot;Lambda&quot;{?=&quot;args&quot;^{_arguments}&quot;body&quot;^{_expr}}&quot;IfExp&quot;{?=&quot;test&quot;^{_expr}&quot;body&quot;^{_expr}&quot;orelse&quot;^{_expr}}&quot;Dict&quot;{?=&quot;keys&quot;^{?}&quot;values&quot;^{?}}&quot;Set&quot;{?=&quot;elts&quot;^{?}}&quot;ListComp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;SetComp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;DictComp&quot;{?=&quot;key&quot;^{_expr}&quot;value&quot;^{_expr}&quot;generators&quot;^{?}}&quot;GeneratorExp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;Yield&quot;{?=&quot;value&quot;^{_expr}}&quot;Compare&quot;{?=&quot;left&quot;^{_expr}&quot;ops&quot;^{?}&quot;comparators&quot;^{?}}&quot;Call&quot;{?=&quot;func&quot;^{_expr}&quot;args&quot;^{?}&quot;keywords&quot;^{?}&quot;starargs&quot;^{_expr}&quot;kwargs&quot;^{_expr}}&quot;Repr&quot;{?=&quot;value&quot;^{_expr}}&quot;Num&quot;{?=&quot;n&quot;^{_object}}&quot;Str&quot;{?=&quot;s&quot;^{_object}}&quot;Attribute&quot;{?=&quot;value&quot;^{_expr}&quot;attr&quot;^{_object}&quot;ctx&quot;i}&quot;Subscript&quot;{?=&quot;value&quot;^{_expr}&quot;slice&quot;^{_slice}&quot;ctx&quot;i}&quot;Name&quot;{?=&quot;id&quot;^{_object}&quot;ctx&quot;i}&quot;List&quot;{?=&quot;elts&quot;^{?}&quot;ctx&quot;i}&quot;Tuple&quot;{?=&quot;elts&quot;^{?}&quot;ctx&quot;i})'/>
+<field declared_type='union (anonymous union at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Python.framework/Headers/Python-ast.h:195:9)' name='v' type='(?=&quot;BoolOp&quot;{?=&quot;op&quot;i&quot;values&quot;^{?}}&quot;BinOp&quot;{?=&quot;left&quot;^{_expr}&quot;op&quot;i&quot;right&quot;^{_expr}}&quot;UnaryOp&quot;{?=&quot;op&quot;i&quot;operand&quot;^{_expr}}&quot;Lambda&quot;{?=&quot;args&quot;^{_arguments}&quot;body&quot;^{_expr}}&quot;IfExp&quot;{?=}&quot;Dict&quot;{?=&quot;keys&quot;^{?}&quot;values&quot;^{?}}&quot;Set&quot;{?=&quot;elts&quot;^{?}}&quot;ListComp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;SetComp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;DictComp&quot;{?=&quot;key&quot;^{_expr}&quot;value&quot;^{_expr}&quot;generators&quot;^{?}}&quot;GeneratorExp&quot;{?=&quot;elt&quot;^{_expr}&quot;generators&quot;^{?}}&quot;Yield&quot;{?=&quot;value&quot;^{_expr}}&quot;Compare&quot;{?=&quot;left&quot;^{_expr}&quot;ops&quot;^{?}&quot;comparators&quot;^{?}}&quot;Call&quot;{?=&quot;func&quot;^{_expr}&quot;args&quot;^{?}&quot;keywords&quot;^{?}&quot;starargs&quot;^{_expr}&quot;kwargs&quot;^{_expr}}&quot;Repr&quot;{?=&quot;value&quot;^{_expr}}&quot;Num&quot;{?=&quot;n&quot;^{_object}}&quot;Str&quot;{?=&quot;s&quot;^{_object}}&quot;Attribute&quot;{?=&quot;value&quot;^{_expr}&quot;attr&quot;^{_object}&quot;ctx&quot;i}&quot;Subscript&quot;{?=&quot;value&quot;^{_expr}&quot;slice&quot;^{_slice}&quot;ctx&quot;i}&quot;Name&quot;{?=&quot;id&quot;^{_object}&quot;ctx&quot;i}&quot;List&quot;{?=&quot;elts&quot;^{?}&quot;ctx&quot;i}&quot;Tuple&quot;{?=&quot;elts&quot;^{?}&quot;ctx&quot;i})'/>
 <field declared_type='int' name='lineno' type='i'/>
 <field declared_type='int' name='col_offset' type='i'/>
 </struct>
@@ -1261,7 +1243,7 @@
 </struct>
 <struct name='keyword_ty' type='{_keyword=&quot;arg&quot;^{_object}&quot;value&quot;^{_expr}}'>
 <field declared_type='identifier' name='arg' type='^{_object=i^{_typeobject}}' type64='^{_object=q^{_typeobject}}'/>
-<field declared_type='expr_ty' name='value' type='^{_expr=i(?={?=i^{?}}{?=^{_expr}i^{_expr}}{?=i^{_expr}}{?=^{_arguments}^{_expr}}{?=^{_expr}^{_expr}^{_expr}}{?=^{?}^{?}}{?=^{?}}{?=^{_expr}^{?}}{?=^{_expr}^{?}}{?=^{_expr}^{_expr}^{?}}{?=^{_expr}^{?}}{?=^{_expr}}{?=^{_expr}^{?}^{?}}{?=^{_expr}^{?}^{?}^{_expr}^{_expr}}{?=^{_expr}}{?=^{_object}}{?=^{_object}}{?=^{_expr}^{_object}i}{?=^{_expr}^{_slice}i}{?=^{_object}i}{?=^{?}i}{?=^{?}i})ii}'/>
+<field declared_type='expr_ty' name='value' type='^{_expr=}'/>
 </struct>
 <struct name='label' type='{_label=&quot;lb_type&quot;i&quot;lb_str&quot;*}'>
 <field declared_type='int' name='lb_type' type='i'/>
@@ -1314,9 +1296,9 @@
 <field declared_type='int*' name='s_accel' type='^i'/>
 <field declared_type='int' name='s_accept' type='i'/>
 </struct>
-<struct name='stmt_ty' type='{_stmt=&quot;kind&quot;i&quot;v&quot;(?=&quot;FunctionDef&quot;{?=&quot;name&quot;^{_object}&quot;args&quot;^{_arguments}&quot;body&quot;^{?}&quot;decorator_list&quot;^{?}}&quot;ClassDef&quot;{?=&quot;name&quot;^{_object}&quot;bases&quot;^{?}&quot;body&quot;^{?}&quot;decorator_list&quot;^{?}}&quot;Return&quot;{?=&quot;value&quot;^{_expr}}&quot;Delete&quot;{?=&quot;targets&quot;^{?}}&quot;Assign&quot;{?=&quot;targets&quot;^{?}&quot;value&quot;^{_expr}}&quot;AugAssign&quot;{?=&quot;target&quot;^{_expr}&quot;op&quot;i&quot;value&quot;^{_expr}}&quot;Print&quot;{?=&quot;dest&quot;^{_expr}&quot;values&quot;^{?}&quot;nl&quot;B}&quot;For&quot;{?=&quot;target&quot;^{_expr}&quot;iter&quot;^{_expr}&quot;body&quot;^{?}&quot;orelse&quot;^{?}}&quot;While&quot;{?=&quot;test&quot;^{_expr}&quot;body&quot;^{?}&quot;orelse&quot;^{?}}&quot;If&quot;{?=&quot;test&quot;^{_expr}&quot;body&quot;^{?}&quot;orelse&quot;^{?}}&quot;With&quot;{?=&quot;context_expr&quot;^{_expr}&quot;optional_vars&quot;^{_expr}&quot;body&quot;^{?}}&quot;Raise&quot;{?=&quot;type&quot;^{_expr}&quot;inst&quot;^{_expr}&quot;tback&quot;^{_expr}}&quot;TryExcept&quot;{?=&quot;body&quot;^{?}&quot;handlers&quot;^{?}&quot;orelse&quot;^{?}}&quot;TryFinally&quot;{?=&quot;body&quot;^{?}&quot;finalbody&quot;^{?}}&quot;Assert&quot;{?=&quot;test&quot;^{_expr}&quot;msg&quot;^{_expr}}&quot;Import&quot;{?=&quot;names&quot;^{?}}&quot;ImportFrom&quot;{?=&quot;module&quot;^{_object}&quot;names&quot;^{?}&quot;level&quot;i}&quot;Exec&quot;{?=&quot;body&quot;^{_expr}&quot;globals&quot;^{_expr}&quot;locals&quot;^{_expr}}&quot;Global&quot;{?=&quot;names&quot;^{?}}&quot;Expr&quot;{?=&quot;value&quot;^{_expr}})&quot;lineno&quot;i&quot;col_offset&quot;i}'>
+<struct name='stmt_ty' type='{_stmt=}'>
 <field declared_type='enum _stmt_kind' name='kind' type='i'/>
-<field declared_type='union (anonymous union at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Python.framework/Headers/Python-ast.h:71:9)' name='v' type='(?=&quot;FunctionDef&quot;{?=&quot;name&quot;^{_object}&quot;args&quot;^{_arguments}&quot;body&quot;^{?}&quot;decorator_list&quot;^{?}}&quot;ClassDef&quot;{?=&quot;name&quot;^{_object}&quot;bases&quot;^{?}&quot;body&quot;^{?}&quot;decorator_list&quot;^{?}}&quot;Return&quot;{?=&quot;value&quot;^{_expr}}&quot;Delete&quot;{?=&quot;targets&quot;^{?}}&quot;Assign&quot;{?=&quot;targets&quot;^{?}&quot;value&quot;^{_expr}}&quot;AugAssign&quot;{?=&quot;target&quot;^{_expr}&quot;op&quot;i&quot;value&quot;^{_expr}}&quot;Print&quot;{?=&quot;dest&quot;^{_expr}&quot;values&quot;^{?}&quot;nl&quot;B}&quot;For&quot;{?=&quot;target&quot;^{_expr}&quot;iter&quot;^{_expr}&quot;body&quot;^{?}&quot;orelse&quot;^{?}}&quot;While&quot;{?=&quot;test&quot;^{_expr}&quot;body&quot;^{?}&quot;orelse&quot;^{?}}&quot;If&quot;{?=&quot;test&quot;^{_expr}&quot;body&quot;^{?}&quot;orelse&quot;^{?}}&quot;With&quot;{?=&quot;context_expr&quot;^{_expr}&quot;optional_vars&quot;^{_expr}&quot;body&quot;^{?}}&quot;Raise&quot;{?=&quot;type&quot;^{_expr}&quot;inst&quot;^{_expr}&quot;tback&quot;^{_expr}}&quot;TryExcept&quot;{?=&quot;body&quot;^{?}&quot;handlers&quot;^{?}&quot;orelse&quot;^{?}}&quot;TryFinally&quot;{?=&quot;body&quot;^{?}&quot;finalbody&quot;^{?}}&quot;Assert&quot;{?=&quot;test&quot;^{_expr}&quot;msg&quot;^{_expr}}&quot;Import&quot;{?=&quot;names&quot;^{?}}&quot;ImportFrom&quot;{?=&quot;module&quot;^{_object}&quot;names&quot;^{?}&quot;level&quot;i}&quot;Exec&quot;{?=&quot;body&quot;^{_expr}&quot;globals&quot;^{_expr}&quot;locals&quot;^{_expr}}&quot;Global&quot;{?=&quot;names&quot;^{?}}&quot;Expr&quot;{?=&quot;value&quot;^{_expr}})'/>
+<field declared_type='union (anonymous union at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Python.framework/Headers/Python-ast.h:71:9)' name='v' type='(?=&quot;FunctionDef&quot;{?=&quot;name&quot;^{_object}&quot;args&quot;^{_arguments}&quot;body&quot;^{?}&quot;decorator_list&quot;^{?}}&quot;ClassDef&quot;{?=&quot;name&quot;^{_object}&quot;bases&quot;^{?}&quot;body&quot;^{?}&quot;decorator_list&quot;^{?}}&quot;Return&quot;{?=&quot;value&quot;^{_expr}}&quot;Delete&quot;{?=&quot;targets&quot;^{?}}&quot;Assign&quot;{?=&quot;targets&quot;^{?}&quot;value&quot;^{_expr}}&quot;AugAssign&quot;{?=&quot;target&quot;^{_expr}&quot;op&quot;i&quot;value&quot;^{_expr}}&quot;Print&quot;{?=&quot;dest&quot;^{_expr}&quot;values&quot;^{?}&quot;nl&quot;B}&quot;For&quot;{?=&quot;target&quot;^{_expr}&quot;iter&quot;^{_expr}&quot;body&quot;^{?}&quot;orelse&quot;^{?}}&quot;While&quot;{?=}&quot;If&quot;{?=}&quot;With&quot;{?=&quot;context_expr&quot;^{_expr}&quot;optional_vars&quot;^{_expr}&quot;body&quot;^{?}}&quot;Raise&quot;{?=&quot;type&quot;^{_expr}&quot;inst&quot;^{_expr}&quot;tback&quot;^{_expr}}&quot;TryExcept&quot;{?=&quot;body&quot;^{?}&quot;handlers&quot;^{?}&quot;orelse&quot;^{?}}&quot;TryFinally&quot;{?=&quot;body&quot;^{?}&quot;finalbody&quot;^{?}}&quot;Assert&quot;{?=}&quot;Import&quot;{?=&quot;names&quot;^{?}}&quot;ImportFrom&quot;{?=&quot;module&quot;^{_object}&quot;names&quot;^{?}&quot;level&quot;i}&quot;Exec&quot;{?=&quot;body&quot;^{_expr}&quot;globals&quot;^{_expr}&quot;locals&quot;^{_expr}}&quot;Global&quot;{?=&quot;names&quot;^{?}}&quot;Expr&quot;{?=&quot;value&quot;^{_expr}})'/>
 <field declared_type='int' name='lineno' type='i'/>
 <field declared_type='int' name='col_offset' type='i'/>
 </struct>
@@ -2473,7 +2455,7 @@
 <retval declared_type='PyCodeObject*' type='^{_PyCodeObject=i^{_typeobject}iiii^{_object}^{_object}^{_object}^{_object}^{_object}^{_object}^{_object}^{_object}i^{_object}^v^{_object}}' type64='^{_PyCodeObject=q^{_typeobject}iiii^{_object}^{_object}^{_object}^{_object}^{_object}^{_object}^{_object}^{_object}i^{_object}^v^{_object}}'/>
 </function>
 <function name='PyAST_FromNode'>
-<arg const='true' declared_type='node*' type='^{_node=s*iii^{_node}}'/>
+<arg const='true' declared_type='int*' type='^i'/>
 <arg declared_type='PyCompilerFlags*' name='flags' type='^{_PyCompilerFlags=i}'/>
 <arg const='true' declared_type='char*' type='*'/>
 <arg declared_type='PyArena*' type='^{_arena=}'/>
@@ -4762,67 +4744,67 @@
 <function name='PyParser_ParseFile'>
 <arg declared_type='FILE*' type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
 <arg const='true' declared_type='char*' type='*'/>
-<arg declared_type='int*' type='^i'/>
+<arg declared_type='grammar*' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
 <arg declared_type='int' type='i'/>
 <arg declared_type='char*' type='*'/>
 <arg declared_type='char*' type='*'/>
 <arg declared_type='perrdetail*' type='^{_perrdetail=i*ii*ii}'/>
-<retval declared_type='int*' type='^i'/>
+<retval declared_type='node*' type='^{_node=s*iii^{_node}}'/>
 </function>
 <function name='PyParser_ParseFileFlags'>
 <arg declared_type='FILE*' type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
 <arg const='true' declared_type='char*' type='*'/>
-<arg declared_type='int*' type='^i'/>
+<arg declared_type='grammar*' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
 <arg declared_type='int' type='i'/>
 <arg declared_type='char*' type='*'/>
 <arg declared_type='char*' type='*'/>
 <arg declared_type='perrdetail*' type='^{_perrdetail=i*ii*ii}'/>
 <arg declared_type='int' type='i'/>
-<retval declared_type='int*' type='^i'/>
+<retval declared_type='node*' type='^{_node=s*iii^{_node}}'/>
 </function>
 <function name='PyParser_ParseFileFlagsEx'>
 <arg declared_type='FILE*' type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
 <arg const='true' declared_type='char*' type='*'/>
-<arg declared_type='int*' type='^i'/>
+<arg declared_type='grammar*' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
 <arg declared_type='int' type='i'/>
 <arg declared_type='char*' type='*'/>
 <arg declared_type='char*' type='*'/>
 <arg declared_type='perrdetail*' type='^{_perrdetail=i*ii*ii}'/>
 <arg declared_type='int*' type='^i'/>
-<retval declared_type='int*' type='^i'/>
+<retval declared_type='node*' type='^{_node=s*iii^{_node}}'/>
 </function>
 <function name='PyParser_ParseString'>
 <arg const='true' declared_type='char*' type='*'/>
-<arg declared_type='int*' type='^i'/>
+<arg declared_type='grammar*' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
 <arg declared_type='int' type='i'/>
 <arg declared_type='perrdetail*' type='^{_perrdetail=i*ii*ii}'/>
-<retval declared_type='int*' type='^i'/>
+<retval declared_type='node*' type='^{_node=s*iii^{_node}}'/>
 </function>
 <function name='PyParser_ParseStringFlags'>
 <arg const='true' declared_type='char*' type='*'/>
-<arg declared_type='int*' type='^i'/>
+<arg declared_type='grammar*' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
 <arg declared_type='int' type='i'/>
 <arg declared_type='perrdetail*' type='^{_perrdetail=i*ii*ii}'/>
 <arg declared_type='int' type='i'/>
-<retval declared_type='int*' type='^i'/>
+<retval declared_type='node*' type='^{_node=s*iii^{_node}}'/>
 </function>
 <function name='PyParser_ParseStringFlagsFilename'>
 <arg const='true' declared_type='char*' type='*'/>
 <arg const='true' declared_type='char*' type='*'/>
-<arg declared_type='int*' type='^i'/>
+<arg declared_type='grammar*' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
 <arg declared_type='int' type='i'/>
 <arg declared_type='perrdetail*' type='^{_perrdetail=i*ii*ii}'/>
 <arg declared_type='int' type='i'/>
-<retval declared_type='int*' type='^i'/>
+<retval declared_type='node*' type='^{_node=s*iii^{_node}}'/>
 </function>
 <function name='PyParser_ParseStringFlagsFilenameEx'>
 <arg const='true' declared_type='char*' type='*'/>
 <arg const='true' declared_type='char*' type='*'/>
-<arg declared_type='int*' type='^i'/>
+<arg declared_type='grammar*' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
 <arg declared_type='int' type='i'/>
 <arg declared_type='perrdetail*' type='^{_perrdetail=i*ii*ii}'/>
 <arg declared_type='int*' type='^i'/>
-<retval declared_type='int*' type='^i'/>
+<retval declared_type='node*' type='^{_node=s*iii^{_node}}'/>
 </function>
 <function name='PyParser_SetError'>
 <arg declared_type='perrdetail*' type='^{_perrdetail=i*ii*ii}'/>
@@ -5193,6 +5175,9 @@
 <retval declared_type='PyObject*' type='^{_object=i^{_typeobject}}' type64='^{_object=q^{_typeobject}}'/>
 </function>
 <function name='PySymtable_Build'>
+<arg declared_type='mod_ty' type='^{_mod=i(?={?=^{?}}{?=^{?}}{?=^{_expr}}{?=^{?}})}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg declared_type='PyFutureFeatures*' type='^{_PyFutureFeatures=ii}'/>
 <retval declared_type='struct symtable*' type='^{symtable=*^{_symtable_entry}^{_symtable_entry}^{_object}^{_object}^{_object}i^{_object}^{?}}'/>
 </function>
 <function name='PySymtable_Free'>
@@ -6267,42 +6252,6 @@
 <arg declared_type='Py_UNICODE' name='ch' type='S'/>
 <retval declared_type='Py_UNICODE' type='S'/>
 </function>
-<function name='_Py_Compare'>
-<arg declared_type64='expr_ty' name='left' type64='^{_expr=i(?={?=i^{?}}{?=^{_expr}i^{_expr}}{?=i^{_expr}}{?=^{_arguments}^{_expr}}{?=^{_expr}^{_expr}^{_expr}}{?=^{?}^{?}}{?=^{?}}{?=^{_expr}^{?}}{?=^{_expr}^{?}}{?=^{_expr}^{_expr}^{?}}{?=^{_expr}^{?}}{?=^{_expr}}{?=^{_expr}^{?}^{?}}{?=^{_expr}^{?}^{?}^{_expr}^{_expr}}{?=^{_expr}}{?=^{_object}}{?=^{_object}}{?=^{_expr}^{_object}i}{?=^{_expr}^{_slice}i}{?=^{_object}i}{?=^{?}i}{?=^{?}i})ii}'/>
-<arg declared_type64='asdl_int_seq*' name='ops' type64='^{_asdl_int_seq=i[1i]}'/>
-<arg declared_type64='asdl_seq*' name='comparators' type64='^{_asdl_seq=i[1^v]}'/>
-<arg declared_type64='int' name='lineno' type64='i'/>
-<arg declared_type64='int' name='col_offset' type64='i'/>
-<arg declared_type64='PyArena*' name='arena' type64='^{_arena=}'/>
-<retval declared_type64='expr_ty' type64='^{_expr=i(?={?=i^{?}}{?=^{_expr}i^{_expr}}{?=i^{_expr}}{?=^{_arguments}^{_expr}}{?=^{_expr}^{_expr}^{_expr}}{?=^{?}^{?}}{?=^{?}}{?=^{_expr}^{?}}{?=^{_expr}^{?}}{?=^{_expr}^{_expr}^{?}}{?=^{_expr}^{?}}{?=^{_expr}}{?=^{_expr}^{?}^{?}}{?=^{_expr}^{?}^{?}^{_expr}^{_expr}}{?=^{_expr}}{?=^{_object}}{?=^{_object}}{?=^{_expr}^{_object}i}{?=^{_expr}^{_slice}i}{?=^{_object}i}{?=^{?}i}{?=^{?}i})ii}'/>
-</function>
-<function name='_Py_addarc'>
-<arg declared_type='dfa*' name='d' type='^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}'/>
-<arg declared_type='int' name='from' type='i'/>
-<arg declared_type='int' name='to' type='i'/>
-<arg declared_type='int' name='lbl' type='i'/>
-<retval declared_type='void' type='v'/>
-</function>
-<function name='_Py_adddfa'>
-<arg declared_type='grammar*' name='g' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
-<arg declared_type='int' name='type' type='i'/>
-<arg declared_type='char*' name='name' type='*'/>
-<retval declared_type='dfa*' type='^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}'/>
-</function>
-<function name='_Py_addfirstsets'>
-<arg declared_type='grammar*' name='g' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
-<retval declared_type='void' type='v'/>
-</function>
-<function name='_Py_addlabel'>
-<arg declared_type='labellist*' name='ll' type='^{_labellist=i^{_label=i*}}'/>
-<arg declared_type='int' name='type' type='i'/>
-<arg declared_type='char*' name='str' type='*'/>
-<retval declared_type='int' type='i'/>
-</function>
-<function name='_Py_addstate'>
-<arg declared_type='dfa*' name='d' type='^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}'/>
-<retval declared_type='int' type='i'/>
-</function>
 <function name='_Py_c_abs'>
 <arg declared_type='Py_complex' type='{_Py_complex=dd}'/>
 <retval declared_type='double' type='d'/>
@@ -6336,33 +6285,36 @@
 <arg declared_type='Py_complex' type='{_Py_complex=dd}'/>
 <retval declared_type='Py_complex' type='{_Py_complex=dd}'/>
 </function>
-<function name='_Py_findlabel'>
-<arg declared_type='labellist*' name='ll' type='^{_labellist=i^{_label=i*}}'/>
-<arg declared_type='int' name='type' type='i'/>
-<arg declared_type='char*' name='str' type='*'/>
-<retval declared_type='int' type='i'/>
-</function>
-<function name='_Py_newgrammar'>
-<arg declared_type='int' name='start' type='i'/>
-<retval declared_type='grammar*' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
-</function>
-<function name='_Py_printgrammar'>
-<arg declared_type='grammar*' name='g' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
-<arg declared_type='FILE*' name='fp' type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
-<retval declared_type='void' type='v'/>
-</function>
-<function name='_Py_printnonterminals'>
-<arg declared_type='grammar*' name='g' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
-<arg declared_type='FILE*' name='fp' type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
-<retval declared_type='void' type='v'/>
-</function>
-<function name='_Py_translatelabels'>
-<arg declared_type='grammar*' name='g' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
+<function name='addarc'>
+<arg declared_type='dfa*' name='d' type='^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}'/>
+<arg declared_type='int' name='from' type='i'/>
+<arg declared_type='int' name='to' type='i'/>
+<arg declared_type='int' name='lbl' type='i'/>
 <retval declared_type='void' type='v'/>
 </function>
 <function name='addbit'>
 <arg declared_type='bitset' name='bs' type='*'/>
 <arg declared_type='int' name='ibit' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='adddfa'>
+<arg declared_type='grammar*' name='g' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
+<arg declared_type='int' name='type' type='i'/>
+<arg declared_type='char*' name='name' type='*'/>
+<retval declared_type='dfa*' type='^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}'/>
+</function>
+<function name='addfirstsets'>
+<arg declared_type='grammar*' name='g' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='addlabel'>
+<arg declared_type='labellist*' name='ll' type='^{_labellist=i^{_label=i*}}'/>
+<arg declared_type='int' name='type' type='i'/>
+<arg declared_type='char*' name='str' type='*'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='addstate'>
+<arg declared_type='dfa*' name='d' type='^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}'/>
 <retval declared_type='int' type='i'/>
 </function>
 <function name='asdl_int_seq_new'>
@@ -6379,6 +6331,12 @@
 <arg declared_type='bitset' name='bs' type='*'/>
 <retval declared_type='void' type='v'/>
 </function>
+<function name='findlabel'>
+<arg declared_type='labellist*' name='ll' type='^{_labellist=i^{_label=i*}}'/>
+<arg declared_type='int' name='type' type='i'/>
+<arg declared_type='char*' name='str' type='*'/>
+<retval declared_type='int' type='i'/>
+</function>
 <function name='mergebitset'>
 <arg declared_type='bitset' name='bs1' type='*'/>
 <arg declared_type='bitset' name='bs2' type='*'/>
@@ -6386,15 +6344,29 @@
 <retval declared_type='void' type='v'/>
 </function>
 <function name='meta_grammar'>
-<retval declared_type='int*' type='^i'/>
+<retval declared_type='grammar*' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
 </function>
 <function name='newbitset'>
 <arg declared_type='int' name='nbits' type='i'/>
 <retval declared_type='bitset' type='*'/>
 </function>
+<function name='newgrammar'>
+<arg declared_type='int' name='start' type='i'/>
+<retval declared_type='grammar*' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
+</function>
 <function name='pgen'>
 <arg declared_type='struct _node*' type='^{_node=s*iii^{_node}}'/>
-<retval declared_type='int*' type='^i'/>
+<retval declared_type='grammar*' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
+</function>
+<function name='printgrammar'>
+<arg declared_type='grammar*' name='g' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
+<arg declared_type='FILE*' name='fp' type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='printnonterminals'>
+<arg declared_type='grammar*' name='g' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
+<arg declared_type='FILE*' name='fp' type='^{__sFILE=*iiss{__sbuf=*i}i^v^?^?^?^?{__sbuf=*i}^{__sFILEX}i[3C][1C]{__sbuf=*i}iq}'/>
+<retval declared_type='void' type='v'/>
 </function>
 <function name='samebitset'>
 <arg declared_type='bitset' name='bs1' type='*'/>
@@ -6402,9 +6374,12 @@
 <arg declared_type='int' name='nbits' type='i'/>
 <retval declared_type='int' type='i'/>
 </function>
+<function name='translatelabels'>
+<arg declared_type='grammar*' name='g' type='^{_grammar=i^{_dfa=i*ii^{_state=i^{_arc=ss}ii^ii}*}{_labellist=i^{_label=i*}}ii}'/>
+<retval declared_type='void' type='v'/>
+</function>
 <function_alias name='PyBytes_AsString' original='PyString_AsString'/>
 <function_alias name='PyBytes_AsStringAndSize' original='PyString_AsStringAndSize'/>
-<function_alias name='PyBytes_CheckExact' original='PyString_Concat'/>
 <function_alias name='PyBytes_Concat' original='PyString_Concat'/>
 <function_alias name='PyBytes_ConcatAndDel' original='PyString_ConcatAndDel'/>
 <function_alias name='PyBytes_DecodeEscape' original='PyString_DecodeEscape'/>
@@ -6509,6 +6484,7 @@
 <function_alias name='_PyObject_Del' original='PyObject_Free'/>
 <function_alias name='_PyObject_GC_Del' original='PyObject_GC_Del'/>
 <function_alias name='_PyUnicode_AsDefaultEncodedString' original='_PyUnicodeUCS2_AsDefaultEncodedString'/>
+<function_alias name='_PyUnicode_Fini' original='PyUnicodeUCS2_Find'/>
 <function_alias name='_PyUnicode_IsAlpha' original='_PyUnicodeUCS2_IsAlpha'/>
 <function_alias name='_PyUnicode_IsDecimalDigit' original='_PyUnicodeUCS2_IsDecimalDigit'/>
 <function_alias name='_PyUnicode_IsDigit' original='_PyUnicodeUCS2_IsDigit'/>
@@ -6524,11 +6500,9 @@
 <function_alias name='_PyUnicode_ToNumeric' original='_PyUnicodeUCS2_ToNumeric'/>
 <function_alias name='_PyUnicode_ToTitlecase' original='_PyUnicodeUCS2_ToTitlecase'/>
 <function_alias name='_PyUnicode_ToUppercase' original='_PyUnicodeUCS2_ToUppercase'/>
-<function_alias name='addarc' original='_Py_addarc'/>
-<function_alias name='adddfa' original='_Py_adddfa'/>
-<function_alias name='addfirstsets' original='_Py_addfirstsets'/>
-<function_alias name='addlabel' original='_Py_addlabel'/>
-<function_alias name='addstate' original='_Py_addstate'/>
+<function_alias name='addfirstsets' original='addfirstsets'/>
+<function_alias name='addlabel' original='addlabel'/>
+<function_alias name='addstate' original='addstate'/>
 <function_alias name='c_abs' original='_Py_c_abs'/>
 <function_alias name='c_diff' original='_Py_c_diff'/>
 <function_alias name='c_neg' original='_Py_c_neg'/>
@@ -6536,10 +6510,10 @@
 <function_alias name='c_prod' original='_Py_c_prod'/>
 <function_alias name='c_quot' original='_Py_c_quot'/>
 <function_alias name='c_sum' original='_Py_c_sum'/>
-<function_alias name='dumptree' original='_Py_Compare'/>
-<function_alias name='findlabel' original='_Py_findlabel'/>
-<function_alias name='newgrammar' original='_Py_newgrammar'/>
-<function_alias name='printgrammar' original='_Py_printgrammar'/>
-<function_alias name='printnonterminals' original='_Py_printnonterminals'/>
-<function_alias name='translatelabels' original='_Py_translatelabels'/>
+<function_alias name='findlabel' original='findlabel'/>
+<function_alias name='newbitset' original='newbitset'/>
+<function_alias name='newgrammar' original='newgrammar'/>
+<function_alias name='printgrammar' original='printgrammar'/>
+<function_alias name='printnonterminals' original='printnonterminals'/>
+<function_alias name='translatelabels' original='translatelabels'/>
 </signatures>

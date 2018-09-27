@@ -1,0 +1,958 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<struct name='LSApplicationParameters' type64='{LSApplicationParameters=&quot;version&quot;q&quot;flags&quot;I&quot;application&quot;^{FSRef}&quot;asyncLaunchRefCon&quot;^v&quot;environment&quot;^{__CFDictionary}&quot;argv&quot;^{__CFArray}&quot;initialEvent&quot;^{AEDesc}}'>
+<field declared_type64='CFIndex' name='version' type64='q'/>
+<field declared_type64='LSLaunchFlags' name='flags' type64='I'/>
+<field const='true' declared_type64='FSRef*' name='application' type64='^{FSRef=[80C]}'/>
+<field declared_type64='void*' name='asyncLaunchRefCon' type64='^v'/>
+<field declared_type64='CFDictionaryRef' name='environment' type64='^{__CFDictionary=}'/>
+<field declared_type64='CFArrayRef' name='argv' type64='^{__CFArray=}'/>
+<field declared_type64='AppleEvent*' name='initialEvent' type64='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+</struct>
+<struct name='LSItemInfoRecord' type64='{LSItemInfoRecord=&quot;flags&quot;I&quot;filetype&quot;I&quot;creator&quot;I&quot;extension&quot;^{__CFString}}'>
+<field declared_type64='LSItemInfoFlags' name='flags' type64='I'/>
+<field declared_type64='OSType' name='filetype' type64='I'/>
+<field declared_type64='OSType' name='creator' type64='I'/>
+<field declared_type64='CFStringRef' name='extension' type64='^{__CFString=}'/>
+</struct>
+<struct name='LSLaunchFSRefSpec' type64='{LSLaunchFSRefSpec=&quot;appRef&quot;^{FSRef}&quot;numDocs&quot;Q&quot;itemRefs&quot;^{FSRef}&quot;passThruParams&quot;^{AEDesc}&quot;launchFlags&quot;I&quot;asyncRefCon&quot;^v}'>
+<field const='true' declared_type64='FSRef*' name='appRef' type64='^{FSRef=[80C]}'/>
+<field declared_type64='ItemCount' name='numDocs' type64='Q'/>
+<field const='true' declared_type64='FSRef*' name='itemRefs' type64='^{FSRef=[80C]}'/>
+<field const='true' declared_type64='AEDesc*' name='passThruParams' type64='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<field declared_type64='LSLaunchFlags' name='launchFlags' type64='I'/>
+<field declared_type64='void*' name='asyncRefCon' type64='^v'/>
+</struct>
+<struct name='LSLaunchURLSpec' type64='{LSLaunchURLSpec=&quot;appURL&quot;^{__CFURL}&quot;itemURLs&quot;^{__CFArray}&quot;passThruParams&quot;^{AEDesc}&quot;launchFlags&quot;I&quot;asyncRefCon&quot;^v}'>
+<field declared_type64='CFURLRef _Nullable' name='appURL' type64='^{__CFURL=}'/>
+<field declared_type64='CFArrayRef _Nullable' name='itemURLs' type64='^{__CFArray=}'/>
+<field const='true' declared_type64='AEDesc * _Nullable' name='passThruParams' type64='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<field declared_type64='LSLaunchFlags' name='launchFlags' type64='I'/>
+<field declared_type64='void * _Nullable' name='asyncRefCon' type64='^v'/>
+</struct>
+<cftype name='IconRef' type64='^{OpaqueIconRef=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kLSItemContentType' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kLSItemDisplayKind' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kLSItemDisplayName' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kLSItemExtension' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kLSItemExtensionIsHidden' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kLSItemFileCreator' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kLSItemFileType' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kLSItemIsInvisible' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kLSItemQuarantineProperties' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kLSItemRoleHandlerDisplayName' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kLSQuarantineAgentBundleIdentifierKey' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kLSQuarantineAgentNameKey' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kLSQuarantineDataURLKey' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kLSQuarantineOriginURLKey' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kLSQuarantineTimeStampKey' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kLSQuarantineTypeCalendarEventAttachment' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kLSQuarantineTypeEmailAttachment' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kLSQuarantineTypeInstantMessageAttachment' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kLSQuarantineTypeKey' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kLSQuarantineTypeOtherAttachment' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kLSQuarantineTypeOtherDownload' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kLSQuarantineTypeWebDownload' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTExportedTypeDeclarationsKey' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTImportedTypeDeclarationsKey' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTagClassFilenameExtension' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTagClassMIMEType' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTagClassNSPboardType' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTagClassOSType' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTType3DContent' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeAVIMovie' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeAliasFile' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeAliasRecord' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeAppleICNS' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeAppleProtectedMPEG4Audio' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeAppleProtectedMPEG4Video' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeAppleScript' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeApplication' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeApplicationBundle' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeApplicationFile' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeArchive' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeAssemblyLanguageSource' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeAudio' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeAudioInterchangeFileFormat' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeAudiovisualContent' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeBMP' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeBinaryPropertyList' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeBookmark' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeBundle' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeBzip2Archive' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeCHeader' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeCPlusPlusHeader' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeCPlusPlusSource' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeCSource' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeCalendarEvent' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeCommaSeparatedText' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeCompositeContent' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeConformsToKey' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeContact' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeContent' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeData' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeDatabase' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeDelimitedText' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeDescriptionKey' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeDirectory' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeDiskImage' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeElectronicPublication' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeEmailMessage' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeExecutable' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeFileURL' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeFlatRTFD' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeFolder' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeFont' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeFramework' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeGIF' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeGNUZipArchive' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeHTML' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeICO' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeIconFileKey' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeIdentifierKey' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeImage' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeInkText' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeInternetLocation' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeItem' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeJPEG' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeJPEG2000' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeJSON' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeJavaArchive' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeJavaClass' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeJavaScript' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeJavaSource' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeLivePhoto' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeLog' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeM3UPlaylist' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeMIDIAudio' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeMP3' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeMPEG' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeMPEG2TransportStream' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeMPEG2Video' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeMPEG4' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeMPEG4Audio' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeMessage' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeMountPoint' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeMovie' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeOSAScript' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeOSAScriptBundle' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeObjectiveCPlusPlusSource' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeObjectiveCSource' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypePDF' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypePHPScript' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypePICT' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypePKCS12' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypePNG' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypePackage' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypePerlScript' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypePlainText' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypePlaylist' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypePluginBundle' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypePresentation' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypePropertyList' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypePythonScript' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeQuickLookGenerator' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeQuickTimeImage' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeQuickTimeMovie' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeRTF' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeRTFD' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeRawImage' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeReferenceURLKey' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeResolvable' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeRubyScript' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeScalableVectorGraphics' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeScript' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeShellScript' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeSourceCode' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeSpotlightImporter' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeSpreadsheet' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeSwiftSource' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeSymLink' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeSystemPreferencesPane' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeTIFF' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeTXNTextAndMultimediaData' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeTabSeparatedText' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeTagSpecificationKey' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeText' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeToDoItem' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeURL' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeURLBookmarkData' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeUTF16ExternalPlainText' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeUTF16PlainText' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeUTF8PlainText' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeUTF8TabSeparatedText' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeUnixExecutable' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeVCard' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeVersionKey' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeVideo' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeVolume' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeWaveformAudio' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeWebArchive' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeWindowsExecutable' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeX509Certificate' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeXML' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeXMLPropertyList' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeXPCService' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kUTTypeZipArchive' type64='^{__CFString=}'/>
+<enum name='appleMenuFolderIconResource' value64='-3982'/>
+<enum name='controlPanelFolderIconResource' value64='-3976'/>
+<enum name='desktopIconResource' value64='-3992'/>
+<enum name='dropFolderIconResource' value64='-3979'/>
+<enum name='extensionsFolderIconResource' value64='-3973'/>
+<enum name='floppyIconResource' value64='-3998'/>
+<enum name='fontsFolderIconResource' value64='-3968'/>
+<enum name='fullTrashIconResource' value64='-3984'/>
+<enum name='genericApplicationIconResource' value64='-3996'/>
+<enum name='genericCDROMIconResource' value64='-3987'/>
+<enum name='genericDeskAccessoryIconResource' value64='-3991'/>
+<enum name='genericDocumentIconResource' value64='-4000'/>
+<enum name='genericEditionFileIconResource' value64='-3989'/>
+<enum name='genericExtensionIconResource' value64='-16415'/>
+<enum name='genericFileServerIconResource' value64='-3972'/>
+<enum name='genericFolderIconResource' value64='-3999'/>
+<enum name='genericHardDiskIconResource' value64='-3995'/>
+<enum name='genericMoverObjectIconResource' value64='-3969'/>
+<enum name='genericPreferencesIconResource' value64='-3971'/>
+<enum name='genericQueryDocumentIconResource' value64='-16506'/>
+<enum name='genericRAMDiskIconResource' value64='-3988'/>
+<enum name='genericStationeryIconResource' value64='-3985'/>
+<enum name='genericSuitcaseIconResource' value64='-3970'/>
+<enum name='kAFPServerIcon' value64='1634103411'/>
+<enum name='kAlertCautionBadgeIcon' value64='1667392615'/>
+<enum name='kAlertCautionIcon' value64='1667331444'/>
+<enum name='kAlertNoteIcon' value64='1852798053'/>
+<enum name='kAlertStopIcon' value64='1937010544'/>
+<enum name='kAliasBadgeIcon' value64='1633838183'/>
+<enum name='kAppearanceFolderIcon' value64='1634758770'/>
+<enum name='kAppleExtrasFolderIcon' value64='1634040004'/>
+<enum name='kAppleLogoIcon' value64='1667330156'/>
+<enum name='kAppleMenuFolderIcon' value64='1634561653'/>
+<enum name='kAppleMenuFolderIconResource' value64='-3982'/>
+<enum name='kAppleMenuIcon' value64='1935765612'/>
+<enum name='kAppleScriptBadgeIcon' value64='1935897200'/>
+<enum name='kAppleTalkIcon' value64='1635019883'/>
+<enum name='kAppleTalkZoneIcon' value64='1635023470'/>
+<enum name='kApplicationSupportFolderIcon' value64='1634956656'/>
+<enum name='kApplicationsFolderIcon' value64='1634758771'/>
+<enum name='kAssistantsFolderIcon' value64='1634956484'/>
+<enum name='kBackwardArrowIcon' value64='1650553455'/>
+<enum name='kBurningIcon' value64='1651864174'/>
+<enum name='kClipboardIcon' value64='1129072976'/>
+<enum name='kClippingPictureTypeIcon' value64='1668051056'/>
+<enum name='kClippingSoundTypeIcon' value64='1668051059'/>
+<enum name='kClippingTextTypeIcon' value64='1668051060'/>
+<enum name='kClippingUnknownTypeIcon' value64='1668051061'/>
+<enum name='kColorSyncFolderIcon' value64='1886547814'/>
+<enum name='kComputerIcon' value64='1919905652'/>
+<enum name='kConnectToIcon' value64='1668178804'/>
+<enum name='kContextualMenuItemsFolderIcon' value64='1668116085'/>
+<enum name='kControlPanelDisabledFolderIcon' value64='1668575812'/>
+<enum name='kControlPanelFolderIcon' value64='1668575852'/>
+<enum name='kControlPanelFolderIconResource' value64='-3976'/>
+<enum name='kControlStripModulesFolderIcon' value64='1935963844'/>
+<enum name='kDeleteAliasIcon' value64='1684106345'/>
+<enum name='kDesktopIcon' value64='1684370283'/>
+<enum name='kDesktopIconResource' value64='-3992'/>
+<enum name='kDocumentsFolderIcon' value64='1685021555'/>
+<enum name='kDropFolderIcon' value64='1684172664'/>
+<enum name='kDropFolderIconResource' value64='-3979'/>
+<enum name='kEjectMediaIcon' value64='1701471587'/>
+<enum name='kExtensionsDisabledFolderIcon' value64='1702392900'/>
+<enum name='kExtensionsFolderIcon' value64='1702392942'/>
+<enum name='kExtensionsFolderIconResource' value64='-3973'/>
+<enum name='kFTPServerIcon' value64='1718906995'/>
+<enum name='kFavoriteItemsIcon' value64='1717663346'/>
+<enum name='kFavoritesFolderIcon' value64='1717663347'/>
+<enum name='kFinderIcon' value64='1179534418'/>
+<enum name='kFloppyIconResource' value64='-3998'/>
+<enum name='kFontSuitcaseIcon' value64='1179011404'/>
+<enum name='kFontsFolderIcon' value64='1718578804'/>
+<enum name='kFontsFolderIconResource' value64='-3968'/>
+<enum name='kForwardArrowIcon' value64='1717662319'/>
+<enum name='kFullTrashIcon' value64='1718907496'/>
+<enum name='kFullTrashIconResource' value64='-3984'/>
+<enum name='kGenericApplicationIcon' value64='1095782476'/>
+<enum name='kGenericApplicationIconResource' value64='-3996'/>
+<enum name='kGenericCDROMIcon' value64='1667523698'/>
+<enum name='kGenericCDROMIconResource' value64='-3987'/>
+<enum name='kGenericComponentIcon' value64='1953001063'/>
+<enum name='kGenericControlPanelIcon' value64='1095782467'/>
+<enum name='kGenericControlStripModuleIcon' value64='1935959414'/>
+<enum name='kGenericDeskAccessoryIcon' value64='1095782468'/>
+<enum name='kGenericDeskAccessoryIconResource' value64='-3991'/>
+<enum name='kGenericDocumentIcon' value64='1685021557'/>
+<enum name='kGenericDocumentIconResource' value64='-4000'/>
+<enum name='kGenericEditionFileIcon' value64='1701082214'/>
+<enum name='kGenericEditionFileIconResource' value64='-3989'/>
+<enum name='kGenericExtensionIcon' value64='1229867348'/>
+<enum name='kGenericExtensionIconResource' value64='-16415'/>
+<enum name='kGenericFileServerIcon' value64='1936881266'/>
+<enum name='kGenericFileServerIconResource' value64='-3972'/>
+<enum name='kGenericFloppyIcon' value64='1718382713'/>
+<enum name='kGenericFolderIcon' value64='1718379634'/>
+<enum name='kGenericFolderIconResource' value64='-3999'/>
+<enum name='kGenericFontIcon' value64='1717987692'/>
+<enum name='kGenericFontScalerIcon' value64='1935895666'/>
+<enum name='kGenericHardDiskIcon' value64='1751413611'/>
+<enum name='kGenericHardDiskIconResource' value64='-3995'/>
+<enum name='kGenericIDiskIcon' value64='1768190827'/>
+<enum name='kGenericMoverObjectIcon' value64='1836021362'/>
+<enum name='kGenericMoverObjectIconResource' value64='-3969'/>
+<enum name='kGenericNetworkIcon' value64='1735288180'/>
+<enum name='kGenericPCCardIcon' value64='1885564259'/>
+<enum name='kGenericPreferencesIcon' value64='1886545254'/>
+<enum name='kGenericPreferencesIconResource' value64='-3971'/>
+<enum name='kGenericQueryDocumentIcon' value64='1902473849'/>
+<enum name='kGenericQueryDocumentIconResource' value64='-16506'/>
+<enum name='kGenericRAMDiskIcon' value64='1918987620'/>
+<enum name='kGenericRAMDiskIconResource' value64='-3988'/>
+<enum name='kGenericRemovableMediaIcon' value64='1919774582'/>
+<enum name='kGenericSharedLibaryIcon' value64='1936223330'/>
+<enum name='kGenericStationeryIcon' value64='1935961955'/>
+<enum name='kGenericStationeryIconResource' value64='-3985'/>
+<enum name='kGenericSuitcaseIcon' value64='1937074548'/>
+<enum name='kGenericSuitcaseIconResource' value64='-3970'/>
+<enum name='kGenericURLIcon' value64='1735750252'/>
+<enum name='kGenericWORMIcon' value64='2003792493'/>
+<enum name='kGenericWindowIcon' value64='1735879022'/>
+<enum name='kGridIcon' value64='1735551332'/>
+<enum name='kGroupIcon' value64='1735554416'/>
+<enum name='kGuestUserIcon' value64='1735750514'/>
+<enum name='kHTTPServerIcon' value64='1752461427'/>
+<enum name='kHelpFolderIcon' value64='-999789456'/>
+<enum name='kHelpIcon' value64='1751477360'/>
+<enum name='kHelpIconResource' value64='-20271'/>
+<enum name='kIPFileServerIcon' value64='1769173622'/>
+<enum name='kIconServicesCatalogInfoMask' value64='531550'/>
+<enum name='kIconServicesNoBadgeFlag' value64='1'/>
+<enum name='kIconServicesNormalUsageFlag' value64='0'/>
+<enum name='kIconServicesUpdateIfNeededFlag' value64='2'/>
+<enum name='kInternationResourcesIcon' value64='1768319340'/>
+<enum name='kInternationalResourcesIcon' value64='1768319340'/>
+<enum name='kInternetFolderIcon' value64='1768846532'/>
+<enum name='kInternetLocationAppleShareIcon' value64='1768710502'/>
+<enum name='kInternetLocationAppleTalkZoneIcon' value64='1768710516'/>
+<enum name='kInternetLocationFTPIcon' value64='1768711796'/>
+<enum name='kInternetLocationFileIcon' value64='1768711785'/>
+<enum name='kInternetLocationGenericIcon' value64='1768712037'/>
+<enum name='kInternetLocationHTTPIcon' value64='1768712308'/>
+<enum name='kInternetLocationMailIcon' value64='1768713569'/>
+<enum name='kInternetLocationNSLNeighborhoodIcon' value64='1768713843'/>
+<enum name='kInternetLocationNewsIcon' value64='1768713847'/>
+<enum name='kInternetPlugInFolderIcon' value64='-999398028'/>
+<enum name='kInternetSearchSitesFolderIcon' value64='1769173862'/>
+<enum name='kKeepArrangedIcon' value64='1634889319'/>
+<enum name='kKeyboardLayoutIcon' value64='1801873772'/>
+<enum name='kLSAcceptAllowLoginUI' value64='2'/>
+<enum name='kLSAcceptDefault' value64='1'/>
+<enum name='kLSAppDoesNotClaimTypeErr' value64='-10820'/>
+<enum name='kLSAppDoesNotSupportSchemeWarning' value64='-10821'/>
+<enum name='kLSAppInTrashErr' value64='-10660'/>
+<enum name='kLSApplicationNotFoundErr' value64='-10814'/>
+<enum name='kLSAttributeNotFoundErr' value64='-10662'/>
+<enum name='kLSAttributeNotSettableErr' value64='-10663'/>
+<enum name='kLSCannotSetInfoErr' value64='-10823'/>
+<enum name='kLSDataErr' value64='-10817'/>
+<enum name='kLSDataTooOldErr' value64='-10816'/>
+<enum name='kLSDataUnavailableErr' value64='-10813'/>
+<enum name='kLSExecutableIncorrectFormat' value64='-10661'/>
+<enum name='kLSGarbageCollectionUnsupportedErr' value64='-10666'/>
+<enum name='kLSHandlerOptionsDefault' value64='0'/>
+<enum name='kLSHandlerOptionsIgnoreCreator' value64='1'/>
+<enum name='kLSIncompatibleApplicationVersionErr' value64='-10664'/>
+<enum name='kLSIncompatibleSystemVersionErr' value64='-10825'/>
+<enum name='kLSInvalidExtensionIndex' value64='18446744073709551615'/>
+<enum name='kLSItemInfoAppIsScriptable' value64='2048'/>
+<enum name='kLSItemInfoAppPrefersClassic' value64='1024'/>
+<enum name='kLSItemInfoAppPrefersNative' value64='512'/>
+<enum name='kLSItemInfoExtensionIsHidden' value64='1048576'/>
+<enum name='kLSItemInfoIsAliasFile' value64='16'/>
+<enum name='kLSItemInfoIsApplication' value64='4'/>
+<enum name='kLSItemInfoIsClassicApp' value64='256'/>
+<enum name='kLSItemInfoIsContainer' value64='8'/>
+<enum name='kLSItemInfoIsInvisible' value64='64'/>
+<enum name='kLSItemInfoIsNativeApp' value64='128'/>
+<enum name='kLSItemInfoIsPackage' value64='2'/>
+<enum name='kLSItemInfoIsPlainFile' value64='1'/>
+<enum name='kLSItemInfoIsSymlink' value64='32'/>
+<enum name='kLSItemInfoIsVolume' value64='4096'/>
+<enum name='kLSLaunchAndDisplayErrors' value64='64'/>
+<enum name='kLSLaunchAndHide' value64='1048576'/>
+<enum name='kLSLaunchAndHideOthers' value64='2097152'/>
+<enum name='kLSLaunchAndPrint' value64='2'/>
+<enum name='kLSLaunchAsync' value64='65536'/>
+<enum name='kLSLaunchDefaults' value64='1'/>
+<enum name='kLSLaunchDontAddToRecents' value64='256'/>
+<enum name='kLSLaunchDontSwitch' value64='512'/>
+<enum name='kLSLaunchHasUntrustedContents' value64='4194304'/>
+<enum name='kLSLaunchInClassic' value64='262144'/>
+<enum name='kLSLaunchInProgressErr' value64='-10818'/>
+<enum name='kLSLaunchInhibitBGOnly' value64='128'/>
+<enum name='kLSLaunchNewInstance' value64='524288'/>
+<enum name='kLSLaunchNoParams' value64='2048'/>
+<enum name='kLSLaunchStartClassic' value64='131072'/>
+<enum name='kLSMultipleSessionsNotSupportedErr' value64='-10829'/>
+<enum name='kLSNoClassicEnvironmentErr' value64='-10828'/>
+<enum name='kLSNoExecutableErr' value64='-10827'/>
+<enum name='kLSNoLaunchPermissionErr' value64='-10826'/>
+<enum name='kLSNoRegistrationInfoErr' value64='-10824'/>
+<enum name='kLSNoRosettaEnvironmentErr' value64='-10665'/>
+<enum name='kLSNotAnApplicationErr' value64='-10811'/>
+<enum name='kLSNotInitializedErr' value64='-10812'/>
+<enum name='kLSNotRegisteredErr' value64='-10819'/>
+<enum name='kLSRequestAllFlags' value64='16'/>
+<enum name='kLSRequestAllInfo' value64='4294967295'/>
+<enum name='kLSRequestAppTypeFlags' value64='8'/>
+<enum name='kLSRequestBasicFlagsOnly' value64='4'/>
+<enum name='kLSRequestExtension' value64='1'/>
+<enum name='kLSRequestExtensionFlagsOnly' value64='64'/>
+<enum name='kLSRequestIconAndKind' value64='32'/>
+<enum name='kLSRequestTypeCreator' value64='2'/>
+<enum name='kLSRolesAll' value64='4294967295'/>
+<enum name='kLSRolesEditor' value64='4'/>
+<enum name='kLSRolesNone' value64='1'/>
+<enum name='kLSRolesShell' value64='8'/>
+<enum name='kLSRolesViewer' value64='2'/>
+<enum name='kLSServerCommunicationErr' value64='-10822'/>
+<enum name='kLSUnknownCreator' value64='0'/>
+<enum name='kLSUnknownErr' value64='-10810'/>
+<enum name='kLSUnknownType' value64='0'/>
+<enum name='kLSUnknownTypeErr' value64='-10815'/>
+<enum name='kLocalesFolderIcon' value64='-999526557'/>
+<enum name='kLockedBadgeIcon' value64='1818387559'/>
+<enum name='kLockedIcon' value64='1819239275'/>
+<enum name='kMacOSReadMeFolderIcon' value64='1836020420'/>
+<enum name='kMountedBadgeIcon' value64='1835164775'/>
+<enum name='kMountedFolderIcon' value64='1835955300'/>
+<enum name='kMountedFolderIconResource' value64='-3977'/>
+<enum name='kNoFilesIcon' value64='1852205420'/>
+<enum name='kNoFolderIcon' value64='1852206180'/>
+<enum name='kNoWriteIcon' value64='1853321844'/>
+<enum name='kOpenFolderIcon' value64='1868983396'/>
+<enum name='kOpenFolderIconResource' value64='-3997'/>
+<enum name='kOwnedFolderIcon' value64='1870098020'/>
+<enum name='kOwnedFolderIconResource' value64='-3980'/>
+<enum name='kOwnerIcon' value64='1937077106'/>
+<enum name='kPreferencesFolderIcon' value64='1886545604'/>
+<enum name='kPreferencesFolderIconResource' value64='-3974'/>
+<enum name='kPrintMonitorFolderIcon' value64='1886547572'/>
+<enum name='kPrintMonitorFolderIconResource' value64='-3975'/>
+<enum name='kPrinterDescriptionFolderIcon' value64='1886413926'/>
+<enum name='kPrinterDriverFolderIcon' value64='-999263644'/>
+<enum name='kPrivateFolderIcon' value64='1886549606'/>
+<enum name='kPrivateFolderIconResource' value64='-3994'/>
+<enum name='kProtectedApplicationFolderIcon' value64='1885433968'/>
+<enum name='kProtectedSystemFolderIcon' value64='1886615923'/>
+<enum name='kPublicFolderIcon' value64='1886741094'/>
+<enum name='kQuestionMarkIcon' value64='1903519091'/>
+<enum name='kRecentApplicationsFolderIcon' value64='1918988400'/>
+<enum name='kRecentDocumentsFolderIcon' value64='1919184739'/>
+<enum name='kRecentItemsIcon' value64='1919118964'/>
+<enum name='kRecentServersFolderIcon' value64='1920168566'/>
+<enum name='kRightContainerArrowIcon' value64='1919115634'/>
+<enum name='kScriptingAdditionsFolderIcon' value64='-999070862'/>
+<enum name='kScriptsFolderIcon' value64='1935897284'/>
+<enum name='kSharedBadgeIcon' value64='1935828071'/>
+<enum name='kSharedFolderIcon' value64='1936221804'/>
+<enum name='kSharedFolderIconResource' value64='-3978'/>
+<enum name='kSharedLibrariesFolderIcon' value64='-999528094'/>
+<enum name='kSharingPrivsNotApplicableIcon' value64='1936223841'/>
+<enum name='kSharingPrivsReadOnlyIcon' value64='1936224879'/>
+<enum name='kSharingPrivsReadWriteIcon' value64='1936224887'/>
+<enum name='kSharingPrivsUnknownIcon' value64='1936225643'/>
+<enum name='kSharingPrivsWritableIcon' value64='2003986804'/>
+<enum name='kShortcutIcon' value64='1936224884'/>
+<enum name='kShutdownItemsDisabledFolderIcon' value64='1936221252'/>
+<enum name='kShutdownItemsFolderIcon' value64='1936221286'/>
+<enum name='kSortAscendingIcon' value64='1634954852'/>
+<enum name='kSortDescendingIcon' value64='1685286500'/>
+<enum name='kSoundFileIcon' value64='1936091500'/>
+<enum name='kSpeakableItemsFolder' value64='1936747369'/>
+<enum name='kStartupFolderIconResource' value64='-3981'/>
+<enum name='kStartupItemsDisabledFolderIcon' value64='1937011268'/>
+<enum name='kStartupItemsFolderIcon' value64='1937011316'/>
+<enum name='kSystemExtensionDisabledFolderIcon' value64='1835098948'/>
+<enum name='kSystemFolderIcon' value64='1835098995'/>
+<enum name='kSystemFolderIconResource' value64='-3983'/>
+<enum name='kSystemIconsCreator' value64='1835098995'/>
+<enum name='kSystemSuitcaseIcon' value64='2054388083'/>
+<enum name='kTextEncodingsFolderIcon' value64='-999004808'/>
+<enum name='kToolbarAdvancedIcon' value64='1952604534'/>
+<enum name='kToolbarApplicationsFolderIcon' value64='1950445683'/>
+<enum name='kToolbarCustomizeIcon' value64='1952675187'/>
+<enum name='kToolbarDeleteIcon' value64='1952736620'/>
+<enum name='kToolbarDesktopFolderIcon' value64='1950643051'/>
+<enum name='kToolbarDocumentsFolderIcon' value64='1950642019'/>
+<enum name='kToolbarDownloadsFolderIcon' value64='1950644078'/>
+<enum name='kToolbarFavoritesIcon' value64='1952866678'/>
+<enum name='kToolbarHomeIcon' value64='1953001325'/>
+<enum name='kToolbarInfoIcon' value64='1952606574'/>
+<enum name='kToolbarLabelsIcon' value64='1952607330'/>
+<enum name='kToolbarLibraryFolderIcon' value64='1951164770'/>
+<enum name='kToolbarMovieFolderIcon' value64='1951231862'/>
+<enum name='kToolbarMusicFolderIcon' value64='1951233395'/>
+<enum name='kToolbarPicturesFolderIcon' value64='1951426915'/>
+<enum name='kToolbarPublicFolderIcon' value64='1951429986'/>
+<enum name='kToolbarSitesFolderIcon' value64='1951626355'/>
+<enum name='kToolbarUtilitiesFolderIcon' value64='1951757420'/>
+<enum name='kTrashIcon' value64='1953657704'/>
+<enum name='kTrashIconResource' value64='-3993'/>
+<enum name='kTrueTypeFlatFontIcon' value64='1936092788'/>
+<enum name='kTrueTypeFontIcon' value64='1952868716'/>
+<enum name='kTrueTypeMultiFlatFontIcon' value64='1953784678'/>
+<enum name='kUnknownFSObjectIcon' value64='1970169459'/>
+<enum name='kUnlockedIcon' value64='1970037611'/>
+<enum name='kUserFolderIcon' value64='1969646692'/>
+<enum name='kUserIDiskIcon' value64='1969517419'/>
+<enum name='kUserIcon' value64='1970496882'/>
+<enum name='kUsersFolderIcon' value64='1970500292'/>
+<enum name='kUtilitiesFolderIcon' value64='1970563524'/>
+<enum name='kVoicesFolderIcon' value64='1719037795'/>
+<enum name='kWorkgroupFolderIcon' value64='2003201124'/>
+<enum name='mountedFolderIconResource' value64='-3977'/>
+<enum name='openFolderIconResource' value64='-3997'/>
+<enum name='ownedFolderIconResource' value64='-3980'/>
+<enum name='preferencesFolderIconResource' value64='-3974'/>
+<enum name='printMonitorFolderIconResource' value64='-3975'/>
+<enum name='privateFolderIconResource' value64='-3994'/>
+<enum name='sharedFolderIconResource' value64='-3978'/>
+<enum name='startupFolderIconResource' value64='-3981'/>
+<enum name='systemFolderIconResource' value64='-3983'/>
+<enum name='trashIconResource' value64='-3993'/>
+<function name='AcquireIconRef'>
+<arg declared_type64='IconRef' name='theIconRef' type64='^{OpaqueIconRef=}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='CompositeIconRef'>
+<arg declared_type64='IconRef' name='backgroundIconRef' type64='^{OpaqueIconRef=}'/>
+<arg declared_type64='IconRef' name='foregroundIconRef' type64='^{OpaqueIconRef=}'/>
+<arg declared_type64='IconRef*' name='compositeIconRef' type64='^^{OpaqueIconRef}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='GetCustomIconsEnabled'>
+<arg declared_type64='SInt16' name='vRefNum' type64='s'/>
+<arg declared_type64='Boolean*' name='customIconsEnabled' type64='^B'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='GetIconRef'>
+<arg declared_type64='SInt16' name='vRefNum' type64='s'/>
+<arg declared_type64='OSType' name='creator' type64='I'/>
+<arg declared_type64='OSType' name='iconType' type64='I'/>
+<arg declared_type64='IconRef*' name='theIconRef' type64='^^{OpaqueIconRef}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='GetIconRefFromComponent'>
+<arg declared_type64='Component' name='inComponent' type64='^{ComponentRecord=[1q]}'/>
+<arg declared_type64='IconRef*' name='outIconRef' type64='^^{OpaqueIconRef}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='GetIconRefFromFileInfo'>
+<arg const='true' declared_type64='FSRef*' name='inRef' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='UniCharCount' name='inFileNameLength' type64='Q'/>
+<arg const='true' declared_type64='UniChar*' name='inFileName' type64='^S'/>
+<arg declared_type64='FSCatalogInfoBitmap' name='inWhichInfo' type64='I'/>
+<arg const='true' declared_type64='FSCatalogInfo*' name='inCatalogInfo' type64='^{FSCatalogInfo=SsIICCCC{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{UTCDateTime=SIS}{FSPermissionInfo=IICCS^{__FSFileSecurity}}[16C][16C]QQQQII}'/>
+<arg declared_type64='IconServicesUsageFlags' name='inUsageFlags' type64='I'/>
+<arg declared_type64='IconRef*' name='outIconRef' type64='^^{OpaqueIconRef}'/>
+<arg declared_type64='SInt16*' name='outLabel' type64='^s'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='GetIconRefFromFolder'>
+<arg declared_type64='SInt16' name='vRefNum' type64='s'/>
+<arg declared_type64='SInt32' name='parentFolderID' type64='i'/>
+<arg declared_type64='SInt32' name='folderID' type64='i'/>
+<arg declared_type64='SInt8' name='attributes' type64='c'/>
+<arg declared_type64='SInt8' name='accessPrivileges' type64='c'/>
+<arg declared_type64='IconRef*' name='theIconRef' type64='^^{OpaqueIconRef}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='GetIconRefFromIconFamilyPtr'>
+<arg const='true' declared_type64='IconFamilyResource*' name='inIconFamilyPtr' type64='^{IconFamilyResource=Ii[1{IconFamilyElement=Ii[1C]}]}'/>
+<arg declared_type64='Size' name='inSize' type64='q'/>
+<arg declared_type64='IconRef*' name='outIconRef' type64='^^{OpaqueIconRef}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='GetIconRefFromTypeInfo'>
+<arg declared_type64='OSType' name='inCreator' type64='I'/>
+<arg declared_type64='OSType' name='inType' type64='I'/>
+<arg declared_type64='CFStringRef' name='inExtension' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef' name='inMIMEType' type64='^{__CFString=}'/>
+<arg declared_type64='IconServicesUsageFlags' name='inUsageFlags' type64='I'/>
+<arg declared_type64='IconRef*' name='outIconRef' type64='^^{OpaqueIconRef}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='GetIconRefOwners'>
+<arg declared_type64='IconRef' name='theIconRef' type64='^{OpaqueIconRef=}'/>
+<arg declared_type64='UInt16*' name='owners' type64='^S'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='IsDataAvailableInIconRef'>
+<arg declared_type64='OSType' name='inIconKind' type64='I'/>
+<arg declared_type64='IconRef' name='inIconRef' type64='^{OpaqueIconRef=}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='IsIconRefComposite'>
+<arg declared_type64='IconRef' name='compositeIconRef' type64='^{OpaqueIconRef=}'/>
+<arg declared_type64='IconRef*' name='backgroundIconRef' type64='^^{OpaqueIconRef}'/>
+<arg declared_type64='IconRef*' name='foregroundIconRef' type64='^^{OpaqueIconRef}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='IsValidIconRef'>
+<arg declared_type64='IconRef' name='theIconRef' type64='^{OpaqueIconRef=}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='LSCanRefAcceptItem'>
+<arg const='true' declared_type64='FSRef*' name='inItemFSRef' type64='^{FSRef=[80C]}'/>
+<arg const='true' declared_type64='FSRef*' name='inTargetRef' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='LSRolesMask' name='inRoleMask' type64='I'/>
+<arg declared_type64='LSAcceptanceFlags' name='inFlags' type64='I'/>
+<arg declared_type64='Boolean*' name='outAcceptsItem' type64='^B'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSCanURLAcceptURL'>
+<arg declared_type64='CFURLRef _Nonnull' name='inItemURL' type64='^{__CFURL=}'/>
+<arg declared_type64='CFURLRef _Nonnull' name='inTargetURL' type64='^{__CFURL=}'/>
+<arg declared_type64='LSRolesMask' name='inRoleMask' type64='I'/>
+<arg declared_type64='LSAcceptanceFlags' name='inFlags' type64='I'/>
+<arg declared_type64='Boolean * _Nonnull' name='outAcceptsItem' type64='^B'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSCopyAllHandlersForURLScheme'>
+<arg declared_type64='CFStringRef _Nonnull' name='inURLScheme' type64='^{__CFString=}'/>
+<retval declared_type64='CFArrayRef _Nullable' type64='^{__CFArray=}'/>
+</function>
+<function name='LSCopyAllRoleHandlersForContentType'>
+<arg declared_type64='CFStringRef _Nonnull' name='inContentType' type64='^{__CFString=}'/>
+<arg declared_type64='LSRolesMask' name='inRole' type64='I'/>
+<retval declared_type64='CFArrayRef _Nullable' type64='^{__CFArray=}'/>
+</function>
+<function name='LSCopyApplicationForMIMEType'>
+<arg declared_type64='CFStringRef' name='inMIMEType' type64='^{__CFString=}'/>
+<arg declared_type64='LSRolesMask' name='inRoleMask' type64='I'/>
+<arg declared_type64='CFURLRef*' name='outAppURL' type64='^^{__CFURL}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSCopyApplicationURLsForBundleIdentifier'>
+<arg declared_type64='CFStringRef _Nonnull' name='inBundleIdentifier' type64='^{__CFString=}'/>
+<arg declared_type64='CFErrorRef _Nullable * _Nullable' name='outError' type64='^^{__CFError}'/>
+<retval declared_type64='CFArrayRef _Nullable' type64='^{__CFArray=}'/>
+</function>
+<function name='LSCopyApplicationURLsForURL'>
+<arg declared_type64='CFURLRef _Nonnull' name='inURL' type64='^{__CFURL=}'/>
+<arg declared_type64='LSRolesMask' name='inRoleMask' type64='I'/>
+<retval declared_type64='CFArrayRef _Nullable' type64='^{__CFArray=}'/>
+</function>
+<function name='LSCopyDefaultApplicationURLForContentType'>
+<arg declared_type64='CFStringRef _Nonnull' name='inContentType' type64='^{__CFString=}'/>
+<arg declared_type64='LSRolesMask' name='inRoleMask' type64='I'/>
+<arg declared_type64='CFErrorRef _Nullable * _Nullable' name='outError' type64='^^{__CFError}'/>
+<retval declared_type64='CFURLRef _Nullable' type64='^{__CFURL=}'/>
+</function>
+<function name='LSCopyDefaultApplicationURLForURL'>
+<arg declared_type64='CFURLRef _Nonnull' name='inURL' type64='^{__CFURL=}'/>
+<arg declared_type64='LSRolesMask' name='inRoleMask' type64='I'/>
+<arg declared_type64='CFErrorRef _Nullable * _Nullable' name='outError' type64='^^{__CFError}'/>
+<retval declared_type64='CFURLRef _Nullable' type64='^{__CFURL=}'/>
+</function>
+<function name='LSCopyDefaultHandlerForURLScheme'>
+<arg declared_type64='CFStringRef _Nonnull' name='inURLScheme' type64='^{__CFString=}'/>
+<retval declared_type64='CFStringRef _Nullable' type64='^{__CFString=}'/>
+</function>
+<function name='LSCopyDefaultRoleHandlerForContentType'>
+<arg declared_type64='CFStringRef _Nonnull' name='inContentType' type64='^{__CFString=}'/>
+<arg declared_type64='LSRolesMask' name='inRole' type64='I'/>
+<retval declared_type64='CFStringRef _Nullable' type64='^{__CFString=}'/>
+</function>
+<function name='LSCopyDisplayNameForRef'>
+<arg const='true' declared_type64='FSRef*' name='inRef' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='CFStringRef*' name='outDisplayName' type64='^^{__CFString}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSCopyDisplayNameForURL'>
+<arg declared_type64='CFURLRef' name='inURL' type64='^{__CFURL=}'/>
+<arg declared_type64='CFStringRef*' name='outDisplayName' type64='^^{__CFString}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSCopyItemAttribute'>
+<arg const='true' declared_type64='FSRef*' name='inItem' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='LSRolesMask' name='inRoles' type64='I'/>
+<arg declared_type64='CFStringRef' name='inAttributeName' type64='^{__CFString=}'/>
+<arg declared_type64='CFTypeRef*' name='outValue' type64='^^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSCopyItemAttributes'>
+<arg const='true' declared_type64='FSRef*' name='inItem' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='LSRolesMask' name='inRoles' type64='I'/>
+<arg declared_type64='CFArrayRef' name='inAttributeNames' type64='^{__CFArray=}'/>
+<arg declared_type64='CFDictionaryRef*' name='outValues' type64='^^{__CFDictionary}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSCopyItemInfoForRef'>
+<arg const='true' declared_type64='FSRef*' name='inItemRef' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='LSRequestedInfo' name='inWhichInfo' type64='I'/>
+<arg declared_type64='LSItemInfoRecord*' name='outItemInfo' type64='^{LSItemInfoRecord=III^{__CFString}}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSCopyItemInfoForURL'>
+<arg declared_type64='CFURLRef' name='inURL' type64='^{__CFURL=}'/>
+<arg declared_type64='LSRequestedInfo' name='inWhichInfo' type64='I'/>
+<arg declared_type64='LSItemInfoRecord*' name='outItemInfo' type64='^{LSItemInfoRecord=III^{__CFString}}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSCopyKindStringForMIMEType'>
+<arg declared_type64='CFStringRef' name='inMIMEType' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef*' name='outKindString' type64='^^{__CFString}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSCopyKindStringForRef'>
+<arg const='true' declared_type64='FSRef*' name='inFSRef' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='CFStringRef*' name='outKindString' type64='^^{__CFString}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSCopyKindStringForTypeInfo'>
+<arg declared_type64='OSType' name='inType' type64='I'/>
+<arg declared_type64='OSType' name='inCreator' type64='I'/>
+<arg declared_type64='CFStringRef' name='inExtension' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef*' name='outKindString' type64='^^{__CFString}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSCopyKindStringForURL'>
+<arg declared_type64='CFURLRef' name='inURL' type64='^{__CFURL=}'/>
+<arg declared_type64='CFStringRef*' name='outKindString' type64='^^{__CFString}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSFindApplicationForInfo'>
+<arg declared_type64='OSType' name='inCreator' type64='I'/>
+<arg declared_type64='CFStringRef' name='inBundleID' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef' name='inName' type64='^{__CFString=}'/>
+<arg declared_type64='FSRef*' name='outAppRef' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='CFURLRef*' name='outAppURL' type64='^^{__CFURL}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSGetApplicationForInfo'>
+<arg declared_type64='OSType' name='inType' type64='I'/>
+<arg declared_type64='OSType' name='inCreator' type64='I'/>
+<arg declared_type64='CFStringRef' name='inExtension' type64='^{__CFString=}'/>
+<arg declared_type64='LSRolesMask' name='inRoleMask' type64='I'/>
+<arg declared_type64='FSRef*' name='outAppRef' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='CFURLRef*' name='outAppURL' type64='^^{__CFURL}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSGetApplicationForItem'>
+<arg const='true' declared_type64='FSRef*' name='inItemRef' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='LSRolesMask' name='inRoleMask' type64='I'/>
+<arg declared_type64='FSRef*' name='outAppRef' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='CFURLRef*' name='outAppURL' type64='^^{__CFURL}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSGetApplicationForURL'>
+<arg declared_type64='CFURLRef' name='inURL' type64='^{__CFURL=}'/>
+<arg declared_type64='LSRolesMask' name='inRoleMask' type64='I'/>
+<arg declared_type64='FSRef*' name='outAppRef' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='CFURLRef*' name='outAppURL' type64='^^{__CFURL}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSGetExtensionInfo'>
+<arg declared_type64='UniCharCount' name='inNameLen' type64='Q'/>
+<arg const='true' declared_type64='UniChar*' name='inNameBuffer' type64='^S'/>
+<arg declared_type64='UniCharCount*' name='outExtStartIndex' type64='^Q'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSGetHandlerOptionsForContentType'>
+<arg declared_type64='CFStringRef' name='inContentType' type64='^{__CFString=}'/>
+<retval declared_type64='LSHandlerOptions' type64='I'/>
+</function>
+<function name='LSOpenApplication'>
+<arg const='true' declared_type64='LSApplicationParameters*' name='appParams' type64='^{LSApplicationParameters=qI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}'/>
+<arg declared_type64='ProcessSerialNumber*' name='outPSN' type64='^{ProcessSerialNumber=II}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSOpenCFURLRef'>
+<arg declared_type64='CFURLRef _Nonnull' name='inURL' type64='^{__CFURL=}'/>
+<arg declared_type64='CFURLRef _Nullable * _Nullable' name='outLaunchedURL' type64='^^{__CFURL}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSOpenFSRef'>
+<arg const='true' declared_type64='FSRef*' name='inRef' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='FSRef*' name='outLaunchedRef' type64='^{FSRef=[80C]}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSOpenFromRefSpec'>
+<arg const='true' declared_type64='LSLaunchFSRefSpec*' name='inLaunchSpec' type64='^{LSLaunchFSRefSpec=^{FSRef}Q^{FSRef}^{AEDesc}I^v}'/>
+<arg declared_type64='FSRef*' name='outLaunchedRef' type64='^{FSRef=[80C]}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSOpenFromURLSpec'>
+<arg const='true' declared_type64='LSLaunchURLSpec * _Nonnull' name='inLaunchSpec' type64='^{LSLaunchURLSpec=^{__CFURL}^{__CFArray}^{AEDesc}I^v}'/>
+<arg declared_type64='CFURLRef _Nullable * _Nullable' name='outLaunchedURL' type64='^^{__CFURL}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSOpenItemsWithRole'>
+<arg const='true' declared_type64='FSRef*' name='inItems' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='CFIndex' name='inItemCount' type64='q'/>
+<arg declared_type64='LSRolesMask' name='inRole' type64='I'/>
+<arg const='true' declared_type64='AEKeyDesc*' name='inAEParam' type64='^{AEKeyDesc=I{AEDesc=I^^{OpaqueAEDataStorageType}}}'/>
+<arg const='true' declared_type64='LSApplicationParameters*' name='inAppParams' type64='^{LSApplicationParameters=qI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}'/>
+<arg declared_type64='ProcessSerialNumber*' name='outPSNs' type64='^{ProcessSerialNumber=II}'/>
+<arg declared_type64='CFIndex' name='inMaxPSNCount' type64='q'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSOpenURLsWithRole'>
+<arg declared_type64='CFArrayRef' name='inURLs' type64='^{__CFArray=}'/>
+<arg declared_type64='LSRolesMask' name='inRole' type64='I'/>
+<arg const='true' declared_type64='AEKeyDesc*' name='inAEParam' type64='^{AEKeyDesc=I{AEDesc=I^^{OpaqueAEDataStorageType}}}'/>
+<arg const='true' declared_type64='LSApplicationParameters*' name='inAppParams' type64='^{LSApplicationParameters=qI^{FSRef}^v^{__CFDictionary}^{__CFArray}^{AEDesc}}'/>
+<arg declared_type64='ProcessSerialNumber*' name='outPSNs' type64='^{ProcessSerialNumber=II}'/>
+<arg declared_type64='CFIndex' name='inMaxPSNCount' type64='q'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSRegisterFSRef'>
+<arg const='true' declared_type64='FSRef*' name='inRef' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='Boolean' name='inUpdate' type64='B'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSRegisterURL'>
+<arg declared_type64='CFURLRef _Nonnull' name='inURL' type64='^{__CFURL=}'/>
+<arg declared_type64='Boolean' name='inUpdate' type64='B'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSSetDefaultHandlerForURLScheme'>
+<arg declared_type64='CFStringRef _Nonnull' name='inURLScheme' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='inHandlerBundleID' type64='^{__CFString=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSSetDefaultRoleHandlerForContentType'>
+<arg declared_type64='CFStringRef _Nonnull' name='inContentType' type64='^{__CFString=}'/>
+<arg declared_type64='LSRolesMask' name='inRole' type64='I'/>
+<arg declared_type64='CFStringRef _Nonnull' name='inHandlerBundleID' type64='^{__CFString=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSSetExtensionHiddenForRef'>
+<arg const='true' declared_type64='FSRef*' name='inRef' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='Boolean' name='inHide' type64='B'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSSetExtensionHiddenForURL'>
+<arg declared_type64='CFURLRef' name='inURL' type64='^{__CFURL=}'/>
+<arg declared_type64='Boolean' name='inHide' type64='B'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSSetHandlerOptionsForContentType'>
+<arg declared_type64='CFStringRef' name='inContentType' type64='^{__CFString=}'/>
+<arg declared_type64='LSHandlerOptions' name='inOptions' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSSetItemAttribute'>
+<arg const='true' declared_type64='FSRef*' name='inItem' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='LSRolesMask' name='inRoles' type64='I'/>
+<arg declared_type64='CFStringRef' name='inAttributeName' type64='^{__CFString=}'/>
+<arg declared_type64='CFTypeRef' name='inValue' type64='@'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='OverrideIconRef'>
+<arg declared_type64='IconRef' name='oldIconRef' type64='^{OpaqueIconRef=}'/>
+<arg declared_type64='IconRef' name='newIconRef' type64='^{OpaqueIconRef=}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='ReadIconFromFSRef'>
+<arg const='true' declared_type64='FSRef*' name='ref' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='IconFamilyHandle*' name='iconFamily' type64='^^^{IconFamilyResource}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='RegisterIconRefFromFSRef'>
+<arg declared_type64='OSType' name='creator' type64='I'/>
+<arg declared_type64='OSType' name='iconType' type64='I'/>
+<arg const='true' declared_type64='FSRef*' name='iconFile' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='IconRef*' name='theIconRef' type64='^^{OpaqueIconRef}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='RegisterIconRefFromIconFamily'>
+<arg declared_type64='OSType' name='creator' type64='I'/>
+<arg declared_type64='OSType' name='iconType' type64='I'/>
+<arg declared_type64='IconFamilyHandle' name='iconFamily' type64='^^{IconFamilyResource}'/>
+<arg declared_type64='IconRef*' name='theIconRef' type64='^^{OpaqueIconRef}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='ReleaseIconRef'>
+<arg declared_type64='IconRef' name='theIconRef' type64='^{OpaqueIconRef=}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='RemoveIconRefOverride'>
+<arg declared_type64='IconRef' name='theIconRef' type64='^{OpaqueIconRef=}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='SetCustomIconsEnabled'>
+<arg declared_type64='SInt16' name='vRefNum' type64='s'/>
+<arg declared_type64='Boolean' name='enableCustomIcons' type64='B'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='UTCreateStringForOSType'>
+<arg declared_type64='OSType' name='inOSType' type64='I'/>
+<retval declared_type64='CFStringRef _Nonnull' type64='^{__CFString=}'/>
+</function>
+<function name='UTGetOSTypeFromString'>
+<arg declared_type64='CFStringRef _Nonnull' name='inString' type64='^{__CFString=}'/>
+<retval declared_type64='OSType' type64='I'/>
+</function>
+<function name='UTTypeConformsTo'>
+<arg declared_type64='CFStringRef _Nonnull' name='inUTI' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='inConformsToUTI' type64='^{__CFString=}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='UTTypeCopyAllTagsWithClass'>
+<arg declared_type64='CFStringRef _Nonnull' name='inUTI' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='inTagClass' type64='^{__CFString=}'/>
+<retval declared_type64='CFArrayRef _Nullable' type64='^{__CFArray=}'/>
+</function>
+<function name='UTTypeCopyDeclaration'>
+<arg declared_type64='CFStringRef _Nonnull' name='inUTI' type64='^{__CFString=}'/>
+<retval declared_type64='CFDictionaryRef _Nullable' type64='^{__CFDictionary=}'/>
+</function>
+<function name='UTTypeCopyDeclaringBundleURL'>
+<arg declared_type64='CFStringRef _Nonnull' name='inUTI' type64='^{__CFString=}'/>
+<retval declared_type64='CFURLRef _Nullable' type64='^{__CFURL=}'/>
+</function>
+<function name='UTTypeCopyDescription'>
+<arg declared_type64='CFStringRef _Nonnull' name='inUTI' type64='^{__CFString=}'/>
+<retval declared_type64='CFStringRef _Nullable' type64='^{__CFString=}'/>
+</function>
+<function name='UTTypeCopyPreferredTagWithClass'>
+<arg declared_type64='CFStringRef _Nonnull' name='inUTI' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='inTagClass' type64='^{__CFString=}'/>
+<retval declared_type64='CFStringRef _Nullable' type64='^{__CFString=}'/>
+</function>
+<function name='UTTypeCreateAllIdentifiersForTag'>
+<arg declared_type64='CFStringRef _Nonnull' name='inTagClass' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='inTag' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef _Nullable' name='inConformingToUTI' type64='^{__CFString=}'/>
+<retval declared_type64='CFArrayRef _Nullable' type64='^{__CFArray=}'/>
+</function>
+<function name='UTTypeCreatePreferredIdentifierForTag'>
+<arg declared_type64='CFStringRef _Nonnull' name='inTagClass' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='inTag' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef _Nullable' name='inConformingToUTI' type64='^{__CFString=}'/>
+<retval declared_type64='CFStringRef _Nullable' type64='^{__CFString=}'/>
+</function>
+<function name='UTTypeEqual'>
+<arg declared_type64='CFStringRef _Nonnull' name='inUTI1' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='inUTI2' type64='^{__CFString=}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='UTTypeIsDeclared'>
+<arg declared_type64='CFStringRef _Nonnull' name='inUTI' type64='^{__CFString=}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='UTTypeIsDynamic'>
+<arg declared_type64='CFStringRef _Nonnull' name='inUTI' type64='^{__CFString=}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='UnregisterIconRef'>
+<arg declared_type64='OSType' name='creator' type64='I'/>
+<arg declared_type64='OSType' name='iconType' type64='I'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='UpdateIconRef'>
+<arg declared_type64='IconRef' name='theIconRef' type64='^{OpaqueIconRef=}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+</signatures>

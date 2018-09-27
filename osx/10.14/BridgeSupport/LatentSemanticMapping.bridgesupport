@@ -1,0 +1,189 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<cftype gettypeid_func='LSMMapGetTypeID' name='LSMMapRef' type64='^{__LSMMap=}'/>
+<cftype gettypeid_func='LSMResultGetTypeID' name='LSMResultRef' type64='^{__LSMResult=}'/>
+<cftype gettypeid_func='LSMTextGetTypeID' name='LSMTextRef' type64='^{__LSMText=}'/>
+<string_constant name='kLSMAlgorithmDense' nsstring='true' value='LSMAlgorithmDense'/>
+<string_constant name='kLSMAlgorithmKey' nsstring='true' value='LSMAlgorithm'/>
+<string_constant name='kLSMAlgorithmSparse' nsstring='true' value='LSMAlgorithmSparse'/>
+<string_constant name='kLSMDimensionKey' nsstring='true' value='LSMDimension'/>
+<string_constant name='kLSMIterationsKey' nsstring='true' value='LSMIterations'/>
+<string_constant name='kLSMPrecisionDouble' nsstring='true' value='LSMPrecisionDouble'/>
+<string_constant name='kLSMPrecisionFloat' nsstring='true' value='LSMPrecisionFloat'/>
+<string_constant name='kLSMPrecisionKey' nsstring='true' value='LSMPrecision'/>
+<string_constant name='kLSMSweepAgeKey' nsstring='true' value='LSMSweepAge'/>
+<string_constant name='kLSMSweepCutoffKey' nsstring='true' value='LSMSweepCutoff'/>
+<enum name='kLSMClusterAgglomerative' value64='4'/>
+<enum name='kLSMClusterCategories' value64='0'/>
+<enum name='kLSMClusterKMeans' value64='0'/>
+<enum name='kLSMClusterTokens' value64='2'/>
+<enum name='kLSMClusterWords' value64='1'/>
+<enum name='kLSMMapBadCluster' value64='-6644'/>
+<enum name='kLSMMapBadPath' value64='-6643'/>
+<enum name='kLSMMapDiscardCounts' value64='1'/>
+<enum name='kLSMMapHashText' value64='256'/>
+<enum name='kLSMMapLoadMutable' value64='2'/>
+<enum name='kLSMMapNoSuchCategory' value64='-6641'/>
+<enum name='kLSMMapOutOfState' value64='-6640'/>
+<enum name='kLSMMapOverflow' value64='-6645'/>
+<enum name='kLSMMapPairs' value64='1'/>
+<enum name='kLSMMapTriplets' value64='2'/>
+<enum name='kLSMMapWriteError' value64='-6642'/>
+<enum name='kLSMResultBestWords' value64='1'/>
+<enum name='kLSMTextApplySpamHeuristics' value64='4'/>
+<enum name='kLSMTextPreserveAcronyms' value64='2'/>
+<enum name='kLSMTextPreserveCase' value64='1'/>
+<function name='LSMMapAddCategory'>
+<arg declared_type64='LSMMapRef _Nonnull' name='mapref' type64='^{__LSMMap=}'/>
+<retval declared_type64='LSMCategory' type64='I'/>
+</function>
+<function name='LSMMapAddText'>
+<arg declared_type64='LSMMapRef _Nonnull' name='mapref' type64='^{__LSMMap=}'/>
+<arg declared_type64='LSMTextRef _Nonnull' name='textref' type64='^{__LSMText=}'/>
+<arg declared_type64='LSMCategory' name='category' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSMMapAddTextWithWeight'>
+<arg declared_type64='LSMMapRef _Nonnull' name='mapref' type64='^{__LSMMap=}'/>
+<arg declared_type64='LSMTextRef _Nonnull' name='textref' type64='^{__LSMText=}'/>
+<arg declared_type64='LSMCategory' name='category' type64='I'/>
+<arg declared_type64='float' name='weight' type64='f'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSMMapApplyClusters'>
+<arg declared_type64='LSMMapRef _Nonnull' name='mapref' type64='^{__LSMMap=}'/>
+<arg declared_type64='CFArrayRef _Nonnull' name='clusters' type64='^{__CFArray=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSMMapCompile'>
+<arg declared_type64='LSMMapRef _Nonnull' name='mapref' type64='^{__LSMMap=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSMMapCreate'>
+<arg declared_type64='CFAllocatorRef _Nullable' name='alloc' type64='^{__CFAllocator=}'/>
+<arg declared_type64='CFOptionFlags' name='flags' type64='Q'/>
+<retval declared_type64='LSMMapRef _Nonnull' type64='^{__LSMMap=}'/>
+</function>
+<function name='LSMMapCreateClusters'>
+<arg declared_type64='CFAllocatorRef _Nullable' name='alloc' type64='^{__CFAllocator=}'/>
+<arg declared_type64='LSMMapRef _Nonnull' name='mapref' type64='^{__LSMMap=}'/>
+<arg declared_type64='CFArrayRef _Nullable' name='subset' type64='^{__CFArray=}'/>
+<arg declared_type64='CFIndex' name='numClusters' type64='q'/>
+<arg declared_type64='CFOptionFlags' name='flags' type64='Q'/>
+<retval declared_type64='CFArrayRef _Nullable' type64='^{__CFArray=}'/>
+</function>
+<function name='LSMMapCreateFromURL'>
+<arg declared_type64='CFAllocatorRef _Nullable' name='alloc' type64='^{__CFAllocator=}'/>
+<arg declared_type64='CFURLRef _Nonnull' name='file' type64='^{__CFURL=}'/>
+<arg declared_type64='CFOptionFlags' name='flags' type64='Q'/>
+<retval declared_type64='LSMMapRef _Nullable' type64='^{__LSMMap=}'/>
+</function>
+<function name='LSMMapGetCategoryCount'>
+<arg declared_type64='LSMMapRef _Nonnull' name='mapref' type64='^{__LSMMap=}'/>
+<retval declared_type64='CFIndex' type64='q'/>
+</function>
+<function name='LSMMapGetProperties'>
+<arg declared_type64='LSMMapRef _Nonnull' name='mapref' type64='^{__LSMMap=}'/>
+<retval declared_type64='CFDictionaryRef _Nonnull' type64='^{__CFDictionary=}'/>
+</function>
+<function name='LSMMapGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='LSMMapSetProperties'>
+<arg declared_type64='LSMMapRef _Nonnull' name='mapref' type64='^{__LSMMap=}'/>
+<arg declared_type64='CFDictionaryRef _Nonnull' name='properties' type64='^{__CFDictionary=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='LSMMapSetStopWords'>
+<arg declared_type64='LSMMapRef _Nonnull' name='mapref' type64='^{__LSMMap=}'/>
+<arg declared_type64='LSMTextRef _Nonnull' name='textref' type64='^{__LSMText=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSMMapStartTraining'>
+<arg declared_type64='LSMMapRef _Nonnull' name='mapref' type64='^{__LSMMap=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSMMapWriteToStream'>
+<arg declared_type64='LSMMapRef _Nonnull' name='mapref' type64='^{__LSMMap=}'/>
+<arg declared_type64='LSMTextRef _Nullable' name='textref' type64='^{__LSMText=}'/>
+<arg declared_type64='CFWriteStreamRef _Nonnull' name='stream' type64='^{__CFWriteStream=}'/>
+<arg declared_type64='CFOptionFlags' name='options' type64='Q'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSMMapWriteToURL'>
+<arg declared_type64='LSMMapRef _Nonnull' name='mapref' type64='^{__LSMMap=}'/>
+<arg declared_type64='CFURLRef _Nonnull' name='file' type64='^{__CFURL=}'/>
+<arg declared_type64='CFOptionFlags' name='flags' type64='Q'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSMResultCopyToken'>
+<arg declared_type64='LSMResultRef _Nonnull' name='result' type64='^{__LSMResult=}'/>
+<arg declared_type64='CFIndex' name='n' type64='q'/>
+<retval declared_type64='CFDataRef _Nullable' type64='^{__CFData=}'/>
+</function>
+<function name='LSMResultCopyTokenCluster'>
+<arg declared_type64='LSMResultRef _Nonnull' name='result' type64='^{__LSMResult=}'/>
+<arg declared_type64='CFIndex' name='n' type64='q'/>
+<retval declared_type64='CFArrayRef _Nullable' type64='^{__CFArray=}'/>
+</function>
+<function name='LSMResultCopyWord'>
+<arg declared_type64='LSMResultRef _Nonnull' name='result' type64='^{__LSMResult=}'/>
+<arg declared_type64='CFIndex' name='n' type64='q'/>
+<retval declared_type64='CFStringRef _Nullable' type64='^{__CFString=}'/>
+</function>
+<function name='LSMResultCopyWordCluster'>
+<arg declared_type64='LSMResultRef _Nonnull' name='result' type64='^{__LSMResult=}'/>
+<arg declared_type64='CFIndex' name='n' type64='q'/>
+<retval declared_type64='CFArrayRef _Nullable' type64='^{__CFArray=}'/>
+</function>
+<function name='LSMResultCreate'>
+<arg declared_type64='CFAllocatorRef _Nullable' name='alloc' type64='^{__CFAllocator=}'/>
+<arg declared_type64='LSMMapRef _Nonnull' name='mapref' type64='^{__LSMMap=}'/>
+<arg declared_type64='LSMTextRef _Nonnull' name='textref' type64='^{__LSMText=}'/>
+<arg declared_type64='CFIndex' name='numResults' type64='q'/>
+<arg declared_type64='CFOptionFlags' name='flags' type64='Q'/>
+<retval declared_type64='LSMResultRef _Nonnull' type64='^{__LSMResult=}'/>
+</function>
+<function name='LSMResultGetCategory'>
+<arg declared_type64='LSMResultRef _Nonnull' name='result' type64='^{__LSMResult=}'/>
+<arg declared_type64='CFIndex' name='n' type64='q'/>
+<retval declared_type64='LSMCategory' type64='I'/>
+</function>
+<function name='LSMResultGetCount'>
+<arg declared_type64='LSMResultRef _Nonnull' name='result' type64='^{__LSMResult=}'/>
+<retval declared_type64='CFIndex' type64='q'/>
+</function>
+<function name='LSMResultGetScore'>
+<arg declared_type64='LSMResultRef _Nonnull' name='result' type64='^{__LSMResult=}'/>
+<arg declared_type64='CFIndex' name='n' type64='q'/>
+<retval declared_type64='float' type64='f'/>
+</function>
+<function name='LSMResultGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='LSMTextAddToken'>
+<arg declared_type64='LSMTextRef _Nonnull' name='textref' type64='^{__LSMText=}'/>
+<arg declared_type64='CFDataRef _Nonnull' name='token' type64='^{__CFData=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSMTextAddWord'>
+<arg declared_type64='LSMTextRef _Nonnull' name='textref' type64='^{__LSMText=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='word' type64='^{__CFString=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSMTextAddWords'>
+<arg declared_type64='LSMTextRef _Nonnull' name='textref' type64='^{__LSMText=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='words' type64='^{__CFString=}'/>
+<arg declared_type64='CFLocaleRef _Nullable' name='locale' type64='^{__CFLocale=}'/>
+<arg declared_type64='CFOptionFlags' name='flags' type64='Q'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='LSMTextCreate'>
+<arg declared_type64='CFAllocatorRef _Nullable' name='alloc' type64='^{__CFAllocator=}'/>
+<arg declared_type64='LSMMapRef _Nonnull' name='mapref' type64='^{__LSMMap=}'/>
+<retval declared_type64='LSMTextRef _Nonnull' type64='^{__LSMText=}'/>
+</function>
+<function name='LSMTextGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+</signatures>

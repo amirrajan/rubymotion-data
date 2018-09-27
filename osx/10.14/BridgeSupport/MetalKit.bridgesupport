@@ -1,0 +1,451 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<constant const='true' declared_type64='MTKModelError _Nonnull' name='MTKModelErrorDomain' type64='@'/>
+<constant const='true' declared_type64='MTKModelError _Nonnull' name='MTKModelErrorKey' type64='@'/>
+<constant const='true' declared_type64='MTKTextureLoaderCubeLayout _Nonnull' name='MTKTextureLoaderCubeLayoutVertical' type64='@'/>
+<constant const='true' declared_type64='MTKTextureLoaderError _Nonnull' name='MTKTextureLoaderErrorDomain' type64='@'/>
+<constant const='true' declared_type64='MTKTextureLoaderError _Nonnull' name='MTKTextureLoaderErrorKey' type64='@'/>
+<constant const='true' declared_type64='MTKTextureLoaderOption _Nonnull' name='MTKTextureLoaderOptionAllocateMipmaps' type64='@'/>
+<constant const='true' declared_type64='MTKTextureLoaderOption _Nonnull' name='MTKTextureLoaderOptionCubeLayout' type64='@'/>
+<constant const='true' declared_type64='MTKTextureLoaderOption _Nonnull' name='MTKTextureLoaderOptionGenerateMipmaps' type64='@'/>
+<constant const='true' declared_type64='MTKTextureLoaderOption _Nonnull' name='MTKTextureLoaderOptionOrigin' type64='@'/>
+<constant const='true' declared_type64='MTKTextureLoaderOption _Nonnull' name='MTKTextureLoaderOptionSRGB' type64='@'/>
+<constant const='true' declared_type64='MTKTextureLoaderOption _Nonnull' name='MTKTextureLoaderOptionTextureCPUCacheMode' type64='@'/>
+<constant const='true' declared_type64='MTKTextureLoaderOption _Nonnull' name='MTKTextureLoaderOptionTextureStorageMode' type64='@'/>
+<constant const='true' declared_type64='MTKTextureLoaderOption _Nonnull' name='MTKTextureLoaderOptionTextureUsage' type64='@'/>
+<constant const='true' declared_type64='MTKTextureLoaderOrigin _Nonnull' name='MTKTextureLoaderOriginBottomLeft' type64='@'/>
+<constant const='true' declared_type64='MTKTextureLoaderOrigin _Nonnull' name='MTKTextureLoaderOriginFlippedVertically' type64='@'/>
+<constant const='true' declared_type64='MTKTextureLoaderOrigin _Nonnull' name='MTKTextureLoaderOriginTopLeft' type64='@'/>
+<function name='MTKMetalVertexDescriptorFromModelIO'>
+<arg declared_type64='MDLVertexDescriptor * _Nonnull' name='modelIODescriptor' type64='@'/>
+<retval declared_type64='MTLVertexDescriptor * _Nullable' type64='@'/>
+</function>
+<function name='MTKMetalVertexDescriptorFromModelIOWithError'>
+<arg declared_type64='MDLVertexDescriptor * _Nonnull' name='modelIODescriptor' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' name='error' type64='^@'/>
+<retval declared_type64='MTLVertexDescriptor * _Nullable' type64='@'/>
+</function>
+<function name='MTKMetalVertexFormatFromModelIO'>
+<arg declared_type64='MDLVertexFormat' name='vertexFormat' type64='Q'/>
+<retval declared_type64='MTLVertexFormat' type64='Q'/>
+</function>
+<function name='MTKModelIOVertexDescriptorFromMetal'>
+<arg declared_type64='MTLVertexDescriptor * _Nonnull' name='metalDescriptor' type64='@'/>
+<retval declared_type64='MDLVertexDescriptor * _Nonnull' type64='@'/>
+</function>
+<function name='MTKModelIOVertexDescriptorFromMetalWithError'>
+<arg declared_type64='MTLVertexDescriptor * _Nonnull' name='metalDescriptor' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' name='error' type64='^@'/>
+<retval declared_type64='MDLVertexDescriptor * _Nonnull' type64='@'/>
+</function>
+<function name='MTKModelIOVertexFormatFromMetal'>
+<arg declared_type64='MTLVertexFormat' name='vertexFormat' type64='Q'/>
+<retval declared_type64='MDLVertexFormat' type64='Q'/>
+</function>
+<class name='MTKMesh'>
+<method selector='initWithMesh:device:error:'>
+<arg declared_type64='MDLMesh * _Nonnull' index='0' name='mesh' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='device' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='newMeshesFromAsset:device:sourceMeshes:error:'>
+<arg declared_type64='MDLAsset * _Nonnull' index='0' name='asset' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='device' type64='@'/>
+<arg declared_type64='NSArray * _Nullable * _Nullable' index='2' name='sourceMeshes' type64='^@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='3' name='error' type64='^@'/>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='setName:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='submeshes'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='vertexBuffers'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='vertexCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='vertexDescriptor'>
+<retval declared_type64='MDLVertexDescriptor * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MTKMeshBuffer'>
+<method selector='allocator'>
+<retval declared_type64='MTKMeshBufferAllocator * _Nonnull' type64='@'/>
+</method>
+<method selector='buffer'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='length'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='offset'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='type'>
+<retval declared_type64='MDLMeshBufferType' type64='Q'/>
+</method>
+<method selector='zone'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MTKMeshBufferAllocator'>
+<method selector='device'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='initWithDevice:'>
+<arg declared_type64='id _Nonnull' index='0' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MTKSubmesh'>
+<method selector='indexBuffer'>
+<retval declared_type64='MTKMeshBuffer * _Nonnull' type64='@'/>
+</method>
+<method selector='indexCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='indexType'>
+<retval declared_type64='MTLIndexType' type64='Q'/>
+</method>
+<method selector='mesh'>
+<retval declared_type64='MTKMesh * _Nullable' type64='@'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='primitiveType'>
+<retval declared_type64='MTLPrimitiveType' type64='Q'/>
+</method>
+<method selector='setName:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MTKTextureLoader'>
+<method selector='device'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='initWithDevice:'>
+<arg declared_type64='id _Nonnull' index='0' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='newTextureWithCGImage:options:completionHandler:'>
+<arg declared_type64='CGImageRef _Nonnull' index='0' name='cgImage' type64='^{CGImage=}'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='options' type64='@'/>
+<arg declared_type64='MTKTextureLoaderCallback _Nonnull' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='id _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='newTextureWithCGImage:options:error:'>
+<arg declared_type64='CGImageRef _Nonnull' index='0' name='cgImage' type64='^{CGImage=}'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='options' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='newTextureWithContentsOfURL:options:completionHandler:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='URL' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='options' type64='@'/>
+<arg declared_type64='MTKTextureLoaderCallback _Nonnull' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='id _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='newTextureWithContentsOfURL:options:error:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='URL' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='options' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='newTextureWithData:options:completionHandler:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='options' type64='@'/>
+<arg declared_type64='MTKTextureLoaderCallback _Nonnull' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='id _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='newTextureWithData:options:error:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='options' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='newTextureWithMDLTexture:options:completionHandler:'>
+<arg declared_type64='MDLTexture * _Nonnull' index='0' name='texture' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='options' type64='@'/>
+<arg declared_type64='MTKTextureLoaderCallback _Nonnull' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='id _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='newTextureWithMDLTexture:options:error:'>
+<arg declared_type64='MDLTexture * _Nonnull' index='0' name='texture' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='options' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='newTextureWithName:scaleFactor:bundle:options:completionHandler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='CGFloat' index='1' name='scaleFactor' type64='d'/>
+<arg declared_type64='NSBundle * _Nullable' index='2' name='bundle' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='3' name='options' type64='@'/>
+<arg declared_type64='MTKTextureLoaderCallback _Nonnull' function_pointer='true' index='4' name='completionHandler' type64='@?'>
+<arg declared_type64='id _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='newTextureWithName:scaleFactor:bundle:options:error:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='CGFloat' index='1' name='scaleFactor' type64='d'/>
+<arg declared_type64='NSBundle * _Nullable' index='2' name='bundle' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='3' name='options' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='4' name='error' type64='^@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='newTextureWithName:scaleFactor:displayGamut:bundle:options:completionHandler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='CGFloat' index='1' name='scaleFactor' type64='d'/>
+<arg declared_type64='NSDisplayGamut' index='2' name='displayGamut' type64='q'/>
+<arg declared_type64='NSBundle * _Nullable' index='3' name='bundle' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='4' name='options' type64='@'/>
+<arg declared_type64='MTKTextureLoaderCallback _Nonnull' function_pointer='true' index='5' name='completionHandler' type64='@?'>
+<arg declared_type64='id _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='newTextureWithName:scaleFactor:displayGamut:bundle:options:error:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='CGFloat' index='1' name='scaleFactor' type64='d'/>
+<arg declared_type64='NSDisplayGamut' index='2' name='displayGamut' type64='q'/>
+<arg declared_type64='NSBundle * _Nullable' index='3' name='bundle' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='4' name='options' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='5' name='error' type64='^@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='newTexturesWithContentsOfURLs:options:completionHandler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='URLs' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='options' type64='@'/>
+<arg declared_type64='MTKTextureLoaderArrayCallback _Nonnull' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray&gt; * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='newTexturesWithContentsOfURLs:options:error:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='URLs' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='options' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval declared_type64='NSArray&gt; * _Nonnull' type64='@'/>
+</method>
+<method selector='newTexturesWithNames:scaleFactor:bundle:options:completionHandler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='names' type64='@'/>
+<arg declared_type64='CGFloat' index='1' name='scaleFactor' type64='d'/>
+<arg declared_type64='NSBundle * _Nullable' index='2' name='bundle' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='3' name='options' type64='@'/>
+<arg declared_type64='MTKTextureLoaderArrayCallback _Nonnull' function_pointer='true' index='4' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray&gt; * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='newTexturesWithNames:scaleFactor:displayGamut:bundle:options:completionHandler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='names' type64='@'/>
+<arg declared_type64='CGFloat' index='1' name='scaleFactor' type64='d'/>
+<arg declared_type64='NSDisplayGamut' index='2' name='displayGamut' type64='q'/>
+<arg declared_type64='NSBundle * _Nullable' index='3' name='bundle' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='4' name='options' type64='@'/>
+<arg declared_type64='MTKTextureLoaderArrayCallback _Nonnull' function_pointer='true' index='5' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray&gt; * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MTKView'>
+<method selector='autoResizeDrawable'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='clearColor'>
+<retval declared_type64='MTLClearColor' type64='{_MTLClearColor=dddd}'/>
+</method>
+<method selector='clearDepth'>
+<retval declared_type64='double' type64='d'/>
+</method>
+<method selector='clearStencil'>
+<retval declared_type64='uint32_t' type64='I'/>
+</method>
+<method selector='colorPixelFormat'>
+<retval declared_type64='MTLPixelFormat' type64='Q'/>
+</method>
+<method selector='colorspace'>
+<retval declared_type64='CGColorSpaceRef _Nullable' type64='^{CGColorSpace=}'/>
+</method>
+<method selector='currentDrawable'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='currentRenderPassDescriptor'>
+<retval declared_type64='MTLRenderPassDescriptor * _Nullable' type64='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='depthStencilPixelFormat'>
+<retval declared_type64='MTLPixelFormat' type64='Q'/>
+</method>
+<method selector='depthStencilTexture'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='device'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='draw'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='drawableSize'>
+<retval declared_type64='CGSize' type64='{CGSize=dd}'/>
+</method>
+<method selector='enableSetNeedsDisplay'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='framebufferOnly'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='initWithCoder:'>
+<arg declared_type64='NSCoder * _Nonnull' index='0' name='coder' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithFrame:device:'>
+<arg declared_type64='CGRect' index='0' name='frameRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='id _Nullable' index='1' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='isPaused'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='multisampleColorTexture'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='preferredFramesPerSecond'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='presentsWithTransaction'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='releaseDrawables'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sampleCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='setAutoResizeDrawable:'>
+<arg declared_type64='BOOL' index='0' name='autoResizeDrawable' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setClearColor:'>
+<arg declared_type64='MTLClearColor' index='0' name='clearColor' type64='{_MTLClearColor=dddd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setClearDepth:'>
+<arg declared_type64='double' index='0' name='clearDepth' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setClearStencil:'>
+<arg declared_type64='uint32_t' index='0' name='clearStencil' type64='I'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setColorPixelFormat:'>
+<arg declared_type64='MTLPixelFormat' index='0' name='colorPixelFormat' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setColorspace:'>
+<arg declared_type64='CGColorSpaceRef _Nullable' index='0' name='colorspace' type64='^{CGColorSpace=}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDepthStencilPixelFormat:'>
+<arg declared_type64='MTLPixelFormat' index='0' name='depthStencilPixelFormat' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDevice:'>
+<arg declared_type64='id _Nullable' index='0' name='device' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDrawableSize:'>
+<arg declared_type64='CGSize' index='0' name='drawableSize' type64='{CGSize=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setEnableSetNeedsDisplay:'>
+<arg declared_type64='BOOL' index='0' name='enableSetNeedsDisplay' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFramebufferOnly:'>
+<arg declared_type64='BOOL' index='0' name='framebufferOnly' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPaused:'>
+<arg declared_type64='BOOL' index='0' name='paused' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPreferredFramesPerSecond:'>
+<arg declared_type64='NSInteger' index='0' name='preferredFramesPerSecond' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPresentsWithTransaction:'>
+<arg declared_type64='BOOL' index='0' name='presentsWithTransaction' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSampleCount:'>
+<arg declared_type64='NSUInteger' index='0' name='sampleCount' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='drawInMTKView:'>
+<arg declared_type64='MTKView * _Nonnull' index='0' name='view' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mtkView:drawableSizeWillChange:'>
+<arg declared_type64='MTKView * _Nonnull' index='0' name='view' type64='@'/>
+<arg declared_type64='CGSize' index='1' name='size' type64='{CGSize=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='MTKViewDelegate'>
+<method selector='drawInMTKView:' type64='v24@0:8@16'>
+<arg declared_type64='MTKView * _Nonnull' index='0' name='view' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mtkView:drawableSizeWillChange:' type64='v40@0:8@16{CGSize=dd}24'>
+<arg declared_type64='MTKView * _Nonnull' index='0' name='view' type64='@'/>
+<arg declared_type64='CGSize' index='1' name='size' type64='{CGSize=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

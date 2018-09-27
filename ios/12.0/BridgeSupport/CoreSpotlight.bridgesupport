@@ -1,0 +1,1645 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<constant const='true' declared_type='NSString * _Nonnull' name='CSIndexErrorDomain' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CSMailboxArchive' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CSMailboxDrafts' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CSMailboxInbox' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CSMailboxJunk' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CSMailboxSent' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CSMailboxTrash' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CSQueryContinuationActionType' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CSSearchQueryErrorDomain' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CSSearchQueryString' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CSSearchableItemActionType' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CSSearchableItemActivityIdentifier' type='@'/>
+<constant declared_type='double' name='CoreSpotlightVersionNumber' type='d'/>
+<constant const='true' declared_type='unsigned char*' name='CoreSpotlightVersionString' type='^C'/>
+<enum name='CSIndexErrorCodeIndexUnavailableError' value='-1000'/>
+<enum name='CSIndexErrorCodeIndexingUnsupported' value='-1005'/>
+<enum name='CSIndexErrorCodeInvalidClientStateError' value='-1002'/>
+<enum name='CSIndexErrorCodeInvalidItemError' value='-1001'/>
+<enum name='CSIndexErrorCodeQuotaExceeded' value='-1004'/>
+<enum name='CSIndexErrorCodeRemoteConnectionError' value='-1003'/>
+<enum name='CSIndexErrorCodeUnknownError' value='-1'/>
+<enum name='CSSearchQueryErrorCodeCancelled' value='-2003'/>
+<enum name='CSSearchQueryErrorCodeIndexUnreachable' value='-2001'/>
+<enum name='CSSearchQueryErrorCodeInvalidQuery' value='-2002'/>
+<enum name='CSSearchQueryErrorCodeUnknown' value='-2000'/>
+<enum name='CoreSpotlightAPIVersion' value='40'/>
+<class name='CSCustomAttributeKey'>
+<method selector='initWithKeyName:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='keyName' type='@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='initWithKeyName:searchable:searchableByDefault:unique:multiValued:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='keyName' type='@'/>
+<arg declared_type='BOOL' index='1' name='searchable' type='B'/>
+<arg declared_type='BOOL' index='2' name='searchableByDefault' type='B'/>
+<arg declared_type='BOOL' index='3' name='unique' type='B'/>
+<arg declared_type='BOOL' index='4' name='multiValued' type='B'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='isMultiValued'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isSearchable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isSearchableByDefault'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isUnique'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='keyName'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='CSLocalizedString'>
+<method selector='initWithLocalizedStrings:'>
+<arg declared_type='NSDictionary * _Nonnull' index='0' name='localizedStrings' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='localizedString'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='CSPerson'>
+<method selector='contactIdentifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='displayName'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='handleIdentifier'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='handles'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='initWithDisplayName:handles:handleIdentifier:'>
+<arg declared_type='NSString * _Nullable' index='0' name='displayName' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='handles' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='handleIdentifier' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='setContactIdentifier:'>
+<arg declared_type='NSString * _Nullable' index='0' name='contactIdentifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CSSearchQuery'>
+<method selector='cancel'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='completionHandler'>
+<retval declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='foundItemCount'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='foundItemsHandler'>
+<retval declared_type='void (^ _Nullable)(NSArray * _Nonnull)' function_pointer='true' type='@?'>
+<arg declared_type='NSArray * _Nonnull' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='initWithQueryString:attributes:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='queryString' type='@'/>
+<arg declared_type='NSArray * _Nullable' index='1' name='attributes' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='isCancelled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='protectionClasses'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='setCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFoundItemsHandler:'>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nonnull)' function_pointer='true' index='0' name='foundItemsHandler' type='@?'>
+<arg declared_type='NSArray * _Nonnull' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setProtectionClasses:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='protectionClasses' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='start'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CSSearchableIndex'>
+<method selector='beginIndexBatch'>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='defaultSearchableIndex'>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='deleteAllSearchableItemsWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='deleteSearchableItemsWithDomainIdentifiers:completionHandler:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='domainIdentifiers' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='deleteSearchableItemsWithIdentifiers:completionHandler:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='identifiers' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='endIndexBatchWithClientState:completionHandler:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='clientState' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='fetchLastClientStateWithCompletionHandler:'>
+<arg declared_type='void (^ _Nonnull)(NSData * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSData * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='indexDelegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='indexSearchableItems:completionHandler:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='items' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithName:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='name' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithName:protectionClass:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='name' type='@'/>
+<arg declared_type='NSFileProtectionType _Nullable' index='1' name='protectionClass' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method class_method='true' selector='isIndexingAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setIndexDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='indexDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CSSearchableItem'>
+<method selector='attributeSet'>
+<retval declared_type='CSSearchableItemAttributeSet * _Nonnull' type='@'/>
+</method>
+<method selector='domainIdentifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='expirationDate'>
+<retval declared_type='NSDate * _Nonnull' type='@'/>
+</method>
+<method selector='initWithUniqueIdentifier:domainIdentifier:attributeSet:'>
+<arg declared_type='NSString * _Nullable' index='0' name='uniqueIdentifier' type='@'/>
+<arg declared_type='NSString * _Nullable' index='1' name='domainIdentifier' type='@'/>
+<arg declared_type='CSSearchableItemAttributeSet * _Nonnull' index='2' name='attributeSet' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='setAttributeSet:'>
+<arg declared_type='CSSearchableItemAttributeSet * _Nonnull' index='0' name='attributeSet' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDomainIdentifier:'>
+<arg declared_type='NSString * _Nullable' index='0' name='domainIdentifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setExpirationDate:'>
+<arg declared_type='NSDate * _Nullable' index='0' name='expirationDate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUniqueIdentifier:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='uniqueIdentifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='uniqueIdentifier'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='CSSearchableItemAttributeSet'>
+<method selector='EXIFGPSVersion'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='EXIFVersion'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='GPSAreaInformation'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='GPSDOP'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='GPSDateStamp'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='GPSDestBearing'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='GPSDestDistance'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='GPSDestLatitude'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='GPSDestLongitude'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='GPSDifferental'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='GPSMapDatum'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='GPSMeasureMode'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='GPSProcessingMethod'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='GPSStatus'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='GPSTrack'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='HTMLContentData'>
+<retval declared_type='NSData * _Nullable' type='@'/>
+</method>
+<method selector='ISOSpeed'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='URL'>
+<retval declared_type='NSURL * _Nullable' type='@'/>
+</method>
+<method selector='accountHandles'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='accountIdentifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='acquisitionMake'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='acquisitionModel'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='addedDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='additionalRecipients'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='album'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='allDay'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='alternateNames'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='altitude'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='aperture'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='artist'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='audiences'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='audioBitRate'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='audioChannelCount'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='audioEncodingApplication'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='audioSampleRate'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='audioTrackNumber'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='authorAddresses'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='authorEmailAddresses'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='authorNames'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='authors'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='bitsPerSample'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='cameraOwner'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='city'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='codecs'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='colorSpace'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='comment'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='completionDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='composer'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='contactKeywords'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='containerDisplayName'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='containerIdentifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='containerOrder'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='containerTitle'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='contentCreationDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='contentDescription'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='contentModificationDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='contentRating'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='contentSources'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='contentType'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='contentTypeTree'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='contentURL'>
+<retval declared_type='NSURL * _Nullable' type='@'/>
+</method>
+<method selector='contributors'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='copyright'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='country'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='coverage'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='creator'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='deliveryType'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='director'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='displayName'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='domainIdentifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='downloadedDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='dueDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='duration'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='editors'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='emailAddresses'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='emailHeaders'>
+<retval declared_type='NSDictionary * _Nullable' type='@'/>
+</method>
+<method selector='encodingApplications'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='endDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='exposureMode'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='exposureProgram'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='exposureTime'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='exposureTimeString'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='fNumber'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='fileSize'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='focalLength'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='fontNames'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='fullyFormattedAddress'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='genre'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='hasAlphaChannel'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='headline'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='hiddenAdditionalRecipients'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='imageDirection'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='importantDates'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='information'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='initWithItemContentType:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='itemContentType' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='instantMessageAddresses'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='instructions'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='isFlashOn'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='isFocalLength35mm'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='isGeneralMIDISequence'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='isLikelyJunk'>
+<retval declared_type='NSNumber * _Nonnull' type='@'/>
+</method>
+<method selector='isLocal'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='isRedEyeOn'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='isStreamable'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='isUserCreated'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='isUserCurated'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='isUserOwned'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='keySignature'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='keywords'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='kind'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='languages'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='lastUsedDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='latitude'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='layerNames'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='lensModel'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='longitude'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='lyricist'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='mailboxIdentifiers'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='maxAperture'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='mediaTypes'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='metadataModificationDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='meteringMode'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='musicalGenre'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='musicalInstrumentCategory'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='musicalInstrumentName'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='namedLocation'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='organizations'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='orientation'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='originalFormat'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='originalSource'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='pageCount'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='pageHeight'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='pageWidth'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='participants'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='path'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='performers'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='phoneNumbers'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='pixelCount'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='pixelHeight'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='pixelWidth'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='playCount'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='postalCode'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='primaryRecipients'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='producer'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='profileName'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='projects'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='providerDataTypeIdentifiers'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='providerFileTypeIdentifiers'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='providerInPlaceFileTypeIdentifiers'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='publishers'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='rankingHint'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='rating'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='ratingDescription'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='recipientAddresses'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='recipientEmailAddresses'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='recipientNames'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='recordingDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='relatedUniqueIdentifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='resolutionHeightDPI'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='resolutionWidthDPI'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='rights'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='role'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='securityMethod'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='setAccountHandles:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='accountHandles' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAccountIdentifier:'>
+<arg declared_type='NSString * _Nullable' index='0' name='accountIdentifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAcquisitionMake:'>
+<arg declared_type='NSString * _Nullable' index='0' name='acquisitionMake' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAcquisitionModel:'>
+<arg declared_type='NSString * _Nullable' index='0' name='acquisitionModel' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAddedDate:'>
+<arg declared_type='NSDate * _Nullable' index='0' name='addedDate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAdditionalRecipients:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='additionalRecipients' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAlbum:'>
+<arg declared_type='NSString * _Nullable' index='0' name='album' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAllDay:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='allDay' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAlternateNames:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='alternateNames' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAltitude:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='altitude' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAperture:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='aperture' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setArtist:'>
+<arg declared_type='NSString * _Nullable' index='0' name='artist' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAudiences:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='audiences' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAudioBitRate:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='audioBitRate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAudioChannelCount:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='audioChannelCount' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAudioEncodingApplication:'>
+<arg declared_type='NSString * _Nullable' index='0' name='audioEncodingApplication' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAudioSampleRate:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='audioSampleRate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAudioTrackNumber:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='audioTrackNumber' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAuthorAddresses:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='authorAddresses' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAuthorEmailAddresses:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='authorEmailAddresses' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAuthorNames:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='authorNames' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAuthors:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='authors' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBitsPerSample:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='bitsPerSample' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCameraOwner:'>
+<arg declared_type='NSString * _Nullable' index='0' name='cameraOwner' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCity:'>
+<arg declared_type='NSString * _Nullable' index='0' name='city' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCodecs:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='codecs' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setColorSpace:'>
+<arg declared_type='NSString * _Nullable' index='0' name='colorSpace' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setComment:'>
+<arg declared_type='NSString * _Nullable' index='0' name='comment' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCompletionDate:'>
+<arg declared_type='NSDate * _Nullable' index='0' name='completionDate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setComposer:'>
+<arg declared_type='NSString * _Nullable' index='0' name='composer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContactKeywords:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='contactKeywords' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContainerDisplayName:'>
+<arg declared_type='NSString * _Nullable' index='0' name='containerDisplayName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContainerIdentifier:'>
+<arg declared_type='NSString * _Nullable' index='0' name='containerIdentifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContainerOrder:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='containerOrder' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContainerTitle:'>
+<arg declared_type='NSString * _Nullable' index='0' name='containerTitle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContentCreationDate:'>
+<arg declared_type='NSDate * _Nullable' index='0' name='contentCreationDate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContentDescription:'>
+<arg declared_type='NSString * _Nullable' index='0' name='contentDescription' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContentModificationDate:'>
+<arg declared_type='NSDate * _Nullable' index='0' name='contentModificationDate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContentRating:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='contentRating' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContentSources:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='contentSources' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContentType:'>
+<arg declared_type='NSString * _Nullable' index='0' name='contentType' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContentTypeTree:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='contentTypeTree' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContentURL:'>
+<arg declared_type='NSURL * _Nullable' index='0' name='contentURL' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContributors:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='contributors' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCopyright:'>
+<arg declared_type='NSString * _Nullable' index='0' name='copyright' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCountry:'>
+<arg declared_type='NSString * _Nullable' index='0' name='country' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCoverage:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='coverage' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCreator:'>
+<arg declared_type='NSString * _Nullable' index='0' name='creator' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDeliveryType:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='deliveryType' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDirector:'>
+<arg declared_type='NSString * _Nullable' index='0' name='director' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisplayName:'>
+<arg declared_type='NSString * _Nullable' index='0' name='displayName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDomainIdentifier:'>
+<arg declared_type='NSString * _Nullable' index='0' name='domainIdentifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDownloadedDate:'>
+<arg declared_type='NSDate * _Nullable' index='0' name='downloadedDate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDueDate:'>
+<arg declared_type='NSDate * _Nullable' index='0' name='dueDate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDuration:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='duration' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEXIFGPSVersion:'>
+<arg declared_type='NSString * _Nullable' index='0' name='EXIFGPSVersion' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEXIFVersion:'>
+<arg declared_type='NSString * _Nullable' index='0' name='EXIFVersion' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEditors:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='editors' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEmailAddresses:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='emailAddresses' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEmailHeaders:'>
+<arg declared_type='NSDictionary * _Nullable' index='0' name='emailHeaders' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEncodingApplications:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='encodingApplications' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEndDate:'>
+<arg declared_type='NSDate * _Nullable' index='0' name='endDate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setExposureMode:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='exposureMode' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setExposureProgram:'>
+<arg declared_type='NSString * _Nullable' index='0' name='exposureProgram' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setExposureTime:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='exposureTime' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setExposureTimeString:'>
+<arg declared_type='NSString * _Nullable' index='0' name='exposureTimeString' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFNumber:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='fNumber' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFileSize:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='fileSize' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFlashOn:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='flashOn' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFocalLength35mm:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='focalLength35mm' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFocalLength:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='focalLength' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFontNames:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='fontNames' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFullyFormattedAddress:'>
+<arg declared_type='NSString * _Nullable' index='0' name='fullyFormattedAddress' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGPSAreaInformation:'>
+<arg declared_type='NSString * _Nullable' index='0' name='GPSAreaInformation' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGPSDOP:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='GPSDOP' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGPSDateStamp:'>
+<arg declared_type='NSDate * _Nullable' index='0' name='GPSDateStamp' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGPSDestBearing:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='GPSDestBearing' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGPSDestDistance:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='GPSDestDistance' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGPSDestLatitude:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='GPSDestLatitude' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGPSDestLongitude:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='GPSDestLongitude' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGPSDifferental:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='GPSDifferental' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGPSMapDatum:'>
+<arg declared_type='NSString * _Nullable' index='0' name='GPSMapDatum' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGPSMeasureMode:'>
+<arg declared_type='NSString * _Nullable' index='0' name='GPSMeasureMode' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGPSProcessingMethod:'>
+<arg declared_type='NSString * _Nullable' index='0' name='GPSProcessingMethod' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGPSStatus:'>
+<arg declared_type='NSString * _Nullable' index='0' name='GPSStatus' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGPSTrack:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='GPSTrack' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGeneralMIDISequence:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='generalMIDISequence' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGenre:'>
+<arg declared_type='NSString * _Nullable' index='0' name='genre' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHTMLContentData:'>
+<arg declared_type='NSData * _Nullable' index='0' name='HTMLContentData' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHasAlphaChannel:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='hasAlphaChannel' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeadline:'>
+<arg declared_type='NSString * _Nullable' index='0' name='headline' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHiddenAdditionalRecipients:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='hiddenAdditionalRecipients' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setISOSpeed:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='ISOSpeed' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setIdentifier:'>
+<arg declared_type='NSString * _Nullable' index='0' name='identifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageDirection:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='imageDirection' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImportantDates:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='importantDates' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInformation:'>
+<arg declared_type='NSString * _Nullable' index='0' name='information' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInstantMessageAddresses:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='instantMessageAddresses' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInstructions:'>
+<arg declared_type='NSString * _Nullable' index='0' name='instructions' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setKeySignature:'>
+<arg declared_type='NSString * _Nullable' index='0' name='keySignature' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setKeywords:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='keywords' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setKind:'>
+<arg declared_type='NSString * _Nullable' index='0' name='kind' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLanguages:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='languages' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLastUsedDate:'>
+<arg declared_type='NSDate * _Nullable' index='0' name='lastUsedDate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLatitude:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='latitude' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLayerNames:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='layerNames' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLensModel:'>
+<arg declared_type='NSString * _Nullable' index='0' name='lensModel' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLikelyJunk:'>
+<arg declared_type='NSNumber * _Nonnull' index='0' name='likelyJunk' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLocal:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='local' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLongitude:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='longitude' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLyricist:'>
+<arg declared_type='NSString * _Nullable' index='0' name='lyricist' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMailboxIdentifiers:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='mailboxIdentifiers' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaxAperture:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='maxAperture' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMediaTypes:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='mediaTypes' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMetadataModificationDate:'>
+<arg declared_type='NSDate * _Nullable' index='0' name='metadataModificationDate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMeteringMode:'>
+<arg declared_type='NSString * _Nullable' index='0' name='meteringMode' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMusicalGenre:'>
+<arg declared_type='NSString * _Nullable' index='0' name='musicalGenre' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMusicalInstrumentCategory:'>
+<arg declared_type='NSString * _Nullable' index='0' name='musicalInstrumentCategory' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMusicalInstrumentName:'>
+<arg declared_type='NSString * _Nullable' index='0' name='musicalInstrumentName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNamedLocation:'>
+<arg declared_type='NSString * _Nullable' index='0' name='namedLocation' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOrganizations:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='organizations' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOrientation:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='orientation' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOriginalFormat:'>
+<arg declared_type='NSString * _Nullable' index='0' name='originalFormat' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOriginalSource:'>
+<arg declared_type='NSString * _Nullable' index='0' name='originalSource' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPageCount:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='pageCount' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPageHeight:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='pageHeight' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPageWidth:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='pageWidth' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setParticipants:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='participants' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPath:'>
+<arg declared_type='NSString * _Nullable' index='0' name='path' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPerformers:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='performers' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPhoneNumbers:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='phoneNumbers' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPixelCount:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='pixelCount' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPixelHeight:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='pixelHeight' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPixelWidth:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='pixelWidth' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPlayCount:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='playCount' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPostalCode:'>
+<arg declared_type='NSString * _Nullable' index='0' name='postalCode' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPrimaryRecipients:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='primaryRecipients' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setProducer:'>
+<arg declared_type='NSString * _Nullable' index='0' name='producer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setProfileName:'>
+<arg declared_type='NSString * _Nullable' index='0' name='profileName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setProjects:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='projects' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setProviderDataTypeIdentifiers:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='providerDataTypeIdentifiers' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setProviderFileTypeIdentifiers:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='providerFileTypeIdentifiers' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setProviderInPlaceFileTypeIdentifiers:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='providerInPlaceFileTypeIdentifiers' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPublishers:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='publishers' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRankingHint:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='rankingHint' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRating:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='rating' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRatingDescription:'>
+<arg declared_type='NSString * _Nullable' index='0' name='ratingDescription' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecipientAddresses:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='recipientAddresses' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecipientEmailAddresses:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='recipientEmailAddresses' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecipientNames:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='recipientNames' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecordingDate:'>
+<arg declared_type='NSDate * _Nullable' index='0' name='recordingDate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRedEyeOn:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='redEyeOn' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRelatedUniqueIdentifier:'>
+<arg declared_type='NSString * _Nullable' index='0' name='relatedUniqueIdentifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setResolutionHeightDPI:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='resolutionHeightDPI' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setResolutionWidthDPI:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='resolutionWidthDPI' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRights:'>
+<arg declared_type='NSString * _Nullable' index='0' name='rights' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRole:'>
+<arg declared_type='NSString * _Nullable' index='0' name='role' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSecurityMethod:'>
+<arg declared_type='NSString * _Nullable' index='0' name='securityMethod' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSpeed:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='speed' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setStartDate:'>
+<arg declared_type='NSDate * _Nullable' index='0' name='startDate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setStateOrProvince:'>
+<arg declared_type='NSString * _Nullable' index='0' name='stateOrProvince' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setStreamable:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='streamable' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSubThoroughfare:'>
+<arg declared_type='NSString * _Nullable' index='0' name='subThoroughfare' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSubject:'>
+<arg declared_type='NSString * _Nullable' index='0' name='subject' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSupportsNavigation:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='supportsNavigation' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSupportsPhoneCall:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='supportsPhoneCall' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTempo:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='tempo' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTextContent:'>
+<arg declared_type='NSString * _Nullable' index='0' name='textContent' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTheme:'>
+<arg declared_type='NSString * _Nullable' index='0' name='theme' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setThoroughfare:'>
+<arg declared_type='NSString * _Nullable' index='0' name='thoroughfare' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setThumbnailData:'>
+<arg declared_type='NSData * _Nullable' index='0' name='thumbnailData' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setThumbnailURL:'>
+<arg declared_type='NSURL * _Nullable' index='0' name='thumbnailURL' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTimeSignature:'>
+<arg declared_type='NSString * _Nullable' index='0' name='timeSignature' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTimestamp:'>
+<arg declared_type='NSDate * _Nullable' index='0' name='timestamp' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitle:'>
+<arg declared_type='NSString * _Nullable' index='0' name='title' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTotalBitRate:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='totalBitRate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setURL:'>
+<arg declared_type='NSURL * _Nullable' index='0' name='URL' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUserCreated:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='userCreated' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUserCurated:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='userCurated' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUserOwned:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='userOwned' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setValue:forCustomKey:'>
+<arg declared_type='id _Nullable' index='0' name='value' type='@'/>
+<arg declared_type='CSCustomAttributeKey * _Nonnull' index='1' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setVersion:'>
+<arg declared_type='NSString * _Nullable' index='0' name='version' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setVideoBitRate:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='videoBitRate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWeakRelatedUniqueIdentifier:'>
+<arg declared_type='NSString * _Nullable' index='0' name='weakRelatedUniqueIdentifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWhiteBalance:'>
+<arg declared_type='NSNumber * _Nullable' index='0' name='whiteBalance' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='speed'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='startDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='stateOrProvince'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='subThoroughfare'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='subject'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='supportsNavigation'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='supportsPhoneCall'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='tempo'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='textContent'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='theme'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='thoroughfare'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='thumbnailData'>
+<retval declared_type='NSData * _Nullable' type='@'/>
+</method>
+<method selector='thumbnailURL'>
+<retval declared_type='NSURL * _Nullable' type='@'/>
+</method>
+<method selector='timeSignature'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='timestamp'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='totalBitRate'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='valueForCustomKey:'>
+<arg declared_type='CSCustomAttributeKey * _Nonnull' index='0' name='key' type='@'/>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='version'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='videoBitRate'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+<method selector='weakRelatedUniqueIdentifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='whiteBalance'>
+<retval declared_type='NSNumber * _Nullable' type='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='dataForSearchableIndex:itemIdentifier:typeIdentifier:error:'>
+<arg declared_type='CSSearchableIndex * _Nonnull' index='0' name='searchableIndex' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='itemIdentifier' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='typeIdentifier' type='@'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='3' name='outError' type='^@' type_modifier='o'/>
+<retval declared_type='NSData * _Nullable' type='@'/>
+</method>
+<method selector='fileURLForSearchableIndex:itemIdentifier:typeIdentifier:inPlace:error:'>
+<arg declared_type='CSSearchableIndex * _Nonnull' index='0' name='searchableIndex' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='itemIdentifier' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='typeIdentifier' type='@'/>
+<arg declared_type='BOOL' index='3' name='inPlace' type='B'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='4' name='outError' type='^@' type_modifier='o'/>
+<retval declared_type='NSURL * _Nullable' type='@'/>
+</method>
+<method selector='searchableIndex:reindexAllSearchableItemsWithAcknowledgementHandler:'>
+<arg declared_type='CSSearchableIndex * _Nonnull' index='0' name='searchableIndex' type='@'/>
+<arg declared_type='void (^ _Nonnull)(void)' function_pointer='true' index='1' name='acknowledgementHandler' type='@?'>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchableIndex:reindexSearchableItemsWithIdentifiers:acknowledgementHandler:'>
+<arg declared_type='CSSearchableIndex * _Nonnull' index='0' name='searchableIndex' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='identifiers' type='@'/>
+<arg declared_type='void (^ _Nonnull)(void)' function_pointer='true' index='2' name='acknowledgementHandler' type='@?'>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchableIndexDidFinishThrottle:'>
+<arg declared_type='CSSearchableIndex * _Nonnull' index='0' name='searchableIndex' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchableIndexDidThrottle:'>
+<arg declared_type='CSSearchableIndex * _Nonnull' index='0' name='searchableIndex' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NSUserActivity'>
+<method selector='contentAttributeSet'>
+<retval declared_type='CSSearchableItemAttributeSet * _Nullable' type='@'/>
+</method>
+<method selector='setContentAttributeSet:'>
+<arg declared_type='CSSearchableItemAttributeSet * _Nullable' index='0' name='contentAttributeSet' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='CSSearchableIndexDelegate'>
+<method selector='dataForSearchableIndex:itemIdentifier:typeIdentifier:error:' type='@24@0:4@8@12@16o^@20' type64='@48@0:8@16@24@32o^@40'>
+<arg declared_type='CSSearchableIndex * _Nonnull' index='0' name='searchableIndex' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='itemIdentifier' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='typeIdentifier' type='@'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='3' name='outError' type='^@' type_modifier='o'/>
+<retval declared_type='NSData * _Nullable' type='@'/>
+</method>
+<method selector='fileURLForSearchableIndex:itemIdentifier:typeIdentifier:inPlace:error:' type='@28@0:4@8@12@16B20o^@24' type64='@52@0:8@16@24@32B40o^@44'>
+<arg declared_type='CSSearchableIndex * _Nonnull' index='0' name='searchableIndex' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='itemIdentifier' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='typeIdentifier' type='@'/>
+<arg declared_type='BOOL' index='3' name='inPlace' type='B'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='4' name='outError' type='^@' type_modifier='o'/>
+<retval declared_type='NSURL * _Nullable' type='@'/>
+</method>
+<method selector='searchableIndex:reindexAllSearchableItemsWithAcknowledgementHandler:' type='v16@0:4@8@?12' type64='v32@0:8@16@?24'>
+<arg declared_type='CSSearchableIndex * _Nonnull' index='0' name='searchableIndex' type='@'/>
+<arg declared_type='void (^ _Nonnull)(void)' function_pointer='true' index='1' name='acknowledgementHandler' type='@?'>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchableIndex:reindexSearchableItemsWithIdentifiers:acknowledgementHandler:' type='v20@0:4@8@12@?16' type64='v40@0:8@16@24@?32'>
+<arg declared_type='CSSearchableIndex * _Nonnull' index='0' name='searchableIndex' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='identifiers' type='@'/>
+<arg declared_type='void (^ _Nonnull)(void)' function_pointer='true' index='2' name='acknowledgementHandler' type='@?'>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchableIndexDidFinishThrottle:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='CSSearchableIndex * _Nonnull' index='0' name='searchableIndex' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchableIndexDidThrottle:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='CSSearchableIndex * _Nonnull' index='0' name='searchableIndex' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>

@@ -1,0 +1,616 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<cftype name='ALCcontext' type64='^{ALCcontext_struct=}'/>
+<cftype name='ALCdevice' type64='^{ALCdevice_struct=}'/>
+<enum name='ALC_ALL_ATTRIBUTES' value64='4099'/>
+<enum name='ALC_ALL_DEVICES_SPECIFIER' value64='4115'/>
+<enum name='ALC_ASA_OBSTRUCTION' value64='1868723060'/>
+<enum name='ALC_ASA_OCCLUSION' value64='1868784492'/>
+<enum name='ALC_ASA_REVERB_EQ_BANDWITH' value64='1920361826'/>
+<enum name='ALC_ASA_REVERB_EQ_FREQ' value64='1920361830'/>
+<enum name='ALC_ASA_REVERB_EQ_GAIN' value64='1920361831'/>
+<enum name='ALC_ASA_REVERB_GLOBAL_LEVEL' value64='1920362348'/>
+<enum name='ALC_ASA_REVERB_ON' value64='1920364398'/>
+<enum name='ALC_ASA_REVERB_ROOM_TYPE' value64='1920365172'/>
+<enum name='ALC_ASA_REVERB_ROOM_TYPE_Cathedral' value64='8'/>
+<enum name='ALC_ASA_REVERB_ROOM_TYPE_LargeChamber' value64='7'/>
+<enum name='ALC_ASA_REVERB_ROOM_TYPE_LargeHall' value64='4'/>
+<enum name='ALC_ASA_REVERB_ROOM_TYPE_LargeHall2' value64='12'/>
+<enum name='ALC_ASA_REVERB_ROOM_TYPE_LargeRoom' value64='2'/>
+<enum name='ALC_ASA_REVERB_ROOM_TYPE_LargeRoom2' value64='9'/>
+<enum name='ALC_ASA_REVERB_ROOM_TYPE_MediumChamber' value64='6'/>
+<enum name='ALC_ASA_REVERB_ROOM_TYPE_MediumHall' value64='3'/>
+<enum name='ALC_ASA_REVERB_ROOM_TYPE_MediumHall2' value64='10'/>
+<enum name='ALC_ASA_REVERB_ROOM_TYPE_MediumHall3' value64='11'/>
+<enum name='ALC_ASA_REVERB_ROOM_TYPE_MediumRoom' value64='1'/>
+<enum name='ALC_ASA_REVERB_ROOM_TYPE_Plate' value64='5'/>
+<enum name='ALC_ASA_REVERB_ROOM_TYPE_SmallRoom' value64='0'/>
+<enum name='ALC_ASA_REVERB_SEND_LEVEL' value64='1920365420'/>
+<enum name='ALC_ATTRIBUTES_SIZE' value64='4098'/>
+<enum name='ALC_CAPTURE_DEFAULT_DEVICE_SPECIFIER' value64='785'/>
+<enum name='ALC_CAPTURE_DEVICE_SPECIFIER' value64='784'/>
+<enum name='ALC_CAPTURE_SAMPLES' value64='786'/>
+<enum name='ALC_DEFAULT_ALL_DEVICES_SPECIFIER' value64='4114'/>
+<enum name='ALC_DEFAULT_DEVICE_SPECIFIER' value64='4100'/>
+<enum name='ALC_DEVICE_SPECIFIER' value64='4101'/>
+<enum name='ALC_EXTENSIONS' value64='4102'/>
+<enum name='ALC_FALSE' value64='0'/>
+<enum name='ALC_FREQUENCY' value64='4103'/>
+<enum name='ALC_INVALID' value64='0'/>
+<enum name='ALC_INVALID_CONTEXT' value64='40962'/>
+<enum name='ALC_INVALID_DEVICE' value64='40961'/>
+<enum name='ALC_INVALID_ENUM' value64='40963'/>
+<enum name='ALC_INVALID_VALUE' value64='40964'/>
+<enum name='ALC_IPHONE_SPATIAL_RENDERING_QUALITY_HEADPHONES' value64='1751412840'/>
+<enum name='ALC_MAC_OSX_RENDER_CHANNEL_COUNT_MULTICHANNEL' value64='1919118691'/>
+<enum name='ALC_MAC_OSX_RENDER_CHANNEL_COUNT_STEREO' value64='1919120244'/>
+<enum name='ALC_MAC_OSX_SPATIAL_RENDERING_QUALITY_HIGH' value64='1920034921'/>
+<enum name='ALC_MAC_OSX_SPATIAL_RENDERING_QUALITY_LOW' value64='1919183983'/>
+<enum name='ALC_MAJOR_VERSION' value64='4096'/>
+<enum name='ALC_MINOR_VERSION' value64='4097'/>
+<enum name='ALC_MONO_SOURCES' value64='4112'/>
+<enum name='ALC_NO_ERROR' value64='0'/>
+<enum name='ALC_OUT_OF_MEMORY' value64='40965'/>
+<enum name='ALC_REFRESH' value64='4104'/>
+<enum name='ALC_STEREO_SOURCES' value64='4113'/>
+<enum name='ALC_SYNC' value64='4105'/>
+<enum name='ALC_TRUE' value64='1'/>
+<enum name='ALC_VERSION_0_1' value64='1'/>
+<enum name='AL_BITS' value64='8194'/>
+<enum name='AL_BUFFER' value64='4105'/>
+<enum name='AL_BUFFERS_PROCESSED' value64='4118'/>
+<enum name='AL_BUFFERS_QUEUED' value64='4117'/>
+<enum name='AL_BYTE_OFFSET' value64='4134'/>
+<enum name='AL_CHANNELS' value64='8195'/>
+<enum name='AL_CONE_INNER_ANGLE' value64='4097'/>
+<enum name='AL_CONE_OUTER_ANGLE' value64='4098'/>
+<enum name='AL_CONE_OUTER_GAIN' value64='4130'/>
+<enum name='AL_DIRECTION' value64='4101'/>
+<enum name='AL_DISTANCE_MODEL' value64='53248'/>
+<enum name='AL_DOPPLER_FACTOR' value64='49152'/>
+<enum name='AL_DOPPLER_VELOCITY' value64='49153'/>
+<enum name='AL_EXPONENT_DISTANCE' value64='53253'/>
+<enum name='AL_EXPONENT_DISTANCE_CLAMPED' value64='53254'/>
+<enum name='AL_EXTENSIONS' value64='45060'/>
+<enum name='AL_FALSE' value64='0'/>
+<enum name='AL_FORMAT_MONO16' value64='4353'/>
+<enum name='AL_FORMAT_MONO8' value64='4352'/>
+<enum name='AL_FORMAT_STEREO16' value64='4355'/>
+<enum name='AL_FORMAT_STEREO8' value64='4354'/>
+<enum name='AL_FREQUENCY' value64='8193'/>
+<enum name='AL_GAIN' value64='4106'/>
+<enum name='AL_GAMEKIT' value64='1735095154'/>
+<enum name='AL_ILLEGAL_COMMAND' value64='40964'/>
+<enum name='AL_ILLEGAL_ENUM' value64='40962'/>
+<enum name='AL_INITIAL' value64='4113'/>
+<enum name='AL_INVALID' value64='-1'/>
+<enum name='AL_INVALID_ENUM' value64='40962'/>
+<enum name='AL_INVALID_NAME' value64='40961'/>
+<enum name='AL_INVALID_OPERATION' value64='40964'/>
+<enum name='AL_INVALID_VALUE' value64='40963'/>
+<enum name='AL_INVERSE_DISTANCE' value64='53249'/>
+<enum name='AL_INVERSE_DISTANCE_CLAMPED' value64='53250'/>
+<enum name='AL_LINEAR_DISTANCE' value64='53251'/>
+<enum name='AL_LINEAR_DISTANCE_CLAMPED' value64='53252'/>
+<enum name='AL_LOOPING' value64='4103'/>
+<enum name='AL_MAX_DISTANCE' value64='4131'/>
+<enum name='AL_MAX_GAIN' value64='4110'/>
+<enum name='AL_MIN_GAIN' value64='4109'/>
+<enum name='AL_NONE' value64='0'/>
+<enum name='AL_NO_ERROR' value64='0'/>
+<enum name='AL_ORIENTATION' value64='4111'/>
+<enum name='AL_OUT_OF_MEMORY' value64='40965'/>
+<enum name='AL_PAUSED' value64='4115'/>
+<enum name='AL_PENDING' value64='8209'/>
+<enum name='AL_PITCH' value64='4099'/>
+<enum name='AL_PLAYING' value64='4114'/>
+<enum name='AL_POSITION' value64='4100'/>
+<enum name='AL_PROCESSED' value64='8210'/>
+<enum name='AL_QUEUE_HAS_LOOPED' value64='36864'/>
+<enum name='AL_REFERENCE_DISTANCE' value64='4128'/>
+<enum name='AL_RENDERER' value64='45059'/>
+<enum name='AL_ROLLOFF_FACTOR' value64='4129'/>
+<enum name='AL_SAMPLE_OFFSET' value64='4133'/>
+<enum name='AL_SEC_OFFSET' value64='4132'/>
+<enum name='AL_SIZE' value64='8196'/>
+<enum name='AL_SOURCE_RELATIVE' value64='514'/>
+<enum name='AL_SOURCE_STATE' value64='4112'/>
+<enum name='AL_SOURCE_TYPE' value64='4135'/>
+<enum name='AL_SPEED_OF_SOUND' value64='49155'/>
+<enum name='AL_STATIC' value64='4136'/>
+<enum name='AL_STOPPED' value64='4116'/>
+<enum name='AL_STREAMING' value64='4137'/>
+<enum name='AL_TRUE' value64='1'/>
+<enum name='AL_UNDETERMINED' value64='4144'/>
+<enum name='AL_UNUSED' value64='8208'/>
+<enum name='AL_VELOCITY' value64='4102'/>
+<enum name='AL_VENDOR' value64='45057'/>
+<enum name='AL_VERSION' value64='45058'/>
+<function name='alBuffer3f'>
+<arg declared_type64='ALuint' name='bid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALfloat' name='value1' type64='f'/>
+<arg declared_type64='ALfloat' name='value2' type64='f'/>
+<arg declared_type64='ALfloat' name='value3' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alBuffer3i'>
+<arg declared_type64='ALuint' name='bid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALint' name='value1' type64='i'/>
+<arg declared_type64='ALint' name='value2' type64='i'/>
+<arg declared_type64='ALint' name='value3' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alBufferData'>
+<arg declared_type64='ALuint' name='bid' type64='I'/>
+<arg declared_type64='ALenum' name='format' type64='i'/>
+<arg const='true' declared_type64='ALvoid*' name='data' type64='^v'/>
+<arg declared_type64='ALsizei' name='size' type64='i'/>
+<arg declared_type64='ALsizei' name='freq' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alBufferf'>
+<arg declared_type64='ALuint' name='bid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALfloat' name='value' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alBufferfv'>
+<arg declared_type64='ALuint' name='bid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg const='true' declared_type64='ALfloat*' name='values' type64='^f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alBufferi'>
+<arg declared_type64='ALuint' name='bid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALint' name='value' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alBufferiv'>
+<arg declared_type64='ALuint' name='bid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg const='true' declared_type64='ALint*' name='values' type64='^i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alDeleteBuffers'>
+<arg declared_type64='ALsizei' name='n' type64='i'/>
+<arg const='true' declared_type64='ALuint*' name='buffers' type64='^I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alDeleteSources'>
+<arg declared_type64='ALsizei' name='n' type64='i'/>
+<arg const='true' declared_type64='ALuint*' name='sources' type64='^I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alDisable'>
+<arg declared_type64='ALenum' name='capability' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alDistanceModel'>
+<arg declared_type64='ALenum' name='distanceModel' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alDopplerFactor'>
+<arg declared_type64='ALfloat' name='value' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alDopplerVelocity'>
+<arg declared_type64='ALfloat' name='value' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alEnable'>
+<arg declared_type64='ALenum' name='capability' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGenBuffers'>
+<arg declared_type64='ALsizei' name='n' type64='i'/>
+<arg declared_type64='ALuint*' name='buffers' type64='^I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGenSources'>
+<arg declared_type64='ALsizei' name='n' type64='i'/>
+<arg declared_type64='ALuint*' name='sources' type64='^I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetBoolean'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<retval declared_type64='ALboolean' type64='c'/>
+</function>
+<function name='alGetBooleanv'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALboolean*' name='data' type64='*'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetBuffer3f'>
+<arg declared_type64='ALuint' name='bid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALfloat*' name='value1' type64='^f'/>
+<arg declared_type64='ALfloat*' name='value2' type64='^f'/>
+<arg declared_type64='ALfloat*' name='value3' type64='^f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetBuffer3i'>
+<arg declared_type64='ALuint' name='bid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALint*' name='value1' type64='^i'/>
+<arg declared_type64='ALint*' name='value2' type64='^i'/>
+<arg declared_type64='ALint*' name='value3' type64='^i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetBufferf'>
+<arg declared_type64='ALuint' name='bid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALfloat*' name='value' type64='^f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetBufferfv'>
+<arg declared_type64='ALuint' name='bid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALfloat*' name='values' type64='^f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetBufferi'>
+<arg declared_type64='ALuint' name='bid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALint*' name='value' type64='^i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetBufferiv'>
+<arg declared_type64='ALuint' name='bid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALint*' name='values' type64='^i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetDouble'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<retval declared_type64='ALdouble' type64='d'/>
+</function>
+<function name='alGetDoublev'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALdouble*' name='data' type64='^d'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetEnumValue'>
+<arg const='true' declared_type64='ALchar*' name='ename' type64='*'/>
+<retval declared_type64='ALenum' type64='i'/>
+</function>
+<function name='alGetError'>
+<retval declared_type64='ALenum' type64='i'/>
+</function>
+<function name='alGetFloat'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<retval declared_type64='ALfloat' type64='f'/>
+</function>
+<function name='alGetFloatv'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALfloat*' name='data' type64='^f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetInteger'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<retval declared_type64='ALint' type64='i'/>
+</function>
+<function name='alGetIntegerv'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALint*' name='data' type64='^i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetListener3f'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALfloat*' name='value1' type64='^f'/>
+<arg declared_type64='ALfloat*' name='value2' type64='^f'/>
+<arg declared_type64='ALfloat*' name='value3' type64='^f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetListener3i'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALint*' name='value1' type64='^i'/>
+<arg declared_type64='ALint*' name='value2' type64='^i'/>
+<arg declared_type64='ALint*' name='value3' type64='^i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetListenerf'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALfloat*' name='value' type64='^f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetListenerfv'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALfloat*' name='values' type64='^f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetListeneri'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALint*' name='value' type64='^i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetListeneriv'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALint*' name='values' type64='^i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetProcAddress'>
+<arg const='true' declared_type64='ALchar*' name='fname' type64='*'/>
+<retval declared_type64='void*' type64='^v'/>
+</function>
+<function name='alGetSource3f'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALfloat*' name='value1' type64='^f'/>
+<arg declared_type64='ALfloat*' name='value2' type64='^f'/>
+<arg declared_type64='ALfloat*' name='value3' type64='^f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetSource3i'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALint*' name='value1' type64='^i'/>
+<arg declared_type64='ALint*' name='value2' type64='^i'/>
+<arg declared_type64='ALint*' name='value3' type64='^i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetSourcef'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALfloat*' name='value' type64='^f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetSourcefv'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALfloat*' name='values' type64='^f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetSourcei'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALint*' name='value' type64='^i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetSourceiv'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALint*' name='values' type64='^i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alGetString'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<retval const='true' declared_type64='ALchar*' type64='*'/>
+</function>
+<function name='alIsBuffer'>
+<arg declared_type64='ALuint' name='bid' type64='I'/>
+<retval declared_type64='ALboolean' type64='c'/>
+</function>
+<function name='alIsEnabled'>
+<arg declared_type64='ALenum' name='capability' type64='i'/>
+<retval declared_type64='ALboolean' type64='c'/>
+</function>
+<function name='alIsExtensionPresent'>
+<arg const='true' declared_type64='ALchar*' name='extname' type64='*'/>
+<retval declared_type64='ALboolean' type64='c'/>
+</function>
+<function name='alIsSource'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<retval declared_type64='ALboolean' type64='c'/>
+</function>
+<function name='alListener3f'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALfloat' name='value1' type64='f'/>
+<arg declared_type64='ALfloat' name='value2' type64='f'/>
+<arg declared_type64='ALfloat' name='value3' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alListener3i'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALint' name='value1' type64='i'/>
+<arg declared_type64='ALint' name='value2' type64='i'/>
+<arg declared_type64='ALint' name='value3' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alListenerf'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALfloat' name='value' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alListenerfv'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg const='true' declared_type64='ALfloat*' name='values' type64='^f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alListeneri'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALint' name='value' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alListeneriv'>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg const='true' declared_type64='ALint*' name='values' type64='^i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alSource3f'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALfloat' name='value1' type64='f'/>
+<arg declared_type64='ALfloat' name='value2' type64='f'/>
+<arg declared_type64='ALfloat' name='value3' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alSource3i'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALint' name='value1' type64='i'/>
+<arg declared_type64='ALint' name='value2' type64='i'/>
+<arg declared_type64='ALint' name='value3' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alSourcePause'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alSourcePausev'>
+<arg declared_type64='ALsizei' name='ns' type64='i'/>
+<arg const='true' declared_type64='ALuint*' name='sids' type64='^I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alSourcePlay'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alSourcePlayv'>
+<arg declared_type64='ALsizei' name='ns' type64='i'/>
+<arg const='true' declared_type64='ALuint*' name='sids' type64='^I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alSourceQueueBuffers'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<arg declared_type64='ALsizei' name='numEntries' type64='i'/>
+<arg const='true' declared_type64='ALuint*' name='bids' type64='^I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alSourceRewind'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alSourceRewindv'>
+<arg declared_type64='ALsizei' name='ns' type64='i'/>
+<arg const='true' declared_type64='ALuint*' name='sids' type64='^I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alSourceStop'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alSourceStopv'>
+<arg declared_type64='ALsizei' name='ns' type64='i'/>
+<arg const='true' declared_type64='ALuint*' name='sids' type64='^I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alSourceUnqueueBuffers'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<arg declared_type64='ALsizei' name='numEntries' type64='i'/>
+<arg declared_type64='ALuint*' name='bids' type64='^I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alSourcef'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALfloat' name='value' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alSourcefv'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg const='true' declared_type64='ALfloat*' name='values' type64='^f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alSourcei'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg declared_type64='ALint' name='value' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alSourceiv'>
+<arg declared_type64='ALuint' name='sid' type64='I'/>
+<arg declared_type64='ALenum' name='param' type64='i'/>
+<arg const='true' declared_type64='ALint*' name='values' type64='^i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alSpeedOfSound'>
+<arg declared_type64='ALfloat' name='value' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alcCaptureCloseDevice'>
+<arg declared_type64='ALCdevice*' name='device' type64='^{ALCdevice_struct=}'/>
+<retval declared_type64='ALCboolean' type64='c'/>
+</function>
+<function name='alcCaptureOpenDevice'>
+<arg const='true' declared_type64='ALCchar*' name='devicename' type64='*'/>
+<arg declared_type64='ALCuint' name='frequency' type64='I'/>
+<arg declared_type64='ALCenum' name='format' type64='i'/>
+<arg declared_type64='ALCsizei' name='buffersize' type64='i'/>
+<retval declared_type64='ALCdevice*' type64='^{ALCdevice_struct=}'/>
+</function>
+<function name='alcCaptureSamples'>
+<arg declared_type64='ALCdevice*' name='device' type64='^{ALCdevice_struct=}'/>
+<arg declared_type64='ALCvoid*' name='buffer' type64='^v'/>
+<arg declared_type64='ALCsizei' name='samples' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alcCaptureStart'>
+<arg declared_type64='ALCdevice*' name='device' type64='^{ALCdevice_struct=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alcCaptureStop'>
+<arg declared_type64='ALCdevice*' name='device' type64='^{ALCdevice_struct=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alcCloseDevice'>
+<arg declared_type64='ALCdevice*' name='device' type64='^{ALCdevice_struct=}'/>
+<retval declared_type64='ALCboolean' type64='c'/>
+</function>
+<function name='alcCreateContext'>
+<arg declared_type64='ALCdevice*' name='device' type64='^{ALCdevice_struct=}'/>
+<arg const='true' declared_type64='ALCint*' name='attrlist' type64='^i'/>
+<retval declared_type64='ALCcontext*' type64='^{ALCcontext_struct=}'/>
+</function>
+<function name='alcDestroyContext'>
+<arg declared_type64='ALCcontext*' name='context' type64='^{ALCcontext_struct=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alcGetContextsDevice'>
+<arg declared_type64='ALCcontext*' name='context' type64='^{ALCcontext_struct=}'/>
+<retval declared_type64='ALCdevice*' type64='^{ALCdevice_struct=}'/>
+</function>
+<function name='alcGetCurrentContext'>
+<retval declared_type64='ALCcontext*' type64='^{ALCcontext_struct=}'/>
+</function>
+<function name='alcGetEnumValue'>
+<arg declared_type64='ALCdevice*' name='device' type64='^{ALCdevice_struct=}'/>
+<arg const='true' declared_type64='ALCchar*' name='enumname' type64='*'/>
+<retval declared_type64='ALCenum' type64='i'/>
+</function>
+<function name='alcGetError'>
+<arg declared_type64='ALCdevice*' name='device' type64='^{ALCdevice_struct=}'/>
+<retval declared_type64='ALCenum' type64='i'/>
+</function>
+<function name='alcGetIntegerv'>
+<arg declared_type64='ALCdevice*' name='device' type64='^{ALCdevice_struct=}'/>
+<arg declared_type64='ALCenum' name='param' type64='i'/>
+<arg declared_type64='ALCsizei' name='size' type64='i'/>
+<arg declared_type64='ALCint*' name='data' type64='^i'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alcGetProcAddress'>
+<arg declared_type64='ALCdevice*' name='device' type64='^{ALCdevice_struct=}'/>
+<arg const='true' declared_type64='ALCchar*' name='funcname' type64='*'/>
+<retval declared_type64='void*' type64='^v'/>
+</function>
+<function name='alcGetString'>
+<arg declared_type64='ALCdevice*' name='device' type64='^{ALCdevice_struct=}'/>
+<arg declared_type64='ALCenum' name='param' type64='i'/>
+<retval const='true' declared_type64='ALCchar*' type64='*'/>
+</function>
+<function name='alcIsExtensionPresent'>
+<arg declared_type64='ALCdevice*' name='device' type64='^{ALCdevice_struct=}'/>
+<arg const='true' declared_type64='ALCchar*' name='extname' type64='*'/>
+<retval declared_type64='ALCboolean' type64='c'/>
+</function>
+<function name='alcMakeContextCurrent'>
+<arg declared_type64='ALCcontext*' name='context' type64='^{ALCcontext_struct=}'/>
+<retval declared_type64='ALCboolean' type64='c'/>
+</function>
+<function name='alcOpenDevice'>
+<arg const='true' declared_type64='ALCchar*' name='devicename' type64='*'/>
+<retval declared_type64='ALCdevice*' type64='^{ALCdevice_struct=}'/>
+</function>
+<function name='alcProcessContext'>
+<arg declared_type64='ALCcontext*' name='context' type64='^{ALCcontext_struct=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='alcSuspendContext'>
+<arg declared_type64='ALCcontext*' name='context' type64='^{ALCcontext_struct=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+</signatures>

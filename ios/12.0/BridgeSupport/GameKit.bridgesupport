@@ -1,0 +1,2887 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<constant declared_type='NSString * _Nonnull' name='GKErrorDomain' type='@'/>
+<constant declared_type='NSTimeInterval' name='GKExchangeTimeoutDefault' type='d'/>
+<constant declared_type='NSTimeInterval' name='GKExchangeTimeoutNone' type='d'/>
+<constant declared_type='NSString * _Nonnull' name='GKGameSessionErrorDomain' type='@'/>
+<constant declared_type='NSNotificationName _Nonnull' name='GKPlayerAuthenticationDidChangeNotificationName' type='@'/>
+<constant declared_type='NSNotificationName _Nonnull' name='GKPlayerDidChangeNotificationName' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='GKSessionErrorDomain' type='@'/>
+<constant declared_type='NSTimeInterval' name='GKTurnTimeoutDefault' type='d'/>
+<constant declared_type='NSTimeInterval' name='GKTurnTimeoutNone' type='d'/>
+<constant const='true' declared_type='NSString*' name='GKVoiceChatServiceErrorDomain' type='@'/>
+<enum name='GKAuthenticatingWithAuthKitInvocation' value='2'/>
+<enum name='GKAuthenticatingWithGreenBuddyUI' value='1'/>
+<enum name='GKAuthenticatingWithoutUI' value='0'/>
+<enum name='GKChallengeStateCompleted' value='2'/>
+<enum name='GKChallengeStateDeclined' value='3'/>
+<enum name='GKChallengeStateInvalid' value='0'/>
+<enum name='GKChallengeStatePending' value='1'/>
+<enum name='GKConnectionStateConnected' value='1'/>
+<enum name='GKConnectionStateNotConnected' value='0'/>
+<enum name='GKErrorAuthenticationInProgress' value='7'/>
+<enum name='GKErrorCancelled' value='2'/>
+<enum name='GKErrorChallengeInvalid' value='19'/>
+<enum name='GKErrorCommunicationsFailure' value='3'/>
+<enum name='GKErrorGameSessionRequestInvalid' value='29'/>
+<enum name='GKErrorGameUnrecognized' value='15'/>
+<enum name='GKErrorInvalidCredentials' value='5'/>
+<enum name='GKErrorInvalidParameter' value='17'/>
+<enum name='GKErrorInvalidPlayer' value='8'/>
+<enum name='GKErrorInvitationsDisabled' value='25'/>
+<enum name='GKErrorMatchNotConnected' value='28'/>
+<enum name='GKErrorMatchRequestInvalid' value='13'/>
+<enum name='GKErrorNotAuthenticated' value='6'/>
+<enum name='GKErrorNotSupported' value='16'/>
+<enum name='GKErrorParentalControlsBlocked' value='10'/>
+<enum name='GKErrorPlayerPhotoFailure' value='26'/>
+<enum name='GKErrorPlayerStatusExceedsMaximumLength' value='11'/>
+<enum name='GKErrorPlayerStatusInvalid' value='12'/>
+<enum name='GKErrorScoreNotSet' value='9'/>
+<enum name='GKErrorTurnBasedInvalidParticipant' value='22'/>
+<enum name='GKErrorTurnBasedInvalidState' value='24'/>
+<enum name='GKErrorTurnBasedInvalidTurn' value='23'/>
+<enum name='GKErrorTurnBasedMatchDataTooLarge' value='20'/>
+<enum name='GKErrorTurnBasedTooManySessions' value='21'/>
+<enum name='GKErrorUbiquityContainerUnavailable' value='27'/>
+<enum name='GKErrorUnderage' value='14'/>
+<enum name='GKErrorUnexpectedConnection' value='18'/>
+<enum name='GKErrorUnknown' value='1'/>
+<enum name='GKErrorUserDenied' value='4'/>
+<enum name='GKGameCenterViewControllerStateAchievements' value='1'/>
+<enum name='GKGameCenterViewControllerStateChallenges' value='2'/>
+<enum name='GKGameCenterViewControllerStateDefault' value='-1'/>
+<enum name='GKGameCenterViewControllerStateLeaderboards' value='0'/>
+<enum name='GKGameSessionErrorBadContainer' value='12'/>
+<enum name='GKGameSessionErrorCloudDriveDisabled' value='15'/>
+<enum name='GKGameSessionErrorCloudQuotaExceeded' value='13'/>
+<enum name='GKGameSessionErrorConnectionCancelledByUser' value='5'/>
+<enum name='GKGameSessionErrorConnectionFailed' value='6'/>
+<enum name='GKGameSessionErrorInvalidSession' value='16'/>
+<enum name='GKGameSessionErrorNetworkFailure' value='14'/>
+<enum name='GKGameSessionErrorNotAuthenticated' value='2'/>
+<enum name='GKGameSessionErrorSendDataNoRecipients' value='9'/>
+<enum name='GKGameSessionErrorSendDataNotConnected' value='8'/>
+<enum name='GKGameSessionErrorSendDataNotReachable' value='10'/>
+<enum name='GKGameSessionErrorSendRateLimitReached' value='11'/>
+<enum name='GKGameSessionErrorSessionConflict' value='3'/>
+<enum name='GKGameSessionErrorSessionHasMaxConnectedPlayers' value='7'/>
+<enum name='GKGameSessionErrorSessionNotShared' value='4'/>
+<enum name='GKGameSessionErrorUnknown' value='1'/>
+<enum name='GKInviteRecipientResponseAccepted' value='0'/>
+<enum name='GKInviteRecipientResponseDeclined' value='1'/>
+<enum name='GKInviteRecipientResponseFailed' value='2'/>
+<enum name='GKInviteRecipientResponseIncompatible' value='3'/>
+<enum name='GKInviteRecipientResponseNoAnswer' value='5'/>
+<enum name='GKInviteRecipientResponseUnableToConnect' value='4'/>
+<enum name='GKInviteeResponseAccepted' value='0'/>
+<enum name='GKInviteeResponseDeclined' value='1'/>
+<enum name='GKInviteeResponseFailed' value='2'/>
+<enum name='GKInviteeResponseIncompatible' value='3'/>
+<enum name='GKInviteeResponseNoAnswer' value='5'/>
+<enum name='GKInviteeResponseUnableToConnect' value='4'/>
+<enum name='GKLeaderboardPlayerScopeFriendsOnly' value='1'/>
+<enum name='GKLeaderboardPlayerScopeGlobal' value='0'/>
+<enum name='GKLeaderboardTimeScopeAllTime' value='2'/>
+<enum name='GKLeaderboardTimeScopeToday' value='0'/>
+<enum name='GKLeaderboardTimeScopeWeek' value='1'/>
+<enum name='GKMatchSendDataReliable' value='0'/>
+<enum name='GKMatchSendDataUnreliable' value='1'/>
+<enum name='GKMatchTypeHosted' value='1'/>
+<enum name='GKMatchTypePeerToPeer' value='0'/>
+<enum name='GKMatchTypeTurnBased' value='2'/>
+<enum name='GKPeerPickerConnectionTypeNearby' value='2'/>
+<enum name='GKPeerPickerConnectionTypeOnline' value='1'/>
+<enum name='GKPeerStateAvailable' value='0'/>
+<enum name='GKPeerStateConnected' value='2'/>
+<enum name='GKPeerStateConnecting' value='4'/>
+<enum name='GKPeerStateDisconnected' value='3'/>
+<enum name='GKPeerStateUnavailable' value='1'/>
+<enum name='GKPhotoSizeNormal' value='1'/>
+<enum name='GKPhotoSizeSmall' value='0'/>
+<enum name='GKPlayerStateConnected' value='1'/>
+<enum name='GKPlayerStateDisconnected' value='2'/>
+<enum name='GKPlayerStateUnknown' value='0'/>
+<enum name='GKSendDataReliable' value='0'/>
+<enum name='GKSendDataUnreliable' value='1'/>
+<enum name='GKSessionCancelledError' value='30504'/>
+<enum name='GKSessionCannotEnableError' value='30509'/>
+<enum name='GKSessionConnectionClosedError' value='30506'/>
+<enum name='GKSessionConnectionFailedError' value='30505'/>
+<enum name='GKSessionConnectivityError' value='30201'/>
+<enum name='GKSessionDataTooBigError' value='30507'/>
+<enum name='GKSessionDeclinedError' value='30502'/>
+<enum name='GKSessionInProgressError' value='30510'/>
+<enum name='GKSessionInternalError' value='30203'/>
+<enum name='GKSessionInvalidParameterError' value='30500'/>
+<enum name='GKSessionModeClient' value='1'/>
+<enum name='GKSessionModePeer' value='2'/>
+<enum name='GKSessionModeServer' value='0'/>
+<enum name='GKSessionNotConnectedError' value='30508'/>
+<enum name='GKSessionPeerNotFoundError' value='30501'/>
+<enum name='GKSessionSystemError' value='30205'/>
+<enum name='GKSessionTimedOutError' value='30503'/>
+<enum name='GKSessionTransportError' value='30202'/>
+<enum name='GKSessionUnknownError' value='30204'/>
+<enum name='GKTransportTypeReliable' value='1'/>
+<enum name='GKTransportTypeUnreliable' value='0'/>
+<enum name='GKTurnBasedExchangeStatusActive' value='1'/>
+<enum name='GKTurnBasedExchangeStatusCanceled' value='4'/>
+<enum name='GKTurnBasedExchangeStatusComplete' value='2'/>
+<enum name='GKTurnBasedExchangeStatusResolved' value='3'/>
+<enum name='GKTurnBasedExchangeStatusUnknown' value='0'/>
+<enum name='GKTurnBasedMatchOutcomeCustomRange' value='16711680'/>
+<enum name='GKTurnBasedMatchOutcomeFirst' value='6'/>
+<enum name='GKTurnBasedMatchOutcomeFourth' value='9'/>
+<enum name='GKTurnBasedMatchOutcomeLost' value='3'/>
+<enum name='GKTurnBasedMatchOutcomeNone' value='0'/>
+<enum name='GKTurnBasedMatchOutcomeQuit' value='1'/>
+<enum name='GKTurnBasedMatchOutcomeSecond' value='7'/>
+<enum name='GKTurnBasedMatchOutcomeThird' value='8'/>
+<enum name='GKTurnBasedMatchOutcomeTied' value='4'/>
+<enum name='GKTurnBasedMatchOutcomeTimeExpired' value='5'/>
+<enum name='GKTurnBasedMatchOutcomeWon' value='2'/>
+<enum name='GKTurnBasedMatchStatusEnded' value='2'/>
+<enum name='GKTurnBasedMatchStatusMatching' value='3'/>
+<enum name='GKTurnBasedMatchStatusOpen' value='1'/>
+<enum name='GKTurnBasedMatchStatusUnknown' value='0'/>
+<enum name='GKTurnBasedParticipantStatusActive' value='4'/>
+<enum name='GKTurnBasedParticipantStatusDeclined' value='2'/>
+<enum name='GKTurnBasedParticipantStatusDone' value='5'/>
+<enum name='GKTurnBasedParticipantStatusInvited' value='1'/>
+<enum name='GKTurnBasedParticipantStatusMatching' value='3'/>
+<enum name='GKTurnBasedParticipantStatusUnknown' value='0'/>
+<enum name='GKVoiceChatPlayerConnected' value='0'/>
+<enum name='GKVoiceChatPlayerConnecting' value='4'/>
+<enum name='GKVoiceChatPlayerDisconnected' value='1'/>
+<enum name='GKVoiceChatPlayerSilent' value='3'/>
+<enum name='GKVoiceChatPlayerSpeaking' value='2'/>
+<enum name='GKVoiceChatServiceAudioUnavailableError' value='32005'/>
+<enum name='GKVoiceChatServiceClientMissingRequiredMethodsError' value='32007'/>
+<enum name='GKVoiceChatServiceInternalError' value='32000'/>
+<enum name='GKVoiceChatServiceInvalidCallIDError' value='32004'/>
+<enum name='GKVoiceChatServiceInvalidParameterError' value='32016'/>
+<enum name='GKVoiceChatServiceMethodCurrentlyInvalidError' value='32012'/>
+<enum name='GKVoiceChatServiceNetworkConfigurationError' value='32013'/>
+<enum name='GKVoiceChatServiceNoRemotePacketsError' value='32001'/>
+<enum name='GKVoiceChatServiceOutOfMemoryError' value='32015'/>
+<enum name='GKVoiceChatServiceRemoteParticipantBusyError' value='32008'/>
+<enum name='GKVoiceChatServiceRemoteParticipantCancelledError' value='32009'/>
+<enum name='GKVoiceChatServiceRemoteParticipantDeclinedInviteError' value='32011'/>
+<enum name='GKVoiceChatServiceRemoteParticipantHangupError' value='32003'/>
+<enum name='GKVoiceChatServiceRemoteParticipantResponseInvalidError' value='32010'/>
+<enum name='GKVoiceChatServiceUnableToConnectError' value='32002'/>
+<enum name='GKVoiceChatServiceUninitializedClientError' value='32006'/>
+<enum name='GKVoiceChatServiceUnsupportedRemoteVersionError' value='32014'/>
+<class name='GKAchievement'>
+<method selector='challengeComposeControllerWithMessage:players:completionHandler:'>
+<arg declared_type='NSString * _Nullable' index='0' name='message' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='players' type='@'/>
+<arg declared_type='GKChallengeComposeCompletionBlock _Nullable' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='UIViewController * _Nonnull' type='@'/>
+<arg declared_type='BOOL' type='B'/>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='UIViewController * _Nonnull' type='@'/>
+</method>
+<method selector='challengeComposeControllerWithPlayers:message:completionHandler:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='playerIDs' type='@'/>
+<arg declared_type='NSString * _Nullable' index='1' name='message' type='@'/>
+<arg declared_type='GKChallengeComposeCompletionBlock _Nullable' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='UIViewController * _Nonnull' type='@'/>
+<arg declared_type='BOOL' type='B'/>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='UIViewController * _Nullable' type='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='initWithIdentifier:'>
+<arg declared_type='NSString * _Nullable' index='0' name='identifier' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithIdentifier:forPlayer:'>
+<arg declared_type='NSString * _Nullable' index='0' name='identifier' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='playerID' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithIdentifier:player:'>
+<arg declared_type='NSString * _Nullable' index='0' name='identifier' type='@'/>
+<arg declared_type='GKPlayer * _Nonnull' index='1' name='player' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='isCompleted'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isHidden'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='issueChallengeToPlayers:message:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='playerIDs' type='@'/>
+<arg declared_type='NSString * _Nullable' index='1' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lastReportedDate'>
+<retval declared_type='NSDate * _Nonnull' type='@'/>
+</method>
+<method class_method='true' selector='loadAchievementsWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='percentComplete'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='player'>
+<retval declared_type='GKPlayer * _Nullable' type='@'/>
+</method>
+<method selector='playerID'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='reportAchievementWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='reportAchievements:withCompletionHandler:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='achievements' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='reportAchievements:withEligibleChallenges:withCompletionHandler:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='achievements' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='challenges' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='resetAchievementsWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='selectChallengeablePlayerIDs:withCompletionHandler:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='playerIDs' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='selectChallengeablePlayers:withCompletionHandler:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='players' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setIdentifier:'>
+<arg declared_type='NSString * _Nullable' index='0' name='identifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPercentComplete:'>
+<arg declared_type='double' index='0' name='percentComplete' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShowsCompletionBanner:'>
+<arg declared_type='BOOL' index='0' name='showsCompletionBanner' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='showsCompletionBanner'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='GKAchievementChallenge'>
+<method selector='achievement'>
+<retval declared_type='GKAchievement * _Nullable' type='@'/>
+</method>
+</class>
+<class name='GKAchievementDescription'>
+<method selector='achievedDescription'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='groupIdentifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='image'>
+<retval declared_type='UIImage * _Nullable' type='@'/>
+</method>
+<method class_method='true' selector='incompleteAchievementImage'>
+<retval declared_type='UIImage * _Nonnull' type='@'/>
+</method>
+<method selector='isHidden'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isReplayable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='loadAchievementDescriptionsWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='loadImageWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(UIImage * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='UIImage * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='maximumPoints'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method class_method='true' selector='placeholderCompletedAchievementImage'>
+<retval declared_type='UIImage * _Nonnull' type='@'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='unachievedDescription'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+</class>
+<class name='GKAchievementViewController'>
+<method selector='achievementDelegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setAchievementDelegate:'>
+<arg declared_type='id' index='0' name='achievementDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='GKBasePlayer'>
+<method selector='displayName'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='playerID'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+</class>
+<class name='GKChallenge'>
+<method selector='completionDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='decline'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='issueDate'>
+<retval declared_type='NSDate * _Nonnull' type='@'/>
+</method>
+<method selector='issuingPlayer'>
+<retval declared_type='GKPlayer * _Nullable' type='@'/>
+</method>
+<method selector='issuingPlayerID'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method class_method='true' selector='loadReceivedChallengesWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='message'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='receivingPlayer'>
+<retval declared_type='GKPlayer * _Nullable' type='@'/>
+</method>
+<method selector='receivingPlayerID'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='state'>
+<retval declared_type='GKChallengeState' type='i' type64='q'/>
+</method>
+</class>
+<class name='GKChallengeEventHandler'>
+<method class_method='true' selector='challengeEventHandler'>
+<retval declared_type='GKChallengeEventHandler*' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='GKCloudPlayer'>
+<method class_method='true' selector='getCurrentSignedInPlayerForContainer:completionHandler:'>
+<arg declared_type='NSString * _Nullable' index='0' name='containerName' type='@'/>
+<arg declared_type='void (^ _Nonnull)(GKCloudPlayer * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='handler' type='@?'>
+<arg declared_type='GKCloudPlayer * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='GKFriendRequestComposeViewController'>
+<method selector='addRecipientPlayers:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='players' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addRecipientsWithEmailAddresses:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='emailAddresses' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addRecipientsWithPlayerIDs:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='playerIDs' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='composeViewDelegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method class_method='true' selector='maxNumberOfRecipients'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='setComposeViewDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='composeViewDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMessage:'>
+<arg declared_type='NSString * _Nullable' index='0' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='GKGameCenterViewController'>
+<method selector='gameCenterDelegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='leaderboardCategory'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='leaderboardIdentifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='leaderboardTimeScope'>
+<retval declared_type='GKLeaderboardTimeScope' type='i' type64='q'/>
+</method>
+<method selector='setGameCenterDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='gameCenterDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLeaderboardCategory:'>
+<arg declared_type='NSString * _Nullable' index='0' name='leaderboardCategory' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLeaderboardIdentifier:'>
+<arg declared_type='NSString * _Nullable' index='0' name='leaderboardIdentifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLeaderboardTimeScope:'>
+<arg declared_type='GKLeaderboardTimeScope' index='0' name='leaderboardTimeScope' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setViewState:'>
+<arg declared_type='GKGameCenterViewControllerState' index='0' name='viewState' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewState'>
+<retval declared_type='GKGameCenterViewControllerState' type='i' type64='q'/>
+</method>
+</class>
+<class name='GKGameSession'>
+<method class_method='true' selector='addEventListener:'>
+<arg declared_type='NSObject * _Nonnull' index='0' name='listener' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='badgedPlayers'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='clearBadgeForPlayers:completionHandler:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='players' type='@'/>
+<arg declared_type='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='createSessionInContainer:withTitle:maxConnectedPlayers:completionHandler:'>
+<arg declared_type='NSString * _Nullable' index='0' name='containerName' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='title' type='@'/>
+<arg declared_type='NSInteger' index='2' name='maxPlayers' type='i' type64='q'/>
+<arg declared_type='void (^ _Nonnull)(GKGameSession * _Nullable, NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type='@?'>
+<arg declared_type='GKGameSession * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='getShareURLWithCompletionHandler:'>
+<arg declared_type='void (^ _Nonnull)(NSURL * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSURL * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='identifier'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='lastModifiedDate'>
+<retval declared_type='NSDate * _Nonnull' type='@'/>
+</method>
+<method selector='lastModifiedPlayer'>
+<retval declared_type='GKCloudPlayer * _Nonnull' type='@'/>
+</method>
+<method selector='loadDataWithCompletionHandler:'>
+<arg declared_type='void (^ _Nonnull)(NSData * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSData * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='loadSessionWithIdentifier:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='identifier' type='@'/>
+<arg declared_type='void (^ _Nonnull)(GKGameSession * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='GKGameSession * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='loadSessionsInContainer:completionHandler:'>
+<arg declared_type='NSString * _Nullable' index='0' name='containerName' type='@'/>
+<arg declared_type='void (^ _Nonnull)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='maxNumberOfConnectedPlayers'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='owner'>
+<retval declared_type='GKCloudPlayer * _Nonnull' type='@'/>
+</method>
+<method selector='players'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='playersWithConnectionState:'>
+<arg declared_type='GKConnectionState' index='0' name='state' type='i' type64='q'/>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method class_method='true' selector='removeEventListener:'>
+<arg declared_type='NSObject * _Nonnull' index='0' name='listener' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='removeSessionWithIdentifier:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='identifier' type='@'/>
+<arg declared_type='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='saveData:completionHandler:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='data' type='@'/>
+<arg declared_type='void (^ _Nonnull)(NSData * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSData * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendData:withTransportType:completionHandler:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='data' type='@'/>
+<arg declared_type='GKTransportType' index='1' name='transport' type='i' type64='q'/>
+<arg declared_type='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendMessageWithLocalizedFormatKey:arguments:data:toPlayers:badgePlayers:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='key' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='arguments' type='@'/>
+<arg declared_type='NSData * _Nullable' index='2' name='data' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='3' name='players' type='@'/>
+<arg declared_type='BOOL' index='4' name='badgePlayers' type='B'/>
+<arg declared_type='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='5' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setConnectionState:completionHandler:'>
+<arg declared_type='GKConnectionState' index='0' name='state' type='i' type64='q'/>
+<arg declared_type='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='GKInvite'>
+<method selector='inviter'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='isHosted'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='playerAttributes'>
+<retval declared_type='uint32_t' type='I'/>
+</method>
+<method selector='playerGroup'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='sender'>
+<retval declared_type='GKPlayer * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='GKLeaderboard'>
+<method selector='category'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='groupIdentifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='init'>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithPlayerIDs:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='playerIDs' type='@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='initWithPlayers:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='players' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='isLoading'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='loadCategoriesWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='loadImageWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(UIImage * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='UIImage * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='loadLeaderboardsWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='loadScoresWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='localPlayerScore'>
+<retval declared_type='GKScore * _Nullable' type='@'/>
+</method>
+<method selector='maxRange'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='playerScope'>
+<retval declared_type='GKLeaderboardPlayerScope' type='i' type64='q'/>
+</method>
+<method selector='range'>
+<retval declared_type='NSRange' type='{_NSRange=II}' type64='{_NSRange=QQ}'/>
+</method>
+<method selector='scores'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='setCategory:'>
+<arg declared_type='NSString * _Nullable' index='0' name='category' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='setDefaultLeaderboard:withCompletionHandler:'>
+<arg declared_type='NSString * _Nullable' index='0' name='leaderboardIdentifier' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setIdentifier:'>
+<arg declared_type='NSString * _Nullable' index='0' name='identifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPlayerScope:'>
+<arg declared_type='GKLeaderboardPlayerScope' index='0' name='playerScope' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRange:'>
+<arg declared_type='NSRange' index='0' name='range' type='{_NSRange=II}' type64='{_NSRange=QQ}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTimeScope:'>
+<arg declared_type='GKLeaderboardTimeScope' index='0' name='timeScope' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='timeScope'>
+<retval declared_type='GKLeaderboardTimeScope' type='i' type64='q'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+</class>
+<class name='GKLeaderboardSet'>
+<method selector='groupIdentifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='loadImageWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(UIImage * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='UIImage * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='loadLeaderboardSetsWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='loadLeaderboardsWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setIdentifier:'>
+<arg declared_type='NSString * _Nullable' index='0' name='identifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='GKLeaderboardViewController'>
+<method selector='category'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='leaderboardDelegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setCategory:'>
+<arg declared_type='NSString*' index='0' name='category' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLeaderboardDelegate:'>
+<arg declared_type='id' index='0' name='leaderboardDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTimeScope:'>
+<arg declared_type='GKLeaderboardTimeScope' index='0' name='timeScope' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='timeScope'>
+<retval declared_type='GKLeaderboardTimeScope' type='i' type64='q'/>
+</method>
+</class>
+<class name='GKLocalPlayer'>
+<method selector='authenticateHandler'>
+<retval declared_type='void (^ _Nullable)(UIViewController * _Nullable, NSError * _Nullable)' function_pointer='true' type='@?'>
+<arg declared_type='UIViewController * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='authenticateWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='deleteSavedGamesWithName:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='name' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='handler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='fetchSavedGamesWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='handler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='friends'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='generateIdentityVerificationSignatureWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSURL * _Nullable, NSData * _Nullable, NSData * _Nullable, uint64_t, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSURL * _Nullable' type='@'/>
+<arg declared_type='NSData * _Nullable' type='@'/>
+<arg declared_type='NSData * _Nullable' type='@'/>
+<arg declared_type='uint64_t' type='Q'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='isAuthenticated'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isUnderage'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='loadDefaultLeaderboardCategoryIDWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSString * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSString * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='loadDefaultLeaderboardIdentifierWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSString * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSString * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='loadFriendPlayersWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='loadFriendsWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='loadRecentPlayersWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='localPlayer'>
+<retval declared_type='GKLocalPlayer * _Nonnull' type='@'/>
+</method>
+<method selector='registerListener:'>
+<arg declared_type='id _Nonnull' index='0' name='listener' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='resolveConflictingSavedGames:withData:completionHandler:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='conflictingSavedGames' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='1' name='data' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='2' name='handler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='saveGameData:withName:completionHandler:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='data' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='name' type='@'/>
+<arg declared_type='void (^ _Nullable)(GKSavedGame * _Nullable, NSError * _Nullable)' function_pointer='true' index='2' name='handler' type='@?'>
+<arg declared_type='GKSavedGame * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAuthenticateHandler:'>
+<arg declared_type='void (^ _Nullable)(UIViewController * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='authenticateHandler' type='@?'>
+<arg declared_type='UIViewController * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDefaultLeaderboardCategoryID:completionHandler:'>
+<arg declared_type='NSString * _Nullable' index='0' name='categoryID' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDefaultLeaderboardIdentifier:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='leaderboardIdentifier' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='unregisterAllListeners'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='unregisterListener:'>
+<arg declared_type='id _Nonnull' index='0' name='listener' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='GKMatch'>
+<method selector='chooseBestHostPlayerWithCompletionHandler:'>
+<arg declared_type='void (^ _Nonnull)(NSString * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSString * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chooseBestHostingPlayerWithCompletionHandler:'>
+<arg declared_type='void (^ _Nonnull)(GKPlayer * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='GKPlayer * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='disconnect'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='expectedPlayerCount'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='playerIDs'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='players'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='rematchWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(GKMatch * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='GKMatch * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendData:toPlayers:dataMode:error:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='data' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='players' type='@'/>
+<arg declared_type='GKMatchSendDataMode' index='2' name='mode' type='i' type64='q'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='3' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sendData:toPlayers:withDataMode:error:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='data' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='playerIDs' type='@'/>
+<arg declared_type='GKMatchSendDataMode' index='2' name='mode' type='i' type64='q'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='3' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sendDataToAllPlayers:withDataMode:error:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='data' type='@'/>
+<arg declared_type='GKMatchSendDataMode' index='1' name='mode' type='i' type64='q'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='2' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='voiceChatWithName:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='name' type='@'/>
+<retval declared_type='GKVoiceChat * _Nullable' type='@'/>
+</method>
+</class>
+<class name='GKMatchRequest'>
+<method selector='defaultNumberOfPlayers'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='inviteMessage'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='inviteeResponseHandler'>
+<retval declared_type='void (^ _Nullable)(NSString * _Nonnull, GKInviteeResponse)' function_pointer='true' type='@?'>
+<arg declared_type='NSString * _Nonnull' type='@'/>
+<arg declared_type='GKInviteeResponse' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='maxPlayers'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method class_method='true' selector='maxPlayersAllowedForMatchOfType:'>
+<arg declared_type='GKMatchType' index='0' name='matchType' type='I' type64='Q'/>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='minPlayers'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='playerAttributes'>
+<retval declared_type='uint32_t' type='I'/>
+</method>
+<method selector='playerGroup'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='playersToInvite'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='recipientResponseHandler'>
+<retval declared_type='void (^ _Nullable)(GKPlayer * _Nonnull, GKInviteRecipientResponse)' function_pointer='true' type='@?'>
+<arg declared_type='GKPlayer * _Nonnull' type='@'/>
+<arg declared_type='GKInviteRecipientResponse' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='recipients'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='setDefaultNumberOfPlayers:'>
+<arg declared_type='NSUInteger' index='0' name='defaultNumberOfPlayers' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInviteMessage:'>
+<arg declared_type='NSString * _Nullable' index='0' name='inviteMessage' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInviteeResponseHandler:'>
+<arg declared_type='void (^ _Nullable)(NSString * _Nonnull, GKInviteeResponse)' function_pointer='true' index='0' name='inviteeResponseHandler' type='@?'>
+<arg declared_type='NSString * _Nonnull' type='@'/>
+<arg declared_type='GKInviteeResponse' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaxPlayers:'>
+<arg declared_type='NSUInteger' index='0' name='maxPlayers' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMinPlayers:'>
+<arg declared_type='NSUInteger' index='0' name='minPlayers' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPlayerAttributes:'>
+<arg declared_type='uint32_t' index='0' name='playerAttributes' type='I'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPlayerGroup:'>
+<arg declared_type='NSUInteger' index='0' name='playerGroup' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPlayersToInvite:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='playersToInvite' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecipientResponseHandler:'>
+<arg declared_type='void (^ _Nullable)(GKPlayer * _Nonnull, GKInviteRecipientResponse)' function_pointer='true' index='0' name='recipientResponseHandler' type='@?'>
+<arg declared_type='GKPlayer * _Nonnull' type='@'/>
+<arg declared_type='GKInviteRecipientResponse' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecipients:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='recipients' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='GKMatchmaker'>
+<method selector='addPlayersToMatch:matchRequest:completionHandler:'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='GKMatchRequest * _Nonnull' index='1' name='matchRequest' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='cancel'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='cancelInviteToPlayer:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='playerID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='cancelPendingInviteToPlayer:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='findMatchForRequest:withCompletionHandler:'>
+<arg declared_type='GKMatchRequest * _Nonnull' index='0' name='request' type='@'/>
+<arg declared_type='void (^ _Nullable)(GKMatch * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='GKMatch * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='findPlayersForHostedMatchRequest:withCompletionHandler:'>
+<arg declared_type='GKMatchRequest * _Nonnull' index='0' name='request' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='findPlayersForHostedRequest:withCompletionHandler:'>
+<arg declared_type='GKMatchRequest * _Nonnull' index='0' name='request' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='finishMatchmakingForMatch:'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='inviteHandler'>
+<retval declared_type='void (^ _Nullable)(GKInvite * _Nonnull, NSArray * _Nullable)' function_pointer='true' type='@?'>
+<arg declared_type='GKInvite * _Nonnull' type='@'/>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='matchForInvite:completionHandler:'>
+<arg declared_type='GKInvite * _Nonnull' index='0' name='invite' type='@'/>
+<arg declared_type='void (^ _Nullable)(GKMatch * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='GKMatch * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='queryActivityWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSInteger, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSInteger' type='i' type64='q'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='queryPlayerGroupActivity:withCompletionHandler:'>
+<arg declared_type='NSUInteger' index='0' name='playerGroup' type='I' type64='Q'/>
+<arg declared_type='void (^ _Nullable)(NSInteger, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSInteger' type='i' type64='q'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInviteHandler:'>
+<arg declared_type='void (^ _Nullable)(GKInvite * _Nonnull, NSArray * _Nullable)' function_pointer='true' index='0' name='inviteHandler' type='@?'>
+<arg declared_type='GKInvite * _Nonnull' type='@'/>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sharedMatchmaker'>
+<retval declared_type='GKMatchmaker * _Nonnull' type='@'/>
+</method>
+<method selector='startBrowsingForNearbyPlayersWithHandler:'>
+<arg declared_type='void (^ _Nullable)(GKPlayer * _Nonnull, BOOL)' function_pointer='true' index='0' name='reachableHandler' type='@?'>
+<arg declared_type='GKPlayer * _Nonnull' type='@'/>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startBrowsingForNearbyPlayersWithReachableHandler:'>
+<arg declared_type='void (^ _Nullable)(NSString * _Nonnull, BOOL)' function_pointer='true' index='0' name='reachableHandler' type='@?'>
+<arg declared_type='NSString * _Nonnull' type='@'/>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stopBrowsingForNearbyPlayers'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='GKMatchmakerViewController'>
+<method selector='addPlayersToMatch:'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='defaultInvitationMessage'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='initWithInvite:'>
+<arg declared_type='GKInvite * _Nonnull' index='0' name='invite' type='@'/>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='initWithMatchRequest:'>
+<arg declared_type='GKMatchRequest * _Nonnull' index='0' name='request' type='@'/>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='isHosted'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='matchRequest'>
+<retval declared_type='GKMatchRequest * _Nonnull' type='@'/>
+</method>
+<method selector='matchmakerDelegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='setDefaultInvitationMessage:'>
+<arg declared_type='NSString * _Nullable' index='0' name='defaultInvitationMessage' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHosted:'>
+<arg declared_type='BOOL' index='0' name='hosted' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHostedPlayer:connected:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='playerID' type='@'/>
+<arg declared_type='BOOL' index='1' name='connected' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHostedPlayer:didConnect:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='BOOL' index='1' name='connected' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHostedPlayerReady:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='playerID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMatchmakerDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='matchmakerDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='GKNotificationBanner'>
+<method class_method='true' selector='showBannerWithTitle:message:completionHandler:'>
+<arg declared_type='NSString * _Nullable' index='0' name='title' type='@'/>
+<arg declared_type='NSString * _Nullable' index='1' name='message' type='@'/>
+<arg declared_type='void (^ _Nullable)(void)' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='showBannerWithTitle:message:duration:completionHandler:'>
+<arg declared_type='NSString * _Nullable' index='0' name='title' type='@'/>
+<arg declared_type='NSString * _Nullable' index='1' name='message' type='@'/>
+<arg declared_type='NSTimeInterval' index='2' name='duration' type='d'/>
+<arg declared_type='void (^ _Nullable)(void)' function_pointer='true' index='3' name='completionHandler' type='@?'>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='GKPeerPickerController'>
+<method selector='connectionTypesMask'>
+<retval declared_type='GKPeerPickerConnectionType' type='I' type64='Q'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='dismiss'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='isVisible'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setConnectionTypesMask:'>
+<arg declared_type='GKPeerPickerConnectionType' index='0' name='connectionTypesMask' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='show'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='GKPlayer'>
+<method selector='alias'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method class_method='true' selector='anonymousGuestPlayerWithIdentifier:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='guestIdentifier' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='displayName'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='guestIdentifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='isFriend'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='loadPhotoForSize:withCompletionHandler:'>
+<arg declared_type='GKPhotoSize' index='0' name='size' type='i' type64='q'/>
+<arg declared_type='void (^ _Nullable)(UIImage * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='UIImage * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='loadPlayersForIdentifiers:withCompletionHandler:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='identifiers' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='playerID'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+</class>
+<class name='GKSavedGame'>
+<method selector='deviceName'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='loadDataWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSData * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='handler' type='@?'>
+<arg declared_type='NSData * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='modificationDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+</class>
+<class name='GKScore'>
+<method selector='category'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='challengeComposeControllerWithMessage:players:completionHandler:'>
+<arg declared_type='NSString * _Nullable' index='0' name='message' type='@'/>
+<arg declared_type='NSArray * _Nullable' index='1' name='players' type='@'/>
+<arg declared_type='GKChallengeComposeCompletionBlock _Nullable' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='UIViewController * _Nonnull' type='@'/>
+<arg declared_type='BOOL' type='B'/>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='UIViewController * _Nonnull' type='@'/>
+</method>
+<method selector='challengeComposeControllerWithPlayers:message:completionHandler:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='playerIDs' type='@'/>
+<arg declared_type='NSString * _Nullable' index='1' name='message' type='@'/>
+<arg declared_type='GKChallengeComposeCompletionBlock _Nullable' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='UIViewController * _Nonnull' type='@'/>
+<arg declared_type='BOOL' type='B'/>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='UIViewController * _Nullable' type='@'/>
+</method>
+<method selector='context'>
+<retval declared_type='uint64_t' type='Q'/>
+</method>
+<method selector='date'>
+<retval declared_type='NSDate * _Nonnull' type='@'/>
+</method>
+<method selector='formattedValue'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='initWithCategory:'>
+<arg declared_type='NSString * _Nullable' index='0' name='category' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithLeaderboardIdentifier:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='identifier' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithLeaderboardIdentifier:forPlayer:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='identifier' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='playerID' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithLeaderboardIdentifier:player:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='identifier' type='@'/>
+<arg declared_type='GKPlayer * _Nonnull' index='1' name='player' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='issueChallengeToPlayers:message:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='playerIDs' type='@'/>
+<arg declared_type='NSString * _Nullable' index='1' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='leaderboardIdentifier'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='player'>
+<retval declared_type='GKPlayer * _Nullable' type='@'/>
+</method>
+<method selector='playerID'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='rank'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='reportScoreWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='reportScores:withCompletionHandler:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='scores' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='reportScores:withEligibleChallenges:withCompletionHandler:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='scores' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='challenges' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCategory:'>
+<arg declared_type='NSString * _Nullable' index='0' name='category' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContext:'>
+<arg declared_type='uint64_t' index='0' name='context' type='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLeaderboardIdentifier:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='leaderboardIdentifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShouldSetDefaultLeaderboard:'>
+<arg declared_type='BOOL' index='0' name='shouldSetDefaultLeaderboard' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setValue:'>
+<arg declared_type='int64_t' index='0' name='value' type='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldSetDefaultLeaderboard'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='value'>
+<retval declared_type='int64_t' type='q'/>
+</method>
+</class>
+<class name='GKScoreChallenge'>
+<method selector='score'>
+<retval declared_type='GKScore * _Nullable' type='@'/>
+</method>
+</class>
+<class name='GKSession'>
+<method selector='acceptConnectionFromPeer:error:'>
+<arg declared_type='NSString*' index='0' name='peerID' type='@'/>
+<arg declared_type='NSError**' index='1' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='cancelConnectToPeer:'>
+<arg declared_type='NSString*' index='0' name='peerID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='connectToPeer:withTimeout:'>
+<arg declared_type='NSString*' index='0' name='peerID' type='@'/>
+<arg declared_type='NSTimeInterval' index='1' name='timeout' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='denyConnectionFromPeer:'>
+<arg declared_type='NSString*' index='0' name='peerID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='disconnectFromAllPeers'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='disconnectPeerFromAllPeers:'>
+<arg declared_type='NSString*' index='0' name='peerID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='disconnectTimeout'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='displayName'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='displayNameForPeer:'>
+<arg declared_type='NSString*' index='0' name='peerID' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='initWithSessionID:displayName:sessionMode:'>
+<arg declared_type='NSString*' index='0' name='sessionID' type='@'/>
+<arg declared_type='NSString*' index='1' name='name' type='@'/>
+<arg declared_type='GKSessionMode' index='2' name='mode' type='i'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='isAvailable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='peerID'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='peersWithConnectionState:'>
+<arg declared_type='GKPeerConnectionState' index='0' name='state' type='i'/>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='sendData:toPeers:withDataMode:error:'>
+<arg declared_type='NSData*' index='0' name='data' type='@'/>
+<arg declared_type='NSArray*' index='1' name='peers' type='@'/>
+<arg declared_type='GKSendDataMode' index='2' name='mode' type='i'/>
+<arg declared_type='NSError**' index='3' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sendDataToAllPeers:withDataMode:error:'>
+<arg declared_type='NSData*' index='0' name='data' type='@'/>
+<arg declared_type='GKSendDataMode' index='1' name='mode' type='i'/>
+<arg declared_type='NSError**' index='2' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sessionID'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='sessionMode'>
+<retval declared_type='GKSessionMode' type='i'/>
+</method>
+<method selector='setAvailable:'>
+<arg declared_type='BOOL' index='0' name='available' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDataReceiveHandler:withContext:'>
+<arg declared_type='id' index='0' name='handler' type='@'/>
+<arg declared_type='void*' index='1' name='context' type='^v'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisconnectTimeout:'>
+<arg declared_type='NSTimeInterval' index='0' name='disconnectTimeout' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='GKTurnBasedEventHandler'>
+<method selector='delegate'>
+<retval declared_type='NSObject * _Nonnull' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='NSObject * _Nonnull' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sharedTurnBasedEventHandler'>
+<retval declared_type='GKTurnBasedEventHandler * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='GKTurnBasedExchange'>
+<method selector='cancelWithLocalizableMessageKey:arguments:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='key' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='arguments' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='completionDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='data'>
+<retval declared_type='NSData * _Nullable' type='@'/>
+</method>
+<method selector='exchangeID'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='message'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='recipients'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='replies'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='replyWithLocalizableMessageKey:arguments:data:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='key' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='arguments' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='2' name='data' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='sender'>
+<retval declared_type='GKTurnBasedParticipant * _Nullable' type='@'/>
+</method>
+<method selector='status'>
+<retval declared_type='GKTurnBasedExchangeStatus' type='c'/>
+</method>
+<method selector='timeoutDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+</class>
+<class name='GKTurnBasedExchangeReply'>
+<method selector='data'>
+<retval declared_type='NSData * _Nullable' type='@'/>
+</method>
+<method selector='message'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='recipient'>
+<retval declared_type='GKTurnBasedParticipant * _Nullable' type='@'/>
+</method>
+<method selector='replyDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+</class>
+<class name='GKTurnBasedMatch'>
+<method selector='acceptInviteWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(GKTurnBasedMatch * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='GKTurnBasedMatch * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='activeExchanges'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='completedExchanges'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='creationDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='currentParticipant'>
+<retval declared_type='GKTurnBasedParticipant * _Nullable' type='@'/>
+</method>
+<method selector='declineInviteWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='endMatchInTurnWithMatchData:completionHandler:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='matchData' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='endMatchInTurnWithMatchData:scores:achievements:completionHandler:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='matchData' type='@'/>
+<arg declared_type='NSArray * _Nullable' index='1' name='scores' type='@'/>
+<arg declared_type='NSArray * _Nullable' index='2' name='achievements' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='endTurnWithNextParticipant:matchData:completionHandler:'>
+<arg declared_type='GKTurnBasedParticipant * _Nonnull' index='0' name='nextParticipant' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='1' name='matchData' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='endTurnWithNextParticipants:turnTimeout:matchData:completionHandler:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='nextParticipants' type='@'/>
+<arg declared_type='NSTimeInterval' index='1' name='timeout' type='d'/>
+<arg declared_type='NSData * _Nonnull' index='2' name='matchData' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='exchangeDataMaximumSize'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='exchangeMaxInitiatedExchangesPerPlayer'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='exchanges'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method class_method='true' selector='findMatchForRequest:withCompletionHandler:'>
+<arg declared_type='GKMatchRequest * _Nonnull' index='0' name='request' type='@'/>
+<arg declared_type='void (^ _Nonnull)(GKTurnBasedMatch * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='GKTurnBasedMatch * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='loadMatchDataWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSData * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSData * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='loadMatchWithID:withCompletionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='matchID' type='@'/>
+<arg declared_type='void (^ _Nullable)(GKTurnBasedMatch * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='GKTurnBasedMatch * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='loadMatchesWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='matchData'>
+<retval declared_type='NSData * _Nullable' type='@'/>
+</method>
+<method selector='matchDataMaximumSize'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='matchID'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='message'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='participantQuitInTurnWithOutcome:nextParticipant:matchData:completionHandler:'>
+<arg declared_type='GKTurnBasedMatchOutcome' index='0' name='matchOutcome' type='i' type64='q'/>
+<arg declared_type='GKTurnBasedParticipant * _Nonnull' index='1' name='nextParticipant' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='2' name='matchData' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='participantQuitInTurnWithOutcome:nextParticipants:turnTimeout:matchData:completionHandler:'>
+<arg declared_type='GKTurnBasedMatchOutcome' index='0' name='matchOutcome' type='i' type64='q'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='nextParticipants' type='@'/>
+<arg declared_type='NSTimeInterval' index='2' name='timeout' type='d'/>
+<arg declared_type='NSData * _Nonnull' index='3' name='matchData' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='4' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='participantQuitOutOfTurnWithOutcome:withCompletionHandler:'>
+<arg declared_type='GKTurnBasedMatchOutcome' index='0' name='matchOutcome' type='i' type64='q'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='participants'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='rematchWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(GKTurnBasedMatch * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='GKTurnBasedMatch * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='saveCurrentTurnWithMatchData:completionHandler:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='matchData' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='saveMergedMatchData:withResolvedExchanges:completionHandler:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='matchData' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='exchanges' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendExchangeToParticipants:data:localizableMessageKey:arguments:timeout:completionHandler:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='participants' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='1' name='data' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='key' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='3' name='arguments' type='@'/>
+<arg declared_type='NSTimeInterval' index='4' name='timeout' type='d'/>
+<arg declared_type='void (^ _Nullable)(GKTurnBasedExchange * _Nullable, NSError * _Nullable)' function_pointer='true' index='5' name='completionHandler' type='@?'>
+<arg declared_type='GKTurnBasedExchange * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendReminderToParticipants:localizableMessageKey:arguments:completionHandler:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='participants' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='key' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='2' name='arguments' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLocalizableMessageWithKey:arguments:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='key' type='@'/>
+<arg declared_type='NSArray * _Nullable' index='1' name='arguments' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMessage:'>
+<arg declared_type='NSString * _Nullable' index='0' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='status'>
+<retval declared_type='GKTurnBasedMatchStatus' type='i' type64='q'/>
+</method>
+</class>
+<class name='GKTurnBasedMatchmakerViewController'>
+<method selector='initWithMatchRequest:'>
+<arg declared_type='GKMatchRequest * _Nonnull' index='0' name='request' type='@'/>
+<retval declared_type='id _Nonnull' type='@'/>
+</method>
+<method selector='setShowExistingMatches:'>
+<arg declared_type='BOOL' index='0' name='showExistingMatches' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTurnBasedMatchmakerDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='turnBasedMatchmakerDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='showExistingMatches'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='turnBasedMatchmakerDelegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+</class>
+<class name='GKTurnBasedParticipant'>
+<method selector='lastTurnDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+<method selector='matchOutcome'>
+<retval declared_type='GKTurnBasedMatchOutcome' type='i' type64='q'/>
+</method>
+<method selector='player'>
+<retval declared_type='GKPlayer * _Nullable' type='@'/>
+</method>
+<method selector='playerID'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='setMatchOutcome:'>
+<arg declared_type='GKTurnBasedMatchOutcome' index='0' name='matchOutcome' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='status'>
+<retval declared_type='GKTurnBasedParticipantStatus' type='i' type64='q'/>
+</method>
+<method selector='timeoutDate'>
+<retval declared_type='NSDate * _Nullable' type='@'/>
+</method>
+</class>
+<class name='GKVoiceChat'>
+<method selector='isActive'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='isVoIPAllowed'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='playerIDs'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='playerStateUpdateHandler'>
+<retval declared_type='void (^ _Nonnull)(NSString * _Nonnull, GKVoiceChatPlayerState)' function_pointer='true' type='@?'>
+<arg declared_type='NSString * _Nonnull' type='@'/>
+<arg declared_type='GKVoiceChatPlayerState' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='playerVoiceChatStateDidChangeHandler'>
+<retval declared_type='void (^ _Nonnull)(GKPlayer * _Nonnull, GKVoiceChatPlayerState)' function_pointer='true' type='@?'>
+<arg declared_type='GKPlayer * _Nonnull' type='@'/>
+<arg declared_type='GKVoiceChatPlayerState' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='players'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='setActive:'>
+<arg declared_type='BOOL' index='0' name='active' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMute:forPlayer:'>
+<arg declared_type='BOOL' index='0' name='isMuted' type='B'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='playerID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPlayer:muted:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='BOOL' index='1' name='isMuted' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPlayerStateUpdateHandler:'>
+<arg declared_type='void (^ _Nonnull)(NSString * _Nonnull, GKVoiceChatPlayerState)' function_pointer='true' index='0' name='playerStateUpdateHandler' type='@?'>
+<arg declared_type='NSString * _Nonnull' type='@'/>
+<arg declared_type='GKVoiceChatPlayerState' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPlayerVoiceChatStateDidChangeHandler:'>
+<arg declared_type='void (^ _Nonnull)(GKPlayer * _Nonnull, GKVoiceChatPlayerState)' function_pointer='true' index='0' name='playerVoiceChatStateDidChangeHandler' type='@?'>
+<arg declared_type='GKPlayer * _Nonnull' type='@'/>
+<arg declared_type='GKVoiceChatPlayerState' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setVolume:'>
+<arg declared_type='float' index='0' name='volume' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='start'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stop'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='volume'>
+<retval declared_type='float' type='f'/>
+</method>
+</class>
+<class name='GKVoiceChatService'>
+<method selector='acceptCallID:error:'>
+<arg declared_type='NSInteger' index='0' name='callID' type='i' type64='q'/>
+<arg declared_type='NSError**' index='1' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='client'>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='defaultVoiceChatService'>
+<retval declared_type='GKVoiceChatService*' type='@'/>
+</method>
+<method selector='denyCallID:'>
+<arg declared_type='NSInteger' index='0' name='callID' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='inputMeterLevel'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='isInputMeteringEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isMicrophoneMuted'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isOutputMeteringEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='isVoIPAllowed'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='outputMeterLevel'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='receivedData:fromParticipantID:'>
+<arg declared_type='NSData*' index='0' name='arbitraryData' type='@'/>
+<arg declared_type='NSString*' index='1' name='participantID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='receivedRealTimeData:fromParticipantID:'>
+<arg declared_type='NSData*' index='0' name='audio' type='@'/>
+<arg declared_type='NSString*' index='1' name='participantID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='remoteParticipantVolume'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='setClient:'>
+<arg declared_type='id' index='0' name='client' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInputMeteringEnabled:'>
+<arg declared_type='BOOL' index='0' name='inputMeteringEnabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMicrophoneMuted:'>
+<arg declared_type='BOOL' index='0' name='microphoneMuted' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOutputMeteringEnabled:'>
+<arg declared_type='BOOL' index='0' name='outputMeteringEnabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRemoteParticipantVolume:'>
+<arg declared_type='float' index='0' name='remoteParticipantVolume' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startVoiceChatWithParticipantID:error:'>
+<arg declared_type='NSString*' index='0' name='participantID' type='@'/>
+<arg declared_type='NSError**' index='1' name='error' type='^@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='stopVoiceChatWithParticipantID:'>
+<arg declared_type='NSString*' index='0' name='participantID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='achievementViewControllerDidFinish:'>
+<arg declared_type='GKAchievementViewController*' index='0' name='viewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='friendRequestComposeViewControllerDidFinish:'>
+<arg declared_type='GKFriendRequestComposeViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='gameCenterViewControllerDidFinish:'>
+<arg declared_type='GKGameCenterViewController * _Nonnull' index='0' name='gameCenterViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handleInviteFromGameCenter:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='playersToInvite' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handleMatchEnded:'>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='0' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handleTurnEventForMatch:'>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='0' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handleTurnEventForMatch:didBecomeActive:'>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='BOOL' index='1' name='didBecomeActive' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='leaderboardViewControllerDidFinish:'>
+<arg declared_type='GKLeaderboardViewController*' index='0' name='viewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='localPlayerDidCompleteChallenge:'>
+<arg declared_type='GKChallenge*' index='0' name='challenge' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='localPlayerDidReceiveChallenge:'>
+<arg declared_type='GKChallenge*' index='0' name='challenge' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='localPlayerDidSelectChallenge:'>
+<arg declared_type='GKChallenge*' index='0' name='challenge' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='match:didFailWithError:'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='NSError * _Nullable' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='match:didReceiveData:forRecipient:fromRemotePlayer:'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='1' name='data' type='@'/>
+<arg declared_type='GKPlayer * _Nonnull' index='2' name='recipient' type='@'/>
+<arg declared_type='GKPlayer * _Nonnull' index='3' name='player' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='match:didReceiveData:fromPlayer:'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='1' name='data' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='playerID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='match:didReceiveData:fromRemotePlayer:'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='1' name='data' type='@'/>
+<arg declared_type='GKPlayer * _Nonnull' index='2' name='player' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='match:player:didChangeConnectionState:'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='GKPlayer * _Nonnull' index='1' name='player' type='@'/>
+<arg declared_type='GKPlayerConnectionState' index='2' name='state' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='match:player:didChangeState:'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='playerID' type='@'/>
+<arg declared_type='GKPlayerConnectionState' index='2' name='state' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='match:shouldReinviteDisconnectedPlayer:'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='GKPlayer * _Nonnull' index='1' name='player' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='match:shouldReinvitePlayer:'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='playerID' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='matchmakerViewController:didFailWithError:'>
+<arg declared_type='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<arg declared_type='NSError * _Nonnull' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='matchmakerViewController:didFindHostedPlayers:'>
+<arg declared_type='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='players' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='matchmakerViewController:didFindMatch:'>
+<arg declared_type='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<arg declared_type='GKMatch * _Nonnull' index='1' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='matchmakerViewController:didFindPlayers:'>
+<arg declared_type='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='playerIDs' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='matchmakerViewController:didReceiveAcceptFromHostedPlayer:'>
+<arg declared_type='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='playerID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='matchmakerViewController:hostedPlayerDidAccept:'>
+<arg declared_type='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<arg declared_type='GKPlayer * _Nonnull' index='1' name='player' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='matchmakerViewControllerWasCancelled:'>
+<arg declared_type='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='participantID'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='peerPickerController:didConnectPeer:toSession:'>
+<arg declared_type='GKPeerPickerController * _Nonnull' index='0' name='picker' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='peerID' type='@'/>
+<arg declared_type='GKSession * _Nonnull' index='2' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='peerPickerController:didSelectConnectionType:'>
+<arg declared_type='GKPeerPickerController * _Nonnull' index='0' name='picker' type='@'/>
+<arg declared_type='GKPeerPickerConnectionType' index='1' name='type' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='peerPickerController:sessionForConnectionType:'>
+<arg declared_type='GKPeerPickerController * _Nonnull' index='0' name='picker' type='@'/>
+<arg declared_type='GKPeerPickerConnectionType' index='1' name='type' type='I' type64='Q'/>
+<retval declared_type='GKSession * _Nonnull' type='@'/>
+</method>
+<method selector='peerPickerControllerDidCancel:'>
+<arg declared_type='GKPeerPickerController * _Nonnull' index='0' name='picker' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:didAcceptInvite:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKInvite * _Nonnull' index='1' name='invite' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:didCompleteChallenge:issuedByFriend:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKChallenge * _Nonnull' index='1' name='challenge' type='@'/>
+<arg declared_type='GKPlayer * _Nonnull' index='2' name='friendPlayer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:didModifySavedGame:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKSavedGame * _Nonnull' index='1' name='savedGame' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:didReceiveChallenge:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKChallenge * _Nonnull' index='1' name='challenge' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:didRequestMatchWithOtherPlayers:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='playersToInvite' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:didRequestMatchWithPlayers:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='playerIDsToInvite' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:didRequestMatchWithRecipients:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='recipientPlayers' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:hasConflictingSavedGames:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='savedGames' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:issuedChallengeWasCompleted:byFriend:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKChallenge * _Nonnull' index='1' name='challenge' type='@'/>
+<arg declared_type='GKPlayer * _Nonnull' index='2' name='friendPlayer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:matchEnded:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='1' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:receivedExchangeCancellation:forMatch:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKTurnBasedExchange * _Nonnull' index='1' name='exchange' type='@'/>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='2' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:receivedExchangeReplies:forCompletedExchange:forMatch:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='replies' type='@'/>
+<arg declared_type='GKTurnBasedExchange * _Nonnull' index='2' name='exchange' type='@'/>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='3' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:receivedExchangeRequest:forMatch:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKTurnBasedExchange * _Nonnull' index='1' name='exchange' type='@'/>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='2' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:receivedTurnEventForMatch:didBecomeActive:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='1' name='match' type='@'/>
+<arg declared_type='BOOL' index='2' name='didBecomeActive' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:wantsToPlayChallenge:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKChallenge * _Nonnull' index='1' name='challenge' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:wantsToQuitMatch:'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='1' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='remotePlayerDidCompleteChallenge:'>
+<arg declared_type='GKChallenge*' index='0' name='challenge' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='session:connectionWithPeerFailed:withError:'>
+<arg declared_type='GKSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='peerID' type='@'/>
+<arg declared_type='NSError * _Nonnull' index='2' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='session:didAddPlayer:'>
+<arg declared_type='GKGameSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='GKCloudPlayer * _Nonnull' index='1' name='player' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='session:didFailWithError:'>
+<arg declared_type='GKSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='NSError * _Nonnull' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='session:didReceiveConnectionRequestFromPeer:'>
+<arg declared_type='GKSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='peerID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='session:didReceiveData:fromPlayer:'>
+<arg declared_type='GKGameSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='1' name='data' type='@'/>
+<arg declared_type='GKCloudPlayer * _Nonnull' index='2' name='player' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='session:didReceiveMessage:withData:fromPlayer:'>
+<arg declared_type='GKGameSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='message' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='2' name='data' type='@'/>
+<arg declared_type='GKCloudPlayer * _Nonnull' index='3' name='player' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='session:didRemovePlayer:'>
+<arg declared_type='GKGameSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='GKCloudPlayer * _Nonnull' index='1' name='player' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='session:peer:didChangeState:'>
+<arg declared_type='GKSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='peerID' type='@'/>
+<arg declared_type='GKPeerConnectionState' index='2' name='state' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='session:player:didChangeConnectionState:'>
+<arg declared_type='GKGameSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='GKCloudPlayer * _Nonnull' index='1' name='player' type='@'/>
+<arg declared_type='GKConnectionState' index='2' name='newState' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='session:player:didSaveData:'>
+<arg declared_type='GKGameSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='GKCloudPlayer * _Nonnull' index='1' name='player' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='2' name='data' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldShowBannerForLocallyCompletedChallenge:'>
+<arg declared_type='GKChallenge*' index='0' name='challenge' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='shouldShowBannerForLocallyReceivedChallenge:'>
+<arg declared_type='GKChallenge*' index='0' name='challenge' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='shouldShowBannerForRemotelyCompletedChallenge:'>
+<arg declared_type='GKChallenge*' index='0' name='challenge' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='turnBasedMatchmakerViewController:didFailWithError:'>
+<arg declared_type='GKTurnBasedMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<arg declared_type='NSError * _Nonnull' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='turnBasedMatchmakerViewController:didFindMatch:'>
+<arg declared_type='GKTurnBasedMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='1' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='turnBasedMatchmakerViewController:playerQuitForMatch:'>
+<arg declared_type='GKTurnBasedMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='1' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='turnBasedMatchmakerViewControllerWasCancelled:'>
+<arg declared_type='GKTurnBasedMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='voiceChatService:didNotStartWithParticipantID:error:'>
+<arg declared_type='GKVoiceChatService * _Nonnull' index='0' name='voiceChatService' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='participantID' type='@'/>
+<arg declared_type='NSError * _Nullable' index='2' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='voiceChatService:didReceiveInvitationFromParticipantID:callID:'>
+<arg declared_type='GKVoiceChatService * _Nonnull' index='0' name='voiceChatService' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='participantID' type='@'/>
+<arg declared_type='NSInteger' index='2' name='callID' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='voiceChatService:didStartWithParticipantID:'>
+<arg declared_type='GKVoiceChatService * _Nonnull' index='0' name='voiceChatService' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='participantID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='voiceChatService:didStopWithParticipantID:error:'>
+<arg declared_type='GKVoiceChatService * _Nonnull' index='0' name='voiceChatService' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='participantID' type='@'/>
+<arg declared_type='NSError * _Nullable' index='2' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='voiceChatService:sendData:toParticipantID:'>
+<arg declared_type='GKVoiceChatService * _Nonnull' index='0' name='voiceChatService' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='1' name='data' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='participantID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='voiceChatService:sendRealTimeData:toParticipantID:'>
+<arg declared_type='GKVoiceChatService * _Nonnull' index='0' name='voiceChatService' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='1' name='data' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='participantID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='GKAchievementViewControllerDelegate'>
+<method selector='achievementViewControllerDidFinish:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='GKAchievementViewController*' index='0' name='viewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKChallengeEventHandlerDelegate'>
+<method selector='localPlayerDidCompleteChallenge:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='GKChallenge*' index='0' name='challenge' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='localPlayerDidReceiveChallenge:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='GKChallenge*' index='0' name='challenge' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='localPlayerDidSelectChallenge:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='GKChallenge*' index='0' name='challenge' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='remotePlayerDidCompleteChallenge:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='GKChallenge*' index='0' name='challenge' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldShowBannerForLocallyCompletedChallenge:' type='B12@0:4@8' type64='B24@0:8@16'>
+<arg declared_type='GKChallenge*' index='0' name='challenge' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='shouldShowBannerForLocallyReceivedChallenge:' type='B12@0:4@8' type64='B24@0:8@16'>
+<arg declared_type='GKChallenge*' index='0' name='challenge' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='shouldShowBannerForRemotelyCompletedChallenge:' type='B12@0:4@8' type64='B24@0:8@16'>
+<arg declared_type='GKChallenge*' index='0' name='challenge' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKChallengeListener'>
+<method selector='player:didCompleteChallenge:issuedByFriend:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKChallenge * _Nonnull' index='1' name='challenge' type='@'/>
+<arg declared_type='GKPlayer * _Nonnull' index='2' name='friendPlayer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:didReceiveChallenge:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKChallenge * _Nonnull' index='1' name='challenge' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:issuedChallengeWasCompleted:byFriend:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKChallenge * _Nonnull' index='1' name='challenge' type='@'/>
+<arg declared_type='GKPlayer * _Nonnull' index='2' name='friendPlayer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:wantsToPlayChallenge:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKChallenge * _Nonnull' index='1' name='challenge' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKFriendRequestComposeViewControllerDelegate'>
+<method selector='friendRequestComposeViewControllerDidFinish:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='GKFriendRequestComposeViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKGameCenterControllerDelegate'>
+<method selector='gameCenterViewControllerDidFinish:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='GKGameCenterViewController * _Nonnull' index='0' name='gameCenterViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKGameSessionEventListener'>
+<method selector='session:didAddPlayer:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKGameSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='GKCloudPlayer * _Nonnull' index='1' name='player' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='session:didReceiveData:fromPlayer:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='GKGameSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='1' name='data' type='@'/>
+<arg declared_type='GKCloudPlayer * _Nonnull' index='2' name='player' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='session:didReceiveMessage:withData:fromPlayer:' type='v24@0:4@8@12@16@20' type64='v48@0:8@16@24@32@40'>
+<arg declared_type='GKGameSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='message' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='2' name='data' type='@'/>
+<arg declared_type='GKCloudPlayer * _Nonnull' index='3' name='player' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='session:didRemovePlayer:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKGameSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='GKCloudPlayer * _Nonnull' index='1' name='player' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='session:player:didChangeConnectionState:' type='v20@0:4@8@12i16' type64='v40@0:8@16@24q32'>
+<arg declared_type='GKGameSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='GKCloudPlayer * _Nonnull' index='1' name='player' type='@'/>
+<arg declared_type='GKConnectionState' index='2' name='newState' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='session:player:didSaveData:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='GKGameSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='GKCloudPlayer * _Nonnull' index='1' name='player' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='2' name='data' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKInviteEventListener'>
+<method selector='player:didAcceptInvite:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKInvite * _Nonnull' index='1' name='invite' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:didRequestMatchWithPlayers:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='playerIDsToInvite' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:didRequestMatchWithRecipients:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='recipientPlayers' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKLeaderboardViewControllerDelegate'>
+<method selector='leaderboardViewControllerDidFinish:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='GKLeaderboardViewController*' index='0' name='viewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKMatchDelegate'>
+<method selector='match:didFailWithError:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='NSError * _Nullable' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='match:didReceiveData:forRecipient:fromRemotePlayer:' type='v24@0:4@8@12@16@20' type64='v48@0:8@16@24@32@40'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='1' name='data' type='@'/>
+<arg declared_type='GKPlayer * _Nonnull' index='2' name='recipient' type='@'/>
+<arg declared_type='GKPlayer * _Nonnull' index='3' name='player' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='match:didReceiveData:fromPlayer:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='1' name='data' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='playerID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='match:didReceiveData:fromRemotePlayer:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='1' name='data' type='@'/>
+<arg declared_type='GKPlayer * _Nonnull' index='2' name='player' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='match:player:didChangeConnectionState:' type='v20@0:4@8@12i16' type64='v40@0:8@16@24q32'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='GKPlayer * _Nonnull' index='1' name='player' type='@'/>
+<arg declared_type='GKPlayerConnectionState' index='2' name='state' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='match:player:didChangeState:' type='v20@0:4@8@12i16' type64='v40@0:8@16@24q32'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='playerID' type='@'/>
+<arg declared_type='GKPlayerConnectionState' index='2' name='state' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='match:shouldReinviteDisconnectedPlayer:' type='B16@0:4@8@12' type64='B32@0:8@16@24'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='GKPlayer * _Nonnull' index='1' name='player' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='match:shouldReinvitePlayer:' type='B16@0:4@8@12' type64='B32@0:8@16@24'>
+<arg declared_type='GKMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='playerID' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKMatchmakerViewControllerDelegate'>
+<method selector='matchmakerViewController:didFailWithError:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<arg declared_type='NSError * _Nonnull' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='matchmakerViewController:didFindHostedPlayers:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='players' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='matchmakerViewController:didFindMatch:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<arg declared_type='GKMatch * _Nonnull' index='1' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='matchmakerViewController:didFindPlayers:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='playerIDs' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='matchmakerViewController:didReceiveAcceptFromHostedPlayer:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='playerID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='matchmakerViewController:hostedPlayerDidAccept:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<arg declared_type='GKPlayer * _Nonnull' index='1' name='player' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='matchmakerViewControllerWasCancelled:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKPeerPickerControllerDelegate'>
+<method selector='peerPickerController:didConnectPeer:toSession:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='GKPeerPickerController * _Nonnull' index='0' name='picker' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='peerID' type='@'/>
+<arg declared_type='GKSession * _Nonnull' index='2' name='session' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='peerPickerController:didSelectConnectionType:' type='v16@0:4@8I12' type64='v32@0:8@16Q24'>
+<arg declared_type='GKPeerPickerController * _Nonnull' index='0' name='picker' type='@'/>
+<arg declared_type='GKPeerPickerConnectionType' index='1' name='type' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='peerPickerController:sessionForConnectionType:' type='@16@0:4@8I12' type64='@32@0:8@16Q24'>
+<arg declared_type='GKPeerPickerController * _Nonnull' index='0' name='picker' type='@'/>
+<arg declared_type='GKPeerPickerConnectionType' index='1' name='type' type='I' type64='Q'/>
+<retval declared_type='GKSession * _Nonnull' type='@'/>
+</method>
+<method selector='peerPickerControllerDidCancel:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='GKPeerPickerController * _Nonnull' index='0' name='picker' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKSavedGameListener'>
+<method selector='player:didModifySavedGame:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKSavedGame * _Nonnull' index='1' name='savedGame' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:hasConflictingSavedGames:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='savedGames' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKSessionDelegate'>
+<method selector='session:connectionWithPeerFailed:withError:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='GKSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='peerID' type='@'/>
+<arg declared_type='NSError * _Nonnull' index='2' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='session:didFailWithError:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='NSError * _Nonnull' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='session:didReceiveConnectionRequestFromPeer:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='peerID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='session:peer:didChangeState:' type='v20@0:4@8@12i16' type64='v36@0:8@16@24i32'>
+<arg declared_type='GKSession * _Nonnull' index='0' name='session' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='peerID' type='@'/>
+<arg declared_type='GKPeerConnectionState' index='2' name='state' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKTurnBasedEventHandlerDelegate'>
+<method selector='handleInviteFromGameCenter:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='playersToInvite' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handleMatchEnded:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='0' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handleTurnEventForMatch:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='0' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handleTurnEventForMatch:didBecomeActive:' type='v16@0:4@8B12' type64='v28@0:8@16B24'>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='0' name='match' type='@'/>
+<arg declared_type='BOOL' index='1' name='didBecomeActive' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKTurnBasedEventListener'>
+<method selector='player:didRequestMatchWithOtherPlayers:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='playersToInvite' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:didRequestMatchWithPlayers:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='playerIDsToInvite' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:matchEnded:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='1' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:receivedExchangeCancellation:forMatch:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKTurnBasedExchange * _Nonnull' index='1' name='exchange' type='@'/>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='2' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:receivedExchangeReplies:forCompletedExchange:forMatch:' type='v24@0:4@8@12@16@20' type64='v48@0:8@16@24@32@40'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='replies' type='@'/>
+<arg declared_type='GKTurnBasedExchange * _Nonnull' index='2' name='exchange' type='@'/>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='3' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:receivedExchangeRequest:forMatch:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKTurnBasedExchange * _Nonnull' index='1' name='exchange' type='@'/>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='2' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:receivedTurnEventForMatch:didBecomeActive:' type='v20@0:4@8@12B16' type64='v36@0:8@16@24B32'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='1' name='match' type='@'/>
+<arg declared_type='BOOL' index='2' name='didBecomeActive' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='player:wantsToQuitMatch:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKPlayer * _Nonnull' index='0' name='player' type='@'/>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='1' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKTurnBasedMatchmakerViewControllerDelegate'>
+<method selector='turnBasedMatchmakerViewController:didFailWithError:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKTurnBasedMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<arg declared_type='NSError * _Nonnull' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='turnBasedMatchmakerViewController:didFindMatch:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKTurnBasedMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='1' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='turnBasedMatchmakerViewController:playerQuitForMatch:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKTurnBasedMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<arg declared_type='GKTurnBasedMatch * _Nonnull' index='1' name='match' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='turnBasedMatchmakerViewControllerWasCancelled:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='GKTurnBasedMatchmakerViewController * _Nonnull' index='0' name='viewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKVoiceChatClient'>
+<method selector='participantID' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='voiceChatService:didNotStartWithParticipantID:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='GKVoiceChatService * _Nonnull' index='0' name='voiceChatService' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='participantID' type='@'/>
+<arg declared_type='NSError * _Nullable' index='2' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='voiceChatService:didReceiveInvitationFromParticipantID:callID:' type='v20@0:4@8@12i16' type64='v40@0:8@16@24q32'>
+<arg declared_type='GKVoiceChatService * _Nonnull' index='0' name='voiceChatService' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='participantID' type='@'/>
+<arg declared_type='NSInteger' index='2' name='callID' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='voiceChatService:didStartWithParticipantID:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='GKVoiceChatService * _Nonnull' index='0' name='voiceChatService' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='participantID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='voiceChatService:didStopWithParticipantID:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='GKVoiceChatService * _Nonnull' index='0' name='voiceChatService' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='participantID' type='@'/>
+<arg declared_type='NSError * _Nullable' index='2' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='voiceChatService:sendData:toParticipantID:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='GKVoiceChatService * _Nonnull' index='0' name='voiceChatService' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='1' name='data' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='participantID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='voiceChatService:sendRealTimeData:toParticipantID:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='GKVoiceChatService * _Nonnull' index='0' name='voiceChatService' type='@'/>
+<arg declared_type='NSData * _Nonnull' index='1' name='data' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='participantID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>

@@ -1,0 +1,147 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<constant const='true' declared_type64='NSString * _Nonnull' name='EAAccessoryDidConnectNotification' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='EAAccessoryDidDisconnectNotification' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='EAAccessoryKey' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='EAAccessorySelectedKey' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='EABluetoothAccessoryPickerErrorDomain' type64='@'/>
+<enum name='EABluetoothAccessoryPickerAlreadyConnected' value64='0'/>
+<enum name='EABluetoothAccessoryPickerResultCancelled' value64='2'/>
+<enum name='EABluetoothAccessoryPickerResultFailed' value64='3'/>
+<enum name='EABluetoothAccessoryPickerResultNotFound' value64='1'/>
+<enum name='EAConnectionIDNone' value64='0'/>
+<enum name='EAWiFiUnconfiguredAccessoryBrowserStateConfiguring' value64='3'/>
+<enum name='EAWiFiUnconfiguredAccessoryBrowserStateSearching' value64='2'/>
+<enum name='EAWiFiUnconfiguredAccessoryBrowserStateStopped' value64='1'/>
+<enum name='EAWiFiUnconfiguredAccessoryBrowserStateWiFiUnavailable' value64='0'/>
+<enum name='EAWiFiUnconfiguredAccessoryConfigurationStatusFailed' value64='2'/>
+<enum name='EAWiFiUnconfiguredAccessoryConfigurationStatusSuccess' value64='0'/>
+<enum name='EAWiFiUnconfiguredAccessoryConfigurationStatusUserCancelledConfiguration' value64='1'/>
+<enum name='EAWiFiUnconfiguredAccessoryPropertySupportsAirPlay' value64='1'/>
+<enum name='EAWiFiUnconfiguredAccessoryPropertySupportsAirPrint' value64='2'/>
+<enum name='EAWiFiUnconfiguredAccessoryPropertySupportsHomeKit' value64='4'/>
+<class name='EAAccessory'>
+<method selector='connectionID'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='dockType'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='firmwareRevision'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='hardwareRevision'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='isConnected'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='manufacturer'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='modelNumber'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='protocolStrings'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='serialNumber'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='EAAccessoryManager'>
+<method selector='connectedAccessories'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='registerForLocalNotifications'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='sharedAccessoryManager'>
+<retval declared_type64='EAAccessoryManager * _Nonnull' type64='@'/>
+</method>
+<method selector='showBluetoothAccessoryPickerWithNameFilter:completion:'>
+<arg declared_type64='NSPredicate * _Nullable' index='0' name='predicate' type64='@'/>
+<arg declared_type64='EABluetoothAccessoryPickerCompletion _Nullable' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='unregisterForLocalNotifications'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='EASession'>
+<method selector='accessory'>
+<retval declared_type64='EAAccessory * _Nullable' type64='@'/>
+</method>
+<method selector='initWithAccessory:forProtocol:'>
+<arg declared_type64='EAAccessory * _Nonnull' index='0' name='accessory' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='protocolString' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='inputStream'>
+<retval declared_type64='NSInputStream * _Nullable' type64='@'/>
+</method>
+<method selector='outputStream'>
+<retval declared_type64='NSOutputStream * _Nullable' type64='@'/>
+</method>
+<method selector='protocolString'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='EAWiFiUnconfiguredAccessory'>
+<method selector='macAddress'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='manufacturer'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='model'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='properties'>
+<retval declared_type64='EAWiFiUnconfiguredAccessoryProperties' type64='Q'/>
+</method>
+<method selector='ssid'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='EAWiFiUnconfiguredAccessoryBrowser'>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='unconfiguredAccessories'>
+<retval declared_type64='NSSet * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='accessoryDidDisconnect:'>
+<arg declared_type64='EAAccessory * _Nonnull' index='0' name='accessory' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='EAAccessoryDelegate'>
+<method selector='accessoryDidDisconnect:' type64='v24@0:8@16'>
+<arg declared_type64='EAAccessory * _Nonnull' index='0' name='accessory' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

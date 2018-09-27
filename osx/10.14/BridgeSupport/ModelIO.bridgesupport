@@ -1,0 +1,3514 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<struct name='MDLAxisAlignedBoundingBox' type64='{_MDLAxisAlignedBoundingBox=&quot;maxBounds&quot;{_vector_float3=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}&quot;minBounds&quot;{_vector_float3=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}}'>
+<field declared_type64='vector_float3' name='maxBounds' type64='{_vector_float3=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}'/>
+<field declared_type64='vector_float3' name='minBounds' type64='{_vector_float3=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}'/>
+</struct>
+<struct name='MDLVoxelIndex' type64='{_MDLVoxelIndex=&quot;x&quot;i&quot;y&quot;i&quot;z&quot;i&quot;w&quot;i}'>
+<field declared_type64='int' name='x' type64='i'/>
+<field declared_type64='int' name='y' type64='i'/>
+<field declared_type64='int' name='z' type64='i'/>
+<field declared_type64='int' name='w' type64='i'/>
+</struct>
+<struct name='MDLVoxelIndexExtent' type64='{_MDLVoxelIndexExtent=&quot;minimumExtent&quot;{_MDLVoxelIndex=&quot;x&quot;i&quot;y&quot;i&quot;z&quot;i&quot;w&quot;i}&quot;maximumExtent&quot;{_MDLVoxelIndex=&quot;x&quot;i&quot;y&quot;i&quot;z&quot;i&quot;w&quot;i}}'>
+<field declared_type64='MDLVoxelIndex' name='minimumExtent' type64='{_MDLVoxelIndex=&quot;x&quot;i&quot;y&quot;i&quot;z&quot;i&quot;w&quot;i}'/>
+<field declared_type64='MDLVoxelIndex' name='maximumExtent' type64='{_MDLVoxelIndex=&quot;x&quot;i&quot;y&quot;i&quot;z&quot;i&quot;w&quot;i}'/>
+</struct>
+<struct name='vector_float2' type64='{_vector_float2=&quot;x&quot;f&quot;y&quot;f}'>
+<field declared_type64='float' name='x' type64='f'/>
+<field declared_type64='float' name='y' type64='f'/>
+</struct>
+<struct name='vector_float3' type64='{_vector_float3=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}'>
+<field declared_type64='float' name='x' type64='f'/>
+<field declared_type64='float' name='y' type64='f'/>
+<field declared_type64='float' name='z' type64='f'/>
+</struct>
+<struct name='vector_float4' type64='{_vector_float4=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f&quot;w&quot;f}'>
+<field declared_type64='float' name='x' type64='f'/>
+<field declared_type64='float' name='y' type64='f'/>
+<field declared_type64='float' name='z' type64='f'/>
+<field declared_type64='float' name='w' type64='f'/>
+</struct>
+<struct name='vector_int2' type64='{_vector_int2=&quot;x&quot;i&quot;y&quot;i}'>
+<field declared_type64='int' name='x' type64='i'/>
+<field declared_type64='int' name='y' type64='i'/>
+</struct>
+<struct name='vector_int4' type64='{_vector_int4=&quot;x&quot;i&quot;y&quot;i&quot;z&quot;i&quot;w&quot;i}'>
+<field declared_type64='int' name='x' type64='i'/>
+<field declared_type64='int' name='y' type64='i'/>
+<field declared_type64='int' name='z' type64='i'/>
+<field declared_type64='int' name='w' type64='i'/>
+</struct>
+<struct name='vector_uint2' type64='{_vector_uint2=&quot;x&quot;I&quot;y&quot;I}'>
+<field declared_type64='unsigned int' name='x' type64='I'/>
+<field declared_type64='unsigned int' name='y' type64='I'/>
+</struct>
+<struct name='vector_uint3' type64='{_vector_uint3=&quot;x&quot;I&quot;y&quot;I&quot;z&quot;I}'>
+<field declared_type64='unsigned int' name='x' type64='I'/>
+<field declared_type64='unsigned int' name='y' type64='I'/>
+<field declared_type64='unsigned int' name='z' type64='I'/>
+</struct>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MDLVertexAttributeAnisotropy' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MDLVertexAttributeBinormal' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MDLVertexAttributeBitangent' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MDLVertexAttributeColor' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MDLVertexAttributeEdgeCrease' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MDLVertexAttributeJointIndices' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MDLVertexAttributeJointWeights' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MDLVertexAttributeNormal' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MDLVertexAttributeOcclusionValue' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MDLVertexAttributePosition' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MDLVertexAttributeShadingBasisU' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MDLVertexAttributeShadingBasisV' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MDLVertexAttributeSubdivisionStencil' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MDLVertexAttributeTangent' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MDLVertexAttributeTextureCoordinate' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='kUTType3dObject' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='kUTTypeAlembic' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='kUTTypePolygon' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='kUTTypeStereolithography' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='kUTTypeUniversalSceneDescription' type64='@'/>
+<enum name='MDLAnimatedValueInterpolationConstant' value64='0'/>
+<enum name='MDLAnimatedValueInterpolationLinear' value64='1'/>
+<enum name='MDLCameraProjectionOrthographic' value64='1'/>
+<enum name='MDLCameraProjectionPerspective' value64='0'/>
+<enum name='MDLDataPrecisionDouble' value64='2'/>
+<enum name='MDLDataPrecisionFloat' value64='1'/>
+<enum name='MDLDataPrecisionUndefined' value64='0'/>
+<enum name='MDLGeometryTypeLines' value64='1'/>
+<enum name='MDLGeometryTypePoints' value64='0'/>
+<enum name='MDLGeometryTypeQuads' value64='4'/>
+<enum name='MDLGeometryTypeTriangleStrips' value64='3'/>
+<enum name='MDLGeometryTypeTriangles' value64='2'/>
+<enum name='MDLGeometryTypeVariableTopology' value64='5'/>
+<enum name='MDLIndexBitDepthInvalid' value64='0'/>
+<enum name='MDLIndexBitDepthUInt16' value64='16'/>
+<enum name='MDLIndexBitDepthUInt32' value64='32'/>
+<enum name='MDLIndexBitDepthUInt8' value64='8'/>
+<enum name='MDLIndexBitDepthUint16' value64='16'/>
+<enum name='MDLIndexBitDepthUint32' value64='32'/>
+<enum name='MDLIndexBitDepthUint8' value64='8'/>
+<enum name='MDLLightTypeAmbient' value64='1'/>
+<enum name='MDLLightTypeDirectional' value64='2'/>
+<enum name='MDLLightTypeDiscArea' value64='6'/>
+<enum name='MDLLightTypeEnvironment' value64='11'/>
+<enum name='MDLLightTypeLinear' value64='5'/>
+<enum name='MDLLightTypePhotometric' value64='9'/>
+<enum name='MDLLightTypePoint' value64='4'/>
+<enum name='MDLLightTypeProbe' value64='10'/>
+<enum name='MDLLightTypeRectangularArea' value64='7'/>
+<enum name='MDLLightTypeSpot' value64='3'/>
+<enum name='MDLLightTypeSuperElliptical' value64='8'/>
+<enum name='MDLLightTypeUnknown' value64='0'/>
+<enum name='MDLMaterialFaceBack' value64='1'/>
+<enum name='MDLMaterialFaceDoubleSided' value64='2'/>
+<enum name='MDLMaterialFaceFront' value64='0'/>
+<enum name='MDLMaterialMipMapFilterModeLinear' value64='1'/>
+<enum name='MDLMaterialMipMapFilterModeNearest' value64='0'/>
+<enum name='MDLMaterialPropertyTypeColor' value64='4'/>
+<enum name='MDLMaterialPropertyTypeFloat' value64='5'/>
+<enum name='MDLMaterialPropertyTypeFloat2' value64='6'/>
+<enum name='MDLMaterialPropertyTypeFloat3' value64='7'/>
+<enum name='MDLMaterialPropertyTypeFloat4' value64='8'/>
+<enum name='MDLMaterialPropertyTypeMatrix44' value64='9'/>
+<enum name='MDLMaterialPropertyTypeNone' value64='0'/>
+<enum name='MDLMaterialPropertyTypeString' value64='1'/>
+<enum name='MDLMaterialPropertyTypeTexture' value64='3'/>
+<enum name='MDLMaterialPropertyTypeURL' value64='2'/>
+<enum name='MDLMaterialSemanticAmbientOcclusion' value64='22'/>
+<enum name='MDLMaterialSemanticAmbientOcclusionScale' value64='23'/>
+<enum name='MDLMaterialSemanticAnisotropic' value64='7'/>
+<enum name='MDLMaterialSemanticAnisotropicRotation' value64='8'/>
+<enum name='MDLMaterialSemanticBaseColor' value64='0'/>
+<enum name='MDLMaterialSemanticBump' value64='14'/>
+<enum name='MDLMaterialSemanticClearcoat' value64='11'/>
+<enum name='MDLMaterialSemanticClearcoatGloss' value64='12'/>
+<enum name='MDLMaterialSemanticDisplacement' value64='20'/>
+<enum name='MDLMaterialSemanticDisplacementScale' value64='21'/>
+<enum name='MDLMaterialSemanticEmission' value64='13'/>
+<enum name='MDLMaterialSemanticInterfaceIndexOfRefraction' value64='16'/>
+<enum name='MDLMaterialSemanticMaterialIndexOfRefraction' value64='17'/>
+<enum name='MDLMaterialSemanticMetallic' value64='2'/>
+<enum name='MDLMaterialSemanticNone' value64='32768'/>
+<enum name='MDLMaterialSemanticObjectSpaceNormal' value64='18'/>
+<enum name='MDLMaterialSemanticOpacity' value64='15'/>
+<enum name='MDLMaterialSemanticRoughness' value64='6'/>
+<enum name='MDLMaterialSemanticSheen' value64='9'/>
+<enum name='MDLMaterialSemanticSheenTint' value64='10'/>
+<enum name='MDLMaterialSemanticSpecular' value64='3'/>
+<enum name='MDLMaterialSemanticSpecularExponent' value64='4'/>
+<enum name='MDLMaterialSemanticSpecularTint' value64='5'/>
+<enum name='MDLMaterialSemanticSubsurface' value64='1'/>
+<enum name='MDLMaterialSemanticTangentSpaceNormal' value64='19'/>
+<enum name='MDLMaterialSemanticUserDefined' value64='32769'/>
+<enum name='MDLMaterialTextureFilterModeLinear' value64='1'/>
+<enum name='MDLMaterialTextureFilterModeNearest' value64='0'/>
+<enum name='MDLMaterialTextureWrapModeClamp' value64='0'/>
+<enum name='MDLMaterialTextureWrapModeMirror' value64='2'/>
+<enum name='MDLMaterialTextureWrapModeRepeat' value64='1'/>
+<enum name='MDLMeshBufferTypeIndex' value64='2'/>
+<enum name='MDLMeshBufferTypeVertex' value64='1'/>
+<enum name='MDLProbePlacementIrradianceDistribution' value64='1'/>
+<enum name='MDLProbePlacementUniformGrid' value64='0'/>
+<enum name='MDLTextureChannelEncodingFloat16' value64='258'/>
+<enum name='MDLTextureChannelEncodingFloat16SR' value64='770'/>
+<enum name='MDLTextureChannelEncodingFloat32' value64='260'/>
+<enum name='MDLTextureChannelEncodingUInt16' value64='2'/>
+<enum name='MDLTextureChannelEncodingUInt24' value64='3'/>
+<enum name='MDLTextureChannelEncodingUInt32' value64='4'/>
+<enum name='MDLTextureChannelEncodingUInt8' value64='1'/>
+<enum name='MDLTextureChannelEncodingUint16' value64='2'/>
+<enum name='MDLTextureChannelEncodingUint24' value64='3'/>
+<enum name='MDLTextureChannelEncodingUint32' value64='4'/>
+<enum name='MDLTextureChannelEncodingUint8' value64='1'/>
+<enum name='MDLTransformOpRotationOrderXYZ' value64='1'/>
+<enum name='MDLTransformOpRotationOrderXZY' value64='2'/>
+<enum name='MDLTransformOpRotationOrderYXZ' value64='3'/>
+<enum name='MDLTransformOpRotationOrderYZX' value64='4'/>
+<enum name='MDLTransformOpRotationOrderZXY' value64='5'/>
+<enum name='MDLTransformOpRotationOrderZYX' value64='6'/>
+<enum name='MDLVertexFormatChar' value64='131073'/>
+<enum name='MDLVertexFormatChar2' value64='131074'/>
+<enum name='MDLVertexFormatChar2Normalized' value64='262146'/>
+<enum name='MDLVertexFormatChar3' value64='131075'/>
+<enum name='MDLVertexFormatChar3Normalized' value64='262147'/>
+<enum name='MDLVertexFormatChar4' value64='131076'/>
+<enum name='MDLVertexFormatChar4Normalized' value64='262148'/>
+<enum name='MDLVertexFormatCharBits' value64='131072'/>
+<enum name='MDLVertexFormatCharNormalized' value64='262145'/>
+<enum name='MDLVertexFormatCharNormalizedBits' value64='262144'/>
+<enum name='MDLVertexFormatFloat' value64='786433'/>
+<enum name='MDLVertexFormatFloat2' value64='786434'/>
+<enum name='MDLVertexFormatFloat3' value64='786435'/>
+<enum name='MDLVertexFormatFloat4' value64='786436'/>
+<enum name='MDLVertexFormatFloatBits' value64='786432'/>
+<enum name='MDLVertexFormatHalf' value64='720897'/>
+<enum name='MDLVertexFormatHalf2' value64='720898'/>
+<enum name='MDLVertexFormatHalf3' value64='720899'/>
+<enum name='MDLVertexFormatHalf4' value64='720900'/>
+<enum name='MDLVertexFormatHalfBits' value64='720896'/>
+<enum name='MDLVertexFormatInt' value64='655361'/>
+<enum name='MDLVertexFormatInt1010102Normalized' value64='659460'/>
+<enum name='MDLVertexFormatInt2' value64='655362'/>
+<enum name='MDLVertexFormatInt3' value64='655363'/>
+<enum name='MDLVertexFormatInt4' value64='655364'/>
+<enum name='MDLVertexFormatIntBits' value64='655360'/>
+<enum name='MDLVertexFormatInvalid' value64='0'/>
+<enum name='MDLVertexFormatPackedBit' value64='4096'/>
+<enum name='MDLVertexFormatShort' value64='393217'/>
+<enum name='MDLVertexFormatShort2' value64='393218'/>
+<enum name='MDLVertexFormatShort2Normalized' value64='524290'/>
+<enum name='MDLVertexFormatShort3' value64='393219'/>
+<enum name='MDLVertexFormatShort3Normalized' value64='524291'/>
+<enum name='MDLVertexFormatShort4' value64='393220'/>
+<enum name='MDLVertexFormatShort4Normalized' value64='524292'/>
+<enum name='MDLVertexFormatShortBits' value64='393216'/>
+<enum name='MDLVertexFormatShortNormalized' value64='524289'/>
+<enum name='MDLVertexFormatShortNormalizedBits' value64='524288'/>
+<enum name='MDLVertexFormatUChar' value64='65537'/>
+<enum name='MDLVertexFormatUChar2' value64='65538'/>
+<enum name='MDLVertexFormatUChar2Normalized' value64='196610'/>
+<enum name='MDLVertexFormatUChar3' value64='65539'/>
+<enum name='MDLVertexFormatUChar3Normalized' value64='196611'/>
+<enum name='MDLVertexFormatUChar4' value64='65540'/>
+<enum name='MDLVertexFormatUChar4Normalized' value64='196612'/>
+<enum name='MDLVertexFormatUCharBits' value64='65536'/>
+<enum name='MDLVertexFormatUCharNormalized' value64='196609'/>
+<enum name='MDLVertexFormatUCharNormalizedBits' value64='196608'/>
+<enum name='MDLVertexFormatUInt' value64='589825'/>
+<enum name='MDLVertexFormatUInt1010102Normalized' value64='593924'/>
+<enum name='MDLVertexFormatUInt2' value64='589826'/>
+<enum name='MDLVertexFormatUInt3' value64='589827'/>
+<enum name='MDLVertexFormatUInt4' value64='589828'/>
+<enum name='MDLVertexFormatUIntBits' value64='589824'/>
+<enum name='MDLVertexFormatUShort' value64='327681'/>
+<enum name='MDLVertexFormatUShort2' value64='327682'/>
+<enum name='MDLVertexFormatUShort2Normalized' value64='458754'/>
+<enum name='MDLVertexFormatUShort3' value64='327683'/>
+<enum name='MDLVertexFormatUShort3Normalized' value64='458755'/>
+<enum name='MDLVertexFormatUShort4' value64='327684'/>
+<enum name='MDLVertexFormatUShort4Normalized' value64='458756'/>
+<enum name='MDLVertexFormatUShortBits' value64='327680'/>
+<enum name='MDLVertexFormatUShortNormalized' value64='458753'/>
+<enum name='MDLVertexFormatUShortNormalizedBits' value64='458752'/>
+<class name='MDLAnimatedMatrix4x4'>
+<method selector='double4x4AtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='matrix_double4x4' type64='{_matrix_double4x4=[4]}'/>
+</method>
+<method selector='float4x4AtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='matrix_float4x4' type64='{_matrix_float4x4=[4]}'/>
+</method>
+<method selector='getDouble4x4Array:maxCount:'>
+<arg declared_type64='matrix_double4x4 * _Nonnull' index='0' name='valuesArray' type64='^{_matrix_double4x4=[4]}'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getFloat4x4Array:maxCount:'>
+<arg declared_type64='matrix_float4x4 * _Nonnull' index='0' name='valuesArray' type64='^{_matrix_float4x4=[4]}'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='resetWithDouble4x4Array:atTimes:count:'>
+<arg const='true' declared_type64='matrix_double4x4 * _Nonnull' index='0' name='valuesArray' type64='^{_matrix_double4x4=[4]}'/>
+<arg const='true' declared_type64='NSTimeInterval * _Nonnull' index='1' name='timesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='2' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resetWithFloat4x4Array:atTimes:count:'>
+<arg const='true' declared_type64='matrix_float4x4 * _Nonnull' index='0' name='valuesArray' type64='^{_matrix_float4x4=[4]}'/>
+<arg const='true' declared_type64='NSTimeInterval * _Nonnull' index='1' name='timesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='2' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDouble4x4:atTime:'>
+<arg declared_type64='matrix_double4x4' index='0' name='value' type64='{_matrix_double4x4=[4]}'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFloat4x4:atTime:'>
+<arg declared_type64='matrix_float4x4' index='0' name='value' type64='{_matrix_float4x4=[4]}'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLAnimatedQuaternionArray'>
+<method selector='elementCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getDoubleQuaternionArray:maxCount:'>
+<arg declared_type64='simd_quatd * _Nonnull' index='0' name='valuesArray' type64='^{_simd_quatd=}'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getDoubleQuaternionArray:maxCount:atTime:'>
+<arg declared_type64='simd_quatd * _Nonnull' index='0' name='array' type64='^{_simd_quatd=}'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<arg declared_type64='NSTimeInterval' index='2' name='time' type64='d'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getFloatQuaternionArray:maxCount:'>
+<arg declared_type64='simd_quatf * _Nonnull' index='0' name='valuesArray' type64='^{_simd_quatf=}'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getFloatQuaternionArray:maxCount:atTime:'>
+<arg declared_type64='simd_quatf * _Nonnull' index='0' name='array' type64='^{_simd_quatf=}'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<arg declared_type64='NSTimeInterval' index='2' name='time' type64='d'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='initWithElementCount:'>
+<arg declared_type64='NSUInteger' index='0' name='arrayElementCount' type64='Q'/>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='resetWithDoubleQuaternionArray:count:atTimes:count:'>
+<arg const='true' declared_type64='simd_quatd * _Nonnull' index='0' name='valuesArray' type64='^{_simd_quatd=}'/>
+<arg declared_type64='NSUInteger' index='1' name='valuesCount' type64='Q'/>
+<arg const='true' declared_type64='NSTimeInterval * _Nonnull' index='2' name='timesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='3' name='timesCount' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resetWithFloatQuaternionArray:count:atTimes:count:'>
+<arg const='true' declared_type64='simd_quatf * _Nonnull' index='0' name='valuesArray' type64='^{_simd_quatf=}'/>
+<arg declared_type64='NSUInteger' index='1' name='valuesCount' type64='Q'/>
+<arg const='true' declared_type64='NSTimeInterval * _Nonnull' index='2' name='timesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='3' name='timesCount' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDoubleQuaternionArray:count:atTime:'>
+<arg const='true' declared_type64='simd_quatd * _Nonnull' index='0' name='array' type64='^{_simd_quatd=}'/>
+<arg declared_type64='NSUInteger' index='1' name='count' type64='Q'/>
+<arg declared_type64='NSTimeInterval' index='2' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFloatQuaternionArray:count:atTime:'>
+<arg const='true' declared_type64='simd_quatf * _Nonnull' index='0' name='array' type64='^{_simd_quatf=}'/>
+<arg declared_type64='NSUInteger' index='1' name='count' type64='Q'/>
+<arg declared_type64='NSTimeInterval' index='2' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLAnimatedScalar'>
+<method selector='doubleAtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='double' type64='d'/>
+</method>
+<method selector='floatAtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='getDoubleArray:maxCount:'>
+<arg declared_type64='double * _Nonnull' index='0' name='valuesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getFloatArray:maxCount:'>
+<arg declared_type64='float * _Nonnull' index='0' name='valuesArray' type64='^f'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='resetWithDoubleArray:atTimes:count:'>
+<arg const='true' declared_type64='double * _Nonnull' index='0' name='valuesArray' type64='^d'/>
+<arg const='true' declared_type64='NSTimeInterval * _Nonnull' index='1' name='timesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='2' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resetWithFloatArray:atTimes:count:'>
+<arg const='true' declared_type64='float * _Nonnull' index='0' name='valuesArray' type64='^f'/>
+<arg const='true' declared_type64='NSTimeInterval * _Nonnull' index='1' name='timesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='2' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDouble:atTime:'>
+<arg declared_type64='double' index='0' name='value' type64='d'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFloat:atTime:'>
+<arg declared_type64='float' index='0' name='value' type64='f'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLAnimatedScalarArray'>
+<method selector='elementCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getDoubleArray:maxCount:'>
+<arg declared_type64='double * _Nonnull' index='0' name='valuesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getDoubleArray:maxCount:atTime:'>
+<arg declared_type64='double * _Nonnull' index='0' name='array' type64='^d'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<arg declared_type64='NSTimeInterval' index='2' name='time' type64='d'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getFloatArray:maxCount:'>
+<arg declared_type64='float * _Nonnull' index='0' name='valuesArray' type64='^f'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getFloatArray:maxCount:atTime:'>
+<arg declared_type64='float * _Nonnull' index='0' name='array' type64='^f'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<arg declared_type64='NSTimeInterval' index='2' name='time' type64='d'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='initWithElementCount:'>
+<arg declared_type64='NSUInteger' index='0' name='arrayElementCount' type64='Q'/>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='resetWithDoubleArray:count:atTimes:count:'>
+<arg const='true' declared_type64='double * _Nonnull' index='0' name='valuesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='1' name='valuesCount' type64='Q'/>
+<arg const='true' declared_type64='NSTimeInterval * _Nonnull' index='2' name='timesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='3' name='timesCount' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resetWithFloatArray:count:atTimes:count:'>
+<arg const='true' declared_type64='float * _Nonnull' index='0' name='valuesArray' type64='^f'/>
+<arg declared_type64='NSUInteger' index='1' name='valuesCount' type64='Q'/>
+<arg const='true' declared_type64='NSTimeInterval * _Nonnull' index='2' name='timesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='3' name='timesCount' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDoubleArray:count:atTime:'>
+<arg const='true' declared_type64='double * _Nonnull' index='0' name='array' type64='^d'/>
+<arg declared_type64='NSUInteger' index='1' name='count' type64='Q'/>
+<arg declared_type64='NSTimeInterval' index='2' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFloatArray:count:atTime:'>
+<arg const='true' declared_type64='float * _Nonnull' index='0' name='array' type64='^f'/>
+<arg declared_type64='NSUInteger' index='1' name='count' type64='Q'/>
+<arg declared_type64='NSTimeInterval' index='2' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLAnimatedValue'>
+<method selector='clear'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='getTimes:maxCount:'>
+<arg declared_type64='NSTimeInterval * _Nonnull' index='0' name='timesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='interpolation'>
+<retval declared_type64='MDLAnimatedValueInterpolation' type64='Q'/>
+</method>
+<method selector='isAnimated'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='keyTimes'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='maximumTime'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='minimumTime'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='precision'>
+<retval declared_type64='MDLDataPrecision' type64='Q'/>
+</method>
+<method selector='setInterpolation:'>
+<arg declared_type64='MDLAnimatedValueInterpolation' index='0' name='interpolation' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='timeSampleCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+</class>
+<class name='MDLAnimatedVector2'>
+<method selector='double2AtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='vector_double2' type64=''/>
+</method>
+<method selector='float2AtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='vector_float2' type64='{_vector_float2=ff}'/>
+</method>
+<method selector='getDouble2Array:maxCount:'>
+<arg declared_type64='vector_double2 * _Nonnull' index='0' name='valuesArray' type64='^'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getFloat2Array:maxCount:'>
+<arg declared_type64='vector_float2 * _Nonnull' index='0' name='valuesArray' type64='^{_vector_float2=ff}'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='resetWithDouble2Array:atTimes:count:'>
+<arg const='true' declared_type64='vector_double2 * _Nonnull' index='0' name='valuesArray' type64='^'/>
+<arg const='true' declared_type64='NSTimeInterval * _Nonnull' index='1' name='timesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='2' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resetWithFloat2Array:atTimes:count:'>
+<arg const='true' declared_type64='vector_float2 * _Nonnull' index='0' name='valuesArray' type64='^{_vector_float2=ff}'/>
+<arg const='true' declared_type64='NSTimeInterval * _Nonnull' index='1' name='timesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='2' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDouble2:atTime:'>
+<arg declared_type64='vector_double2' index='0' name='value' type64=''/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFloat2:atTime:'>
+<arg declared_type64='vector_float2' index='0' name='value' type64='{_vector_float2=ff}'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLAnimatedVector3'>
+<method selector='double3AtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='vector_double3' type64=''/>
+</method>
+<method selector='float3AtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='vector_float3' type64='{_vector_float3=fff}'/>
+</method>
+<method selector='getDouble3Array:maxCount:'>
+<arg declared_type64='vector_double3 * _Nonnull' index='0' name='valuesArray' type64='^'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getFloat3Array:maxCount:'>
+<arg declared_type64='vector_float3 * _Nonnull' index='0' name='valuesArray' type64='^{_vector_float3=fff}'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='resetWithDouble3Array:atTimes:count:'>
+<arg const='true' declared_type64='vector_double3 * _Nonnull' index='0' name='valuesArray' type64='^'/>
+<arg const='true' declared_type64='NSTimeInterval * _Nonnull' index='1' name='timesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='2' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resetWithFloat3Array:atTimes:count:'>
+<arg const='true' declared_type64='vector_float3 * _Nonnull' index='0' name='valuesArray' type64='^{_vector_float3=fff}'/>
+<arg const='true' declared_type64='NSTimeInterval * _Nonnull' index='1' name='timesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='2' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDouble3:atTime:'>
+<arg declared_type64='vector_double3' index='0' name='value' type64=''/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFloat3:atTime:'>
+<arg declared_type64='vector_float3' index='0' name='value' type64='{_vector_float3=fff}'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLAnimatedVector3Array'>
+<method selector='elementCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getDouble3Array:maxCount:'>
+<arg declared_type64='vector_double3 * _Nonnull' index='0' name='valuesArray' type64='^'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getDouble3Array:maxCount:atTime:'>
+<arg declared_type64='vector_double3 * _Nonnull' index='0' name='array' type64='^'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<arg declared_type64='NSTimeInterval' index='2' name='time' type64='d'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getFloat3Array:maxCount:'>
+<arg declared_type64='vector_float3 * _Nonnull' index='0' name='valuesArray' type64='^{_vector_float3=fff}'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getFloat3Array:maxCount:atTime:'>
+<arg declared_type64='vector_float3 * _Nonnull' index='0' name='array' type64='^{_vector_float3=fff}'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<arg declared_type64='NSTimeInterval' index='2' name='time' type64='d'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='initWithElementCount:'>
+<arg declared_type64='NSUInteger' index='0' name='arrayElementCount' type64='Q'/>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='resetWithDouble3Array:count:atTimes:count:'>
+<arg const='true' declared_type64='vector_double3 * _Nonnull' index='0' name='valuesArray' type64='^'/>
+<arg declared_type64='NSUInteger' index='1' name='valuesCount' type64='Q'/>
+<arg const='true' declared_type64='NSTimeInterval * _Nonnull' index='2' name='timesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='3' name='timesCount' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resetWithFloat3Array:count:atTimes:count:'>
+<arg const='true' declared_type64='vector_float3 * _Nonnull' index='0' name='valuesArray' type64='^{_vector_float3=fff}'/>
+<arg declared_type64='NSUInteger' index='1' name='valuesCount' type64='Q'/>
+<arg const='true' declared_type64='NSTimeInterval * _Nonnull' index='2' name='timesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='3' name='timesCount' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDouble3Array:count:atTime:'>
+<arg const='true' declared_type64='vector_double3 * _Nonnull' index='0' name='array' type64='^'/>
+<arg declared_type64='NSUInteger' index='1' name='count' type64='Q'/>
+<arg declared_type64='NSTimeInterval' index='2' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFloat3Array:count:atTime:'>
+<arg const='true' declared_type64='vector_float3 * _Nonnull' index='0' name='array' type64='^{_vector_float3=fff}'/>
+<arg declared_type64='NSUInteger' index='1' name='count' type64='Q'/>
+<arg declared_type64='NSTimeInterval' index='2' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLAnimatedVector4'>
+<method selector='double4AtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='vector_double4' type64=''/>
+</method>
+<method selector='float4AtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='vector_float4' type64='{_vector_float4=ffff}'/>
+</method>
+<method selector='getDouble4Array:maxCount:'>
+<arg declared_type64='vector_double4 * _Nonnull' index='0' name='valuesArray' type64='^'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getFloat4Array:maxCount:'>
+<arg declared_type64='vector_float4 * _Nonnull' index='0' name='valuesArray' type64='^{_vector_float4=ffff}'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='resetWithDouble4Array:atTimes:count:'>
+<arg const='true' declared_type64='vector_double4 * _Nonnull' index='0' name='valuesArray' type64='^'/>
+<arg const='true' declared_type64='NSTimeInterval * _Nonnull' index='1' name='timesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='2' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resetWithFloat4Array:atTimes:count:'>
+<arg const='true' declared_type64='vector_float4 * _Nonnull' index='0' name='valuesArray' type64='^{_vector_float4=ffff}'/>
+<arg const='true' declared_type64='NSTimeInterval * _Nonnull' index='1' name='timesArray' type64='^d'/>
+<arg declared_type64='NSUInteger' index='2' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDouble4:atTime:'>
+<arg declared_type64='vector_double4' index='0' name='value' type64=''/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFloat4:atTime:'>
+<arg declared_type64='vector_float4' index='0' name='value' type64='{_vector_float4=ffff}'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLAnimationBindComponent'>
+<method selector='geometryBindTransform'>
+<retval declared_type64='matrix_double4x4' type64='{_matrix_double4x4=[4]}'/>
+</method>
+<method selector='jointAnimation'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='jointPaths'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='setGeometryBindTransform:'>
+<arg declared_type64='matrix_double4x4' index='0' name='geometryBindTransform' type64='{_matrix_double4x4=[4]}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setJointAnimation:'>
+<arg declared_type64='id _Nullable' index='0' name='jointAnimation' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setJointPaths:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='jointPaths' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSkeleton:'>
+<arg declared_type64='MDLSkeleton * _Nullable' index='0' name='skeleton' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='skeleton'>
+<retval declared_type64='MDLSkeleton * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MDLAreaLight'>
+<method selector='areaRadius'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='aspect'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='setAreaRadius:'>
+<arg declared_type64='float' index='0' name='areaRadius' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setAspect:'>
+<arg declared_type64='float' index='0' name='aspect' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSuperEllipticPower:'>
+<arg declared_type64='vector_float2' index='0' name='superEllipticPower' type64='{_vector_float2=ff}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='superEllipticPower'>
+<retval declared_type64='vector_float2' type64='{_vector_float2=ff}'/>
+</method>
+</class>
+<class name='MDLAsset'>
+<method selector='URL'>
+<retval declared_type64='NSURL * _Nullable' type64='@'/>
+</method>
+<method selector='addObject:'>
+<arg declared_type64='MDLObject * _Nonnull' index='0' name='object' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='animations'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='boundingBox'>
+<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
+</method>
+<method selector='boundingBoxAtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
+</method>
+<method selector='bufferAllocator'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='canExportFileExtension:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='extension' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='canImportFileExtension:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='extension' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='childObjectsOfClass:'>
+<arg declared_type64='Class _Nonnull' index='0' name='objectClass' type64='#'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='count'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='endTime'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='exportAssetToURL:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='URL' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='exportAssetToURL:error:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='URL' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='frameInterval'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='initWithBufferAllocator:'>
+<arg declared_type64='id _Nullable' index='0' name='bufferAllocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithURL:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='URL' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithURL:vertexDescriptor:bufferAllocator:'>
+<arg declared_type64='NSURL * _Nullable' index='0' name='URL' type64='@'/>
+<arg declared_type64='MDLVertexDescriptor * _Nullable' index='1' name='vertexDescriptor' type64='@'/>
+<arg declared_type64='id _Nullable' index='2' name='bufferAllocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithURL:vertexDescriptor:bufferAllocator:preserveTopology:error:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='URL' type64='@'/>
+<arg declared_type64='MDLVertexDescriptor * _Nullable' index='1' name='vertexDescriptor' type64='@'/>
+<arg declared_type64='id _Nullable' index='2' name='bufferAllocator' type64='@'/>
+<arg declared_type64='BOOL' index='3' name='preserveTopology' type64='B'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='4' name='error' type64='^@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='loadTextures'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='masters'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='objectAtIndex:'>
+<arg declared_type64='NSUInteger' index='0' name='index' type64='Q'/>
+<retval declared_type64='MDLObject * _Nonnull' type64='@'/>
+</method>
+<method selector='objectAtIndexedSubscript:'>
+<arg declared_type64='NSUInteger' index='0' name='index' type64='Q'/>
+<retval declared_type64='MDLObject * _Nullable' type64='@'/>
+</method>
+<method selector='objectAtPath:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='path' type64='@'/>
+<retval declared_type64='MDLObject * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='placeLightProbesWithDensity:heuristic:usingIrradianceDataSource:'>
+<arg declared_type64='float' index='0' name='value' type64='f'/>
+<arg declared_type64='MDLProbePlacement' index='1' name='type' type64='q'/>
+<arg declared_type64='id _Nonnull' index='2' name='dataSource' type64='@'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='removeObject:'>
+<arg declared_type64='MDLObject * _Nonnull' index='0' name='object' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolver'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='setAnimations:'>
+<arg declared_type64='id _Nonnull' index='0' name='animations' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setEndTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='endTime' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFrameInterval:'>
+<arg declared_type64='NSTimeInterval' index='0' name='frameInterval' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMasters:'>
+<arg declared_type64='id _Nonnull' index='0' name='masters' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setResolver:'>
+<arg declared_type64='id _Nullable' index='0' name='resolver' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setStartTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='startTime' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setUpAxis:'>
+<arg declared_type64='vector_float3' index='0' name='upAxis' type64='{_vector_float3=fff}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='startTime'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='upAxis'>
+<retval declared_type64='vector_float3' type64='{_vector_float3=fff}'/>
+</method>
+<method selector='vertexDescriptor'>
+<retval declared_type64='MDLVertexDescriptor * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MDLBundleAssetResolver'>
+<method selector='initWithBundle:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='path' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='path'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='setPath:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='path' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLCamera'>
+<method selector='apertureBladeCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='barrelDistortion'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='bokehKernelWithSize:'>
+<arg declared_type64='vector_int2' index='0' name='size' type64='{_vector_int2=ii}'/>
+<retval declared_type64='MDLTexture * _Nonnull' type64='@'/>
+</method>
+<method selector='chromaticAberration'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='exposure'>
+<retval declared_type64='vector_float3' type64='{_vector_float3=fff}'/>
+</method>
+<method selector='exposureCompression'>
+<retval declared_type64='vector_float2' type64='{_vector_float2=ff}'/>
+</method>
+<method selector='fStop'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='farVisibilityDistance'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='fieldOfView'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='fisheyeDistortion'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='flash'>
+<retval declared_type64='vector_float3' type64='{_vector_float3=fff}'/>
+</method>
+<method selector='focalLength'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='focusDistance'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='frameBoundingBox:setNearAndFar:'>
+<arg declared_type64='MDLAxisAlignedBoundingBox' index='0' name='boundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
+<arg declared_type64='BOOL' index='1' name='setNearAndFar' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='lookAt:'>
+<arg declared_type64='vector_float3' index='0' name='focusPosition' type64='{_vector_float3=fff}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='lookAt:from:'>
+<arg declared_type64='vector_float3' index='0' name='focusPosition' type64='{_vector_float3=fff}'/>
+<arg declared_type64='vector_float3' index='1' name='cameraPosition' type64='{_vector_float3=fff}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='maximumCircleOfConfusion'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='nearVisibilityDistance'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='opticalVignetting'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='projection'>
+<retval declared_type64='MDLCameraProjection' type64='Q'/>
+</method>
+<method selector='projectionMatrix'>
+<retval declared_type64='matrix_float4x4' type64='{_matrix_float4x4=[4]}'/>
+</method>
+<method selector='rayTo:forViewPort:'>
+<arg declared_type64='vector_int2' index='0' name='pixel' type64='{_vector_int2=ii}'/>
+<arg declared_type64='vector_int2' index='1' name='size' type64='{_vector_int2=ii}'/>
+<retval declared_type64='vector_float3' type64='{_vector_float3=fff}'/>
+</method>
+<method selector='sensorAspect'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='sensorEnlargement'>
+<retval declared_type64='vector_float2' type64='{_vector_float2=ff}'/>
+</method>
+<method selector='sensorShift'>
+<retval declared_type64='vector_float2' type64='{_vector_float2=ff}'/>
+</method>
+<method selector='sensorVerticalAperture'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='setApertureBladeCount:'>
+<arg declared_type64='NSUInteger' index='0' name='apertureBladeCount' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setBarrelDistortion:'>
+<arg declared_type64='float' index='0' name='barrelDistortion' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setChromaticAberration:'>
+<arg declared_type64='float' index='0' name='chromaticAberration' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setExposure:'>
+<arg declared_type64='vector_float3' index='0' name='exposure' type64='{_vector_float3=fff}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setExposureCompression:'>
+<arg declared_type64='vector_float2' index='0' name='exposureCompression' type64='{_vector_float2=ff}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFStop:'>
+<arg declared_type64='float' index='0' name='fStop' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFarVisibilityDistance:'>
+<arg declared_type64='float' index='0' name='farVisibilityDistance' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFieldOfView:'>
+<arg declared_type64='float' index='0' name='fieldOfView' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFisheyeDistortion:'>
+<arg declared_type64='float' index='0' name='fisheyeDistortion' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFlash:'>
+<arg declared_type64='vector_float3' index='0' name='flash' type64='{_vector_float3=fff}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFocalLength:'>
+<arg declared_type64='float' index='0' name='focalLength' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFocusDistance:'>
+<arg declared_type64='float' index='0' name='focusDistance' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMaximumCircleOfConfusion:'>
+<arg declared_type64='float' index='0' name='maximumCircleOfConfusion' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setNearVisibilityDistance:'>
+<arg declared_type64='float' index='0' name='nearVisibilityDistance' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setOpticalVignetting:'>
+<arg declared_type64='float' index='0' name='opticalVignetting' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setProjection:'>
+<arg declared_type64='MDLCameraProjection' index='0' name='projection' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSensorAspect:'>
+<arg declared_type64='float' index='0' name='sensorAspect' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSensorEnlargement:'>
+<arg declared_type64='vector_float2' index='0' name='sensorEnlargement' type64='{_vector_float2=ff}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSensorShift:'>
+<arg declared_type64='vector_float2' index='0' name='sensorShift' type64='{_vector_float2=ff}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSensorVerticalAperture:'>
+<arg declared_type64='float' index='0' name='sensorVerticalAperture' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShutterOpenInterval:'>
+<arg declared_type64='NSTimeInterval' index='0' name='shutterOpenInterval' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setWorldToMetersConversionScale:'>
+<arg declared_type64='float' index='0' name='worldToMetersConversionScale' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='shutterOpenInterval'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='worldToMetersConversionScale'>
+<retval declared_type64='float' type64='f'/>
+</method>
+</class>
+<class name='MDLCheckerboardTexture'>
+<method selector='color1'>
+<retval declared_type64='CGColorRef _Nullable' type64='^{CGColor=}'/>
+</method>
+<method selector='color2'>
+<retval declared_type64='CGColorRef _Nullable' type64='^{CGColor=}'/>
+</method>
+<method selector='divisions'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='initWithDivisions:name:dimensions:channelCount:channelEncoding:color1:color2:'>
+<arg declared_type64='float' index='0' name='divisions' type64='f'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<arg declared_type64='vector_int2' index='2' name='dimensions' type64='{_vector_int2=ii}'/>
+<arg declared_type64='int' index='3' name='channelCount' type64='i'/>
+<arg declared_type64='MDLTextureChannelEncoding' index='4' name='channelEncoding' type64='q'/>
+<arg declared_type64='CGColorRef _Nonnull' index='5' name='color1' type64='^{CGColor=}'/>
+<arg declared_type64='CGColorRef _Nonnull' index='6' name='color2' type64='^{CGColor=}'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setColor1:'>
+<arg declared_type64='CGColorRef _Nullable' index='0' name='color1' type64='^{CGColor=}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setColor2:'>
+<arg declared_type64='CGColorRef _Nullable' index='0' name='color2' type64='^{CGColor=}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDivisions:'>
+<arg declared_type64='float' index='0' name='divisions' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLColorSwatchTexture'>
+<method selector='initWithColorGradientFrom:toColor:name:textureDimensions:'>
+<arg declared_type64='CGColorRef _Nonnull' index='0' name='color1' type64='^{CGColor=}'/>
+<arg declared_type64='CGColorRef _Nonnull' index='1' name='color2' type64='^{CGColor=}'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<arg declared_type64='vector_int2' index='3' name='textureDimensions' type64='{_vector_int2=ii}'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithColorTemperatureGradientFrom:toColorTemperature:name:textureDimensions:'>
+<arg declared_type64='float' index='0' name='colorTemperature1' type64='f'/>
+<arg declared_type64='float' index='1' name='colorTemperature2' type64='f'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<arg declared_type64='vector_int2' index='3' name='textureDimensions' type64='{_vector_int2=ii}'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MDLLight'>
+<method selector='colorSpace'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='irradianceAtPoint:'>
+<arg declared_type64='vector_float3' index='0' name='point' type64='{_vector_float3=fff}'/>
+<retval declared_type64='CGColorRef _Nonnull' type64='^{CGColor=}'/>
+</method>
+<method selector='irradianceAtPoint:colorSpace:'>
+<arg declared_type64='vector_float3' index='0' name='point' type64='{_vector_float3=fff}'/>
+<arg declared_type64='CGColorSpaceRef _Nonnull' index='1' name='colorSpace' type64='^{CGColorSpace=}'/>
+<retval declared_type64='CGColorRef _Nonnull' type64='^{CGColor=}'/>
+</method>
+<method selector='lightType'>
+<retval declared_type64='MDLLightType' type64='Q'/>
+</method>
+<method selector='setColorSpace:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='colorSpace' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLightType:'>
+<arg declared_type64='MDLLightType' index='0' name='lightType' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLLightProbe'>
+<method selector='generateSphericalHarmonicsFromIrradiance:'>
+<arg declared_type64='NSUInteger' index='0' name='sphericalHarmonicsLevel' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='initWithReflectiveTexture:irradianceTexture:'>
+<arg declared_type64='MDLTexture * _Nullable' index='0' name='reflectiveTexture' type64='@'/>
+<arg declared_type64='MDLTexture * _Nullable' index='1' name='irradianceTexture' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='irradianceTexture'>
+<retval declared_type64='MDLTexture * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='lightProbeWithTextureSize:forLocation:lightsToConsider:objectsToConsider:reflectiveCubemap:irradianceCubemap:'>
+<arg declared_type64='NSInteger' index='0' name='textureSize' type64='q'/>
+<arg declared_type64='MDLTransform * _Nonnull' index='1' name='transform' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='lightsToConsider' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='3' name='objectsToConsider' type64='@'/>
+<arg declared_type64='MDLTexture * _Nullable' index='4' name='reflectiveCubemap' type64='@'/>
+<arg declared_type64='MDLTexture * _Nullable' index='5' name='irradianceCubemap' type64='@'/>
+<retval declared_type64='MDLLightProbe * _Nullable' type64='@'/>
+</method>
+<method selector='reflectiveTexture'>
+<retval declared_type64='MDLTexture * _Nullable' type64='@'/>
+</method>
+<method selector='sphericalHarmonicsCoefficients'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='sphericalHarmonicsLevel'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+</class>
+<class name='MDLMaterial'>
+<method selector='baseMaterial'>
+<retval declared_type64='MDLMaterial * _Nullable' type64='@'/>
+</method>
+<method selector='count'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='initWithName:scatteringFunction:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLScatteringFunction * _Nonnull' index='1' name='scatteringFunction' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='loadTexturesUsingResolver:'>
+<arg declared_type64='id _Nonnull' index='0' name='resolver' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='materialFace'>
+<retval declared_type64='MDLMaterialFace' type64='Q'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='objectAtIndexedSubscript:'>
+<arg declared_type64='NSUInteger' index='0' name='idx' type64='Q'/>
+<retval declared_type64='MDLMaterialProperty * _Nullable' type64='@'/>
+</method>
+<method selector='objectForKeyedSubscript:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='MDLMaterialProperty * _Nullable' type64='@'/>
+</method>
+<method selector='propertiesWithSemantic:'>
+<arg declared_type64='MDLMaterialSemantic' index='0' name='semantic' type64='Q'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='propertyNamed:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='MDLMaterialProperty * _Nullable' type64='@'/>
+</method>
+<method selector='propertyWithSemantic:'>
+<arg declared_type64='MDLMaterialSemantic' index='0' name='semantic' type64='Q'/>
+<retval declared_type64='MDLMaterialProperty * _Nullable' type64='@'/>
+</method>
+<method selector='removeAllProperties'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='removeProperty:'>
+<arg declared_type64='MDLMaterialProperty * _Nonnull' index='0' name='property' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolveTexturesWithResolver:'>
+<arg declared_type64='id _Nonnull' index='0' name='resolver' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='scatteringFunction'>
+<retval declared_type64='MDLScatteringFunction * _Nonnull' type64='@'/>
+</method>
+<method selector='setBaseMaterial:'>
+<arg declared_type64='MDLMaterial * _Nullable' index='0' name='baseMaterial' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMaterialFace:'>
+<arg declared_type64='MDLMaterialFace' index='0' name='materialFace' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setName:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setProperty:'>
+<arg declared_type64='MDLMaterialProperty * _Nonnull' index='0' name='property' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLMaterialProperty'>
+<method selector='URLValue'>
+<retval declared_type64='NSURL * _Nullable' type64='@'/>
+</method>
+<method selector='color'>
+<retval declared_type64='CGColorRef _Nullable' type64='^{CGColor=}'/>
+</method>
+<method selector='float2Value'>
+<retval declared_type64='vector_float2' type64='{_vector_float2=ff}'/>
+</method>
+<method selector='float3Value'>
+<retval declared_type64='vector_float3' type64='{_vector_float3=fff}'/>
+</method>
+<method selector='float4Value'>
+<retval declared_type64='vector_float4' type64='{_vector_float4=ffff}'/>
+</method>
+<method selector='floatValue'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='initWithName:semantic:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLMaterialSemantic' index='1' name='semantic' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithName:semantic:URL:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLMaterialSemantic' index='1' name='semantic' type64='Q'/>
+<arg declared_type64='NSURL * _Nullable' index='2' name='URL' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithName:semantic:color:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLMaterialSemantic' index='1' name='semantic' type64='Q'/>
+<arg declared_type64='CGColorRef _Nonnull' index='2' name='color' type64='^{CGColor=}'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithName:semantic:float2:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLMaterialSemantic' index='1' name='semantic' type64='Q'/>
+<arg declared_type64='vector_float2' index='2' name='value' type64='{_vector_float2=ff}'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithName:semantic:float3:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLMaterialSemantic' index='1' name='semantic' type64='Q'/>
+<arg declared_type64='vector_float3' index='2' name='value' type64='{_vector_float3=fff}'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithName:semantic:float4:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLMaterialSemantic' index='1' name='semantic' type64='Q'/>
+<arg declared_type64='vector_float4' index='2' name='value' type64='{_vector_float4=ffff}'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithName:semantic:float:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLMaterialSemantic' index='1' name='semantic' type64='Q'/>
+<arg declared_type64='float' index='2' name='value' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithName:semantic:matrix4x4:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLMaterialSemantic' index='1' name='semantic' type64='Q'/>
+<arg declared_type64='matrix_float4x4' index='2' name='value' type64='{_matrix_float4x4=[4]}'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithName:semantic:string:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLMaterialSemantic' index='1' name='semantic' type64='Q'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='string' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithName:semantic:textureSampler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLMaterialSemantic' index='1' name='semantic' type64='Q'/>
+<arg declared_type64='MDLTextureSampler * _Nullable' index='2' name='textureSampler' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='luminance'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='matrix4x4'>
+<retval declared_type64='matrix_float4x4' type64='{_matrix_float4x4=[4]}'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='semantic'>
+<retval declared_type64='MDLMaterialSemantic' type64='Q'/>
+</method>
+<method selector='setColor:'>
+<arg declared_type64='CGColorRef _Nullable' index='0' name='color' type64='^{CGColor=}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFloat2Value:'>
+<arg declared_type64='vector_float2' index='0' name='float2Value' type64='{_vector_float2=ff}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFloat3Value:'>
+<arg declared_type64='vector_float3' index='0' name='float3Value' type64='{_vector_float3=fff}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFloat4Value:'>
+<arg declared_type64='vector_float4' index='0' name='float4Value' type64='{_vector_float4=ffff}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFloatValue:'>
+<arg declared_type64='float' index='0' name='floatValue' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLuminance:'>
+<arg declared_type64='float' index='0' name='luminance' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMatrix4x4:'>
+<arg declared_type64='matrix_float4x4' index='0' name='matrix4x4' type64='{_matrix_float4x4=[4]}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setName:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setProperties:'>
+<arg declared_type64='MDLMaterialProperty * _Nonnull' index='0' name='property' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSemantic:'>
+<arg declared_type64='MDLMaterialSemantic' index='0' name='semantic' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setStringValue:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='stringValue' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTextureSamplerValue:'>
+<arg declared_type64='MDLTextureSampler * _Nullable' index='0' name='textureSamplerValue' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setType:'>
+<arg declared_type64='MDLMaterialPropertyType' index='0' name='type' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setURLValue:'>
+<arg declared_type64='NSURL * _Nullable' index='0' name='URLValue' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stringValue'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='textureSamplerValue'>
+<retval declared_type64='MDLTextureSampler * _Nullable' type64='@'/>
+</method>
+<method selector='type'>
+<retval declared_type64='MDLMaterialPropertyType' type64='Q'/>
+</method>
+</class>
+<class name='MDLMaterialPropertyConnection'>
+<method selector='initWithOutput:input:'>
+<arg declared_type64='MDLMaterialProperty * _Nonnull' index='0' name='output' type64='@'/>
+<arg declared_type64='MDLMaterialProperty * _Nonnull' index='1' name='input' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='input'>
+<retval declared_type64='MDLMaterialProperty * _Nullable' type64='@'/>
+</method>
+<method selector='output'>
+<retval declared_type64='MDLMaterialProperty * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MDLMaterialPropertyGraph'>
+<method selector='connections'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='evaluate'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='initWithNodes:connections:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='nodes' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='connections' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='nodes'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MDLMaterialPropertyNode'>
+<method selector='evaluationFunction'>
+<retval declared_type64='void (^ _Nonnull)(MDLMaterialPropertyNode * _Nonnull)' function_pointer='true' type64='@?'>
+<arg declared_type64='MDLMaterialPropertyNode * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='initWithInputs:outputs:evaluationFunction:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='inputs' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='outputs' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(MDLMaterialPropertyNode * _Nonnull)' function_pointer='true' index='2' name='function' type64='@?'>
+<arg declared_type64='MDLMaterialPropertyNode * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='inputs'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='outputs'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='setEvaluationFunction:'>
+<arg declared_type64='void (^ _Nonnull)(MDLMaterialPropertyNode * _Nonnull)' function_pointer='true' index='0' name='evaluationFunction' type64='@?'>
+<arg declared_type64='MDLMaterialPropertyNode * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLMatrix4x4Array'>
+<method selector='clear'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='elementCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getDouble4x4Array:maxCount:'>
+<arg declared_type64='matrix_double4x4 * _Nonnull' index='0' name='valuesArray' type64='^{_matrix_double4x4=[4]}'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='getFloat4x4Array:maxCount:'>
+<arg declared_type64='matrix_float4x4 * _Nonnull' index='0' name='valuesArray' type64='^{_matrix_float4x4=[4]}'/>
+<arg declared_type64='NSUInteger' index='1' name='maxCount' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='initWithElementCount:'>
+<arg declared_type64='NSUInteger' index='0' name='arrayElementCount' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='precision'>
+<retval declared_type64='MDLDataPrecision' type64='Q'/>
+</method>
+<method selector='setDouble4x4Array:count:'>
+<arg const='true' declared_type64='matrix_double4x4 * _Nonnull' index='0' name='valuesArray' type64='^{_matrix_double4x4=[4]}'/>
+<arg declared_type64='NSUInteger' index='1' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFloat4x4Array:count:'>
+<arg const='true' declared_type64='matrix_float4x4 * _Nonnull' index='0' name='valuesArray' type64='^{_matrix_float4x4=[4]}'/>
+<arg declared_type64='NSUInteger' index='1' name='count' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLMesh'>
+<method selector='addAttributeWithName:format:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLVertexFormat' index='1' name='format' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='addAttributeWithName:format:type:data:stride:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLVertexFormat' index='1' name='format' type64='Q'/>
+<arg declared_type64='NSString * _Nonnull' index='2' name='type' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='3' name='data' type64='@'/>
+<arg declared_type64='NSInteger' index='4' name='stride' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='addAttributeWithName:format:type:data:stride:time:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLVertexFormat' index='1' name='format' type64='Q'/>
+<arg declared_type64='NSString * _Nonnull' index='2' name='type' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='3' name='data' type64='@'/>
+<arg declared_type64='NSInteger' index='4' name='stride' type64='q'/>
+<arg declared_type64='NSTimeInterval' index='5' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='addNormalsWithAttributeNamed:creaseThreshold:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='attributeName' type64='@'/>
+<arg declared_type64='float' index='1' name='creaseThreshold' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='addOrthTanBasisForTextureCoordinateAttributeNamed:normalAttributeNamed:tangentAttributeNamed:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='textureCoordinateAttributeName' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='normalAttributeName' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='2' name='tangentAttributeName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='addTangentBasisForTextureCoordinateAttributeNamed:normalAttributeNamed:tangentAttributeNamed:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='textureCoordinateAttributeName' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='normalAttributeName' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='2' name='tangentAttributeName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='addTangentBasisForTextureCoordinateAttributeNamed:tangentAttributeNamed:bitangentAttributeNamed:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='textureCoordinateAttributeName' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='tangentAttributeName' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='bitangentAttributeName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='addUnwrappedTextureCoordinatesForAttributeNamed:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='textureCoordinateAttributeName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='allocator'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='boundingBox'>
+<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
+</method>
+<method selector='flipTextureCoordinatesInAttributeNamed:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='textureCoordinateAttributeName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='generateAmbientOcclusionTextureWithQuality:attenuationFactor:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:'>
+<arg declared_type64='float' index='0' name='bakeQuality' type64='f'/>
+<arg declared_type64='float' index='1' name='attenuationFactor' type64='f'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='objectsToConsider' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='3' name='vertexAttributeName' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='4' name='materialPropertyName' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='generateAmbientOcclusionTextureWithSize:raysPerSample:attenuationFactor:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:'>
+<arg declared_type64='vector_int2' index='0' name='textureSize' type64='{_vector_int2=ii}'/>
+<arg declared_type64='NSInteger' index='1' name='raysPerSample' type64='q'/>
+<arg declared_type64='float' index='2' name='attenuationFactor' type64='f'/>
+<arg declared_type64='NSArray * _Nonnull' index='3' name='objectsToConsider' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='4' name='vertexAttributeName' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='5' name='materialPropertyName' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='generateAmbientOcclusionVertexColorsWithQuality:attenuationFactor:objectsToConsider:vertexAttributeNamed:'>
+<arg declared_type64='float' index='0' name='bakeQuality' type64='f'/>
+<arg declared_type64='float' index='1' name='attenuationFactor' type64='f'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='objectsToConsider' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='3' name='vertexAttributeName' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='generateAmbientOcclusionVertexColorsWithRaysPerSample:attenuationFactor:objectsToConsider:vertexAttributeNamed:'>
+<arg declared_type64='NSInteger' index='0' name='raysPerSample' type64='q'/>
+<arg declared_type64='float' index='1' name='attenuationFactor' type64='f'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='objectsToConsider' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='3' name='vertexAttributeName' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='generateLightMapTextureWithQuality:lightsToConsider:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:'>
+<arg declared_type64='float' index='0' name='bakeQuality' type64='f'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='lightsToConsider' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='objectsToConsider' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='3' name='vertexAttributeName' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='4' name='materialPropertyName' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='generateLightMapTextureWithTextureSize:lightsToConsider:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:'>
+<arg declared_type64='vector_int2' index='0' name='textureSize' type64='{_vector_int2=ii}'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='lightsToConsider' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='objectsToConsider' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='3' name='vertexAttributeName' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='4' name='materialPropertyName' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='generateLightMapVertexColorsWithLightsToConsider:objectsToConsider:vertexAttributeNamed:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='lightsToConsider' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='objectsToConsider' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='2' name='vertexAttributeName' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='initBoxWithExtent:segments:inwardNormals:geometryType:allocator:'>
+<arg declared_type64='vector_float3' index='0' name='extent' type64='{_vector_float3=fff}'/>
+<arg declared_type64='vector_uint3' index='1' name='segments' type64='{_vector_uint3=III}'/>
+<arg declared_type64='BOOL' index='2' name='inwardNormals' type64='B'/>
+<arg declared_type64='MDLGeometryType' index='3' name='geometryType' type64='q'/>
+<arg declared_type64='id _Nullable' index='4' name='allocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initCapsuleWithExtent:cylinderSegments:hemisphereSegments:inwardNormals:geometryType:allocator:'>
+<arg declared_type64='vector_float3' index='0' name='extent' type64='{_vector_float3=fff}'/>
+<arg declared_type64='vector_uint2' index='1' name='segments' type64='{_vector_uint2=II}'/>
+<arg declared_type64='int' index='2' name='hemisphereSegments' type64='i'/>
+<arg declared_type64='BOOL' index='3' name='inwardNormals' type64='B'/>
+<arg declared_type64='MDLGeometryType' index='4' name='geometryType' type64='q'/>
+<arg declared_type64='id _Nullable' index='5' name='allocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initConeWithExtent:segments:inwardNormals:cap:geometryType:allocator:'>
+<arg declared_type64='vector_float3' index='0' name='extent' type64='{_vector_float3=fff}'/>
+<arg declared_type64='vector_uint2' index='1' name='segments' type64='{_vector_uint2=II}'/>
+<arg declared_type64='BOOL' index='2' name='inwardNormals' type64='B'/>
+<arg declared_type64='BOOL' index='3' name='cap' type64='B'/>
+<arg declared_type64='MDLGeometryType' index='4' name='geometryType' type64='q'/>
+<arg declared_type64='id _Nullable' index='5' name='allocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initCylinderWithExtent:segments:inwardNormals:topCap:bottomCap:geometryType:allocator:'>
+<arg declared_type64='vector_float3' index='0' name='extent' type64='{_vector_float3=fff}'/>
+<arg declared_type64='vector_uint2' index='1' name='segments' type64='{_vector_uint2=II}'/>
+<arg declared_type64='BOOL' index='2' name='inwardNormals' type64='B'/>
+<arg declared_type64='BOOL' index='3' name='topCap' type64='B'/>
+<arg declared_type64='BOOL' index='4' name='bottomCap' type64='B'/>
+<arg declared_type64='MDLGeometryType' index='5' name='geometryType' type64='q'/>
+<arg declared_type64='id _Nullable' index='6' name='allocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initHemisphereWithExtent:segments:inwardNormals:cap:geometryType:allocator:'>
+<arg declared_type64='vector_float3' index='0' name='extent' type64='{_vector_float3=fff}'/>
+<arg declared_type64='vector_uint2' index='1' name='segments' type64='{_vector_uint2=II}'/>
+<arg declared_type64='BOOL' index='2' name='inwardNormals' type64='B'/>
+<arg declared_type64='BOOL' index='3' name='cap' type64='B'/>
+<arg declared_type64='MDLGeometryType' index='4' name='geometryType' type64='q'/>
+<arg declared_type64='id _Nullable' index='5' name='allocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initIcosahedronWithExtent:inwardNormals:geometryType:allocator:'>
+<arg declared_type64='vector_float3' index='0' name='extent' type64='{_vector_float3=fff}'/>
+<arg declared_type64='BOOL' index='1' name='inwardNormals' type64='B'/>
+<arg declared_type64='MDLGeometryType' index='2' name='geometryType' type64='q'/>
+<arg declared_type64='id _Nullable' index='3' name='allocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initMeshBySubdividingMesh:submeshIndex:subdivisionLevels:allocator:'>
+<arg declared_type64='MDLMesh * _Nonnull' index='0' name='mesh' type64='@'/>
+<arg declared_type64='int' index='1' name='submeshIndex' type64='i'/>
+<arg declared_type64='unsigned int' index='2' name='subdivisionLevels' type64='I'/>
+<arg declared_type64='id _Nullable' index='3' name='allocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initPlaneWithExtent:segments:geometryType:allocator:'>
+<arg declared_type64='vector_float3' index='0' name='extent' type64='{_vector_float3=fff}'/>
+<arg declared_type64='vector_uint2' index='1' name='segments' type64='{_vector_uint2=II}'/>
+<arg declared_type64='MDLGeometryType' index='2' name='geometryType' type64='q'/>
+<arg declared_type64='id _Nullable' index='3' name='allocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initSphereWithExtent:segments:inwardNormals:geometryType:allocator:'>
+<arg declared_type64='vector_float3' index='0' name='extent' type64='{_vector_float3=fff}'/>
+<arg declared_type64='vector_uint2' index='1' name='segments' type64='{_vector_uint2=II}'/>
+<arg declared_type64='BOOL' index='2' name='inwardNormals' type64='B'/>
+<arg declared_type64='MDLGeometryType' index='3' name='geometryType' type64='q'/>
+<arg declared_type64='id _Nullable' index='4' name='allocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithBufferAllocator:'>
+<arg declared_type64='id _Nullable' index='0' name='bufferAllocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithVertexBuffer:vertexCount:descriptor:submeshes:'>
+<arg declared_type64='id _Nonnull' index='0' name='vertexBuffer' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='vertexCount' type64='Q'/>
+<arg declared_type64='MDLVertexDescriptor * _Nonnull' index='2' name='descriptor' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='3' name='submeshes' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithVertexBuffers:vertexCount:descriptor:submeshes:'>
+<arg declared_type64='NSArray&gt; * _Nonnull' index='0' name='vertexBuffers' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='vertexCount' type64='Q'/>
+<arg declared_type64='MDLVertexDescriptor * _Nonnull' index='2' name='descriptor' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='3' name='submeshes' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='makeVerticesUnique'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='makeVerticesUniqueAndReturnError:'>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='newBoxWithDimensions:segments:geometryType:inwardNormals:allocator:'>
+<arg declared_type64='vector_float3' index='0' name='dimensions' type64='{_vector_float3=fff}'/>
+<arg declared_type64='vector_uint3' index='1' name='segments' type64='{_vector_uint3=III}'/>
+<arg declared_type64='MDLGeometryType' index='2' name='geometryType' type64='q'/>
+<arg declared_type64='BOOL' index='3' name='inwardNormals' type64='B'/>
+<arg declared_type64='id _Nullable' index='4' name='allocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='newCapsuleWithHeight:radii:radialSegments:verticalSegments:hemisphereSegments:geometryType:inwardNormals:allocator:'>
+<arg declared_type64='float' index='0' name='height' type64='f'/>
+<arg declared_type64='vector_float2' index='1' name='radii' type64='{_vector_float2=ff}'/>
+<arg declared_type64='NSUInteger' index='2' name='radialSegments' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='verticalSegments' type64='Q'/>
+<arg declared_type64='NSUInteger' index='4' name='hemisphereSegments' type64='Q'/>
+<arg declared_type64='MDLGeometryType' index='5' name='geometryType' type64='q'/>
+<arg declared_type64='BOOL' index='6' name='inwardNormals' type64='B'/>
+<arg declared_type64='id _Nullable' index='7' name='allocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='newCylinderWithHeight:radii:radialSegments:verticalSegments:geometryType:inwardNormals:allocator:'>
+<arg declared_type64='float' index='0' name='height' type64='f'/>
+<arg declared_type64='vector_float2' index='1' name='radii' type64='{_vector_float2=ff}'/>
+<arg declared_type64='NSUInteger' index='2' name='radialSegments' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='verticalSegments' type64='Q'/>
+<arg declared_type64='MDLGeometryType' index='4' name='geometryType' type64='q'/>
+<arg declared_type64='BOOL' index='5' name='inwardNormals' type64='B'/>
+<arg declared_type64='id _Nullable' index='6' name='allocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='newEllipsoidWithRadii:radialSegments:verticalSegments:geometryType:inwardNormals:hemisphere:allocator:'>
+<arg declared_type64='vector_float3' index='0' name='radii' type64='{_vector_float3=fff}'/>
+<arg declared_type64='NSUInteger' index='1' name='radialSegments' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='verticalSegments' type64='Q'/>
+<arg declared_type64='MDLGeometryType' index='3' name='geometryType' type64='q'/>
+<arg declared_type64='BOOL' index='4' name='inwardNormals' type64='B'/>
+<arg declared_type64='BOOL' index='5' name='hemisphere' type64='B'/>
+<arg declared_type64='id _Nullable' index='6' name='allocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='newEllipticalConeWithHeight:radii:radialSegments:verticalSegments:geometryType:inwardNormals:allocator:'>
+<arg declared_type64='float' index='0' name='height' type64='f'/>
+<arg declared_type64='vector_float2' index='1' name='radii' type64='{_vector_float2=ff}'/>
+<arg declared_type64='NSUInteger' index='2' name='radialSegments' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='verticalSegments' type64='Q'/>
+<arg declared_type64='MDLGeometryType' index='4' name='geometryType' type64='q'/>
+<arg declared_type64='BOOL' index='5' name='inwardNormals' type64='B'/>
+<arg declared_type64='id _Nullable' index='6' name='allocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='newIcosahedronWithRadius:inwardNormals:allocator:'>
+<arg declared_type64='float' index='0' name='radius' type64='f'/>
+<arg declared_type64='BOOL' index='1' name='inwardNormals' type64='B'/>
+<arg declared_type64='id _Nullable' index='2' name='allocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='newIcosahedronWithRadius:inwardNormals:geometryType:allocator:'>
+<arg declared_type64='float' index='0' name='radius' type64='f'/>
+<arg declared_type64='BOOL' index='1' name='inwardNormals' type64='B'/>
+<arg declared_type64='MDLGeometryType' index='2' name='geometryType' type64='q'/>
+<arg declared_type64='id _Nullable' index='3' name='allocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='newPlaneWithDimensions:segments:geometryType:allocator:'>
+<arg declared_type64='vector_float2' index='0' name='dimensions' type64='{_vector_float2=ff}'/>
+<arg declared_type64='vector_uint2' index='1' name='segments' type64='{_vector_uint2=II}'/>
+<arg declared_type64='MDLGeometryType' index='2' name='geometryType' type64='q'/>
+<arg declared_type64='id _Nullable' index='3' name='allocator' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='newSubdividedMesh:submeshIndex:subdivisionLevels:'>
+<arg declared_type64='MDLMesh * _Nonnull' index='0' name='mesh' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='submeshIndex' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='subdivisionLevels' type64='Q'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='removeAttributeNamed:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='replaceAttributeNamed:withData:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLVertexAttributeData * _Nonnull' index='1' name='newData' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSubmeshes:'>
+<arg declared_type64='NSMutableArray * _Nullable' index='0' name='submeshes' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVertexBuffers:'>
+<arg declared_type64='NSArray&gt; * _Nonnull' index='0' name='vertexBuffers' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVertexCount:'>
+<arg declared_type64='NSUInteger' index='0' name='vertexCount' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVertexDescriptor:'>
+<arg declared_type64='MDLVertexDescriptor * _Nonnull' index='0' name='vertexDescriptor' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='submeshes'>
+<retval declared_type64='NSMutableArray * _Nullable' type64='@'/>
+</method>
+<method selector='updateAttributeNamed:withData:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLVertexAttributeData * _Nonnull' index='1' name='newData' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='vertexAttributeDataForAttributeNamed:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='MDLVertexAttributeData * _Nullable' type64='@'/>
+</method>
+<method selector='vertexAttributeDataForAttributeNamed:asFormat:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLVertexFormat' index='1' name='format' type64='Q'/>
+<retval declared_type64='MDLVertexAttributeData * _Nullable' type64='@'/>
+</method>
+<method selector='vertexBuffers'>
+<retval declared_type64='NSArray&gt; * _Nonnull' type64='@'/>
+</method>
+<method selector='vertexCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='vertexDescriptor'>
+<retval declared_type64='MDLVertexDescriptor * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MDLMeshBufferData'>
+<method selector='data'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithType:data:'>
+<arg declared_type64='MDLMeshBufferType' index='0' name='type' type64='Q'/>
+<arg declared_type64='NSData * _Nullable' index='1' name='data' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithType:length:'>
+<arg declared_type64='MDLMeshBufferType' index='0' name='type' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='length' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MDLMeshBufferMap'>
+<method selector='bytes'>
+<retval declared_type64='void * _Nonnull' type64='^v'/>
+</method>
+<method selector='initWithBytes:deallocator:'>
+<arg declared_type64='void * _Nonnull' index='0' name='bytes' type64='^v'/>
+<arg declared_type64='void (^ _Nullable)(void)' function_pointer='true' index='1' name='deallocator' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MDLMeshBufferZoneDefault'>
+<method selector='allocator'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='capacity'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+</class>
+<class name='MDLNoiseTexture'>
+<method selector='initCellularNoiseWithFrequency:name:textureDimensions:channelEncoding:'>
+<arg declared_type64='float' index='0' name='frequency' type64='f'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<arg declared_type64='vector_int2' index='2' name='textureDimensions' type64='{_vector_int2=ii}'/>
+<arg declared_type64='MDLTextureChannelEncoding' index='3' name='channelEncoding' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initScalarNoiseWithSmoothness:name:textureDimensions:channelCount:channelEncoding:grayscale:'>
+<arg declared_type64='float' index='0' name='smoothness' type64='f'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<arg declared_type64='vector_int2' index='2' name='textureDimensions' type64='{_vector_int2=ii}'/>
+<arg declared_type64='int' index='3' name='channelCount' type64='i'/>
+<arg declared_type64='MDLTextureChannelEncoding' index='4' name='channelEncoding' type64='q'/>
+<arg declared_type64='BOOL' index='5' name='grayscale' type64='B'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initVectorNoiseWithSmoothness:name:textureDimensions:channelEncoding:'>
+<arg declared_type64='float' index='0' name='smoothness' type64='f'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<arg declared_type64='vector_int2' index='2' name='textureDimensions' type64='{_vector_int2=ii}'/>
+<arg declared_type64='MDLTextureChannelEncoding' index='3' name='channelEncoding' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MDLNormalMapTexture'>
+<method selector='initByGeneratingNormalMapWithTexture:name:smoothness:contrast:'>
+<arg declared_type64='MDLTexture * _Nonnull' index='0' name='sourceTexture' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<arg declared_type64='float' index='2' name='smoothness' type64='f'/>
+<arg declared_type64='float' index='3' name='contrast' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MDLObject'>
+<method selector='addChild:'>
+<arg declared_type64='MDLObject * _Nonnull' index='0' name='child' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='boundingBoxAtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
+</method>
+<method selector='children'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='componentConformingToProtocol:'>
+<arg declared_type64='Protocol * _Nonnull' index='0' name='protocol' type64='@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='components'>
+<retval declared_type64='NSArray&gt; * _Nonnull' type64='@'/>
+</method>
+<method selector='enumerateChildObjectsOfClass:root:usingBlock:stopPointer:'>
+<arg declared_type64='Class _Nonnull' index='0' name='objectClass' type64='#'/>
+<arg declared_type64='MDLObject * _Nonnull' index='1' name='root' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(MDLObject * _Nonnull, BOOL * _Nonnull)' function_pointer='true' index='2' name='block' type64='@?'>
+<arg declared_type64='MDLObject * _Nonnull' type64='@'/>
+<arg declared_type64='BOOL * _Nonnull' type64='^B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='BOOL * _Nonnull' index='3' name='stopPointer' type64='^B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='hidden'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='instance'>
+<retval declared_type64='MDLObject * _Nullable' type64='@'/>
+</method>
+<method selector='objectAtPath:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='path' type64='@'/>
+<retval declared_type64='MDLObject * _Nonnull' type64='@'/>
+</method>
+<method selector='objectForKeyedSubscript:'>
+<arg declared_type64='Protocol * _Nonnull' index='0' name='key' type64='@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='parent'>
+<retval declared_type64='MDLObject * _Nullable' type64='@'/>
+</method>
+<method selector='path'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='setChildren:'>
+<arg declared_type64='id _Nonnull' index='0' name='children' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setComponent:forProtocol:'>
+<arg declared_type64='id _Nonnull' index='0' name='component' type64='@'/>
+<arg declared_type64='Protocol * _Nonnull' index='1' name='protocol' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setHidden:'>
+<arg declared_type64='BOOL' index='0' name='hidden' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setInstance:'>
+<arg declared_type64='MDLObject * _Nullable' index='0' name='instance' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setObject:forKeyedSubscript:'>
+<arg declared_type64='id _Nullable' index='0' name='obj' type64='@'/>
+<arg declared_type64='Protocol * _Nonnull' index='1' name='key' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setParent:'>
+<arg declared_type64='MDLObject * _Nullable' index='0' name='parent' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTransform:'>
+<arg declared_type64='id _Nullable' index='0' name='transform' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='transform'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MDLPackedJointAnimation'>
+<method selector='initWithName:jointPaths:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='jointPaths' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='jointPaths'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='rotations'>
+<retval declared_type64='MDLAnimatedQuaternionArray * _Nonnull' type64='@'/>
+</method>
+<method selector='scales'>
+<retval declared_type64='MDLAnimatedVector3Array * _Nonnull' type64='@'/>
+</method>
+<method selector='translations'>
+<retval declared_type64='MDLAnimatedVector3Array * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MDLPathAssetResolver'>
+<method selector='initWithPath:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='path' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='path'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='setPath:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='path' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLPhotometricLight'>
+<method selector='generateCubemapFromLight:'>
+<arg declared_type64='NSUInteger' index='0' name='textureSize' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='generateSphericalHarmonicsFromLight:'>
+<arg declared_type64='NSUInteger' index='0' name='sphericalHarmonicsLevel' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='generateTexture:'>
+<arg declared_type64='NSUInteger' index='0' name='textureSize' type64='Q'/>
+<retval declared_type64='MDLTexture * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithIESProfile:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='URL' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='lightCubeMap'>
+<retval declared_type64='MDLTexture * _Nullable' type64='@'/>
+</method>
+<method selector='sphericalHarmonicsCoefficients'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='sphericalHarmonicsLevel'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+</class>
+<class name='MDLPhysicallyPlausibleLight'>
+<method selector='attenuationEndDistance'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='attenuationStartDistance'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='color'>
+<retval declared_type64='CGColorRef _Nullable' type64='^{CGColor=}'/>
+</method>
+<method selector='innerConeAngle'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='lumens'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='outerConeAngle'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='setAttenuationEndDistance:'>
+<arg declared_type64='float' index='0' name='attenuationEndDistance' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setAttenuationStartDistance:'>
+<arg declared_type64='float' index='0' name='attenuationStartDistance' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setColor:'>
+<arg declared_type64='CGColorRef _Nullable' index='0' name='color' type64='^{CGColor=}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setColorByTemperature:'>
+<arg declared_type64='float' index='0' name='temperature' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setInnerConeAngle:'>
+<arg declared_type64='float' index='0' name='innerConeAngle' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLumens:'>
+<arg declared_type64='float' index='0' name='lumens' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setOuterConeAngle:'>
+<arg declared_type64='float' index='0' name='outerConeAngle' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLPhysicallyPlausibleScatteringFunction'>
+<method selector='anisotropic'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+<method selector='anisotropicRotation'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+<method selector='clearcoat'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+<method selector='clearcoatGloss'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+<method selector='metallic'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+<method selector='roughness'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+<method selector='sheen'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+<method selector='sheenTint'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+<method selector='specularAmount'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+<method selector='specularTint'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+<method selector='subsurface'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+<method selector='version'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+</class>
+<class name='MDLRelativeAssetResolver'>
+<method selector='asset'>
+<retval declared_type64='MDLAsset * _Nullable' type64='@'/>
+</method>
+<method selector='initWithAsset:'>
+<arg declared_type64='MDLAsset * _Nonnull' index='0' name='asset' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setAsset:'>
+<arg declared_type64='MDLAsset * _Nullable' index='0' name='asset' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLScatteringFunction'>
+<method selector='ambientOcclusion'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+<method selector='ambientOcclusionScale'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+<method selector='baseColor'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+<method selector='emission'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+<method selector='interfaceIndexOfRefraction'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+<method selector='materialIndexOfRefraction'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='normal'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+<method selector='setName:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='specular'>
+<retval declared_type64='MDLMaterialProperty * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MDLSkeleton'>
+<method selector='initWithName:jointPaths:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='jointPaths' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='jointBindTransforms'>
+<retval declared_type64='MDLMatrix4x4Array * _Nonnull' type64='@'/>
+</method>
+<method selector='jointPaths'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MDLSkyCubeTexture'>
+<method selector='brightness'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='contrast'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='exposure'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='gamma'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='groundAlbedo'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='groundColor'>
+<retval declared_type64='CGColorRef _Nullable' type64='^{CGColor=}'/>
+</method>
+<method selector='highDynamicRangeCompression'>
+<retval declared_type64='vector_float2' type64='{_vector_float2=ff}'/>
+</method>
+<method selector='horizonElevation'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='initWithName:channelEncoding:textureDimensions:turbidity:sunElevation:sunAzimuth:upperAtmosphereScattering:groundAlbedo:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLTextureChannelEncoding' index='1' name='channelEncoding' type64='q'/>
+<arg declared_type64='vector_int2' index='2' name='textureDimensions' type64='{_vector_int2=ii}'/>
+<arg declared_type64='float' index='3' name='turbidity' type64='f'/>
+<arg declared_type64='float' index='4' name='sunElevation' type64='f'/>
+<arg declared_type64='float' index='5' name='sunAzimuth' type64='f'/>
+<arg declared_type64='float' index='6' name='upperAtmosphereScattering' type64='f'/>
+<arg declared_type64='float' index='7' name='groundAlbedo' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithName:channelEncoding:textureDimensions:turbidity:sunElevation:upperAtmosphereScattering:groundAlbedo:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLTextureChannelEncoding' index='1' name='channelEncoding' type64='q'/>
+<arg declared_type64='vector_int2' index='2' name='textureDimensions' type64='{_vector_int2=ii}'/>
+<arg declared_type64='float' index='3' name='turbidity' type64='f'/>
+<arg declared_type64='float' index='4' name='sunElevation' type64='f'/>
+<arg declared_type64='float' index='5' name='upperAtmosphereScattering' type64='f'/>
+<arg declared_type64='float' index='6' name='groundAlbedo' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='saturation'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='setBrightness:'>
+<arg declared_type64='float' index='0' name='brightness' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setContrast:'>
+<arg declared_type64='float' index='0' name='contrast' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setExposure:'>
+<arg declared_type64='float' index='0' name='exposure' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setGamma:'>
+<arg declared_type64='float' index='0' name='gamma' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setGroundAlbedo:'>
+<arg declared_type64='float' index='0' name='groundAlbedo' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setGroundColor:'>
+<arg declared_type64='CGColorRef _Nullable' index='0' name='groundColor' type64='^{CGColor=}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setHighDynamicRangeCompression:'>
+<arg declared_type64='vector_float2' index='0' name='highDynamicRangeCompression' type64='{_vector_float2=ff}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setHorizonElevation:'>
+<arg declared_type64='float' index='0' name='horizonElevation' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSaturation:'>
+<arg declared_type64='float' index='0' name='saturation' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSunAzimuth:'>
+<arg declared_type64='float' index='0' name='sunAzimuth' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSunElevation:'>
+<arg declared_type64='float' index='0' name='sunElevation' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTurbidity:'>
+<arg declared_type64='float' index='0' name='turbidity' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setUpperAtmosphereScattering:'>
+<arg declared_type64='float' index='0' name='upperAtmosphereScattering' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sunAzimuth'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='sunElevation'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='turbidity'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='updateTexture'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='upperAtmosphereScattering'>
+<retval declared_type64='float' type64='f'/>
+</method>
+</class>
+<class name='MDLStereoscopicCamera'>
+<method selector='interPupillaryDistance'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='leftProjectionMatrix'>
+<retval declared_type64='matrix_float4x4' type64='{_matrix_float4x4=[4]}'/>
+</method>
+<method selector='leftVergence'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='leftViewMatrix'>
+<retval declared_type64='matrix_float4x4' type64='{_matrix_float4x4=[4]}'/>
+</method>
+<method selector='overlap'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='rightProjectionMatrix'>
+<retval declared_type64='matrix_float4x4' type64='{_matrix_float4x4=[4]}'/>
+</method>
+<method selector='rightVergence'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='rightViewMatrix'>
+<retval declared_type64='matrix_float4x4' type64='{_matrix_float4x4=[4]}'/>
+</method>
+<method selector='setInterPupillaryDistance:'>
+<arg declared_type64='float' index='0' name='interPupillaryDistance' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLeftVergence:'>
+<arg declared_type64='float' index='0' name='leftVergence' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setOverlap:'>
+<arg declared_type64='float' index='0' name='overlap' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRightVergence:'>
+<arg declared_type64='float' index='0' name='rightVergence' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLSubmesh'>
+<method selector='geometryType'>
+<retval declared_type64='MDLGeometryType' type64='q'/>
+</method>
+<method selector='indexBuffer'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='indexBufferAsIndexType:'>
+<arg declared_type64='MDLIndexBitDepth' index='0' name='indexType' type64='Q'/>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='indexCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='indexType'>
+<retval declared_type64='MDLIndexBitDepth' type64='Q'/>
+</method>
+<method selector='initWithIndexBuffer:indexCount:indexType:geometryType:material:'>
+<arg declared_type64='id _Nonnull' index='0' name='indexBuffer' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='indexCount' type64='Q'/>
+<arg declared_type64='MDLIndexBitDepth' index='2' name='indexType' type64='Q'/>
+<arg declared_type64='MDLGeometryType' index='3' name='geometryType' type64='q'/>
+<arg declared_type64='MDLMaterial * _Nullable' index='4' name='material' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithMDLSubmesh:indexType:geometryType:'>
+<arg declared_type64='MDLSubmesh * _Nonnull' index='0' name='submesh' type64='@'/>
+<arg declared_type64='MDLIndexBitDepth' index='1' name='indexType' type64='Q'/>
+<arg declared_type64='MDLGeometryType' index='2' name='geometryType' type64='q'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='initWithName:indexBuffer:indexCount:indexType:geometryType:material:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='indexBuffer' type64='@'/>
+<arg declared_type64='NSUInteger' index='2' name='indexCount' type64='Q'/>
+<arg declared_type64='MDLIndexBitDepth' index='3' name='indexType' type64='Q'/>
+<arg declared_type64='MDLGeometryType' index='4' name='geometryType' type64='q'/>
+<arg declared_type64='MDLMaterial * _Nullable' index='5' name='material' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithName:indexBuffer:indexCount:indexType:geometryType:material:topology:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='indexBuffer' type64='@'/>
+<arg declared_type64='NSUInteger' index='2' name='indexCount' type64='Q'/>
+<arg declared_type64='MDLIndexBitDepth' index='3' name='indexType' type64='Q'/>
+<arg declared_type64='MDLGeometryType' index='4' name='geometryType' type64='q'/>
+<arg declared_type64='MDLMaterial * _Nullable' index='5' name='material' type64='@'/>
+<arg declared_type64='MDLSubmeshTopology * _Nullable' index='6' name='topology' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='material'>
+<retval declared_type64='MDLMaterial * _Nullable' type64='@'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='setMaterial:'>
+<arg declared_type64='MDLMaterial * _Nullable' index='0' name='material' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setName:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTopology:'>
+<arg declared_type64='MDLSubmeshTopology * _Nullable' index='0' name='topology' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='topology'>
+<retval declared_type64='MDLSubmeshTopology * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MDLSubmeshTopology'>
+<method selector='edgeCreaseCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='edgeCreaseIndices'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='edgeCreases'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='faceCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='faceTopology'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='holeCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='holes'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='initWithSubmesh:'>
+<arg declared_type64='MDLSubmesh * _Nonnull' index='0' name='submesh' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setEdgeCreaseCount:'>
+<arg declared_type64='NSUInteger' index='0' name='edgeCreaseCount' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setEdgeCreaseIndices:'>
+<arg declared_type64='id _Nullable' index='0' name='edgeCreaseIndices' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setEdgeCreases:'>
+<arg declared_type64='id _Nullable' index='0' name='edgeCreases' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFaceCount:'>
+<arg declared_type64='NSUInteger' index='0' name='faceCount' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFaceTopology:'>
+<arg declared_type64='id _Nullable' index='0' name='faceTopology' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setHoleCount:'>
+<arg declared_type64='NSUInteger' index='0' name='holeCount' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setHoles:'>
+<arg declared_type64='id _Nullable' index='0' name='holes' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVertexCreaseCount:'>
+<arg declared_type64='NSUInteger' index='0' name='vertexCreaseCount' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVertexCreaseIndices:'>
+<arg declared_type64='id _Nullable' index='0' name='vertexCreaseIndices' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVertexCreases:'>
+<arg declared_type64='id _Nullable' index='0' name='vertexCreases' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='vertexCreaseCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='vertexCreaseIndices'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='vertexCreases'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MDLTexture'>
+<method selector='channelCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='channelEncoding'>
+<retval declared_type64='MDLTextureChannelEncoding' type64='q'/>
+</method>
+<method selector='dimensions'>
+<retval declared_type64='vector_int2' type64='{_vector_int2=ii}'/>
+</method>
+<method selector='hasAlphaValues'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='imageFromTexture'>
+<retval declared_type64='CGImageRef _Nullable' type64='^{CGImage=}'/>
+</method>
+<method selector='imageFromTextureAtLevel:'>
+<arg declared_type64='NSUInteger' index='0' name='level' type64='Q'/>
+<retval declared_type64='CGImageRef _Nullable' type64='^{CGImage=}'/>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithData:topLeftOrigin:name:dimensions:rowStride:channelCount:channelEncoding:isCube:'>
+<arg declared_type64='NSData * _Nullable' index='0' name='pixelData' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='topLeftOrigin' type64='B'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<arg declared_type64='vector_int2' index='3' name='dimensions' type64='{_vector_int2=ii}'/>
+<arg declared_type64='NSInteger' index='4' name='rowStride' type64='q'/>
+<arg declared_type64='NSUInteger' index='5' name='channelCount' type64='Q'/>
+<arg declared_type64='MDLTextureChannelEncoding' index='6' name='channelEncoding' type64='q'/>
+<arg declared_type64='BOOL' index='7' name='isCube' type64='B'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='irradianceTextureCubeWithTexture:name:dimensions:'>
+<arg declared_type64='MDLTexture * _Nonnull' index='0' name='texture' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<arg declared_type64='vector_int2' index='2' name='dimensions' type64='{_vector_int2=ii}'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='irradianceTextureCubeWithTexture:name:dimensions:roughness:'>
+<arg declared_type64='MDLTexture * _Nonnull' index='0' name='texture' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<arg declared_type64='vector_int2' index='2' name='dimensions' type64='{_vector_int2=ii}'/>
+<arg declared_type64='float' index='3' name='roughness' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='isCube'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='mipLevelCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='rowStride'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='setHasAlphaValues:'>
+<arg declared_type64='BOOL' index='0' name='hasAlphaValues' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setIsCube:'>
+<arg declared_type64='BOOL' index='0' name='isCube' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='texelDataWithBottomLeftOrigin'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='texelDataWithBottomLeftOriginAtMipLevel:create:'>
+<arg declared_type64='NSInteger' index='0' name='level' type64='q'/>
+<arg declared_type64='BOOL' index='1' name='create' type64='B'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='texelDataWithTopLeftOrigin'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='texelDataWithTopLeftOriginAtMipLevel:create:'>
+<arg declared_type64='NSInteger' index='0' name='level' type64='q'/>
+<arg declared_type64='BOOL' index='1' name='create' type64='B'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='textureCubeWithImagesNamed:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='names' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='textureCubeWithImagesNamed:bundle:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='names' type64='@'/>
+<arg declared_type64='NSBundle * _Nullable' index='1' name='bundleOrNil' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='textureNamed:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='textureNamed:assetResolver:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='resolver' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='textureNamed:bundle:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='NSBundle * _Nullable' index='1' name='bundleOrNil' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='writeToURL:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='URL' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='writeToURL:level:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='URL' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='level' type64='Q'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='writeToURL:type:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='nsurl' type64='@'/>
+<arg declared_type64='CFStringRef _Nonnull' index='1' name='type' type64='^{__CFString=}'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='writeToURL:type:level:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='nsurl' type64='@'/>
+<arg declared_type64='CFStringRef _Nonnull' index='1' name='type' type64='^{__CFString=}'/>
+<arg declared_type64='NSUInteger' index='2' name='level' type64='Q'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='MDLTextureFilter'>
+<method selector='magFilter'>
+<retval declared_type64='MDLMaterialTextureFilterMode' type64='Q'/>
+</method>
+<method selector='minFilter'>
+<retval declared_type64='MDLMaterialTextureFilterMode' type64='Q'/>
+</method>
+<method selector='mipFilter'>
+<retval declared_type64='MDLMaterialMipMapFilterMode' type64='Q'/>
+</method>
+<method selector='rWrapMode'>
+<retval declared_type64='MDLMaterialTextureWrapMode' type64='Q'/>
+</method>
+<method selector='sWrapMode'>
+<retval declared_type64='MDLMaterialTextureWrapMode' type64='Q'/>
+</method>
+<method selector='setMagFilter:'>
+<arg declared_type64='MDLMaterialTextureFilterMode' index='0' name='magFilter' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMinFilter:'>
+<arg declared_type64='MDLMaterialTextureFilterMode' index='0' name='minFilter' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMipFilter:'>
+<arg declared_type64='MDLMaterialMipMapFilterMode' index='0' name='mipFilter' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRWrapMode:'>
+<arg declared_type64='MDLMaterialTextureWrapMode' index='0' name='rWrapMode' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSWrapMode:'>
+<arg declared_type64='MDLMaterialTextureWrapMode' index='0' name='sWrapMode' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTWrapMode:'>
+<arg declared_type64='MDLMaterialTextureWrapMode' index='0' name='tWrapMode' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='tWrapMode'>
+<retval declared_type64='MDLMaterialTextureWrapMode' type64='Q'/>
+</method>
+</class>
+<class name='MDLTextureSampler'>
+<method selector='hardwareFilter'>
+<retval declared_type64='MDLTextureFilter * _Nullable' type64='@'/>
+</method>
+<method selector='setHardwareFilter:'>
+<arg declared_type64='MDLTextureFilter * _Nullable' index='0' name='hardwareFilter' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTexture:'>
+<arg declared_type64='MDLTexture * _Nullable' index='0' name='texture' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTransform:'>
+<arg declared_type64='MDLTransform * _Nullable' index='0' name='transform' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='texture'>
+<retval declared_type64='MDLTexture * _Nullable' type64='@'/>
+</method>
+<method selector='transform'>
+<retval declared_type64='MDLTransform * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MDLTransform'>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithIdentity'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithMatrix:'>
+<arg declared_type64='matrix_float4x4' index='0' name='matrix' type64='{_matrix_float4x4=[4]}'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithMatrix:resetsTransform:'>
+<arg declared_type64='matrix_float4x4' index='0' name='matrix' type64='{_matrix_float4x4=[4]}'/>
+<arg declared_type64='BOOL' index='1' name='resetsTransform' type64='B'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTransformComponent:'>
+<arg declared_type64='id _Nonnull' index='0' name='component' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTransformComponent:resetsTransform:'>
+<arg declared_type64='id _Nonnull' index='0' name='component' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='resetsTransform' type64='B'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='rotation'>
+<retval declared_type64='vector_float3' type64='{_vector_float3=fff}'/>
+</method>
+<method selector='rotationAtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='vector_float3' type64='{_vector_float3=fff}'/>
+</method>
+<method selector='rotationMatrixAtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='matrix_float4x4' type64='{_matrix_float4x4=[4]}'/>
+</method>
+<method selector='scale'>
+<retval declared_type64='vector_float3' type64='{_vector_float3=fff}'/>
+</method>
+<method selector='scaleAtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='vector_float3' type64='{_vector_float3=fff}'/>
+</method>
+<method selector='setIdentity'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMatrix:forTime:'>
+<arg declared_type64='matrix_float4x4' index='0' name='matrix' type64='{_matrix_float4x4=[4]}'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRotation:'>
+<arg declared_type64='vector_float3' index='0' name='rotation' type64='{_vector_float3=fff}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRotation:forTime:'>
+<arg declared_type64='vector_float3' index='0' name='rotation' type64='{_vector_float3=fff}'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setScale:'>
+<arg declared_type64='vector_float3' index='0' name='scale' type64='{_vector_float3=fff}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setScale:forTime:'>
+<arg declared_type64='vector_float3' index='0' name='scale' type64='{_vector_float3=fff}'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShear:'>
+<arg declared_type64='vector_float3' index='0' name='shear' type64='{_vector_float3=fff}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShear:forTime:'>
+<arg declared_type64='vector_float3' index='0' name='shear' type64='{_vector_float3=fff}'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTranslation:'>
+<arg declared_type64='vector_float3' index='0' name='translation' type64='{_vector_float3=fff}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTranslation:forTime:'>
+<arg declared_type64='vector_float3' index='0' name='translation' type64='{_vector_float3=fff}'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='shear'>
+<retval declared_type64='vector_float3' type64='{_vector_float3=fff}'/>
+</method>
+<method selector='shearAtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='vector_float3' type64='{_vector_float3=fff}'/>
+</method>
+<method selector='translation'>
+<retval declared_type64='vector_float3' type64='{_vector_float3=fff}'/>
+</method>
+<method selector='translationAtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='vector_float3' type64='{_vector_float3=fff}'/>
+</method>
+</class>
+<class name='MDLTransformMatrixOp'>
+<method selector='animatedValue'>
+<retval declared_type64='MDLAnimatedMatrix4x4 * _Nonnull' type64='@'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MDLTransformRotateOp'>
+<method selector='animatedValue'>
+<retval declared_type64='MDLAnimatedVector3 * _Nonnull' type64='@'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MDLTransformRotateXOp'>
+<method selector='animatedValue'>
+<retval declared_type64='MDLAnimatedScalar * _Nonnull' type64='@'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MDLTransformRotateYOp'>
+<method selector='animatedValue'>
+<retval declared_type64='MDLAnimatedScalar * _Nonnull' type64='@'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MDLTransformRotateZOp'>
+<method selector='animatedValue'>
+<retval declared_type64='MDLAnimatedScalar * _Nonnull' type64='@'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MDLTransformScaleOp'>
+<method selector='animatedValue'>
+<retval declared_type64='MDLAnimatedVector3 * _Nonnull' type64='@'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MDLTransformStack'>
+<method selector='addMatrixOp:inverse:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='animatedValueName' type64='@'/>
+<arg declared_type64='_Bool' index='1' name='inverse' type64='B'/>
+<retval declared_type64='MDLTransformMatrixOp * _Nonnull' type64='@'/>
+</method>
+<method selector='addRotateOp:order:inverse:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='animatedValueName' type64='@'/>
+<arg declared_type64='MDLTransformOpRotationOrder' index='1' name='order' type64='Q'/>
+<arg declared_type64='_Bool' index='2' name='inverse' type64='B'/>
+<retval declared_type64='MDLTransformRotateOp * _Nonnull' type64='@'/>
+</method>
+<method selector='addRotateXOp:inverse:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='animatedValueName' type64='@'/>
+<arg declared_type64='_Bool' index='1' name='inverse' type64='B'/>
+<retval declared_type64='MDLTransformRotateXOp * _Nonnull' type64='@'/>
+</method>
+<method selector='addRotateYOp:inverse:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='animatedValueName' type64='@'/>
+<arg declared_type64='_Bool' index='1' name='inverse' type64='B'/>
+<retval declared_type64='MDLTransformRotateYOp * _Nonnull' type64='@'/>
+</method>
+<method selector='addRotateZOp:inverse:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='animatedValueName' type64='@'/>
+<arg declared_type64='_Bool' index='1' name='inverse' type64='B'/>
+<retval declared_type64='MDLTransformRotateZOp * _Nonnull' type64='@'/>
+</method>
+<method selector='addScaleOp:inverse:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='animatedValueName' type64='@'/>
+<arg declared_type64='_Bool' index='1' name='inverse' type64='B'/>
+<retval declared_type64='MDLTransformScaleOp * _Nonnull' type64='@'/>
+</method>
+<method selector='addTranslateOp:inverse:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='animatedValueName' type64='@'/>
+<arg declared_type64='_Bool' index='1' name='inverse' type64='B'/>
+<retval declared_type64='MDLTransformTranslateOp * _Nonnull' type64='@'/>
+</method>
+<method selector='animatedValueWithName:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='MDLAnimatedValue * _Nonnull' type64='@'/>
+</method>
+<method selector='count'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='double4x4AtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='matrix_double4x4' type64='{_matrix_double4x4=[4]}'/>
+</method>
+<method selector='float4x4AtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='matrix_float4x4' type64='{_matrix_float4x4=[4]}'/>
+</method>
+<method selector='init'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='keyTimes'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='transformOps'>
+<retval declared_type64='NSArray&gt; * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MDLTransformTranslateOp'>
+<method selector='animatedValue'>
+<retval declared_type64='MDLAnimatedVector3 * _Nonnull' type64='@'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MDLURLTexture'>
+<method selector='URL'>
+<retval declared_type64='NSURL * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithURL:name:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='URL' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setURL:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='URL' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLVertexAttribute'>
+<method selector='bufferIndex'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='format'>
+<retval declared_type64='MDLVertexFormat' type64='Q'/>
+</method>
+<method selector='initWithName:format:offset:bufferIndex:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='MDLVertexFormat' index='1' name='format' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='offset' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='bufferIndex' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initializationValue'>
+<retval declared_type64='vector_float4' type64='{_vector_float4=ffff}'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='offset'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='setBufferIndex:'>
+<arg declared_type64='NSUInteger' index='0' name='bufferIndex' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFormat:'>
+<arg declared_type64='MDLVertexFormat' index='0' name='format' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setInitializationValue:'>
+<arg declared_type64='vector_float4' index='0' name='initializationValue' type64='{_vector_float4=ffff}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setName:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setOffset:'>
+<arg declared_type64='NSUInteger' index='0' name='offset' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='time'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+</class>
+<class name='MDLVertexAttributeData'>
+<method selector='bufferSize'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='dataStart'>
+<retval declared_type64='void * _Nonnull' type64='^v'/>
+</method>
+<method selector='format'>
+<retval declared_type64='MDLVertexFormat' type64='Q'/>
+</method>
+<method selector='map'>
+<retval declared_type64='MDLMeshBufferMap * _Nonnull' type64='@'/>
+</method>
+<method selector='setBufferSize:'>
+<arg declared_type64='NSUInteger' index='0' name='bufferSize' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDataStart:'>
+<arg declared_type64='void * _Nonnull' index='0' name='dataStart' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFormat:'>
+<arg declared_type64='MDLVertexFormat' index='0' name='format' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMap:'>
+<arg declared_type64='MDLMeshBufferMap * _Nonnull' index='0' name='map' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setStride:'>
+<arg declared_type64='NSUInteger' index='0' name='stride' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stride'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+</class>
+<class name='MDLVertexBufferLayout'>
+<method selector='initWithStride:'>
+<arg declared_type64='NSUInteger' index='0' name='stride' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setStride:'>
+<arg declared_type64='NSUInteger' index='0' name='stride' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stride'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+</class>
+<class name='MDLVertexDescriptor'>
+<method selector='addOrReplaceAttribute:'>
+<arg declared_type64='MDLVertexAttribute * _Nonnull' index='0' name='attribute' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='attributeNamed:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='MDLVertexAttribute * _Nullable' type64='@'/>
+</method>
+<method selector='attributes'>
+<retval declared_type64='NSMutableArray * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithVertexDescriptor:'>
+<arg declared_type64='MDLVertexDescriptor * _Nonnull' index='0' name='vertexDescriptor' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='layouts'>
+<retval declared_type64='NSMutableArray * _Nonnull' type64='@'/>
+</method>
+<method selector='removeAttributeNamed:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='reset'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setAttributes:'>
+<arg declared_type64='NSMutableArray * _Nonnull' index='0' name='attributes' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLayouts:'>
+<arg declared_type64='NSMutableArray * _Nonnull' index='0' name='layouts' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPackedOffsets'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPackedStrides'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MDLVoxelArray'>
+<method selector='boundingBox'>
+<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
+</method>
+<method selector='coarseMesh'>
+<retval declared_type64='MDLMesh * _Nullable' type64='@'/>
+</method>
+<method selector='coarseMeshUsingAllocator:'>
+<arg declared_type64='id _Nullable' index='0' name='allocator' type64='@'/>
+<retval declared_type64='MDLMesh * _Nullable' type64='@'/>
+</method>
+<method selector='convertToSignedShellField'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='count'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='differenceWithVoxels:'>
+<arg declared_type64='MDLVoxelArray * _Nonnull' index='0' name='voxels' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='indexOfSpatialLocation:'>
+<arg declared_type64='vector_float3' index='0' name='location' type64='{_vector_float3=fff}'/>
+<retval declared_type64='MDLVoxelIndex' type64='{_MDLVoxelIndex=iiii}'/>
+</method>
+<method selector='initWithAsset:divisions:interiorNBWidth:exteriorNBWidth:patchRadius:'>
+<arg declared_type64='MDLAsset * _Nonnull' index='0' name='asset' type64='@'/>
+<arg declared_type64='int' index='1' name='divisions' type64='i'/>
+<arg declared_type64='float' index='2' name='interiorNBWidth' type64='f'/>
+<arg declared_type64='float' index='3' name='exteriorNBWidth' type64='f'/>
+<arg declared_type64='float' index='4' name='patchRadius' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithAsset:divisions:interiorShells:exteriorShells:patchRadius:'>
+<arg declared_type64='MDLAsset * _Nonnull' index='0' name='asset' type64='@'/>
+<arg declared_type64='int' index='1' name='divisions' type64='i'/>
+<arg declared_type64='int' index='2' name='interiorShells' type64='i'/>
+<arg declared_type64='int' index='3' name='exteriorShells' type64='i'/>
+<arg declared_type64='float' index='4' name='patchRadius' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithAsset:divisions:patchRadius:'>
+<arg declared_type64='MDLAsset * _Nonnull' index='0' name='asset' type64='@'/>
+<arg declared_type64='int' index='1' name='divisions' type64='i'/>
+<arg declared_type64='float' index='2' name='patchRadius' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithData:boundingBox:voxelExtent:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='voxelData' type64='@'/>
+<arg declared_type64='MDLAxisAlignedBoundingBox' index='1' name='boundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
+<arg declared_type64='float' index='2' name='voxelExtent' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='intersectWithVoxels:'>
+<arg declared_type64='MDLVoxelArray * _Nonnull' index='0' name='voxels' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='isValidSignedShellField'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='meshUsingAllocator:'>
+<arg declared_type64='id _Nullable' index='0' name='allocator' type64='@'/>
+<retval declared_type64='MDLMesh * _Nullable' type64='@'/>
+</method>
+<method selector='setShellFieldExteriorThickness:'>
+<arg declared_type64='float' index='0' name='shellFieldExteriorThickness' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShellFieldInteriorThickness:'>
+<arg declared_type64='float' index='0' name='shellFieldInteriorThickness' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVoxelAtIndex:'>
+<arg declared_type64='MDLVoxelIndex' index='0' name='index' type64='{_MDLVoxelIndex=iiii}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVoxelsForMesh:divisions:interiorNBWidth:exteriorNBWidth:patchRadius:'>
+<arg declared_type64='MDLMesh * _Nonnull' index='0' name='mesh' type64='@'/>
+<arg declared_type64='int' index='1' name='divisions' type64='i'/>
+<arg declared_type64='float' index='2' name='interiorNBWidth' type64='f'/>
+<arg declared_type64='float' index='3' name='exteriorNBWidth' type64='f'/>
+<arg declared_type64='float' index='4' name='patchRadius' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVoxelsForMesh:divisions:interiorShells:exteriorShells:patchRadius:'>
+<arg declared_type64='MDLMesh * _Nonnull' index='0' name='mesh' type64='@'/>
+<arg declared_type64='int' index='1' name='divisions' type64='i'/>
+<arg declared_type64='int' index='2' name='interiorShells' type64='i'/>
+<arg declared_type64='int' index='3' name='exteriorShells' type64='i'/>
+<arg declared_type64='float' index='4' name='patchRadius' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVoxelsForMesh:divisions:patchRadius:'>
+<arg declared_type64='MDLMesh * _Nonnull' index='0' name='mesh' type64='@'/>
+<arg declared_type64='int' index='1' name='divisions' type64='i'/>
+<arg declared_type64='float' index='2' name='patchRadius' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='shellFieldExteriorThickness'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='shellFieldInteriorThickness'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='spatialLocationOfIndex:'>
+<arg declared_type64='MDLVoxelIndex' index='0' name='index' type64='{_MDLVoxelIndex=iiii}'/>
+<retval declared_type64='vector_float3' type64='{_vector_float3=fff}'/>
+</method>
+<method selector='unionWithVoxels:'>
+<arg declared_type64='MDLVoxelArray * _Nonnull' index='0' name='voxels' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='voxelBoundingBoxAtIndex:'>
+<arg declared_type64='MDLVoxelIndex' index='0' name='index' type64='{_MDLVoxelIndex=iiii}'/>
+<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
+</method>
+<method selector='voxelExistsAtIndex:allowAnyX:allowAnyY:allowAnyZ:allowAnyShell:'>
+<arg declared_type64='MDLVoxelIndex' index='0' name='index' type64='{_MDLVoxelIndex=iiii}'/>
+<arg declared_type64='BOOL' index='1' name='allowAnyX' type64='B'/>
+<arg declared_type64='BOOL' index='2' name='allowAnyY' type64='B'/>
+<arg declared_type64='BOOL' index='3' name='allowAnyZ' type64='B'/>
+<arg declared_type64='BOOL' index='4' name='allowAnyShell' type64='B'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='voxelIndexExtent'>
+<retval declared_type64='MDLVoxelIndexExtent' type64='{_MDLVoxelIndexExtent={_MDLVoxelIndex=iiii}{_MDLVoxelIndex=iiii}}'/>
+</method>
+<method selector='voxelIndices'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='voxelsWithinExtent:'>
+<arg declared_type64='MDLVoxelIndexExtent' index='0' name='extent' type64='{_MDLVoxelIndexExtent={_MDLVoxelIndex=iiii}{_MDLVoxelIndex=iiii}}'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='IsInverseOp'>
+<retval declared_type64='_Bool' type64='B'/>
+</method>
+<method selector='addObject:'>
+<arg declared_type64='MDLObject * _Nonnull' index='0' name='object' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='allocator'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='boundingBox'>
+<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
+</method>
+<method selector='canResolveAssetNamed:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='capacity'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='count'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='double4x4AtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='matrix_double4x4' type64='{_matrix_double4x4=[4]}'/>
+</method>
+<method selector='fillData:offset:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='offset' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='float4x4AtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='matrix_float4x4' type64='{_matrix_float4x4=[4]}'/>
+</method>
+<method class_method='true' selector='globalTransformWithObject:atTime:'>
+<arg declared_type64='MDLObject * _Nonnull' index='0' name='object' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='matrix_float4x4' type64='{_matrix_float4x4=[4]}'/>
+</method>
+<method selector='keyTimes'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='length'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='localTransformAtTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='matrix_float4x4' type64='{_matrix_float4x4=[4]}'/>
+</method>
+<method selector='map'>
+<retval declared_type64='MDLMeshBufferMap * _Nonnull' type64='@'/>
+</method>
+<method selector='matrix'>
+<retval declared_type64='matrix_float4x4' type64='{_matrix_float4x4=[4]}'/>
+</method>
+<method selector='maximumTime'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='minimumTime'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='newBuffer:type:'>
+<arg declared_type64='NSUInteger' index='0' name='length' type64='Q'/>
+<arg declared_type64='MDLMeshBufferType' index='1' name='type' type64='Q'/>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='newBufferFromZone:data:type:'>
+<arg declared_type64='id _Nullable' index='0' name='zone' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='data' type64='@'/>
+<arg declared_type64='MDLMeshBufferType' index='2' name='type' type64='Q'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='newBufferFromZone:length:type:'>
+<arg declared_type64='id _Nullable' index='0' name='zone' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='length' type64='Q'/>
+<arg declared_type64='MDLMeshBufferType' index='2' name='type' type64='Q'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='newBufferWithData:type:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='MDLMeshBufferType' index='1' name='type' type64='Q'/>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='newZone:'>
+<arg declared_type64='NSUInteger' index='0' name='capacity' type64='Q'/>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='newZoneForBuffersWithSize:andType:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='sizes' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='types' type64='@'/>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='objectAtIndexedSubscript:'>
+<arg declared_type64='NSUInteger' index='0' name='index' type64='Q'/>
+<retval declared_type64='MDLObject * _Nonnull' type64='@'/>
+</method>
+<method selector='objects'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='removeObject:'>
+<arg declared_type64='MDLObject * _Nonnull' index='0' name='object' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resetsTransform'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='resolveAssetNamed:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='NSURL * _Nonnull' type64='@'/>
+</method>
+<method selector='setBoundingBox:'>
+<arg declared_type64='MDLAxisAlignedBoundingBox' index='0' name='boundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLocalTransform:'>
+<arg declared_type64='matrix_float4x4' index='0' name='transform' type64='{_matrix_float4x4=[4]}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLocalTransform:forTime:'>
+<arg declared_type64='matrix_float4x4' index='0' name='transform' type64='{_matrix_float4x4=[4]}'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMatrix:'>
+<arg declared_type64='matrix_float4x4' index='0' name='matrix' type64='{_matrix_float4x4=[4]}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setName:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setResetsTransform:'>
+<arg declared_type64='BOOL' index='0' name='resetsTransform' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSphericalHarmonicsLevel:'>
+<arg declared_type64='NSUInteger' index='0' name='sphericalHarmonicsLevel' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sphericalHarmonicsCoefficientsAtPosition:'>
+<arg declared_type64='vector_float3' index='0' name='position' type64='{_vector_float3=fff}'/>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='sphericalHarmonicsLevel'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='type'>
+<retval declared_type64='MDLMeshBufferType' type64='Q'/>
+</method>
+<method selector='zone'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+</class>
+<informal_protocol name='MDLAssetResolver'>
+<method selector='canResolveAssetNamed:' type64='B24@0:8@16'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='resolveAssetNamed:' type64='@24@0:8@16'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='NSURL * _Nonnull' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='MDLLightProbeIrradianceDataSource'>
+<method selector='boundingBox' type64='{?={?=fff}{?=fff}}16@0:8'>
+<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
+</method>
+<method selector='setBoundingBox:' type64='v40@0:8{?={?=fff}{?=fff}}16'>
+<arg declared_type64='MDLAxisAlignedBoundingBox' index='0' name='boundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSphericalHarmonicsLevel:' type64='v24@0:8Q16'>
+<arg declared_type64='NSUInteger' index='0' name='sphericalHarmonicsLevel' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sphericalHarmonicsCoefficientsAtPosition:' type64='@28@0:8{?=fff}16'>
+<arg declared_type64='vector_float3' index='0' name='position' type64='{_vector_float3=fff}'/>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='sphericalHarmonicsLevel' type64='Q16@0:8'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+</informal_protocol>
+<informal_protocol name='MDLMeshBuffer'>
+<method selector='allocator' type64='@16@0:8'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='fillData:offset:' type64='v32@0:8@16Q24'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='offset' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='length' type64='Q16@0:8'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='map' type64='@16@0:8'>
+<retval declared_type64='MDLMeshBufferMap * _Nonnull' type64='@'/>
+</method>
+<method selector='type' type64='Q16@0:8'>
+<retval declared_type64='MDLMeshBufferType' type64='Q'/>
+</method>
+<method selector='zone' type64='@16@0:8'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='MDLMeshBufferAllocator'>
+<method selector='newBuffer:type:' type64='@32@0:8Q16Q24'>
+<arg declared_type64='NSUInteger' index='0' name='length' type64='Q'/>
+<arg declared_type64='MDLMeshBufferType' index='1' name='type' type64='Q'/>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='newBufferFromZone:data:type:' type64='@40@0:8@16@24Q32'>
+<arg declared_type64='id _Nullable' index='0' name='zone' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='data' type64='@'/>
+<arg declared_type64='MDLMeshBufferType' index='2' name='type' type64='Q'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='newBufferFromZone:length:type:' type64='@40@0:8@16Q24Q32'>
+<arg declared_type64='id _Nullable' index='0' name='zone' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='length' type64='Q'/>
+<arg declared_type64='MDLMeshBufferType' index='2' name='type' type64='Q'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='newBufferWithData:type:' type64='@32@0:8@16Q24'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='MDLMeshBufferType' index='1' name='type' type64='Q'/>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='newZone:' type64='@24@0:8Q16'>
+<arg declared_type64='NSUInteger' index='0' name='capacity' type64='Q'/>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='newZoneForBuffersWithSize:andType:' type64='@32@0:8@16@24'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='sizes' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='types' type64='@'/>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='MDLMeshBufferZone'>
+<method selector='allocator' type64='@16@0:8'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='capacity' type64='Q16@0:8'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+</informal_protocol>
+<informal_protocol name='MDLNamed'>
+<method selector='name' type64='@16@0:8'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='setName:' type64='v24@0:8@16'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='MDLObjectContainerComponent'>
+<method selector='addObject:' type64='v24@0:8@16'>
+<arg declared_type64='MDLObject * _Nonnull' index='0' name='object' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='count' type64='Q16@0:8'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='objectAtIndexedSubscript:' type64='@24@0:8Q16'>
+<arg declared_type64='NSUInteger' index='0' name='index' type64='Q'/>
+<retval declared_type64='MDLObject * _Nonnull' type64='@'/>
+</method>
+<method selector='objects' type64='@16@0:8'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='removeObject:' type64='v24@0:8@16'>
+<arg declared_type64='MDLObject * _Nonnull' index='0' name='object' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='MDLTransformComponent'>
+<method class_method='true' selector='globalTransformWithObject:atTime:' type64='{?=[4]}32@0:8@16d24'>
+<arg declared_type64='MDLObject * _Nonnull' index='0' name='object' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='matrix_float4x4' type64='{_matrix_float4x4=[4]}'/>
+</method>
+<method selector='keyTimes' type64='@16@0:8'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='localTransformAtTime:' type64='{?=[4]}24@0:8d16'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='matrix_float4x4' type64='{_matrix_float4x4=[4]}'/>
+</method>
+<method selector='matrix' type64='{?=[4]}16@0:8'>
+<retval declared_type64='matrix_float4x4' type64='{_matrix_float4x4=[4]}'/>
+</method>
+<method selector='maximumTime' type64='d16@0:8'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='minimumTime' type64='d16@0:8'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='resetsTransform' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setLocalTransform:' type64='v80@0:8{?=[4]}16'>
+<arg declared_type64='matrix_float4x4' index='0' name='transform' type64='{_matrix_float4x4=[4]}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLocalTransform:forTime:' type64='v88@0:8{?=[4]}16d80'>
+<arg declared_type64='matrix_float4x4' index='0' name='transform' type64='{_matrix_float4x4=[4]}'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMatrix:' type64='v80@0:8{?=[4]}16'>
+<arg declared_type64='matrix_float4x4' index='0' name='matrix' type64='{_matrix_float4x4=[4]}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setResetsTransform:' type64='v20@0:8B16'>
+<arg declared_type64='BOOL' index='0' name='resetsTransform' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='MDLTransformOp'>
+<method selector='IsInverseOp' type64='B16@0:8'>
+<retval declared_type64='_Bool' type64='B'/>
+</method>
+<method selector='double4x4AtTime:' type64='{?=[4]}24@0:8d16'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='matrix_double4x4' type64='{_matrix_double4x4=[4]}'/>
+</method>
+<method selector='float4x4AtTime:' type64='{?=[4]}24@0:8d16'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<retval declared_type64='matrix_float4x4' type64='{_matrix_float4x4=[4]}'/>
+</method>
+<method selector='name' type64='@16@0:8'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</informal_protocol>
+</signatures>

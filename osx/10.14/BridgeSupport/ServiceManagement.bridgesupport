@@ -1,0 +1,55 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<constant const='true' declared_type64='CFStringRef' name='kSMDomainSystemLaunchd' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kSMDomainUserLaunchd' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kSMErrorDomainFramework' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kSMErrorDomainIPC' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kSMErrorDomainLaunchd' type64='^{__CFString=}'/>
+<string_constant name='kSMRightBlessPrivilegedHelper' value='com.apple.ServiceManagement.blesshelper'/>
+<string_constant name='kSMRightModifySystemDaemons' value='com.apple.ServiceManagement.daemons.modify'/>
+<enum name='kSMErrorAuthorizationFailure' value64='4'/>
+<enum name='kSMErrorInternalFailure' value64='2'/>
+<enum name='kSMErrorInvalidPlist' value64='10'/>
+<enum name='kSMErrorInvalidSignature' value64='3'/>
+<enum name='kSMErrorJobMustBeEnabled' value64='9'/>
+<enum name='kSMErrorJobNotFound' value64='6'/>
+<enum name='kSMErrorJobPlistNotFound' value64='8'/>
+<enum name='kSMErrorServiceUnavailable' value64='7'/>
+<enum name='kSMErrorToolNotValid' value64='5'/>
+<function name='SMCopyAllJobDictionaries'>
+<arg declared_type64='CFStringRef' name='domain' type64='^{__CFString=}'/>
+<retval already_retained='true' declared_type64='CFArrayRef' type64='^{__CFArray=}'/>
+</function>
+<function name='SMJobBless'>
+<arg declared_type64='CFStringRef' name='domain' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef' name='executableLabel' null_accepted='false' type64='^{__CFString=}'/>
+<arg declared_type64='AuthorizationRef' name='auth' type64='^{AuthorizationOpaqueRef=}'/>
+<arg declared_type64='CFErrorRef*' name='outError' type64='^^{__CFError}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='SMJobCopyDictionary'>
+<arg declared_type64='CFStringRef' name='domain' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef' name='jobLabel' null_accepted='false' type64='^{__CFString=}'/>
+<retval already_retained='true' declared_type64='CFDictionaryRef' type64='^{__CFDictionary=}'/>
+</function>
+<function name='SMJobRemove'>
+<arg declared_type64='CFStringRef' name='domain' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef' name='jobLabel' null_accepted='false' type64='^{__CFString=}'/>
+<arg declared_type64='AuthorizationRef' name='auth' type64='^{AuthorizationOpaqueRef=}'/>
+<arg declared_type64='Boolean' name='wait' type64='B'/>
+<arg declared_type64='CFErrorRef*' name='outError' type64='^^{__CFError}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='SMJobSubmit'>
+<arg declared_type64='CFStringRef' name='domain' type64='^{__CFString=}'/>
+<arg declared_type64='CFDictionaryRef' name='job' null_accepted='false' type64='^{__CFDictionary=}'/>
+<arg declared_type64='AuthorizationRef' name='auth' type64='^{AuthorizationOpaqueRef=}'/>
+<arg declared_type64='CFErrorRef*' name='outError' type64='^^{__CFError}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='SMLoginItemSetEnabled'>
+<arg declared_type64='CFStringRef' name='identifier' null_accepted='false' type64='^{__CFString=}'/>
+<arg declared_type64='Boolean' name='enabled' type64='B'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+</signatures>

@@ -1,0 +1,447 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<struct name='DRBurnSessionProgressCallbacks' type64='{DRBurnSessionProgressCallbacks=&quot;version&quot;I&quot;progressWillBegin&quot;^?&quot;progressDidFinish&quot;^?&quot;burnDidFinish&quot;^?}'>
+<field declared_type64='UInt32' name='version' type64='I'/>
+<field declared_type64='DRBurnSessionProgressBeginNotificationProcPtr' function_pointer='true' name='progressWillBegin' type64='^?'>
+<arg declared_type64='DRBurnSessionRef' type64='^{__DRBurnSession=}'/>
+<retval declared_type64='void' type64='v'/>
+</field>
+<field declared_type64='DRBurnSessionProgressFinishNotificationProcPtr' function_pointer='true' name='progressDidFinish' type64='^?'>
+<arg declared_type64='DRBurnSessionRef' type64='^{__DRBurnSession=}'/>
+<retval declared_type64='void' type64='v'/>
+</field>
+<field declared_type64='DRBurnSessionBurnCompleteProcPtr' function_pointer='true' name='burnDidFinish' type64='^?'>
+<arg declared_type64='DRBurnSessionRef' type64='^{__DRBurnSession=}'/>
+<arg declared_type64='DRBurnRef' type64='^{__DRBurn=}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</field>
+</struct>
+<struct name='DRBurnSessionProgressDialogOptions' type64='{DRBurnSessionProgressDialogOptions=&quot;version&quot;I&quot;dialogOptionFlags&quot;I&quot;description&quot;^{__CFString}}'>
+<field declared_type64='UInt32' name='version' type64='I'/>
+<field declared_type64='DRBurnSessionProgressDialogOptionFlags' name='dialogOptionFlags' type64='I'/>
+<field declared_type64='CFStringRef' name='description' type64='^{__CFString=}'/>
+</struct>
+<struct name='DRBurnSessionSetupCallbacks' type64='{DRBurnSessionSetupCallbacks=&quot;version&quot;I&quot;deviceShouldBeTarget&quot;^?&quot;containsSuitableMedia&quot;^?&quot;deviceSelectionChanged&quot;^?}'>
+<field declared_type64='UInt32' name='version' type64='I'/>
+<field declared_type64='DRBurnSessionDeviceCheckProcPtr' function_pointer='true' name='deviceShouldBeTarget' type64='^?'>
+<arg declared_type64='DRBurnSessionRef' type64='^{__DRBurnSession=}'/>
+<arg declared_type64='DRDeviceRef' type64='^{__DRDevice=}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</field>
+<field declared_type64='DRBurnSessionMediaCheckProcPtr' function_pointer='true' name='containsSuitableMedia' type64='^?'>
+<arg declared_type64='DRBurnSessionRef' type64='^{__DRBurnSession=}'/>
+<arg declared_type64='DRDeviceRef' type64='^{__DRDevice=}'/>
+<arg declared_type64='CFStringRef*' type64='^^{__CFString}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</field>
+<field declared_type64='DRBurnSessionDeviceSelectionNotificationProcPtr' function_pointer='true' name='deviceSelectionChanged' type64='^?'>
+<arg declared_type64='DRBurnSessionRef' type64='^{__DRBurnSession=}'/>
+<arg declared_type64='DRDeviceRef' type64='^{__DRDevice=}'/>
+<retval declared_type64='void' type64='v'/>
+</field>
+</struct>
+<struct name='DRBurnSessionSetupDialogOptions' type64='{DRBurnSessionSetupDialogOptions=&quot;version&quot;I&quot;dialogOptionFlags&quot;I&quot;defaultButtonTitle&quot;^{__CFString}}'>
+<field declared_type64='UInt32' name='version' type64='I'/>
+<field declared_type64='DRBurnSessionSetupDialogOptionFlags' name='dialogOptionFlags' type64='I'/>
+<field declared_type64='CFStringRef' name='defaultButtonTitle' type64='^{__CFString=}'/>
+</struct>
+<struct name='DREraseSessionProgressCallbacks' type64='{DREraseSessionProgressCallbacks=&quot;version&quot;I&quot;progressWillBegin&quot;^?&quot;progressDidFinish&quot;^?&quot;eraseDidFinish&quot;^?}'>
+<field declared_type64='UInt32' name='version' type64='I'/>
+<field declared_type64='DREraseSessionProgressBeginNotificationProcPtr' function_pointer='true' name='progressWillBegin' type64='^?'>
+<arg declared_type64='DREraseSessionRef' type64='^{__DREraseSession=}'/>
+<retval declared_type64='void' type64='v'/>
+</field>
+<field declared_type64='DREraseSessionProgressFinishNotificationProcPtr' function_pointer='true' name='progressDidFinish' type64='^?'>
+<arg declared_type64='DREraseSessionRef' type64='^{__DREraseSession=}'/>
+<retval declared_type64='void' type64='v'/>
+</field>
+<field declared_type64='DREraseSessionEraseCompleteProcPtr' function_pointer='true' name='eraseDidFinish' type64='^?'>
+<arg declared_type64='DREraseSessionRef' type64='^{__DREraseSession=}'/>
+<arg declared_type64='DREraseRef' type64='^{__DRErase=}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</field>
+</struct>
+<struct name='DREraseSessionProgressDialogOptions' type64='{DREraseSessionProgressDialogOptions=&quot;version&quot;I&quot;dialogOptionFlags&quot;I&quot;description&quot;^{__CFString}}'>
+<field declared_type64='UInt32' name='version' type64='I'/>
+<field declared_type64='DREraseSessionProgressDialogOptionFlags' name='dialogOptionFlags' type64='I'/>
+<field declared_type64='CFStringRef' name='description' type64='^{__CFString=}'/>
+</struct>
+<struct name='DREraseSessionSetupCallbacks' type64='{DREraseSessionSetupCallbacks=&quot;version&quot;I&quot;deviceShouldBeTarget&quot;^?&quot;containsSuitableMedia&quot;^?&quot;deviceSelectionChanged&quot;^?}'>
+<field declared_type64='UInt32' name='version' type64='I'/>
+<field declared_type64='DREraseSessionDeviceCheckProcPtr' function_pointer='true' name='deviceShouldBeTarget' type64='^?'>
+<arg declared_type64='DREraseSessionRef' type64='^{__DREraseSession=}'/>
+<arg declared_type64='DRDeviceRef' type64='^{__DRDevice=}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</field>
+<field declared_type64='DREraseSessionMediaCheckProcPtr' function_pointer='true' name='containsSuitableMedia' type64='^?'>
+<arg declared_type64='DREraseSessionRef' type64='^{__DREraseSession=}'/>
+<arg declared_type64='DRDeviceRef' type64='^{__DRDevice=}'/>
+<arg declared_type64='CFStringRef*' type64='^^{__CFString}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</field>
+<field declared_type64='DREraseSessionDeviceSelectionNotificationProcPtr' function_pointer='true' name='deviceSelectionChanged' type64='^?'>
+<arg declared_type64='DREraseSessionRef' type64='^{__DREraseSession=}'/>
+<arg declared_type64='DRDeviceRef' type64='^{__DRDevice=}'/>
+<retval declared_type64='void' type64='v'/>
+</field>
+</struct>
+<struct name='DREraseSessionSetupDialogOptions' type64='{DREraseSessionSetupDialogOptions=&quot;version&quot;I&quot;dialogOptionFlags&quot;I}'>
+<field declared_type64='UInt32' name='version' type64='I'/>
+<field declared_type64='DREraseSessionSetupDialogOptionFlags' name='dialogOptionFlags' type64='I'/>
+</struct>
+<cftype gettypeid_func='DRBurnSessionGetTypeID' name='DRBurnSessionRef' type64='^{__DRBurnSession=}'/>
+<cftype gettypeid_func='DREraseSessionGetTypeID' name='DREraseSessionRef' type64='^{__DREraseSession=}'/>
+<constant const='true' declared_type64='NSString*' name='DRBurnIcon' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='DRBurnProgressPanelDidFinishNotification' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='DRBurnProgressPanelWillBeginNotification' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='DRBurnSetupPanelDefaultButtonDefaultTitle' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='DREraseIcon' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='DREraseProgressPanelDidFinishNotification' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='DREraseProgressPanelWillBeginNotification' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='DRSetupPanelDeviceSelectionChangedNotification' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='DRSetupPanelSelectedDeviceKey' type64='@'/>
+<enum name='kBurnSessionProgressDialogDefaultOptions' value64='0'/>
+<enum name='kBurnSessionProgressDialogDisplayVerboseProgress' value64='1'/>
+<enum name='kBurnSessionProgressDialogOptionsCurrentVersion' value64='1'/>
+<enum name='kBurnSessionSetupDialogAllowTestBurns' value64='2147483652'/>
+<enum name='kBurnSessionSetupDialogDefaultOptions' value64='0'/>
+<enum name='kBurnSessionSetupDialogDontHandleReservations' value64='2'/>
+<enum name='kBurnSessionSetupDialogForceClosedDiscs' value64='1'/>
+<enum name='kBurnSessionSetupDialogOptionsCurrentVersion' value64='1'/>
+<enum name='kDRBurnProgressSetupCallbacksCurrentVersion' value64='1'/>
+<enum name='kDRBurnSessionCancel' value64='0'/>
+<enum name='kDRBurnSessionOK' value64='1'/>
+<enum name='kDRBurnSessionSetupCallbacksCurrentVersion' value64='1'/>
+<enum name='kDREraseProgressSetupCallbacksCurrentVersion' value64='1'/>
+<enum name='kDREraseSessionCancel' value64='0'/>
+<enum name='kDREraseSessionOK' value64='1'/>
+<enum name='kDREraseSessionSetupCallbacksCurrentVersion' value64='1'/>
+<enum name='kEraseSessionProgressDialogDefaultOptions' value64='0'/>
+<enum name='kEraseSessionProgressDialogOptionsCurrentVersion' value64='1'/>
+<enum name='kEraseSessionSetupDialogDefaultOptions' value64='0'/>
+<enum name='kEraseSessionSetupDialogDontHandleReservations' value64='1'/>
+<enum name='kEraseSessionSetupDialogOptionsCurrentVersion' value64='1'/>
+<function name='DRBurnSessionBeginProgressDialog'>
+<arg declared_type64='DRBurnSessionRef' name='burnSession' type64='^{__DRBurnSession=}'/>
+<arg declared_type64='CFTypeRef' name='layout' type64='@'/>
+<arg declared_type64='DRBurnSessionProgressDialogOptions*' name='options' type64='^{DRBurnSessionProgressDialogOptions=II^{__CFString}}'/>
+<arg declared_type64='DRBurnSessionProgressCallbacks*' name='progressCallbacks' type64='^{DRBurnSessionProgressCallbacks=I^?^?^?}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='DRBurnSessionCreate'>
+<retval already_retained='true' declared_type64='DRBurnSessionRef' type64='^{__DRBurnSession=}'/>
+</function>
+<function name='DRBurnSessionGetBurn'>
+<arg declared_type64='DRBurnSessionRef' name='burnSession' type64='^{__DRBurnSession=}'/>
+<retval declared_type64='DRBurnRef' type64='^{__DRBurn=}'/>
+</function>
+<function name='DRBurnSessionGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='DRBurnSessionSetBurn'>
+<arg declared_type64='DRBurnSessionRef' name='burnSession' type64='^{__DRBurnSession=}'/>
+<arg declared_type64='DRBurnRef' name='burn' type64='^{__DRBurn=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='DRBurnSessionSetupDialog'>
+<arg declared_type64='DRBurnSessionRef' name='burnSession' type64='^{__DRBurnSession=}'/>
+<arg declared_type64='DRBurnSessionSetupDialogOptions*' name='options' type64='^{DRBurnSessionSetupDialogOptions=II^{__CFString}}'/>
+<arg declared_type64='DRBurnSessionSetupCallbacks*' name='setupCallbacks' type64='^{DRBurnSessionSetupCallbacks=I^?^?^?}'/>
+<retval declared_type64='SInt8' type64='c'/>
+</function>
+<function name='DREraseSessionBeginProgressDialog'>
+<arg declared_type64='DREraseSessionRef' name='eraseSession' type64='^{__DREraseSession=}'/>
+<arg declared_type64='DREraseSessionProgressDialogOptions*' name='options' type64='^{DREraseSessionProgressDialogOptions=II^{__CFString}}'/>
+<arg declared_type64='DREraseSessionProgressCallbacks*' name='progressCallbacks' type64='^{DREraseSessionProgressCallbacks=I^?^?^?}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='DREraseSessionCreate'>
+<retval already_retained='true' declared_type64='DREraseSessionRef' type64='^{__DREraseSession=}'/>
+</function>
+<function name='DREraseSessionGetErase'>
+<arg declared_type64='DREraseSessionRef' name='eraseSession' type64='^{__DREraseSession=}'/>
+<retval declared_type64='DREraseRef' type64='^{__DRErase=}'/>
+</function>
+<function name='DREraseSessionGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='DREraseSessionSetErase'>
+<arg declared_type64='DREraseSessionRef' name='eraseSession' type64='^{__DREraseSession=}'/>
+<arg declared_type64='DREraseRef' name='erase' type64='^{__DRErase=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='DREraseSessionSetupDialog'>
+<arg declared_type64='DREraseSessionRef' name='eraseSession' type64='^{__DREraseSession=}'/>
+<arg declared_type64='DREraseSessionSetupDialogOptions*' name='options' type64='^{DREraseSessionSetupDialogOptions=II}'/>
+<arg declared_type64='DREraseSessionSetupCallbacks*' name='setupCallbacks' type64='^{DREraseSessionSetupCallbacks=I^?^?^?}'/>
+<retval declared_type64='SInt8' type64='c'/>
+</function>
+<class name='DRBurnProgressPanel'>
+<method selector='beginProgressPanelForBurn:layout:'>
+<arg declared_type64='DRBurn*' index='0' name='burn' type64='@'/>
+<arg declared_type64='id' index='1' name='layout' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='beginProgressSheetForBurn:layout:modalForWindow:'>
+<arg declared_type64='DRBurn*' index='0' name='burn' type64='@'/>
+<arg declared_type64='id' index='1' name='layout' type64='@'/>
+<arg declared_type64='NSWindow*' index='2' name='docWindow' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='description'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method class_method='true' selector='progressPanel'>
+<retval declared_type64='DRBurnProgressPanel*' type64='@'/>
+</method>
+<method selector='setDescription:'>
+<arg declared_type64='NSString*' index='0' name='description' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVerboseProgressStatus:'>
+<arg declared_type64='BOOL' index='0' name='verbose' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stopBurn:'>
+<arg declared_type64='id' index='0' name='sender' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='verboseProgressStatus'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='DRBurnSetupPanel'>
+<method selector='appendable:'>
+<arg declared_type64='id' index='0' name='sender' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='burnObject'>
+<retval declared_type64='DRBurn*' type64='@'/>
+</method>
+<method selector='burnSpeed:'>
+<arg declared_type64='id' index='0' name='sender' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='completionAction:'>
+<arg declared_type64='id' index='0' name='sender' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='expand:'>
+<arg declared_type64='id' index='0' name='sender' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCanSelectAppendableMedia:'>
+<arg declared_type64='BOOL' index='0' name='flag' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCanSelectTestBurn:'>
+<arg declared_type64='BOOL' index='0' name='flag' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDefaultButtonTitle:'>
+<arg declared_type64='NSString*' index='0' name='title' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='setupPanel'>
+<retval declared_type64='DRBurnSetupPanel*' type64='@'/>
+</method>
+<method selector='testBurn:'>
+<arg declared_type64='id' index='0' name='sender' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='verifyBurn:'>
+<arg declared_type64='id' index='0' name='sender' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='DREraseProgressPanel'>
+<method selector='beginProgressPanelForErase:'>
+<arg declared_type64='DRErase*' index='0' name='erase' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='beginProgressSheetForErase:modalForWindow:'>
+<arg declared_type64='DRErase*' index='0' name='erase' type64='@'/>
+<arg declared_type64='NSWindow*' index='1' name='docWindow' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='description'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method class_method='true' selector='progressPanel'>
+<retval declared_type64='DREraseProgressPanel*' type64='@'/>
+</method>
+<method selector='setDescription:'>
+<arg declared_type64='NSString*' index='0' name='description' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='DREraseSetupPanel'>
+<method selector='eraseObject'>
+<retval declared_type64='DRErase*' type64='@'/>
+</method>
+<method selector='eraseType:'>
+<arg declared_type64='id' index='0' name='sender' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='setupPanel'>
+<retval declared_type64='DREraseSetupPanel*' type64='@'/>
+</method>
+</class>
+<class name='DRSetupPanel'>
+<method selector='beginSetupSheetForWindow:modalDelegate:didEndSelector:contextInfo:'>
+<arg declared_type64='NSWindow*' index='0' name='owner' type64='@'/>
+<arg declared_type64='id' index='1' name='modalDelegate' type64='@'/>
+<arg declared_type64='SEL' index='2' name='didEndSelector' type64=':'/>
+<arg declared_type64='void*' index='3' name='contextInfo' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='cancel:'>
+<arg declared_type64='id' index='0' name='sender' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='close:'>
+<arg declared_type64='id' index='0' name='sender' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='deviceSelectionChanged:'>
+<arg declared_type64='DRDevice*' index='0' name='device' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='eject:'>
+<arg declared_type64='id' index='0' name='sender' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='initWithNibName:'>
+<arg declared_type64='NSString*' index='0' name='nibName' type64='@'/>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='mediaStateChanged:'>
+<arg declared_type64='NSDictionary*' index='0' name='status' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='ok:'>
+<arg declared_type64='id' index='0' name='sender' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='open:'>
+<arg declared_type64='id' index='0' name='sender' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='runSetupPanel'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='setupForDisplay'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='burnProgressPanel:burnDidFinish:'>
+<arg declared_type64='DRBurnProgressPanel*' index='0' name='theBurnPanel' type64='@'/>
+<arg declared_type64='DRBurn*' index='1' name='burn' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='burnProgressPanelDidFinish:'>
+<arg declared_type64='NSNotification*' index='0' name='aNotification' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='burnProgressPanelWillBegin:'>
+<arg declared_type64='NSNotification*' index='0' name='aNotification' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='eraseProgressPanel:eraseDidFinish:'>
+<arg declared_type64='DREraseProgressPanel*' index='0' name='theErasePanel' type64='@'/>
+<arg declared_type64='DRErase*' index='1' name='erase' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='eraseProgressPanelDidFinish:'>
+<arg declared_type64='NSNotification*' index='0' name='aNotification' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='eraseProgressPanelWillBegin:'>
+<arg declared_type64='NSNotification*' index='0' name='aNotification' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setupPanel:determineBestDeviceOfA:orB:'>
+<arg declared_type64='DRSetupPanel*' index='0' name='aPanel' type64='@'/>
+<arg declared_type64='DRDevice*' index='1' name='deviceA' type64='@'/>
+<arg declared_type64='DRDevice*' index='2' name='device' type64='@'/>
+<retval declared_type64='DRDevice*' type64='@'/>
+</method>
+<method selector='setupPanel:deviceContainsSuitableMedia:promptString:'>
+<arg declared_type64='DRSetupPanel*' index='0' name='aPanel' type64='@'/>
+<arg declared_type64='DRDevice*' index='1' name='device' type64='@'/>
+<arg declared_type64='NSString**' index='2' name='prompt' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setupPanel:deviceCouldBeTarget:'>
+<arg declared_type64='DRSetupPanel*' index='0' name='aPanel' type64='@'/>
+<arg declared_type64='DRDevice*' index='1' name='device' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setupPanelDeviceSelectionChanged:'>
+<arg declared_type64='NSNotification*' index='0' name='aNotification' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setupPanelShouldHandleMediaReservations:'>
+<arg declared_type64='DRSetupPanel*' index='0' name='aPanel' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<informal_protocol name='DRBurnProgressPanelDelegateMethods'>
+<method selector='burnProgressPanel:burnDidFinish:' type64='B32@0:8@16@24'>
+<arg declared_type64='DRBurnProgressPanel*' index='0' name='theBurnPanel' type64='@'/>
+<arg declared_type64='DRBurn*' index='1' name='burn' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='burnProgressPanelDidFinish:' type64='v24@0:8@16'>
+<arg declared_type64='NSNotification*' index='0' name='aNotification' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='burnProgressPanelWillBegin:' type64='v24@0:8@16'>
+<arg declared_type64='NSNotification*' index='0' name='aNotification' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='DREraseProgressPanelDelegateMethods'>
+<method selector='eraseProgressPanel:eraseDidFinish:' type64='B32@0:8@16@24'>
+<arg declared_type64='DREraseProgressPanel*' index='0' name='theErasePanel' type64='@'/>
+<arg declared_type64='DRErase*' index='1' name='erase' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='eraseProgressPanelDidFinish:' type64='v24@0:8@16'>
+<arg declared_type64='NSNotification*' index='0' name='aNotification' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='eraseProgressPanelWillBegin:' type64='v24@0:8@16'>
+<arg declared_type64='NSNotification*' index='0' name='aNotification' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='DRSetupPanelDelegate'>
+<method selector='setupPanel:determineBestDeviceOfA:orB:' type64='@40@0:8@16@24@32'>
+<arg declared_type64='DRSetupPanel*' index='0' name='aPanel' type64='@'/>
+<arg declared_type64='DRDevice*' index='1' name='deviceA' type64='@'/>
+<arg declared_type64='DRDevice*' index='2' name='device' type64='@'/>
+<retval declared_type64='DRDevice*' type64='@'/>
+</method>
+<method selector='setupPanel:deviceContainsSuitableMedia:promptString:' type64='B40@0:8@16@24^@32'>
+<arg declared_type64='DRSetupPanel*' index='0' name='aPanel' type64='@'/>
+<arg declared_type64='DRDevice*' index='1' name='device' type64='@'/>
+<arg declared_type64='NSString**' index='2' name='prompt' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setupPanel:deviceCouldBeTarget:' type64='B32@0:8@16@24'>
+<arg declared_type64='DRSetupPanel*' index='0' name='aPanel' type64='@'/>
+<arg declared_type64='DRDevice*' index='1' name='device' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setupPanelDeviceSelectionChanged:' type64='v24@0:8@16'>
+<arg declared_type64='NSNotification*' index='0' name='aNotification' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setupPanelShouldHandleMediaReservations:' type64='B24@0:8@16'>
+<arg declared_type64='DRSetupPanel*' index='0' name='aPanel' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</informal_protocol>
+</signatures>

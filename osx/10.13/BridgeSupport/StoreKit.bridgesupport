@@ -24,6 +24,13 @@
 <enum name='SKPaymentTransactionStatePurchased' value='1'/>
 <enum name='SKPaymentTransactionStatePurchasing' value='0'/>
 <enum name='SKPaymentTransactionStateRestored' value='3'/>
+<enum name='SKProductDiscountPaymentModeFreeTrial' value='2'/>
+<enum name='SKProductDiscountPaymentModePayAsYouGo' value='0'/>
+<enum name='SKProductDiscountPaymentModePayUpFront' value='1'/>
+<enum name='SKProductPeriodUnitDay' value='0'/>
+<enum name='SKProductPeriodUnitMonth' value='2'/>
+<enum name='SKProductPeriodUnitWeek' value='1'/>
+<enum name='SKProductPeriodUnitYear' value='3'/>
 <class name='NSObject'>
 <method selector='paymentQueue:removedTransactions:'>
 <arg declared_type='SKPaymentQueue * _Nonnull' index='0' name='queue' type='@'/>
@@ -232,6 +239,9 @@
 <method selector='downloadable'>
 <retval declared_type='BOOL' type='B'/>
 </method>
+<method selector='introductoryPrice'>
+<retval declared_type='SKProductDiscount * _Nullable' type='@'/>
+</method>
 <method selector='localizedDescription'>
 <retval declared_type='NSString * _Nonnull' type='@'/>
 </method>
@@ -246,6 +256,34 @@
 </method>
 <method selector='productIdentifier'>
 <retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='subscriptionPeriod'>
+<retval declared_type='SKProductSubscriptionPeriod * _Nullable' type='@'/>
+</method>
+</class>
+<class name='SKProductDiscount'>
+<method selector='numberOfPeriods'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='paymentMode'>
+<retval declared_type='SKProductDiscountPaymentMode' type='I' type64='Q'/>
+</method>
+<method selector='price'>
+<retval declared_type='NSDecimalNumber * _Nonnull' type='@'/>
+</method>
+<method selector='priceLocale'>
+<retval declared_type='NSLocale * _Nonnull' type='@'/>
+</method>
+<method selector='subscriptionPeriod'>
+<retval declared_type='SKProductSubscriptionPeriod * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='SKProductSubscriptionPeriod'>
+<method selector='numberOfUnits'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='unit'>
+<retval declared_type='SKProductPeriodUnit' type='I' type64='Q'/>
 </method>
 </class>
 <class name='SKProductsRequest'>

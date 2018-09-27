@@ -1,0 +1,1755 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<struct name='AppParameters' type64='{AppParameters=&quot;theMsgEvent&quot;{?=&quot;what&quot;S&quot;message&quot;I&quot;when&quot;I&quot;where&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;modifiers&quot;S}&quot;eventRefCon&quot;I&quot;messageLength&quot;I}'>
+<field declared_type64='struct (anonymous struct at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers/Processes.h:57:3)' name='theMsgEvent' type64='{_structanonymousstructatApplicationsXcodeappContentsDeveloperPlatformsMacOSXplatformDeveloperSDKsMacOSX1014sdkSystemLibraryFrameworksApplicationServicesframeworkFrameworksHIServicesframeworkHeadersProcessesh573=&quot;what&quot;S&quot;message&quot;I&quot;when&quot;I&quot;where&quot;{Point=&quot;v&quot;s&quot;h&quot;s}&quot;modifiers&quot;S}'/>
+<field declared_type64='UInt32' name='eventRefCon' type64='I'/>
+<field declared_type64='UInt32' name='messageLength' type64='I'/>
+</struct>
+<struct name='ICAppSpec' type64='{ICAppSpec=&quot;fCreator&quot;I&quot;name&quot;[64C]}'>
+<field declared_type64='OSType' name='fCreator' type64='I'/>
+<field declared_type64='Str63' name='name' type64='[64C]'/>
+</struct>
+<struct name='ICAppSpecList' type64='{ICAppSpecList=&quot;numberOfItems&quot;s&quot;appSpecs&quot;[1{ICAppSpec=&quot;fCreator&quot;I&quot;name&quot;[64C]}]}'>
+<field declared_type64='SInt16' name='numberOfItems' type64='s'/>
+<field declared_type64='ICAppSpec*' name='appSpecs' type64='[1{ICAppSpec=&quot;fCreator&quot;I&quot;name&quot;[64C]}]'/>
+</struct>
+<struct name='ICCharTable' type64='{ICCharTable=&quot;netToMac&quot;[256C]&quot;macToNet&quot;[256C]}'>
+<field declared_type64='unsigned char*' name='netToMac' type64='[256C]'/>
+<field declared_type64='unsigned char*' name='macToNet' type64='[256C]'/>
+</struct>
+<struct name='ICFileSpec' type64='{ICFileSpec=&quot;volName&quot;[32C]&quot;volCreationDate&quot;i&quot;fss&quot;{FSSpec=&quot;hidden&quot;[70C]}&quot;alias&quot;{AliasRecord=&quot;hidden&quot;[6C]}}'>
+<field declared_type64='Str31' name='volName' type64='[32C]'/>
+<field declared_type64='SInt32' name='volCreationDate' type64='i'/>
+<field declared_type64='FSSpec' name='fss' type64='{FSSpec=&quot;hidden&quot;[70C]}'/>
+<field declared_type64='AliasRecord' name='alias' type64='{AliasRecord=&quot;hidden&quot;[6C]}'/>
+</struct>
+<struct name='ICFontRecord' type64='{ICFontRecord=&quot;size&quot;s&quot;face&quot;C&quot;pad&quot;c&quot;font&quot;[256C]}'>
+<field declared_type64='SInt16' name='size' type64='s'/>
+<field declared_type64='Style' name='face' type64='C'/>
+<field declared_type64='char' name='pad' type64='c'/>
+<field declared_type64='Str255' name='font' type64='[256C]'/>
+</struct>
+<struct name='ICMapEntry' type64='{ICMapEntry=&quot;totalLength&quot;s&quot;fixedLength&quot;s&quot;version&quot;s&quot;fileType&quot;I&quot;fileCreator&quot;I&quot;postCreator&quot;I&quot;flags&quot;i&quot;extension&quot;[256C]&quot;creatorAppName&quot;[256C]&quot;postAppName&quot;[256C]&quot;MIMEType&quot;[256C]&quot;entryName&quot;[256C]}'>
+<field declared_type64='SInt16' name='totalLength' type64='s'/>
+<field declared_type64='ICFixedLength' name='fixedLength' type64='s'/>
+<field declared_type64='SInt16' name='version' type64='s'/>
+<field declared_type64='OSType' name='fileType' type64='I'/>
+<field declared_type64='OSType' name='fileCreator' type64='I'/>
+<field declared_type64='OSType' name='postCreator' type64='I'/>
+<field declared_type64='ICMapEntryFlags' name='flags' type64='i'/>
+<field declared_type64='Str255' name='extension' type64='[256C]'/>
+<field declared_type64='Str255' name='creatorAppName' type64='[256C]'/>
+<field declared_type64='Str255' name='postAppName' type64='[256C]'/>
+<field declared_type64='Str255' name='MIMEType' type64='[256C]'/>
+<field declared_type64='Str255' name='entryName' type64='[256C]'/>
+</struct>
+<struct name='ICServiceEntry' type64='{ICServiceEntry=&quot;name&quot;[256C]&quot;port&quot;s&quot;flags&quot;s}'>
+<field declared_type64='Str255' name='name' type64='[256C]'/>
+<field declared_type64='SInt16' name='port' type64='s'/>
+<field declared_type64='ICServiceEntryFlags' name='flags' type64='s'/>
+</struct>
+<struct name='ICServices' type64='{ICServices=&quot;count&quot;s&quot;services&quot;[1{ICServiceEntry=&quot;name&quot;[256C]&quot;port&quot;s&quot;flags&quot;s}]}'>
+<field declared_type64='SInt16' name='count' type64='s'/>
+<field declared_type64='ICServiceEntry*' name='services' type64='[1{ICServiceEntry=&quot;name&quot;[256C]&quot;port&quot;s&quot;flags&quot;s}]'/>
+</struct>
+<struct name='LaunchParamBlockRec' type64='{LaunchParamBlockRec=&quot;reserved1&quot;I&quot;reserved2&quot;S&quot;launchBlockID&quot;S&quot;launchEPBLength&quot;I&quot;launchFileFlags&quot;S&quot;launchControlFlags&quot;S&quot;launchAppRef&quot;^{FSRef}&quot;launchProcessSN&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;launchPreferredSize&quot;I&quot;launchMinimumSize&quot;I&quot;launchAvailableSize&quot;I&quot;launchAppParameters&quot;^{AppParameters}}'>
+<field declared_type64='UInt32' name='reserved1' type64='I'/>
+<field declared_type64='UInt16' name='reserved2' type64='S'/>
+<field declared_type64='UInt16' name='launchBlockID' type64='S'/>
+<field declared_type64='UInt32' name='launchEPBLength' type64='I'/>
+<field declared_type64='UInt16' name='launchFileFlags' type64='S'/>
+<field declared_type64='LaunchFlags' name='launchControlFlags' type64='S'/>
+<field declared_type64='FSRefPtr' name='launchAppRef' type64='^{FSRef=[80C]}'/>
+<field declared_type64='ProcessSerialNumber' name='launchProcessSN' type64='{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}'/>
+<field declared_type64='UInt32' name='launchPreferredSize' type64='I'/>
+<field declared_type64='UInt32' name='launchMinimumSize' type64='I'/>
+<field declared_type64='UInt32' name='launchAvailableSize' type64='I'/>
+<field declared_type64='AppParametersPtr' name='launchAppParameters' type64='^{AppParameters={?=SII{Point=ss}S}II}'/>
+</struct>
+<struct name='ProcessInfoExtendedRec' type64='{ProcessInfoExtendedRec=&quot;processInfoLength&quot;I&quot;processName&quot;*&quot;processNumber&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processType&quot;I&quot;processSignature&quot;I&quot;processMode&quot;I&quot;processLocation&quot;*&quot;processSize&quot;I&quot;processFreeMem&quot;I&quot;processLauncher&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processLaunchDate&quot;I&quot;processActiveTime&quot;I&quot;processAppRef&quot;^{FSRef}&quot;processTempMemTotal&quot;I&quot;processPurgeableTempMemTotal&quot;I}'>
+<field declared_type64='UInt32' name='processInfoLength' type64='I'/>
+<field declared_type64='StringPtr' name='processName' type64='*'/>
+<field declared_type64='ProcessSerialNumber' name='processNumber' type64='{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}'/>
+<field declared_type64='UInt32' name='processType' type64='I'/>
+<field declared_type64='OSType' name='processSignature' type64='I'/>
+<field declared_type64='UInt32' name='processMode' type64='I'/>
+<field declared_type64='Ptr' name='processLocation' type64='*'/>
+<field declared_type64='UInt32' name='processSize' type64='I'/>
+<field declared_type64='UInt32' name='processFreeMem' type64='I'/>
+<field declared_type64='ProcessSerialNumber' name='processLauncher' type64='{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}'/>
+<field declared_type64='UInt32' name='processLaunchDate' type64='I'/>
+<field declared_type64='UInt32' name='processActiveTime' type64='I'/>
+<field declared_type64='FSRefPtr' name='processAppRef' type64='^{FSRef=[80C]}'/>
+<field declared_type64='UInt32' name='processTempMemTotal' type64='I'/>
+<field declared_type64='UInt32' name='processPurgeableTempMemTotal' type64='I'/>
+</struct>
+<struct name='ProcessInfoRec' type64='{ProcessInfoRec=&quot;processInfoLength&quot;I&quot;processName&quot;*&quot;processNumber&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processType&quot;I&quot;processSignature&quot;I&quot;processMode&quot;I&quot;processLocation&quot;*&quot;processSize&quot;I&quot;processFreeMem&quot;I&quot;processLauncher&quot;{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}&quot;processLaunchDate&quot;I&quot;processActiveTime&quot;I&quot;processAppRef&quot;^{FSRef}}'>
+<field declared_type64='UInt32' name='processInfoLength' type64='I'/>
+<field declared_type64='StringPtr' name='processName' type64='*'/>
+<field declared_type64='ProcessSerialNumber' name='processNumber' type64='{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}'/>
+<field declared_type64='UInt32' name='processType' type64='I'/>
+<field declared_type64='OSType' name='processSignature' type64='I'/>
+<field declared_type64='UInt32' name='processMode' type64='I'/>
+<field declared_type64='Ptr' name='processLocation' type64='*'/>
+<field declared_type64='UInt32' name='processSize' type64='I'/>
+<field declared_type64='UInt32' name='processFreeMem' type64='I'/>
+<field declared_type64='ProcessSerialNumber' name='processLauncher' type64='{ProcessSerialNumber=&quot;highLongOfPSN&quot;I&quot;lowLongOfPSN&quot;I}'/>
+<field declared_type64='UInt32' name='processLaunchDate' type64='I'/>
+<field declared_type64='UInt32' name='processActiveTime' type64='I'/>
+<field declared_type64='FSRefPtr' name='processAppRef' type64='^{FSRef=[80C]}'/>
+</struct>
+<struct name='SizeResourceRec' type64='{SizeResourceRec=&quot;flags&quot;S&quot;preferredHeapSize&quot;I&quot;minimumHeapSize&quot;I}'>
+<field declared_type64='UInt16' name='flags' type64='S'/>
+<field declared_type64='UInt32' name='preferredHeapSize' type64='I'/>
+<field declared_type64='UInt32' name='minimumHeapSize' type64='I'/>
+</struct>
+<cftype gettypeid_func='AXObserverGetTypeID' name='AXObserverRef' type64='^{__AXObserver=}'/>
+<cftype gettypeid_func='AXUIElementGetTypeID' name='AXUIElementRef' type64='^{__AXUIElement=}'/>
+<cftype gettypeid_func='AXValueGetTypeID' name='AXValueRef' type64='^{__AXValue=}'/>
+<cftype gettypeid_func='HIShapeGetTypeID' name='HIMutableShapeRef' type64='^{__HIShape=}'/>
+<cftype gettypeid_func='HIShapeGetTypeID' name='HIShapeRef' type64='^{__HIShape=}'/>
+<cftype gettypeid_func='PasteboardGetTypeID' name='PasteboardRef' type64='^{OpaquePasteboardRef=}'/>
+<cftype gettypeid_func='TranslationGetTypeID' name='TranslationRef' type64='^{OpaqueTranslationRef=}'/>
+<cftype name='ICInstance' type64='^{OpaqueICInstance=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXAttachmentTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXAutocorrectedTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXBackgroundColorTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXFontFamilyKey' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXFontNameKey' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXFontSizeKey' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXFontTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXForegoundColorTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXForegroundColorTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXLinkTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXListItemIndexTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXListItemLevelTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXListItemPrefixTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXMarkedMisspelledTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXMisspelledTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXNaturalLanguageTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXReplacementStringTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXShadowTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXStrikethroughColorTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXStrikethroughTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXSuperscriptTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXTrustedCheckOptionPrompt' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXUnderlineColorTextAttribute' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXUnderlineTextAttribute' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='UInt32' name='kAXValueAXErrorType' type64='I'/>
+<constant const='true' declared_type64='UInt32' name='kAXValueCFRangeType' type64='I'/>
+<constant const='true' declared_type64='UInt32' name='kAXValueCGPointType' type64='I'/>
+<constant const='true' declared_type64='UInt32' name='kAXValueCGRectType' type64='I'/>
+<constant const='true' declared_type64='UInt32' name='kAXValueCGSizeType' type64='I'/>
+<constant const='true' declared_type64='UInt32' name='kAXValueIllegalType' type64='I'/>
+<constant declared_type64='CFStringRef _Nonnull' name='kAXVisibleNameKey' type64='^{__CFString=}'/>
+<string_constant name='kAXAMPMFieldAttribute' nsstring='true' value='AXAMPMField'/>
+<string_constant name='kAXAllowedValuesAttribute' nsstring='true' value='AXAllowedValues'/>
+<string_constant name='kAXAlternateUIVisibleAttribute' nsstring='true' value='AXAlternateUIVisible'/>
+<string_constant name='kAXAnnouncementKey' nsstring='true' value='AXAnnouncementKey'/>
+<string_constant name='kAXAnnouncementRequestedNotification' nsstring='true' value='AXAnnouncementRequested'/>
+<string_constant name='kAXApplicationActivatedNotification' nsstring='true' value='AXApplicationActivated'/>
+<string_constant name='kAXApplicationDeactivatedNotification' nsstring='true' value='AXApplicationDeactivated'/>
+<string_constant name='kAXApplicationDockItemSubrole' nsstring='true' value='AXApplicationDockItem'/>
+<string_constant name='kAXApplicationHiddenNotification' nsstring='true' value='AXApplicationHidden'/>
+<string_constant name='kAXApplicationRole' nsstring='true' value='AXApplication'/>
+<string_constant name='kAXApplicationShownNotification' nsstring='true' value='AXApplicationShown'/>
+<string_constant name='kAXAscendingSortDirectionValue' nsstring='true' value='AXAscendingSortDirection'/>
+<string_constant name='kAXAttributedStringForRangeParameterizedAttribute' nsstring='true' value='AXAttributedStringForRange'/>
+<string_constant name='kAXBoundsForRangeParameterizedAttribute' nsstring='true' value='AXBoundsForRange'/>
+<string_constant name='kAXBrowserRole' nsstring='true' value='AXBrowser'/>
+<string_constant name='kAXBusyIndicatorRole' nsstring='true' value='AXBusyIndicator'/>
+<string_constant name='kAXButtonRole' nsstring='true' value='AXButton'/>
+<string_constant name='kAXCancelAction' nsstring='true' value='AXCancel'/>
+<string_constant name='kAXCancelButtonAttribute' nsstring='true' value='AXCancelButton'/>
+<string_constant name='kAXCellForColumnAndRowParameterizedAttribute' nsstring='true' value='AXCellForColumnAndRow'/>
+<string_constant name='kAXCellRole' nsstring='true' value='AXCell'/>
+<string_constant name='kAXCheckBoxRole' nsstring='true' value='AXCheckBox'/>
+<string_constant name='kAXChildrenAttribute' nsstring='true' value='AXChildren'/>
+<string_constant name='kAXClearButtonAttribute' nsstring='true' value='AXClearButton'/>
+<string_constant name='kAXCloseButtonAttribute' nsstring='true' value='AXCloseButton'/>
+<string_constant name='kAXCloseButtonSubrole' nsstring='true' value='AXCloseButton'/>
+<string_constant name='kAXColorWellRole' nsstring='true' value='AXColorWell'/>
+<string_constant name='kAXColumnCountAttribute' nsstring='true' value='AXColumnCount'/>
+<string_constant name='kAXColumnHeaderUIElementsAttribute' nsstring='true' value='AXColumnHeaderUIElements'/>
+<string_constant name='kAXColumnIndexRangeAttribute' nsstring='true' value='AXColumnIndexRange'/>
+<string_constant name='kAXColumnRole' nsstring='true' value='AXColumn'/>
+<string_constant name='kAXColumnTitleAttribute' nsstring='true' value='AXColumnTitles'/>
+<string_constant name='kAXColumnTitlesAttribute' nsstring='true' value='AXColumnTitles'/>
+<string_constant name='kAXColumnsAttribute' nsstring='true' value='AXColumns'/>
+<string_constant name='kAXComboBoxRole' nsstring='true' value='AXComboBox'/>
+<string_constant name='kAXConfirmAction' nsstring='true' value='AXConfirm'/>
+<string_constant name='kAXContentListSubrole' nsstring='true' value='AXContentList'/>
+<string_constant name='kAXContentsAttribute' nsstring='true' value='AXContents'/>
+<string_constant name='kAXCreatedNotification' nsstring='true' value='AXCreated'/>
+<string_constant name='kAXCriticalValueAttribute' nsstring='true' value='AXCriticalValue'/>
+<string_constant name='kAXDateFieldRole' nsstring='true' value='AXDateField'/>
+<string_constant name='kAXDayFieldAttribute' nsstring='true' value='AXDayField'/>
+<string_constant name='kAXDecrementAction' nsstring='true' value='AXDecrement'/>
+<string_constant name='kAXDecrementArrowSubrole' nsstring='true' value='AXDecrementArrow'/>
+<string_constant name='kAXDecrementButtonAttribute' nsstring='true' value='AXDecrementButton'/>
+<string_constant name='kAXDecrementPageSubrole' nsstring='true' value='AXDecrementPage'/>
+<string_constant name='kAXDefaultButtonAttribute' nsstring='true' value='AXDefaultButton'/>
+<string_constant name='kAXDefinitionListSubrole' nsstring='true' value='AXDefinitionList'/>
+<string_constant name='kAXDescendingSortDirectionValue' nsstring='true' value='AXDescendingSortDirection'/>
+<string_constant name='kAXDescription' nsstring='true' value='AXDescription'/>
+<string_constant name='kAXDescriptionAttribute' nsstring='true' value='AXDescription'/>
+<string_constant name='kAXDescriptionListSubrole' nsstring='true' value='AXDescriptionList'/>
+<string_constant name='kAXDialogSubrole' nsstring='true' value='AXDialog'/>
+<string_constant name='kAXDisclosedByRowAttribute' nsstring='true' value='AXDisclosedByRow'/>
+<string_constant name='kAXDisclosedRowsAttribute' nsstring='true' value='AXDisclosedRows'/>
+<string_constant name='kAXDisclosingAttribute' nsstring='true' value='AXDisclosing'/>
+<string_constant name='kAXDisclosureLevelAttribute' nsstring='true' value='AXDisclosureLevel'/>
+<string_constant name='kAXDisclosureTriangleRole' nsstring='true' value='AXDisclosureTriangle'/>
+<string_constant name='kAXDockExtraDockItemSubrole' nsstring='true' value='AXDockExtraDockItem'/>
+<string_constant name='kAXDockItemRole' nsstring='true' value='AXDockItem'/>
+<string_constant name='kAXDocumentAttribute' nsstring='true' value='AXDocument'/>
+<string_constant name='kAXDocumentDockItemSubrole' nsstring='true' value='AXDocumentDockItem'/>
+<string_constant name='kAXDrawerCreatedNotification' nsstring='true' value='AXDrawerCreated'/>
+<string_constant name='kAXDrawerRole' nsstring='true' value='AXDrawer'/>
+<string_constant name='kAXEditedAttribute' nsstring='true' value='AXEdited'/>
+<string_constant name='kAXElementBusyAttribute' nsstring='true' value='AXElementBusy'/>
+<string_constant name='kAXElementBusyChangedNotification' nsstring='true' value='AXElementBusyChanged'/>
+<string_constant name='kAXEnabledAttribute' nsstring='true' value='AXEnabled'/>
+<string_constant name='kAXExpandedAttribute' nsstring='true' value='AXExpanded'/>
+<string_constant name='kAXExtrasMenuBarAttribute' nsstring='true' value='AXExtrasMenuBar'/>
+<string_constant name='kAXFilenameAttribute' nsstring='true' value='AXFilename'/>
+<string_constant name='kAXFloatingWindowSubrole' nsstring='true' value='AXFloatingWindow'/>
+<string_constant name='kAXFocusedApplicationAttribute' nsstring='true' value='AXFocusedApplication'/>
+<string_constant name='kAXFocusedAttribute' nsstring='true' value='AXFocused'/>
+<string_constant name='kAXFocusedUIElementAttribute' nsstring='true' value='AXFocusedUIElement'/>
+<string_constant name='kAXFocusedUIElementChangedNotification' nsstring='true' value='AXFocusedUIElementChanged'/>
+<string_constant name='kAXFocusedWindowAttribute' nsstring='true' value='AXFocusedWindow'/>
+<string_constant name='kAXFocusedWindowChangedNotification' nsstring='true' value='AXFocusedWindowChanged'/>
+<string_constant name='kAXFolderDockItemSubrole' nsstring='true' value='AXFolderDockItem'/>
+<string_constant name='kAXFrontmostAttribute' nsstring='true' value='AXFrontmost'/>
+<string_constant name='kAXFullScreenButtonAttribute' nsstring='true' value='AXFullScreenButton'/>
+<string_constant name='kAXFullScreenButtonSubrole' nsstring='true' value='AXFullScreenButton'/>
+<string_constant name='kAXGridRole' nsstring='true' value='AXGrid'/>
+<string_constant name='kAXGroupRole' nsstring='true' value='AXGroup'/>
+<string_constant name='kAXGrowAreaAttribute' nsstring='true' value='AXGrowArea'/>
+<string_constant name='kAXGrowAreaRole' nsstring='true' value='AXGrowArea'/>
+<string_constant name='kAXHandleRole' nsstring='true' value='AXHandle'/>
+<string_constant name='kAXHandlesAttribute' nsstring='true' value='AXHandles'/>
+<string_constant name='kAXHeaderAttribute' nsstring='true' value='AXHeader'/>
+<string_constant name='kAXHelpAttribute' nsstring='true' value='AXHelp'/>
+<string_constant name='kAXHelpTagCreatedNotification' nsstring='true' value='AXHelpTagCreated'/>
+<string_constant name='kAXHelpTagRole' nsstring='true' value='AXHelpTag'/>
+<string_constant name='kAXHiddenAttribute' nsstring='true' value='AXHidden'/>
+<string_constant name='kAXHorizontalOrientationValue' nsstring='true' value='AXHorizontalOrientation'/>
+<string_constant name='kAXHorizontalScrollBarAttribute' nsstring='true' value='AXHorizontalScrollBar'/>
+<string_constant name='kAXHorizontalUnitDescriptionAttribute' nsstring='true' value='AXHorizontalUnitDescription'/>
+<string_constant name='kAXHorizontalUnitsAttribute' nsstring='true' value='AXHorizontalUnits'/>
+<string_constant name='kAXHourFieldAttribute' nsstring='true' value='AXHourField'/>
+<string_constant name='kAXIdentifierAttribute' nsstring='true' value='AXIdentifier'/>
+<string_constant name='kAXImageRole' nsstring='true' value='AXImage'/>
+<string_constant name='kAXIncrementAction' nsstring='true' value='AXIncrement'/>
+<string_constant name='kAXIncrementArrowSubrole' nsstring='true' value='AXIncrementArrow'/>
+<string_constant name='kAXIncrementButtonAttribute' nsstring='true' value='AXIncrementButton'/>
+<string_constant name='kAXIncrementPageSubrole' nsstring='true' value='AXIncrementPage'/>
+<string_constant name='kAXIncrementorAttribute' nsstring='true' value='AXIncrementor'/>
+<string_constant name='kAXIncrementorRole' nsstring='true' value='AXIncrementor'/>
+<string_constant name='kAXIndexAttribute' nsstring='true' value='AXIndex'/>
+<string_constant name='kAXInsertionPointLineNumberAttribute' nsstring='true' value='AXInsertionPointLineNumber'/>
+<string_constant name='kAXIsApplicationRunningAttribute' nsstring='true' value='AXIsApplicationRunning'/>
+<string_constant name='kAXIsEditableAttribute' nsstring='true' value='AXIsEditable'/>
+<string_constant name='kAXLabelUIElementsAttribute' nsstring='true' value='AXLabelUIElements'/>
+<string_constant name='kAXLabelValueAttribute' nsstring='true' value='AXLabelValue'/>
+<string_constant name='kAXLayoutAreaRole' nsstring='true' value='AXLayoutArea'/>
+<string_constant name='kAXLayoutChangedNotification' nsstring='true' value='AXLayoutChanged'/>
+<string_constant name='kAXLayoutItemRole' nsstring='true' value='AXLayoutItem'/>
+<string_constant name='kAXLayoutPointForScreenPointParameterizedAttribute' nsstring='true' value='AXLayoutPointForScreenPoint'/>
+<string_constant name='kAXLayoutSizeForScreenSizeParameterizedAttribute' nsstring='true' value='AXLayoutSizeForScreenSize'/>
+<string_constant name='kAXLevelIndicatorRole' nsstring='true' value='AXLevelIndicator'/>
+<string_constant name='kAXLineForIndexParameterizedAttribute' nsstring='true' value='AXLineForIndex'/>
+<string_constant name='kAXLinkedUIElementsAttribute' nsstring='true' value='AXLinkedUIElements'/>
+<string_constant name='kAXListRole' nsstring='true' value='AXList'/>
+<string_constant name='kAXMainAttribute' nsstring='true' value='AXMain'/>
+<string_constant name='kAXMainWindowAttribute' nsstring='true' value='AXMainWindow'/>
+<string_constant name='kAXMainWindowChangedNotification' nsstring='true' value='AXMainWindowChanged'/>
+<string_constant name='kAXMarkerTypeAttribute' nsstring='true' value='AXMarkerType'/>
+<string_constant name='kAXMarkerTypeDescriptionAttribute' nsstring='true' value='AXMarkerTypeDescription'/>
+<string_constant name='kAXMarkerUIElementsAttribute' nsstring='true' value='AXMarkerUIElements'/>
+<string_constant name='kAXMatteContentUIElementAttribute' nsstring='true' value='AXMatteContentUIElement'/>
+<string_constant name='kAXMatteHoleAttribute' nsstring='true' value='AXMatteHole'/>
+<string_constant name='kAXMatteRole' nsstring='true' value='AXMatte'/>
+<string_constant name='kAXMaxValueAttribute' nsstring='true' value='AXMaxValue'/>
+<string_constant name='kAXMenuBarAttribute' nsstring='true' value='AXMenuBar'/>
+<string_constant name='kAXMenuBarItemRole' nsstring='true' value='AXMenuBarItem'/>
+<string_constant name='kAXMenuBarRole' nsstring='true' value='AXMenuBar'/>
+<string_constant name='kAXMenuButtonRole' nsstring='true' value='AXMenuButton'/>
+<string_constant name='kAXMenuClosedNotification' nsstring='true' value='AXMenuClosed'/>
+<string_constant name='kAXMenuItemCmdCharAttribute' nsstring='true' value='AXMenuItemCmdChar'/>
+<string_constant name='kAXMenuItemCmdGlyphAttribute' nsstring='true' value='AXMenuItemCmdGlyph'/>
+<string_constant name='kAXMenuItemCmdModifiersAttribute' nsstring='true' value='AXMenuItemCmdModifiers'/>
+<string_constant name='kAXMenuItemCmdVirtualKeyAttribute' nsstring='true' value='AXMenuItemCmdVirtualKey'/>
+<string_constant name='kAXMenuItemMarkCharAttribute' nsstring='true' value='AXMenuItemMarkChar'/>
+<string_constant name='kAXMenuItemPrimaryUIElementAttribute' nsstring='true' value='AXMenuItemPrimaryUIElement'/>
+<string_constant name='kAXMenuItemRole' nsstring='true' value='AXMenuItem'/>
+<string_constant name='kAXMenuItemSelectedNotification' nsstring='true' value='AXMenuItemSelected'/>
+<string_constant name='kAXMenuOpenedNotification' nsstring='true' value='AXMenuOpened'/>
+<string_constant name='kAXMenuRole' nsstring='true' value='AXMenu'/>
+<string_constant name='kAXMinValueAttribute' nsstring='true' value='AXMinValue'/>
+<string_constant name='kAXMinimizeButtonAttribute' nsstring='true' value='AXMinimizeButton'/>
+<string_constant name='kAXMinimizeButtonSubrole' nsstring='true' value='AXMinimizeButton'/>
+<string_constant name='kAXMinimizedAttribute' nsstring='true' value='AXMinimized'/>
+<string_constant name='kAXMinimizedWindowDockItemSubrole' nsstring='true' value='AXMinimizedWindowDockItem'/>
+<string_constant name='kAXMinuteFieldAttribute' nsstring='true' value='AXMinuteField'/>
+<string_constant name='kAXModalAttribute' nsstring='true' value='AXModal'/>
+<string_constant name='kAXMonthFieldAttribute' nsstring='true' value='AXMonthField'/>
+<string_constant name='kAXMovedNotification' nsstring='true' value='AXMoved'/>
+<string_constant name='kAXNextContentsAttribute' nsstring='true' value='AXNextContents'/>
+<string_constant name='kAXNumberOfCharactersAttribute' nsstring='true' value='AXNumberOfCharacters'/>
+<string_constant name='kAXOrderedByRowAttribute' nsstring='true' value='AXOrderedByRow'/>
+<string_constant name='kAXOrientationAttribute' nsstring='true' value='AXOrientation'/>
+<string_constant name='kAXOutlineRole' nsstring='true' value='AXOutline'/>
+<string_constant name='kAXOutlineRowSubrole' nsstring='true' value='AXOutlineRow'/>
+<string_constant name='kAXOverflowButtonAttribute' nsstring='true' value='AXOverflowButton'/>
+<string_constant name='kAXParentAttribute' nsstring='true' value='AXParent'/>
+<string_constant name='kAXPickAction' nsstring='true' value='AXPick'/>
+<string_constant name='kAXPlaceholderValueAttribute' nsstring='true' value='AXPlaceholderValue'/>
+<string_constant name='kAXPopUpButtonRole' nsstring='true' value='AXPopUpButton'/>
+<string_constant name='kAXPopoverRole' nsstring='true' value='AXPopover'/>
+<string_constant name='kAXPositionAttribute' nsstring='true' value='AXPosition'/>
+<string_constant name='kAXPressAction' nsstring='true' value='AXPress'/>
+<string_constant name='kAXPreviousContentsAttribute' nsstring='true' value='AXPreviousContents'/>
+<string_constant name='kAXPriorityKey' nsstring='true' value='AXPriorityKey'/>
+<string_constant name='kAXProcessSwitcherListSubrole' nsstring='true' value='AXProcessSwitcherList'/>
+<string_constant name='kAXProgressIndicatorRole' nsstring='true' value='AXProgressIndicator'/>
+<string_constant name='kAXProxyAttribute' nsstring='true' value='AXProxy'/>
+<string_constant name='kAXRTFForRangeParameterizedAttribute' nsstring='true' value='AXRTFForRange'/>
+<string_constant name='kAXRadioButtonRole' nsstring='true' value='AXRadioButton'/>
+<string_constant name='kAXRadioGroupRole' nsstring='true' value='AXRadioGroup'/>
+<string_constant name='kAXRaiseAction' nsstring='true' value='AXRaise'/>
+<string_constant name='kAXRangeForIndexParameterizedAttribute' nsstring='true' value='AXRangeForIndex'/>
+<string_constant name='kAXRangeForLineParameterizedAttribute' nsstring='true' value='AXRangeForLine'/>
+<string_constant name='kAXRangeForPositionParameterizedAttribute' nsstring='true' value='AXRangeForPosition'/>
+<string_constant name='kAXRatingIndicatorSubrole' nsstring='true' value='AXRatingIndicator'/>
+<string_constant name='kAXRelevanceIndicatorRole' nsstring='true' value='AXRelevanceIndicator'/>
+<string_constant name='kAXResizedNotification' nsstring='true' value='AXResized'/>
+<string_constant name='kAXRoleAttribute' nsstring='true' value='AXRole'/>
+<string_constant name='kAXRoleDescriptionAttribute' nsstring='true' value='AXRoleDescription'/>
+<string_constant name='kAXRowCollapsedNotification' nsstring='true' value='AXRowCollapsed'/>
+<string_constant name='kAXRowCountAttribute' nsstring='true' value='AXRowCount'/>
+<string_constant name='kAXRowCountChangedNotification' nsstring='true' value='AXRowCountChanged'/>
+<string_constant name='kAXRowExpandedNotification' nsstring='true' value='AXRowExpanded'/>
+<string_constant name='kAXRowHeaderUIElementsAttribute' nsstring='true' value='AXRowHeaderUIElements'/>
+<string_constant name='kAXRowIndexRangeAttribute' nsstring='true' value='AXRowIndexRange'/>
+<string_constant name='kAXRowRole' nsstring='true' value='AXRow'/>
+<string_constant name='kAXRowsAttribute' nsstring='true' value='AXRows'/>
+<string_constant name='kAXRulerMarkerRole' nsstring='true' value='AXRulerMarker'/>
+<string_constant name='kAXRulerRole' nsstring='true' value='AXRuler'/>
+<string_constant name='kAXScreenPointForLayoutPointParameterizedAttribute' nsstring='true' value='AXScreenPointForLayoutPoint'/>
+<string_constant name='kAXScreenSizeForLayoutSizeParameterizedAttribute' nsstring='true' value='AXScreenSizeForLayoutSize'/>
+<string_constant name='kAXScrollAreaRole' nsstring='true' value='AXScrollArea'/>
+<string_constant name='kAXScrollBarRole' nsstring='true' value='AXScrollBar'/>
+<string_constant name='kAXSearchButtonAttribute' nsstring='true' value='AXSearchButton'/>
+<string_constant name='kAXSearchFieldSubrole' nsstring='true' value='AXSearchField'/>
+<string_constant name='kAXSecondFieldAttribute' nsstring='true' value='AXSecondField'/>
+<string_constant name='kAXSecureTextFieldSubrole' nsstring='true' value='AXSecureTextField'/>
+<string_constant name='kAXSelectedAttribute' nsstring='true' value='AXSelected'/>
+<string_constant name='kAXSelectedCellsAttribute' nsstring='true' value='AXSelectedCells'/>
+<string_constant name='kAXSelectedCellsChangedNotification' nsstring='true' value='AXSelectedCellsChanged'/>
+<string_constant name='kAXSelectedChildrenAttribute' nsstring='true' value='AXSelectedChildren'/>
+<string_constant name='kAXSelectedChildrenChangedNotification' nsstring='true' value='AXSelectedChildrenChanged'/>
+<string_constant name='kAXSelectedChildrenMovedNotification' nsstring='true' value='AXSelectedChildrenMoved'/>
+<string_constant name='kAXSelectedColumnsAttribute' nsstring='true' value='AXSelectedColumns'/>
+<string_constant name='kAXSelectedColumnsChangedNotification' nsstring='true' value='AXSelectedColumnsChanged'/>
+<string_constant name='kAXSelectedRowsAttribute' nsstring='true' value='AXSelectedRows'/>
+<string_constant name='kAXSelectedRowsChangedNotification' nsstring='true' value='AXSelectedRowsChanged'/>
+<string_constant name='kAXSelectedTextAttribute' nsstring='true' value='AXSelectedText'/>
+<string_constant name='kAXSelectedTextChangedNotification' nsstring='true' value='AXSelectedTextChanged'/>
+<string_constant name='kAXSelectedTextRangeAttribute' nsstring='true' value='AXSelectedTextRange'/>
+<string_constant name='kAXSelectedTextRangesAttribute' nsstring='true' value='AXSelectedTextRanges'/>
+<string_constant name='kAXSeparatorDockItemSubrole' nsstring='true' value='AXSeparatorDockItem'/>
+<string_constant name='kAXServesAsTitleForUIElementsAttribute' nsstring='true' value='AXServesAsTitleForUIElements'/>
+<string_constant name='kAXSharedCharacterRangeAttribute' nsstring='true' value='AXSharedCharacterRange'/>
+<string_constant name='kAXSharedFocusElementsAttribute' nsstring='true' value='AXSharedFocusElements'/>
+<string_constant name='kAXSharedTextUIElementsAttribute' nsstring='true' value='AXSharedTextUIElements'/>
+<string_constant name='kAXSheetCreatedNotification' nsstring='true' value='AXSheetCreated'/>
+<string_constant name='kAXSheetRole' nsstring='true' value='AXSheet'/>
+<string_constant name='kAXShowAlternateUIAction' nsstring='true' value='AXShowAlternateUI'/>
+<string_constant name='kAXShowDefaultUIAction' nsstring='true' value='AXShowDefaultUI'/>
+<string_constant name='kAXShowMenuAction' nsstring='true' value='AXShowMenu'/>
+<string_constant name='kAXShownMenuUIElementAttribute' nsstring='true' value='AXShownMenuUIElement'/>
+<string_constant name='kAXSizeAttribute' nsstring='true' value='AXSize'/>
+<string_constant name='kAXSliderRole' nsstring='true' value='AXSlider'/>
+<string_constant name='kAXSortButtonSubrole' nsstring='true' value='AXSortButton'/>
+<string_constant name='kAXSortDirectionAttribute' nsstring='true' value='AXSortDirection'/>
+<string_constant name='kAXSplitGroupRole' nsstring='true' value='AXSplitGroup'/>
+<string_constant name='kAXSplitterRole' nsstring='true' value='AXSplitter'/>
+<string_constant name='kAXSplittersAttribute' nsstring='true' value='AXSplitters'/>
+<string_constant name='kAXStandardWindowSubrole' nsstring='true' value='AXStandardWindow'/>
+<string_constant name='kAXStaticTextRole' nsstring='true' value='AXStaticText'/>
+<string_constant name='kAXStringForRangeParameterizedAttribute' nsstring='true' value='AXStringForRange'/>
+<string_constant name='kAXStyleRangeForIndexParameterizedAttribute' nsstring='true' value='AXStyleRangeForIndex'/>
+<string_constant name='kAXSubroleAttribute' nsstring='true' value='AXSubrole'/>
+<string_constant name='kAXSwitchSubrole' nsstring='true' value='AXSwitch'/>
+<string_constant name='kAXSystemDialogSubrole' nsstring='true' value='AXSystemDialog'/>
+<string_constant name='kAXSystemFloatingWindowSubrole' nsstring='true' value='AXSystemFloatingWindow'/>
+<string_constant name='kAXSystemWideRole' nsstring='true' value='AXSystemWide'/>
+<string_constant name='kAXTabGroupRole' nsstring='true' value='AXTabGroup'/>
+<string_constant name='kAXTableRole' nsstring='true' value='AXTable'/>
+<string_constant name='kAXTableRowSubrole' nsstring='true' value='AXTableRow'/>
+<string_constant name='kAXTabsAttribute' nsstring='true' value='AXTabs'/>
+<string_constant name='kAXTextAreaRole' nsstring='true' value='AXTextArea'/>
+<string_constant name='kAXTextAttribute' nsstring='true' value='AXText'/>
+<string_constant name='kAXTextFieldRole' nsstring='true' value='AXTextField'/>
+<string_constant name='kAXTimeFieldRole' nsstring='true' value='AXTimeField'/>
+<string_constant name='kAXTimelineSubrole' nsstring='true' value='AXTimeline'/>
+<string_constant name='kAXTitleAttribute' nsstring='true' value='AXTitle'/>
+<string_constant name='kAXTitleChangedNotification' nsstring='true' value='AXTitleChanged'/>
+<string_constant name='kAXTitleUIElementAttribute' nsstring='true' value='AXTitleUIElement'/>
+<string_constant name='kAXToggleSubrole' nsstring='true' value='AXToggle'/>
+<string_constant name='kAXToolbarButtonAttribute' nsstring='true' value='AXToolbarButton'/>
+<string_constant name='kAXToolbarButtonSubrole' nsstring='true' value='AXToolbarButton'/>
+<string_constant name='kAXToolbarRole' nsstring='true' value='AXToolbar'/>
+<string_constant name='kAXTopLevelUIElementAttribute' nsstring='true' value='AXTopLevelUIElement'/>
+<string_constant name='kAXTrashDockItemSubrole' nsstring='true' value='AXTrashDockItem'/>
+<string_constant name='kAXUIElementDestroyedNotification' nsstring='true' value='AXUIElementDestroyed'/>
+<string_constant name='kAXUIElementsKey' nsstring='true' value='AXUIElementsKey'/>
+<string_constant name='kAXURLAttribute' nsstring='true' value='AXURL'/>
+<string_constant name='kAXURLDockItemSubrole' nsstring='true' value='AXURLDockItem'/>
+<string_constant name='kAXUnitDescriptionAttribute' nsstring='true' value='AXUnitDescription'/>
+<string_constant name='kAXUnitsAttribute' nsstring='true' value='AXUnits'/>
+<string_constant name='kAXUnitsChangedNotification' nsstring='true' value='AXUnitsChanged'/>
+<string_constant name='kAXUnknownOrientationValue' nsstring='true' value='AXUnknownOrientation'/>
+<string_constant name='kAXUnknownRole' nsstring='true' value='AXUnknown'/>
+<string_constant name='kAXUnknownSortDirectionValue' nsstring='true' value='AXUnknownSortDirection'/>
+<string_constant name='kAXUnknownSubrole' nsstring='true' value='AXUnknown'/>
+<string_constant name='kAXValueAttribute' nsstring='true' value='AXValue'/>
+<string_constant name='kAXValueChangedNotification' nsstring='true' value='AXValueChanged'/>
+<string_constant name='kAXValueDescriptionAttribute' nsstring='true' value='AXValueDescription'/>
+<string_constant name='kAXValueIncrementAttribute' nsstring='true' value='AXValueIncrement'/>
+<string_constant name='kAXValueIndicatorRole' nsstring='true' value='AXValueIndicator'/>
+<string_constant name='kAXValueWrapsAttribute' nsstring='true' value='AXValueWraps'/>
+<string_constant name='kAXVerticalOrientationValue' nsstring='true' value='AXVerticalOrientation'/>
+<string_constant name='kAXVerticalScrollBarAttribute' nsstring='true' value='AXVerticalScrollBar'/>
+<string_constant name='kAXVerticalUnitDescriptionAttribute' nsstring='true' value='AXVerticalUnitDescription'/>
+<string_constant name='kAXVerticalUnitsAttribute' nsstring='true' value='AXVerticalUnits'/>
+<string_constant name='kAXVisibleCellsAttribute' nsstring='true' value='AXVisibleCells'/>
+<string_constant name='kAXVisibleCharacterRangeAttribute' nsstring='true' value='AXVisibleCharacterRange'/>
+<string_constant name='kAXVisibleChildrenAttribute' nsstring='true' value='AXVisibleChildren'/>
+<string_constant name='kAXVisibleColumnsAttribute' nsstring='true' value='AXVisibleColumns'/>
+<string_constant name='kAXVisibleRowsAttribute' nsstring='true' value='AXVisibleRows'/>
+<string_constant name='kAXVisibleTextAttribute' nsstring='true' value='AXVisibleText'/>
+<string_constant name='kAXWarningValueAttribute' nsstring='true' value='AXWarningValue'/>
+<string_constant name='kAXWindowAttribute' nsstring='true' value='AXWindow'/>
+<string_constant name='kAXWindowCreatedNotification' nsstring='true' value='AXWindowCreated'/>
+<string_constant name='kAXWindowDeminiaturizedNotification' nsstring='true' value='AXWindowDeminiaturized'/>
+<string_constant name='kAXWindowMiniaturizedNotification' nsstring='true' value='AXWindowMiniaturized'/>
+<string_constant name='kAXWindowMovedNotification' nsstring='true' value='AXWindowMoved'/>
+<string_constant name='kAXWindowResizedNotification' nsstring='true' value='AXWindowResized'/>
+<string_constant name='kAXWindowRole' nsstring='true' value='AXWindow'/>
+<string_constant name='kAXWindowsAttribute' nsstring='true' value='AXWindows'/>
+<string_constant name='kAXYearFieldAttribute' nsstring='true' value='AXYearField'/>
+<string_constant name='kAXZoomButtonAttribute' nsstring='true' value='AXZoomButton'/>
+<string_constant name='kAXZoomButtonSubrole' nsstring='true' value='AXZoomButton'/>
+<string_constant name='kICArchieAll' value='pArchieAll'/>
+<string_constant name='kICArchiePreferred' value='pArchiePreferred'/>
+<string_constant name='kICCharacterSet' value='pCharacterSet'/>
+<string_constant name='kICDocumentFont' value='pDocumentFont'/>
+<string_constant name='kICDownloadFolder' value='pDownloadFolder'/>
+<string_constant name='kICEmail' value='pEmail'/>
+<string_constant name='kICFTPHost' value='pFTPHost'/>
+<string_constant name='kICFTPProxyAccount' value='pFTPProxyAccount'/>
+<string_constant name='kICFTPProxyHost' value='pFTPProxyHost'/>
+<string_constant name='kICFTPProxyPassword' value='pFTPProxyPassword'/>
+<string_constant name='kICFTPProxyUser' value='pFTPProxyUser'/>
+<string_constant name='kICFingerHost' value='pFingerHost'/>
+<string_constant name='kICGopherHost' value='pGopherHost'/>
+<string_constant name='kICGopherProxy' value='pGopherProxy'/>
+<string_constant name='kICHTTPProxyHost' value='pHTTPProxyHost'/>
+<string_constant name='kICHelper' value='pHelper•'/>
+<string_constant name='kICHelperDesc' value='pHelperDesc•'/>
+<string_constant name='kICHelperList' value='pHelperList•'/>
+<string_constant name='kICIRCHost' value='pIRCHost'/>
+<string_constant name='kICInfoMacAll' value='pInfoMacAll'/>
+<string_constant name='kICInfoMacPreferred' value='pInfoMacPreferred'/>
+<string_constant name='kICLDAPSearchbase' value='pLDAPSearchbase'/>
+<string_constant name='kICLDAPServer' value='pLDAPServer'/>
+<string_constant name='kICListFont' value='pListFont'/>
+<string_constant name='kICMacSearchHost' value='pMacSearchHost'/>
+<string_constant name='kICMailAccount' value='pMailAccount'/>
+<string_constant name='kICMailHeaders' value='pMailHeaders'/>
+<string_constant name='kICMailPassword' value='pMailPassword'/>
+<string_constant name='kICMapping' value='pMapping'/>
+<string_constant name='kICNNTPHost' value='pNNTPHost'/>
+<string_constant name='kICNTPHost' value='pNTPHost'/>
+<string_constant name='kICNewMailDialog' value='pNewMailDialog'/>
+<string_constant name='kICNewMailFlashIcon' value='pNewMailFlashIcon'/>
+<string_constant name='kICNewMailPlaySound' value='pNewMailPlaySound'/>
+<string_constant name='kICNewMailSoundName' value='pNewMailSoundName'/>
+<string_constant name='kICNewsAuthPassword' value='pNewsAuthPassword'/>
+<string_constant name='kICNewsAuthUsername' value='pNewsAuthUsername'/>
+<string_constant name='kICNewsHeaders' value='pNewsHeaders'/>
+<string_constant name='kICNoProxyDomains' value='pNoProxyDomains'/>
+<string_constant name='kICOrganization' value='pOrganization'/>
+<string_constant name='kICPhHost' value='pPhHost'/>
+<string_constant name='kICPlan' value='pPlan'/>
+<string_constant name='kICPrinterFont' value='pPrinterFont'/>
+<string_constant name='kICQuotingString' value='pQuotingString'/>
+<string_constant name='kICRTSPProxyHost' value='pRTSPProxyHost'/>
+<string_constant name='kICRealName' value='pRealName'/>
+<string_constant name='kICReservedKey' value='pkICReservedKey'/>
+<string_constant name='kICSMTPHost' value='pSMTPHost'/>
+<string_constant name='kICScreenFont' value='pScreenFont'/>
+<string_constant name='kICServices' value='pServices'/>
+<string_constant name='kICSignature' value='pSignature'/>
+<string_constant name='kICSnailMailAddress' value='pSnailMailAddress'/>
+<string_constant name='kICSocksHost' value='pSocksHost'/>
+<string_constant name='kICTelnetHost' value='pTelnetHost'/>
+<string_constant name='kICUMichAll' value='pUMichAll'/>
+<string_constant name='kICUMichPreferred' value='pUMichPreferred'/>
+<string_constant name='kICUseFTPProxy' value='pUseFTPProxy'/>
+<string_constant name='kICUseGopherProxy' value='pUseGopherProxy'/>
+<string_constant name='kICUseHTTPProxy' value='pUseHTTPProxy'/>
+<string_constant name='kICUsePassiveFTP' value='pUsePassiveFTP'/>
+<string_constant name='kICUseRTSPProxy' value='pUseRTSPProxy'/>
+<string_constant name='kICUseSocks' value='pUseSocks'/>
+<string_constant name='kICWAISGateway' value='pWAISGateway'/>
+<string_constant name='kICWWWHomePage' value='pWWWHomePage'/>
+<string_constant name='kICWebBackgroundColour' value='pWebBackgroundColour'/>
+<string_constant name='kICWebReadColor' value='p646F6777•WebReadColor'/>
+<string_constant name='kICWebSearchPagePrefs' value='pWebSearchPagePrefs'/>
+<string_constant name='kICWebTextColor' value='pWebTextColor'/>
+<string_constant name='kICWebUnderlineLinks' value='p646F6777•WebUnderlineLinks'/>
+<string_constant name='kICWebUnreadColor' value='p646F6777•WebUnreadColor'/>
+<string_constant name='kICWhoisHost' value='pWhoisHost'/>
+<string_constant name='kPasteboardClipboard' nsstring='true' value='com.apple.pasteboard.clipboard'/>
+<string_constant name='kPasteboardFind' nsstring='true' value='com.apple.pasteboard.find'/>
+<string_constant name='kPasteboardTypeFilePromiseContent' nsstring='true' value='com.apple.pasteboard.promised-file-content-type'/>
+<string_constant name='kPasteboardTypeFileURLPromise' nsstring='true' value='com.apple.pasteboard.promised-file-url'/>
+<enum name='activDev' value64='5'/>
+<enum name='atAbsoluteCenter' value64='5'/>
+<enum name='atBottom' value64='3'/>
+<enum name='atBottomLeft' value64='11'/>
+<enum name='atBottomRight' value64='15'/>
+<enum name='atCenterBottom' value64='7'/>
+<enum name='atCenterLeft' value64='9'/>
+<enum name='atCenterRight' value64='13'/>
+<enum name='atCenterTop' value64='6'/>
+<enum name='atHorizontalCenter' value64='4'/>
+<enum name='atLeft' value64='8'/>
+<enum name='atNone' value64='0'/>
+<enum name='atRight' value64='12'/>
+<enum name='atTop' value64='2'/>
+<enum name='atTopLeft' value64='10'/>
+<enum name='atTopRight' value64='14'/>
+<enum name='atVerticalCenter' value64='1'/>
+<enum name='badPasteboardFlavorErr' value64='-25133'/>
+<enum name='badPasteboardIndexErr' value64='-25131'/>
+<enum name='badPasteboardItemErr' value64='-25132'/>
+<enum name='badPasteboardSyncErr' value64='-25130'/>
+<enum name='badTranslationRefErr' value64='-3031'/>
+<enum name='cdevGenErr' value64='-1'/>
+<enum name='cdevMemErr' value64='0'/>
+<enum name='cdevResErr' value64='1'/>
+<enum name='cdevUnset' value64='3'/>
+<enum name='clearDev' value64='13'/>
+<enum name='closeDev' value64='2'/>
+<enum name='copyDev' value64='11'/>
+<enum name='cursorDev' value64='14'/>
+<enum name='cutDev' value64='10'/>
+<enum name='deactivDev' value64='6'/>
+<enum name='duplicatePasteboardFlavorErr' value64='-25134'/>
+<enum name='extendedBlock' value64='19523'/>
+<enum name='extendedBlockLen' value64='40'/>
+<enum name='hitDev' value64='1'/>
+<enum name='icConfigInappropriateErr' value64='-675'/>
+<enum name='icConfigNotFoundErr' value64='-674'/>
+<enum name='icInternalErr' value64='-669'/>
+<enum name='icNoMoreWritersErr' value64='-671'/>
+<enum name='icNoPerm' value64='0'/>
+<enum name='icNoURLErr' value64='-673'/>
+<enum name='icNothingToOverrideErr' value64='-672'/>
+<enum name='icPermErr' value64='-667'/>
+<enum name='icPrefDataErr' value64='-668'/>
+<enum name='icPrefNotFoundErr' value64='-666'/>
+<enum name='icProfileNotFoundErr' value64='-676'/>
+<enum name='icReadOnlyPerm' value64='1'/>
+<enum name='icReadWritePerm' value64='2'/>
+<enum name='icTooManyProfilesErr' value64='-677'/>
+<enum name='icTruncatedErr' value64='-670'/>
+<enum name='initDev' value64='0'/>
+<enum name='kAEFetchURL' value64='1179996748'/>
+<enum name='kAEGetURL' value64='1196773964'/>
+<enum name='kAXCopyMultipleAttributeOptionStopOnError' value64='1'/>
+<enum name='kAXErrorAPIDisabled' value64='-25211'/>
+<enum name='kAXErrorActionUnsupported' value64='-25206'/>
+<enum name='kAXErrorAttributeUnsupported' value64='-25205'/>
+<enum name='kAXErrorCannotComplete' value64='-25204'/>
+<enum name='kAXErrorFailure' value64='-25200'/>
+<enum name='kAXErrorIllegalArgument' value64='-25201'/>
+<enum name='kAXErrorInvalidUIElement' value64='-25202'/>
+<enum name='kAXErrorInvalidUIElementObserver' value64='-25203'/>
+<enum name='kAXErrorNoValue' value64='-25212'/>
+<enum name='kAXErrorNotEnoughPrecision' value64='-25214'/>
+<enum name='kAXErrorNotImplemented' value64='-25208'/>
+<enum name='kAXErrorNotificationAlreadyRegistered' value64='-25209'/>
+<enum name='kAXErrorNotificationNotRegistered' value64='-25210'/>
+<enum name='kAXErrorNotificationUnsupported' value64='-25207'/>
+<enum name='kAXErrorParameterizedAttributeUnsupported' value64='-25213'/>
+<enum name='kAXErrorSuccess' value64='0'/>
+<enum name='kAXMenuItemModifierControl' value64='4'/>
+<enum name='kAXMenuItemModifierNoCommand' value64='8'/>
+<enum name='kAXMenuItemModifierNone' value64='0'/>
+<enum name='kAXMenuItemModifierOption' value64='2'/>
+<enum name='kAXMenuItemModifierShift' value64='1'/>
+<enum name='kAXPriorityHigh' value64='90'/>
+<enum name='kAXPriorityLow' value64='10'/>
+<enum name='kAXPriorityMedium' value64='50'/>
+<enum name='kAXUnderlineStyleDouble' value64='9'/>
+<enum name='kAXUnderlineStyleNone' value64='0'/>
+<enum name='kAXUnderlineStyleSingle' value64='1'/>
+<enum name='kAXUnderlineStyleThick' value64='2'/>
+<enum name='kAXValueTypeAXError' value64='5'/>
+<enum name='kAXValueTypeCFRange' value64='4'/>
+<enum name='kAXValueTypeCGPoint' value64='1'/>
+<enum name='kAXValueTypeCGRect' value64='3'/>
+<enum name='kAXValueTypeCGSize' value64='2'/>
+<enum name='kAXValueTypeIllegal' value64='0'/>
+<enum name='kAlignAbsoluteCenter' value64='5'/>
+<enum name='kAlignBottom' value64='3'/>
+<enum name='kAlignBottomLeft' value64='11'/>
+<enum name='kAlignBottomRight' value64='15'/>
+<enum name='kAlignCenterBottom' value64='7'/>
+<enum name='kAlignCenterLeft' value64='9'/>
+<enum name='kAlignCenterRight' value64='13'/>
+<enum name='kAlignCenterTop' value64='6'/>
+<enum name='kAlignHorizontalCenter' value64='4'/>
+<enum name='kAlignLeft' value64='8'/>
+<enum name='kAlignNone' value64='0'/>
+<enum name='kAlignRight' value64='12'/>
+<enum name='kAlignTop' value64='2'/>
+<enum name='kAlignTopLeft' value64='10'/>
+<enum name='kAlignTopRight' value64='14'/>
+<enum name='kAlignVerticalCenter' value64='1'/>
+<enum name='kCurrentProcess' value64='2'/>
+<enum name='kHIShapeEnumerateInit' value64='1'/>
+<enum name='kHIShapeEnumerateRect' value64='2'/>
+<enum name='kHIShapeEnumerateTerminate' value64='3'/>
+<enum name='kHIShapeParseFromBottom' value64='1'/>
+<enum name='kHIShapeParseFromBottomRight' value64='3'/>
+<enum name='kHIShapeParseFromLeft' value64='0'/>
+<enum name='kHIShapeParseFromRight' value64='2'/>
+<enum name='kHIShapeParseFromTop' value64='0'/>
+<enum name='kHIShapeParseFromTopLeft' value64='0'/>
+<enum name='kICAttrLockedBit' value64='0'/>
+<enum name='kICAttrLockedMask' value64='1'/>
+<enum name='kICAttrNoChange' value64='4294967295'/>
+<enum name='kICAttrVolatileBit' value64='1'/>
+<enum name='kICAttrVolatileMask' value64='2'/>
+<enum name='kICComponentInterfaceVersion' value64='262144'/>
+<enum name='kICComponentInterfaceVersion0' value64='0'/>
+<enum name='kICComponentInterfaceVersion1' value64='65536'/>
+<enum name='kICComponentInterfaceVersion2' value64='131072'/>
+<enum name='kICComponentInterfaceVersion3' value64='196608'/>
+<enum name='kICComponentInterfaceVersion4' value64='262144'/>
+<enum name='kICComponentVersion' value64='0'/>
+<enum name='kICCreator' value64='1229144432'/>
+<enum name='kICEditPreferenceEvent' value64='1229144432'/>
+<enum name='kICEditPreferenceEventClass' value64='1229144432'/>
+<enum name='kICFileSpecHeaderSize' value64='106'/>
+<enum name='kICFileType' value64='1229144432'/>
+<enum name='kICMapBinaryBit' value64='0'/>
+<enum name='kICMapBinaryMask' value64='1'/>
+<enum name='kICMapDataForkBit' value64='2'/>
+<enum name='kICMapDataForkMask' value64='4'/>
+<enum name='kICMapFixedLength' value64='22'/>
+<enum name='kICMapNotIncomingBit' value64='4'/>
+<enum name='kICMapNotIncomingMask' value64='16'/>
+<enum name='kICMapNotOutgoingBit' value64='5'/>
+<enum name='kICMapNotOutgoingMask' value64='32'/>
+<enum name='kICMapPostBit' value64='3'/>
+<enum name='kICMapPostMask' value64='8'/>
+<enum name='kICMapResourceForkBit' value64='1'/>
+<enum name='kICMapResourceForkMask' value64='2'/>
+<enum name='kICNilProfileID' value64='0'/>
+<enum name='kICNoUserInteractionBit' value64='0'/>
+<enum name='kICNoUserInteractionMask' value64='1'/>
+<enum name='kICNumVersion' value64='1'/>
+<enum name='kICServicesTCPBit' value64='0'/>
+<enum name='kICServicesTCPMask' value64='1'/>
+<enum name='kICServicesUDPBit' value64='1'/>
+<enum name='kICServicesUDPMask' value64='2'/>
+<enum name='kInternetEventClass' value64='1196773964'/>
+<enum name='kNoProcess' value64='0'/>
+<enum name='kPasteboardClientIsOwner' value64='2'/>
+<enum name='kPasteboardFlavorNoFlags' value64='0'/>
+<enum name='kPasteboardFlavorNotSaved' value64='4'/>
+<enum name='kPasteboardFlavorPromised' value64='512'/>
+<enum name='kPasteboardFlavorRequestOnly' value64='8'/>
+<enum name='kPasteboardFlavorSenderOnly' value64='1'/>
+<enum name='kPasteboardFlavorSenderTranslated' value64='2'/>
+<enum name='kPasteboardFlavorSystemTranslated' value64='256'/>
+<enum name='kPasteboardModified' value64='1'/>
+<enum name='kPasteboardStandardLocationTrash' value64='1953657704'/>
+<enum name='kPasteboardStandardLocationUnknown' value64='1970170734'/>
+<enum name='kPlotIconRefNoImage' value64='2'/>
+<enum name='kPlotIconRefNoMask' value64='4'/>
+<enum name='kPlotIconRefNormalFlags' value64='0'/>
+<enum name='kProcessDictionaryIncludeAllInformationMask' value64='-1'/>
+<enum name='kProcessTransformToBackgroundApplication' value64='2'/>
+<enum name='kProcessTransformToForegroundApplication' value64='1'/>
+<enum name='kProcessTransformToUIElementApplication' value64='4'/>
+<enum name='kQuitAtNormalTimeMask' value64='2'/>
+<enum name='kQuitBeforeFBAsQuitMask' value64='4'/>
+<enum name='kQuitBeforeNormalTimeMask' value64='1'/>
+<enum name='kQuitBeforeShellQuitsMask' value64='8'/>
+<enum name='kQuitBeforeTerminatorAppQuitsMask' value64='16'/>
+<enum name='kQuitNeverMask' value64='32'/>
+<enum name='kQuitNotQuitDuringInstallMask' value64='256'/>
+<enum name='kQuitNotQuitDuringLogoutMask' value64='512'/>
+<enum name='kQuitOptionsMask' value64='127'/>
+<enum name='kSelectorAll1BitData' value64='16843009'/>
+<enum name='kSelectorAll32BitData' value64='134219784'/>
+<enum name='kSelectorAll4BitData' value64='33686018'/>
+<enum name='kSelectorAll8BitData' value64='67372036'/>
+<enum name='kSelectorAllAvailableData' value64='4294967295'/>
+<enum name='kSelectorAllHugeData' value64='4278190080'/>
+<enum name='kSelectorAllLargeData' value64='255'/>
+<enum name='kSelectorAllMiniData' value64='16711680'/>
+<enum name='kSelectorAllSmallData' value64='65280'/>
+<enum name='kSelectorHuge1Bit' value64='16777216'/>
+<enum name='kSelectorHuge32Bit' value64='134217728'/>
+<enum name='kSelectorHuge4Bit' value64='33554432'/>
+<enum name='kSelectorHuge8Bit' value64='67108864'/>
+<enum name='kSelectorHuge8BitMask' value64='268435456'/>
+<enum name='kSelectorLarge1Bit' value64='1'/>
+<enum name='kSelectorLarge32Bit' value64='8'/>
+<enum name='kSelectorLarge4Bit' value64='2'/>
+<enum name='kSelectorLarge8Bit' value64='4'/>
+<enum name='kSelectorLarge8BitMask' value64='16'/>
+<enum name='kSelectorMini1Bit' value64='65536'/>
+<enum name='kSelectorMini4Bit' value64='131072'/>
+<enum name='kSelectorMini8Bit' value64='262144'/>
+<enum name='kSelectorSmall1Bit' value64='256'/>
+<enum name='kSelectorSmall32Bit' value64='2048'/>
+<enum name='kSelectorSmall4Bit' value64='512'/>
+<enum name='kSelectorSmall8Bit' value64='1024'/>
+<enum name='kSelectorSmall8BitMask' value64='4096'/>
+<enum name='kSetFrontProcessCausedByUser' value64='2'/>
+<enum name='kSetFrontProcessFrontWindowOnly' value64='1'/>
+<enum name='kSystemProcess' value64='1'/>
+<enum name='kTransformDisabled' value64='1'/>
+<enum name='kTransformLabel1' value64='256'/>
+<enum name='kTransformLabel2' value64='512'/>
+<enum name='kTransformLabel3' value64='768'/>
+<enum name='kTransformLabel4' value64='1024'/>
+<enum name='kTransformLabel5' value64='1280'/>
+<enum name='kTransformLabel6' value64='1536'/>
+<enum name='kTransformLabel7' value64='1792'/>
+<enum name='kTransformNone' value64='0'/>
+<enum name='kTransformOffline' value64='2'/>
+<enum name='kTransformOpen' value64='3'/>
+<enum name='kTransformSelected' value64='16384'/>
+<enum name='kTransformSelectedDisabled' value64='16385'/>
+<enum name='kTransformSelectedOffline' value64='16386'/>
+<enum name='kTransformSelectedOpen' value64='16387'/>
+<enum name='kTranslationDataTranslation' value64='1'/>
+<enum name='kTranslationFileTranslation' value64='2'/>
+<enum name='kUAZoomFocusTypeInsertionPoint' value64='1'/>
+<enum name='kUAZoomFocusTypeOther' value64='0'/>
+<enum name='keyAEAttaching' value64='1098146664'/>
+<enum name='keyEvtDev' value64='7'/>
+<enum name='keyICEditPreferenceDestination' value64='1684370292'/>
+<enum name='launchAllow24Bit' value64='256'/>
+<enum name='launchContinue' value64='16384'/>
+<enum name='launchDontSwitch' value64='512'/>
+<enum name='launchInhibitDaemon' value64='128'/>
+<enum name='launchNoFileFlags' value64='2048'/>
+<enum name='launchUseMinimum' value64='1024'/>
+<enum name='macDev' value64='8'/>
+<enum name='mode32BitCompatible' value64='128'/>
+<enum name='modeCanBackground' value64='4096'/>
+<enum name='modeControlPanel' value64='524288'/>
+<enum name='modeDeskAccessory' value64='131072'/>
+<enum name='modeDisplayManagerAware' value64='4'/>
+<enum name='modeDoesActivateOnFGSwitch' value64='2048'/>
+<enum name='modeGetAppDiedMsg' value64='256'/>
+<enum name='modeGetFrontClicks' value64='512'/>
+<enum name='modeHighLevelEventAware' value64='64'/>
+<enum name='modeLaunchDontSwitch' value64='262144'/>
+<enum name='modeLocalAndRemoteHLEvents' value64='32'/>
+<enum name='modeMultiLaunch' value64='65536'/>
+<enum name='modeNeedSuspendResume' value64='16384'/>
+<enum name='modeOnlyBackground' value64='1024'/>
+<enum name='modeReserved' value64='16777216'/>
+<enum name='modeStationeryAware' value64='16'/>
+<enum name='modeUseTextEditServices' value64='8'/>
+<enum name='noPasteboardPromiseKeeperErr' value64='-25136'/>
+<enum name='notPasteboardOwnerErr' value64='-25135'/>
+<enum name='nulDev' value64='3'/>
+<enum name='pasteDev' value64='12'/>
+<enum name='svAll1BitData' value64='16843009'/>
+<enum name='svAll4BitData' value64='33686018'/>
+<enum name='svAll8BitData' value64='67372036'/>
+<enum name='svAllAvailableData' value64='4294967295'/>
+<enum name='svAllLargeData' value64='255'/>
+<enum name='svAllMiniData' value64='16711680'/>
+<enum name='svAllSmallData' value64='65280'/>
+<enum name='svLarge1Bit' value64='1'/>
+<enum name='svLarge4Bit' value64='2'/>
+<enum name='svLarge8Bit' value64='4'/>
+<enum name='svMini1Bit' value64='65536'/>
+<enum name='svMini4Bit' value64='131072'/>
+<enum name='svMini8Bit' value64='262144'/>
+<enum name='svSmall1Bit' value64='256'/>
+<enum name='svSmall4Bit' value64='512'/>
+<enum name='svSmall8Bit' value64='1024'/>
+<enum name='ttDisabled' value64='1'/>
+<enum name='ttLabel1' value64='256'/>
+<enum name='ttLabel2' value64='512'/>
+<enum name='ttLabel3' value64='768'/>
+<enum name='ttLabel4' value64='1024'/>
+<enum name='ttLabel5' value64='1280'/>
+<enum name='ttLabel6' value64='1536'/>
+<enum name='ttLabel7' value64='1792'/>
+<enum name='ttNone' value64='0'/>
+<enum name='ttOffline' value64='2'/>
+<enum name='ttOpen' value64='3'/>
+<enum name='ttSelected' value64='16384'/>
+<enum name='ttSelectedDisabled' value64='16385'/>
+<enum name='ttSelectedOffline' value64='16386'/>
+<enum name='ttSelectedOpen' value64='16387'/>
+<enum name='undoDev' value64='9'/>
+<enum name='updateDev' value64='4'/>
+<function name='AXAPIEnabled'>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='AXIsProcessTrusted'>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='AXIsProcessTrustedWithOptions'>
+<arg declared_type64='CFDictionaryRef _Nullable' name='options' type64='^{__CFDictionary=}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='AXMakeProcessTrusted'>
+<arg declared_type64='CFStringRef _Nonnull' name='executablePath' type64='^{__CFString=}'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXObserverAddNotification'>
+<arg declared_type64='AXObserverRef _Nonnull' name='observer' type64='^{__AXObserver=}'/>
+<arg declared_type64='AXUIElementRef _Nonnull' name='element' type64='^{__AXUIElement=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='notification' type64='^{__CFString=}'/>
+<arg declared_type64='void * _Nullable' name='refcon' type64='^v'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXObserverCreate'>
+<arg declared_type64='pid_t' name='application' type64='i'/>
+<arg declared_type64='AXObserverCallback _Nonnull' function_pointer='true' name='callback' type64='^?'>
+<arg declared_type64='AXObserverRef _Nonnull' type64='^{__AXObserver=}'/>
+<arg declared_type64='AXUIElementRef _Nonnull' type64='^{__AXUIElement=}'/>
+<arg declared_type64='CFStringRef _Nonnull' type64='^{__CFString=}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='AXObserverRef _Nullable * _Nonnull' name='outObserver' type64='^^{__AXObserver}'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXObserverCreateWithInfoCallback'>
+<arg declared_type64='pid_t' name='application' type64='i'/>
+<arg declared_type64='AXObserverCallbackWithInfo _Nonnull' function_pointer='true' name='callback' type64='^?'>
+<arg declared_type64='AXObserverRef _Nonnull' type64='^{__AXObserver=}'/>
+<arg declared_type64='AXUIElementRef _Nonnull' type64='^{__AXUIElement=}'/>
+<arg declared_type64='CFStringRef _Nonnull' type64='^{__CFString=}'/>
+<arg declared_type64='CFDictionaryRef _Nonnull' type64='^{__CFDictionary=}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='AXObserverRef _Nullable * _Nonnull' name='outObserver' type64='^^{__AXObserver}'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXObserverGetRunLoopSource'>
+<arg declared_type64='AXObserverRef _Nonnull' name='observer' type64='^{__AXObserver=}'/>
+<retval declared_type64='CFRunLoopSourceRef _Nonnull' type64='^{__CFRunLoopSource=}'/>
+</function>
+<function name='AXObserverGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='AXObserverRemoveNotification'>
+<arg declared_type64='AXObserverRef _Nonnull' name='observer' type64='^{__AXObserver=}'/>
+<arg declared_type64='AXUIElementRef _Nonnull' name='element' type64='^{__AXUIElement=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='notification' type64='^{__CFString=}'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXUIElementCopyActionDescription'>
+<arg declared_type64='AXUIElementRef _Nonnull' name='element' type64='^{__AXUIElement=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='action' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef _Nullable * _Nonnull' name='description' type64='^^{__CFString}'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXUIElementCopyActionNames'>
+<arg declared_type64='AXUIElementRef _Nonnull' name='element' type64='^{__AXUIElement=}'/>
+<arg declared_type64='CFArrayRef _Nullable * _Nonnull' name='names' type64='^^{__CFArray}'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXUIElementCopyAttributeNames'>
+<arg declared_type64='AXUIElementRef _Nonnull' name='element' type64='^{__AXUIElement=}'/>
+<arg declared_type64='CFArrayRef _Nullable * _Nonnull' name='names' type64='^^{__CFArray}'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXUIElementCopyAttributeValue'>
+<arg declared_type64='AXUIElementRef _Nonnull' name='element' type64='^{__AXUIElement=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='attribute' type64='^{__CFString=}'/>
+<arg declared_type64='CFTypeRef _Nullable * _Nonnull' name='value' type64='^^v'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXUIElementCopyAttributeValues'>
+<arg declared_type64='AXUIElementRef _Nonnull' name='element' type64='^{__AXUIElement=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='attribute' type64='^{__CFString=}'/>
+<arg declared_type64='CFIndex' name='index' type64='q'/>
+<arg declared_type64='CFIndex' name='maxValues' type64='q'/>
+<arg declared_type64='CFArrayRef _Nullable * _Nonnull' name='values' type64='^^{__CFArray}'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXUIElementCopyElementAtPosition'>
+<arg declared_type64='AXUIElementRef _Nonnull' name='application' type64='^{__AXUIElement=}'/>
+<arg declared_type64='float' name='x' type64='f'/>
+<arg declared_type64='float' name='y' type64='f'/>
+<arg declared_type64='AXUIElementRef _Nullable * _Nonnull' name='element' type64='^^{__AXUIElement}'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXUIElementCopyMultipleAttributeValues'>
+<arg declared_type64='AXUIElementRef _Nonnull' name='element' type64='^{__AXUIElement=}'/>
+<arg declared_type64='CFArrayRef _Nonnull' name='attributes' type64='^{__CFArray=}'/>
+<arg declared_type64='AXCopyMultipleAttributeOptions' name='options' type64='I'/>
+<arg declared_type64='CFArrayRef _Nullable * _Nonnull' name='values' type64='^^{__CFArray}'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXUIElementCopyParameterizedAttributeNames'>
+<arg declared_type64='AXUIElementRef _Nonnull' name='element' type64='^{__AXUIElement=}'/>
+<arg declared_type64='CFArrayRef _Nullable * _Nonnull' name='names' type64='^^{__CFArray}'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXUIElementCopyParameterizedAttributeValue'>
+<arg declared_type64='AXUIElementRef _Nonnull' name='element' type64='^{__AXUIElement=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='parameterizedAttribute' type64='^{__CFString=}'/>
+<arg declared_type64='CFTypeRef _Nonnull' name='parameter' type64='@'/>
+<arg declared_type64='CFTypeRef _Nullable * _Nonnull' name='result' type64='^^v'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXUIElementCreateApplication'>
+<arg declared_type64='pid_t' name='pid' type64='i'/>
+<retval declared_type64='AXUIElementRef _Nonnull' type64='^{__AXUIElement=}'/>
+</function>
+<function name='AXUIElementCreateSystemWide'>
+<retval declared_type64='AXUIElementRef _Nonnull' type64='^{__AXUIElement=}'/>
+</function>
+<function name='AXUIElementGetAttributeValueCount'>
+<arg declared_type64='AXUIElementRef _Nonnull' name='element' type64='^{__AXUIElement=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='attribute' type64='^{__CFString=}'/>
+<arg declared_type64='CFIndex * _Nonnull' name='count' type64='^q'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXUIElementGetPid'>
+<arg declared_type64='AXUIElementRef _Nonnull' name='element' type64='^{__AXUIElement=}'/>
+<arg declared_type64='pid_t * _Nonnull' name='pid' type64='^i'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXUIElementGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='AXUIElementIsAttributeSettable'>
+<arg declared_type64='AXUIElementRef _Nonnull' name='element' type64='^{__AXUIElement=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='attribute' type64='^{__CFString=}'/>
+<arg declared_type64='Boolean * _Nonnull' name='settable' type64='^B'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXUIElementPerformAction'>
+<arg declared_type64='AXUIElementRef _Nonnull' name='element' type64='^{__AXUIElement=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='action' type64='^{__CFString=}'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXUIElementPostKeyboardEvent'>
+<arg declared_type64='AXUIElementRef _Nonnull' name='application' type64='^{__AXUIElement=}'/>
+<arg declared_type64='CGCharCode' name='keyChar' type64='S'/>
+<arg declared_type64='CGKeyCode' name='virtualKey' type64='S'/>
+<arg declared_type64='Boolean' name='keyDown' type64='B'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXUIElementSetAttributeValue'>
+<arg declared_type64='AXUIElementRef _Nonnull' name='element' type64='^{__AXUIElement=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='attribute' type64='^{__CFString=}'/>
+<arg declared_type64='CFTypeRef _Nonnull' name='value' type64='@'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXUIElementSetMessagingTimeout'>
+<arg declared_type64='AXUIElementRef _Nonnull' name='element' type64='^{__AXUIElement=}'/>
+<arg declared_type64='float' name='timeoutInSeconds' type64='f'/>
+<retval declared_type64='AXError' type64='i'/>
+</function>
+<function name='AXValueCreate'>
+<arg declared_type64='AXValueType' name='theType' type64='I'/>
+<arg const='true' declared_type64='void * _Nonnull' name='valuePtr' type64='^v'/>
+<retval declared_type64='AXValueRef _Nullable' type64='^{__AXValue=}'/>
+</function>
+<function name='AXValueGetType'>
+<arg declared_type64='AXValueRef _Nonnull' name='value' type64='^{__AXValue=}'/>
+<retval declared_type64='AXValueType' type64='I'/>
+</function>
+<function name='AXValueGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='AXValueGetValue'>
+<arg declared_type64='AXValueRef _Nonnull' name='value' type64='^{__AXValue=}'/>
+<arg declared_type64='AXValueType' name='theType' type64='I'/>
+<arg declared_type64='void * _Nonnull' name='valuePtr' type64='^v'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='CopyProcessName'>
+<arg const='true' declared_type64='ProcessSerialNumber*' name='psn' type64='^{ProcessSerialNumber=II}'/>
+<arg declared_type64='CFStringRef*' name='name' type64='^^{__CFString}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='DisposeIconActionUPP'>
+<arg declared_type64='IconActionUPP' function_pointer='true' name='userUPP' type64='^?'>
+<arg declared_type64='ResType' type64='I'/>
+<arg declared_type64='Handle*' type64='^^*'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='OSErr' type64='s'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='DisposeIconGetterUPP'>
+<arg declared_type64='IconGetterUPP' function_pointer='true' name='userUPP' type64='^?'>
+<arg declared_type64='ResType' type64='I'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='Handle' type64='^*'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='ExitToShell'>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='GetCurrentProcess'>
+<arg declared_type64='ProcessSerialNumber*' name='PSN' type64='^{ProcessSerialNumber=II}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='GetFrontProcess'>
+<arg declared_type64='ProcessSerialNumber*' name='PSN' type64='^{ProcessSerialNumber=II}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='GetIconFamilyData'>
+<arg declared_type64='IconFamilyHandle' name='iconFamily' type64='^^{IconFamilyResource}'/>
+<arg declared_type64='OSType' name='iconType' type64='I'/>
+<arg declared_type64='Handle' name='h' type64='^*'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='GetIconRefVariant'>
+<arg declared_type64='IconRef' name='inIconRef' type64='^{OpaqueIconRef=}'/>
+<arg declared_type64='OSType' name='inVariant' type64='I'/>
+<arg declared_type64='IconTransformType*' name='outTransform' type64='^s'/>
+<retval declared_type64='IconRef' type64='^{OpaqueIconRef=}'/>
+</function>
+<function name='GetNextProcess'>
+<arg declared_type64='ProcessSerialNumber*' name='PSN' type64='^{ProcessSerialNumber=II}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='GetProcessBundleLocation'>
+<arg const='true' declared_type64='ProcessSerialNumber*' name='psn' type64='^{ProcessSerialNumber=II}'/>
+<arg declared_type64='FSRef*' name='location' type64='^{FSRef=[80C]}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='GetProcessForPID'>
+<arg declared_type64='pid_t' name='pid' type64='i'/>
+<arg declared_type64='ProcessSerialNumber*' name='psn' type64='^{ProcessSerialNumber=II}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='GetProcessInformation'>
+<arg const='true' declared_type64='ProcessSerialNumber*' name='PSN' type64='^{ProcessSerialNumber=II}'/>
+<arg declared_type64='ProcessInfoRec*' name='info' type64='^{ProcessInfoRec=I*{ProcessSerialNumber=II}III*II{ProcessSerialNumber=II}II^{FSRef}}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='GetProcessPID'>
+<arg const='true' declared_type64='ProcessSerialNumber*' name='psn' type64='^{ProcessSerialNumber=II}'/>
+<arg declared_type64='pid_t*' name='pid' type64='^i'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='HIShapeContainsPoint'>
+<arg declared_type64='HIShapeRef' name='inShape' type64='^{__HIShape=}'/>
+<arg const='true' declared_type64='CGPoint*' name='inPoint' type64='^{CGPoint=dd}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='HIShapeCreateCopy'>
+<arg declared_type64='HIShapeRef' name='inShape' type64='^{__HIShape=}'/>
+<retval already_retained='true' declared_type64='HIShapeRef' type64='^{__HIShape=}'/>
+</function>
+<function name='HIShapeCreateDifference'>
+<arg declared_type64='HIShapeRef' name='inShape1' type64='^{__HIShape=}'/>
+<arg declared_type64='HIShapeRef' name='inShape2' type64='^{__HIShape=}'/>
+<retval already_retained='true' declared_type64='HIShapeRef' type64='^{__HIShape=}'/>
+</function>
+<function name='HIShapeCreateEmpty'>
+<retval already_retained='true' declared_type64='HIShapeRef' type64='^{__HIShape=}'/>
+</function>
+<function name='HIShapeCreateIntersection'>
+<arg declared_type64='HIShapeRef' name='inShape1' type64='^{__HIShape=}'/>
+<arg declared_type64='HIShapeRef' name='inShape2' type64='^{__HIShape=}'/>
+<retval already_retained='true' declared_type64='HIShapeRef' type64='^{__HIShape=}'/>
+</function>
+<function name='HIShapeCreateMutable'>
+<retval already_retained='true' declared_type64='HIMutableShapeRef' type64='^{__HIShape=}'/>
+</function>
+<function name='HIShapeCreateMutableCopy'>
+<arg declared_type64='HIShapeRef' name='inOrig' type64='^{__HIShape=}'/>
+<retval already_retained='true' declared_type64='HIMutableShapeRef' type64='^{__HIShape=}'/>
+</function>
+<function name='HIShapeCreateMutableWithRect'>
+<arg const='true' declared_type64='CGRect*' name='inRect' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval already_retained='true' declared_type64='HIMutableShapeRef' type64='^{__HIShape=}'/>
+</function>
+<function name='HIShapeCreateUnion'>
+<arg declared_type64='HIShapeRef' name='inShape1' type64='^{__HIShape=}'/>
+<arg declared_type64='HIShapeRef' name='inShape2' type64='^{__HIShape=}'/>
+<retval already_retained='true' declared_type64='HIShapeRef' type64='^{__HIShape=}'/>
+</function>
+<function name='HIShapeCreateWithQDRgn'>
+<arg declared_type64='RgnHandle' name='inRgn' type64='^{OpaqueRgnHandle=}'/>
+<retval already_retained='true' declared_type64='HIShapeRef' type64='^{__HIShape=}'/>
+</function>
+<function name='HIShapeCreateWithRect'>
+<arg const='true' declared_type64='CGRect*' name='inRect' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval already_retained='true' declared_type64='HIShapeRef' type64='^{__HIShape=}'/>
+</function>
+<function name='HIShapeCreateXor'>
+<arg declared_type64='HIShapeRef' name='inShape1' type64='^{__HIShape=}'/>
+<arg declared_type64='HIShapeRef' name='inShape2' type64='^{__HIShape=}'/>
+<retval already_retained='true' declared_type64='HIShapeRef' type64='^{__HIShape=}'/>
+</function>
+<function name='HIShapeDifference'>
+<arg declared_type64='HIShapeRef' name='inShape1' type64='^{__HIShape=}'/>
+<arg declared_type64='HIShapeRef' name='inShape2' type64='^{__HIShape=}'/>
+<arg declared_type64='HIMutableShapeRef' name='outResult' type64='^{__HIShape=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='HIShapeEnumerate'>
+<arg declared_type64='HIShapeRef' name='inShape' type64='^{__HIShape=}'/>
+<arg declared_type64='OptionBits' name='inOptions' type64='I'/>
+<arg declared_type64='HIShapeEnumerateProcPtr' function_pointer='true' name='inProc' type64='^?'>
+<arg declared_type64='int' type64='i'/>
+<arg declared_type64='HIShapeRef' type64='^{__HIShape=}'/>
+<arg const='true' declared_type64='CGRect*' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<arg declared_type64='void*' name='inRefcon' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='HIShapeGetAsQDRgn'>
+<arg declared_type64='HIShapeRef' name='inShape' type64='^{__HIShape=}'/>
+<arg declared_type64='RgnHandle' name='outRgn' type64='^{OpaqueRgnHandle=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='HIShapeGetBounds'>
+<arg declared_type64='HIShapeRef' name='inShape' type64='^{__HIShape=}'/>
+<arg declared_type64='CGRect*' name='outRect' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='CGRect*' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='HIShapeGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='HIShapeInset'>
+<arg declared_type64='HIMutableShapeRef' name='inShape' type64='^{__HIShape=}'/>
+<arg declared_type64='CGFloat' name='inDX' type64='d'/>
+<arg declared_type64='CGFloat' name='inDY' type64='d'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='HIShapeIntersect'>
+<arg declared_type64='HIShapeRef' name='inShape1' type64='^{__HIShape=}'/>
+<arg declared_type64='HIShapeRef' name='inShape2' type64='^{__HIShape=}'/>
+<arg declared_type64='HIMutableShapeRef' name='outResult' type64='^{__HIShape=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='HIShapeIntersectsRect'>
+<arg declared_type64='HIShapeRef' name='inShape' type64='^{__HIShape=}'/>
+<arg const='true' declared_type64='CGRect*' name='inRect' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='HIShapeIsEmpty'>
+<arg declared_type64='HIShapeRef' name='inShape' type64='^{__HIShape=}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='HIShapeIsRectangular'>
+<arg declared_type64='HIShapeRef' name='inShape' type64='^{__HIShape=}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='HIShapeOffset'>
+<arg declared_type64='HIMutableShapeRef' name='inShape' type64='^{__HIShape=}'/>
+<arg declared_type64='CGFloat' name='inDX' type64='d'/>
+<arg declared_type64='CGFloat' name='inDY' type64='d'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='HIShapeReplacePathInCGContext'>
+<arg declared_type64='HIShapeRef' name='inShape' type64='^{__HIShape=}'/>
+<arg declared_type64='CGContextRef' name='inContext' type64='^{CGContext=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='HIShapeSetEmpty'>
+<arg declared_type64='HIMutableShapeRef' name='inShape' type64='^{__HIShape=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='HIShapeSetWithShape'>
+<arg declared_type64='HIMutableShapeRef' name='inDestShape' type64='^{__HIShape=}'/>
+<arg declared_type64='HIShapeRef' name='inSrcShape' type64='^{__HIShape=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='HIShapeUnion'>
+<arg declared_type64='HIShapeRef' name='inShape1' type64='^{__HIShape=}'/>
+<arg declared_type64='HIShapeRef' name='inShape2' type64='^{__HIShape=}'/>
+<arg declared_type64='HIMutableShapeRef' name='outResult' type64='^{__HIShape=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='HIShapeUnionWithRect'>
+<arg declared_type64='HIMutableShapeRef' name='inShape' type64='^{__HIShape=}'/>
+<arg const='true' declared_type64='CGRect*' name='inRect' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='HIShapeXor'>
+<arg declared_type64='HIShapeRef' name='inShape1' type64='^{__HIShape=}'/>
+<arg declared_type64='HIShapeRef' name='inShape2' type64='^{__HIShape=}'/>
+<arg declared_type64='HIMutableShapeRef' name='outResult' type64='^{__HIShape=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICAddMapEntry'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='Handle' name='entries' type64='^*'/>
+<arg const='true' declared_type64='ICMapEntry*' name='entry' type64='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICAddProfile'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ICProfileID' name='prototypeID' type64='i'/>
+<arg declared_type64='ICProfileID*' name='newID' type64='^i'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICBegin'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ICPerm' name='perm' type64='C'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICCountMapEntries'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='Handle' name='entries' type64='^*'/>
+<arg declared_type64='long*' name='count' type64='^q'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICCountPref'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='long*' name='count' type64='^q'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICCountProfiles'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='long*' name='count' type64='^q'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICCreateGURLEvent'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='OSType' name='helperCreator' type64='I'/>
+<arg declared_type64='Handle' name='urlH' type64='^*'/>
+<arg declared_type64='AppleEvent*' name='theEvent' type64='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICDeleteMapEntry'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='Handle' name='entries' type64='^*'/>
+<arg declared_type64='long' name='pos' type64='q'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICDeletePref'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ConstStr255Param' name='key' type64='*'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICDeleteProfile'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ICProfileID' name='thisID' type64='i'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICEditPreferences'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ConstStr255Param' name='key' type64='*'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICEnd'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICFindPrefHandle'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ConstStr255Param' name='key' type64='*'/>
+<arg declared_type64='ICAttr*' name='attr' type64='^I'/>
+<arg declared_type64='Handle' name='prefh' type64='^*'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICGetConfigName'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='Boolean' name='longname' type64='B'/>
+<arg declared_type64='unsigned char*' name='name' type64='*'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICGetCurrentProfile'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ICProfileID*' name='currentID' type64='^i'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICGetDefaultPref'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ConstStr255Param' name='key' type64='*'/>
+<arg declared_type64='Handle' name='prefH' type64='^*'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICGetIndMapEntry'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='Handle' name='entries' type64='^*'/>
+<arg declared_type64='long' name='index' type64='q'/>
+<arg declared_type64='long*' name='pos' type64='^q'/>
+<arg declared_type64='ICMapEntry*' name='entry' type64='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICGetIndPref'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='long' name='index' type64='q'/>
+<arg declared_type64='unsigned char*' name='key' type64='*'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICGetIndProfile'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='long' name='index' type64='q'/>
+<arg declared_type64='ICProfileID*' name='thisID' type64='^i'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICGetMapEntry'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='Handle' name='entries' type64='^*'/>
+<arg declared_type64='long' name='pos' type64='q'/>
+<arg declared_type64='ICMapEntry*' name='entry' type64='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICGetPerm'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ICPerm*' name='perm' type64='*'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICGetPref'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ConstStr255Param' name='key' type64='*'/>
+<arg declared_type64='ICAttr*' name='attr' type64='^I'/>
+<arg declared_type64='void*' name='buf' type64='^v'/>
+<arg declared_type64='long*' name='size' type64='^q'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICGetPrefHandle'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ConstStr255Param' name='key' type64='*'/>
+<arg declared_type64='ICAttr*' name='attr' type64='^I'/>
+<arg declared_type64='Handle*' name='prefh' type64='^^*'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICGetProfileName'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ICProfileID' name='thisID' type64='i'/>
+<arg declared_type64='unsigned char*' name='name' type64='*'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICGetSeed'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='long*' name='seed' type64='^q'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICGetVersion'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='long' name='whichVersion' type64='q'/>
+<arg declared_type64='UInt32*' name='version' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICLaunchURL'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ConstStr255Param' name='hint' type64='*'/>
+<arg const='true' declared_type64='void*' name='data' type64='^v'/>
+<arg declared_type64='long' name='len' type64='q'/>
+<arg declared_type64='long*' name='selStart' type64='^q'/>
+<arg declared_type64='long*' name='selEnd' type64='^q'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICMapEntriesFilename'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='Handle' name='entries' type64='^*'/>
+<arg declared_type64='ConstStr255Param' name='filename' type64='*'/>
+<arg declared_type64='ICMapEntry*' name='entry' type64='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICMapEntriesTypeCreator'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='Handle' name='entries' type64='^*'/>
+<arg declared_type64='OSType' name='fType' type64='I'/>
+<arg declared_type64='OSType' name='fCreator' type64='I'/>
+<arg declared_type64='ConstStr255Param' name='filename' type64='*'/>
+<arg declared_type64='ICMapEntry*' name='entry' type64='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICMapFilename'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ConstStr255Param' name='filename' type64='*'/>
+<arg declared_type64='ICMapEntry*' name='entry' type64='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICMapTypeCreator'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='OSType' name='fType' type64='I'/>
+<arg declared_type64='OSType' name='fCreator' type64='I'/>
+<arg declared_type64='ConstStr255Param' name='filename' type64='*'/>
+<arg declared_type64='ICMapEntry*' name='entry' type64='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICParseURL'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ConstStr255Param' name='hint' type64='*'/>
+<arg const='true' declared_type64='void*' name='data' type64='^v'/>
+<arg declared_type64='long' name='len' type64='q'/>
+<arg declared_type64='long*' name='selStart' type64='^q'/>
+<arg declared_type64='long*' name='selEnd' type64='^q'/>
+<arg declared_type64='Handle' name='url' type64='^*'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICSendGURLEvent'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='AppleEvent*' name='theEvent' type64='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICSetCurrentProfile'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ICProfileID' name='newID' type64='i'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICSetMapEntry'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='Handle' name='entries' type64='^*'/>
+<arg declared_type64='long' name='pos' type64='q'/>
+<arg const='true' declared_type64='ICMapEntry*' name='entry' type64='^{ICMapEntry=sssIIIi[256C][256C][256C][256C][256C]}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICSetPref'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ConstStr255Param' name='key' type64='*'/>
+<arg declared_type64='ICAttr' name='attr' type64='I'/>
+<arg const='true' declared_type64='void*' name='buf' type64='^v'/>
+<arg declared_type64='long' name='size' type64='q'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICSetPrefHandle'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ConstStr255Param' name='key' type64='*'/>
+<arg declared_type64='ICAttr' name='attr' type64='I'/>
+<arg declared_type64='Handle' name='prefh' type64='^*'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICSetProfileName'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<arg declared_type64='ICProfileID' name='thisID' type64='i'/>
+<arg declared_type64='ConstStr255Param' name='name' type64='*'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICStart'>
+<arg declared_type64='ICInstance*' name='inst' type64='^^{OpaqueICInstance}'/>
+<arg declared_type64='OSType' name='signature' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ICStop'>
+<arg declared_type64='ICInstance' name='inst' type64='^{OpaqueICInstance=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='IconRefContainsCGPoint'>
+<arg const='true' declared_type64='CGPoint*' name='testPt' type64='^{CGPoint=dd}'/>
+<arg const='true' declared_type64='CGRect*' name='iconRect' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='IconAlignmentType' name='align' type64='s'/>
+<arg declared_type64='IconServicesUsageFlags' name='iconServicesUsageFlags' type64='I'/>
+<arg declared_type64='IconRef' name='theIconRef' type64='^{OpaqueIconRef=}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='IconRefIntersectsCGRect'>
+<arg const='true' declared_type64='CGRect*' name='testRect' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg const='true' declared_type64='CGRect*' name='iconRect' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='IconAlignmentType' name='align' type64='s'/>
+<arg declared_type64='IconServicesUsageFlags' name='iconServicesUsageFlags' type64='I'/>
+<arg declared_type64='IconRef' name='theIconRef' type64='^{OpaqueIconRef=}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='IconRefToHIShape'>
+<arg const='true' declared_type64='CGRect*' name='iconRect' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='IconAlignmentType' name='align' type64='s'/>
+<arg declared_type64='IconServicesUsageFlags' name='iconServicesUsageFlags' type64='I'/>
+<arg declared_type64='IconRef' name='theIconRef' type64='^{OpaqueIconRef=}'/>
+<retval declared_type64='HIShapeRef' type64='^{__HIShape=}'/>
+</function>
+<function name='IconRefToIconFamily'>
+<arg declared_type64='IconRef' name='theIconRef' type64='^{OpaqueIconRef=}'/>
+<arg declared_type64='IconSelectorValue' name='whichIcons' type64='I'/>
+<arg declared_type64='IconFamilyHandle*' name='iconFamily' type64='^^^{IconFamilyResource}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='InvokeIconActionUPP'>
+<arg declared_type64='ResType' name='theType' type64='I'/>
+<arg declared_type64='Handle*' name='theIcon' type64='^^*'/>
+<arg declared_type64='void*' name='yourDataPtr' type64='^v'/>
+<arg declared_type64='IconActionUPP' function_pointer='true' name='userUPP' type64='^?'>
+<arg declared_type64='ResType' type64='I'/>
+<arg declared_type64='Handle*' type64='^^*'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='OSErr' type64='s'/>
+</arg>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='InvokeIconGetterUPP'>
+<arg declared_type64='ResType' name='theType' type64='I'/>
+<arg declared_type64='void*' name='yourDataPtr' type64='^v'/>
+<arg declared_type64='IconGetterUPP' function_pointer='true' name='userUPP' type64='^?'>
+<arg declared_type64='ResType' type64='I'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='Handle' type64='^*'/>
+</arg>
+<retval declared_type64='Handle' type64='^*'/>
+</function>
+<function name='IsIconRefMaskEmpty'>
+<arg declared_type64='IconRef' name='iconRef' type64='^{OpaqueIconRef=}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='IsProcessVisible'>
+<arg const='true' declared_type64='ProcessSerialNumber*' name='psn' type64='^{ProcessSerialNumber=II}'/>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='KillProcess'>
+<arg const='true' declared_type64='ProcessSerialNumber*' name='inProcess' type64='^{ProcessSerialNumber=II}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='LaunchApplication'>
+<arg declared_type64='LaunchPBPtr' name='LaunchParams' type64='^{LaunchParamBlockRec=ISSISS^{FSRef}{ProcessSerialNumber=II}III^{AppParameters}}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='NewIconActionUPP'>
+<arg declared_type64='IconActionProcPtr' function_pointer='true' name='userRoutine' type64='^?'>
+<arg declared_type64='ResType' type64='I'/>
+<arg declared_type64='Handle*' type64='^^*'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='OSErr' type64='s'/>
+</arg>
+<retval declared_type64='IconActionUPP' function_pointer='true' type64='^?'>
+<arg declared_type64='ResType' type64='I'/>
+<arg declared_type64='Handle*' type64='^^*'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='OSErr' type64='s'/>
+</retval>
+</function>
+<function name='NewIconGetterUPP'>
+<arg declared_type64='IconGetterProcPtr' function_pointer='true' name='userRoutine' type64='^?'>
+<arg declared_type64='ResType' type64='I'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='Handle' type64='^*'/>
+</arg>
+<retval declared_type64='IconGetterUPP' function_pointer='true' type64='^?'>
+<arg declared_type64='ResType' type64='I'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='Handle' type64='^*'/>
+</retval>
+</function>
+<function name='PasteboardClear'>
+<arg declared_type64='PasteboardRef _Nonnull' name='inPasteboard' type64='^{OpaquePasteboardRef=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='PasteboardCopyItemFlavorData'>
+<arg declared_type64='PasteboardRef _Nonnull' name='inPasteboard' type64='^{OpaquePasteboardRef=}'/>
+<arg declared_type64='PasteboardItemID _Nonnull' name='inItem' type64='^v'/>
+<arg declared_type64='CFStringRef _Nonnull' name='inFlavorType' type64='^{__CFString=}'/>
+<arg declared_type64='CFDataRef _Nullable * _Nonnull' name='outData' type64='^^{__CFData}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='PasteboardCopyItemFlavors'>
+<arg declared_type64='PasteboardRef _Nonnull' name='inPasteboard' type64='^{OpaquePasteboardRef=}'/>
+<arg declared_type64='PasteboardItemID _Nonnull' name='inItem' type64='^v'/>
+<arg declared_type64='CFArrayRef _Nullable * _Nonnull' name='outFlavorTypes' type64='^^{__CFArray}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='PasteboardCopyName'>
+<arg declared_type64='PasteboardRef _Nonnull' name='inPasteboard' type64='^{OpaquePasteboardRef=}'/>
+<arg declared_type64='CFStringRef _Nullable * _Nonnull' name='outName' type64='^^{__CFString}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='PasteboardCopyPasteLocation'>
+<arg declared_type64='PasteboardRef _Nonnull' name='inPasteboard' type64='^{OpaquePasteboardRef=}'/>
+<arg declared_type64='CFURLRef _Nullable * _Nonnull' name='outPasteLocation' type64='^^{__CFURL}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='PasteboardCreate'>
+<arg declared_type64='CFStringRef _Nullable' name='inName' type64='^{__CFString=}'/>
+<arg declared_type64='PasteboardRef _Nullable * _Nonnull' name='outPasteboard' type64='^^{OpaquePasteboardRef}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='PasteboardGetItemCount'>
+<arg declared_type64='PasteboardRef _Nonnull' name='inPasteboard' type64='^{OpaquePasteboardRef=}'/>
+<arg declared_type64='ItemCount * _Nonnull' name='outItemCount' type64='^Q'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='PasteboardGetItemFlavorFlags'>
+<arg declared_type64='PasteboardRef _Nonnull' name='inPasteboard' type64='^{OpaquePasteboardRef=}'/>
+<arg declared_type64='PasteboardItemID _Nonnull' name='inItem' type64='^v'/>
+<arg declared_type64='CFStringRef _Nonnull' name='inFlavorType' type64='^{__CFString=}'/>
+<arg declared_type64='PasteboardFlavorFlags * _Nonnull' name='outFlags' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='PasteboardGetItemIdentifier'>
+<arg declared_type64='PasteboardRef _Nonnull' name='inPasteboard' type64='^{OpaquePasteboardRef=}'/>
+<arg declared_type64='CFIndex' name='inIndex' type64='q'/>
+<arg declared_type64='PasteboardItemID _Nullable * _Nonnull' name='outItem' type64='^^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='PasteboardGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='PasteboardPutItemFlavor'>
+<arg declared_type64='PasteboardRef _Nonnull' name='inPasteboard' type64='^{OpaquePasteboardRef=}'/>
+<arg declared_type64='PasteboardItemID _Nonnull' name='inItem' type64='^v'/>
+<arg declared_type64='CFStringRef _Nonnull' name='inFlavorType' type64='^{__CFString=}'/>
+<arg declared_type64='CFDataRef _Nullable' name='inData' type64='^{__CFData=}'/>
+<arg declared_type64='PasteboardFlavorFlags' name='inFlags' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='PasteboardResolvePromises'>
+<arg declared_type64='PasteboardRef _Nonnull' name='inPasteboard' type64='^{OpaquePasteboardRef=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='PasteboardSetPasteLocation'>
+<arg declared_type64='PasteboardRef _Nonnull' name='inPasteboard' type64='^{OpaquePasteboardRef=}'/>
+<arg declared_type64='CFURLRef _Nonnull' name='inPasteLocation' type64='^{__CFURL=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='PasteboardSetPromiseKeeper'>
+<arg declared_type64='PasteboardRef _Nonnull' name='inPasteboard' type64='^{OpaquePasteboardRef=}'/>
+<arg declared_type64='PasteboardPromiseKeeperProcPtr _Nonnull' function_pointer='true' name='inPromiseKeeper' type64='^?'>
+<arg declared_type64='PasteboardRef _Nonnull' type64='^{OpaquePasteboardRef=}'/>
+<arg declared_type64='PasteboardItemID _Nonnull' type64='^v'/>
+<arg declared_type64='CFStringRef _Nonnull' type64='^{__CFString=}'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<arg declared_type64='void * _Nullable' name='inContext' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='PasteboardSynchronize'>
+<arg declared_type64='PasteboardRef _Nonnull' name='inPasteboard' type64='^{OpaquePasteboardRef=}'/>
+<retval declared_type64='PasteboardSyncFlags' type64='I'/>
+</function>
+<function name='PlotIconRefInContext'>
+<arg declared_type64='CGContextRef' name='inContext' type64='^{CGContext=}'/>
+<arg const='true' declared_type64='CGRect*' name='inRect' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='IconAlignmentType' name='inAlign' type64='s'/>
+<arg declared_type64='IconTransformType' name='inTransform' type64='s'/>
+<arg const='true' declared_type64='RGBColor*' name='inLabelColor' type64='^{RGBColor=SSS}'/>
+<arg declared_type64='PlotIconRefFlags' name='inFlags' type64='I'/>
+<arg declared_type64='IconRef' name='inIconRef' type64='^{OpaqueIconRef=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='ProcessInformationCopyDictionary'>
+<arg const='true' declared_type64='ProcessSerialNumber*' name='PSN' type64='^{ProcessSerialNumber=II}'/>
+<arg declared_type64='UInt32' name='infoToReturn' type64='I'/>
+<retval already_retained='true' declared_type64='CFDictionaryRef' type64='^{__CFDictionary=}'/>
+</function>
+<function name='SameProcess'>
+<arg const='true' declared_type64='ProcessSerialNumber*' name='PSN1' type64='^{ProcessSerialNumber=II}'/>
+<arg const='true' declared_type64='ProcessSerialNumber*' name='PSN2' type64='^{ProcessSerialNumber=II}'/>
+<arg declared_type64='Boolean*' name='result' type64='^B'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='SetFrontProcess'>
+<arg const='true' declared_type64='ProcessSerialNumber*' name='PSN' type64='^{ProcessSerialNumber=II}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='SetFrontProcessWithOptions'>
+<arg const='true' declared_type64='ProcessSerialNumber*' name='inProcess' type64='^{ProcessSerialNumber=II}'/>
+<arg declared_type64='OptionBits' name='inOptions' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='SetIconFamilyData'>
+<arg declared_type64='IconFamilyHandle' name='iconFamily' type64='^^{IconFamilyResource}'/>
+<arg declared_type64='OSType' name='iconType' type64='I'/>
+<arg declared_type64='Handle' name='h' type64='^*'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='ShowHideProcess'>
+<arg const='true' declared_type64='ProcessSerialNumber*' name='psn' type64='^{ProcessSerialNumber=II}'/>
+<arg declared_type64='Boolean' name='visible' type64='B'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='TransformProcessType'>
+<arg const='true' declared_type64='ProcessSerialNumber*' name='psn' type64='^{ProcessSerialNumber=II}'/>
+<arg declared_type64='ProcessApplicationTransformState' name='transformState' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='TranslationCopyDestinationType'>
+<arg declared_type64='TranslationRef' name='inTranslation' type64='^{OpaqueTranslationRef=}'/>
+<arg declared_type64='CFStringRef*' name='outDestinationType' type64='^^{__CFString}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='TranslationCopySourceType'>
+<arg declared_type64='TranslationRef' name='inTranslation' type64='^{OpaqueTranslationRef=}'/>
+<arg declared_type64='CFStringRef*' name='outSourceType' type64='^^{__CFString}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='TranslationCreate'>
+<arg declared_type64='CFStringRef' name='inSourceType' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef' name='inDestinationType' type64='^{__CFString=}'/>
+<arg declared_type64='TranslationFlags' name='inTranslationFlags' type64='I'/>
+<arg declared_type64='TranslationRef*' name='outTranslation' type64='^^{OpaqueTranslationRef}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='TranslationCreateWithSourceArray'>
+<arg declared_type64='CFArrayRef' name='inSourceTypes' type64='^{__CFArray=}'/>
+<arg declared_type64='TranslationFlags' name='inTranslationFlags' type64='I'/>
+<arg declared_type64='CFArrayRef*' name='outDestinationTypes' type64='^^{__CFArray}'/>
+<arg declared_type64='CFDictionaryRef*' name='outTranslations' type64='^^{__CFDictionary}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='TranslationGetTranslationFlags'>
+<arg declared_type64='TranslationRef' name='inTranslation' type64='^{OpaqueTranslationRef=}'/>
+<arg declared_type64='TranslationFlags*' name='outTranslationFlags' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='TranslationGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='TranslationPerformForData'>
+<arg declared_type64='TranslationRef' name='inTranslation' type64='^{OpaqueTranslationRef=}'/>
+<arg declared_type64='CFDataRef' name='inSourceData' type64='^{__CFData=}'/>
+<arg declared_type64='CFDataRef*' name='outDestinationData' type64='^^{__CFData}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='TranslationPerformForFile'>
+<arg declared_type64='TranslationRef' name='inTranslation' type64='^{OpaqueTranslationRef=}'/>
+<arg const='true' declared_type64='FSRef*' name='inSourceFile' type64='^{FSRef=[80C]}'/>
+<arg const='true' declared_type64='FSRef*' name='inDestinationDirectory' type64='^{FSRef=[80C]}'/>
+<arg declared_type64='CFStringRef' name='inDestinationName' type64='^{__CFString=}'/>
+<arg declared_type64='FSRef*' name='outTranslatedFile' type64='^{FSRef=[80C]}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='TranslationPerformForURL'>
+<arg declared_type64='TranslationRef' name='inTranslation' type64='^{OpaqueTranslationRef=}'/>
+<arg declared_type64='CFURLRef' name='inSourceURL' type64='^{__CFURL=}'/>
+<arg declared_type64='CFURLRef' name='inDestinationURL' type64='^{__CFURL=}'/>
+<arg declared_type64='CFURLRef*' name='outTranslatedURL' type64='^^{__CFURL}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='UAZoomChangeFocus'>
+<arg const='true' declared_type64='CGRect*' name='inRect' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg const='true' declared_type64='CGRect*' name='inHighlightRect' type64='^{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='UAZoomChangeFocusType' name='inType' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='UAZoomEnabled'>
+<retval declared_type64='Boolean' type64='B'/>
+</function>
+<function name='WakeUpProcess'>
+<arg const='true' declared_type64='ProcessSerialNumber*' name='PSN' type64='^{ProcessSerialNumber=II}'/>
+<retval declared_type64='OSErr' type64='s'/>
+</function>
+<function_alias name='MacGetCurrentProcess' original='GetCurrentProcess'/>
+</signatures>

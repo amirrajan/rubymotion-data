@@ -1,0 +1,208 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<constant const='true' declared_type='NSString * _Nonnull' name='EAAccessoryDidConnectNotification' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='EAAccessoryDidDisconnectNotification' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='EAAccessoryKey' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='EAAccessorySelectedKey' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='EABluetoothAccessoryPickerErrorDomain' type='@'/>
+<enum name='EABluetoothAccessoryPickerAlreadyConnected' value='0'/>
+<enum name='EABluetoothAccessoryPickerResultCancelled' value='2'/>
+<enum name='EABluetoothAccessoryPickerResultFailed' value='3'/>
+<enum name='EABluetoothAccessoryPickerResultNotFound' value='1'/>
+<enum name='EAConnectionIDNone' value='0'/>
+<enum name='EAWiFiUnconfiguredAccessoryBrowserStateConfiguring' value='3'/>
+<enum name='EAWiFiUnconfiguredAccessoryBrowserStateSearching' value='2'/>
+<enum name='EAWiFiUnconfiguredAccessoryBrowserStateStopped' value='1'/>
+<enum name='EAWiFiUnconfiguredAccessoryBrowserStateWiFiUnavailable' value='0'/>
+<enum name='EAWiFiUnconfiguredAccessoryConfigurationStatusFailed' value='2'/>
+<enum name='EAWiFiUnconfiguredAccessoryConfigurationStatusSuccess' value='0'/>
+<enum name='EAWiFiUnconfiguredAccessoryConfigurationStatusUserCancelledConfiguration' value='1'/>
+<enum name='EAWiFiUnconfiguredAccessoryPropertySupportsAirPlay' value='1'/>
+<enum name='EAWiFiUnconfiguredAccessoryPropertySupportsAirPrint' value='2'/>
+<enum name='EAWiFiUnconfiguredAccessoryPropertySupportsHomeKit' value='4'/>
+<class name='EAAccessory'>
+<method selector='connectionID'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='dockType'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='firmwareRevision'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='hardwareRevision'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='isConnected'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='manufacturer'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='modelNumber'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='protocolStrings'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='serialNumber'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='EAAccessoryManager'>
+<method selector='connectedAccessories'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='registerForLocalNotifications'>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sharedAccessoryManager'>
+<retval declared_type='EAAccessoryManager * _Nonnull' type='@'/>
+</method>
+<method selector='showBluetoothAccessoryPickerWithNameFilter:completion:'>
+<arg declared_type='NSPredicate * _Nullable' index='0' name='predicate' type='@'/>
+<arg declared_type='EABluetoothAccessoryPickerCompletion _Nullable' function_pointer='true' index='1' name='completion' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='unregisterForLocalNotifications'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='EASession'>
+<method selector='accessory'>
+<retval declared_type='EAAccessory * _Nullable' type='@'/>
+</method>
+<method selector='initWithAccessory:forProtocol:'>
+<arg declared_type='EAAccessory * _Nonnull' index='0' name='accessory' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='protocolString' type='@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='inputStream'>
+<retval declared_type='NSInputStream * _Nullable' type='@'/>
+</method>
+<method selector='outputStream'>
+<retval declared_type='NSOutputStream * _Nullable' type='@'/>
+</method>
+<method selector='protocolString'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+</class>
+<class name='EAWiFiUnconfiguredAccessory'>
+<method selector='macAddress'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='manufacturer'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='model'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='properties'>
+<retval declared_type='EAWiFiUnconfiguredAccessoryProperties' type='I' type64='Q'/>
+</method>
+<method selector='ssid'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='EAWiFiUnconfiguredAccessoryBrowser'>
+<method selector='configureAccessory:withConfigurationUIOnViewController:'>
+<arg declared_type='EAWiFiUnconfiguredAccessory * _Nonnull' index='0' name='accessory' type='@'/>
+<arg declared_type='UIViewController * _Nonnull' index='1' name='viewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='initWithDelegate:queue:'>
+<arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
+<arg declared_type='dispatch_queue_t _Nullable' index='1' name='queue' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startSearchingForUnconfiguredAccessoriesMatchingPredicate:'>
+<arg declared_type='NSPredicate * _Nullable' index='0' name='predicate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stopSearchingForUnconfiguredAccessories'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='unconfiguredAccessories'>
+<retval declared_type='NSSet * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='accessoryBrowser:didFindUnconfiguredAccessories:'>
+<arg declared_type='EAWiFiUnconfiguredAccessoryBrowser * _Nonnull' index='0' name='browser' type='@'/>
+<arg declared_type='NSSet * _Nonnull' index='1' name='accessories' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='accessoryBrowser:didFinishConfiguringAccessory:withStatus:'>
+<arg declared_type='EAWiFiUnconfiguredAccessoryBrowser * _Nonnull' index='0' name='browser' type='@'/>
+<arg declared_type='EAWiFiUnconfiguredAccessory * _Nonnull' index='1' name='accessory' type='@'/>
+<arg declared_type='EAWiFiUnconfiguredAccessoryConfigurationStatus' index='2' name='status' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='accessoryBrowser:didRemoveUnconfiguredAccessories:'>
+<arg declared_type='EAWiFiUnconfiguredAccessoryBrowser * _Nonnull' index='0' name='browser' type='@'/>
+<arg declared_type='NSSet * _Nonnull' index='1' name='accessories' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='accessoryBrowser:didUpdateState:'>
+<arg declared_type='EAWiFiUnconfiguredAccessoryBrowser * _Nonnull' index='0' name='browser' type='@'/>
+<arg declared_type='EAWiFiUnconfiguredAccessoryBrowserState' index='1' name='state' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='accessoryDidDisconnect:'>
+<arg declared_type='EAAccessory * _Nonnull' index='0' name='accessory' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='EAAccessoryDelegate'>
+<method selector='accessoryDidDisconnect:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='EAAccessory * _Nonnull' index='0' name='accessory' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='EAWiFiUnconfiguredAccessoryBrowserDelegate'>
+<method selector='accessoryBrowser:didFindUnconfiguredAccessories:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='EAWiFiUnconfiguredAccessoryBrowser * _Nonnull' index='0' name='browser' type='@'/>
+<arg declared_type='NSSet * _Nonnull' index='1' name='accessories' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='accessoryBrowser:didFinishConfiguringAccessory:withStatus:' type='v20@0:4@8@12i16' type64='v40@0:8@16@24q32'>
+<arg declared_type='EAWiFiUnconfiguredAccessoryBrowser * _Nonnull' index='0' name='browser' type='@'/>
+<arg declared_type='EAWiFiUnconfiguredAccessory * _Nonnull' index='1' name='accessory' type='@'/>
+<arg declared_type='EAWiFiUnconfiguredAccessoryConfigurationStatus' index='2' name='status' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='accessoryBrowser:didRemoveUnconfiguredAccessories:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='EAWiFiUnconfiguredAccessoryBrowser * _Nonnull' index='0' name='browser' type='@'/>
+<arg declared_type='NSSet * _Nonnull' index='1' name='accessories' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='accessoryBrowser:didUpdateState:' type='v16@0:4@8i12' type64='v32@0:8@16q24'>
+<arg declared_type='EAWiFiUnconfiguredAccessoryBrowser * _Nonnull' index='0' name='browser' type='@'/>
+<arg declared_type='EAWiFiUnconfiguredAccessoryBrowserState' index='1' name='state' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>

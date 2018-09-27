@@ -1,0 +1,423 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<constant const='true' declared_type='NSString*' name='MSMessagesErrorDomain' type='@'/>
+<constant const='true' declared_type='NSString*' name='MSStickersErrorDomain' type='@'/>
+<enum name='MSMessageErrorCodeAPIUnavailableInPresentationContext' value='11'/>
+<enum name='MSMessageErrorCodeFileNotFound' value='1'/>
+<enum name='MSMessageErrorCodeFileUnreadable' value='2'/>
+<enum name='MSMessageErrorCodeImproperFileType' value='3'/>
+<enum name='MSMessageErrorCodeImproperFileURL' value='4'/>
+<enum name='MSMessageErrorCodeSendWhileNotVisible' value='10'/>
+<enum name='MSMessageErrorCodeSendWithoutRecentInteraction' value='9'/>
+<enum name='MSMessageErrorCodeStickerFileImproperFileAttributes' value='5'/>
+<enum name='MSMessageErrorCodeStickerFileImproperFileFormat' value='7'/>
+<enum name='MSMessageErrorCodeStickerFileImproperFileSize' value='6'/>
+<enum name='MSMessageErrorCodeURLExceedsMaxSize' value='8'/>
+<enum name='MSMessageErrorCodeUnknown' value='-1'/>
+<enum name='MSMessagesAppPresentationContextMedia' value='1'/>
+<enum name='MSMessagesAppPresentationContextMessages' value='0'/>
+<enum name='MSMessagesAppPresentationStyleCompact' value='0'/>
+<enum name='MSMessagesAppPresentationStyleExpanded' value='1'/>
+<enum name='MSMessagesAppPresentationStyleTranscript' value='2'/>
+<enum name='MSStickerSizeLarge' value='2'/>
+<enum name='MSStickerSizeRegular' value='1'/>
+<enum name='MSStickerSizeSmall' value='0'/>
+<class name='MSConversation'>
+<method selector='insertAttachment:withAlternateFilename:completionHandler:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='URL' type='@'/>
+<arg declared_type='NSString * _Nullable' index='1' name='filename' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='insertMessage:completionHandler:'>
+<arg declared_type='MSMessage * _Nonnull' index='0' name='message' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='insertSticker:completionHandler:'>
+<arg declared_type='MSSticker * _Nonnull' index='0' name='sticker' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='insertText:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='text' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='localParticipantIdentifier'>
+<retval declared_type='NSUUID * _Nonnull' type='@'/>
+</method>
+<method selector='remoteParticipantIdentifiers'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='selectedMessage'>
+<retval declared_type='MSMessage * _Nullable' type='@'/>
+</method>
+<method selector='sendAttachment:withAlternateFilename:completionHandler:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='URL' type='@'/>
+<arg declared_type='NSString * _Nullable' index='1' name='filename' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendMessage:completionHandler:'>
+<arg declared_type='MSMessage * _Nonnull' index='0' name='message' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendSticker:completionHandler:'>
+<arg declared_type='MSSticker * _Nonnull' index='0' name='sticker' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendText:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='text' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='MSMessage'>
+<method selector='URL'>
+<retval declared_type='NSURL * _Nullable' type='@'/>
+</method>
+<method selector='accessibilityLabel'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='error'>
+<retval declared_type='NSError * _Nullable' type='@'/>
+</method>
+<method selector='init'>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithSession:'>
+<arg declared_type='MSSession * _Nonnull' index='0' name='session' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='isPending'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='layout'>
+<retval declared_type='MSMessageLayout * _Nullable' type='@'/>
+</method>
+<method selector='senderParticipantIdentifier'>
+<retval declared_type='NSUUID * _Nonnull' type='@'/>
+</method>
+<method selector='session'>
+<retval declared_type='MSSession * _Nullable' type='@'/>
+</method>
+<method selector='setAccessibilityLabel:'>
+<arg declared_type='NSString * _Nullable' index='0' name='accessibilityLabel' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setError:'>
+<arg declared_type='NSError * _Nullable' index='0' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLayout:'>
+<arg declared_type='MSMessageLayout * _Nullable' index='0' name='layout' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShouldExpire:'>
+<arg declared_type='BOOL' index='0' name='shouldExpire' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSummaryText:'>
+<arg declared_type='NSString * _Nullable' index='0' name='summaryText' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setURL:'>
+<arg declared_type='NSURL * _Nullable' index='0' name='URL' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldExpire'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='summaryText'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+</class>
+<class name='MSMessageLiveLayout'>
+<method selector='alternateLayout'>
+<retval declared_type='MSMessageTemplateLayout * _Nonnull' type='@'/>
+</method>
+<method selector='initWithAlternateLayout:'>
+<arg declared_type='MSMessageTemplateLayout * _Nonnull' index='0' name='alternateLayout' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+</class>
+<class name='MSMessageTemplateLayout'>
+<method selector='caption'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='image'>
+<retval declared_type='UIImage * _Nullable' type='@'/>
+</method>
+<method selector='imageSubtitle'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='imageTitle'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='mediaFileURL'>
+<retval declared_type='NSURL * _Nullable' type='@'/>
+</method>
+<method selector='setCaption:'>
+<arg declared_type='NSString * _Nullable' index='0' name='caption' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImage:'>
+<arg declared_type='UIImage * _Nullable' index='0' name='image' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageSubtitle:'>
+<arg declared_type='NSString * _Nullable' index='0' name='imageSubtitle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageTitle:'>
+<arg declared_type='NSString * _Nullable' index='0' name='imageTitle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMediaFileURL:'>
+<arg declared_type='NSURL * _Nullable' index='0' name='mediaFileURL' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSubcaption:'>
+<arg declared_type='NSString * _Nullable' index='0' name='subcaption' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTrailingCaption:'>
+<arg declared_type='NSString * _Nullable' index='0' name='trailingCaption' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTrailingSubcaption:'>
+<arg declared_type='NSString * _Nullable' index='0' name='trailingSubcaption' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='subcaption'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='trailingCaption'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='trailingSubcaption'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+</class>
+<class name='MSMessagesAppViewController'>
+<method selector='activeConversation'>
+<retval declared_type='MSConversation * _Nullable' type='@'/>
+</method>
+<method selector='didBecomeActiveWithConversation:'>
+<arg declared_type='MSConversation * _Nonnull' index='0' name='conversation' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='didCancelSendingMessage:conversation:'>
+<arg declared_type='MSMessage * _Nonnull' index='0' name='message' type='@'/>
+<arg declared_type='MSConversation * _Nonnull' index='1' name='conversation' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='didReceiveMessage:conversation:'>
+<arg declared_type='MSMessage * _Nonnull' index='0' name='message' type='@'/>
+<arg declared_type='MSConversation * _Nonnull' index='1' name='conversation' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='didResignActiveWithConversation:'>
+<arg declared_type='MSConversation * _Nonnull' index='0' name='conversation' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='didSelectMessage:conversation:'>
+<arg declared_type='MSMessage * _Nonnull' index='0' name='message' type='@'/>
+<arg declared_type='MSConversation * _Nonnull' index='1' name='conversation' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='didStartSendingMessage:conversation:'>
+<arg declared_type='MSMessage * _Nonnull' index='0' name='message' type='@'/>
+<arg declared_type='MSConversation * _Nonnull' index='1' name='conversation' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='didTransitionToPresentationStyle:'>
+<arg declared_type='MSMessagesAppPresentationStyle' index='0' name='presentationStyle' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='dismiss'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='presentationContext'>
+<retval declared_type='MSMessagesAppPresentationContext' type='I' type64='Q'/>
+</method>
+<method selector='presentationStyle'>
+<retval declared_type='MSMessagesAppPresentationStyle' type='I' type64='Q'/>
+</method>
+<method selector='requestPresentationStyle:'>
+<arg declared_type='MSMessagesAppPresentationStyle' index='0' name='presentationStyle' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='willBecomeActiveWithConversation:'>
+<arg declared_type='MSConversation * _Nonnull' index='0' name='conversation' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='willResignActiveWithConversation:'>
+<arg declared_type='MSConversation * _Nonnull' index='0' name='conversation' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='willSelectMessage:conversation:'>
+<arg declared_type='MSMessage * _Nonnull' index='0' name='message' type='@'/>
+<arg declared_type='MSConversation * _Nonnull' index='1' name='conversation' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='willTransitionToPresentationStyle:'>
+<arg declared_type='MSMessagesAppPresentationStyle' index='0' name='presentationStyle' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='MSSticker'>
+<method selector='imageFileURL'>
+<retval declared_type='NSURL * _Nonnull' type='@'/>
+</method>
+<method selector='initWithContentsOfFileURL:localizedDescription:error:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='fileURL' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='localizedDescription' type='@'/>
+<arg declared_type='NSError * _Nullable * _Nullable' index='2' name='error' type='^@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='localizedDescription'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='MSStickerBrowserView'>
+<method selector='contentInset'>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+</method>
+<method selector='contentOffset'>
+<retval declared_type='CGPoint' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+</method>
+<method selector='dataSource'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='initWithFrame:'>
+<arg declared_type='CGRect' index='0' name='frame' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithFrame:stickerSize:'>
+<arg declared_type='CGRect' index='0' name='frame' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='MSStickerSize' index='1' name='stickerSize' type='i' type64='q'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='reloadData'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContentInset:'>
+<arg declared_type='UIEdgeInsets' index='0' name='contentInset' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContentOffset:'>
+<arg declared_type='CGPoint' index='0' name='contentOffset' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContentOffset:animated:'>
+<arg declared_type='CGPoint' index='0' name='contentOffset' type='{CGPoint=ff}' type64='{CGPoint=dd}'/>
+<arg declared_type='BOOL' index='1' name='animated' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDataSource:'>
+<arg declared_type='id _Nullable' index='0' name='dataSource' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stickerSize'>
+<retval declared_type='MSStickerSize' type='i' type64='q'/>
+</method>
+</class>
+<class name='MSStickerBrowserViewController'>
+<method selector='initWithStickerSize:'>
+<arg declared_type='MSStickerSize' index='0' name='stickerSize' type='i' type64='q'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='stickerBrowserView'>
+<retval declared_type='MSStickerBrowserView * _Nonnull' type='@'/>
+</method>
+<method selector='stickerSize'>
+<retval declared_type='MSStickerSize' type='i' type64='q'/>
+</method>
+</class>
+<class name='MSStickerView'>
+<method selector='animationDuration'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='initWithFrame:sticker:'>
+<arg declared_type='CGRect' index='0' name='frame' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='MSSticker * _Nullable' index='1' name='sticker' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='isAnimating'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setSticker:'>
+<arg declared_type='MSSticker * _Nullable' index='0' name='sticker' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startAnimating'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sticker'>
+<retval declared_type='MSSticker * _Nullable' type='@'/>
+</method>
+<method selector='stopAnimating'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='contentSizeThatFits:'>
+<arg declared_type='CGSize' index='0' name='size' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</method>
+<method selector='numberOfStickersInStickerBrowserView:'>
+<arg declared_type='MSStickerBrowserView * _Nonnull' index='0' name='stickerBrowserView' type='@'/>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='stickerBrowserView:stickerAtIndex:'>
+<arg declared_type='MSStickerBrowserView * _Nonnull' index='0' name='stickerBrowserView' type='@'/>
+<arg declared_type='NSInteger' index='1' name='index' type='i' type64='q'/>
+<retval declared_type='MSSticker * _Nonnull' type='@'/>
+</method>
+</class>
+<informal_protocol name='MSMessagesAppTranscriptPresentation'>
+<method selector='contentSizeThatFits:' type='{CGSize=ff}16@0:4{CGSize=ff}8' type64='{CGSize=dd}32@0:8{CGSize=dd}16'>
+<arg declared_type='CGSize' index='0' name='size' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</method>
+</informal_protocol>
+<informal_protocol name='MSStickerBrowserViewDataSource'>
+<method selector='numberOfStickersInStickerBrowserView:' type='i12@0:4@8' type64='q24@0:8@16'>
+<arg declared_type='MSStickerBrowserView * _Nonnull' index='0' name='stickerBrowserView' type='@'/>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='stickerBrowserView:stickerAtIndex:' type='@16@0:4@8i12' type64='@32@0:8@16q24'>
+<arg declared_type='MSStickerBrowserView * _Nonnull' index='0' name='stickerBrowserView' type='@'/>
+<arg declared_type='NSInteger' index='1' name='index' type='i' type64='q'/>
+<retval declared_type='MSSticker * _Nonnull' type='@'/>
+</method>
+</informal_protocol>
+</signatures>

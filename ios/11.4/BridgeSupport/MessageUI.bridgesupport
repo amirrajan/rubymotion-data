@@ -1,0 +1,174 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/AddressBookUI.framework'/>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/ContactsUI.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+<depends_on path='/System/Library/Frameworks/EventKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/MapKit.framework'/>
+<depends_on path='/System/Library/Frameworks/MobileCoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/UIKit.framework'/>
+<depends_on path='/System/Library/Frameworks/VideoToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/WebKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Contacts.framework'/>
+<constant const='true' declared_type='NSErrorDomain _Nonnull' name='MFMailComposeErrorDomain' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='MFMessageComposeViewControllerAttachmentAlternateFilename' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='MFMessageComposeViewControllerAttachmentURL' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='MFMessageComposeViewControllerTextMessageAvailabilityDidChangeNotification' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='MFMessageComposeViewControllerTextMessageAvailabilityKey' type='@'/>
+<enum name='MFMailComposeErrorCodeSaveFailed' value='0'/>
+<enum name='MFMailComposeErrorCodeSendFailed' value='1'/>
+<enum name='MFMailComposeResultCancelled' value='0'/>
+<enum name='MFMailComposeResultFailed' value='3'/>
+<enum name='MFMailComposeResultSaved' value='1'/>
+<enum name='MFMailComposeResultSent' value='2'/>
+<enum name='MessageComposeResultCancelled' value='0'/>
+<enum name='MessageComposeResultFailed' value='2'/>
+<enum name='MessageComposeResultSent' value='1'/>
+<class name='MFMailComposeViewController'>
+<method selector='addAttachmentData:mimeType:fileName:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='attachment' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='mimeType' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='filename' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='canSendMail'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='mailComposeDelegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='setBccRecipients:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='bccRecipients' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCcRecipients:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='ccRecipients' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMailComposeDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='mailComposeDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMessageBody:isHTML:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='body' type='@'/>
+<arg declared_type='BOOL' index='1' name='isHTML' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPreferredSendingEmailAddress:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='emailAddress' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSubject:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='subject' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setToRecipients:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='toRecipients' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='MFMessageComposeViewController'>
+<method selector='addAttachmentData:typeIdentifier:filename:'>
+<arg declared_type='NSData * _Nonnull' index='0' name='attachmentData' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='uti' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='filename' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='addAttachmentURL:withAlternateFilename:'>
+<arg declared_type='NSURL * _Nonnull' index='0' name='attachmentURL' type='@'/>
+<arg declared_type='NSString * _Nullable' index='1' name='alternateFilename' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='attachments'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='body'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method class_method='true' selector='canSendAttachments'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='canSendSubject'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='canSendText'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='disableUserAttachments'>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='isSupportedAttachmentUTI:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='uti' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='message'>
+<retval declared_type='MSMessage * _Nullable' type='@'/>
+</method>
+<method selector='messageComposeDelegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='recipients'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='setBody:'>
+<arg declared_type='NSString * _Nullable' index='0' name='body' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMessage:'>
+<arg declared_type='MSMessage * _Nullable' index='0' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMessageComposeDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='messageComposeDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecipients:'>
+<arg declared_type='NSArray * _Nullable' index='0' name='recipients' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSubject:'>
+<arg declared_type='NSString * _Nullable' index='0' name='subject' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='subject'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='mailComposeController:didFinishWithResult:error:'>
+<arg declared_type='MFMailComposeViewController * _Nonnull' index='0' name='controller' type='@'/>
+<arg declared_type='MFMailComposeResult' index='1' name='result' type='i' type64='q'/>
+<arg declared_type='NSError * _Nullable' index='2' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='messageComposeViewController:didFinishWithResult:'>
+<arg declared_type='MFMessageComposeViewController * _Nonnull' index='0' name='controller' type='@'/>
+<arg declared_type='MessageComposeResult' index='1' name='result' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='MFMailComposeViewControllerDelegate'>
+<method selector='mailComposeController:didFinishWithResult:error:' type='v20@0:4@8i12@16' type64='v40@0:8@16q24@32'>
+<arg declared_type='MFMailComposeViewController * _Nonnull' index='0' name='controller' type='@'/>
+<arg declared_type='MFMailComposeResult' index='1' name='result' type='i' type64='q'/>
+<arg declared_type='NSError * _Nullable' index='2' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='MFMessageComposeViewControllerDelegate'>
+<method selector='messageComposeViewController:didFinishWithResult:' type='v16@0:4@8i12' type64='v32@0:8@16q24'>
+<arg declared_type='MFMessageComposeViewController * _Nonnull' index='0' name='controller' type='@'/>
+<arg declared_type='MessageComposeResult' index='1' name='result' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>

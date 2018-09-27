@@ -1,0 +1,96 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<enum name='AUViewParametersDisplayFlag' value64='4'/>
+<enum name='AUViewPropertiesDisplayFlag' value64='2'/>
+<enum name='AUViewTitleDisplayFlag' value64='1'/>
+<class name='AUAudioUnit'>
+<method selector='requestViewControllerWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(AUViewControllerBase * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='AUViewControllerBase * _Nullable' type64='^{NSViewController=#@@@@@@@@@@@b1b1b1b1b28b0}'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='selectViewConfiguration:'>
+<arg declared_type64='AUAudioUnitViewConfiguration * _Nonnull' index='0' name='viewConfiguration' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='supportedViewConfigurations:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='availableViewConfigurations' type64='@'/>
+<retval declared_type64='NSIndexSet * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='AUAudioUnitViewConfiguration'>
+<method selector='height'>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+<method selector='hostHasController'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='initWithWidth:height:hostHasController:'>
+<arg declared_type64='CGFloat' index='0' name='width' type64='d'/>
+<arg declared_type64='CGFloat' index='1' name='height' type64='d'/>
+<arg declared_type64='BOOL' index='2' name='hostHasController' type64='B'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='width'>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+</class>
+<class name='AUGenericView'>
+<method selector='audioUnit'>
+<retval declared_type64='AudioUnit _Nonnull' type64='^{ComponentInstanceRecord=[1q]}'/>
+</method>
+<method selector='initWithAudioUnit:'>
+<arg declared_type64='AudioUnit _Nonnull' index='0' name='au' type64='^{ComponentInstanceRecord=[1q]}'/>
+<retval declared_type64='AUGenericView * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithAudioUnit:displayFlags:'>
+<arg declared_type64='AudioUnit _Nonnull' index='0' name='inAudioUnit' type64='^{ComponentInstanceRecord=[1q]}'/>
+<arg declared_type64='AUGenericViewDisplayFlags' index='1' name='inFlags' type64='I'/>
+<retval declared_type64='AUGenericView * _Nonnull' type64='@'/>
+</method>
+<method selector='setShowsExpertParameters:'>
+<arg declared_type64='BOOL' index='0' name='showsExpertParameters' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='showsExpertParameters'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='AUPannerView'>
+<method class_method='true' selector='AUPannerViewWithAudioUnit:'>
+<arg declared_type64='AudioUnit _Nonnull' index='0' name='au' type64='^{ComponentInstanceRecord=[1q]}'/>
+<retval declared_type64='AUPannerView * _Nonnull' type64='@'/>
+</method>
+<method selector='audioUnit'>
+<retval declared_type64='AudioUnit _Nonnull' type64='^{ComponentInstanceRecord=[1q]}'/>
+</method>
+</class>
+<class name='CANetworkBrowserWindowController'>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='isAVBSupported'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='customViewPersistentData'>
+<retval declared_type64='NSDictionary * _Nullable' type64='@'/>
+</method>
+<method selector='setCustomViewPersistentData:'>
+<arg declared_type64='NSDictionary * _Nullable' index='0' name='customViewPersistentData' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='AUCustomViewPersistentData'>
+<method selector='customViewPersistentData' type64='@16@0:8'>
+<retval declared_type64='NSDictionary * _Nullable' type64='@'/>
+</method>
+<method selector='setCustomViewPersistentData:' type64='v24@0:8@16'>
+<arg declared_type64='NSDictionary * _Nullable' index='0' name='customViewPersistentData' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>
