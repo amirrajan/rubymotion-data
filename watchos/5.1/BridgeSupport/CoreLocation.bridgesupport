@@ -1,0 +1,418 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreBluetooth.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<struct name='CLLocationCoordinate2D' type='{CLLocationCoordinate2D=&quot;latitude&quot;d&quot;longitude&quot;d}'>
+<field declared_type='CLLocationDegrees' name='latitude' type='d'/>
+<field declared_type='CLLocationDegrees' name='longitude' type='d'/>
+</struct>
+<constant const='true' declared_type='CLLocationDistance' name='CLLocationDistanceMax' type='d'/>
+<constant const='true' declared_type='NSTimeInterval' name='CLTimeIntervalMax' type='d'/>
+<constant const='true' declared_type='CLLocationDistance' name='kCLDistanceFilterNone' type='d'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='kCLErrorDomain' type='@'/>
+<constant const='true' declared_type='CLLocationDegrees' name='kCLHeadingFilterNone' type='d'/>
+<constant const='true' declared_type='CLLocationAccuracy' name='kCLLocationAccuracyBest' type='d'/>
+<constant const='true' declared_type='CLLocationAccuracy' name='kCLLocationAccuracyBestForNavigation' type='d'/>
+<constant const='true' declared_type='CLLocationAccuracy' name='kCLLocationAccuracyHundredMeters' type='d'/>
+<constant const='true' declared_type='CLLocationAccuracy' name='kCLLocationAccuracyKilometer' type='d'/>
+<constant const='true' declared_type='CLLocationAccuracy' name='kCLLocationAccuracyNearestTenMeters' type='d'/>
+<constant const='true' declared_type='CLLocationAccuracy' name='kCLLocationAccuracyThreeKilometers' type='d'/>
+<constant const='true' declared_type='CLLocationCoordinate2D' name='kCLLocationCoordinate2DInvalid' type='{CLLocationCoordinate2D=dd}'/>
+<enum name='CLActivityTypeAirborne' value='5'/>
+<enum name='CLActivityTypeAutomotiveNavigation' value='2'/>
+<enum name='CLActivityTypeFitness' value='3'/>
+<enum name='CLActivityTypeOther' value='1'/>
+<enum name='CLActivityTypeOtherNavigation' value='4'/>
+<enum name='CLDeviceOrientationFaceDown' value='6'/>
+<enum name='CLDeviceOrientationFaceUp' value='5'/>
+<enum name='CLDeviceOrientationLandscapeLeft' value='3'/>
+<enum name='CLDeviceOrientationLandscapeRight' value='4'/>
+<enum name='CLDeviceOrientationPortrait' value='1'/>
+<enum name='CLDeviceOrientationPortraitUpsideDown' value='2'/>
+<enum name='CLDeviceOrientationUnknown' value='0'/>
+<enum name='kCLAuthorizationStatusAuthorized' value='3'/>
+<enum name='kCLAuthorizationStatusAuthorizedAlways' value='3'/>
+<enum name='kCLAuthorizationStatusAuthorizedWhenInUse' value='4'/>
+<enum name='kCLAuthorizationStatusDenied' value='2'/>
+<enum name='kCLAuthorizationStatusNotDetermined' value='0'/>
+<enum name='kCLAuthorizationStatusRestricted' value='1'/>
+<enum name='kCLErrorDeferredAccuracyTooLow' value='13'/>
+<enum name='kCLErrorDeferredCanceled' value='15'/>
+<enum name='kCLErrorDeferredDistanceFiltered' value='14'/>
+<enum name='kCLErrorDeferredFailed' value='11'/>
+<enum name='kCLErrorDeferredNotUpdatingLocation' value='12'/>
+<enum name='kCLErrorDenied' value='1'/>
+<enum name='kCLErrorGeocodeCanceled' value='10'/>
+<enum name='kCLErrorGeocodeFoundNoResult' value='8'/>
+<enum name='kCLErrorGeocodeFoundPartialResult' value='9'/>
+<enum name='kCLErrorHeadingFailure' value='3'/>
+<enum name='kCLErrorLocationUnknown' value='0'/>
+<enum name='kCLErrorNetwork' value='2'/>
+<enum name='kCLErrorRangingFailure' value='17'/>
+<enum name='kCLErrorRangingUnavailable' value='16'/>
+<enum name='kCLErrorRegionMonitoringDenied' value='4'/>
+<enum name='kCLErrorRegionMonitoringFailure' value='5'/>
+<enum name='kCLErrorRegionMonitoringResponseDelayed' value='7'/>
+<enum name='kCLErrorRegionMonitoringSetupDelayed' value='6'/>
+<function name='CLLocationCoordinate2DIsValid'>
+<arg declared_type='CLLocationCoordinate2D' name='coord' type='{CLLocationCoordinate2D=dd}'/>
+<retval declared_type='BOOL' type='B'/>
+</function>
+<function name='CLLocationCoordinate2DMake'>
+<arg declared_type='CLLocationDegrees' name='latitude' type='d'/>
+<arg declared_type='CLLocationDegrees' name='longitude' type='d'/>
+<retval declared_type='CLLocationCoordinate2D' type='{CLLocationCoordinate2D=dd}'/>
+</function>
+<class name='CLCircularRegion'>
+<method selector='center'>
+<retval declared_type='CLLocationCoordinate2D' type='{CLLocationCoordinate2D=dd}'/>
+</method>
+<method selector='containsCoordinate:'>
+<arg declared_type='CLLocationCoordinate2D' index='0' name='coordinate' type='{CLLocationCoordinate2D=dd}'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithCenter:radius:identifier:'>
+<arg declared_type='CLLocationCoordinate2D' index='0' name='center' type='{CLLocationCoordinate2D=dd}'/>
+<arg declared_type='CLLocationDistance' index='1' name='radius' type='d'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='identifier' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='radius'>
+<retval declared_type='CLLocationDistance' type='d'/>
+</method>
+</class>
+<class name='CLFloor'>
+<method selector='level'>
+<retval declared_type='NSInteger' type='i'/>
+</method>
+</class>
+<class name='CLGeocoder'>
+<method selector='cancelGeocode'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='geocodeAddressDictionary:completionHandler:'>
+<arg declared_type='NSDictionary * _Nonnull' index='0' name='addressDictionary' type='@'/>
+<arg declared_type='CLGeocodeCompletionHandler _Nonnull' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='geocodeAddressString:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='addressString' type='@'/>
+<arg declared_type='CLGeocodeCompletionHandler _Nonnull' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='geocodeAddressString:inRegion:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='addressString' type='@'/>
+<arg declared_type='CLRegion * _Nullable' index='1' name='region' type='@'/>
+<arg declared_type='CLGeocodeCompletionHandler _Nonnull' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='geocodeAddressString:inRegion:preferredLocale:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='addressString' type='@'/>
+<arg declared_type='CLRegion * _Nullable' index='1' name='region' type='@'/>
+<arg declared_type='NSLocale * _Nullable' index='2' name='locale' type='@'/>
+<arg declared_type='CLGeocodeCompletionHandler _Nonnull' function_pointer='true' index='3' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='geocodePostalAddress:completionHandler:'>
+<arg declared_type='CNPostalAddress * _Nonnull' index='0' name='postalAddress' type='@'/>
+<arg declared_type='CLGeocodeCompletionHandler _Nonnull' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='geocodePostalAddress:preferredLocale:completionHandler:'>
+<arg declared_type='CNPostalAddress * _Nonnull' index='0' name='postalAddress' type='@'/>
+<arg declared_type='NSLocale * _Nullable' index='1' name='locale' type='@'/>
+<arg declared_type='CLGeocodeCompletionHandler _Nonnull' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='isGeocoding'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='reverseGeocodeLocation:completionHandler:'>
+<arg declared_type='CLLocation * _Nonnull' index='0' name='location' type='@'/>
+<arg declared_type='CLGeocodeCompletionHandler _Nonnull' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='reverseGeocodeLocation:preferredLocale:completionHandler:'>
+<arg declared_type='CLLocation * _Nonnull' index='0' name='location' type='@'/>
+<arg declared_type='NSLocale * _Nullable' index='1' name='locale' type='@'/>
+<arg declared_type='CLGeocodeCompletionHandler _Nonnull' function_pointer='true' index='2' name='completionHandler' type='@?'>
+<arg declared_type='NSArray * _Nullable' type='@'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CLLocation'>
+<method selector='altitude'>
+<retval declared_type='CLLocationDistance' type='d'/>
+</method>
+<method selector='coordinate'>
+<retval declared_type='CLLocationCoordinate2D' type='{CLLocationCoordinate2D=dd}'/>
+</method>
+<method selector='course'>
+<retval declared_type='CLLocationDirection' type='d'/>
+</method>
+<method selector='distanceFromLocation:'>
+<arg const='true' declared_type='CLLocation * _Nonnull' index='0' name='location' type='@'/>
+<retval declared_type='CLLocationDistance' type='d'/>
+</method>
+<method selector='floor'>
+<retval declared_type='CLFloor * _Nullable' type='@'/>
+</method>
+<method selector='horizontalAccuracy'>
+<retval declared_type='CLLocationAccuracy' type='d'/>
+</method>
+<method selector='initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:speed:timestamp:'>
+<arg declared_type='CLLocationCoordinate2D' index='0' name='coordinate' type='{CLLocationCoordinate2D=dd}'/>
+<arg declared_type='CLLocationDistance' index='1' name='altitude' type='d'/>
+<arg declared_type='CLLocationAccuracy' index='2' name='hAccuracy' type='d'/>
+<arg declared_type='CLLocationAccuracy' index='3' name='vAccuracy' type='d'/>
+<arg declared_type='CLLocationDirection' index='4' name='course' type='d'/>
+<arg declared_type='CLLocationSpeed' index='5' name='speed' type='d'/>
+<arg declared_type='NSDate * _Nonnull' index='6' name='timestamp' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:timestamp:'>
+<arg declared_type='CLLocationCoordinate2D' index='0' name='coordinate' type='{CLLocationCoordinate2D=dd}'/>
+<arg declared_type='CLLocationDistance' index='1' name='altitude' type='d'/>
+<arg declared_type='CLLocationAccuracy' index='2' name='hAccuracy' type='d'/>
+<arg declared_type='CLLocationAccuracy' index='3' name='vAccuracy' type='d'/>
+<arg declared_type='NSDate * _Nonnull' index='4' name='timestamp' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithLatitude:longitude:'>
+<arg declared_type='CLLocationDegrees' index='0' name='latitude' type='d'/>
+<arg declared_type='CLLocationDegrees' index='1' name='longitude' type='d'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='speed'>
+<retval declared_type='CLLocationSpeed' type='d'/>
+</method>
+<method selector='timestamp'>
+<retval declared_type='NSDate * _Nonnull' type='@'/>
+</method>
+<method selector='verticalAccuracy'>
+<retval declared_type='CLLocationAccuracy' type='d'/>
+</method>
+</class>
+<class name='CLLocationManager'>
+<method selector='activityType'>
+<retval declared_type='CLActivityType' type='i'/>
+</method>
+<method selector='allowsBackgroundLocationUpdates'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='authorizationStatus'>
+<retval declared_type='CLAuthorizationStatus' type='i'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='desiredAccuracy'>
+<retval declared_type='CLLocationAccuracy' type='d'/>
+</method>
+<method selector='distanceFilter'>
+<retval declared_type='CLLocationDistance' type='d'/>
+</method>
+<method selector='location'>
+<retval declared_type='CLLocation * _Nullable' type='@'/>
+</method>
+<method class_method='true' selector='locationServicesEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='requestAlwaysAuthorization'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='requestLocation'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='requestWhenInUseAuthorization'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setActivityType:'>
+<arg declared_type='CLActivityType' index='0' name='activityType' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAllowsBackgroundLocationUpdates:'>
+<arg declared_type='BOOL' index='0' name='allowsBackgroundLocationUpdates' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDesiredAccuracy:'>
+<arg declared_type='CLLocationAccuracy' index='0' name='desiredAccuracy' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDistanceFilter:'>
+<arg declared_type='CLLocationDistance' index='0' name='distanceFilter' type='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startUpdatingLocation'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stopUpdatingLocation'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CLPlacemark'>
+<method selector='ISOcountryCode'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='addressDictionary'>
+<retval declared_type='NSDictionary * _Nullable' type='@'/>
+</method>
+<method selector='administrativeArea'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='areasOfInterest'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='country'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='initWithPlacemark:'>
+<arg declared_type='CLPlacemark * _Nonnull' index='0' name='placemark' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='inlandWater'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='locality'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='location'>
+<retval declared_type='CLLocation * _Nullable' type='@'/>
+</method>
+<method selector='name'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='ocean'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='postalAddress'>
+<retval declared_type='CNPostalAddress * _Nullable' type='@'/>
+</method>
+<method selector='postalCode'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='region'>
+<retval declared_type='CLRegion * _Nullable' type='@'/>
+</method>
+<method selector='subAdministrativeArea'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='subLocality'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='subThoroughfare'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='thoroughfare'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='timeZone'>
+<retval declared_type='NSTimeZone * _Nullable' type='@'/>
+</method>
+</class>
+<class name='CLRegion'>
+<method selector='center'>
+<retval declared_type='CLLocationCoordinate2D' type='{CLLocationCoordinate2D=dd}'/>
+</method>
+<method selector='containsCoordinate:'>
+<arg declared_type='CLLocationCoordinate2D' index='0' name='coordinate' type='{CLLocationCoordinate2D=dd}'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='identifier'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='initCircularRegionWithCenter:radius:identifier:'>
+<arg declared_type='CLLocationCoordinate2D' index='0' name='center' type='{CLLocationCoordinate2D=dd}'/>
+<arg declared_type='CLLocationDistance' index='1' name='radius' type='d'/>
+<arg declared_type='NSString * _Nonnull' index='2' name='identifier' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='notifyOnEntry'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='notifyOnExit'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='radius'>
+<retval declared_type='CLLocationDistance' type='d'/>
+</method>
+<method selector='setNotifyOnEntry:'>
+<arg declared_type='BOOL' index='0' name='notifyOnEntry' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNotifyOnExit:'>
+<arg declared_type='BOOL' index='0' name='notifyOnExit' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='locationManager:didChangeAuthorizationStatus:'>
+<arg declared_type='CLLocationManager * _Nonnull' index='0' name='manager' type='@'/>
+<arg declared_type='CLAuthorizationStatus' index='1' name='status' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='locationManager:didFailWithError:'>
+<arg declared_type='CLLocationManager * _Nonnull' index='0' name='manager' type='@'/>
+<arg declared_type='NSError * _Nonnull' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='locationManager:didUpdateLocations:'>
+<arg declared_type='CLLocationManager * _Nonnull' index='0' name='manager' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='locations' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='CLLocationManagerDelegate'>
+<method selector='locationManager:didChangeAuthorizationStatus:' type='v16@0:4@8i12'>
+<arg declared_type='CLLocationManager * _Nonnull' index='0' name='manager' type='@'/>
+<arg declared_type='CLAuthorizationStatus' index='1' name='status' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='locationManager:didFailWithError:' type='v16@0:4@8@12'>
+<arg declared_type='CLLocationManager * _Nonnull' index='0' name='manager' type='@'/>
+<arg declared_type='NSError * _Nonnull' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='locationManager:didUpdateLocations:' type='v16@0:4@8@12'>
+<arg declared_type='CLLocationManager * _Nonnull' index='0' name='manager' type='@'/>
+<arg declared_type='NSArray * _Nonnull' index='1' name='locations' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>

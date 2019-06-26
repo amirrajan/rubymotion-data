@@ -4,375 +4,407 @@
 <depends_on path='/System/Library/Frameworks/AppKit.framework'/>
 <depends_on path='/System/Library/Frameworks/Security.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
-<constant const='true' declared_type='NSString * _Nonnull' name='SKErrorDomain' type='@'/>
-<constant const='true' declared_type='NSString * _Nonnull' name='SKReceiptPropertyIsExpired' type='@'/>
-<constant const='true' declared_type='NSString * _Nonnull' name='SKReceiptPropertyIsRevoked' type='@'/>
-<constant const='true' declared_type='NSString * _Nonnull' name='SKReceiptPropertyIsVolumePurchase' type='@'/>
-<enum name='SKDownloadStateActive' value='1'/>
-<enum name='SKDownloadStateCancelled' value='5'/>
-<enum name='SKDownloadStateFailed' value='4'/>
-<enum name='SKDownloadStateFinished' value='3'/>
-<enum name='SKDownloadStatePaused' value='2'/>
-<enum name='SKDownloadStateWaiting' value='0'/>
-<enum name='SKErrorClientInvalid' value='1'/>
-<enum name='SKErrorPaymentCancelled' value='2'/>
-<enum name='SKErrorPaymentInvalid' value='3'/>
-<enum name='SKErrorPaymentNotAllowed' value='4'/>
-<enum name='SKErrorUnknown' value='0'/>
-<enum name='SKPaymentTransactionStateDeferred' value='4'/>
-<enum name='SKPaymentTransactionStateFailed' value='2'/>
-<enum name='SKPaymentTransactionStatePurchased' value='1'/>
-<enum name='SKPaymentTransactionStatePurchasing' value='0'/>
-<enum name='SKPaymentTransactionStateRestored' value='3'/>
-<enum name='SKProductDiscountPaymentModeFreeTrial' value='2'/>
-<enum name='SKProductDiscountPaymentModePayAsYouGo' value='0'/>
-<enum name='SKProductDiscountPaymentModePayUpFront' value='1'/>
-<enum name='SKProductPeriodUnitDay' value='0'/>
-<enum name='SKProductPeriodUnitMonth' value='2'/>
-<enum name='SKProductPeriodUnitWeek' value='1'/>
-<enum name='SKProductPeriodUnitYear' value='3'/>
+<constant declared_type64='NSTimeInterval' name='SKDownloadTimeRemainingUnknown' type64='d'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='SKErrorDomain' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='SKReceiptPropertyIsExpired' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='SKReceiptPropertyIsRevoked' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='SKReceiptPropertyIsVolumePurchase' type64='@'/>
+<enum name='SKDownloadStateActive' value64='1'/>
+<enum name='SKDownloadStateCancelled' value64='5'/>
+<enum name='SKDownloadStateFailed' value64='4'/>
+<enum name='SKDownloadStateFinished' value64='3'/>
+<enum name='SKDownloadStatePaused' value64='2'/>
+<enum name='SKDownloadStateWaiting' value64='0'/>
+<enum name='SKErrorClientInvalid' value64='1'/>
+<enum name='SKErrorCloudServiceNetworkConnectionFailed' value64='7'/>
+<enum name='SKErrorCloudServicePermissionDenied' value64='6'/>
+<enum name='SKErrorCloudServiceRevoked' value64='8'/>
+<enum name='SKErrorPaymentCancelled' value64='2'/>
+<enum name='SKErrorPaymentInvalid' value64='3'/>
+<enum name='SKErrorPaymentNotAllowed' value64='4'/>
+<enum name='SKErrorStoreProductNotAvailable' value64='5'/>
+<enum name='SKErrorUnknown' value64='0'/>
+<enum name='SKPaymentTransactionStateDeferred' value64='4'/>
+<enum name='SKPaymentTransactionStateFailed' value64='2'/>
+<enum name='SKPaymentTransactionStatePurchased' value64='1'/>
+<enum name='SKPaymentTransactionStatePurchasing' value64='0'/>
+<enum name='SKPaymentTransactionStateRestored' value64='3'/>
+<enum name='SKProductDiscountPaymentModeFreeTrial' value64='2'/>
+<enum name='SKProductDiscountPaymentModePayAsYouGo' value64='0'/>
+<enum name='SKProductDiscountPaymentModePayUpFront' value64='1'/>
+<enum name='SKProductPeriodUnitDay' value64='0'/>
+<enum name='SKProductPeriodUnitMonth' value64='2'/>
+<enum name='SKProductPeriodUnitWeek' value64='1'/>
+<enum name='SKProductPeriodUnitYear' value64='3'/>
+<function name='SKTerminateForInvalidReceipt'>
+<retval declared_type64='void' type64='v'/>
+</function>
 <class name='NSObject'>
 <method selector='paymentQueue:removedTransactions:'>
-<arg declared_type='SKPaymentQueue * _Nonnull' index='0' name='queue' type='@'/>
-<arg declared_type='NSArray * _Nonnull' index='1' name='transactions' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='SKPaymentQueue * _Nonnull' index='0' name='queue' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='transactions' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='paymentQueue:restoreCompletedTransactionsFailedWithError:'>
-<arg declared_type='SKPaymentQueue * _Nonnull' index='0' name='queue' type='@'/>
-<arg declared_type='NSError * _Nonnull' index='1' name='error' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='SKPaymentQueue * _Nonnull' index='0' name='queue' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='paymentQueue:updatedDownloads:'>
-<arg declared_type='SKPaymentQueue * _Nonnull' index='0' name='queue' type='@'/>
-<arg declared_type='NSArray * _Nonnull' index='1' name='downloads' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='SKPaymentQueue * _Nonnull' index='0' name='queue' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='downloads' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='paymentQueue:updatedTransactions:'>
-<arg declared_type='SKPaymentQueue * _Nonnull' index='0' name='queue' type='@'/>
-<arg declared_type='NSArray * _Nonnull' index='1' name='transactions' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='SKPaymentQueue * _Nonnull' index='0' name='queue' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='transactions' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='paymentQueueRestoreCompletedTransactionsFinished:'>
-<arg declared_type='SKPaymentQueue * _Nonnull' index='0' name='queue' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='SKPaymentQueue * _Nonnull' index='0' name='queue' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='productsRequest:didReceiveResponse:'>
-<arg declared_type='SKProductsRequest * _Nonnull' index='0' name='request' type='@'/>
-<arg declared_type='SKProductsResponse * _Nonnull' index='1' name='response' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='SKProductsRequest * _Nonnull' index='0' name='request' type64='@'/>
+<arg declared_type64='SKProductsResponse * _Nonnull' index='1' name='response' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='request:didFailWithError:'>
-<arg declared_type='SKRequest * _Nonnull' index='0' name='request' type='@'/>
-<arg declared_type='NSError * _Nonnull' index='1' name='error' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='SKRequest * _Nonnull' index='0' name='request' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='requestDidFinish:'>
-<arg declared_type='SKRequest * _Nonnull' index='0' name='request' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='SKRequest * _Nonnull' index='0' name='request' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 </class>
 <class name='SKDownload'>
 <method selector='contentIdentifier'>
-<retval declared_type='NSString * _Nonnull' type='@'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
 </method>
 <method selector='contentLength'>
-<retval declared_type='NSNumber * _Nonnull' type='@'/>
+<retval declared_type64='NSNumber * _Nonnull' type64='@'/>
 </method>
 <method selector='contentURL'>
-<retval declared_type='NSURL * _Nullable' type='@'/>
+<retval declared_type64='NSURL * _Nullable' type64='@'/>
 </method>
 <method class_method='true' selector='contentURLForProductID:'>
-<arg declared_type='NSString * _Nonnull' index='0' name='productID' type='@'/>
-<retval declared_type='NSURL * _Nullable' type='@'/>
+<arg declared_type64='NSString * _Nonnull' index='0' name='productID' type64='@'/>
+<retval declared_type64='NSURL * _Nullable' type64='@'/>
 </method>
 <method selector='contentVersion'>
-<retval declared_type='NSString * _Nonnull' type='@'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
 </method>
 <method class_method='true' selector='deleteContentForProductID:'>
-<arg declared_type='NSString * _Nonnull' index='0' name='productID' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSString * _Nonnull' index='0' name='productID' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='error'>
-<retval declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type64='NSError * _Nullable' type64='@'/>
 </method>
 <method selector='progress'>
-<retval declared_type='float' type='f'/>
+<retval declared_type64='float' type64='f'/>
 </method>
 <method selector='state'>
-<retval declared_type='SKDownloadState' type='i' type64='q'/>
+<retval declared_type64='SKDownloadState' type64='q'/>
 </method>
 <method selector='timeRemaining'>
-<retval declared_type='NSTimeInterval' type='d'/>
+<retval declared_type64='NSTimeInterval' type64='d'/>
 </method>
 <method selector='transaction'>
-<retval declared_type='SKPaymentTransaction * _Nonnull' type='@'/>
+<retval declared_type64='SKPaymentTransaction * _Nonnull' type64='@'/>
 </method>
 </class>
 <class name='SKMutablePayment'>
 <method selector='applicationUsername'>
-<retval declared_type='NSString * _Nullable' type='@'/>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
 </method>
 <method selector='productIdentifier'>
-<retval declared_type='NSString * _Nonnull' type='@'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
 </method>
 <method selector='quantity'>
-<retval declared_type='NSInteger' type='i' type64='q'/>
+<retval declared_type64='NSInteger' type64='q'/>
 </method>
 <method selector='requestData'>
-<retval declared_type='NSData * _Nullable' type='@'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
 </method>
 <method selector='setApplicationUsername:'>
-<arg declared_type='NSString * _Nullable' index='0' name='applicationUsername' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSString * _Nullable' index='0' name='applicationUsername' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setProductIdentifier:'>
-<arg declared_type='NSString * _Nonnull' index='0' name='productIdentifier' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSString * _Nonnull' index='0' name='productIdentifier' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setQuantity:'>
-<arg declared_type='NSInteger' index='0' name='quantity' type='i' type64='q'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSInteger' index='0' name='quantity' type64='q'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setRequestData:'>
-<arg declared_type='NSData * _Nullable' index='0' name='requestData' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSData * _Nullable' index='0' name='requestData' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSimulatesAskToBuyInSandbox:'>
+<arg declared_type64='BOOL' index='0' name='simulatesAskToBuyInSandbox' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='simulatesAskToBuyInSandbox'>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 </class>
 <class name='SKPayment'>
 <method selector='applicationUsername'>
-<retval declared_type='NSString * _Nullable' type='@'/>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
 </method>
 <method class_method='true' selector='paymentWithProduct:'>
-<arg declared_type='SKProduct * _Nonnull' index='0' name='product' type='@'/>
-<retval declared_type='instancetype _Nonnull' type='@'/>
+<arg declared_type64='SKProduct * _Nonnull' index='0' name='product' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method selector='productIdentifier'>
-<retval declared_type='NSString * _Nonnull' type='@'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
 </method>
 <method selector='quantity'>
-<retval declared_type='NSInteger' type='i' type64='q'/>
+<retval declared_type64='NSInteger' type64='q'/>
 </method>
 <method selector='requestData'>
-<retval declared_type='NSData * _Nullable' type='@'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='simulatesAskToBuyInSandbox'>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 </class>
 <class name='SKPaymentQueue'>
 <method selector='addPayment:'>
-<arg declared_type='SKPayment * _Nonnull' index='0' name='payment' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='SKPayment * _Nonnull' index='0' name='payment' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='addTransactionObserver:'>
-<arg declared_type='id _Nonnull' index='0' name='observer' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='id _Nonnull' index='0' name='observer' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method class_method='true' selector='canMakePayments'>
-<retval declared_type='BOOL' type='B'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='cancelDownloads:'>
-<arg declared_type='NSArray * _Nonnull' index='0' name='downloads' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='downloads' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method class_method='true' selector='defaultQueue'>
-<retval declared_type='instancetype _Nonnull' type='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method selector='finishTransaction:'>
-<arg declared_type='SKPaymentTransaction * _Nonnull' index='0' name='transaction' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='SKPaymentTransaction * _Nonnull' index='0' name='transaction' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='pauseDownloads:'>
-<arg declared_type='NSArray * _Nonnull' index='0' name='downloads' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='downloads' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='removeTransactionObserver:'>
-<arg declared_type='id _Nonnull' index='0' name='observer' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='id _Nonnull' index='0' name='observer' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='restoreCompletedTransactions'>
-<retval declared_type='void' type='v'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='restoreCompletedTransactionsWithApplicationUsername:'>
-<arg declared_type='NSString * _Nullable' index='0' name='username' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSString * _Nullable' index='0' name='username' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='resumeDownloads:'>
-<arg declared_type='NSArray * _Nonnull' index='0' name='downloads' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='downloads' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='startDownloads:'>
-<arg declared_type='NSArray * _Nonnull' index='0' name='downloads' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='downloads' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='transactions'>
-<retval declared_type='NSArray * _Nonnull' type='@'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
 </method>
 </class>
 <class name='SKPaymentTransaction'>
 <method selector='downloads'>
-<retval declared_type='NSArray * _Nonnull' type='@'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
 </method>
 <method selector='error'>
-<retval declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type64='NSError * _Nullable' type64='@'/>
 </method>
 <method selector='originalTransaction'>
-<retval declared_type='SKPaymentTransaction * _Nullable' type='@'/>
+<retval declared_type64='SKPaymentTransaction * _Nullable' type64='@'/>
 </method>
 <method selector='payment'>
-<retval declared_type='SKPayment * _Nonnull' type='@'/>
+<retval declared_type64='SKPayment * _Nonnull' type64='@'/>
 </method>
 <method selector='transactionDate'>
-<retval declared_type='NSDate * _Nullable' type='@'/>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
 </method>
 <method selector='transactionIdentifier'>
-<retval declared_type='NSString * _Nullable' type='@'/>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
 </method>
 <method selector='transactionState'>
-<retval declared_type='SKPaymentTransactionState' type='i' type64='q'/>
+<retval declared_type64='SKPaymentTransactionState' type64='q'/>
 </method>
 </class>
 <class name='SKProduct'>
 <method selector='contentLengths'>
-<retval declared_type='NSArray * _Nonnull' type='@'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
 </method>
 <method selector='contentVersion'>
-<retval declared_type='NSString * _Nonnull' type='@'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='downloadContentLengths'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='downloadContentVersion'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
 </method>
 <method selector='downloadable'>
-<retval declared_type='BOOL' type='B'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='introductoryPrice'>
-<retval declared_type='SKProductDiscount * _Nullable' type='@'/>
+<retval declared_type64='SKProductDiscount * _Nullable' type64='@'/>
 </method>
 <method selector='localizedDescription'>
-<retval declared_type='NSString * _Nonnull' type='@'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
 </method>
 <method selector='localizedTitle'>
-<retval declared_type='NSString * _Nonnull' type='@'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
 </method>
 <method selector='price'>
-<retval declared_type='NSDecimalNumber * _Nonnull' type='@'/>
+<retval declared_type64='NSDecimalNumber * _Nonnull' type64='@'/>
 </method>
 <method selector='priceLocale'>
-<retval declared_type='NSLocale * _Nonnull' type='@'/>
+<retval declared_type64='NSLocale * _Nonnull' type64='@'/>
 </method>
 <method selector='productIdentifier'>
-<retval declared_type='NSString * _Nonnull' type='@'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='subscriptionGroupIdentifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
 </method>
 <method selector='subscriptionPeriod'>
-<retval declared_type='SKProductSubscriptionPeriod * _Nullable' type='@'/>
+<retval declared_type64='SKProductSubscriptionPeriod * _Nullable' type64='@'/>
 </method>
 </class>
 <class name='SKProductDiscount'>
 <method selector='numberOfPeriods'>
-<retval declared_type='NSUInteger' type='I' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
 </method>
 <method selector='paymentMode'>
-<retval declared_type='SKProductDiscountPaymentMode' type='I' type64='Q'/>
+<retval declared_type64='SKProductDiscountPaymentMode' type64='Q'/>
 </method>
 <method selector='price'>
-<retval declared_type='NSDecimalNumber * _Nonnull' type='@'/>
+<retval declared_type64='NSDecimalNumber * _Nonnull' type64='@'/>
 </method>
 <method selector='priceLocale'>
-<retval declared_type='NSLocale * _Nonnull' type='@'/>
+<retval declared_type64='NSLocale * _Nonnull' type64='@'/>
 </method>
 <method selector='subscriptionPeriod'>
-<retval declared_type='SKProductSubscriptionPeriod * _Nonnull' type='@'/>
+<retval declared_type64='SKProductSubscriptionPeriod * _Nonnull' type64='@'/>
 </method>
 </class>
 <class name='SKProductSubscriptionPeriod'>
 <method selector='numberOfUnits'>
-<retval declared_type='NSUInteger' type='I' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
 </method>
 <method selector='unit'>
-<retval declared_type='SKProductPeriodUnit' type='I' type64='Q'/>
+<retval declared_type64='SKProductPeriodUnit' type64='Q'/>
 </method>
 </class>
 <class name='SKProductsRequest'>
 <method selector='delegate'>
-<retval declared_type='id _Nullable' type='@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
 </method>
 <method selector='initWithProductIdentifiers:'>
-<arg declared_type='NSSet * _Nonnull' index='0' name='productIdentifiers' type='@'/>
-<retval declared_type='instancetype _Nonnull' type='@'/>
+<arg declared_type64='NSSet * _Nonnull' index='0' name='productIdentifiers' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method selector='setDelegate:'>
-<arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 </class>
 <class name='SKProductsResponse'>
 <method selector='invalidProductIdentifiers'>
-<retval declared_type='NSArray * _Nonnull' type='@'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
 </method>
 <method selector='products'>
-<retval declared_type='NSArray * _Nonnull' type='@'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
 </method>
 </class>
 <class name='SKReceiptRefreshRequest'>
 <method selector='initWithReceiptProperties:'>
-<arg declared_type='NSDictionary * _Nullable' index='0' name='properties' type='@'/>
-<retval declared_type='instancetype _Nonnull' type='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='0' name='properties' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method selector='receiptProperties'>
-<retval declared_type='NSDictionary * _Nullable' type='@'/>
+<retval declared_type64='NSDictionary * _Nullable' type64='@'/>
 </method>
 </class>
 <class name='SKRequest'>
 <method selector='cancel'>
-<retval declared_type='void' type='v'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='delegate'>
-<retval declared_type='id _Nullable' type='@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
 </method>
 <method selector='setDelegate:'>
-<arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='start'>
-<retval declared_type='void' type='v'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='SKStoreReviewController'>
+<method class_method='true' selector='requestReview'>
+<retval declared_type64='void' type64='v'/>
 </method>
 </class>
 <informal_protocol name='SKPaymentTransactionObserver'>
-<method selector='paymentQueue:removedTransactions:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
-<arg declared_type='SKPaymentQueue * _Nonnull' index='0' name='queue' type='@'/>
-<arg declared_type='NSArray * _Nonnull' index='1' name='transactions' type='@'/>
-<retval declared_type='void' type='v'/>
+<method selector='paymentQueue:removedTransactions:' type64='v32@0:8@16@24'>
+<arg declared_type64='SKPaymentQueue * _Nonnull' index='0' name='queue' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='transactions' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
-<method selector='paymentQueue:restoreCompletedTransactionsFailedWithError:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
-<arg declared_type='SKPaymentQueue * _Nonnull' index='0' name='queue' type='@'/>
-<arg declared_type='NSError * _Nonnull' index='1' name='error' type='@'/>
-<retval declared_type='void' type='v'/>
+<method selector='paymentQueue:restoreCompletedTransactionsFailedWithError:' type64='v32@0:8@16@24'>
+<arg declared_type64='SKPaymentQueue * _Nonnull' index='0' name='queue' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
-<method selector='paymentQueue:updatedDownloads:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
-<arg declared_type='SKPaymentQueue * _Nonnull' index='0' name='queue' type='@'/>
-<arg declared_type='NSArray * _Nonnull' index='1' name='downloads' type='@'/>
-<retval declared_type='void' type='v'/>
+<method selector='paymentQueue:updatedDownloads:' type64='v32@0:8@16@24'>
+<arg declared_type64='SKPaymentQueue * _Nonnull' index='0' name='queue' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='downloads' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
-<method selector='paymentQueue:updatedTransactions:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
-<arg declared_type='SKPaymentQueue * _Nonnull' index='0' name='queue' type='@'/>
-<arg declared_type='NSArray * _Nonnull' index='1' name='transactions' type='@'/>
-<retval declared_type='void' type='v'/>
+<method selector='paymentQueue:updatedTransactions:' type64='v32@0:8@16@24'>
+<arg declared_type64='SKPaymentQueue * _Nonnull' index='0' name='queue' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='transactions' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
-<method selector='paymentQueueRestoreCompletedTransactionsFinished:' type='v12@0:4@8' type64='v24@0:8@16'>
-<arg declared_type='SKPaymentQueue * _Nonnull' index='0' name='queue' type='@'/>
-<retval declared_type='void' type='v'/>
+<method selector='paymentQueueRestoreCompletedTransactionsFinished:' type64='v24@0:8@16'>
+<arg declared_type64='SKPaymentQueue * _Nonnull' index='0' name='queue' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 </informal_protocol>
 <informal_protocol name='SKProductsRequestDelegate'>
-<method selector='productsRequest:didReceiveResponse:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
-<arg declared_type='SKProductsRequest * _Nonnull' index='0' name='request' type='@'/>
-<arg declared_type='SKProductsResponse * _Nonnull' index='1' name='response' type='@'/>
-<retval declared_type='void' type='v'/>
+<method selector='productsRequest:didReceiveResponse:' type64='v32@0:8@16@24'>
+<arg declared_type64='SKProductsRequest * _Nonnull' index='0' name='request' type64='@'/>
+<arg declared_type64='SKProductsResponse * _Nonnull' index='1' name='response' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 </informal_protocol>
 <informal_protocol name='SKRequestDelegate'>
-<method selector='request:didFailWithError:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
-<arg declared_type='SKRequest * _Nonnull' index='0' name='request' type='@'/>
-<arg declared_type='NSError * _Nonnull' index='1' name='error' type='@'/>
-<retval declared_type='void' type='v'/>
+<method selector='request:didFailWithError:' type64='v32@0:8@16@24'>
+<arg declared_type64='SKRequest * _Nonnull' index='0' name='request' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
-<method selector='requestDidFinish:' type='v12@0:4@8' type64='v24@0:8@16'>
-<arg declared_type='SKRequest * _Nonnull' index='0' name='request' type='@'/>
-<retval declared_type='void' type='v'/>
+<method selector='requestDidFinish:' type64='v24@0:8@16'>
+<arg declared_type64='SKRequest * _Nonnull' index='0' name='request' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 </informal_protocol>
 </signatures>

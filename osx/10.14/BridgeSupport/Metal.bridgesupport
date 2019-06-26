@@ -1,5 +1,9 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/IOSurface.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <struct name='MTLClearColor' type64='{_MTLClearColor=&quot;red&quot;d&quot;green&quot;d&quot;blue&quot;d&quot;alpha&quot;d}'>
 <field declared_type64='double' name='red' type64='d'/>
 <field declared_type64='double' name='green' type64='d'/>
@@ -27,6 +31,10 @@
 <field declared_type64='uint32_t' name='instanceCount' type64='I'/>
 <field declared_type64='uint32_t' name='vertexStart' type64='I'/>
 <field declared_type64='uint32_t' name='baseInstance' type64='I'/>
+</struct>
+<struct name='MTLIndirectCommandBufferExecutionRange' type64='{_MTLIndirectCommandBufferExecutionRange=&quot;location&quot;I&quot;length&quot;I}'>
+<field declared_type64='uint32_t' name='location' type64='I'/>
+<field declared_type64='uint32_t' name='length' type64='I'/>
 </struct>
 <struct name='MTLOrigin' type64='{_MTLOrigin=&quot;x&quot;Q&quot;y&quot;Q&quot;z&quot;Q}'>
 <field declared_type64='NSUInteger' name='x' type64='Q'/>
@@ -217,7 +225,6 @@
 <enum name='MTLDataTypeChar2' value64='46'/>
 <enum name='MTLDataTypeChar3' value64='47'/>
 <enum name='MTLDataTypeChar4' value64='48'/>
-<enum name='MTLDataTypeComputePipeline' value64='79'/>
 <enum name='MTLDataTypeFloat' value64='3'/>
 <enum name='MTLDataTypeFloat2' value64='4'/>
 <enum name='MTLDataTypeFloat2x2' value64='7'/>
@@ -283,14 +290,18 @@
 <enum name='MTLFeatureSet_iOS_GPUFamily1_v2' value64='2'/>
 <enum name='MTLFeatureSet_iOS_GPUFamily1_v3' value64='5'/>
 <enum name='MTLFeatureSet_iOS_GPUFamily1_v4' value64='8'/>
+<enum name='MTLFeatureSet_iOS_GPUFamily1_v5' value64='12'/>
 <enum name='MTLFeatureSet_iOS_GPUFamily2_v1' value64='1'/>
 <enum name='MTLFeatureSet_iOS_GPUFamily2_v2' value64='3'/>
 <enum name='MTLFeatureSet_iOS_GPUFamily2_v3' value64='6'/>
 <enum name='MTLFeatureSet_iOS_GPUFamily2_v4' value64='9'/>
+<enum name='MTLFeatureSet_iOS_GPUFamily2_v5' value64='13'/>
 <enum name='MTLFeatureSet_iOS_GPUFamily3_v1' value64='4'/>
 <enum name='MTLFeatureSet_iOS_GPUFamily3_v2' value64='7'/>
 <enum name='MTLFeatureSet_iOS_GPUFamily3_v3' value64='10'/>
+<enum name='MTLFeatureSet_iOS_GPUFamily3_v4' value64='14'/>
 <enum name='MTLFeatureSet_iOS_GPUFamily4_v1' value64='11'/>
+<enum name='MTLFeatureSet_iOS_GPUFamily4_v2' value64='15'/>
 <enum name='MTLFeatureSet_macOS_GPUFamily1_v1' value64='10000'/>
 <enum name='MTLFeatureSet_macOS_GPUFamily1_v2' value64='10001'/>
 <enum name='MTLFeatureSet_macOS_GPUFamily1_v3' value64='10003'/>
@@ -300,6 +311,7 @@
 <enum name='MTLFeatureSet_tvOS_GPUFamily1_v1' value64='30000'/>
 <enum name='MTLFeatureSet_tvOS_GPUFamily1_v2' value64='30001'/>
 <enum name='MTLFeatureSet_tvOS_GPUFamily1_v3' value64='30002'/>
+<enum name='MTLFeatureSet_tvOS_GPUFamily1_v4' value64='30004'/>
 <enum name='MTLFunctionTypeFragment' value64='2'/>
 <enum name='MTLFunctionTypeKernel' value64='3'/>
 <enum name='MTLFunctionTypeVertex' value64='1'/>
@@ -392,7 +404,6 @@
 <enum name='MTLPixelFormatBGRA8Unorm' value64='80'/>
 <enum name='MTLPixelFormatBGRA8Unorm_sRGB' value64='81'/>
 <enum name='MTLPixelFormatBGRG422' value64='241'/>
-<enum name='MTLPixelFormatBGRX8Unorm' value64='75'/>
 <enum name='MTLPixelFormatDepth16Unorm' value64='250'/>
 <enum name='MTLPixelFormatDepth24Unorm_Stencil8' value64='255'/>
 <enum name='MTLPixelFormatDepth32Float' value64='252'/>
@@ -655,6 +666,11 @@
 <function name='MTLCreateSystemDefaultDevice'>
 <retval already_retained='true' declared_type64='id _Nullable' type64='@'/>
 </function>
+<function inline='true' name='MTLIndirectCommandBufferExecutionRangeMake'>
+<arg declared_type64='uint32_t' name='location' type64='I'/>
+<arg declared_type64='uint32_t' name='length' type64='I'/>
+<retval declared_type64='MTLIndirectCommandBufferExecutionRange' type64='{_MTLIndirectCommandBufferExecutionRange=II}'/>
+</function>
 <function inline='true' name='MTLOriginMake'>
 <arg declared_type64='NSUInteger' name='x' type64='Q'/>
 <arg declared_type64='NSUInteger' name='y' type64='Q'/>
@@ -717,7 +733,7 @@
 <retval declared_type64='MTLPointerType * _Nullable' type64='@'/>
 </method>
 <method selector='bufferStructType'>
-<retval declared_type64='MTLStructType * _Nonnull' type64='@'/>
+<retval declared_type64='MTLStructType * _Nullable' type64='@'/>
 </method>
 <method selector='index'>
 <retval declared_type64='NSUInteger' type64='Q'/>
@@ -837,7 +853,7 @@
 <retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='name'>
-<retval declared_type64='NSString * _Nullable' type64='@'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
 </method>
 </class>
 <class name='MTLAttributeDescriptor'>
@@ -1990,7 +2006,7 @@
 <retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='name'>
-<retval declared_type64='NSString * _Nullable' type64='@'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
 </method>
 </class>
 <class name='MTLVertexAttributeDescriptor'>
@@ -2306,22 +2322,6 @@
 <arg declared_type64='NSUInteger' index='11' name='instanceStride' type64='Q'/>
 <retval declared_type64='void' type64='v'/>
 </method>
-<method selector='drawIndexedPatches:patchStart:patchCount:patchIndexBuffer:patchIndexBufferOffset:controlPointIndexBuffer:controlPointIndexBufferOffset:instanceCount:baseInstance:tessellationFactorBuffer:tessellationFactorBufferOffset:tessellationFactorBufferInstanceStride:tessellationFactorBufferScale:'>
-<arg declared_type64='NSUInteger' index='0' name='numberOfPatchControlPoints' type64='Q'/>
-<arg declared_type64='NSUInteger' index='1' name='patchStart' type64='Q'/>
-<arg declared_type64='NSUInteger' index='2' name='patchCount' type64='Q'/>
-<arg declared_type64='id _Nullable' index='3' name='patchIndexBuffer' type64='@'/>
-<arg declared_type64='NSUInteger' index='4' name='patchIndexBufferOffset' type64='Q'/>
-<arg declared_type64='id _Nonnull' index='5' name='controlPointIndexBuffer' type64='@'/>
-<arg declared_type64='NSUInteger' index='6' name='controlPointIndexBufferOffset' type64='Q'/>
-<arg declared_type64='NSUInteger' index='7' name='instanceCount' type64='Q'/>
-<arg declared_type64='NSUInteger' index='8' name='baseInstance' type64='Q'/>
-<arg declared_type64='id _Nonnull' index='9' name='buffer' type64='@'/>
-<arg declared_type64='NSUInteger' index='10' name='offset' type64='Q'/>
-<arg declared_type64='NSUInteger' index='11' name='instanceStride' type64='Q'/>
-<arg declared_type64='float' index='12' name='scale' type64='f'/>
-<retval declared_type64='void' type64='v'/>
-</method>
 <method selector='drawIndexedPrimitives:indexCount:indexType:indexBuffer:indexBufferOffset:'>
 <arg declared_type64='MTLPrimitiveType' index='0' name='primitiveType' type64='Q'/>
 <arg declared_type64='NSUInteger' index='1' name='indexCount' type64='Q'/>
@@ -2388,20 +2388,6 @@
 <arg declared_type64='id _Nonnull' index='7' name='buffer' type64='@'/>
 <arg declared_type64='NSUInteger' index='8' name='offset' type64='Q'/>
 <arg declared_type64='NSUInteger' index='9' name='instanceStride' type64='Q'/>
-<retval declared_type64='void' type64='v'/>
-</method>
-<method selector='drawPatches:patchStart:patchCount:patchIndexBuffer:patchIndexBufferOffset:instanceCount:baseInstance:tessellationFactorBuffer:tessellationFactorBufferOffset:tessellationFactorBufferInstanceStride:tessellationFactorBufferScale:'>
-<arg declared_type64='NSUInteger' index='0' name='numberOfPatchControlPoints' type64='Q'/>
-<arg declared_type64='NSUInteger' index='1' name='patchStart' type64='Q'/>
-<arg declared_type64='NSUInteger' index='2' name='patchCount' type64='Q'/>
-<arg declared_type64='id _Nullable' index='3' name='patchIndexBuffer' type64='@'/>
-<arg declared_type64='NSUInteger' index='4' name='patchIndexBufferOffset' type64='Q'/>
-<arg declared_type64='NSUInteger' index='5' name='instanceCount' type64='Q'/>
-<arg declared_type64='NSUInteger' index='6' name='baseInstance' type64='Q'/>
-<arg declared_type64='id _Nonnull' index='7' name='buffer' type64='@'/>
-<arg declared_type64='NSUInteger' index='8' name='offset' type64='Q'/>
-<arg declared_type64='NSUInteger' index='9' name='instanceStride' type64='Q'/>
-<arg declared_type64='float' index='10' name='scale' type64='f'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='drawPrimitives:indirectBuffer:indirectBufferOffset:'>
@@ -2524,7 +2510,7 @@
 </method>
 <method selector='indirectRenderCommandAtIndex:'>
 <arg declared_type64='NSUInteger' index='0' name='commandIndex' type64='Q'/>
-<retval declared_type64='id' type64='@'/>
+<retval declared_type64='id _Nonnull' type64='@'/>
 </method>
 <method selector='insertDebugCaptureBoundary'>
 <retval declared_type64='void' type64='v'/>
@@ -2661,7 +2647,7 @@
 <method selector='newBufferWithLength:options:'>
 <arg declared_type64='NSUInteger' index='0' name='length' type64='Q'/>
 <arg declared_type64='MTLResourceOptions' index='1' name='options' type64='Q'/>
-<retval declared_type64='id _Nonnull' type64='@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
 </method>
 <method selector='newCommandQueue'>
 <retval declared_type64='id _Nullable' type64='@'/>
@@ -2869,7 +2855,7 @@
 </method>
 <method selector='newTextureWithDescriptor:'>
 <arg declared_type64='MTLTextureDescriptor * _Nonnull' index='0' name='desc' type64='@'/>
-<retval declared_type64='id _Nonnull' type64='@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
 </method>
 <method selector='newTextureWithDescriptor:iosurface:plane:'>
 <arg declared_type64='MTLTextureDescriptor * _Nonnull' index='0' name='descriptor' type64='@'/>
@@ -3006,6 +2992,10 @@
 <arg declared_type64='NSRange' index='1' name='range' type64='{_NSRange=QQ}'/>
 <retval declared_type64='void' type64='v'/>
 </method>
+<method selector='resetWithRange:'>
+<arg declared_type64='NSRange' index='0' name='range' type64='{_NSRange=QQ}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
 <method selector='retainedReferences'>
 <retval declared_type64='BOOL' type64='B'/>
 </method>
@@ -3016,7 +3006,7 @@
 <retval declared_type64='NSUInteger' type64='Q'/>
 </method>
 <method selector='setArgumentBuffer:offset:'>
-<arg declared_type64='id _Nonnull' index='0' name='argumentBuffer' type64='@'/>
+<arg declared_type64='id _Nullable' index='0' name='argumentBuffer' type64='@'/>
 <arg declared_type64='NSUInteger' index='1' name='offset' type64='Q'/>
 <retval declared_type64='void' type64='v'/>
 </method>
@@ -3479,7 +3469,7 @@
 <retval declared_type64='id _Nullable' type64='@'/>
 </method>
 <method selector='setArgumentBuffer:offset:' type64='v32@0:8@16Q24'>
-<arg declared_type64='id _Nonnull' index='0' name='argumentBuffer' type64='@'/>
+<arg declared_type64='id _Nullable' index='0' name='argumentBuffer' type64='@'/>
 <arg declared_type64='NSUInteger' index='1' name='offset' type64='Q'/>
 <retval declared_type64='void' type64='v'/>
 </method>
@@ -4115,7 +4105,7 @@
 <method selector='newBufferWithLength:options:' type64='@32@0:8Q16Q24'>
 <arg declared_type64='NSUInteger' index='0' name='length' type64='Q'/>
 <arg declared_type64='MTLResourceOptions' index='1' name='options' type64='Q'/>
-<retval declared_type64='id _Nonnull' type64='@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
 </method>
 <method selector='newCommandQueue' type64='@16@0:8'>
 <retval declared_type64='id _Nullable' type64='@'/>
@@ -4286,7 +4276,7 @@
 </method>
 <method selector='newTextureWithDescriptor:' type64='@24@0:8@16'>
 <arg declared_type64='MTLTextureDescriptor * _Nonnull' index='0' name='desc' type64='@'/>
-<retval declared_type64='id _Nonnull' type64='@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
 </method>
 <method selector='newTextureWithDescriptor:iosurface:plane:' type64='@40@0:8@16^{__IOSurface=}24Q32'>
 <arg declared_type64='MTLTextureDescriptor * _Nonnull' index='0' name='descriptor' type64='@'/>
@@ -4407,11 +4397,11 @@
 <method selector='newBufferWithLength:options:' type64='@32@0:8Q16Q24'>
 <arg declared_type64='NSUInteger' index='0' name='length' type64='Q'/>
 <arg declared_type64='MTLResourceOptions' index='1' name='options' type64='Q'/>
-<retval declared_type64='id _Nonnull' type64='@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
 </method>
 <method selector='newTextureWithDescriptor:' type64='@24@0:8@16'>
 <arg declared_type64='MTLTextureDescriptor * _Nonnull' index='0' name='desc' type64='@'/>
-<retval declared_type64='id _Nonnull' type64='@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
 </method>
 <method selector='setLabel:' type64='v24@0:8@16'>
 <arg declared_type64='NSString * _Nullable' index='0' name='label' type64='@'/>
@@ -4434,7 +4424,11 @@
 <informal_protocol name='MTLIndirectCommandBuffer'>
 <method selector='indirectRenderCommandAtIndex:' type64='@24@0:8Q16'>
 <arg declared_type64='NSUInteger' index='0' name='commandIndex' type64='Q'/>
-<retval declared_type64='id' type64='@'/>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='resetWithRange:' type64='v32@0:8{_NSRange=QQ}16'>
+<arg declared_type64='NSRange' index='0' name='range' type64='{_NSRange=QQ}'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='size' type64='Q16@0:8'>
 <retval declared_type64='NSUInteger' type64='Q'/>
@@ -4454,22 +4448,6 @@
 <arg declared_type64='id _Nonnull' index='9' name='buffer' type64='@'/>
 <arg declared_type64='NSUInteger' index='10' name='offset' type64='Q'/>
 <arg declared_type64='NSUInteger' index='11' name='instanceStride' type64='Q'/>
-<retval declared_type64='void' type64='v'/>
-</method>
-<method selector='drawIndexedPatches:patchStart:patchCount:patchIndexBuffer:patchIndexBufferOffset:controlPointIndexBuffer:controlPointIndexBufferOffset:instanceCount:baseInstance:tessellationFactorBuffer:tessellationFactorBufferOffset:tessellationFactorBufferInstanceStride:tessellationFactorBufferScale:' type64='v116@0:8Q16Q24Q32@40Q48@56Q64Q72Q80@88Q96Q104f112'>
-<arg declared_type64='NSUInteger' index='0' name='numberOfPatchControlPoints' type64='Q'/>
-<arg declared_type64='NSUInteger' index='1' name='patchStart' type64='Q'/>
-<arg declared_type64='NSUInteger' index='2' name='patchCount' type64='Q'/>
-<arg declared_type64='id _Nullable' index='3' name='patchIndexBuffer' type64='@'/>
-<arg declared_type64='NSUInteger' index='4' name='patchIndexBufferOffset' type64='Q'/>
-<arg declared_type64='id _Nonnull' index='5' name='controlPointIndexBuffer' type64='@'/>
-<arg declared_type64='NSUInteger' index='6' name='controlPointIndexBufferOffset' type64='Q'/>
-<arg declared_type64='NSUInteger' index='7' name='instanceCount' type64='Q'/>
-<arg declared_type64='NSUInteger' index='8' name='baseInstance' type64='Q'/>
-<arg declared_type64='id _Nonnull' index='9' name='buffer' type64='@'/>
-<arg declared_type64='NSUInteger' index='10' name='offset' type64='Q'/>
-<arg declared_type64='NSUInteger' index='11' name='instanceStride' type64='Q'/>
-<arg declared_type64='float' index='12' name='scale' type64='f'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='drawIndexedPrimitives:indexCount:indexType:indexBuffer:indexBufferOffset:instanceCount:baseVertex:baseInstance:' type64='v80@0:8Q16Q24Q32@40Q48Q56q64Q72'>
@@ -4494,20 +4472,6 @@
 <arg declared_type64='id _Nonnull' index='7' name='buffer' type64='@'/>
 <arg declared_type64='NSUInteger' index='8' name='offset' type64='Q'/>
 <arg declared_type64='NSUInteger' index='9' name='instanceStride' type64='Q'/>
-<retval declared_type64='void' type64='v'/>
-</method>
-<method selector='drawPatches:patchStart:patchCount:patchIndexBuffer:patchIndexBufferOffset:instanceCount:baseInstance:tessellationFactorBuffer:tessellationFactorBufferOffset:tessellationFactorBufferInstanceStride:tessellationFactorBufferScale:' type64='v100@0:8Q16Q24Q32@40Q48Q56Q64@72Q80Q88f96'>
-<arg declared_type64='NSUInteger' index='0' name='numberOfPatchControlPoints' type64='Q'/>
-<arg declared_type64='NSUInteger' index='1' name='patchStart' type64='Q'/>
-<arg declared_type64='NSUInteger' index='2' name='patchCount' type64='Q'/>
-<arg declared_type64='id _Nullable' index='3' name='patchIndexBuffer' type64='@'/>
-<arg declared_type64='NSUInteger' index='4' name='patchIndexBufferOffset' type64='Q'/>
-<arg declared_type64='NSUInteger' index='5' name='instanceCount' type64='Q'/>
-<arg declared_type64='NSUInteger' index='6' name='baseInstance' type64='Q'/>
-<arg declared_type64='id _Nonnull' index='7' name='buffer' type64='@'/>
-<arg declared_type64='NSUInteger' index='8' name='offset' type64='Q'/>
-<arg declared_type64='NSUInteger' index='9' name='instanceStride' type64='Q'/>
-<arg declared_type64='float' index='10' name='scale' type64='f'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='drawPrimitives:vertexStart:vertexCount:instanceCount:baseInstance:' type64='v56@0:8Q16Q24Q32Q40Q48'>

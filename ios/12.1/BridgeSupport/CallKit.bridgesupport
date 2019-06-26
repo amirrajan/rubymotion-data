@@ -1,0 +1,715 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/MobileCoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<constant const='true' declared_type='CXCallDirectoryPhoneNumber' name='CXCallDirectoryPhoneNumberMax' type='q'/>
+<constant const='true' declared_type='NSErrorDomain _Nonnull' name='CXErrorDomain' type='@'/>
+<constant const='true' declared_type='NSErrorDomain _Nonnull' name='CXErrorDomainCallDirectoryManager' type='@'/>
+<constant const='true' declared_type='NSErrorDomain _Nonnull' name='CXErrorDomainIncomingCall' type='@'/>
+<constant const='true' declared_type='NSErrorDomain _Nonnull' name='CXErrorDomainRequestTransaction' type='@'/>
+<enum name='CXCallDirectoryEnabledStatusDisabled' value='1'/>
+<enum name='CXCallDirectoryEnabledStatusEnabled' value='2'/>
+<enum name='CXCallDirectoryEnabledStatusUnknown' value='0'/>
+<enum name='CXCallEndedReasonAnsweredElsewhere' value='4'/>
+<enum name='CXCallEndedReasonDeclinedElsewhere' value='5'/>
+<enum name='CXCallEndedReasonFailed' value='1'/>
+<enum name='CXCallEndedReasonRemoteEnded' value='2'/>
+<enum name='CXCallEndedReasonUnanswered' value='3'/>
+<enum name='CXErrorCodeCallDirectoryManagerErrorCurrentlyLoading' value='7'/>
+<enum name='CXErrorCodeCallDirectoryManagerErrorDuplicateEntries' value='4'/>
+<enum name='CXErrorCodeCallDirectoryManagerErrorEntriesOutOfOrder' value='3'/>
+<enum name='CXErrorCodeCallDirectoryManagerErrorExtensionDisabled' value='6'/>
+<enum name='CXErrorCodeCallDirectoryManagerErrorLoadingInterrupted' value='2'/>
+<enum name='CXErrorCodeCallDirectoryManagerErrorMaximumEntriesExceeded' value='5'/>
+<enum name='CXErrorCodeCallDirectoryManagerErrorNoExtensionFound' value='1'/>
+<enum name='CXErrorCodeCallDirectoryManagerErrorUnexpectedIncrementalRemoval' value='8'/>
+<enum name='CXErrorCodeCallDirectoryManagerErrorUnknown' value='0'/>
+<enum name='CXErrorCodeIncomingCallErrorCallUUIDAlreadyExists' value='2'/>
+<enum name='CXErrorCodeIncomingCallErrorFilteredByBlockList' value='4'/>
+<enum name='CXErrorCodeIncomingCallErrorFilteredByDoNotDisturb' value='3'/>
+<enum name='CXErrorCodeIncomingCallErrorUnentitled' value='1'/>
+<enum name='CXErrorCodeIncomingCallErrorUnknown' value='0'/>
+<enum name='CXErrorCodeRequestTransactionErrorCallUUIDAlreadyExists' value='5'/>
+<enum name='CXErrorCodeRequestTransactionErrorEmptyTransaction' value='3'/>
+<enum name='CXErrorCodeRequestTransactionErrorInvalidAction' value='6'/>
+<enum name='CXErrorCodeRequestTransactionErrorMaximumCallGroupsReached' value='7'/>
+<enum name='CXErrorCodeRequestTransactionErrorUnentitled' value='1'/>
+<enum name='CXErrorCodeRequestTransactionErrorUnknown' value='0'/>
+<enum name='CXErrorCodeRequestTransactionErrorUnknownCallProvider' value='2'/>
+<enum name='CXErrorCodeRequestTransactionErrorUnknownCallUUID' value='4'/>
+<enum name='CXErrorCodeUnknownError' value='0'/>
+<enum name='CXHandleTypeEmailAddress' value='3'/>
+<enum name='CXHandleTypeGeneric' value='1'/>
+<enum name='CXHandleTypePhoneNumber' value='2'/>
+<enum name='CXPlayDTMFCallActionTypeHardPause' value='3'/>
+<enum name='CXPlayDTMFCallActionTypeSingleTone' value='1'/>
+<enum name='CXPlayDTMFCallActionTypeSoftPause' value='2'/>
+<class name='CXAction'>
+<method selector='UUID'>
+<retval declared_type='NSUUID * _Nonnull' type='@'/>
+</method>
+<method selector='fail'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='fulfill'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='init'>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithCoder:'>
+<arg declared_type='NSCoder * _Nonnull' index='0' name='aDecoder' type='@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='isComplete'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='timeoutDate'>
+<retval declared_type='NSDate * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='CXAnswerCallAction'>
+<method selector='fulfillWithDateConnected:'>
+<arg declared_type='NSDate * _Nonnull' index='0' name='dateConnected' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CXCall'>
+<method selector='UUID'>
+<retval declared_type='NSUUID * _Nonnull' type='@'/>
+</method>
+<method selector='hasConnected'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='hasEnded'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isEqualToCall:'>
+<arg declared_type='CXCall * _Nonnull' index='0' name='call' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isOnHold'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isOutgoing'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='CXCallAction'>
+<method selector='callUUID'>
+<retval declared_type='NSUUID * _Nonnull' type='@'/>
+</method>
+<method selector='initWithCallUUID:'>
+<arg declared_type='NSUUID * _Nonnull' index='0' name='callUUID' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithCoder:'>
+<arg declared_type='NSCoder * _Nonnull' index='0' name='aDecoder' type='@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+</class>
+<class name='CXCallController'>
+<method selector='callObserver'>
+<retval declared_type='CXCallObserver * _Nonnull' type='@'/>
+</method>
+<method selector='init'>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithQueue:'>
+<arg declared_type='dispatch_queue_t _Nonnull' index='0' name='queue' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='requestTransaction:completion:'>
+<arg declared_type='CXTransaction * _Nonnull' index='0' name='transaction' type='@'/>
+<arg declared_type='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completion' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='requestTransactionWithAction:completion:'>
+<arg declared_type='CXAction * _Nonnull' index='0' name='action' type='@'/>
+<arg declared_type='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completion' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='requestTransactionWithActions:completion:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='actions' type='@'/>
+<arg declared_type='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completion' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CXCallDirectoryExtensionContext'>
+<method selector='addBlockingEntryWithNextSequentialPhoneNumber:'>
+<arg declared_type='CXCallDirectoryPhoneNumber' index='0' name='phoneNumber' type='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addIdentificationEntryWithNextSequentialPhoneNumber:label:'>
+<arg declared_type='CXCallDirectoryPhoneNumber' index='0' name='phoneNumber' type='q'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='label' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='completeRequestWithCompletionHandler:'>
+<arg declared_type='void (^ _Nullable)(BOOL)' function_pointer='true' index='0' name='completion' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='isIncremental'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='removeAllBlockingEntries'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeAllIdentificationEntries'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeBlockingEntryWithPhoneNumber:'>
+<arg declared_type='CXCallDirectoryPhoneNumber' index='0' name='phoneNumber' type='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeIdentificationEntryWithPhoneNumber:'>
+<arg declared_type='CXCallDirectoryPhoneNumber' index='0' name='phoneNumber' type='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CXCallDirectoryManager'>
+<method selector='getEnabledStatusForExtensionWithIdentifier:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='identifier' type='@'/>
+<arg declared_type='void (^ _Nonnull)(CXCallDirectoryEnabledStatus, NSError * _Nullable)' function_pointer='true' index='1' name='completion' type='@?'>
+<arg declared_type='CXCallDirectoryEnabledStatus' type='i' type64='q'/>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='reloadExtensionWithIdentifier:completionHandler:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='identifier' type='@'/>
+<arg declared_type='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completion' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sharedInstance'>
+<retval declared_type='CXCallDirectoryManager * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='CXCallDirectoryProvider'>
+<method selector='beginRequestWithExtensionContext:'>
+<arg declared_type='CXCallDirectoryExtensionContext * _Nonnull' index='0' name='context' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CXCallObserver'>
+<method selector='calls'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='setDelegate:queue:'>
+<arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
+<arg declared_type='dispatch_queue_t _Nullable' index='1' name='queue' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CXCallUpdate'>
+<method selector='hasVideo'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='localizedCallerName'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='remoteHandle'>
+<retval declared_type='CXHandle * _Nullable' type='@'/>
+</method>
+<method selector='setHasVideo:'>
+<arg declared_type='BOOL' index='0' name='hasVideo' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLocalizedCallerName:'>
+<arg declared_type='NSString * _Nullable' index='0' name='localizedCallerName' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRemoteHandle:'>
+<arg declared_type='CXHandle * _Nullable' index='0' name='remoteHandle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSupportsDTMF:'>
+<arg declared_type='BOOL' index='0' name='supportsDTMF' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSupportsGrouping:'>
+<arg declared_type='BOOL' index='0' name='supportsGrouping' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSupportsHolding:'>
+<arg declared_type='BOOL' index='0' name='supportsHolding' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSupportsUngrouping:'>
+<arg declared_type='BOOL' index='0' name='supportsUngrouping' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='supportsDTMF'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='supportsGrouping'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='supportsHolding'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='supportsUngrouping'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='CXEndCallAction'>
+<method selector='fulfillWithDateEnded:'>
+<arg declared_type='NSDate * _Nonnull' index='0' name='dateEnded' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CXHandle'>
+<method selector='initWithType:value:'>
+<arg declared_type='CXHandleType' index='0' name='type' type='i' type64='q'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='value' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='isEqualToHandle:'>
+<arg declared_type='CXHandle * _Nonnull' index='0' name='handle' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='type'>
+<retval declared_type='CXHandleType' type='i' type64='q'/>
+</method>
+<method selector='value'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='CXPlayDTMFCallAction'>
+<method selector='digits'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='initWithCallUUID:digits:type:'>
+<arg declared_type='NSUUID * _Nonnull' index='0' name='callUUID' type='@'/>
+<arg declared_type='NSString * _Nonnull' index='1' name='digits' type='@'/>
+<arg declared_type='CXPlayDTMFCallActionType' index='2' name='type' type='i' type64='q'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithCoder:'>
+<arg declared_type='NSCoder * _Nonnull' index='0' name='aDecoder' type='@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='setDigits:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='digits' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setType:'>
+<arg declared_type='CXPlayDTMFCallActionType' index='0' name='type' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='type'>
+<retval declared_type='CXPlayDTMFCallActionType' type='i' type64='q'/>
+</method>
+</class>
+<class name='CXProvider'>
+<method selector='configuration'>
+<retval declared_type='CXProviderConfiguration * _Nonnull' type='@'/>
+</method>
+<method selector='initWithConfiguration:'>
+<arg declared_type='CXProviderConfiguration * _Nonnull' index='0' name='configuration' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='invalidate'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='pendingCallActionsOfClass:withCallUUID:'>
+<arg declared_type='Class _Nonnull' index='0' name='callActionClass' type='#'/>
+<arg declared_type='NSUUID * _Nonnull' index='1' name='callUUID' type='@'/>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='pendingTransactions'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='reportCallWithUUID:endedAtDate:reason:'>
+<arg declared_type='NSUUID * _Nonnull' index='0' name='UUID' type='@'/>
+<arg declared_type='NSDate * _Nullable' index='1' name='dateEnded' type='@'/>
+<arg declared_type='CXCallEndedReason' index='2' name='endedReason' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='reportCallWithUUID:updated:'>
+<arg declared_type='NSUUID * _Nonnull' index='0' name='UUID' type='@'/>
+<arg declared_type='CXCallUpdate * _Nonnull' index='1' name='update' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='reportNewIncomingCallWithUUID:update:completion:'>
+<arg declared_type='NSUUID * _Nonnull' index='0' name='UUID' type='@'/>
+<arg declared_type='CXCallUpdate * _Nonnull' index='1' name='update' type='@'/>
+<arg declared_type='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='2' name='completion' type='@?'>
+<arg declared_type='NSError * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='reportOutgoingCallWithUUID:connectedAtDate:'>
+<arg declared_type='NSUUID * _Nonnull' index='0' name='UUID' type='@'/>
+<arg declared_type='NSDate * _Nullable' index='1' name='dateConnected' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='reportOutgoingCallWithUUID:startedConnectingAtDate:'>
+<arg declared_type='NSUUID * _Nonnull' index='0' name='UUID' type='@'/>
+<arg declared_type='NSDate * _Nullable' index='1' name='dateStartedConnecting' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setConfiguration:'>
+<arg declared_type='CXProviderConfiguration * _Nonnull' index='0' name='configuration' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:queue:'>
+<arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
+<arg declared_type='dispatch_queue_t _Nullable' index='1' name='queue' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CXProviderConfiguration'>
+<method selector='iconTemplateImageData'>
+<retval declared_type='NSData * _Nullable' type='@'/>
+</method>
+<method selector='includesCallsInRecents'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithLocalizedName:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='localizedName' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='localizedName'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='maximumCallGroups'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='maximumCallsPerCallGroup'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='ringtoneSound'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='setIconTemplateImageData:'>
+<arg declared_type='NSData * _Nullable' index='0' name='iconTemplateImageData' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setIncludesCallsInRecents:'>
+<arg declared_type='BOOL' index='0' name='includesCallsInRecents' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaximumCallGroups:'>
+<arg declared_type='NSUInteger' index='0' name='maximumCallGroups' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaximumCallsPerCallGroup:'>
+<arg declared_type='NSUInteger' index='0' name='maximumCallsPerCallGroup' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRingtoneSound:'>
+<arg declared_type='NSString * _Nullable' index='0' name='ringtoneSound' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSupportedHandleTypes:'>
+<arg declared_type='NSSet * _Nonnull' index='0' name='supportedHandleTypes' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSupportsVideo:'>
+<arg declared_type='BOOL' index='0' name='supportsVideo' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='supportedHandleTypes'>
+<retval declared_type='NSSet * _Nonnull' type='@'/>
+</method>
+<method selector='supportsVideo'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='CXSetGroupCallAction'>
+<method selector='callUUIDToGroupWith'>
+<retval declared_type='NSUUID * _Nullable' type='@'/>
+</method>
+<method selector='initWithCallUUID:callUUIDToGroupWith:'>
+<arg declared_type='NSUUID * _Nonnull' index='0' name='callUUID' type='@'/>
+<arg declared_type='NSUUID * _Nullable' index='1' name='callUUIDToGroupWith' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithCoder:'>
+<arg declared_type='NSCoder * _Nonnull' index='0' name='aDecoder' type='@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='setCallUUIDToGroupWith:'>
+<arg declared_type='NSUUID * _Nullable' index='0' name='callUUIDToGroupWith' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CXSetHeldCallAction'>
+<method selector='initWithCallUUID:onHold:'>
+<arg declared_type='NSUUID * _Nonnull' index='0' name='callUUID' type='@'/>
+<arg declared_type='BOOL' index='1' name='onHold' type='B'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithCoder:'>
+<arg declared_type='NSCoder * _Nonnull' index='0' name='aDecoder' type='@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='isOnHold'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setOnHold:'>
+<arg declared_type='BOOL' index='0' name='onHold' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CXSetMutedCallAction'>
+<method selector='initWithCallUUID:muted:'>
+<arg declared_type='NSUUID * _Nonnull' index='0' name='callUUID' type='@'/>
+<arg declared_type='BOOL' index='1' name='muted' type='B'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithCoder:'>
+<arg declared_type='NSCoder * _Nonnull' index='0' name='aDecoder' type='@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='isMuted'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setMuted:'>
+<arg declared_type='BOOL' index='0' name='muted' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CXStartCallAction'>
+<method selector='contactIdentifier'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='fulfillWithDateStarted:'>
+<arg declared_type='NSDate * _Nonnull' index='0' name='dateStarted' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='handle'>
+<retval declared_type='CXHandle * _Nonnull' type='@'/>
+</method>
+<method selector='initWithCallUUID:handle:'>
+<arg declared_type='NSUUID * _Nonnull' index='0' name='callUUID' type='@'/>
+<arg declared_type='CXHandle * _Nonnull' index='1' name='handle' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithCoder:'>
+<arg declared_type='NSCoder * _Nonnull' index='0' name='aDecoder' type='@'/>
+<retval declared_type='instancetype _Nullable' type='@'/>
+</method>
+<method selector='isVideo'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setContactIdentifier:'>
+<arg declared_type='NSString * _Nullable' index='0' name='contactIdentifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHandle:'>
+<arg declared_type='CXHandle * _Nonnull' index='0' name='handle' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setVideo:'>
+<arg declared_type='BOOL' index='0' name='video' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CXTransaction'>
+<method selector='UUID'>
+<retval declared_type='NSUUID * _Nonnull' type='@'/>
+</method>
+<method selector='actions'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+<method selector='addAction:'>
+<arg declared_type='CXAction * _Nonnull' index='0' name='action' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithAction:'>
+<arg declared_type='CXAction * _Nonnull' index='0' name='action' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='initWithActions:'>
+<arg declared_type='NSArray * _Nonnull' index='0' name='actions' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='isComplete'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='callObserver:callChanged:'>
+<arg declared_type='CXCallObserver * _Nonnull' index='0' name='callObserver' type='@'/>
+<arg declared_type='CXCall * _Nonnull' index='1' name='call' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:didActivateAudioSession:'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='AVAudioSession * _Nonnull' index='1' name='audioSession' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:didDeactivateAudioSession:'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='AVAudioSession * _Nonnull' index='1' name='audioSession' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:executeTransaction:'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='CXTransaction * _Nonnull' index='1' name='transaction' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='provider:performAnswerCallAction:'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='CXAnswerCallAction * _Nonnull' index='1' name='action' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:performEndCallAction:'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='CXEndCallAction * _Nonnull' index='1' name='action' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:performPlayDTMFCallAction:'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='CXPlayDTMFCallAction * _Nonnull' index='1' name='action' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:performSetGroupCallAction:'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='CXSetGroupCallAction * _Nonnull' index='1' name='action' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:performSetHeldCallAction:'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='CXSetHeldCallAction * _Nonnull' index='1' name='action' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:performSetMutedCallAction:'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='CXSetMutedCallAction * _Nonnull' index='1' name='action' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:performStartCallAction:'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='CXStartCallAction * _Nonnull' index='1' name='action' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:timedOutPerformingAction:'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='CXAction * _Nonnull' index='1' name='action' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='providerDidBegin:'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='providerDidReset:'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='requestFailedForExtensionContext:withError:'>
+<arg declared_type='CXCallDirectoryExtensionContext * _Nonnull' index='0' name='extensionContext' type='@'/>
+<arg declared_type='NSError * _Nonnull' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='CXCallDirectoryExtensionContextDelegate'>
+<method selector='requestFailedForExtensionContext:withError:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='CXCallDirectoryExtensionContext * _Nonnull' index='0' name='extensionContext' type='@'/>
+<arg declared_type='NSError * _Nonnull' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='CXCallObserverDelegate'>
+<method selector='callObserver:callChanged:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='CXCallObserver * _Nonnull' index='0' name='callObserver' type='@'/>
+<arg declared_type='CXCall * _Nonnull' index='1' name='call' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='CXProviderDelegate'>
+<method selector='provider:didActivateAudioSession:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='AVAudioSession * _Nonnull' index='1' name='audioSession' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:didDeactivateAudioSession:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='AVAudioSession * _Nonnull' index='1' name='audioSession' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:executeTransaction:' type='B16@0:4@8@12' type64='B32@0:8@16@24'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='CXTransaction * _Nonnull' index='1' name='transaction' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='provider:performAnswerCallAction:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='CXAnswerCallAction * _Nonnull' index='1' name='action' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:performEndCallAction:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='CXEndCallAction * _Nonnull' index='1' name='action' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:performPlayDTMFCallAction:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='CXPlayDTMFCallAction * _Nonnull' index='1' name='action' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:performSetGroupCallAction:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='CXSetGroupCallAction * _Nonnull' index='1' name='action' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:performSetHeldCallAction:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='CXSetHeldCallAction * _Nonnull' index='1' name='action' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:performSetMutedCallAction:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='CXSetMutedCallAction * _Nonnull' index='1' name='action' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:performStartCallAction:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='CXStartCallAction * _Nonnull' index='1' name='action' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='provider:timedOutPerformingAction:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<arg declared_type='CXAction * _Nonnull' index='1' name='action' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='providerDidBegin:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='providerDidReset:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='CXProvider * _Nonnull' index='0' name='provider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>

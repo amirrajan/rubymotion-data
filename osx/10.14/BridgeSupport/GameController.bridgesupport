@@ -1,5 +1,13 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreBluetooth.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/IOBluetooth.framework'/>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <struct name='GCAcceleration' type64='{_GCAcceleration=&quot;x&quot;d&quot;y&quot;d&quot;z&quot;d}'>
 <field declared_type64='double' name='x' type64='d'/>
 <field declared_type64='double' name='y' type64='d'/>
@@ -28,6 +36,26 @@
 <field declared_type64='float' name='leftTrigger' type64='f'/>
 <field declared_type64='float' name='rightTrigger' type64='f'/>
 </struct>
+<struct name='GCExtendedGamepadSnapshotData' type64='{_GCExtendedGamepadSnapshotData=&quot;version&quot;S&quot;size&quot;S&quot;dpadX&quot;f&quot;dpadY&quot;f&quot;buttonA&quot;f&quot;buttonB&quot;f&quot;buttonX&quot;f&quot;buttonY&quot;f&quot;leftShoulder&quot;f&quot;rightShoulder&quot;f&quot;leftThumbstickX&quot;f&quot;leftThumbstickY&quot;f&quot;rightThumbstickX&quot;f&quot;rightThumbstickY&quot;f&quot;leftTrigger&quot;f&quot;rightTrigger&quot;f&quot;leftThumbstickButton&quot;B&quot;rightThumbstickButton&quot;B}'>
+<field declared_type64='uint16_t' name='version' type64='S'/>
+<field declared_type64='uint16_t' name='size' type64='S'/>
+<field declared_type64='float' name='dpadX' type64='f'/>
+<field declared_type64='float' name='dpadY' type64='f'/>
+<field declared_type64='float' name='buttonA' type64='f'/>
+<field declared_type64='float' name='buttonB' type64='f'/>
+<field declared_type64='float' name='buttonX' type64='f'/>
+<field declared_type64='float' name='buttonY' type64='f'/>
+<field declared_type64='float' name='leftShoulder' type64='f'/>
+<field declared_type64='float' name='rightShoulder' type64='f'/>
+<field declared_type64='float' name='leftThumbstickX' type64='f'/>
+<field declared_type64='float' name='leftThumbstickY' type64='f'/>
+<field declared_type64='float' name='rightThumbstickX' type64='f'/>
+<field declared_type64='float' name='rightThumbstickY' type64='f'/>
+<field declared_type64='float' name='leftTrigger' type64='f'/>
+<field declared_type64='float' name='rightTrigger' type64='f'/>
+<field declared_type64='BOOL' name='leftThumbstickButton' type64='B'/>
+<field declared_type64='BOOL' name='rightThumbstickButton' type64='B'/>
+</struct>
 <struct name='GCGamepadSnapShotDataV100' type64='{_GCGamepadSnapShotDataV100=&quot;version&quot;S&quot;size&quot;S&quot;dpadX&quot;f&quot;dpadY&quot;f&quot;buttonA&quot;f&quot;buttonB&quot;f&quot;buttonX&quot;f&quot;buttonY&quot;f&quot;leftShoulder&quot;f&quot;rightShoulder&quot;f}'>
 <field declared_type64='uint16_t' name='version' type64='S'/>
 <field declared_type64='uint16_t' name='size' type64='S'/>
@@ -48,6 +76,14 @@
 <field declared_type64='float' name='buttonA' type64='f'/>
 <field declared_type64='float' name='buttonX' type64='f'/>
 </struct>
+<struct name='GCMicroGamepadSnapshotData' type64='{_GCMicroGamepadSnapshotData=&quot;version&quot;S&quot;size&quot;S&quot;dpadX&quot;f&quot;dpadY&quot;f&quot;buttonA&quot;f&quot;buttonX&quot;f}'>
+<field declared_type64='uint16_t' name='version' type64='S'/>
+<field declared_type64='uint16_t' name='size' type64='S'/>
+<field declared_type64='float' name='dpadX' type64='f'/>
+<field declared_type64='float' name='dpadY' type64='f'/>
+<field declared_type64='float' name='buttonA' type64='f'/>
+<field declared_type64='float' name='buttonX' type64='f'/>
+</struct>
 <struct name='GCQuaternion' type64='{GCQuaternion=&quot;x&quot;d&quot;y&quot;d&quot;z&quot;d&quot;w&quot;d}'>
 <field declared_type64='double' name='x' type64='d'/>
 <field declared_type64='double' name='y' type64='d'/>
@@ -61,13 +97,23 @@
 </struct>
 <constant const='true' declared_type64='NSString * _Nonnull' name='GCControllerDidConnectNotification' type64='@'/>
 <constant const='true' declared_type64='NSString * _Nonnull' name='GCControllerDidDisconnectNotification' type64='@'/>
+<constant const='true' declared_type64='GCExtendedGamepadSnapshotDataVersion' name='GCCurrentExtendedGamepadSnapshotDataVersion' type64='q'/>
+<constant const='true' declared_type64='GCMicroGamepadSnapshotDataVersion' name='GCCurrentMicroGamepadSnapshotDataVersion' type64='q'/>
 <enum name='GCControllerPlayerIndex1' value64='0'/>
 <enum name='GCControllerPlayerIndex2' value64='1'/>
 <enum name='GCControllerPlayerIndex3' value64='2'/>
 <enum name='GCControllerPlayerIndex4' value64='3'/>
 <enum name='GCControllerPlayerIndexUnset' value64='-1'/>
+<enum name='GCExtendedGamepadSnapshotDataVersion1' value64='256'/>
+<enum name='GCExtendedGamepadSnapshotDataVersion2' value64='257'/>
+<enum name='GCMicroGamepadSnapshotDataVersion1' value64='256'/>
 <function name='GCExtendedGamepadSnapShotDataV100FromNSData'>
 <arg declared_type64='GCExtendedGamepadSnapShotDataV100 * _Nullable' name='snapshotData' type64='^{_GCExtendedGamepadSnapShotDataV100=SSffffffffffffff}'/>
+<arg declared_type64='NSData * _Nullable' name='data' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</function>
+<function name='GCExtendedGamepadSnapshotDataFromNSData'>
+<arg declared_type64='GCExtendedGamepadSnapshotData * _Nullable' name='snapshotData' type64='^{_GCExtendedGamepadSnapshotData=SSffffffffffffffBB}'/>
 <arg declared_type64='NSData * _Nullable' name='data' type64='@'/>
 <retval declared_type64='BOOL' type64='B'/>
 </function>
@@ -81,8 +127,17 @@
 <arg declared_type64='NSData * _Nullable' name='data' type64='@'/>
 <retval declared_type64='BOOL' type64='B'/>
 </function>
+<function name='GCMicroGamepadSnapshotDataFromNSData'>
+<arg declared_type64='GCMicroGamepadSnapshotData * _Nullable' name='snapshotData' type64='^{_GCMicroGamepadSnapshotData=SSffff}'/>
+<arg declared_type64='NSData * _Nullable' name='data' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</function>
 <function name='NSDataFromGCExtendedGamepadSnapShotDataV100'>
 <arg declared_type64='GCExtendedGamepadSnapShotDataV100 * _Nullable' name='snapshotData' type64='^{_GCExtendedGamepadSnapShotDataV100=SSffffffffffffff}'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</function>
+<function name='NSDataFromGCExtendedGamepadSnapshotData'>
+<arg declared_type64='GCExtendedGamepadSnapshotData * _Nullable' name='snapshotData' type64='^{_GCExtendedGamepadSnapshotData=SSffffffffffffffBB}'/>
 <retval declared_type64='NSData * _Nullable' type64='@'/>
 </function>
 <function name='NSDataFromGCGamepadSnapShotDataV100'>
@@ -91,6 +146,10 @@
 </function>
 <function name='NSDataFromGCMicroGamepadSnapShotDataV100'>
 <arg declared_type64='GCMicroGamepadSnapShotDataV100 * _Nullable' name='snapshotData' type64='^{_GCMicroGamepadSnapShotDataV100=SSffff}'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</function>
+<function name='NSDataFromGCMicroGamepadSnapshotData'>
+<arg declared_type64='GCMicroGamepadSnapshotData * _Nullable' name='snapshotData' type64='^{_GCMicroGamepadSnapshotData=SSffff}'/>
 <retval declared_type64='NSData * _Nullable' type64='@'/>
 </function>
 <class name='GCController'>
@@ -293,6 +352,9 @@
 <method selector='leftThumbstick'>
 <retval declared_type64='GCControllerDirectionPad * _Nonnull' type64='@'/>
 </method>
+<method selector='leftThumbstickButton'>
+<retval declared_type64='GCControllerButtonInput * _Nullable' type64='@'/>
+</method>
 <method selector='leftTrigger'>
 <retval declared_type64='GCControllerButtonInput * _Nonnull' type64='@'/>
 </method>
@@ -301,6 +363,9 @@
 </method>
 <method selector='rightThumbstick'>
 <retval declared_type64='GCControllerDirectionPad * _Nonnull' type64='@'/>
+</method>
+<method selector='rightThumbstickButton'>
+<retval declared_type64='GCControllerButtonInput * _Nullable' type64='@'/>
 </method>
 <method selector='rightTrigger'>
 <retval declared_type64='GCControllerButtonInput * _Nonnull' type64='@'/>

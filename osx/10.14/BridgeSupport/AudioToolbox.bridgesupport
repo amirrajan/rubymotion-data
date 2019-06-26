@@ -1,5 +1,12 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreAudio.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
 <struct name='AUChannelInfo' type64='{AUChannelInfo=&quot;inChannels&quot;s&quot;outChannels&quot;s}'>
 <field declared_type64='SInt16' name='inChannels' type64='s'/>
 <field declared_type64='SInt16' name='outChannels' type64='s'/>
@@ -57,7 +64,7 @@
 </struct>
 <struct name='AUNodeInteraction' type64='{AUNodeInteraction=&quot;nodeInteractionType&quot;I&quot;nodeInteraction&quot;(?=&quot;connection&quot;{AudioUnitNodeConnection=&quot;sourceNode&quot;i&quot;sourceOutputNumber&quot;I&quot;destNode&quot;i&quot;destInputNumber&quot;I}&quot;inputCallback&quot;{AUNodeRenderCallback=&quot;destNode&quot;i&quot;destInputNumber&quot;I&quot;cback&quot;{AURenderCallbackStruct=&quot;inputProc&quot;^?&quot;inputProcRefCon&quot;^v}})}'>
 <field declared_type64='UInt32' name='nodeInteractionType' type64='I'/>
-<field declared_type64='union (anonymous union at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AUGraph.h:313:2)' name='nodeInteraction' type64='(?=&quot;connection&quot;{AudioUnitNodeConnection=&quot;sourceNode&quot;i&quot;sourceOutputNumber&quot;I&quot;destNode&quot;i&quot;destInputNumber&quot;I}&quot;inputCallback&quot;{AUNodeRenderCallback=&quot;destNode&quot;i&quot;destInputNumber&quot;I&quot;cback&quot;{AURenderCallbackStruct=&quot;inputProc&quot;^?&quot;inputProcRefCon&quot;^v}})'/>
+<field declared_type64='union (anonymous union at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AUGraph.h:315:2)' name='nodeInteraction' type64='(?=&quot;connection&quot;{AudioUnitNodeConnection=&quot;sourceNode&quot;i&quot;sourceOutputNumber&quot;I&quot;destNode&quot;i&quot;destInputNumber&quot;I}&quot;inputCallback&quot;{AUNodeRenderCallback=&quot;destNode&quot;i&quot;destInputNumber&quot;I&quot;cback&quot;{AURenderCallbackStruct=&quot;inputProc&quot;^?&quot;inputProcRefCon&quot;^v}})'/>
 </struct>
 <struct name='AUNodeRenderCallback' type64='{AUNodeRenderCallback=&quot;destNode&quot;i&quot;destInputNumber&quot;I&quot;cback&quot;{AURenderCallbackStruct=&quot;inputProc&quot;^?&quot;inputProcRefCon&quot;^v}}'>
 <field declared_type64='AUNode' name='destNode' type64='i'/>
@@ -524,7 +531,7 @@
 <field declared_type64='AudioUnitElement' name='element' type64='I'/>
 <field declared_type64='AudioUnitParameterID' name='parameter' type64='I'/>
 <field declared_type64='AUParameterEventType' name='eventType' type64='I'/>
-<field declared_type64='union (anonymous union at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AUComponent.h:878:2)' name='eventValues' type64='(?=&quot;ramp&quot;{?=&quot;startBufferOffset&quot;i&quot;durationInFrames&quot;I&quot;startValue&quot;f&quot;endValue&quot;f}&quot;immediate&quot;{?=&quot;bufferOffset&quot;I&quot;value&quot;f})'/>
+<field declared_type64='union (anonymous union at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AUComponent.h:879:2)' name='eventValues' type64='(?=&quot;ramp&quot;{?=&quot;startBufferOffset&quot;i&quot;durationInFrames&quot;I&quot;startValue&quot;f&quot;endValue&quot;f}&quot;immediate&quot;{?=&quot;bufferOffset&quot;I&quot;value&quot;f})'/>
 </struct>
 <struct name='AudioUnitParameterHistoryInfo' type64='{AudioUnitParameterHistoryInfo=&quot;updatesPerSecond&quot;f&quot;historyDurationInSeconds&quot;f}'>
 <field declared_type64='Float32' name='updatesPerSecond' type64='f'/>
@@ -1221,6 +1228,7 @@
 <enum name='kAudioCodecUnsupportedFormatError' value64='560226676'/>
 <enum name='kAudioCodecUseRecommendedSampleRate' value64='1970434930'/>
 <enum name='kAudioComponentErr_InstanceInvalidated' value64='-66749'/>
+<enum name='kAudioComponentErr_InstanceTimedOut' value64='-66754'/>
 <enum name='kAudioComponentFlag_CanLoadInProcess' value64='16'/>
 <enum name='kAudioComponentFlag_IsV3AudioUnit' value64='4'/>
 <enum name='kAudioComponentFlag_RequiresAsyncInstantiation' value64='8'/>

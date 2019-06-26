@@ -1,5 +1,13 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/IOSurface.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/ColorSync.framework'/>
 <cftype gettypeid_func='CGImageDestinationGetTypeID' name='CGImageDestinationRef' type64='^{CGImageDestination=}'/>
 <cftype gettypeid_func='CGImageMetadataGetTypeID' name='CGImageMetadataRef' type64='^{CGImageMetadata=}'/>
 <cftype gettypeid_func='CGImageMetadataTagGetTypeID' name='CGImageMetadataTagRef' type64='^{CGImageMetadataTag=}'/>
@@ -589,22 +597,27 @@
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyOrientation' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGAuthor' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGChromaticities' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGComment' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGCompressionFilter' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGCopyright' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGCreationTime' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGDescription' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGDictionary' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGDisclaimer' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGGamma' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGInterlaceType' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGModificationTime' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGSoftware' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGSource' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGTitle' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGWarning' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGXPixelsPerMeter' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGYPixelsPerMeter' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPNGsRGBIntent' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPixelFormat' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPixelHeight' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPixelWidth' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyPrimaryImage' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyProfileName' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyRawDictionary' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGImagePropertyTIFFArtist' type64='^{__CFString=}'/>
@@ -922,6 +935,10 @@
 <retval declared_type64='CGImageSourceRef _Nullable' type64='^{CGImageSource=}'/>
 </function>
 <function name='CGImageSourceGetCount'>
+<arg declared_type64='CGImageSourceRef _Nonnull' name='isrc' type64='^{CGImageSource=}'/>
+<retval declared_type64='size_t' type64='Q'/>
+</function>
+<function name='CGImageSourceGetPrimaryImageIndex'>
 <arg declared_type64='CGImageSourceRef _Nonnull' name='isrc' type64='^{CGImageSource=}'/>
 <retval declared_type64='size_t' type64='Q'/>
 </function>

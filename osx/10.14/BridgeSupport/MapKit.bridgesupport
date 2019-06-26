@@ -1,5 +1,20 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Contacts.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreWLAN.framework'/>
+<depends_on path='/System/Library/Frameworks/AddressBook.framework'/>
+<depends_on path='/System/Library/Frameworks/Quartz.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreLocation.framework'/>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
 <struct name='MKCoordinateRegion' type64='{_MKCoordinateRegion=&quot;center&quot;{CLLocationCoordinate2D=&quot;latitude&quot;d&quot;longitude&quot;d}&quot;span&quot;{_MKCoordinateSpan=&quot;latitudeDelta&quot;d&quot;longitudeDelta&quot;d}}'>
 <field declared_type64='CLLocationCoordinate2D' name='center' type64='{CLLocationCoordinate2D=&quot;latitude&quot;d&quot;longitude&quot;d}'/>
 <field declared_type64='MKCoordinateSpan' name='span' type64='{_MKCoordinateSpan=&quot;latitudeDelta&quot;d&quot;longitudeDelta&quot;d}'/>
@@ -833,6 +848,9 @@
 </method>
 </class>
 <class name='MKMapSnapshot'>
+<method selector='appearance'>
+<retval declared_type64='NSAppearance * _Nonnull' type64='@'/>
+</method>
 <method selector='image'>
 <retval declared_type64='NSImage * _Nonnull' type64='@'/>
 </method>
@@ -842,6 +860,9 @@
 </method>
 </class>
 <class name='MKMapSnapshotOptions'>
+<method selector='appearance'>
+<retval declared_type64='NSAppearance * _Nullable' type64='@'/>
+</method>
 <method selector='camera'>
 <retval declared_type64='MKMapCamera * _Nonnull' type64='@'/>
 </method>
@@ -853,6 +874,10 @@
 </method>
 <method selector='region'>
 <retval declared_type64='MKCoordinateRegion' type64='{_MKCoordinateRegion={CLLocationCoordinate2D=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+<method selector='setAppearance:'>
+<arg declared_type64='NSAppearance * _Nullable' index='0' name='appearance' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setCamera:'>
 <arg declared_type64='MKMapCamera * _Nonnull' index='0' name='camera' type64='@'/>

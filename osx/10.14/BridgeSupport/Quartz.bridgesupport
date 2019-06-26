@@ -1,5 +1,38 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/QuartzComposer.framework'/>
+<depends_on path='/System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/PDFKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/QuartzFilters.framework'/>
+<depends_on path='/System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/ImageKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/QuickLookUI.framework'/>
+<depends_on path='/System/Library/Frameworks/QuickLook.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageCaptureCore.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/QTKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/IOSurface.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenGL.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/ColorSync.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreImage.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+<depends_on path='/System/Library/Frameworks/JavaScriptCore.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenCL.framework'/>
+<depends_on path='/System/Library/Frameworks/CFNetwork.framework'/>
+<depends_on path='/System/Library/Frameworks/SafariServices.framework'/>
+<depends_on path='/System/Library/Frameworks/DiskArbitration.framework'/>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
 <constant const='true' declared_type64='NSString*' name='IKFilterBrowserDefaultInputImage' type64='@'/>
 <constant const='true' declared_type64='NSString*' name='IKFilterBrowserExcludeCategories' type64='@'/>
 <constant const='true' declared_type64='NSString*' name='IKFilterBrowserExcludeFilters' type64='@'/>
@@ -3301,6 +3334,10 @@
 <method selector='enableDataDetectors'>
 <retval declared_type64='BOOL' type64='B'/>
 </method>
+<method selector='enablePageShadows:'>
+<arg declared_type64='BOOL' index='0' name='pageShadowsEnabled' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
 <method selector='goBack:'>
 <arg declared_type64='id _Nullable' index='0' name='sender' type64='@'/>
 <retval declared_type64='void' type64='v'/>
@@ -3367,6 +3404,9 @@
 <arg declared_type64='NSPoint' index='0' name='point' type64='{CGPoint=dd}'/>
 <arg declared_type64='BOOL' index='1' name='nearest' type64='B'/>
 <retval declared_type64='PDFPage * _Nullable' type64='@'/>
+</method>
+<method selector='pageShadowsEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='performAction:'>
 <arg declared_type64='PDFAction * _Nonnull' index='0' name='action' type64='@'/>
@@ -3612,6 +3652,8 @@
 <constant const='true' declared_type64='NSString*' name='QCCompositionInputPaceKey' type64='@'/>
 <constant const='true' declared_type64='NSString*' name='QCCompositionInputPreviewModeKey' type64='@'/>
 <constant const='true' declared_type64='NSString*' name='QCCompositionInputPrimaryColorKey' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='QCCompositionInputRSSArticleDurationKey' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='QCCompositionInputRSSFeedURLKey' type64='@'/>
 <constant const='true' declared_type64='NSString*' name='QCCompositionInputScreenImageKey' type64='@'/>
 <constant const='true' declared_type64='NSString*' name='QCCompositionInputSecondaryColorKey' type64='@'/>
 <constant const='true' declared_type64='NSString*' name='QCCompositionInputSourceImageKey' type64='@'/>
@@ -3628,6 +3670,7 @@
 <constant const='true' declared_type64='NSString*' name='QCCompositionProtocolGraphicTransition' type64='@'/>
 <constant const='true' declared_type64='NSString*' name='QCCompositionProtocolImageFilter' type64='@'/>
 <constant const='true' declared_type64='NSString*' name='QCCompositionProtocolMusicVisualizer' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='QCCompositionProtocolRSSVisualizer' type64='@'/>
 <constant const='true' declared_type64='NSString*' name='QCCompositionProtocolScreenSaver' type64='@'/>
 <constant const='true' declared_type64='NSString*' name='QCCompositionRepositoryDidUpdateNotification' type64='@'/>
 <constant const='true' declared_type64='NSString*' name='QCPlugInAttributeCategoriesKey' type64='@'/>

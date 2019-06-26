@@ -26,8 +26,20 @@
 <constant const='true' declared_type64='INPersonRelationship' name='INPersonRelationshipPartner' type64='@'/>
 <constant const='true' declared_type64='INPersonRelationship' name='INPersonRelationshipSister' type64='@'/>
 <constant const='true' declared_type64='INPersonRelationship' name='INPersonRelationshipSpouse' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='INSearchCallHistoryIntentIdentifier' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='INSearchForMessagesIntentIdentifier' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='INSendMessageIntentIdentifier' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='INSetMessageAttributeIntentIdentifier' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='INStartAudioCallIntentIdentifier' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='INStartVideoCallIntentIdentifier' type64='@'/>
 <constant declared_type64='double' name='IntentsVersionNumber' type64='d'/>
 <constant const='true' declared_type64='unsigned char*' name='IntentsVersionString' type64='^C'/>
+<enum name='INBookRestaurantReservationIntentCodeDenied' value64='1'/>
+<enum name='INBookRestaurantReservationIntentCodeFailure' value64='2'/>
+<enum name='INBookRestaurantReservationIntentCodeFailureRequiringAppLaunch' value64='3'/>
+<enum name='INBookRestaurantReservationIntentCodeFailureRequiringAppLaunchMustVerifyCredentials' value64='4'/>
+<enum name='INBookRestaurantReservationIntentCodeFailureRequiringAppLaunchServiceTemporarilyUnavailable' value64='5'/>
+<enum name='INBookRestaurantReservationIntentCodeSuccess' value64='0'/>
 <enum name='INCallCapabilityAudioCall' value64='1'/>
 <enum name='INCallCapabilityOptionAudioCall' value64='1'/>
 <enum name='INCallCapabilityOptionVideoCall' value64='2'/>
@@ -56,25 +68,57 @@
 <enum name='INConditionalOperatorAll' value64='0'/>
 <enum name='INConditionalOperatorAny' value64='1'/>
 <enum name='INConditionalOperatorNone' value64='2'/>
+<enum name='INGetAvailableRestaurantReservationBookingDefaultsIntentResponseCodeFailure' value64='1'/>
+<enum name='INGetAvailableRestaurantReservationBookingDefaultsIntentResponseCodeSuccess' value64='0'/>
+<enum name='INGetAvailableRestaurantReservationBookingDefaultsIntentResponseCodeUnspecified' value64='2'/>
+<enum name='INGetAvailableRestaurantReservationBookingsIntentCodeFailure' value64='1'/>
+<enum name='INGetAvailableRestaurantReservationBookingsIntentCodeFailureRequestUnsatisfiable' value64='2'/>
+<enum name='INGetAvailableRestaurantReservationBookingsIntentCodeFailureRequestUnspecified' value64='3'/>
+<enum name='INGetAvailableRestaurantReservationBookingsIntentCodeSuccess' value64='0'/>
+<enum name='INGetRestaurantGuestIntentResponseCodeFailure' value64='1'/>
+<enum name='INGetRestaurantGuestIntentResponseCodeSuccess' value64='0'/>
+<enum name='INGetUserCurrentRestaurantReservationBookingsIntentResponseCodeFailure' value64='1'/>
+<enum name='INGetUserCurrentRestaurantReservationBookingsIntentResponseCodeFailureRequestUnsatisfiable' value64='2'/>
+<enum name='INGetUserCurrentRestaurantReservationBookingsIntentResponseCodeSuccess' value64='0'/>
+<enum name='INGetUserCurrentRestaurantReservationBookingsIntentResponseCodeUnspecified' value64='3'/>
+<enum name='INIntentErrorDecodingGeneric' value64='9000'/>
 <enum name='INIntentErrorDeletingAllInteractions' value64='1902'/>
 <enum name='INIntentErrorDeletingInteractionWithGroupIdentifier' value64='1904'/>
 <enum name='INIntentErrorDeletingInteractionWithIdentifiers' value64='1903'/>
 <enum name='INIntentErrorDonatingInteraction' value64='1901'/>
+<enum name='INIntentErrorEncodingFailed' value64='8001'/>
+<enum name='INIntentErrorEncodingGeneric' value64='8000'/>
 <enum name='INIntentErrorExtensionBringUpFailed' value64='5001'/>
 <enum name='INIntentErrorExtensionLaunchingTimeout' value64='5000'/>
+<enum name='INIntentErrorImageGeneric' value64='6000'/>
+<enum name='INIntentErrorImageLoadingFailed' value64='6003'/>
+<enum name='INIntentErrorImageNoServiceAvailable' value64='6001'/>
+<enum name='INIntentErrorImageProxyInvalid' value64='6006'/>
+<enum name='INIntentErrorImageProxyLoop' value64='6005'/>
+<enum name='INIntentErrorImageProxyTimeout' value64='6007'/>
+<enum name='INIntentErrorImageRetrievalFailed' value64='6004'/>
+<enum name='INIntentErrorImageScalingFailed' value64='6009'/>
+<enum name='INIntentErrorImageServiceFailure' value64='6008'/>
+<enum name='INIntentErrorImageStorageFailed' value64='6002'/>
 <enum name='INIntentErrorIntentSupportedByMultipleExtension' value64='2001'/>
 <enum name='INIntentErrorInteractionOperationNotSupported' value64='1900'/>
 <enum name='INIntentErrorInvalidIntentName' value64='2004'/>
 <enum name='INIntentErrorInvalidUserVocabularyFileLocation' value64='4000'/>
+<enum name='INIntentErrorNoAppAvailable' value64='2005'/>
 <enum name='INIntentErrorNoHandlerProvidedForIntent' value64='2003'/>
+<enum name='INIntentErrorPermissionDenied' value64='6010'/>
 <enum name='INIntentErrorRequestTimedOut' value64='3001'/>
 <enum name='INIntentErrorRestrictedIntentsNotSupportedByExtension' value64='2002'/>
+<enum name='INIntentErrorVoiceShortcutCreationFailed' value64='7000'/>
+<enum name='INIntentErrorVoiceShortcutDeleteFailed' value64='7002'/>
+<enum name='INIntentErrorVoiceShortcutGetFailed' value64='7001'/>
 <enum name='INIntentHandlingStatusDeferredToApplication' value64='5'/>
 <enum name='INIntentHandlingStatusFailure' value64='4'/>
 <enum name='INIntentHandlingStatusInProgress' value64='2'/>
 <enum name='INIntentHandlingStatusReady' value64='1'/>
 <enum name='INIntentHandlingStatusSuccess' value64='3'/>
 <enum name='INIntentHandlingStatusUnspecified' value64='0'/>
+<enum name='INIntentHandlingStatusUserConfirmationRequired' value64='6'/>
 <enum name='INInteractionDirectionIncoming' value64='2'/>
 <enum name='INInteractionDirectionOutgoing' value64='1'/>
 <enum name='INInteractionDirectionUnspecified' value64='0'/>
@@ -83,9 +127,13 @@
 <enum name='INMessageAttributeOptionRead' value64='1'/>
 <enum name='INMessageAttributeOptionUnflagged' value64='8'/>
 <enum name='INMessageAttributeOptionUnread' value64='2'/>
+<enum name='INMessageTypeActivitySnippet' value64='23'/>
+<enum name='INMessageTypeAnimoji' value64='22'/>
 <enum name='INMessageTypeAudio' value64='2'/>
 <enum name='INMessageTypeDigitalTouch' value64='3'/>
+<enum name='INMessageTypeFile' value64='24'/>
 <enum name='INMessageTypeHandwriting' value64='4'/>
+<enum name='INMessageTypeLink' value64='25'/>
 <enum name='INMessageTypeMediaAddressCard' value64='14'/>
 <enum name='INMessageTypeMediaAudio' value64='18'/>
 <enum name='INMessageTypeMediaCalendar' value64='12'/>
@@ -93,6 +141,9 @@
 <enum name='INMessageTypeMediaLocation' value64='13'/>
 <enum name='INMessageTypeMediaPass' value64='17'/>
 <enum name='INMessageTypeMediaVideo' value64='16'/>
+<enum name='INMessageTypePaymentNote' value64='21'/>
+<enum name='INMessageTypePaymentRequest' value64='20'/>
+<enum name='INMessageTypePaymentSent' value64='19'/>
 <enum name='INMessageTypeSticker' value64='5'/>
 <enum name='INMessageTypeTapbackDisliked' value64='7'/>
 <enum name='INMessageTypeTapbackEmphasized' value64='8'/>
@@ -106,6 +157,7 @@
 <enum name='INPersonHandleTypePhoneNumber' value64='2'/>
 <enum name='INPersonHandleTypeUnknown' value64='0'/>
 <enum name='INPersonSuggestionTypeInstantMessageAddress' value64='2'/>
+<enum name='INPersonSuggestionTypeNone' value64='0'/>
 <enum name='INPersonSuggestionTypeSocialProfile' value64='1'/>
 <enum name='INRecurrenceFrequencyDaily' value64='3'/>
 <enum name='INRecurrenceFrequencyHourly' value64='2'/>
@@ -114,6 +166,9 @@
 <enum name='INRecurrenceFrequencyUnknown' value64='0'/>
 <enum name='INRecurrenceFrequencyWeekly' value64='4'/>
 <enum name='INRecurrenceFrequencyYearly' value64='6'/>
+<enum name='INRestaurantReservationUserBookingStatusConfirmed' value64='1'/>
+<enum name='INRestaurantReservationUserBookingStatusDenied' value64='2'/>
+<enum name='INRestaurantReservationUserBookingStatusPending' value64='0'/>
 <enum name='INSearchCallHistoryIntentResponseCodeContinueInApp' value64='2'/>
 <enum name='INSearchCallHistoryIntentResponseCodeFailure' value64='3'/>
 <enum name='INSearchCallHistoryIntentResponseCodeFailureAppConfigurationRequired' value64='5'/>
@@ -139,7 +194,10 @@
 <enum name='INSendMessageIntentResponseCodeUnspecified' value64='0'/>
 <enum name='INSendMessageRecipientUnsupportedReasonMessagingServiceNotEnabledForRecipient' value64='3'/>
 <enum name='INSendMessageRecipientUnsupportedReasonNoAccount' value64='1'/>
+<enum name='INSendMessageRecipientUnsupportedReasonNoHandleForLabel' value64='6'/>
+<enum name='INSendMessageRecipientUnsupportedReasonNoValidHandle' value64='4'/>
 <enum name='INSendMessageRecipientUnsupportedReasonOffline' value64='2'/>
+<enum name='INSendMessageRecipientUnsupportedReasonRequestedHandleInvalid' value64='5'/>
 <enum name='INStartAudioCallIntentResponseCodeContinueInApp' value64='2'/>
 <enum name='INStartAudioCallIntentResponseCodeFailure' value64='3'/>
 <enum name='INStartAudioCallIntentResponseCodeFailureAppConfigurationRequired' value64='5'/>
@@ -171,16 +229,8 @@
 <arg declared_type64='INCallDestinationType' index='0' name='callDestinationTypeToConfirm' type64='q'/>
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
-<method class_method='true' selector='confirmationRequiredWithValueToConfirm:'>
-<arg declared_type64='INCallDestinationType' index='0' name='valueToConfirm' type64='q'/>
-<retval declared_type64='instancetype _Nonnull' type64='@'/>
-</method>
 <method class_method='true' selector='successWithResolvedCallDestinationType:'>
 <arg declared_type64='INCallDestinationType' index='0' name='resolvedCallDestinationType' type64='q'/>
-<retval declared_type64='instancetype _Nonnull' type64='@'/>
-</method>
-<method class_method='true' selector='successWithResolvedValue:'>
-<arg declared_type64='INCallDestinationType' index='0' name='resolvedValue' type64='q'/>
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 </class>
@@ -296,6 +346,20 @@
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 </class>
+<class name='INDateComponentsResolutionResult'>
+<method class_method='true' selector='confirmationRequiredWithDateComponentsToConfirm:'>
+<arg declared_type64='NSDateComponents * _Nullable' index='0' name='dateComponentsToConfirm' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='disambiguationWithDateComponentsToDisambiguate:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='dateComponentsToDisambiguate' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='successWithResolvedDateComponents:'>
+<arg declared_type64='NSDateComponents * _Nonnull' index='0' name='resolvedDateComponents' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
 <class name='INImage'>
 <method class_method='true' selector='imageNamed:'>
 <arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
@@ -316,12 +380,33 @@
 <retval declared_type64='instancetype _Nullable' type64='@'/>
 </method>
 </class>
+<class name='INImageNoteContent'>
+<method selector='image'>
+<retval declared_type64='INImage * _Nullable' type64='@'/>
+</method>
+<method selector='initWithImage:'>
+<arg declared_type64='INImage * _Nonnull' index='0' name='image' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
 <class name='INIntent'>
 <method selector='identifier'>
 <retval declared_type64='NSString * _Nullable' type64='@'/>
 </method>
+<method selector='imageForParameterNamed:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='parameterName' type64='@'/>
+<retval declared_type64='INImage * _Nullable' type64='@'/>
+</method>
 <method selector='intentDescription'>
 <retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='keyImage'>
+<retval declared_type64='INImage * _Nullable' type64='@'/>
+</method>
+<method selector='setImage:forParameterNamed:'>
+<arg declared_type64='INImage * _Nullable' index='0' name='image' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='parameterName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 </class>
 <class name='INIntentResolutionResult'>
@@ -336,6 +421,10 @@
 </method>
 </class>
 <class name='INIntentResponse'>
+<method selector='setUserActivity:'>
+<arg declared_type64='NSUserActivity * _Nullable' index='0' name='userActivity' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
 <method selector='userActivity'>
 <retval declared_type64='NSUserActivity * _Nullable' type64='@'/>
 </method>
@@ -396,6 +485,10 @@
 </method>
 <method selector='intentResponse'>
 <retval declared_type64='INIntentResponse * _Nullable' type64='@'/>
+</method>
+<method selector='parameterValueForParameter:'>
+<arg declared_type64='INParameter * _Nonnull' index='0' name='parameter' type64='@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
 </method>
 <method selector='setDateInterval:'>
 <arg declared_type64='NSDateInterval * _Nullable' index='0' name='dateInterval' type64='@'/>
@@ -487,6 +580,32 @@
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 </class>
+<class name='INParameter'>
+<method selector='indexForSubKeyPath:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='subKeyPath' type64='@'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='isEqualToParameter:'>
+<arg declared_type64='INParameter * _Nonnull' index='0' name='parameter' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='parameterClass'>
+<retval declared_type64='Class _Nonnull' type64='#'/>
+</method>
+<method class_method='true' selector='parameterForClass:keyPath:'>
+<arg declared_type64='Class _Nonnull' index='0' name='aClass' type64='#'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='keyPath' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='parameterKeyPath'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='setIndex:forSubKeyPath:'>
+<arg declared_type64='NSUInteger' index='0' name='index' type64='Q'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='subKeyPath' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
 <class name='INPerson'>
 <method selector='aliases'>
 <retval declared_type64='NSArray * _Nullable' type64='@'/>
@@ -545,6 +664,19 @@
 <arg declared_type64='NSArray * _Nullable' index='6' name='aliases' type64='@'/>
 <arg declared_type64='INPersonSuggestionType' index='7' name='suggestionType' type64='q'/>
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithPersonHandle:nameComponents:displayName:image:contactIdentifier:customIdentifier:isMe:'>
+<arg declared_type64='INPersonHandle * _Nonnull' index='0' name='personHandle' type64='@'/>
+<arg declared_type64='NSPersonNameComponents * _Nullable' index='1' name='nameComponents' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='displayName' type64='@'/>
+<arg declared_type64='INImage * _Nullable' index='3' name='image' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='contactIdentifier' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='5' name='customIdentifier' type64='@'/>
+<arg declared_type64='BOOL' index='6' name='isMe' type64='B'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='isMe'>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='nameComponents'>
 <retval declared_type64='NSPersonNameComponents * _Nullable' type64='@'/>
@@ -622,6 +754,62 @@
 <retval declared_type64='NSUInteger' type64='Q'/>
 </method>
 </class>
+<class name='INRequestRideIntent'>
+<method selector='initWithPickupLocation:dropOffLocation:rideOptionName:partySize:paymentMethod:'>
+<arg declared_type64='CLPlacemark * _Nullable' index='0' name='pickupLocation' type64='@'/>
+<arg declared_type64='CLPlacemark * _Nullable' index='1' name='dropOffLocation' type64='@'/>
+<arg declared_type64='INSpeakableString * _Nullable' index='2' name='rideOptionName' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='3' name='partySize' type64='@'/>
+<arg declared_type64='INPaymentMethod * _Nullable' index='4' name='paymentMethod' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INRideDriver'>
+<method selector='initWithHandle:displayName:image:rating:phoneNumber:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='handle' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='displayName' type64='@'/>
+<arg declared_type64='INImage * _Nullable' index='2' name='image' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='rating' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='phoneNumber' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithHandle:nameComponents:image:rating:phoneNumber:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='handle' type64='@'/>
+<arg declared_type64='NSPersonNameComponents * _Nonnull' index='1' name='nameComponents' type64='@'/>
+<arg declared_type64='INImage * _Nullable' index='2' name='image' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='rating' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='phoneNumber' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithPersonHandle:nameComponents:displayName:image:rating:phoneNumber:'>
+<arg declared_type64='INPersonHandle * _Nonnull' index='0' name='personHandle' type64='@'/>
+<arg declared_type64='NSPersonNameComponents * _Nullable' index='1' name='nameComponents' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='displayName' type64='@'/>
+<arg declared_type64='INImage * _Nullable' index='3' name='image' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='rating' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='5' name='phoneNumber' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INRideOption'>
+<method selector='identifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='setIdentifier:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='identifier' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='INSaveProfileInCarIntent'>
+<method selector='initWithProfileNumber:profileLabel:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='profileNumber' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='profileLabel' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='profileLabel'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
 <class name='INSearchCallHistoryIntent'>
 <method selector='callCapabilities'>
 <retval declared_type64='INCallCapabilityOptions' type64='Q'/>
@@ -678,6 +866,12 @@
 <method selector='attributes'>
 <retval declared_type64='INMessageAttributeOptions' type64='Q'/>
 </method>
+<method selector='conversationIdentifiers'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='conversationIdentifiersOperator'>
+<retval declared_type64='INConditionalOperator' type64='q'/>
+</method>
 <method selector='dateTimeRange'>
 <retval declared_type64='INDateComponentsRange * _Nullable' type64='@'/>
 </method>
@@ -713,6 +907,18 @@
 <arg declared_type64='NSArray * _Nullable' index='5' name='identifiers' type64='@'/>
 <arg declared_type64='NSArray * _Nullable' index='6' name='notificationIdentifiers' type64='@'/>
 <arg declared_type64='NSArray * _Nullable' index='7' name='speakableGroupNames' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithRecipients:senders:searchTerms:attributes:dateTimeRange:identifiers:notificationIdentifiers:speakableGroupNames:conversationIdentifiers:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='recipients' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='1' name='senders' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='2' name='searchTerms' type64='@'/>
+<arg declared_type64='INMessageAttributeOptions' index='3' name='attributes' type64='Q'/>
+<arg declared_type64='INDateComponentsRange * _Nullable' index='4' name='dateTimeRange' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='5' name='identifiers' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='6' name='notificationIdentifiers' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='7' name='speakableGroupNames' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='8' name='conversationIdentifiers' type64='@'/>
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method selector='notificationIdentifiers'>
@@ -761,6 +967,19 @@
 <method selector='setMessages:'>
 <arg declared_type64='NSArray * _Nullable' index='0' name='messages' type64='@'/>
 <retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='INSearchForNotebookItemsIntent'>
+<method selector='initWithTitle:content:itemType:status:location:locationSearchType:dateTime:dateSearchType:'>
+<arg declared_type64='INSpeakableString * _Nullable' index='0' name='title' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='content' type64='@'/>
+<arg declared_type64='INNotebookItemType' index='2' name='itemType' type64='q'/>
+<arg declared_type64='INTaskStatus' index='3' name='status' type64='q'/>
+<arg declared_type64='CLPlacemark * _Nullable' index='4' name='location' type64='@'/>
+<arg declared_type64='INLocationSearchType' index='5' name='locationSearchType' type64='q'/>
+<arg declared_type64='INDateComponentsRange * _Nullable' index='6' name='dateTime' type64='@'/>
+<arg declared_type64='INDateSearchType' index='7' name='dateSearchType' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 </class>
 <class name='INSendMessageIntent'>
@@ -827,6 +1046,57 @@
 </method>
 <method class_method='true' selector='unsupportedForReason:'>
 <arg declared_type64='INSendMessageRecipientUnsupportedReason' index='0' name='reason' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INSetClimateSettingsInCarIntent'>
+<method selector='initWithEnableFan:enableAirConditioner:enableClimateControl:enableAutoMode:airCirculationMode:fanSpeedIndex:fanSpeedPercentage:relativeFanSpeedSetting:temperature:relativeTemperatureSetting:climateZone:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='enableFan' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='1' name='enableAirConditioner' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='2' name='enableClimateControl' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='3' name='enableAutoMode' type64='@'/>
+<arg declared_type64='INCarAirCirculationMode' index='4' name='airCirculationMode' type64='q'/>
+<arg declared_type64='NSNumber * _Nullable' index='5' name='fanSpeedIndex' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='6' name='fanSpeedPercentage' type64='@'/>
+<arg declared_type64='INRelativeSetting' index='7' name='relativeFanSpeedSetting' type64='q'/>
+<arg declared_type64='NSMeasurement * _Nullable' index='8' name='temperature' type64='@'/>
+<arg declared_type64='INRelativeSetting' index='9' name='relativeTemperatureSetting' type64='q'/>
+<arg declared_type64='INCarSeat' index='10' name='climateZone' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INSetDefrosterSettingsInCarIntent'>
+<method selector='initWithEnable:defroster:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='enable' type64='@'/>
+<arg declared_type64='INCarDefroster' index='1' name='defroster' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INSetProfileInCarIntent'>
+<method selector='initWithProfileNumber:profileLabel:defaultProfile:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='profileNumber' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='profileLabel' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='2' name='defaultProfile' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithProfileNumber:profileName:defaultProfile:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='profileNumber' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='profileName' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='2' name='defaultProfile' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='profileLabel'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='INSetSeatSettingsInCarIntent'>
+<method selector='initWithEnableHeating:enableCooling:enableMassage:seat:level:relativeLevelSetting:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='enableHeating' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='1' name='enableCooling' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='2' name='enableMassage' type64='@'/>
+<arg declared_type64='INCarSeat' index='3' name='seat' type64='q'/>
+<arg declared_type64='NSNumber * _Nullable' index='4' name='level' type64='@'/>
+<arg declared_type64='INRelativeSetting' index='5' name='relativeLevelSetting' type64='q'/>
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 </class>
@@ -920,6 +1190,15 @@
 <method class_method='true' selector='successWithResolvedString:'>
 <arg declared_type64='NSString * _Nonnull' index='0' name='resolvedString' type64='@'/>
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INTextNoteContent'>
+<method selector='initWithText:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='text' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='text'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
 </method>
 </class>
 <class name='NSObject'>
@@ -1169,6 +1448,23 @@
 </method>
 <method selector='vocabularyIdentifier'>
 <retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='NSString'>
+<method class_method='true' selector='deferredLocalizedIntentsStringWithFormat:' variadic='true'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='format' printf_format='true' type64='@'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='deferredLocalizedIntentsStringWithFormat:fromTable:' variadic='true'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='format' printf_format='true' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='table' type64='@'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='deferredLocalizedIntentsStringWithFormat:fromTable:arguments:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='format' printf_format='true' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='table' type64='@'/>
+<arg declared_type64='struct __va_list_tag*' index='2' name='arguments' type64='^{__va_list_tag=II^v^v}'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
 </method>
 </class>
 <class name='NSUserActivity'>

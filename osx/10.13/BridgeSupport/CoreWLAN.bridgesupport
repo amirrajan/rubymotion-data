@@ -6,668 +6,648 @@
 <depends_on path='/System/Library/Frameworks/SecurityFoundation.framework'/>
 <depends_on path='/System/Library/Frameworks/IOKit.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
-<constant const='true' declared_type='NSString * _Nonnull' name='CWBSSIDDidChangeNotification' type='@'/>
-<constant const='true' declared_type='NSString * _Nonnull' name='CWCountryCodeDidChangeNotification' type='@'/>
-<constant const='true' declared_type='NSString * _Nonnull' name='CWErrorDomain' type='@'/>
-<constant const='true' declared_type='NSString * _Nonnull' name='CWLinkDidChangeNotification' type='@'/>
-<constant const='true' declared_type='NSString * _Nonnull' name='CWLinkQualityDidChangeNotification' type='@'/>
-<constant const='true' declared_type='NSString * _Nonnull' name='CWLinkQualityNotificationRSSIKey' type='@'/>
-<constant const='true' declared_type='NSString * _Nonnull' name='CWLinkQualityNotificationTransmitRateKey' type='@'/>
-<constant const='true' declared_type='NSString * _Nonnull' name='CWModeDidChangeNotification' type='@'/>
-<constant const='true' declared_type='NSString * _Nonnull' name='CWPowerDidChangeNotification' type='@'/>
-<constant const='true' declared_type='NSString * _Nonnull' name='CWSSIDDidChangeNotification' type='@'/>
-<constant const='true' declared_type='NSString * _Nonnull' name='CWScanCacheDidUpdateNotification' type='@'/>
-<enum name='CWEventTypeBSSIDDidChange' value='3'/>
-<enum name='CWEventTypeCountryCodeDidChange' value='4'/>
-<enum name='CWEventTypeLinkDidChange' value='5'/>
-<enum name='CWEventTypeLinkQualityDidChange' value='6'/>
-<enum name='CWEventTypeModeDidChange' value='7'/>
-<enum name='CWEventTypeNone' value='0'/>
-<enum name='CWEventTypePowerDidChange' value='1'/>
-<enum name='CWEventTypeRangingReportEvent' value='10'/>
-<enum name='CWEventTypeSSIDDidChange' value='2'/>
-<enum name='CWEventTypeScanCacheUpdated' value='8'/>
-<enum name='CWEventTypeUnknown' value='2147483647' value64='9223372036854775807'/>
-<enum name='CWEventTypeVirtualInterfaceStateChanged' value='9'/>
-<enum name='kCWAPFullErr' value='-3913'/>
-<enum name='kCWAssociationDeniedErr' value='-3909'/>
-<enum name='kCWAuthenticationAlgorithmUnsupportedErr' value='-3910'/>
-<enum name='kCWChallengeFailureErr' value='-3912'/>
-<enum name='kCWChannelBand2GHz' value='1'/>
-<enum name='kCWChannelBand5GHz' value='2'/>
-<enum name='kCWChannelBandUnknown' value='0'/>
-<enum name='kCWChannelWidth160MHz' value='4'/>
-<enum name='kCWChannelWidth20MHz' value='1'/>
-<enum name='kCWChannelWidth40MHz' value='2'/>
-<enum name='kCWChannelWidth80MHz' value='3'/>
-<enum name='kCWChannelWidthUnknown' value='0'/>
-<enum name='kCWCipherKeyFlagsMulticast' value='4'/>
-<enum name='kCWCipherKeyFlagsNone' value='0'/>
-<enum name='kCWCipherKeyFlagsRx' value='16'/>
-<enum name='kCWCipherKeyFlagsTx' value='8'/>
-<enum name='kCWCipherKeyFlagsUnicast' value='2'/>
-<enum name='kCWCipherSuiteRejectedErr' value='-3923'/>
-<enum name='kCWDSSSOFDMUnsupportedErr' value='-3916'/>
-<enum name='kCWEAPOLErr' value='1'/>
-<enum name='kCWErr' value='-3931'/>
-<enum name='kCWHTFeaturesNotSupportedErr' value='-3926'/>
-<enum name='kCWIBSSModeSecurityNone' value='0'/>
-<enum name='kCWIBSSModeSecurityWEP104' value='2'/>
-<enum name='kCWIBSSModeSecurityWEP40' value='1'/>
-<enum name='kCWIPCFailureErr' value='-3929'/>
-<enum name='kCWInterfaceModeHostAP' value='3'/>
-<enum name='kCWInterfaceModeIBSS' value='2'/>
-<enum name='kCWInterfaceModeNone' value='0'/>
-<enum name='kCWInterfaceModeStation' value='1'/>
-<enum name='kCWInvalidAKMPErr' value='-3920'/>
-<enum name='kCWInvalidAuthenticationSequenceNumberErr' value='-3911'/>
-<enum name='kCWInvalidFormatErr' value='-3904'/>
-<enum name='kCWInvalidGroupCipherErr' value='-3918'/>
-<enum name='kCWInvalidInformationElementErr' value='-3917'/>
-<enum name='kCWInvalidPMKErr' value='-3924'/>
-<enum name='kCWInvalidPairwiseCipherErr' value='-3919'/>
-<enum name='kCWInvalidParameterErr' value='-3900'/>
-<enum name='kCWInvalidRSNCapabilitiesErr' value='-3922'/>
-<enum name='kCWKeychainDomainNone' value='0'/>
-<enum name='kCWKeychainDomainSystem' value='2'/>
-<enum name='kCWKeychainDomainUser' value='1'/>
-<enum name='kCWNoErr' value='0'/>
-<enum name='kCWNoMemoryErr' value='-3901'/>
-<enum name='kCWNotSupportedErr' value='-3903'/>
-<enum name='kCWOperationNotPermittedErr' value='-3930'/>
-<enum name='kCWPCOTransitionTimeNotSupportedErr' value='-3927'/>
-<enum name='kCWPHYMode11a' value='1'/>
-<enum name='kCWPHYMode11ac' value='5'/>
-<enum name='kCWPHYMode11b' value='2'/>
-<enum name='kCWPHYMode11g' value='3'/>
-<enum name='kCWPHYMode11n' value='4'/>
-<enum name='kCWPHYModeNone' value='0'/>
-<enum name='kCWReassociationDeniedErr' value='-3908'/>
-<enum name='kCWReferenceNotBoundErr' value='-3928'/>
-<enum name='kCWSecurityDynamicWEP' value='6'/>
-<enum name='kCWSecurityEnterprise' value='10'/>
-<enum name='kCWSecurityNone' value='0'/>
-<enum name='kCWSecurityPersonal' value='5'/>
-<enum name='kCWSecurityUnknown' value='2147483647' value64='9223372036854775807'/>
-<enum name='kCWSecurityWEP' value='1'/>
-<enum name='kCWSecurityWPA2Enterprise' value='9'/>
-<enum name='kCWSecurityWPA2Personal' value='4'/>
-<enum name='kCWSecurityWPAEnterprise' value='7'/>
-<enum name='kCWSecurityWPAEnterpriseMixed' value='8'/>
-<enum name='kCWSecurityWPAPersonal' value='2'/>
-<enum name='kCWSecurityWPAPersonalMixed' value='3'/>
-<enum name='kCWShortSlotUnsupportedErr' value='-3915'/>
-<enum name='kCWSupplicantTimeoutErr' value='-3925'/>
-<enum name='kCWTimeoutErr' value='-3905'/>
-<enum name='kCWUnknownErr' value='-3902'/>
-<enum name='kCWUnspecifiedFailureErr' value='-3906'/>
-<enum name='kCWUnsupportedCapabilitiesErr' value='-3907'/>
-<enum name='kCWUnsupportedRSNVersionErr' value='-3921'/>
-<enum name='kCWUnsupportedRateSetErr' value='-3914'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CWBSSIDDidChangeNotification' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CWCountryCodeDidChangeNotification' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CWErrorDomain' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CWLinkDidChangeNotification' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CWLinkQualityDidChangeNotification' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CWLinkQualityNotificationRSSIKey' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CWLinkQualityNotificationTransmitRateKey' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CWModeDidChangeNotification' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CWPowerDidChangeNotification' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CWSSIDDidChangeNotification' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='CWScanCacheDidUpdateNotification' type64='@'/>
+<enum name='CWEventTypeBSSIDDidChange' value64='3'/>
+<enum name='CWEventTypeCountryCodeDidChange' value64='4'/>
+<enum name='CWEventTypeLinkDidChange' value64='5'/>
+<enum name='CWEventTypeLinkQualityDidChange' value64='6'/>
+<enum name='CWEventTypeModeDidChange' value64='7'/>
+<enum name='CWEventTypeNone' value64='0'/>
+<enum name='CWEventTypePowerDidChange' value64='1'/>
+<enum name='CWEventTypeRangingReportEvent' value64='10'/>
+<enum name='CWEventTypeSSIDDidChange' value64='2'/>
+<enum name='CWEventTypeScanCacheUpdated' value64='8'/>
+<enum name='CWEventTypeUnknown' value64='9223372036854775807'/>
+<enum name='CWEventTypeVirtualInterfaceStateChanged' value64='9'/>
+<enum name='kCWAPFullErr' value64='-3913'/>
+<enum name='kCWAssociationDeniedErr' value64='-3909'/>
+<enum name='kCWAuthenticationAlgorithmUnsupportedErr' value64='-3910'/>
+<enum name='kCWChallengeFailureErr' value64='-3912'/>
+<enum name='kCWChannelBand2GHz' value64='1'/>
+<enum name='kCWChannelBand5GHz' value64='2'/>
+<enum name='kCWChannelBandUnknown' value64='0'/>
+<enum name='kCWChannelWidth160MHz' value64='4'/>
+<enum name='kCWChannelWidth20MHz' value64='1'/>
+<enum name='kCWChannelWidth40MHz' value64='2'/>
+<enum name='kCWChannelWidth80MHz' value64='3'/>
+<enum name='kCWChannelWidthUnknown' value64='0'/>
+<enum name='kCWCipherKeyFlagsMulticast' value64='4'/>
+<enum name='kCWCipherKeyFlagsNone' value64='0'/>
+<enum name='kCWCipherKeyFlagsRx' value64='16'/>
+<enum name='kCWCipherKeyFlagsTx' value64='8'/>
+<enum name='kCWCipherKeyFlagsUnicast' value64='2'/>
+<enum name='kCWCipherSuiteRejectedErr' value64='-3923'/>
+<enum name='kCWDSSSOFDMUnsupportedErr' value64='-3916'/>
+<enum name='kCWEAPOLErr' value64='1'/>
+<enum name='kCWErr' value64='-3931'/>
+<enum name='kCWHTFeaturesNotSupportedErr' value64='-3926'/>
+<enum name='kCWIBSSModeSecurityNone' value64='0'/>
+<enum name='kCWIBSSModeSecurityWEP104' value64='2'/>
+<enum name='kCWIBSSModeSecurityWEP40' value64='1'/>
+<enum name='kCWIPCFailureErr' value64='-3929'/>
+<enum name='kCWInterfaceModeHostAP' value64='3'/>
+<enum name='kCWInterfaceModeIBSS' value64='2'/>
+<enum name='kCWInterfaceModeNone' value64='0'/>
+<enum name='kCWInterfaceModeStation' value64='1'/>
+<enum name='kCWInvalidAKMPErr' value64='-3920'/>
+<enum name='kCWInvalidAuthenticationSequenceNumberErr' value64='-3911'/>
+<enum name='kCWInvalidFormatErr' value64='-3904'/>
+<enum name='kCWInvalidGroupCipherErr' value64='-3918'/>
+<enum name='kCWInvalidInformationElementErr' value64='-3917'/>
+<enum name='kCWInvalidPMKErr' value64='-3924'/>
+<enum name='kCWInvalidPairwiseCipherErr' value64='-3919'/>
+<enum name='kCWInvalidParameterErr' value64='-3900'/>
+<enum name='kCWInvalidRSNCapabilitiesErr' value64='-3922'/>
+<enum name='kCWKeychainDomainNone' value64='0'/>
+<enum name='kCWKeychainDomainSystem' value64='2'/>
+<enum name='kCWKeychainDomainUser' value64='1'/>
+<enum name='kCWNoErr' value64='0'/>
+<enum name='kCWNoMemoryErr' value64='-3901'/>
+<enum name='kCWNotSupportedErr' value64='-3903'/>
+<enum name='kCWOperationNotPermittedErr' value64='-3930'/>
+<enum name='kCWPCOTransitionTimeNotSupportedErr' value64='-3927'/>
+<enum name='kCWPHYMode11a' value64='1'/>
+<enum name='kCWPHYMode11ac' value64='5'/>
+<enum name='kCWPHYMode11b' value64='2'/>
+<enum name='kCWPHYMode11g' value64='3'/>
+<enum name='kCWPHYMode11n' value64='4'/>
+<enum name='kCWPHYModeNone' value64='0'/>
+<enum name='kCWReassociationDeniedErr' value64='-3908'/>
+<enum name='kCWReferenceNotBoundErr' value64='-3928'/>
+<enum name='kCWSecurityDynamicWEP' value64='6'/>
+<enum name='kCWSecurityEnterprise' value64='10'/>
+<enum name='kCWSecurityNone' value64='0'/>
+<enum name='kCWSecurityPersonal' value64='5'/>
+<enum name='kCWSecurityUnknown' value64='9223372036854775807'/>
+<enum name='kCWSecurityWEP' value64='1'/>
+<enum name='kCWSecurityWPA2Enterprise' value64='9'/>
+<enum name='kCWSecurityWPA2Personal' value64='4'/>
+<enum name='kCWSecurityWPAEnterprise' value64='7'/>
+<enum name='kCWSecurityWPAEnterpriseMixed' value64='8'/>
+<enum name='kCWSecurityWPAPersonal' value64='2'/>
+<enum name='kCWSecurityWPAPersonalMixed' value64='3'/>
+<enum name='kCWShortSlotUnsupportedErr' value64='-3915'/>
+<enum name='kCWSupplicantTimeoutErr' value64='-3925'/>
+<enum name='kCWTimeoutErr' value64='-3905'/>
+<enum name='kCWUnknownErr' value64='-3902'/>
+<enum name='kCWUnspecifiedFailureErr' value64='-3906'/>
+<enum name='kCWUnsupportedCapabilitiesErr' value64='-3907'/>
+<enum name='kCWUnsupportedRSNVersionErr' value64='-3921'/>
+<enum name='kCWUnsupportedRateSetErr' value64='-3914'/>
 <function name='CWKeychainCopyEAPIdentity'>
-<arg declared_type='CFDataRef _Nonnull' name='ssidData' type='^{__CFData=}'/>
-<arg declared_type='SecIdentityRef _Nullable * _Nullable' name='identity' type='^^{OpaqueSecIdentityRef}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CFDataRef _Nonnull' name='ssidData' type64='^{__CFData=}'/>
+<arg declared_type64='SecIdentityRef _Nullable * _Nullable' name='identity' type64='^^{OpaqueSecIdentityRef}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CWKeychainCopyEAPIdentityList'>
-<arg declared_type='CFArrayRef _Nullable * _Nullable' name='list' type='^^{__CFArray}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CFArrayRef _Nullable * _Nullable' name='list' type64='^^{__CFArray}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CWKeychainCopyEAPUsernameAndPassword'>
-<arg declared_type='CFDataRef _Nonnull' name='ssidData' type='^{__CFData=}'/>
-<arg declared_type='CFStringRef _Nullable * _Nullable' name='username' type='^^{__CFString}'/>
-<arg declared_type='CFStringRef _Nullable * _Nullable' name='password' type='^^{__CFString}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CFDataRef _Nonnull' name='ssidData' type64='^{__CFData=}'/>
+<arg declared_type64='CFStringRef _Nullable * _Nullable' name='username' type64='^^{__CFString}'/>
+<arg declared_type64='CFStringRef _Nullable * _Nullable' name='password' type64='^^{__CFString}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CWKeychainCopyPassword'>
-<arg declared_type='CFDataRef _Nonnull' name='ssidData' type='^{__CFData=}'/>
-<arg declared_type='CFStringRef _Nullable * _Nullable' name='password' type='^^{__CFString}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CFDataRef _Nonnull' name='ssidData' type64='^{__CFData=}'/>
+<arg declared_type64='CFStringRef _Nullable * _Nullable' name='password' type64='^^{__CFString}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CWKeychainCopyWiFiEAPIdentity'>
-<arg declared_type='CWKeychainDomain' name='domain' type='i' type64='q'/>
-<arg declared_type='NSData * _Nonnull' name='ssid' type='@'/>
-<arg declared_type='SecIdentityRef _Nullable * _Nullable' name='identity' type='^^{OpaqueSecIdentityRef}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CWKeychainDomain' name='domain' type64='q'/>
+<arg declared_type64='NSData * _Nonnull' name='ssid' type64='@'/>
+<arg declared_type64='SecIdentityRef _Nullable * _Nullable' name='identity' type64='^^{OpaqueSecIdentityRef}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CWKeychainDeleteEAPUsernameAndPassword'>
-<arg declared_type='CFDataRef _Nonnull' name='ssidData' type='^{__CFData=}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CFDataRef _Nonnull' name='ssidData' type64='^{__CFData=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CWKeychainDeletePassword'>
-<arg declared_type='CFDataRef _Nonnull' name='ssidData' type='^{__CFData=}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CFDataRef _Nonnull' name='ssidData' type64='^{__CFData=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CWKeychainDeleteWiFiEAPUsernameAndPassword'>
-<arg declared_type='CWKeychainDomain' name='domain' type='i' type64='q'/>
-<arg declared_type='NSData * _Nonnull' name='ssid' type='@'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CWKeychainDomain' name='domain' type64='q'/>
+<arg declared_type64='NSData * _Nonnull' name='ssid' type64='@'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CWKeychainDeleteWiFiPassword'>
-<arg declared_type='CWKeychainDomain' name='domain' type='i' type64='q'/>
-<arg declared_type='NSData * _Nonnull' name='ssid' type='@'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CWKeychainDomain' name='domain' type64='q'/>
+<arg declared_type64='NSData * _Nonnull' name='ssid' type64='@'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CWKeychainFindWiFiEAPUsernameAndPassword'>
-<arg declared_type='CWKeychainDomain' name='domain' type='i' type64='q'/>
-<arg declared_type='NSData * _Nonnull' name='ssid' type='@'/>
-<arg declared_type='NSString * _Nullable * _Nullable' name='username' type='^@'/>
-<arg declared_type='NSString * _Nullable * _Nullable' name='password' type='^@'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CWKeychainDomain' name='domain' type64='q'/>
+<arg declared_type64='NSData * _Nonnull' name='ssid' type64='@'/>
+<arg declared_type64='NSString * _Nullable * _Nullable' name='username' type64='^@'/>
+<arg declared_type64='NSString * _Nullable * _Nullable' name='password' type64='^@'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CWKeychainFindWiFiPassword'>
-<arg declared_type='CWKeychainDomain' name='domain' type='i' type64='q'/>
-<arg declared_type='NSData * _Nonnull' name='ssid' type='@'/>
-<arg declared_type='NSString * _Nullable * _Nullable' name='password' type='^@'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CWKeychainDomain' name='domain' type64='q'/>
+<arg declared_type64='NSData * _Nonnull' name='ssid' type64='@'/>
+<arg declared_type64='NSString * _Nullable * _Nullable' name='password' type64='^@'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CWKeychainSetEAPIdentity'>
-<arg declared_type='CFDataRef _Nonnull' name='ssidData' type='^{__CFData=}'/>
-<arg declared_type='SecIdentityRef _Nullable' name='identity' type='^{OpaqueSecIdentityRef=}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CFDataRef _Nonnull' name='ssidData' type64='^{__CFData=}'/>
+<arg declared_type64='SecIdentityRef _Nullable' name='identity' type64='^{OpaqueSecIdentityRef=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CWKeychainSetEAPUsernameAndPassword'>
-<arg declared_type='CFDataRef _Nonnull' name='ssidData' type='^{__CFData=}'/>
-<arg declared_type='CFStringRef _Nullable' name='username' type='^{__CFString=}'/>
-<arg declared_type='CFStringRef _Nullable' name='password' type='^{__CFString=}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CFDataRef _Nonnull' name='ssidData' type64='^{__CFData=}'/>
+<arg declared_type64='CFStringRef _Nullable' name='username' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef _Nullable' name='password' type64='^{__CFString=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CWKeychainSetPassword'>
-<arg declared_type='CFDataRef _Nonnull' name='ssidData' type='^{__CFData=}'/>
-<arg declared_type='CFStringRef _Nonnull' name='password' type='^{__CFString=}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CFDataRef _Nonnull' name='ssidData' type64='^{__CFData=}'/>
+<arg declared_type64='CFStringRef _Nonnull' name='password' type64='^{__CFString=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CWKeychainSetWiFiEAPIdentity'>
-<arg declared_type='CWKeychainDomain' name='domain' type='i' type64='q'/>
-<arg declared_type='NSData * _Nonnull' name='ssid' type='@'/>
-<arg declared_type='SecIdentityRef _Nullable' name='identity' type='^{OpaqueSecIdentityRef=}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CWKeychainDomain' name='domain' type64='q'/>
+<arg declared_type64='NSData * _Nonnull' name='ssid' type64='@'/>
+<arg declared_type64='SecIdentityRef _Nullable' name='identity' type64='^{OpaqueSecIdentityRef=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CWKeychainSetWiFiEAPUsernameAndPassword'>
-<arg declared_type='CWKeychainDomain' name='domain' type='i' type64='q'/>
-<arg declared_type='NSData * _Nonnull' name='ssid' type='@'/>
-<arg declared_type='NSString * _Nullable' name='username' type='@'/>
-<arg declared_type='NSString * _Nullable' name='password' type='@'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CWKeychainDomain' name='domain' type64='q'/>
+<arg declared_type64='NSData * _Nonnull' name='ssid' type64='@'/>
+<arg declared_type64='NSString * _Nullable' name='username' type64='@'/>
+<arg declared_type64='NSString * _Nullable' name='password' type64='@'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CWKeychainSetWiFiPassword'>
-<arg declared_type='CWKeychainDomain' name='domain' type='i' type64='q'/>
-<arg declared_type='NSData * _Nonnull' name='ssid' type='@'/>
-<arg declared_type='NSString * _Nonnull' name='password' type='@'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CWKeychainDomain' name='domain' type64='q'/>
+<arg declared_type64='NSData * _Nonnull' name='ssid' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' name='password' type64='@'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CWMergeNetworks'>
-<arg declared_type='NSSet * _Nonnull' name='networks' type='@'/>
-<retval declared_type='NSSet * _Nonnull' type='@'/>
+<arg declared_type64='NSSet * _Nonnull' name='networks' type64='@'/>
+<retval declared_type64='NSSet * _Nonnull' type64='@'/>
 </function>
 <class name='CWChannel'>
 <method selector='channelBand'>
-<retval declared_type='CWChannelBand' type='i' type64='q'/>
+<retval declared_type64='CWChannelBand' type64='q'/>
 </method>
 <method selector='channelNumber'>
-<retval declared_type='NSInteger' type='i' type64='q'/>
+<retval declared_type64='NSInteger' type64='q'/>
 </method>
 <method selector='channelWidth'>
-<retval declared_type='CWChannelWidth' type='i' type64='q'/>
+<retval declared_type64='CWChannelWidth' type64='q'/>
 </method>
 <method selector='isEqualToChannel:'>
-<arg declared_type='CWChannel * _Nonnull' index='0' name='channel' type='@'/>
-<retval declared_type='BOOL' type='B'/>
+<arg declared_type64='CWChannel * _Nonnull' index='0' name='channel' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 </class>
 <class name='CWConfiguration'>
 <method class_method='true' selector='configuration'>
-<retval declared_type='instancetype _Nonnull' type='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method class_method='true' selector='configurationWithConfiguration:'>
-<arg declared_type='CWConfiguration * _Nonnull' index='0' name='configuration' type='@'/>
-<retval declared_type='instancetype _Nonnull' type='@'/>
+<arg declared_type64='CWConfiguration * _Nonnull' index='0' name='configuration' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method selector='init'>
-<retval declared_type='instancetype _Nonnull' type='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method selector='initWithConfiguration:'>
-<arg declared_type='CWConfiguration * _Nonnull' index='0' name='configuration' type='@'/>
-<retval declared_type='instancetype _Nonnull' type='@'/>
+<arg declared_type64='CWConfiguration * _Nonnull' index='0' name='configuration' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method selector='isEqualToConfiguration:'>
-<arg declared_type='CWConfiguration * _Nonnull' index='0' name='configuration' type='@'/>
-<retval declared_type='BOOL' type='B'/>
+<arg declared_type64='CWConfiguration * _Nonnull' index='0' name='configuration' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='networkProfiles'>
-<retval declared_type='NSOrderedSet * _Nonnull' type='@'/>
+<retval declared_type64='NSOrderedSet * _Nonnull' type64='@'/>
 </method>
 <method selector='rememberJoinedNetworks'>
-<retval declared_type='BOOL' type='B'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='requireAdministratorForAssociation'>
-<retval declared_type='BOOL' type='B'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='requireAdministratorForIBSSMode'>
-<retval declared_type='BOOL' type='B'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='requireAdministratorForPower'>
-<retval declared_type='BOOL' type='B'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 </class>
 <class name='CWInterface'>
 <method selector='activePHYMode'>
-<retval declared_type='CWPHYMode' type='i' type64='q'/>
+<retval declared_type64='CWPHYMode' type64='q'/>
 </method>
 <method selector='associateToEnterpriseNetwork:identity:username:password:error:'>
-<arg declared_type='CWNetwork * _Nonnull' index='0' name='network' type='@'/>
-<arg declared_type='SecIdentityRef _Nullable' index='1' name='identity' type='^{OpaqueSecIdentityRef=}'/>
-<arg declared_type='NSString * _Nullable' index='2' name='username' type='@'/>
-<arg declared_type='NSString * _Nullable' index='3' name='password' type='@'/>
-<arg declared_type='NSError * _Nullable * _Nullable' index='4' name='error' type='^@' type_modifier='o'/>
-<retval declared_type='BOOL' type='B'/>
+<arg declared_type64='CWNetwork * _Nonnull' index='0' name='network' type64='@'/>
+<arg declared_type64='SecIdentityRef _Nullable' index='1' name='identity' type64='^{OpaqueSecIdentityRef=}'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='username' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='password' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='4' name='error' type64='^@' type_modifier='o'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='associateToNetwork:password:error:'>
-<arg declared_type='CWNetwork * _Nonnull' index='0' name='network' type='@'/>
-<arg declared_type='NSString * _Nullable' index='1' name='password' type='@'/>
-<arg declared_type='NSError * _Nullable * _Nullable' index='2' name='error' type='^@' type_modifier='o'/>
-<retval declared_type='BOOL' type='B'/>
+<arg declared_type64='CWNetwork * _Nonnull' index='0' name='network' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='password' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@' type_modifier='o'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='bssid'>
-<retval declared_type='NSString * _Nullable' type='@'/>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
 </method>
 <method selector='cachedScanResults'>
-<retval declared_type='NSSet * _Nullable' type='@'/>
+<retval declared_type64='NSSet * _Nullable' type64='@'/>
 </method>
 <method selector='commitConfiguration:authorization:error:'>
-<arg declared_type='CWConfiguration * _Nonnull' index='0' name='configuration' type='@'/>
-<arg declared_type='SFAuthorization * _Nullable' index='1' name='authorization' type='@'/>
-<arg declared_type='NSError * _Nullable * _Nullable' index='2' name='error' type='^@' type_modifier='o'/>
-<retval declared_type='BOOL' type='B'/>
+<arg declared_type64='CWConfiguration * _Nonnull' index='0' name='configuration' type64='@'/>
+<arg declared_type64='SFAuthorization * _Nullable' index='1' name='authorization' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@' type_modifier='o'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='configuration'>
-<retval declared_type='CWConfiguration * _Nullable' type='@'/>
+<retval declared_type64='CWConfiguration * _Nullable' type64='@'/>
 </method>
 <method selector='countryCode'>
-<retval declared_type='NSString * _Nullable' type='@'/>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
 </method>
 <method selector='disassociate'>
-<retval declared_type='void' type='v'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='hardwareAddress'>
-<retval declared_type='NSString * _Nullable' type='@'/>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
 </method>
 <method selector='initWithInterfaceName:'>
-<arg declared_type='NSString * _Nonnull' index='0' name='name' type='@'/>
-<retval declared_type='instancetype _Nonnull' type='@'/>
+<arg declared_type64='NSString * _Nullable' index='0' name='name' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method class_method='true' selector='interface'>
-<retval declared_type='instancetype _Nonnull' type='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method selector='interfaceMode'>
-<retval declared_type='CWInterfaceMode' type='i' type64='q'/>
+<retval declared_type64='CWInterfaceMode' type64='q'/>
 </method>
 <method selector='interfaceName'>
-<retval declared_type='NSString * _Nullable' type='@'/>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
 </method>
 <method class_method='true' selector='interfaceNames'>
-<retval declared_type='NSSet * _Nullable' type='@'/>
+<retval declared_type64='NSSet * _Nullable' type64='@'/>
 </method>
 <method class_method='true' selector='interfaceWithName:'>
-<arg declared_type='NSString * _Nonnull' index='0' name='name' type='@'/>
-<retval declared_type='instancetype _Nonnull' type='@'/>
+<arg declared_type64='NSString * _Nullable' index='0' name='name' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method selector='noiseMeasurement'>
-<retval declared_type='NSInteger' type='i' type64='q'/>
+<retval declared_type64='NSInteger' type64='q'/>
 </method>
 <method selector='powerOn'>
-<retval declared_type='BOOL' type='B'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='rssiValue'>
-<retval declared_type='NSInteger' type='i' type64='q'/>
+<retval declared_type64='NSInteger' type64='q'/>
 </method>
 <method selector='scanForNetworksWithName:error:'>
-<arg declared_type='NSString * _Nullable' index='0' name='networkName' type='@'/>
-<arg declared_type='NSError * _Nullable * _Nullable' index='1' name='error' type='^@' type_modifier='o'/>
-<retval declared_type='NSSet * _Nullable' type='@'/>
+<arg declared_type64='NSString * _Nullable' index='0' name='networkName' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@' type_modifier='o'/>
+<retval declared_type64='NSSet * _Nullable' type64='@'/>
 </method>
 <method selector='scanForNetworksWithName:includeHidden:error:'>
-<arg declared_type='NSString * _Nullable' index='0' name='networkName' type='@'/>
-<arg declared_type='BOOL' index='1' name='includeHidden' type='B'/>
-<arg declared_type='NSError * _Nullable * _Nullable' index='2' name='error' type='^@' type_modifier='o'/>
-<retval declared_type='NSSet * _Nullable' type='@'/>
+<arg declared_type64='NSString * _Nullable' index='0' name='networkName' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='includeHidden' type64='B'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@' type_modifier='o'/>
+<retval declared_type64='NSSet * _Nullable' type64='@'/>
 </method>
 <method selector='scanForNetworksWithSSID:error:'>
-<arg declared_type='NSData * _Nullable' index='0' name='ssid' type='@'/>
-<arg declared_type='NSError * _Nullable * _Nullable' index='1' name='error' type='^@' type_modifier='o'/>
-<retval declared_type='NSSet * _Nullable' type='@'/>
+<arg declared_type64='NSData * _Nullable' index='0' name='ssid' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@' type_modifier='o'/>
+<retval declared_type64='NSSet * _Nullable' type64='@'/>
 </method>
 <method selector='scanForNetworksWithSSID:includeHidden:error:'>
-<arg declared_type='NSData * _Nullable' index='0' name='ssid' type='@'/>
-<arg declared_type='BOOL' index='1' name='includeHidden' type='B'/>
-<arg declared_type='NSError * _Nullable * _Nullable' index='2' name='error' type='^@' type_modifier='o'/>
-<retval declared_type='NSSet * _Nullable' type='@'/>
+<arg declared_type64='NSData * _Nullable' index='0' name='ssid' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='includeHidden' type64='B'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@' type_modifier='o'/>
+<retval declared_type64='NSSet * _Nullable' type64='@'/>
 </method>
 <method selector='security'>
-<retval declared_type='CWSecurity' type='i' type64='q'/>
+<retval declared_type64='CWSecurity' type64='q'/>
 </method>
 <method selector='serviceActive'>
-<retval declared_type='BOOL' type='B'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='setPairwiseMasterKey:error:'>
-<arg declared_type='NSData * _Nullable' index='0' name='key' type='@'/>
-<arg declared_type='NSError * _Nullable * _Nullable' index='1' name='error' type='^@' type_modifier='o'/>
-<retval declared_type='BOOL' type='B'/>
+<arg declared_type64='NSData * _Nullable' index='0' name='key' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@' type_modifier='o'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='setPower:error:'>
-<arg declared_type='BOOL' index='0' name='power' type='B'/>
-<arg declared_type='NSError * _Nullable * _Nullable' index='1' name='error' type='^@' type_modifier='o'/>
-<retval declared_type='BOOL' type='B'/>
+<arg declared_type64='BOOL' index='0' name='power' type64='B'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@' type_modifier='o'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='setWEPKey:flags:index:error:'>
-<arg declared_type='NSData * _Nullable' index='0' name='key' type='@'/>
-<arg declared_type='CWCipherKeyFlags' index='1' name='flags' type='I' type64='Q'/>
-<arg declared_type='NSInteger' index='2' name='index' type='i' type64='q'/>
-<arg declared_type='NSError * _Nullable * _Nullable' index='3' name='error' type='^@' type_modifier='o'/>
-<retval declared_type='BOOL' type='B'/>
+<arg declared_type64='NSData * _Nullable' index='0' name='key' type64='@'/>
+<arg declared_type64='CWCipherKeyFlags' index='1' name='flags' type64='Q'/>
+<arg declared_type64='NSInteger' index='2' name='index' type64='q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='3' name='error' type64='^@' type_modifier='o'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='setWLANChannel:error:'>
-<arg declared_type='CWChannel * _Nonnull' index='0' name='channel' type='@'/>
-<arg declared_type='NSError * _Nullable * _Nullable' index='1' name='error' type='^@' type_modifier='o'/>
-<retval declared_type='BOOL' type='B'/>
+<arg declared_type64='CWChannel * _Nonnull' index='0' name='channel' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@' type_modifier='o'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='ssid'>
-<retval declared_type='NSString * _Nullable' type='@'/>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
 </method>
 <method selector='ssidData'>
-<retval declared_type='NSData * _Nullable' type='@'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
 </method>
 <method selector='startIBSSModeWithSSID:security:channel:password:error:'>
-<arg declared_type='NSData * _Nonnull' index='0' name='ssidData' type='@'/>
-<arg declared_type='CWIBSSModeSecurity' index='1' name='security' type='i' type64='q'/>
-<arg declared_type='NSUInteger' index='2' name='channel' type='I' type64='Q'/>
-<arg declared_type='NSString * _Nullable' index='3' name='password' type='@'/>
-<arg declared_type='NSError * _Nullable * _Nullable' index='4' name='error' type='^@' type_modifier='o'/>
-<retval declared_type='BOOL' type='B'/>
+<arg declared_type64='NSData * _Nonnull' index='0' name='ssidData' type64='@'/>
+<arg declared_type64='CWIBSSModeSecurity' index='1' name='security' type64='q'/>
+<arg declared_type64='NSUInteger' index='2' name='channel' type64='Q'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='password' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='4' name='error' type64='^@' type_modifier='o'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='supportedWLANChannels'>
-<retval declared_type='NSSet * _Nullable' type='@'/>
+<retval declared_type64='NSSet * _Nullable' type64='@'/>
 </method>
 <method selector='transmitPower'>
-<retval declared_type='NSInteger' type='i' type64='q'/>
+<retval declared_type64='NSInteger' type64='q'/>
 </method>
 <method selector='transmitRate'>
-<retval declared_type='double' type='d'/>
+<retval declared_type64='double' type64='d'/>
 </method>
 <method selector='wlanChannel'>
-<retval declared_type='CWChannel * _Nullable' type='@'/>
+<retval declared_type64='CWChannel * _Nullable' type64='@'/>
 </method>
 </class>
 <class name='CWMutableConfiguration'>
 <method selector='networkProfiles'>
-<retval declared_type='NSOrderedSet * _Nonnull' type='@'/>
+<retval declared_type64='NSOrderedSet * _Nonnull' type64='@'/>
 </method>
 <method selector='rememberJoinedNetworks'>
-<retval declared_type='BOOL' type='B'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='requireAdministratorForAssociation'>
-<retval declared_type='BOOL' type='B'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='requireAdministratorForIBSSMode'>
-<retval declared_type='BOOL' type='B'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='requireAdministratorForPower'>
-<retval declared_type='BOOL' type='B'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='setNetworkProfiles:'>
-<arg declared_type='NSOrderedSet * _Nonnull' index='0' name='networkProfiles' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSOrderedSet * _Nonnull' index='0' name='networkProfiles' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setRememberJoinedNetworks:'>
-<arg declared_type='BOOL' index='0' name='rememberJoinedNetworks' type='B'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='BOOL' index='0' name='rememberJoinedNetworks' type64='B'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setRequireAdministratorForAssociation:'>
-<arg declared_type='BOOL' index='0' name='requireAdministratorForAssociation' type='B'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='BOOL' index='0' name='requireAdministratorForAssociation' type64='B'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setRequireAdministratorForIBSSMode:'>
-<arg declared_type='BOOL' index='0' name='requireAdministratorForIBSSMode' type='B'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='BOOL' index='0' name='requireAdministratorForIBSSMode' type64='B'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setRequireAdministratorForPower:'>
-<arg declared_type='BOOL' index='0' name='requireAdministratorForPower' type='B'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='BOOL' index='0' name='requireAdministratorForPower' type64='B'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 </class>
 <class name='CWMutableNetworkProfile'>
 <method selector='security'>
-<retval declared_type='CWSecurity' type='i' type64='q'/>
+<retval declared_type64='CWSecurity' type64='q'/>
 </method>
 <method selector='setSecurity:'>
-<arg declared_type='CWSecurity' index='0' name='security' type='i' type64='q'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='CWSecurity' index='0' name='security' type64='q'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setSsidData:'>
-<arg declared_type='NSData * _Nonnull' index='0' name='ssidData' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSData * _Nullable' index='0' name='ssidData' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='ssidData'>
-<retval declared_type='NSData * _Nonnull' type='@'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
 </method>
 </class>
 <class name='CWNetwork'>
 <method selector='beaconInterval'>
-<retval declared_type='NSInteger' type='i' type64='q'/>
+<retval declared_type64='NSInteger' type64='q'/>
 </method>
 <method selector='bssid'>
-<retval declared_type='NSString * _Nullable' type='@'/>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
 </method>
 <method selector='countryCode'>
-<retval declared_type='NSString * _Nullable' type='@'/>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
 </method>
 <method selector='ibss'>
-<retval declared_type='BOOL' type='B'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='informationElementData'>
-<retval declared_type='NSData * _Nullable' type='@'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
 </method>
 <method selector='isEqualToNetwork:'>
-<arg declared_type='CWNetwork * _Nonnull' index='0' name='network' type='@'/>
-<retval declared_type='BOOL' type='B'/>
+<arg declared_type64='CWNetwork * _Nonnull' index='0' name='network' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='noiseMeasurement'>
-<retval declared_type='NSInteger' type='i' type64='q'/>
+<retval declared_type64='NSInteger' type64='q'/>
 </method>
 <method selector='rssiValue'>
-<retval declared_type='NSInteger' type='i' type64='q'/>
+<retval declared_type64='NSInteger' type64='q'/>
 </method>
 <method selector='ssid'>
-<retval declared_type='NSString * _Nullable' type='@'/>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
 </method>
 <method selector='ssidData'>
-<retval declared_type='NSData * _Nullable' type='@'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
 </method>
 <method selector='supportsPHYMode:'>
-<arg declared_type='CWPHYMode' index='0' name='phyMode' type='i' type64='q'/>
-<retval declared_type='BOOL' type='B'/>
+<arg declared_type64='CWPHYMode' index='0' name='phyMode' type64='q'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='supportsSecurity:'>
-<arg declared_type='CWSecurity' index='0' name='security' type='i' type64='q'/>
-<retval declared_type='BOOL' type='B'/>
+<arg declared_type64='CWSecurity' index='0' name='security' type64='q'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='wlanChannel'>
-<retval declared_type='CWChannel * _Nonnull' type='@'/>
+<retval declared_type64='CWChannel * _Nullable' type64='@'/>
 </method>
 </class>
 <class name='CWNetworkProfile'>
 <method selector='init'>
-<retval declared_type='instancetype _Nonnull' type='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method selector='initWithNetworkProfile:'>
-<arg declared_type='CWNetworkProfile * _Nonnull' index='0' name='networkProfile' type='@'/>
-<retval declared_type='instancetype _Nonnull' type='@'/>
+<arg declared_type64='CWNetworkProfile * _Nonnull' index='0' name='networkProfile' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method selector='isEqualToNetworkProfile:'>
-<arg declared_type='CWNetworkProfile * _Nonnull' index='0' name='networkProfile' type='@'/>
-<retval declared_type='BOOL' type='B'/>
+<arg declared_type64='CWNetworkProfile * _Nonnull' index='0' name='networkProfile' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method class_method='true' selector='networkProfile'>
-<retval declared_type='instancetype _Nonnull' type='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method class_method='true' selector='networkProfileWithNetworkProfile:'>
-<arg declared_type='CWNetworkProfile * _Nonnull' index='0' name='networkProfile' type='@'/>
-<retval declared_type='instancetype _Nonnull' type='@'/>
+<arg declared_type64='CWNetworkProfile * _Nonnull' index='0' name='networkProfile' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method selector='security'>
-<retval declared_type='CWSecurity' type='i' type64='q'/>
+<retval declared_type64='CWSecurity' type64='q'/>
 </method>
 <method selector='ssid'>
-<retval declared_type='NSString * _Nullable' type='@'/>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
 </method>
 <method selector='ssidData'>
-<retval declared_type='NSData * _Nullable' type='@'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
 </method>
 </class>
 <class name='CWWiFiClient'>
 <method selector='delegate'>
-<retval declared_type='id _Nullable' type='@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
 </method>
 <method selector='init'>
-<retval declared_type='CWWiFiClient * _Nullable' type='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method selector='interface'>
-<retval declared_type='CWInterface * _Nullable' type='@'/>
+<retval declared_type64='CWInterface * _Nullable' type64='@'/>
 </method>
 <method class_method='true' selector='interfaceNames'>
-<retval declared_type='NSArray * _Nullable' type='@'/>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
 </method>
 <method selector='interfaceWithName:'>
-<arg declared_type='NSString * _Nullable' index='0' name='interfaceName' type='@'/>
-<retval declared_type='CWInterface * _Nullable' type='@'/>
+<arg declared_type64='NSString * _Nullable' index='0' name='interfaceName' type64='@'/>
+<retval declared_type64='CWInterface * _Nullable' type64='@'/>
 </method>
 <method selector='interfaces'>
-<retval declared_type='NSArray * _Nullable' type='@'/>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
 </method>
 <method selector='setDelegate:'>
-<arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method class_method='true' selector='sharedWiFiClient'>
-<retval declared_type='CWWiFiClient * _Nonnull' type='@'/>
+<retval declared_type64='CWWiFiClient * _Nonnull' type64='@'/>
 </method>
 <method selector='startMonitoringEventWithType:error:'>
-<arg declared_type='CWEventType' index='0' name='type' type='i' type64='q'/>
-<arg declared_type='NSError * _Nullable * _Nullable' index='1' name='error' type='^@' type_modifier='o'/>
-<retval declared_type='BOOL' type='B'/>
+<arg declared_type64='CWEventType' index='0' name='type' type64='q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@' type_modifier='o'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='stopMonitoringAllEventsAndReturnError:'>
-<arg declared_type='NSError * _Nullable * _Nullable' index='0' name='error' type='^@' type_modifier='o'/>
-<retval declared_type='BOOL' type='B'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='error' type64='^@' type_modifier='o'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='stopMonitoringEventWithType:error:'>
-<arg declared_type='CWEventType' index='0' name='type' type='i' type64='q'/>
-<arg declared_type='NSError * _Nullable * _Nullable' index='1' name='error' type='^@' type_modifier='o'/>
-<retval declared_type='BOOL' type='B'/>
+<arg declared_type64='CWEventType' index='0' name='type' type64='q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@' type_modifier='o'/>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 </class>
 <class name='NSObject'>
 <method selector='bssidDidChangeForWiFiInterfaceWithName:'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSString * _Nonnull' index='0' name='interfaceName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='clientConnectionInterrupted'>
-<retval declared_type='void' type='v'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='clientConnectionInvalidated'>
-<retval declared_type='void' type='v'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='countryCodeDidChangeForWiFiInterfaceWithName:'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSString * _Nonnull' index='0' name='interfaceName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='linkDidChangeForWiFiInterfaceWithName:'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSString * _Nonnull' index='0' name='interfaceName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='linkQualityDidChangeForWiFiInterfaceWithName:rssi:transmitRate:'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<arg declared_type='NSInteger' index='1' name='rssi' type='i' type64='q'/>
-<arg declared_type='double' index='2' name='transmitRate' type='d'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSString * _Nonnull' index='0' name='interfaceName' type64='@'/>
+<arg declared_type64='NSInteger' index='1' name='rssi' type64='q'/>
+<arg declared_type64='double' index='2' name='transmitRate' type64='d'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='modeDidChangeForWiFiInterfaceWithName:'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSString * _Nonnull' index='0' name='interfaceName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='powerStateDidChangeForWiFiInterfaceWithName:'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<retval declared_type='void' type='v'/>
-</method>
-<method selector='rangingReportEventForWiFiInterfaceWithName:data:error:'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<arg declared_type='NSArray * _Nonnull' index='1' name='rangingData' type='@'/>
-<arg declared_type='NSError * _Nonnull' index='2' name='err' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSString * _Nonnull' index='0' name='interfaceName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='scanCacheUpdatedForWiFiInterfaceWithName:'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSString * _Nonnull' index='0' name='interfaceName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='ssidDidChangeForWiFiInterfaceWithName:'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<retval declared_type='void' type='v'/>
-</method>
-<method selector='virtualInterfaceStateChangedForWiFiInterfaceWithName:'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='NSString * _Nonnull' index='0' name='interfaceName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 </class>
 <informal_protocol name='CWEventDelegate'>
-<method selector='bssidDidChangeForWiFiInterfaceWithName:' type='v12@0:4@8' type64='v24@0:8@16'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<retval declared_type='void' type='v'/>
+<method selector='bssidDidChangeForWiFiInterfaceWithName:' type64='v24@0:8@16'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='interfaceName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
-<method selector='clientConnectionInterrupted' type='v8@0:4' type64='v16@0:8'>
-<retval declared_type='void' type='v'/>
+<method selector='clientConnectionInterrupted' type64='v16@0:8'>
+<retval declared_type64='void' type64='v'/>
 </method>
-<method selector='clientConnectionInvalidated' type='v8@0:4' type64='v16@0:8'>
-<retval declared_type='void' type='v'/>
+<method selector='clientConnectionInvalidated' type64='v16@0:8'>
+<retval declared_type64='void' type64='v'/>
 </method>
-<method selector='countryCodeDidChangeForWiFiInterfaceWithName:' type='v12@0:4@8' type64='v24@0:8@16'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<retval declared_type='void' type='v'/>
+<method selector='countryCodeDidChangeForWiFiInterfaceWithName:' type64='v24@0:8@16'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='interfaceName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
-<method selector='linkDidChangeForWiFiInterfaceWithName:' type='v12@0:4@8' type64='v24@0:8@16'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<retval declared_type='void' type='v'/>
+<method selector='linkDidChangeForWiFiInterfaceWithName:' type64='v24@0:8@16'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='interfaceName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
-<method selector='linkQualityDidChangeForWiFiInterfaceWithName:rssi:transmitRate:' type='v24@0:4@8i12d16' type64='v40@0:8@16q24d32'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<arg declared_type='NSInteger' index='1' name='rssi' type='i' type64='q'/>
-<arg declared_type='double' index='2' name='transmitRate' type='d'/>
-<retval declared_type='void' type='v'/>
+<method selector='linkQualityDidChangeForWiFiInterfaceWithName:rssi:transmitRate:' type64='v40@0:8@16q24d32'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='interfaceName' type64='@'/>
+<arg declared_type64='NSInteger' index='1' name='rssi' type64='q'/>
+<arg declared_type64='double' index='2' name='transmitRate' type64='d'/>
+<retval declared_type64='void' type64='v'/>
 </method>
-<method selector='modeDidChangeForWiFiInterfaceWithName:' type='v12@0:4@8' type64='v24@0:8@16'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<retval declared_type='void' type='v'/>
+<method selector='modeDidChangeForWiFiInterfaceWithName:' type64='v24@0:8@16'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='interfaceName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
-<method selector='powerStateDidChangeForWiFiInterfaceWithName:' type='v12@0:4@8' type64='v24@0:8@16'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<retval declared_type='void' type='v'/>
+<method selector='powerStateDidChangeForWiFiInterfaceWithName:' type64='v24@0:8@16'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='interfaceName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
-<method selector='rangingReportEventForWiFiInterfaceWithName:data:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<arg declared_type='NSArray * _Nonnull' index='1' name='rangingData' type='@'/>
-<arg declared_type='NSError * _Nonnull' index='2' name='err' type='@'/>
-<retval declared_type='void' type='v'/>
+<method selector='scanCacheUpdatedForWiFiInterfaceWithName:' type64='v24@0:8@16'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='interfaceName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
-<method selector='scanCacheUpdatedForWiFiInterfaceWithName:' type='v12@0:4@8' type64='v24@0:8@16'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<retval declared_type='void' type='v'/>
-</method>
-<method selector='ssidDidChangeForWiFiInterfaceWithName:' type='v12@0:4@8' type64='v24@0:8@16'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<retval declared_type='void' type='v'/>
-</method>
-<method selector='virtualInterfaceStateChangedForWiFiInterfaceWithName:' type='v12@0:4@8' type64='v24@0:8@16'>
-<arg declared_type='NSString * _Nonnull' index='0' name='interfaceName' type='@'/>
-<retval declared_type='void' type='v'/>
+<method selector='ssidDidChangeForWiFiInterfaceWithName:' type64='v24@0:8@16'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='interfaceName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 </informal_protocol>
 </signatures>

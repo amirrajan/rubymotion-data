@@ -15,780 +15,785 @@
 <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
-<struct name='CMIODeviceAVCCommand' type='{CMIODeviceAVCCommand=&quot;mCommand&quot;*&quot;mCommandLength&quot;I&quot;mResponse&quot;*&quot;mResponseLength&quot;I&quot;mResponseUsed&quot;I}'>
-<field declared_type='UInt8*' name='mCommand' type='*'/>
-<field declared_type='UInt32' name='mCommandLength' type='L' type64='I'/>
-<field declared_type='UInt8*' name='mResponse' type='*'/>
-<field declared_type='UInt32' name='mResponseLength' type='L' type64='I'/>
-<field declared_type='UInt32' name='mResponseUsed' type='L' type64='I'/>
+<struct name='CMIODeviceAVCCommand' type64='{CMIODeviceAVCCommand=&quot;mCommand&quot;*&quot;mCommandLength&quot;I&quot;mResponse&quot;*&quot;mResponseLength&quot;I&quot;mResponseUsed&quot;I}'>
+<field declared_type64='UInt8*' name='mCommand' type64='*'/>
+<field declared_type64='UInt32' name='mCommandLength' type64='I'/>
+<field declared_type64='UInt8*' name='mResponse' type64='*'/>
+<field declared_type64='UInt32' name='mResponseLength' type64='I'/>
+<field declared_type64='UInt32' name='mResponseUsed' type64='I'/>
 </struct>
-<struct name='CMIODeviceRS422Command' type='{CMIODeviceRS422Command=&quot;mCommand&quot;*&quot;mCommandLength&quot;I&quot;mResponse&quot;*&quot;mResponseLength&quot;I&quot;mResponseUsed&quot;I}'>
-<field declared_type='UInt8*' name='mCommand' type='*'/>
-<field declared_type='UInt32' name='mCommandLength' type='L' type64='I'/>
-<field declared_type='UInt8*' name='mResponse' type='*'/>
-<field declared_type='UInt32' name='mResponseLength' type='L' type64='I'/>
-<field declared_type='UInt32' name='mResponseUsed' type='L' type64='I'/>
+<struct name='CMIODeviceRS422Command' type64='{CMIODeviceRS422Command=&quot;mCommand&quot;*&quot;mCommandLength&quot;I&quot;mResponse&quot;*&quot;mResponseLength&quot;I&quot;mResponseUsed&quot;I}'>
+<field declared_type64='UInt8*' name='mCommand' type64='*'/>
+<field declared_type64='UInt32' name='mCommandLength' type64='I'/>
+<field declared_type64='UInt8*' name='mResponse' type64='*'/>
+<field declared_type64='UInt32' name='mResponseLength' type64='I'/>
+<field declared_type64='UInt32' name='mResponseUsed' type64='I'/>
 </struct>
-<struct name='CMIODeviceSMPTETimeCallback' type='{CMIODeviceSMPTETimeCallback=&quot;mGetSMPTETimeProc&quot;^?&quot;mRefCon&quot;^v}'>
-<field declared_type='CMIODeviceGetSMPTETimeProc' function_pointer='true' name='mGetSMPTETimeProc' type='^?'>
-<arg declared_type='void*' type='^v'/>
-<arg declared_type='UInt64*' type='^Q'/>
-<arg declared_type='Boolean*' type='^B'/>
-<arg declared_type='UInt32*' type='^I'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<struct name='CMIODeviceSMPTETimeCallback' type64='{CMIODeviceSMPTETimeCallback=&quot;mGetSMPTETimeProc&quot;^?&quot;mRefCon&quot;^v}'>
+<field declared_type64='CMIODeviceGetSMPTETimeProc' function_pointer='true' name='mGetSMPTETimeProc' type64='^?'>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='UInt64*' type64='^Q'/>
+<arg declared_type64='Boolean*' type64='^B'/>
+<arg declared_type64='UInt32*' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
-<field declared_type='void*' name='mRefCon' type='^v'/>
+<field declared_type64='void*' name='mRefCon' type64='^v'/>
 </struct>
-<struct name='CMIODeviceStreamConfiguration' type='{CMIODeviceStreamConfiguration=&quot;mNumberStreams&quot;I&quot;mNumberChannels&quot;[0L]}' type64='{CMIODeviceStreamConfiguration=&quot;mNumberStreams&quot;I&quot;mNumberChannels&quot;[0I]}'>
-<field declared_type='UInt32' name='mNumberStreams' type='L' type64='I'/>
-<field declared_type='UInt32*' name='mNumberChannels' type='^L' type64='^I'/>
+<struct name='CMIODeviceStreamConfiguration' type64='{CMIODeviceStreamConfiguration=&quot;mNumberStreams&quot;I&quot;mNumberChannels&quot;[0I]}'>
+<field declared_type64='UInt32' name='mNumberStreams' type64='I'/>
+<field declared_type64='UInt32*' name='mNumberChannels' type64='^I'/>
 </struct>
-<struct name='CMIOHardwarePlugInInterface' type='{CMIOHardwarePlugInInterface=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?&quot;Initialize&quot;^?&quot;InitializeWithObjectID&quot;^?&quot;Teardown&quot;^?&quot;ObjectShow&quot;^?&quot;ObjectHasProperty&quot;^?&quot;ObjectIsPropertySettable&quot;^?&quot;ObjectGetPropertyDataSize&quot;^?&quot;ObjectGetPropertyData&quot;^?&quot;ObjectSetPropertyData&quot;^?&quot;DeviceSuspend&quot;^?&quot;DeviceResume&quot;^?&quot;DeviceStartStream&quot;^?&quot;DeviceStopStream&quot;^?&quot;DeviceProcessAVCCommand&quot;^?&quot;DeviceProcessRS422Command&quot;^?&quot;StreamCopyBufferQueue&quot;^?&quot;StreamDeckPlay&quot;^?&quot;StreamDeckStop&quot;^?&quot;StreamDeckJog&quot;^?&quot;StreamDeckCueTo&quot;^?}'>
-<field declared_type='void*' name='_reserved' type='^v'/>
-<field declared_type='HRESULT (*)(void *, REFIID, LPVOID *)' function_pointer='true' name='QueryInterface' type='^?'>
-<arg declared_type='void*' type='^v'/>
-<arg declared_type='REFIID' type='{_REFIID=CCCCCCCCCCCCCCCC}'/>
-<arg declared_type='LPVOID*' type='^^v'/>
-<retval declared_type='HRESULT' type='l' type64='i'/>
+<struct name='CMIOHardwarePlugInInterface' type64='{CMIOHardwarePlugInInterface=&quot;_reserved&quot;^v&quot;QueryInterface&quot;^?&quot;AddRef&quot;^?&quot;Release&quot;^?&quot;Initialize&quot;^?&quot;InitializeWithObjectID&quot;^?&quot;Teardown&quot;^?&quot;ObjectShow&quot;^?&quot;ObjectHasProperty&quot;^?&quot;ObjectIsPropertySettable&quot;^?&quot;ObjectGetPropertyDataSize&quot;^?&quot;ObjectGetPropertyData&quot;^?&quot;ObjectSetPropertyData&quot;^?&quot;DeviceSuspend&quot;^?&quot;DeviceResume&quot;^?&quot;DeviceStartStream&quot;^?&quot;DeviceStopStream&quot;^?&quot;DeviceProcessAVCCommand&quot;^?&quot;DeviceProcessRS422Command&quot;^?&quot;StreamCopyBufferQueue&quot;^?&quot;StreamDeckPlay&quot;^?&quot;StreamDeckStop&quot;^?&quot;StreamDeckJog&quot;^?&quot;StreamDeckCueTo&quot;^?}'>
+<field declared_type64='void*' name='_reserved' type64='^v'/>
+<field declared_type64='HRESULT (*)(void *, REFIID, LPVOID *)' function_pointer='true' name='QueryInterface' type64='^?'>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='REFIID' type64='{_REFIID=CCCCCCCCCCCCCCCC}'/>
+<arg declared_type64='LPVOID*' type64='^^v'/>
+<retval declared_type64='HRESULT' type64='i'/>
 </field>
-<field declared_type='ULONG (*)(void *)' function_pointer='true' name='AddRef' type='^?'>
-<arg declared_type='void*' type='^v'/>
-<retval declared_type='ULONG' type='L' type64='I'/>
+<field declared_type64='ULONG (*)(void *)' function_pointer='true' name='AddRef' type64='^?'>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='ULONG' type64='I'/>
 </field>
-<field declared_type='ULONG (*)(void *)' function_pointer='true' name='Release' type='^?'>
-<arg declared_type='void*' type='^v'/>
-<retval declared_type='ULONG' type='L' type64='I'/>
+<field declared_type64='ULONG (*)(void *)' function_pointer='true' name='Release' type64='^?'>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='ULONG' type64='I'/>
 </field>
-<field declared_type='OSStatus (*)(CMIOHardwarePlugInRef)' function_pointer='true' name='Initialize' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<field declared_type64='OSStatus (*)(CMIOHardwarePlugInRef)' function_pointer='true' name='Initialize' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
-<field declared_type='OSStatus (*)(CMIOHardwarePlugInRef, CMIOObjectID)' function_pointer='true' name='InitializeWithObjectID' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIOObjectID' type='L' type64='I'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<field declared_type64='OSStatus (*)(CMIOHardwarePlugInRef, CMIOObjectID)' function_pointer='true' name='InitializeWithObjectID' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIOObjectID' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
-<field declared_type='OSStatus (*)(CMIOHardwarePlugInRef)' function_pointer='true' name='Teardown' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<field declared_type64='OSStatus (*)(CMIOHardwarePlugInRef)' function_pointer='true' name='Teardown' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
-<field declared_type='void (*)(CMIOHardwarePlugInRef, CMIOObjectID)' function_pointer='true' name='ObjectShow' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIOObjectID' type='L' type64='I'/>
-<retval declared_type='void' type='v'/>
+<field declared_type64='void (*)(CMIOHardwarePlugInRef, CMIOObjectID)' function_pointer='true' name='ObjectShow' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIOObjectID' type64='I'/>
+<retval declared_type64='void' type64='v'/>
 </field>
-<field declared_type='Boolean (*)(CMIOHardwarePlugInRef, CMIOObjectID, CMIOObjectPropertyAddress *)' function_pointer='true' name='ObjectHasProperty' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIOObjectID' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' type='^{CMIOObjectPropertyAddress=III}'/>
-<retval declared_type='Boolean' type='B'/>
+<field declared_type64='Boolean (*)(CMIOHardwarePlugInRef, CMIOObjectID, CMIOObjectPropertyAddress *)' function_pointer='true' name='ObjectHasProperty' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIOObjectID' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' type64='^{CMIOObjectPropertyAddress=III}'/>
+<retval declared_type64='Boolean' type64='B'/>
 </field>
-<field declared_type='OSStatus (*)(CMIOHardwarePlugInRef, CMIOObjectID, CMIOObjectPropertyAddress *, Boolean *)' function_pointer='true' name='ObjectIsPropertySettable' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIOObjectID' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' type='^{CMIOObjectPropertyAddress=III}'/>
-<arg declared_type='Boolean*' type='^B'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<field declared_type64='OSStatus (*)(CMIOHardwarePlugInRef, CMIOObjectID, CMIOObjectPropertyAddress *, Boolean *)' function_pointer='true' name='ObjectIsPropertySettable' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIOObjectID' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' type64='^{CMIOObjectPropertyAddress=III}'/>
+<arg declared_type64='Boolean*' type64='^B'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
-<field declared_type='OSStatus (*)(CMIOHardwarePlugInRef, CMIOObjectID, CMIOObjectPropertyAddress *, UInt32, void *, UInt32 *)' function_pointer='true' name='ObjectGetPropertyDataSize' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIOObjectID' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' type='^{CMIOObjectPropertyAddress=III}'/>
-<arg declared_type='UInt32' type='L' type64='I'/>
-<arg const='true' declared_type='void*' type='^v'/>
-<arg declared_type='UInt32*' type='^I'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<field declared_type64='OSStatus (*)(CMIOHardwarePlugInRef, CMIOObjectID, CMIOObjectPropertyAddress *, UInt32, void *, UInt32 *)' function_pointer='true' name='ObjectGetPropertyDataSize' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIOObjectID' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' type64='^{CMIOObjectPropertyAddress=III}'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='void*' type64='^v'/>
+<arg declared_type64='UInt32*' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
-<field declared_type='OSStatus (*)(CMIOHardwarePlugInRef, CMIOObjectID, CMIOObjectPropertyAddress *, UInt32, void *, UInt32, UInt32 *, void *)' function_pointer='true' name='ObjectGetPropertyData' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIOObjectID' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' type='^{CMIOObjectPropertyAddress=III}'/>
-<arg declared_type='UInt32' type='L' type64='I'/>
-<arg const='true' declared_type='void*' type='^v'/>
-<arg declared_type='UInt32' type='L' type64='I'/>
-<arg declared_type='UInt32*' type='^I'/>
-<arg declared_type='void*' type='^v'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<field declared_type64='OSStatus (*)(CMIOHardwarePlugInRef, CMIOObjectID, CMIOObjectPropertyAddress *, UInt32, void *, UInt32, UInt32 *, void *)' function_pointer='true' name='ObjectGetPropertyData' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIOObjectID' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' type64='^{CMIOObjectPropertyAddress=III}'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='void*' type64='^v'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg declared_type64='UInt32*' type64='^I'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
-<field declared_type='OSStatus (*)(CMIOHardwarePlugInRef, CMIOObjectID, CMIOObjectPropertyAddress *, UInt32, void *, UInt32, void *)' function_pointer='true' name='ObjectSetPropertyData' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIOObjectID' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' type='^{CMIOObjectPropertyAddress=III}'/>
-<arg declared_type='UInt32' type='L' type64='I'/>
-<arg const='true' declared_type='void*' type='^v'/>
-<arg declared_type='UInt32' type='L' type64='I'/>
-<arg const='true' declared_type='void*' type='^v'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<field declared_type64='OSStatus (*)(CMIOHardwarePlugInRef, CMIOObjectID, CMIOObjectPropertyAddress *, UInt32, void *, UInt32, void *)' function_pointer='true' name='ObjectSetPropertyData' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIOObjectID' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' type64='^{CMIOObjectPropertyAddress=III}'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='void*' type64='^v'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='void*' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
-<field declared_type='OSStatus (*)(CMIOHardwarePlugInRef, CMIODeviceID)' function_pointer='true' name='DeviceSuspend' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIODeviceID' type='L' type64='I'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<field declared_type64='OSStatus (*)(CMIOHardwarePlugInRef, CMIODeviceID)' function_pointer='true' name='DeviceSuspend' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIODeviceID' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
-<field declared_type='OSStatus (*)(CMIOHardwarePlugInRef, CMIODeviceID)' function_pointer='true' name='DeviceResume' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIODeviceID' type='L' type64='I'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<field declared_type64='OSStatus (*)(CMIOHardwarePlugInRef, CMIODeviceID)' function_pointer='true' name='DeviceResume' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIODeviceID' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
-<field declared_type='OSStatus (*)(CMIOHardwarePlugInRef, CMIODeviceID, CMIOStreamID)' function_pointer='true' name='DeviceStartStream' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIODeviceID' type='L' type64='I'/>
-<arg declared_type='CMIOStreamID' type='L' type64='I'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<field declared_type64='OSStatus (*)(CMIOHardwarePlugInRef, CMIODeviceID, CMIOStreamID)' function_pointer='true' name='DeviceStartStream' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIODeviceID' type64='I'/>
+<arg declared_type64='CMIOStreamID' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
-<field declared_type='OSStatus (*)(CMIOHardwarePlugInRef, CMIODeviceID, CMIOStreamID)' function_pointer='true' name='DeviceStopStream' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIODeviceID' type='L' type64='I'/>
-<arg declared_type='CMIOStreamID' type='L' type64='I'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<field declared_type64='OSStatus (*)(CMIOHardwarePlugInRef, CMIODeviceID, CMIOStreamID)' function_pointer='true' name='DeviceStopStream' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIODeviceID' type64='I'/>
+<arg declared_type64='CMIOStreamID' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
-<field declared_type='OSStatus (*)(CMIOHardwarePlugInRef, CMIODeviceID, CMIODeviceAVCCommand *)' function_pointer='true' name='DeviceProcessAVCCommand' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIODeviceID' type='L' type64='I'/>
-<arg declared_type='CMIODeviceAVCCommand*' type='^{CMIODeviceAVCCommand=*I*II}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<field declared_type64='OSStatus (*)(CMIOHardwarePlugInRef, CMIODeviceID, CMIODeviceAVCCommand *)' function_pointer='true' name='DeviceProcessAVCCommand' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIODeviceID' type64='I'/>
+<arg declared_type64='CMIODeviceAVCCommand*' type64='^{CMIODeviceAVCCommand=*I*II}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
-<field declared_type='OSStatus (*)(CMIOHardwarePlugInRef, CMIODeviceID, CMIODeviceRS422Command *)' function_pointer='true' name='DeviceProcessRS422Command' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIODeviceID' type='L' type64='I'/>
-<arg declared_type='CMIODeviceRS422Command*' type='^{CMIODeviceRS422Command=*I*II}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<field declared_type64='OSStatus (*)(CMIOHardwarePlugInRef, CMIODeviceID, CMIODeviceRS422Command *)' function_pointer='true' name='DeviceProcessRS422Command' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIODeviceID' type64='I'/>
+<arg declared_type64='CMIODeviceRS422Command*' type64='^{CMIODeviceRS422Command=*I*II}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
-<field declared_type='OSStatus (*)(CMIOHardwarePlugInRef, CMIOStreamID, CMIODeviceStreamQueueAlteredProc, void *, CMSimpleQueueRef *)' function_pointer='true' name='StreamCopyBufferQueue' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIOStreamID' type='L' type64='I'/>
-<arg declared_type='CMIODeviceStreamQueueAlteredProc' function_pointer='true' type='^?'>
-<arg declared_type='CMIOStreamID' type='L' type64='I'/>
-<arg declared_type='void*' type='^v'/>
-<arg declared_type='void*' type='^v'/>
-<retval declared_type='void' type='v'/>
+<field declared_type64='OSStatus (*)(CMIOHardwarePlugInRef, CMIOStreamID, CMIODeviceStreamQueueAlteredProc, void *, CMSimpleQueueRef *)' function_pointer='true' name='StreamCopyBufferQueue' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIOStreamID' type64='I'/>
+<arg declared_type64='CMIODeviceStreamQueueAlteredProc' function_pointer='true' type64='^?'>
+<arg declared_type64='CMIOStreamID' type64='I'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
 </arg>
-<arg declared_type='void*' type='^v'/>
-<arg declared_type='CMSimpleQueueRef*' type='^^{opaqueCMSimpleQueue}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='CMSimpleQueueRef*' type64='^^{opaqueCMSimpleQueue}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
-<field declared_type='OSStatus (*)(CMIOHardwarePlugInRef, CMIOStreamID)' function_pointer='true' name='StreamDeckPlay' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIOStreamID' type='L' type64='I'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<field declared_type64='OSStatus (*)(CMIOHardwarePlugInRef, CMIOStreamID)' function_pointer='true' name='StreamDeckPlay' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIOStreamID' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
-<field declared_type='OSStatus (*)(CMIOHardwarePlugInRef, CMIOStreamID)' function_pointer='true' name='StreamDeckStop' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIOStreamID' type='L' type64='I'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<field declared_type64='OSStatus (*)(CMIOHardwarePlugInRef, CMIOStreamID)' function_pointer='true' name='StreamDeckStop' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIOStreamID' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
-<field declared_type='OSStatus (*)(CMIOHardwarePlugInRef, CMIOStreamID, SInt32)' function_pointer='true' name='StreamDeckJog' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIOStreamID' type='L' type64='I'/>
-<arg declared_type='SInt32' type='l' type64='i'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<field declared_type64='OSStatus (*)(CMIOHardwarePlugInRef, CMIOStreamID, SInt32)' function_pointer='true' name='StreamDeckJog' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIOStreamID' type64='I'/>
+<arg declared_type64='SInt32' type64='i'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
-<field declared_type='OSStatus (*)(CMIOHardwarePlugInRef, CMIOStreamID, Float64, Boolean)' function_pointer='true' name='StreamDeckCueTo' type='^?'>
-<arg declared_type='CMIOHardwarePlugInRef' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIOStreamID' type='L' type64='I'/>
-<arg declared_type='Float64' type='d'/>
-<arg declared_type='Boolean' type='B'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<field declared_type64='OSStatus (*)(CMIOHardwarePlugInRef, CMIOStreamID, Float64, Boolean)' function_pointer='true' name='StreamDeckCueTo' type64='^?'>
+<arg declared_type64='CMIOHardwarePlugInRef' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIOStreamID' type64='I'/>
+<arg declared_type64='Float64' type64='d'/>
+<arg declared_type64='Boolean' type64='B'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </field>
 </struct>
-<struct name='CMIOObjectPropertyAddress' type='{CMIOObjectPropertyAddress=&quot;mSelector&quot;I&quot;mScope&quot;I&quot;mElement&quot;I}'>
-<field declared_type='CMIOObjectPropertySelector' name='mSelector' type='L' type64='I'/>
-<field declared_type='CMIOObjectPropertyScope' name='mScope' type='L' type64='I'/>
-<field declared_type='CMIOObjectPropertyElement' name='mElement' type='L' type64='I'/>
+<struct name='CMIOObjectPropertyAddress' type64='{CMIOObjectPropertyAddress=&quot;mSelector&quot;I&quot;mScope&quot;I&quot;mElement&quot;I}'>
+<field declared_type64='CMIOObjectPropertySelector' name='mSelector' type64='I'/>
+<field declared_type64='CMIOObjectPropertyScope' name='mScope' type64='I'/>
+<field declared_type64='CMIOObjectPropertyElement' name='mElement' type64='I'/>
 </struct>
-<struct name='CMIOStreamDeck' type='{CMIOStreamDeck=&quot;mStatus&quot;I&quot;mState&quot;I&quot;mState2&quot;I}'>
-<field declared_type='UInt32' name='mStatus' type='L' type64='I'/>
-<field declared_type='UInt32' name='mState' type='L' type64='I'/>
-<field declared_type='UInt32' name='mState2' type='L' type64='I'/>
+<struct name='CMIOStreamDeck' type64='{CMIOStreamDeck=&quot;mStatus&quot;I&quot;mState&quot;I&quot;mState2&quot;I}'>
+<field declared_type64='UInt32' name='mStatus' type64='I'/>
+<field declared_type64='UInt32' name='mState' type64='I'/>
+<field declared_type64='UInt32' name='mState2' type64='I'/>
 </struct>
-<struct name='CMIOStreamScheduledOutputNotificationProcAndRefCon' type='{CMIOStreamScheduledOutputNotificationProcAndRefCon=&quot;scheduledOutputNotificationProc&quot;^?&quot;scheduledOutputNotificationRefCon&quot;^v}'>
-<field declared_type='CMIOStreamScheduledOutputNotificationProc' function_pointer='true' name='scheduledOutputNotificationProc' type='^?'>
-<arg declared_type='UInt64' type='Q'/>
-<arg declared_type='UInt64' type='Q'/>
-<arg declared_type='void*' type='^v'/>
-<retval declared_type='void' type='v'/>
+<struct name='CMIOStreamScheduledOutputNotificationProcAndRefCon' type64='{CMIOStreamScheduledOutputNotificationProcAndRefCon=&quot;scheduledOutputNotificationProc&quot;^?&quot;scheduledOutputNotificationRefCon&quot;^v}'>
+<field declared_type64='CMIOStreamScheduledOutputNotificationProc' function_pointer='true' name='scheduledOutputNotificationProc' type64='^?'>
+<arg declared_type64='UInt64' type64='Q'/>
+<arg declared_type64='UInt64' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
 </field>
-<field declared_type='void*' name='scheduledOutputNotificationRefCon' type='^v'/>
+<field declared_type64='void*' name='scheduledOutputNotificationRefCon' type64='^v'/>
 </struct>
-<constant declared_type='CFStringRef' name='kCMIOBlockBufferAttachmentKey_CVPixelBufferReference' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachmentKey_CAAudioTimeStamp' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachmentKey_ClientSequenceID' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachmentKey_ClosedCaptionSampleBuffer' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachmentKey_DiscontinuityFlags' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachmentKey_HDV1_PackData' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachmentKey_HDV2_VAUX' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachmentKey_HostTime' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachmentKey_MouseAndKeyboardModifiers' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachmentKey_MuxedSourcePresentationTimeStamp' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachmentKey_NativeSMPTEFrameCount' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachmentKey_NoDataMarker' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachmentKey_NumberOfVideoFramesInBuffer' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachmentKey_NumberOfVideoFramesInGOP' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachmentKey_PulldownCadenceInfo' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachmentKey_RepeatedBufferContents' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachmentKey_SMPTETime' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachmentKey_SequenceNumber' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachmentKey_SourceAudioFormatDescription' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_CursorFrameRect' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_CursorIsVisible' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_CursorPositionX' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_CursorPositionY' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_CursorReference' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_CursorScale' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_CursorSeed' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_KeyboardModifiers' type='^{__CFString=}'/>
-<constant declared_type='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_MouseButtonState' type='^{__CFString=}'/>
-<enum name='kCMIOAVCDeviceType_DVCPro100_720p' value='1685481584'/>
-<enum name='kCMIOAVCDeviceType_DVCPro100_NTSC' value='1685467502'/>
-<enum name='kCMIOAVCDeviceType_DVCPro100_PAL' value='1685467504'/>
-<enum name='kCMIOAVCDeviceType_DVCPro50_NTSC' value='1685468526'/>
-<enum name='kCMIOAVCDeviceType_DVCPro50_PAL' value='1685468528'/>
-<enum name='kCMIOAVCDeviceType_DVCProHD_1080i50' value='1685481525'/>
-<enum name='kCMIOAVCDeviceType_DVCProHD_1080i60' value='1685481526'/>
-<enum name='kCMIOAVCDeviceType_DVCPro_NTSC' value='1685483630'/>
-<enum name='kCMIOAVCDeviceType_DVCPro_PAL' value='1685483632'/>
-<enum name='kCMIOAVCDeviceType_DV_NTSC' value='1685480224'/>
-<enum name='kCMIOAVCDeviceType_DV_PAL' value='1685480304'/>
-<enum name='kCMIOAVCDeviceType_MPEG2' value='1836082994'/>
-<enum name='kCMIOAVCDeviceType_Unknown' value='1970170734'/>
-<enum name='kCMIOBacklightCompensationControlClassID' value='1651207284'/>
-<enum name='kCMIOBlackLevelControlClassID' value='1651207286'/>
-<enum name='kCMIOBooleanControlClassID' value='1953458028'/>
-<enum name='kCMIOBooleanControlPropertyValue' value='1650685548'/>
-<enum name='kCMIOBrightnessControlClassID' value='1651665268'/>
-<enum name='kCMIOContrastControlClassID' value='1668576116'/>
-<enum name='kCMIOControlClassID' value='1633907820'/>
-<enum name='kCMIOControlPropertyElement' value='1667591277'/>
-<enum name='kCMIOControlPropertyScope' value='1668506480'/>
-<enum name='kCMIOControlPropertyVariant' value='1668702578'/>
-<enum name='kCMIODataDestinationControlClassID' value='1684370292'/>
-<enum name='kCMIODataSourceControlClassID' value='1685287523'/>
-<enum name='kCMIODeckShuttlePause' value='0'/>
-<enum name='kCMIODeckShuttlePlay1x' value='6'/>
-<enum name='kCMIODeckShuttlePlayFast' value='7'/>
-<enum name='kCMIODeckShuttlePlayFaster' value='8'/>
-<enum name='kCMIODeckShuttlePlayFastest' value='9'/>
-<enum name='kCMIODeckShuttlePlayHighSpeed' value='10'/>
-<enum name='kCMIODeckShuttlePlayNextFrame' value='1'/>
-<enum name='kCMIODeckShuttlePlayPreviousFrame' value='-1'/>
-<enum name='kCMIODeckShuttlePlaySlow1' value='3'/>
-<enum name='kCMIODeckShuttlePlaySlow2' value='4'/>
-<enum name='kCMIODeckShuttlePlaySlow3' value='5'/>
-<enum name='kCMIODeckShuttlePlaySlowest' value='2'/>
-<enum name='kCMIODeckShuttleReverse1x' value='-6'/>
-<enum name='kCMIODeckShuttleReverseFast' value='-7'/>
-<enum name='kCMIODeckShuttleReverseFaster' value='-8'/>
-<enum name='kCMIODeckShuttleReverseFastest' value='-9'/>
-<enum name='kCMIODeckShuttleReverseHighSpeed' value='-10'/>
-<enum name='kCMIODeckShuttleReverseSlow1' value='-3'/>
-<enum name='kCMIODeckShuttleReverseSlow2' value='-4'/>
-<enum name='kCMIODeckShuttleReverseSlow3' value='-5'/>
-<enum name='kCMIODeckShuttleReverseSlowest' value='-2'/>
-<enum name='kCMIODeckStateFastForward' value='6'/>
-<enum name='kCMIODeckStateFastRewind' value='7'/>
-<enum name='kCMIODeckStatePause' value='2'/>
-<enum name='kCMIODeckStatePlay' value='1'/>
-<enum name='kCMIODeckStatePlayReverse' value='5'/>
-<enum name='kCMIODeckStatePlaySlow' value='3'/>
-<enum name='kCMIODeckStateReverseSlow' value='4'/>
-<enum name='kCMIODeckStateStop' value='0'/>
-<enum name='kCMIODeckStatusBusy' value='1'/>
-<enum name='kCMIODeckStatusLocal' value='2'/>
-<enum name='kCMIODeckStatusNoDevice' value='7'/>
-<enum name='kCMIODeckStatusNotThreaded' value='3'/>
-<enum name='kCMIODeckStatusOpcode' value='5'/>
-<enum name='kCMIODeckStatusSearchingForDevice' value='6'/>
-<enum name='kCMIODeckStatusTapeInserted' value='4'/>
-<enum name='kCMIODeviceAVCSignalMode8mmNTSC' value='6'/>
-<enum name='kCMIODeviceAVCSignalMode8mmPAL' value='134'/>
-<enum name='kCMIODeviceAVCSignalModeAudio' value='32'/>
-<enum name='kCMIODeviceAVCSignalModeDVCPro100_50' value='240'/>
-<enum name='kCMIODeviceAVCSignalModeDVCPro100_60' value='112'/>
-<enum name='kCMIODeviceAVCSignalModeDVCPro25_525_60' value='120'/>
-<enum name='kCMIODeviceAVCSignalModeDVCPro25_625_50' value='248'/>
-<enum name='kCMIODeviceAVCSignalModeDVCPro50_525_60' value='116'/>
-<enum name='kCMIODeviceAVCSignalModeDVCPro50_625_50' value='244'/>
-<enum name='kCMIODeviceAVCSignalModeDVHS' value='1'/>
-<enum name='kCMIODeviceAVCSignalModeHD1125_60' value='8'/>
-<enum name='kCMIODeviceAVCSignalModeHD1250_50' value='136'/>
-<enum name='kCMIODeviceAVCSignalModeHDV1_50' value='144'/>
-<enum name='kCMIODeviceAVCSignalModeHDV1_60' value='16'/>
-<enum name='kCMIODeviceAVCSignalModeHDV2_50' value='154'/>
-<enum name='kCMIODeviceAVCSignalModeHDV2_60' value='26'/>
-<enum name='kCMIODeviceAVCSignalModeHi8NTSC' value='14'/>
-<enum name='kCMIODeviceAVCSignalModeHi8PAL' value='142'/>
-<enum name='kCMIODeviceAVCSignalModeMPEG12Mbps_50' value='148'/>
-<enum name='kCMIODeviceAVCSignalModeMPEG12Mbps_60' value='20'/>
-<enum name='kCMIODeviceAVCSignalModeMPEG25Mbps_50' value='144'/>
-<enum name='kCMIODeviceAVCSignalModeMPEG25Mbps_60' value='16'/>
-<enum name='kCMIODeviceAVCSignalModeMPEG6Mbps_50' value='152'/>
-<enum name='kCMIODeviceAVCSignalModeMPEG6Mbps_60' value='24'/>
-<enum name='kCMIODeviceAVCSignalModeMicroMV12Mbps_50' value='164'/>
-<enum name='kCMIODeviceAVCSignalModeMicroMV12Mbps_60' value='36'/>
-<enum name='kCMIODeviceAVCSignalModeMicroMV6Mbps_50' value='168'/>
-<enum name='kCMIODeviceAVCSignalModeMicroMV6Mbps_60' value='40'/>
-<enum name='kCMIODeviceAVCSignalModeSD525_60' value='0'/>
-<enum name='kCMIODeviceAVCSignalModeSD625_50' value='128'/>
-<enum name='kCMIODeviceAVCSignalModeSDL525_60' value='4'/>
-<enum name='kCMIODeviceAVCSignalModeSDL625_50' value='132'/>
-<enum name='kCMIODeviceAVCSignalModeSVHS525_60' value='13'/>
-<enum name='kCMIODeviceAVCSignalModeSVHS625_50' value='237'/>
-<enum name='kCMIODeviceAVCSignalModeVHSMESECAM' value='213'/>
-<enum name='kCMIODeviceAVCSignalModeVHSMPAL' value='37'/>
-<enum name='kCMIODeviceAVCSignalModeVHSNPAL' value='181'/>
-<enum name='kCMIODeviceAVCSignalModeVHSNTSC' value='5'/>
-<enum name='kCMIODeviceAVCSignalModeVHSPAL' value='165'/>
-<enum name='kCMIODeviceAVCSignalModeVHSSECAM' value='197'/>
-<enum name='kCMIODeviceClassID' value='1633969526'/>
-<enum name='kCMIODevicePermissionsError' value='560492391'/>
-<enum name='kCMIODevicePropertyAVCDeviceSignalMode' value='1886221165'/>
-<enum name='kCMIODevicePropertyAVCDeviceType' value='1886216564'/>
-<enum name='kCMIODevicePropertyCanProcessAVCCommand' value='1886216547'/>
-<enum name='kCMIODevicePropertyCanProcessRS422Command' value='1916023346'/>
-<enum name='kCMIODevicePropertyCanSwitchFrameRatesWithoutFrameDrops' value='1718775396'/>
-<enum name='kCMIODevicePropertyClientSyncDiscontinuity' value='1886217075'/>
-<enum name='kCMIODevicePropertyDeviceCanBeDefaultDevice' value='1684434036'/>
-<enum name='kCMIODevicePropertyDeviceHasChanged' value='1684629094'/>
-<enum name='kCMIODevicePropertyDeviceIsAlive' value='1818850926'/>
-<enum name='kCMIODevicePropertyDeviceIsRunning' value='1735354734'/>
-<enum name='kCMIODevicePropertyDeviceIsRunningSomewhere' value='1735356005'/>
-<enum name='kCMIODevicePropertyDeviceMaster' value='1886219880'/>
-<enum name='kCMIODevicePropertyDeviceUID' value='1969841184'/>
-<enum name='kCMIODevicePropertyExcludeNonDALAccess' value='1769500257'/>
-<enum name='kCMIODevicePropertyHogMode' value='1869180523'/>
-<enum name='kCMIODevicePropertyIIDCCSRData' value='1668510308'/>
-<enum name='kCMIODevicePropertyIIDCInitialUnitSpace' value='1769303667'/>
-<enum name='kCMIODevicePropertyLatency' value='1819569763'/>
-<enum name='kCMIODevicePropertyLinkedAndSyncedCoreAudioDeviceUID' value='1886155620'/>
-<enum name='kCMIODevicePropertyLinkedCoreAudioDeviceUID' value='1886156132'/>
-<enum name='kCMIODevicePropertyLocation' value='1684828003'/>
-<enum name='kCMIODevicePropertyLocationBuiltInDisplay' value='1'/>
-<enum name='kCMIODevicePropertyLocationExternalDevice' value='3'/>
-<enum name='kCMIODevicePropertyLocationExternalDisplay' value='2'/>
-<enum name='kCMIODevicePropertyLocationExternalWirelessDevice' value='4'/>
-<enum name='kCMIODevicePropertyLocationUnknown' value='0'/>
-<enum name='kCMIODevicePropertyModelUID' value='1836411236'/>
-<enum name='kCMIODevicePropertyPlugIn' value='1886156135'/>
-<enum name='kCMIODevicePropertySMPTETimeCallback' value='1886221155'/>
-<enum name='kCMIODevicePropertyScopeInput' value='1768845428'/>
-<enum name='kCMIODevicePropertyScopeOutput' value='1869968496'/>
-<enum name='kCMIODevicePropertyScopePlayThrough' value='1886679669'/>
-<enum name='kCMIODevicePropertyStreamConfiguration' value='1936482681'/>
-<enum name='kCMIODevicePropertyStreams' value='1937009955'/>
-<enum name='kCMIODevicePropertySuspendedByUser' value='1935833461'/>
-<enum name='kCMIODevicePropertyTransportType' value='1953653102'/>
-<enum name='kCMIODevicePropertyVideoDigitizerComponents' value='1986292071'/>
-<enum name='kCMIODeviceUnknown' value='0'/>
-<enum name='kCMIODeviceUnsupportedFormatError' value='560226676'/>
-<enum name='kCMIODirectionControlClassID' value='1684632165'/>
-<enum name='kCMIOExposureControlClassID' value='2020635506'/>
-<enum name='kCMIOExposureControlPropertyConvergenceSpeed' value='1701016432'/>
-<enum name='kCMIOExposureControlPropertyIntegrationTime' value='1701408372'/>
-<enum name='kCMIOExposureControlPropertyLockThreshold' value='1701602155'/>
-<enum name='kCMIOExposureControlPropertyMaximumGain' value='1701667192'/>
-<enum name='kCMIOExposureControlPropertyRegionOfInterest' value='1701998441'/>
-<enum name='kCMIOExposureControlPropertyStability' value='1702065273'/>
-<enum name='kCMIOExposureControlPropertyStable' value='1702065250'/>
-<enum name='kCMIOExposureControlPropertyTarget' value='1702127476'/>
-<enum name='kCMIOExposureControlPropertyUnlockThreshold' value='1702194283'/>
-<enum name='kCMIOFeatureControlClassID' value='1718903668'/>
-<enum name='kCMIOFeatureControlPropertyAbsoluteNative' value='1717792353'/>
-<enum name='kCMIOFeatureControlPropertyAbsoluteRange' value='1717789042'/>
-<enum name='kCMIOFeatureControlPropertyAbsoluteUnitName' value='1717794158'/>
-<enum name='kCMIOFeatureControlPropertyAbsoluteValue' value='1717789046'/>
-<enum name='kCMIOFeatureControlPropertyAutomaticManual' value='1717789037'/>
-<enum name='kCMIOFeatureControlPropertyConvertAbsoluteToNative' value='1717645934'/>
-<enum name='kCMIOFeatureControlPropertyConvertNativeToAbsolute' value='1718497889'/>
-<enum name='kCMIOFeatureControlPropertyNativeRange' value='1717792370'/>
-<enum name='kCMIOFeatureControlPropertyNativeValue' value='1717792374'/>
-<enum name='kCMIOFeatureControlPropertyOnOff' value='1717792623'/>
-<enum name='kCMIOFeatureControlPropertyTune' value='1717793902'/>
-<enum name='kCMIOFocusControlClassID' value='1717794163'/>
-<enum name='kCMIOGainControlClassID' value='1734437230'/>
-<enum name='kCMIOGammaControlClassID' value='1735224673'/>
-<enum name='kCMIOHardwareBadDeviceError' value='560227702'/>
-<enum name='kCMIOHardwareBadObjectError' value='560947818'/>
-<enum name='kCMIOHardwareBadPropertySizeError' value='561211770'/>
-<enum name='kCMIOHardwareBadStreamError' value='561214578'/>
-<enum name='kCMIOHardwareIllegalOperationError' value='1852797029'/>
-<enum name='kCMIOHardwareNoError' value='0'/>
-<enum name='kCMIOHardwareNotRunningError' value='1937010544'/>
-<enum name='kCMIOHardwareNotStoppedError' value='1920298528'/>
-<enum name='kCMIOHardwarePropertyAllowScreenCaptureDevices' value='2036691744'/>
-<enum name='kCMIOHardwarePropertyAllowWirelessScreenCaptureDevices' value='2004050788'/>
-<enum name='kCMIOHardwarePropertyDefaultInputDevice' value='1682533920'/>
-<enum name='kCMIOHardwarePropertyDefaultOutputDevice' value='1682929012'/>
-<enum name='kCMIOHardwarePropertyDeviceForUID' value='1685416292'/>
-<enum name='kCMIOHardwarePropertyDevices' value='1684370979'/>
-<enum name='kCMIOHardwarePropertyIsInitingOrExiting' value='1768845172'/>
-<enum name='kCMIOHardwarePropertyPlugInForBundleID' value='1885954665'/>
-<enum name='kCMIOHardwarePropertyProcessIsMaster' value='1835103092'/>
-<enum name='kCMIOHardwarePropertySleepingIsAllowed' value='1936483696'/>
-<enum name='kCMIOHardwarePropertySuspendedBySystem' value='1935833459'/>
-<enum name='kCMIOHardwarePropertyUnloadingIsAllowed' value='1970170980'/>
-<enum name='kCMIOHardwarePropertyUserSessionIsActiveOrHeadless' value='1970496882'/>
-<enum name='kCMIOHardwareSuspendedBySystemError' value='1684369017'/>
-<enum name='kCMIOHardwareUnknownPropertyError' value='2003332927'/>
-<enum name='kCMIOHardwareUnspecifiedError' value='2003329396'/>
-<enum name='kCMIOHardwareUnsupportedOperationError' value='1970171760'/>
-<enum name='kCMIOHueControlClassID' value='1752524064'/>
-<enum name='kCMIOInvalidSequenceNumber' value='18446744073709551615'/>
-<enum name='kCMIOIrisControlClassID' value='1769105779'/>
-<enum name='kCMIOJackControlClassID' value='1784767339'/>
-<enum name='kCMIONoiseReductionControlClassID' value='1932684914'/>
-<enum name='kCMIOObjectClassID' value='1634689642'/>
-<enum name='kCMIOObjectClassIDWildcard' value='707406378'/>
-<enum name='kCMIOObjectPropertyClass' value='1668047219'/>
-<enum name='kCMIOObjectPropertyCreator' value='1869638759'/>
-<enum name='kCMIOObjectPropertyElementCategoryName' value='1818452846'/>
-<enum name='kCMIOObjectPropertyElementMaster' value='0'/>
-<enum name='kCMIOObjectPropertyElementName' value='1818454126'/>
-<enum name='kCMIOObjectPropertyElementNumberName' value='1818455662'/>
-<enum name='kCMIOObjectPropertyElementWildcard' value='4294967295'/>
-<enum name='kCMIOObjectPropertyListenerAdded' value='1818850145'/>
-<enum name='kCMIOObjectPropertyListenerRemoved' value='1818850162'/>
-<enum name='kCMIOObjectPropertyManufacturer' value='1819107691'/>
-<enum name='kCMIOObjectPropertyName' value='1819173229'/>
-<enum name='kCMIOObjectPropertyOwnedObjects' value='1870098020'/>
-<enum name='kCMIOObjectPropertyOwner' value='1937007734'/>
-<enum name='kCMIOObjectPropertyScopeGlobal' value='1735159650'/>
-<enum name='kCMIOObjectPropertyScopeWildcard' value='707406378'/>
-<enum name='kCMIOObjectPropertySelectorWildcard' value='707406378'/>
-<enum name='kCMIOObjectSystemObject' value='1'/>
-<enum name='kCMIOObjectUnknown' value='0'/>
-<enum name='kCMIOOpticalFilterClassID' value='1869637236'/>
-<enum name='kCMIOPanControlClassID' value='1885433376'/>
-<enum name='kCMIOPlugInClassID' value='1634757735'/>
-<enum name='kCMIOPlugInPropertyBundleID' value='1885956452'/>
-<enum name='kCMIOPowerLineFrequencyControlClassID' value='1886873201'/>
-<enum name='kCMIOSampleBufferDiscontinuityFlag_BufferOverrun' value='128'/>
-<enum name='kCMIOSampleBufferDiscontinuityFlag_ClientSyncDiscontinuity' value='1024'/>
-<enum name='kCMIOSampleBufferDiscontinuityFlag_CodecSettingsChanged' value='131072'/>
-<enum name='kCMIOSampleBufferDiscontinuityFlag_DataFormatChanged' value='8192'/>
-<enum name='kCMIOSampleBufferDiscontinuityFlag_DataWasDropped' value='64'/>
-<enum name='kCMIOSampleBufferDiscontinuityFlag_DataWasFlushed' value='32'/>
-<enum name='kCMIOSampleBufferDiscontinuityFlag_DiscontinuityInDTS' value='256'/>
-<enum name='kCMIOSampleBufferDiscontinuityFlag_DurationWasExtended' value='32768'/>
-<enum name='kCMIOSampleBufferDiscontinuityFlag_MalformedData' value='16'/>
-<enum name='kCMIOSampleBufferDiscontinuityFlag_NoDataMarker' value='4096'/>
-<enum name='kCMIOSampleBufferDiscontinuityFlag_PacketError' value='4'/>
-<enum name='kCMIOSampleBufferDiscontinuityFlag_RelatedToDiscontinuity' value='512'/>
-<enum name='kCMIOSampleBufferDiscontinuityFlag_SleepWakeCycle' value='65536'/>
-<enum name='kCMIOSampleBufferDiscontinuityFlag_StreamDiscontinuity' value='8'/>
-<enum name='kCMIOSampleBufferDiscontinuityFlag_TimecodeDiscontinuity' value='2'/>
-<enum name='kCMIOSampleBufferDiscontinuityFlag_TimingReferenceJumped' value='16384'/>
-<enum name='kCMIOSampleBufferDiscontinuityFlag_TrickPlay' value='2048'/>
-<enum name='kCMIOSampleBufferDiscontinuityFlag_UnknownDiscontinuity' value='1'/>
-<enum name='kCMIOSampleBufferNoDataEvent_DeviceDidNotSync' value='2'/>
-<enum name='kCMIOSampleBufferNoDataEvent_DeviceInWrongMode' value='3'/>
-<enum name='kCMIOSampleBufferNoDataEvent_NoMedia' value='1'/>
-<enum name='kCMIOSampleBufferNoDataEvent_ProcessingError' value='4'/>
-<enum name='kCMIOSampleBufferNoDataEvent_SleepWakeCycle' value='5'/>
-<enum name='kCMIOSampleBufferNoDataEvent_Unknown' value='0'/>
-<enum name='kCMIOSampleBufferNoDiscontinuities' value='0'/>
-<enum name='kCMIOSaturationControlClassID' value='1935766645'/>
-<enum name='kCMIOSelectorControlClassID' value='1936483188'/>
-<enum name='kCMIOSelectorControlPropertyAvailableItems' value='1935892841'/>
-<enum name='kCMIOSelectorControlPropertyCurrentItem' value='1935893353'/>
-<enum name='kCMIOSelectorControlPropertyItemName' value='1935894894'/>
-<enum name='kCMIOSharpnessControlClassID' value='1936224880'/>
-<enum name='kCMIOShutterControlClassID' value='1936225394'/>
-<enum name='kCMIOStreamClassID' value='1634956402'/>
-<enum name='kCMIOStreamPropertyCanProcessDeckCommand' value='1885627236'/>
-<enum name='kCMIOStreamPropertyClock' value='1886217068'/>
-<enum name='kCMIOStreamPropertyDeck' value='1684366187'/>
-<enum name='kCMIOStreamPropertyDeckCueing' value='1668638051'/>
-<enum name='kCMIOStreamPropertyDeckDropness' value='1685221232'/>
-<enum name='kCMIOStreamPropertyDeckFrameNumber' value='1952673636'/>
-<enum name='kCMIOStreamPropertyDeckLocal' value='1819239276'/>
-<enum name='kCMIOStreamPropertyDeckThreaded' value='1953002084'/>
-<enum name='kCMIOStreamPropertyDeviceSyncTimeoutInMSec' value='1886219826'/>
-<enum name='kCMIOStreamPropertyDirection' value='1935960434'/>
-<enum name='kCMIOStreamPropertyEndOfData' value='1886217572'/>
-<enum name='kCMIOStreamPropertyFirstOutputPresentationTimeStamp' value='1886351476'/>
-<enum name='kCMIOStreamPropertyFormatDescription' value='1885762592'/>
-<enum name='kCMIOStreamPropertyFormatDescriptions' value='1885762657'/>
-<enum name='kCMIOStreamPropertyFrameRate' value='1852207732'/>
-<enum name='kCMIOStreamPropertyFrameRateRanges' value='1718776423'/>
-<enum name='kCMIOStreamPropertyFrameRates' value='1852207651'/>
-<enum name='kCMIOStreamPropertyInitialPresentationTimeStampForLinkedAndSyncedAudio' value='1768975475'/>
-<enum name='kCMIOStreamPropertyLatency' value='1819569763'/>
-<enum name='kCMIOStreamPropertyMinimumFrameRate' value='1835430516'/>
-<enum name='kCMIOStreamPropertyNoDataEventCount' value='1886219827'/>
-<enum name='kCMIOStreamPropertyNoDataTimeoutInMSec' value='1886219825'/>
-<enum name='kCMIOStreamPropertyOutputBufferQueueSize' value='1886220145'/>
-<enum name='kCMIOStreamPropertyOutputBufferRepeatCount' value='1886220146'/>
-<enum name='kCMIOStreamPropertyOutputBufferUnderrunCount' value='1886220149'/>
-<enum name='kCMIOStreamPropertyOutputBuffersNeededForThrottledPlayback' value='1835624038'/>
-<enum name='kCMIOStreamPropertyOutputBuffersRequiredForStartup' value='1886220147'/>
-<enum name='kCMIOStreamPropertyPreferredFormatDescription' value='1886545508'/>
-<enum name='kCMIOStreamPropertyPreferredFrameRate' value='1886545522'/>
-<enum name='kCMIOStreamPropertyScheduledOutputNotificationProc' value='1936682608'/>
-<enum name='kCMIOStreamPropertyStartingChannel' value='1935894638'/>
-<enum name='kCMIOStreamPropertyStillImage' value='1937010023'/>
-<enum name='kCMIOStreamPropertyStillImageFormatDescriptions' value='1937008244'/>
-<enum name='kCMIOStreamPropertyTerminalType' value='1952805485'/>
-<enum name='kCMIOStreamUnknown' value='0'/>
-<enum name='kCMIOSystemObjectClassID' value='1634957683'/>
-<enum name='kCMIOTemperatureControlClassID' value='1952804208'/>
-<enum name='kCMIOTiltControlClassID' value='1953066100'/>
-<enum name='kCMIOWhiteBalanceControlClassID' value='2003329644'/>
-<enum name='kCMIOWhiteBalanceUControlClassID' value='2003329653'/>
-<enum name='kCMIOWhiteBalanceVControlClassID' value='2003329654'/>
-<enum name='kCMIOWhiteLevelControlClassID' value='2003332214'/>
-<enum name='kCMIOZoomControlClassID' value='2054123373'/>
+<constant declared_type64='CFStringRef' name='kCMIOBlockBufferAttachmentKey_CVPixelBufferReference' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachmentKey_CAAudioTimeStamp' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachmentKey_ClientSequenceID' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachmentKey_ClosedCaptionSampleBuffer' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachmentKey_DiscontinuityFlags' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachmentKey_HDV1_PackData' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachmentKey_HDV2_VAUX' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachmentKey_HostTime' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachmentKey_MouseAndKeyboardModifiers' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachmentKey_MuxedSourcePresentationTimeStamp' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachmentKey_NativeSMPTEFrameCount' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachmentKey_NoDataMarker' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachmentKey_NumberOfVideoFramesInBuffer' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachmentKey_NumberOfVideoFramesInGOP' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachmentKey_PulldownCadenceInfo' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachmentKey_RepeatedBufferContents' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachmentKey_SMPTETime' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachmentKey_SequenceNumber' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachmentKey_SourceAudioFormatDescription' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_CursorFrameRect' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_CursorIsDrawnInFramebuffer' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_CursorIsVisible' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_CursorPositionX' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_CursorPositionY' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_CursorReference' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_CursorScale' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_CursorSeed' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_KeyboardModifiers' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_KeyboardModifiersEvent' type64='^{__CFString=}'/>
+<constant declared_type64='CFStringRef' name='kCMIOSampleBufferAttachment_MouseAndKeyboardModifiersKey_MouseButtonState' type64='^{__CFString=}'/>
+<enum name='kCMIOAVCDeviceType_DVCPro100_720p' value64='1685481584'/>
+<enum name='kCMIOAVCDeviceType_DVCPro100_NTSC' value64='1685467502'/>
+<enum name='kCMIOAVCDeviceType_DVCPro100_PAL' value64='1685467504'/>
+<enum name='kCMIOAVCDeviceType_DVCPro50_NTSC' value64='1685468526'/>
+<enum name='kCMIOAVCDeviceType_DVCPro50_PAL' value64='1685468528'/>
+<enum name='kCMIOAVCDeviceType_DVCProHD_1080i50' value64='1685481525'/>
+<enum name='kCMIOAVCDeviceType_DVCProHD_1080i60' value64='1685481526'/>
+<enum name='kCMIOAVCDeviceType_DVCPro_NTSC' value64='1685483630'/>
+<enum name='kCMIOAVCDeviceType_DVCPro_PAL' value64='1685483632'/>
+<enum name='kCMIOAVCDeviceType_DV_NTSC' value64='1685480224'/>
+<enum name='kCMIOAVCDeviceType_DV_PAL' value64='1685480304'/>
+<enum name='kCMIOAVCDeviceType_MPEG2' value64='1836082994'/>
+<enum name='kCMIOAVCDeviceType_Unknown' value64='1970170734'/>
+<enum name='kCMIOBacklightCompensationControlClassID' value64='1651207284'/>
+<enum name='kCMIOBlackLevelControlClassID' value64='1651207286'/>
+<enum name='kCMIOBooleanControlClassID' value64='1953458028'/>
+<enum name='kCMIOBooleanControlPropertyValue' value64='1650685548'/>
+<enum name='kCMIOBrightnessControlClassID' value64='1651665268'/>
+<enum name='kCMIOContrastControlClassID' value64='1668576116'/>
+<enum name='kCMIOControlClassID' value64='1633907820'/>
+<enum name='kCMIOControlPropertyElement' value64='1667591277'/>
+<enum name='kCMIOControlPropertyScope' value64='1668506480'/>
+<enum name='kCMIOControlPropertyVariant' value64='1668702578'/>
+<enum name='kCMIODataDestinationControlClassID' value64='1684370292'/>
+<enum name='kCMIODataSourceControlClassID' value64='1685287523'/>
+<enum name='kCMIODeckShuttlePause' value64='0'/>
+<enum name='kCMIODeckShuttlePlay1x' value64='6'/>
+<enum name='kCMIODeckShuttlePlayFast' value64='7'/>
+<enum name='kCMIODeckShuttlePlayFaster' value64='8'/>
+<enum name='kCMIODeckShuttlePlayFastest' value64='9'/>
+<enum name='kCMIODeckShuttlePlayHighSpeed' value64='10'/>
+<enum name='kCMIODeckShuttlePlayNextFrame' value64='1'/>
+<enum name='kCMIODeckShuttlePlayPreviousFrame' value64='-1'/>
+<enum name='kCMIODeckShuttlePlaySlow1' value64='3'/>
+<enum name='kCMIODeckShuttlePlaySlow2' value64='4'/>
+<enum name='kCMIODeckShuttlePlaySlow3' value64='5'/>
+<enum name='kCMIODeckShuttlePlaySlowest' value64='2'/>
+<enum name='kCMIODeckShuttleReverse1x' value64='-6'/>
+<enum name='kCMIODeckShuttleReverseFast' value64='-7'/>
+<enum name='kCMIODeckShuttleReverseFaster' value64='-8'/>
+<enum name='kCMIODeckShuttleReverseFastest' value64='-9'/>
+<enum name='kCMIODeckShuttleReverseHighSpeed' value64='-10'/>
+<enum name='kCMIODeckShuttleReverseSlow1' value64='-3'/>
+<enum name='kCMIODeckShuttleReverseSlow2' value64='-4'/>
+<enum name='kCMIODeckShuttleReverseSlow3' value64='-5'/>
+<enum name='kCMIODeckShuttleReverseSlowest' value64='-2'/>
+<enum name='kCMIODeckStateFastForward' value64='6'/>
+<enum name='kCMIODeckStateFastRewind' value64='7'/>
+<enum name='kCMIODeckStatePause' value64='2'/>
+<enum name='kCMIODeckStatePlay' value64='1'/>
+<enum name='kCMIODeckStatePlayReverse' value64='5'/>
+<enum name='kCMIODeckStatePlaySlow' value64='3'/>
+<enum name='kCMIODeckStateReverseSlow' value64='4'/>
+<enum name='kCMIODeckStateStop' value64='0'/>
+<enum name='kCMIODeckStatusBusy' value64='1'/>
+<enum name='kCMIODeckStatusLocal' value64='2'/>
+<enum name='kCMIODeckStatusNoDevice' value64='7'/>
+<enum name='kCMIODeckStatusNotThreaded' value64='3'/>
+<enum name='kCMIODeckStatusOpcode' value64='5'/>
+<enum name='kCMIODeckStatusSearchingForDevice' value64='6'/>
+<enum name='kCMIODeckStatusTapeInserted' value64='4'/>
+<enum name='kCMIODeviceAVCSignalMode8mmNTSC' value64='6'/>
+<enum name='kCMIODeviceAVCSignalMode8mmPAL' value64='134'/>
+<enum name='kCMIODeviceAVCSignalModeAudio' value64='32'/>
+<enum name='kCMIODeviceAVCSignalModeDVCPro100_50' value64='240'/>
+<enum name='kCMIODeviceAVCSignalModeDVCPro100_60' value64='112'/>
+<enum name='kCMIODeviceAVCSignalModeDVCPro25_525_60' value64='120'/>
+<enum name='kCMIODeviceAVCSignalModeDVCPro25_625_50' value64='248'/>
+<enum name='kCMIODeviceAVCSignalModeDVCPro50_525_60' value64='116'/>
+<enum name='kCMIODeviceAVCSignalModeDVCPro50_625_50' value64='244'/>
+<enum name='kCMIODeviceAVCSignalModeDVHS' value64='1'/>
+<enum name='kCMIODeviceAVCSignalModeHD1125_60' value64='8'/>
+<enum name='kCMIODeviceAVCSignalModeHD1250_50' value64='136'/>
+<enum name='kCMIODeviceAVCSignalModeHDV1_50' value64='144'/>
+<enum name='kCMIODeviceAVCSignalModeHDV1_60' value64='16'/>
+<enum name='kCMIODeviceAVCSignalModeHDV2_50' value64='154'/>
+<enum name='kCMIODeviceAVCSignalModeHDV2_60' value64='26'/>
+<enum name='kCMIODeviceAVCSignalModeHi8NTSC' value64='14'/>
+<enum name='kCMIODeviceAVCSignalModeHi8PAL' value64='142'/>
+<enum name='kCMIODeviceAVCSignalModeMPEG12Mbps_50' value64='148'/>
+<enum name='kCMIODeviceAVCSignalModeMPEG12Mbps_60' value64='20'/>
+<enum name='kCMIODeviceAVCSignalModeMPEG25Mbps_50' value64='144'/>
+<enum name='kCMIODeviceAVCSignalModeMPEG25Mbps_60' value64='16'/>
+<enum name='kCMIODeviceAVCSignalModeMPEG6Mbps_50' value64='152'/>
+<enum name='kCMIODeviceAVCSignalModeMPEG6Mbps_60' value64='24'/>
+<enum name='kCMIODeviceAVCSignalModeMicroMV12Mbps_50' value64='164'/>
+<enum name='kCMIODeviceAVCSignalModeMicroMV12Mbps_60' value64='36'/>
+<enum name='kCMIODeviceAVCSignalModeMicroMV6Mbps_50' value64='168'/>
+<enum name='kCMIODeviceAVCSignalModeMicroMV6Mbps_60' value64='40'/>
+<enum name='kCMIODeviceAVCSignalModeSD525_60' value64='0'/>
+<enum name='kCMIODeviceAVCSignalModeSD625_50' value64='128'/>
+<enum name='kCMIODeviceAVCSignalModeSDL525_60' value64='4'/>
+<enum name='kCMIODeviceAVCSignalModeSDL625_50' value64='132'/>
+<enum name='kCMIODeviceAVCSignalModeSVHS525_60' value64='13'/>
+<enum name='kCMIODeviceAVCSignalModeSVHS625_50' value64='237'/>
+<enum name='kCMIODeviceAVCSignalModeVHSMESECAM' value64='213'/>
+<enum name='kCMIODeviceAVCSignalModeVHSMPAL' value64='37'/>
+<enum name='kCMIODeviceAVCSignalModeVHSNPAL' value64='181'/>
+<enum name='kCMIODeviceAVCSignalModeVHSNTSC' value64='5'/>
+<enum name='kCMIODeviceAVCSignalModeVHSPAL' value64='165'/>
+<enum name='kCMIODeviceAVCSignalModeVHSSECAM' value64='197'/>
+<enum name='kCMIODeviceClassID' value64='1633969526'/>
+<enum name='kCMIODevicePermissionsError' value64='560492391'/>
+<enum name='kCMIODevicePropertyAVCDeviceSignalMode' value64='1886221165'/>
+<enum name='kCMIODevicePropertyAVCDeviceType' value64='1886216564'/>
+<enum name='kCMIODevicePropertyCanProcessAVCCommand' value64='1886216547'/>
+<enum name='kCMIODevicePropertyCanProcessRS422Command' value64='1916023346'/>
+<enum name='kCMIODevicePropertyCanSwitchFrameRatesWithoutFrameDrops' value64='1718775396'/>
+<enum name='kCMIODevicePropertyClientSyncDiscontinuity' value64='1886217075'/>
+<enum name='kCMIODevicePropertyDeviceCanBeDefaultDevice' value64='1684434036'/>
+<enum name='kCMIODevicePropertyDeviceHasChanged' value64='1684629094'/>
+<enum name='kCMIODevicePropertyDeviceIsAlive' value64='1818850926'/>
+<enum name='kCMIODevicePropertyDeviceIsRunning' value64='1735354734'/>
+<enum name='kCMIODevicePropertyDeviceIsRunningSomewhere' value64='1735356005'/>
+<enum name='kCMIODevicePropertyDeviceMaster' value64='1886219880'/>
+<enum name='kCMIODevicePropertyDeviceUID' value64='1969841184'/>
+<enum name='kCMIODevicePropertyExcludeNonDALAccess' value64='1769500257'/>
+<enum name='kCMIODevicePropertyHogMode' value64='1869180523'/>
+<enum name='kCMIODevicePropertyIIDCCSRData' value64='1668510308'/>
+<enum name='kCMIODevicePropertyIIDCInitialUnitSpace' value64='1769303667'/>
+<enum name='kCMIODevicePropertyLatency' value64='1819569763'/>
+<enum name='kCMIODevicePropertyLinkedAndSyncedCoreAudioDeviceUID' value64='1886155620'/>
+<enum name='kCMIODevicePropertyLinkedCoreAudioDeviceUID' value64='1886156132'/>
+<enum name='kCMIODevicePropertyLocation' value64='1684828003'/>
+<enum name='kCMIODevicePropertyLocationBuiltInDisplay' value64='1'/>
+<enum name='kCMIODevicePropertyLocationExternalDevice' value64='3'/>
+<enum name='kCMIODevicePropertyLocationExternalDisplay' value64='2'/>
+<enum name='kCMIODevicePropertyLocationExternalWirelessDevice' value64='4'/>
+<enum name='kCMIODevicePropertyLocationUnknown' value64='0'/>
+<enum name='kCMIODevicePropertyModelUID' value64='1836411236'/>
+<enum name='kCMIODevicePropertyPlugIn' value64='1886156135'/>
+<enum name='kCMIODevicePropertySMPTETimeCallback' value64='1886221155'/>
+<enum name='kCMIODevicePropertyScopeInput' value64='1768845428'/>
+<enum name='kCMIODevicePropertyScopeOutput' value64='1869968496'/>
+<enum name='kCMIODevicePropertyScopePlayThrough' value64='1886679669'/>
+<enum name='kCMIODevicePropertyStreamConfiguration' value64='1936482681'/>
+<enum name='kCMIODevicePropertyStreams' value64='1937009955'/>
+<enum name='kCMIODevicePropertySuspendedByUser' value64='1935833461'/>
+<enum name='kCMIODevicePropertyTransportType' value64='1953653102'/>
+<enum name='kCMIODevicePropertyVideoDigitizerComponents' value64='1986292071'/>
+<enum name='kCMIODeviceUnknown' value64='0'/>
+<enum name='kCMIODeviceUnsupportedFormatError' value64='560226676'/>
+<enum name='kCMIODirectionControlClassID' value64='1684632165'/>
+<enum name='kCMIOExposureControlClassID' value64='2020635506'/>
+<enum name='kCMIOExposureControlPropertyConvergenceSpeed' value64='1701016432'/>
+<enum name='kCMIOExposureControlPropertyIntegrationTime' value64='1701408372'/>
+<enum name='kCMIOExposureControlPropertyLockThreshold' value64='1701602155'/>
+<enum name='kCMIOExposureControlPropertyMaximumGain' value64='1701667192'/>
+<enum name='kCMIOExposureControlPropertyRegionOfInterest' value64='1701998441'/>
+<enum name='kCMIOExposureControlPropertyStability' value64='1702065273'/>
+<enum name='kCMIOExposureControlPropertyStable' value64='1702065250'/>
+<enum name='kCMIOExposureControlPropertyTarget' value64='1702127476'/>
+<enum name='kCMIOExposureControlPropertyUnlockThreshold' value64='1702194283'/>
+<enum name='kCMIOFeatureControlClassID' value64='1718903668'/>
+<enum name='kCMIOFeatureControlPropertyAbsoluteNative' value64='1717792353'/>
+<enum name='kCMIOFeatureControlPropertyAbsoluteRange' value64='1717789042'/>
+<enum name='kCMIOFeatureControlPropertyAbsoluteUnitName' value64='1717794158'/>
+<enum name='kCMIOFeatureControlPropertyAbsoluteValue' value64='1717789046'/>
+<enum name='kCMIOFeatureControlPropertyAutomaticManual' value64='1717789037'/>
+<enum name='kCMIOFeatureControlPropertyConvertAbsoluteToNative' value64='1717645934'/>
+<enum name='kCMIOFeatureControlPropertyConvertNativeToAbsolute' value64='1718497889'/>
+<enum name='kCMIOFeatureControlPropertyNativeRange' value64='1717792370'/>
+<enum name='kCMIOFeatureControlPropertyNativeValue' value64='1717792374'/>
+<enum name='kCMIOFeatureControlPropertyOnOff' value64='1717792623'/>
+<enum name='kCMIOFeatureControlPropertyTune' value64='1717793902'/>
+<enum name='kCMIOFocusControlClassID' value64='1717794163'/>
+<enum name='kCMIOGainControlClassID' value64='1734437230'/>
+<enum name='kCMIOGammaControlClassID' value64='1735224673'/>
+<enum name='kCMIOHardwareBadDeviceError' value64='560227702'/>
+<enum name='kCMIOHardwareBadObjectError' value64='560947818'/>
+<enum name='kCMIOHardwareBadPropertySizeError' value64='561211770'/>
+<enum name='kCMIOHardwareBadStreamError' value64='561214578'/>
+<enum name='kCMIOHardwareIllegalOperationError' value64='1852797029'/>
+<enum name='kCMIOHardwareNoError' value64='0'/>
+<enum name='kCMIOHardwareNotRunningError' value64='1937010544'/>
+<enum name='kCMIOHardwareNotStoppedError' value64='1920298528'/>
+<enum name='kCMIOHardwarePropertyAllowScreenCaptureDevices' value64='2036691744'/>
+<enum name='kCMIOHardwarePropertyAllowWirelessScreenCaptureDevices' value64='2004050788'/>
+<enum name='kCMIOHardwarePropertyDefaultInputDevice' value64='1682533920'/>
+<enum name='kCMIOHardwarePropertyDefaultOutputDevice' value64='1682929012'/>
+<enum name='kCMIOHardwarePropertyDeviceForUID' value64='1685416292'/>
+<enum name='kCMIOHardwarePropertyDevices' value64='1684370979'/>
+<enum name='kCMIOHardwarePropertyIsInitingOrExiting' value64='1768845172'/>
+<enum name='kCMIOHardwarePropertyPlugInForBundleID' value64='1885954665'/>
+<enum name='kCMIOHardwarePropertyProcessIsMaster' value64='1835103092'/>
+<enum name='kCMIOHardwarePropertySleepingIsAllowed' value64='1936483696'/>
+<enum name='kCMIOHardwarePropertySuspendedBySystem' value64='1935833459'/>
+<enum name='kCMIOHardwarePropertyUnloadingIsAllowed' value64='1970170980'/>
+<enum name='kCMIOHardwarePropertyUserSessionIsActiveOrHeadless' value64='1970496882'/>
+<enum name='kCMIOHardwareSuspendedBySystemError' value64='1684369017'/>
+<enum name='kCMIOHardwareUnknownPropertyError' value64='2003332927'/>
+<enum name='kCMIOHardwareUnspecifiedError' value64='2003329396'/>
+<enum name='kCMIOHardwareUnsupportedOperationError' value64='1970171760'/>
+<enum name='kCMIOHueControlClassID' value64='1752524064'/>
+<enum name='kCMIOInvalidSequenceNumber' value64='18446744073709551615'/>
+<enum name='kCMIOIrisControlClassID' value64='1769105779'/>
+<enum name='kCMIOJackControlClassID' value64='1784767339'/>
+<enum name='kCMIONoiseReductionControlClassID' value64='1932684914'/>
+<enum name='kCMIOObjectClassID' value64='1634689642'/>
+<enum name='kCMIOObjectClassIDWildcard' value64='707406378'/>
+<enum name='kCMIOObjectPropertyClass' value64='1668047219'/>
+<enum name='kCMIOObjectPropertyCreator' value64='1869638759'/>
+<enum name='kCMIOObjectPropertyElementCategoryName' value64='1818452846'/>
+<enum name='kCMIOObjectPropertyElementMaster' value64='0'/>
+<enum name='kCMIOObjectPropertyElementName' value64='1818454126'/>
+<enum name='kCMIOObjectPropertyElementNumberName' value64='1818455662'/>
+<enum name='kCMIOObjectPropertyElementWildcard' value64='4294967295'/>
+<enum name='kCMIOObjectPropertyListenerAdded' value64='1818850145'/>
+<enum name='kCMIOObjectPropertyListenerRemoved' value64='1818850162'/>
+<enum name='kCMIOObjectPropertyManufacturer' value64='1819107691'/>
+<enum name='kCMIOObjectPropertyName' value64='1819173229'/>
+<enum name='kCMIOObjectPropertyOwnedObjects' value64='1870098020'/>
+<enum name='kCMIOObjectPropertyOwner' value64='1937007734'/>
+<enum name='kCMIOObjectPropertyScopeGlobal' value64='1735159650'/>
+<enum name='kCMIOObjectPropertyScopeWildcard' value64='707406378'/>
+<enum name='kCMIOObjectPropertySelectorWildcard' value64='707406378'/>
+<enum name='kCMIOObjectSystemObject' value64='1'/>
+<enum name='kCMIOObjectUnknown' value64='0'/>
+<enum name='kCMIOOpticalFilterClassID' value64='1869637236'/>
+<enum name='kCMIOPanControlClassID' value64='1885433376'/>
+<enum name='kCMIOPanTiltAbsoluteControlClassID' value64='1886675298'/>
+<enum name='kCMIOPanTiltRelativeControlClassID' value64='1886679660'/>
+<enum name='kCMIOPlugInClassID' value64='1634757735'/>
+<enum name='kCMIOPlugInPropertyBundleID' value64='1885956452'/>
+<enum name='kCMIOPowerLineFrequencyControlClassID' value64='1886873201'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_BufferOverrun' value64='128'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_ClientSyncDiscontinuity' value64='1024'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_CodecSettingsChanged' value64='131072'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_DataFormatChanged' value64='8192'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_DataWasDropped' value64='64'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_DataWasFlushed' value64='32'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_DiscontinuityInDTS' value64='256'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_DurationWasExtended' value64='32768'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_MalformedData' value64='16'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_NoDataMarker' value64='4096'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_PacketError' value64='4'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_RelatedToDiscontinuity' value64='512'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_SleepWakeCycle' value64='65536'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_StreamDiscontinuity' value64='8'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_TimecodeDiscontinuity' value64='2'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_TimingReferenceJumped' value64='16384'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_TrickPlay' value64='2048'/>
+<enum name='kCMIOSampleBufferDiscontinuityFlag_UnknownDiscontinuity' value64='1'/>
+<enum name='kCMIOSampleBufferNoDataEvent_DeviceDidNotSync' value64='2'/>
+<enum name='kCMIOSampleBufferNoDataEvent_DeviceInWrongMode' value64='3'/>
+<enum name='kCMIOSampleBufferNoDataEvent_NoMedia' value64='1'/>
+<enum name='kCMIOSampleBufferNoDataEvent_ProcessingError' value64='4'/>
+<enum name='kCMIOSampleBufferNoDataEvent_SleepWakeCycle' value64='5'/>
+<enum name='kCMIOSampleBufferNoDataEvent_Unknown' value64='0'/>
+<enum name='kCMIOSampleBufferNoDiscontinuities' value64='0'/>
+<enum name='kCMIOSaturationControlClassID' value64='1935766645'/>
+<enum name='kCMIOSelectorControlClassID' value64='1936483188'/>
+<enum name='kCMIOSelectorControlPropertyAvailableItems' value64='1935892841'/>
+<enum name='kCMIOSelectorControlPropertyCurrentItem' value64='1935893353'/>
+<enum name='kCMIOSelectorControlPropertyItemName' value64='1935894894'/>
+<enum name='kCMIOSharpnessControlClassID' value64='1936224880'/>
+<enum name='kCMIOShutterControlClassID' value64='1936225394'/>
+<enum name='kCMIOStreamClassID' value64='1634956402'/>
+<enum name='kCMIOStreamPropertyCanProcessDeckCommand' value64='1885627236'/>
+<enum name='kCMIOStreamPropertyClock' value64='1886217068'/>
+<enum name='kCMIOStreamPropertyDeck' value64='1684366187'/>
+<enum name='kCMIOStreamPropertyDeckCueing' value64='1668638051'/>
+<enum name='kCMIOStreamPropertyDeckDropness' value64='1685221232'/>
+<enum name='kCMIOStreamPropertyDeckFrameNumber' value64='1952673636'/>
+<enum name='kCMIOStreamPropertyDeckLocal' value64='1819239276'/>
+<enum name='kCMIOStreamPropertyDeckThreaded' value64='1953002084'/>
+<enum name='kCMIOStreamPropertyDeviceSyncTimeoutInMSec' value64='1886219826'/>
+<enum name='kCMIOStreamPropertyDirection' value64='1935960434'/>
+<enum name='kCMIOStreamPropertyEndOfData' value64='1886217572'/>
+<enum name='kCMIOStreamPropertyFirstOutputPresentationTimeStamp' value64='1886351476'/>
+<enum name='kCMIOStreamPropertyFormatDescription' value64='1885762592'/>
+<enum name='kCMIOStreamPropertyFormatDescriptions' value64='1885762657'/>
+<enum name='kCMIOStreamPropertyFrameRate' value64='1852207732'/>
+<enum name='kCMIOStreamPropertyFrameRateRanges' value64='1718776423'/>
+<enum name='kCMIOStreamPropertyFrameRates' value64='1852207651'/>
+<enum name='kCMIOStreamPropertyInitialPresentationTimeStampForLinkedAndSyncedAudio' value64='1768975475'/>
+<enum name='kCMIOStreamPropertyLatency' value64='1819569763'/>
+<enum name='kCMIOStreamPropertyMinimumFrameRate' value64='1835430516'/>
+<enum name='kCMIOStreamPropertyNoDataEventCount' value64='1886219827'/>
+<enum name='kCMIOStreamPropertyNoDataTimeoutInMSec' value64='1886219825'/>
+<enum name='kCMIOStreamPropertyOutputBufferQueueSize' value64='1886220145'/>
+<enum name='kCMIOStreamPropertyOutputBufferRepeatCount' value64='1886220146'/>
+<enum name='kCMIOStreamPropertyOutputBufferUnderrunCount' value64='1886220149'/>
+<enum name='kCMIOStreamPropertyOutputBuffersNeededForThrottledPlayback' value64='1835624038'/>
+<enum name='kCMIOStreamPropertyOutputBuffersRequiredForStartup' value64='1886220147'/>
+<enum name='kCMIOStreamPropertyPreferredFormatDescription' value64='1886545508'/>
+<enum name='kCMIOStreamPropertyPreferredFrameRate' value64='1886545522'/>
+<enum name='kCMIOStreamPropertyScheduledOutputNotificationProc' value64='1936682608'/>
+<enum name='kCMIOStreamPropertyStartingChannel' value64='1935894638'/>
+<enum name='kCMIOStreamPropertyStillImage' value64='1937010023'/>
+<enum name='kCMIOStreamPropertyStillImageFormatDescriptions' value64='1937008244'/>
+<enum name='kCMIOStreamPropertyTerminalType' value64='1952805485'/>
+<enum name='kCMIOStreamUnknown' value64='0'/>
+<enum name='kCMIOSystemObjectClassID' value64='1634957683'/>
+<enum name='kCMIOTemperatureControlClassID' value64='1952804208'/>
+<enum name='kCMIOTiltControlClassID' value64='1953066100'/>
+<enum name='kCMIOWhiteBalanceControlClassID' value64='2003329644'/>
+<enum name='kCMIOWhiteBalanceUControlClassID' value64='2003329653'/>
+<enum name='kCMIOWhiteBalanceVControlClassID' value64='2003329654'/>
+<enum name='kCMIOWhiteLevelControlClassID' value64='2003332214'/>
+<enum name='kCMIOZoomControlClassID' value64='2054123373'/>
+<enum name='kCMIOZoomRelativeControlClassID' value64='2054122866'/>
 <function name='CMIODeviceProcessAVCCommand'>
-<arg declared_type='CMIODeviceID' name='deviceID' type='L' type64='I'/>
-<arg declared_type='CMIODeviceAVCCommand*' name='ioAVCCommand' type='^{CMIODeviceAVCCommand=*I*II}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMIODeviceID' name='deviceID' type64='I'/>
+<arg declared_type64='CMIODeviceAVCCommand*' name='ioAVCCommand' type64='^{CMIODeviceAVCCommand=*I*II}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIODeviceProcessRS422Command'>
-<arg declared_type='CMIODeviceID' name='deviceID' type='L' type64='I'/>
-<arg declared_type='CMIODeviceRS422Command*' name='ioRS422Command' type='^{CMIODeviceRS422Command=*I*II}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMIODeviceID' name='deviceID' type64='I'/>
+<arg declared_type64='CMIODeviceRS422Command*' name='ioRS422Command' type64='^{CMIODeviceRS422Command=*I*II}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIODeviceStartStream'>
-<arg declared_type='CMIODeviceID' name='deviceID' type='L' type64='I'/>
-<arg declared_type='CMIOStreamID' name='streamID' type='L' type64='I'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMIODeviceID' name='deviceID' type64='I'/>
+<arg declared_type64='CMIOStreamID' name='streamID' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIODeviceStopStream'>
-<arg declared_type='CMIODeviceID' name='deviceID' type='L' type64='I'/>
-<arg declared_type='CMIOStreamID' name='streamID' type='L' type64='I'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMIODeviceID' name='deviceID' type64='I'/>
+<arg declared_type64='CMIOStreamID' name='streamID' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOObjectAddPropertyListener'>
-<arg declared_type='CMIOObjectID' name='objectID' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' name='address' type='^{CMIOObjectPropertyAddress=III}'/>
-<arg declared_type='CMIOObjectPropertyListenerProc' function_pointer='true' name='listener' type='^?'>
-<arg declared_type='CMIOObjectID' type='L' type64='I'/>
-<arg declared_type='UInt32' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' type='^{CMIOObjectPropertyAddress=III}'/>
-<arg declared_type='void*' type='^v'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMIOObjectID' name='objectID' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' name='address' type64='^{CMIOObjectPropertyAddress=III}'/>
+<arg declared_type64='CMIOObjectPropertyListenerProc' function_pointer='true' name='listener' type64='^?'>
+<arg declared_type64='CMIOObjectID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' type64='^{CMIOObjectPropertyAddress=III}'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </arg>
-<arg declared_type='void*' name='clientData' type='^v'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='void*' name='clientData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOObjectAddPropertyListenerBlock'>
-<arg declared_type='CMIOObjectID' name='objectID' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' name='address' type='^{CMIOObjectPropertyAddress=III}'/>
-<arg declared_type='dispatch_queue_t' name='dispatchQueue' type='@'/>
-<arg declared_type='CMIOObjectPropertyListenerBlock' function_pointer='true' name='listener' type='@?'>
-<arg declared_type='UInt32' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' type='^{CMIOObjectPropertyAddress=III}'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='CMIOObjectID' name='objectID' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' name='address' type64='^{CMIOObjectPropertyAddress=III}'/>
+<arg declared_type64='dispatch_queue_t' name='dispatchQueue' type64='@'/>
+<arg declared_type64='CMIOObjectPropertyListenerBlock' function_pointer='true' name='listener' type64='@?'>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' type64='^{CMIOObjectPropertyAddress=III}'/>
+<retval declared_type64='void' type64='v'/>
 </arg>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOObjectCreate'>
-<arg declared_type='CMIOHardwarePlugInRef' name='owningPlugIn' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIOObjectID' name='owningObjectID' type='L' type64='I'/>
-<arg declared_type='CMIOClassID' name='classID' type='L' type64='I'/>
-<arg declared_type='CMIOObjectID*' name='objectID' type='^I'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMIOHardwarePlugInRef' name='owningPlugIn' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIOObjectID' name='owningObjectID' type64='I'/>
+<arg declared_type64='CMIOClassID' name='classID' type64='I'/>
+<arg declared_type64='CMIOObjectID*' name='objectID' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOObjectGetPropertyData'>
-<arg declared_type='CMIOObjectID' name='objectID' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' name='address' type='^{CMIOObjectPropertyAddress=III}'/>
-<arg declared_type='UInt32' name='qualifierDataSize' type='L' type64='I'/>
-<arg const='true' declared_type='void*' name='qualifierData' type='^v'/>
-<arg declared_type='UInt32' name='dataSize' type='L' type64='I'/>
-<arg declared_type='UInt32*' name='dataUsed' type='^I'/>
-<arg declared_type='void*' name='data' type='^v'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMIOObjectID' name='objectID' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' name='address' type64='^{CMIOObjectPropertyAddress=III}'/>
+<arg declared_type64='UInt32' name='qualifierDataSize' type64='I'/>
+<arg const='true' declared_type64='void*' name='qualifierData' type64='^v'/>
+<arg declared_type64='UInt32' name='dataSize' type64='I'/>
+<arg declared_type64='UInt32*' name='dataUsed' type64='^I'/>
+<arg declared_type64='void*' name='data' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOObjectGetPropertyDataSize'>
-<arg declared_type='CMIOObjectID' name='objectID' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' name='address' type='^{CMIOObjectPropertyAddress=III}'/>
-<arg declared_type='UInt32' name='qualifierDataSize' type='L' type64='I'/>
-<arg const='true' declared_type='void*' name='qualifierData' type='^v'/>
-<arg declared_type='UInt32*' name='dataSize' type='^I'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMIOObjectID' name='objectID' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' name='address' type64='^{CMIOObjectPropertyAddress=III}'/>
+<arg declared_type64='UInt32' name='qualifierDataSize' type64='I'/>
+<arg const='true' declared_type64='void*' name='qualifierData' type64='^v'/>
+<arg declared_type64='UInt32*' name='dataSize' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOObjectHasProperty'>
-<arg declared_type='CMIOObjectID' name='objectID' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' name='address' type='^{CMIOObjectPropertyAddress=III}'/>
-<retval declared_type='Boolean' type='B'/>
+<arg declared_type64='CMIOObjectID' name='objectID' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' name='address' type64='^{CMIOObjectPropertyAddress=III}'/>
+<retval declared_type64='Boolean' type64='B'/>
 </function>
 <function name='CMIOObjectIsPropertySettable'>
-<arg declared_type='CMIOObjectID' name='objectID' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' name='address' type='^{CMIOObjectPropertyAddress=III}'/>
-<arg declared_type='Boolean*' name='isSettable' type='^B'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMIOObjectID' name='objectID' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' name='address' type64='^{CMIOObjectPropertyAddress=III}'/>
+<arg declared_type64='Boolean*' name='isSettable' type64='^B'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOObjectPropertiesChanged'>
-<arg declared_type='CMIOHardwarePlugInRef' name='owningPlugIn' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIOObjectID' name='objectID' type='L' type64='I'/>
-<arg declared_type='UInt32' name='numberAddresses' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' name='addresses' type='^{CMIOObjectPropertyAddress=III}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMIOHardwarePlugInRef' name='owningPlugIn' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIOObjectID' name='objectID' type64='I'/>
+<arg declared_type64='UInt32' name='numberAddresses' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' name='addresses' type64='^{CMIOObjectPropertyAddress=III}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOObjectRemovePropertyListener'>
-<arg declared_type='CMIOObjectID' name='objectID' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' name='address' type='^{CMIOObjectPropertyAddress=III}'/>
-<arg declared_type='CMIOObjectPropertyListenerProc' function_pointer='true' name='listener' type='^?'>
-<arg declared_type='CMIOObjectID' type='L' type64='I'/>
-<arg declared_type='UInt32' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' type='^{CMIOObjectPropertyAddress=III}'/>
-<arg declared_type='void*' type='^v'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMIOObjectID' name='objectID' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' name='address' type64='^{CMIOObjectPropertyAddress=III}'/>
+<arg declared_type64='CMIOObjectPropertyListenerProc' function_pointer='true' name='listener' type64='^?'>
+<arg declared_type64='CMIOObjectID' type64='I'/>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' type64='^{CMIOObjectPropertyAddress=III}'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </arg>
-<arg declared_type='void*' name='clientData' type='^v'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='void*' name='clientData' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOObjectRemovePropertyListenerBlock'>
-<arg declared_type='CMIOObjectID' name='objectID' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' name='address' type='^{CMIOObjectPropertyAddress=III}'/>
-<arg declared_type='dispatch_queue_t' name='dispatchQueue' type='@'/>
-<arg declared_type='CMIOObjectPropertyListenerBlock' function_pointer='true' name='listener' type='@?'>
-<arg declared_type='UInt32' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' type='^{CMIOObjectPropertyAddress=III}'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='CMIOObjectID' name='objectID' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' name='address' type64='^{CMIOObjectPropertyAddress=III}'/>
+<arg declared_type64='dispatch_queue_t' name='dispatchQueue' type64='@'/>
+<arg declared_type64='CMIOObjectPropertyListenerBlock' function_pointer='true' name='listener' type64='@?'>
+<arg declared_type64='UInt32' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' type64='^{CMIOObjectPropertyAddress=III}'/>
+<retval declared_type64='void' type64='v'/>
 </arg>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOObjectSetPropertyData'>
-<arg declared_type='CMIOObjectID' name='objectID' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectPropertyAddress*' name='address' type='^{CMIOObjectPropertyAddress=III}'/>
-<arg declared_type='UInt32' name='qualifierDataSize' type='L' type64='I'/>
-<arg const='true' declared_type='void*' name='qualifierData' type='^v'/>
-<arg declared_type='UInt32' name='dataSize' type='L' type64='I'/>
-<arg const='true' declared_type='void*' name='data' type='^v'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMIOObjectID' name='objectID' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectPropertyAddress*' name='address' type64='^{CMIOObjectPropertyAddress=III}'/>
+<arg declared_type64='UInt32' name='qualifierDataSize' type64='I'/>
+<arg const='true' declared_type64='void*' name='qualifierData' type64='^v'/>
+<arg declared_type64='UInt32' name='dataSize' type64='I'/>
+<arg const='true' declared_type64='void*' name='data' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOObjectShow'>
-<arg declared_type='CMIOObjectID' name='objectID' type='L' type64='I'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='CMIOObjectID' name='objectID' type64='I'/>
+<retval declared_type64='void' type64='v'/>
 </function>
 <function name='CMIOObjectsPublishedAndDied'>
-<arg declared_type='CMIOHardwarePlugInRef' name='owningPlugIn' type='^^{CMIOHardwarePlugInInterface}'/>
-<arg declared_type='CMIOObjectID' name='owningObjectID' type='L' type64='I'/>
-<arg declared_type='UInt32' name='numberPublishedCMIOObjects' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectID*' name='publishedCMIOObjects' type='^I'/>
-<arg declared_type='UInt32' name='numberDeadCMIOObjects' type='L' type64='I'/>
-<arg const='true' declared_type='CMIOObjectID*' name='deadCMIOObjects' type='^I'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMIOHardwarePlugInRef' name='owningPlugIn' type64='^^{CMIOHardwarePlugInInterface}'/>
+<arg declared_type64='CMIOObjectID' name='owningObjectID' type64='I'/>
+<arg declared_type64='UInt32' name='numberPublishedCMIOObjects' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectID*' name='publishedCMIOObjects' type64='^I'/>
+<arg declared_type64='UInt32' name='numberDeadCMIOObjects' type64='I'/>
+<arg const='true' declared_type64='CMIOObjectID*' name='deadCMIOObjects' type64='^I'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOSampleBufferCopyNonRequiredAttachments'>
-<arg declared_type='CMSampleBufferRef' name='sourceSBuf' type='^{opaqueCMSampleBuffer=}'/>
-<arg declared_type='CMSampleBufferRef' name='destSBuf' type='^{opaqueCMSampleBuffer=}'/>
-<arg declared_type='CMAttachmentMode' name='attachmentMode' type='I'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMSampleBufferRef' name='sourceSBuf' type64='^{opaqueCMSampleBuffer=}'/>
+<arg declared_type64='CMSampleBufferRef' name='destSBuf' type64='^{opaqueCMSampleBuffer=}'/>
+<arg declared_type64='CMAttachmentMode' name='attachmentMode' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOSampleBufferCopySampleAttachments'>
-<arg declared_type='CMSampleBufferRef' name='sourceSBuf' type='^{opaqueCMSampleBuffer=}'/>
-<arg declared_type='CMSampleBufferRef' name='destSBuf' type='^{opaqueCMSampleBuffer=}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMSampleBufferRef' name='sourceSBuf' type64='^{opaqueCMSampleBuffer=}'/>
+<arg declared_type64='CMSampleBufferRef' name='destSBuf' type64='^{opaqueCMSampleBuffer=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOSampleBufferCreate'>
-<arg declared_type='CFAllocatorRef' name='allocator' type='^{__CFAllocator=}'/>
-<arg declared_type='CMBlockBufferRef' name='dataBuffer' type='^{OpaqueCMBlockBuffer=}'/>
-<arg declared_type='CMFormatDescriptionRef' name='formatDescription' type='^{opaqueCMFormatDescription=}'/>
-<arg declared_type='UInt32' name='numSamples' type='L' type64='I'/>
-<arg declared_type='UInt32' name='numSampleTimingEntries' type='L' type64='I'/>
-<arg const='true' declared_type='CMSampleTimingInfo*' name='sampleTimingArray' type='^{_CMSampleTimingInfo={?=qiIq}{?=qiIq}{?=qiIq}}'/>
-<arg declared_type='UInt32' name='numSampleSizeEntries' type='L' type64='I'/>
-<arg const='true' declared_type='size_t*' name='sampleSizeArray' type='^I' type64='^Q'/>
-<arg declared_type='UInt64' name='sequenceNumber' type='Q'/>
-<arg declared_type='UInt32' name='discontinuityFlags' type='L' type64='I'/>
-<arg declared_type='CMSampleBufferRef*' name='sBufOut' type='^^{opaqueCMSampleBuffer}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CFAllocatorRef' name='allocator' type64='^{__CFAllocator=}'/>
+<arg declared_type64='CMBlockBufferRef' name='dataBuffer' type64='^{OpaqueCMBlockBuffer=}'/>
+<arg declared_type64='CMFormatDescriptionRef' name='formatDescription' type64='^{opaqueCMFormatDescription=}'/>
+<arg declared_type64='UInt32' name='numSamples' type64='I'/>
+<arg declared_type64='UInt32' name='numSampleTimingEntries' type64='I'/>
+<arg const='true' declared_type64='CMSampleTimingInfo*' name='sampleTimingArray' type64='^{_CMSampleTimingInfo={?=qiIq}{?=qiIq}{?=qiIq}}'/>
+<arg declared_type64='UInt32' name='numSampleSizeEntries' type64='I'/>
+<arg const='true' declared_type64='size_t*' name='sampleSizeArray' type64='^Q'/>
+<arg declared_type64='UInt64' name='sequenceNumber' type64='Q'/>
+<arg declared_type64='UInt32' name='discontinuityFlags' type64='I'/>
+<arg declared_type64='CMSampleBufferRef*' name='sBufOut' type64='^^{opaqueCMSampleBuffer}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOSampleBufferCreateForImageBuffer'>
-<arg declared_type='CFAllocatorRef' name='allocator' type='^{__CFAllocator=}'/>
-<arg declared_type='CVImageBufferRef' name='imageBuffer' type='^{__CVBuffer=}'/>
-<arg declared_type='CMVideoFormatDescriptionRef' name='formatDescription' type='^{opaqueCMFormatDescription=}'/>
-<arg const='true' declared_type='CMSampleTimingInfo*' name='sampleTiming' type='^{_CMSampleTimingInfo={?=qiIq}{?=qiIq}{?=qiIq}}'/>
-<arg declared_type='UInt64' name='sequenceNumber' type='Q'/>
-<arg declared_type='UInt32' name='discontinuityFlags' type='L' type64='I'/>
-<arg declared_type='CMSampleBufferRef*' name='sBufOut' type='^^{opaqueCMSampleBuffer}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CFAllocatorRef' name='allocator' type64='^{__CFAllocator=}'/>
+<arg declared_type64='CVImageBufferRef' name='imageBuffer' type64='^{__CVBuffer=}'/>
+<arg declared_type64='CMVideoFormatDescriptionRef' name='formatDescription' type64='^{opaqueCMFormatDescription=}'/>
+<arg const='true' declared_type64='CMSampleTimingInfo*' name='sampleTiming' type64='^{_CMSampleTimingInfo={?=qiIq}{?=qiIq}{?=qiIq}}'/>
+<arg declared_type64='UInt64' name='sequenceNumber' type64='Q'/>
+<arg declared_type64='UInt32' name='discontinuityFlags' type64='I'/>
+<arg declared_type64='CMSampleBufferRef*' name='sBufOut' type64='^^{opaqueCMSampleBuffer}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOSampleBufferCreateNoDataMarker'>
-<arg declared_type='CFAllocatorRef' name='allocator' type='^{__CFAllocator=}'/>
-<arg declared_type='UInt32' name='noDataEvent' type='L' type64='I'/>
-<arg declared_type='CMFormatDescriptionRef' name='formatDescription' type='^{opaqueCMFormatDescription=}'/>
-<arg declared_type='UInt64' name='sequenceNumber' type='Q'/>
-<arg declared_type='UInt32' name='discontinuityFlags' type='L' type64='I'/>
-<arg declared_type='CMSampleBufferRef*' name='sBufOut' type='^^{opaqueCMSampleBuffer}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CFAllocatorRef' name='allocator' type64='^{__CFAllocator=}'/>
+<arg declared_type64='UInt32' name='noDataEvent' type64='I'/>
+<arg declared_type64='CMFormatDescriptionRef' name='formatDescription' type64='^{opaqueCMFormatDescription=}'/>
+<arg declared_type64='UInt64' name='sequenceNumber' type64='Q'/>
+<arg declared_type64='UInt32' name='discontinuityFlags' type64='I'/>
+<arg declared_type64='CMSampleBufferRef*' name='sBufOut' type64='^^{opaqueCMSampleBuffer}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOSampleBufferGetDiscontinuityFlags'>
-<arg declared_type='CMSampleBufferRef' name='sbuf' type='^{opaqueCMSampleBuffer=}'/>
-<retval declared_type='UInt32' type='L' type64='I'/>
+<arg declared_type64='CMSampleBufferRef' name='sbuf' type64='^{opaqueCMSampleBuffer=}'/>
+<retval declared_type64='UInt32' type64='I'/>
 </function>
 <function name='CMIOSampleBufferGetSequenceNumber'>
-<arg declared_type='CMSampleBufferRef' name='sbuf' type='^{opaqueCMSampleBuffer=}'/>
-<retval declared_type='UInt64' type='Q'/>
+<arg declared_type64='CMSampleBufferRef' name='sbuf' type64='^{opaqueCMSampleBuffer=}'/>
+<retval declared_type64='UInt64' type64='Q'/>
 </function>
 <function name='CMIOSampleBufferSetDiscontinuityFlags'>
-<arg declared_type='CFAllocatorRef' name='allocator' type='^{__CFAllocator=}'/>
-<arg declared_type='CMSampleBufferRef' name='sbuf' type='^{opaqueCMSampleBuffer=}'/>
-<arg declared_type='UInt32' name='discontinuityFlags' type='L' type64='I'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='CFAllocatorRef' name='allocator' type64='^{__CFAllocator=}'/>
+<arg declared_type64='CMSampleBufferRef' name='sbuf' type64='^{opaqueCMSampleBuffer=}'/>
+<arg declared_type64='UInt32' name='discontinuityFlags' type64='I'/>
+<retval declared_type64='void' type64='v'/>
 </function>
 <function name='CMIOSampleBufferSetSequenceNumber'>
-<arg declared_type='CFAllocatorRef' name='allocator' type='^{__CFAllocator=}'/>
-<arg declared_type='CMSampleBufferRef' name='sbuf' type='^{opaqueCMSampleBuffer=}'/>
-<arg declared_type='UInt64' name='sequenceNumber' type='Q'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='CFAllocatorRef' name='allocator' type64='^{__CFAllocator=}'/>
+<arg declared_type64='CMSampleBufferRef' name='sbuf' type64='^{opaqueCMSampleBuffer=}'/>
+<arg declared_type64='UInt64' name='sequenceNumber' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
 </function>
 <function name='CMIOStreamClockConvertHostTimeToDeviceTime'>
-<arg declared_type='UInt64' name='hostTime' type='Q'/>
-<arg declared_type='CFTypeRef' name='clock' type='@'/>
-<retval declared_type='CMTime' type='{_CMTime=qiIq}'/>
+<arg declared_type64='UInt64' name='hostTime' type64='Q'/>
+<arg declared_type64='CFTypeRef' name='clock' type64='@'/>
+<retval declared_type64='CMTime' type64='{_CMTime=qiIq}'/>
 </function>
 <function name='CMIOStreamClockCreate'>
-<arg declared_type='CFAllocatorRef' name='allocator' type='^{__CFAllocator=}'/>
-<arg declared_type='CFStringRef' name='clockName' type='^{__CFString=}'/>
-<arg const='true' declared_type='void*' name='sourceIdentifier' type='^v'/>
-<arg declared_type='CMTime' name='getTimeCallMinimumInterval' type='{_CMTime=qiIq}'/>
-<arg declared_type='UInt32' name='numberOfEventsForRateSmoothing' type='L' type64='I'/>
-<arg declared_type='UInt32' name='numberOfAveragesForRateSmoothing' type='L' type64='I'/>
-<arg declared_type='CFTypeRef*' name='clock' type='^^v'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CFAllocatorRef' name='allocator' type64='^{__CFAllocator=}'/>
+<arg declared_type64='CFStringRef' name='clockName' type64='^{__CFString=}'/>
+<arg const='true' declared_type64='void*' name='sourceIdentifier' type64='^v'/>
+<arg declared_type64='CMTime' name='getTimeCallMinimumInterval' type64='{_CMTime=qiIq}'/>
+<arg declared_type64='UInt32' name='numberOfEventsForRateSmoothing' type64='I'/>
+<arg declared_type64='UInt32' name='numberOfAveragesForRateSmoothing' type64='I'/>
+<arg declared_type64='CFTypeRef*' name='clock' type64='^^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOStreamClockInvalidate'>
-<arg declared_type='CFTypeRef' name='clock' type='@'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CFTypeRef' name='clock' type64='@'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOStreamClockPostTimingEvent'>
-<arg declared_type='CMTime' name='eventTime' type='{_CMTime=qiIq}'/>
-<arg declared_type='UInt64' name='hostTime' type='Q'/>
-<arg declared_type='Boolean' name='resynchronize' type='B'/>
-<arg declared_type='CFTypeRef' name='clock' type='@'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMTime' name='eventTime' type64='{_CMTime=qiIq}'/>
+<arg declared_type64='UInt64' name='hostTime' type64='Q'/>
+<arg declared_type64='Boolean' name='resynchronize' type64='B'/>
+<arg declared_type64='CFTypeRef' name='clock' type64='@'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOStreamCopyBufferQueue'>
-<arg declared_type='CMIOStreamID' name='streamID' type='L' type64='I'/>
-<arg declared_type='CMIODeviceStreamQueueAlteredProc' function_pointer='true' name='queueAlteredProc' type='^?'>
-<arg declared_type='CMIOStreamID' type='L' type64='I'/>
-<arg declared_type='void*' type='^v'/>
-<arg declared_type='void*' type='^v'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='CMIOStreamID' name='streamID' type64='I'/>
+<arg declared_type64='CMIODeviceStreamQueueAlteredProc' function_pointer='true' name='queueAlteredProc' type64='^?'>
+<arg declared_type64='CMIOStreamID' type64='I'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
 </arg>
-<arg declared_type='void*' name='queueAlteredRefCon' type='^v'/>
-<arg declared_type='CMSimpleQueueRef*' name='queue' type='^^{opaqueCMSimpleQueue}'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='void*' name='queueAlteredRefCon' type64='^v'/>
+<arg declared_type64='CMSimpleQueueRef*' name='queue' type64='^^{opaqueCMSimpleQueue}'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOStreamDeckCueTo'>
-<arg declared_type='CMIOStreamID' name='streamID' type='L' type64='I'/>
-<arg declared_type='UInt64' name='frameNumber' type='Q'/>
-<arg declared_type='Boolean' name='playOnCue' type='B'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMIOStreamID' name='streamID' type64='I'/>
+<arg declared_type64='UInt64' name='frameNumber' type64='Q'/>
+<arg declared_type64='Boolean' name='playOnCue' type64='B'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOStreamDeckJog'>
-<arg declared_type='CMIOStreamID' name='streamID' type='L' type64='I'/>
-<arg declared_type='SInt32' name='speed' type='l' type64='i'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMIOStreamID' name='streamID' type64='I'/>
+<arg declared_type64='SInt32' name='speed' type64='i'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOStreamDeckPlay'>
-<arg declared_type='CMIOStreamID' name='streamID' type='L' type64='I'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMIOStreamID' name='streamID' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMIOStreamDeckStop'>
-<arg declared_type='CMIOStreamID' name='streamID' type='L' type64='I'/>
-<retval declared_type='OSStatus' type='l' type64='i'/>
+<arg declared_type64='CMIOStreamID' name='streamID' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 </signatures>

@@ -1,5 +1,27 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/ModelIO.framework'/>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/MetalKit.framework'/>
+<depends_on path='/System/Library/Frameworks/GLKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Metal.framework'/>
+<depends_on path='/System/Library/Frameworks/MetalPerformanceShaders.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/IOSurface.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenGL.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreImage.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
 <struct name='SCNMatrix4' type64='{CATransform3D=&quot;m11&quot;d&quot;m12&quot;d&quot;m13&quot;d&quot;m14&quot;d&quot;m21&quot;d&quot;m22&quot;d&quot;m23&quot;d&quot;m24&quot;d&quot;m31&quot;d&quot;m32&quot;d&quot;m33&quot;d&quot;m34&quot;d&quot;m41&quot;d&quot;m42&quot;d&quot;m43&quot;d&quot;m44&quot;d}'>
 <field declared_type64='CGFloat' name='m11' type64='d'/>
 <field declared_type64='CGFloat' name='m12' type64='d'/>
@@ -4456,6 +4478,9 @@
 <method selector='angularDamping'>
 <retval declared_type64='CGFloat' type64='d'/>
 </method>
+<method selector='angularRestingThreshold'>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
 <method selector='angularVelocity'>
 <retval declared_type64='SCNVector4' type64='{SCNVector4=dddd}'/>
 </method>
@@ -4486,6 +4511,9 @@
 <method selector='categoryBitMask'>
 <retval declared_type64='NSUInteger' type64='Q'/>
 </method>
+<method selector='centerOfMassOffset'>
+<retval declared_type64='SCNVector3' type64='{SCNVector3=ddd}'/>
+</method>
 <method selector='charge'>
 <retval declared_type64='CGFloat' type64='d'/>
 </method>
@@ -4497,6 +4525,9 @@
 </method>
 <method selector='contactTestBitMask'>
 <retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='continuousCollisionDetectionThreshold'>
+<retval declared_type64='CGFloat' type64='d'/>
 </method>
 <method selector='damping'>
 <retval declared_type64='CGFloat' type64='d'/>
@@ -4515,6 +4546,9 @@
 </method>
 <method class_method='true' selector='kinematicBody'>
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='linearRestingThreshold'>
+<retval declared_type64='CGFloat' type64='d'/>
 </method>
 <method selector='mass'>
 <retval declared_type64='CGFloat' type64='d'/>
@@ -4546,6 +4580,10 @@
 <arg declared_type64='CGFloat' index='0' name='angularDamping' type64='d'/>
 <retval declared_type64='void' type64='v'/>
 </method>
+<method selector='setAngularRestingThreshold:'>
+<arg declared_type64='CGFloat' index='0' name='angularRestingThreshold' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
 <method selector='setAngularVelocity:'>
 <arg declared_type64='SCNVector4' index='0' name='angularVelocity' type64='{SCNVector4=dddd}'/>
 <retval declared_type64='void' type64='v'/>
@@ -4556,6 +4594,10 @@
 </method>
 <method selector='setCategoryBitMask:'>
 <arg declared_type64='NSUInteger' index='0' name='categoryBitMask' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCenterOfMassOffset:'>
+<arg declared_type64='SCNVector3' index='0' name='centerOfMassOffset' type64='{SCNVector3=ddd}'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setCharge:'>
@@ -4570,12 +4612,20 @@
 <arg declared_type64='NSUInteger' index='0' name='contactTestBitMask' type64='Q'/>
 <retval declared_type64='void' type64='v'/>
 </method>
+<method selector='setContinuousCollisionDetectionThreshold:'>
+<arg declared_type64='CGFloat' index='0' name='continuousCollisionDetectionThreshold' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
 <method selector='setDamping:'>
 <arg declared_type64='CGFloat' index='0' name='damping' type64='d'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setFriction:'>
 <arg declared_type64='CGFloat' index='0' name='friction' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLinearRestingThreshold:'>
+<arg declared_type64='CGFloat' index='0' name='linearRestingThreshold' type64='d'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setMass:'>
@@ -4588,6 +4638,10 @@
 </method>
 <method selector='setPhysicsShape:'>
 <arg declared_type64='SCNPhysicsShape * _Nullable' index='0' name='physicsShape' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setResting:'>
+<arg declared_type64='BOOL' index='0' name='resting' type64='B'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setRestitution:'>

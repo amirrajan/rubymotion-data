@@ -1,5 +1,16 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/IOSurface.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreAudio.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
 <struct name='CMBlockBufferCustomBlockSource' type64='{_CMBlockBufferCustomBlockSource=&quot;version&quot;I&quot;AllocateBlock&quot;^?&quot;FreeBlock&quot;^?&quot;refCon&quot;^v}'>
 <field declared_type64='uint32_t' name='version' type64='I'/>
 <field declared_type64='void * _Nullable (* _Nullable)(void * _Nullable, size_t)' function_pointer='true' name='AllocateBlock' type64='^?'>
@@ -51,6 +62,35 @@
 <retval declared_type64='size_t' type64='Q'/>
 </field>
 </struct>
+<struct name='CMBufferHandlers' type64='{_CMBufferHandlers=&quot;version&quot;Q&quot;getDecodeTimeStamp&quot;@?&quot;getPresentationTimeStamp&quot;@?&quot;getDuration&quot;@?&quot;isDataReady&quot;@?&quot;compare&quot;@?&quot;dataBecameReadyNotification&quot;^{__CFString}&quot;getSize&quot;@?}'>
+<field declared_type64='uintptr_t' name='version' type64='Q'/>
+<field declared_type64='CMBufferGetTimeHandler _Nullable' function_pointer='true' name='getDecodeTimeStamp' type64='@?'>
+<arg declared_type64='CMBufferRef _Nonnull' type64='@'/>
+<retval declared_type64='CMTime' type64='{_CMTime=qiIq}'/>
+</field>
+<field declared_type64='CMBufferGetTimeHandler _Nullable' function_pointer='true' name='getPresentationTimeStamp' type64='@?'>
+<arg declared_type64='CMBufferRef _Nonnull' type64='@'/>
+<retval declared_type64='CMTime' type64='{_CMTime=qiIq}'/>
+</field>
+<field declared_type64='CMBufferGetTimeHandler _Nonnull' function_pointer='true' name='getDuration' type64='@?'>
+<arg declared_type64='CMBufferRef _Nonnull' type64='@'/>
+<retval declared_type64='CMTime' type64='{_CMTime=qiIq}'/>
+</field>
+<field declared_type64='CMBufferGetBooleanHandler _Nullable' function_pointer='true' name='isDataReady' type64='@?'>
+<arg declared_type64='CMBufferRef _Nonnull' type64='@'/>
+<retval declared_type64='Boolean' type64='B'/>
+</field>
+<field declared_type64='CMBufferCompareHandler _Nullable' function_pointer='true' name='compare' type64='@?'>
+<arg declared_type64='CMBufferRef _Nonnull' type64='@'/>
+<arg declared_type64='CMBufferRef _Nonnull' type64='@'/>
+<retval declared_type64='CFComparisonResult' type64='q'/>
+</field>
+<field declared_type64='CFStringRef _Nullable' name='dataBecameReadyNotification' type64='^{__CFString=}'/>
+<field declared_type64='CMBufferGetSizeHandler _Nullable' function_pointer='true' name='getSize' type64='@?'>
+<arg declared_type64='CMBufferRef _Nonnull' type64='@'/>
+<retval declared_type64='size_t' type64='Q'/>
+</field>
+</struct>
 <struct name='CMSampleTimingInfo' type64='{_CMSampleTimingInfo=&quot;duration&quot;{_CMTime=&quot;value&quot;q&quot;timescale&quot;i&quot;flags&quot;I&quot;epoch&quot;q}&quot;presentationTimeStamp&quot;{_CMTime=&quot;value&quot;q&quot;timescale&quot;i&quot;flags&quot;I&quot;epoch&quot;q}&quot;decodeTimeStamp&quot;{_CMTime=&quot;value&quot;q&quot;timescale&quot;i&quot;flags&quot;I&quot;epoch&quot;q}}'>
 <field declared_type64='CMTime' name='duration' type64='{_CMTime=&quot;value&quot;q&quot;timescale&quot;i&quot;flags&quot;I&quot;epoch&quot;q}'/>
 <field declared_type64='CMTime' name='presentationTimeStamp' type64='{_CMTime=&quot;value&quot;q&quot;timescale&quot;i&quot;flags&quot;I&quot;epoch&quot;q}'/>
@@ -99,6 +139,7 @@
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCMFormatDescriptionColorPrimaries_SMPTE_C' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCMFormatDescriptionConformsToMPEG2VideoProfile' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCMFormatDescriptionExtensionKey_MetadataKeyTable' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCMFormatDescriptionExtension_AlternativeTransferCharacteristics' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCMFormatDescriptionExtension_BytesPerRow' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCMFormatDescriptionExtension_ChromaLocationBottomField' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCMFormatDescriptionExtension_ChromaLocationTopField' type64='^{__CFString=}'/>
@@ -143,6 +184,7 @@
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCMFormatDescriptionTransferFunction_ITU_R_2020' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCMFormatDescriptionTransferFunction_ITU_R_2100_HLG' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCMFormatDescriptionTransferFunction_ITU_R_709_2' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCMFormatDescriptionTransferFunction_Linear' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCMFormatDescriptionTransferFunction_SMPTE_240M_1995' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCMFormatDescriptionTransferFunction_SMPTE_ST_2084_PQ' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCMFormatDescriptionTransferFunction_SMPTE_ST_428_1' type64='^{__CFString=}'/>
@@ -366,7 +408,10 @@
 <enum name='COREMEDIA_DECLARE_RETURNS_NOT_RETAINED_ON_PARAMETERS' value64='1'/>
 <enum name='COREMEDIA_DECLARE_RETURNS_RETAINED' value64='1'/>
 <enum name='COREMEDIA_DECLARE_RETURNS_RETAINED_ON_PARAMETERS' value64='1'/>
+<enum name='COREMEDIA_FALSE' value64='0'/>
+<enum name='COREMEDIA_TRUE' value64='1'/>
 <enum name='COREMEDIA_USE_ALIGNED_CMBASECLASS_VERSION' value64='1'/>
+<enum name='COREMEDIA_USE_DERIVED_ENUMS_FOR_CONSTANTS' value64='1'/>
 <enum name='kCMAttachmentMode_ShouldNotPropagate' value64='0'/>
 <enum name='kCMAttachmentMode_ShouldPropagate' value64='1'/>
 <enum name='kCMAudioCodecType_AAC_AudibleProtected' value64='1633771875'/>
@@ -483,6 +528,7 @@
 <enum name='kCMMetadataDataTypeRegistryError_RequiredParameterMissing' value64='-16311'/>
 <enum name='kCMMetadataDataTypeRegistryError_RequiresConformingBaseType' value64='-16314'/>
 <enum name='kCMMetadataFormatType_Boxed' value64='1835360888'/>
+<enum name='kCMMetadataFormatType_EMSG' value64='1701671783'/>
 <enum name='kCMMetadataFormatType_ICY' value64='1768126752'/>
 <enum name='kCMMetadataFormatType_ID3' value64='1768174368'/>
 <enum name='kCMMetadataIdentifierError_AllocationFailed' value64='-16300'/>
@@ -597,6 +643,8 @@
 <enum name='kCMVideoCodecType_AppleProRes422Proxy' value64='1634755439'/>
 <enum name='kCMVideoCodecType_AppleProRes4444' value64='1634743400'/>
 <enum name='kCMVideoCodecType_AppleProRes4444XQ' value64='1634743416'/>
+<enum name='kCMVideoCodecType_AppleProResRAW' value64='1634759278'/>
+<enum name='kCMVideoCodecType_AppleProResRAWHQ' value64='1634759272'/>
 <enum name='kCMVideoCodecType_Cinepak' value64='1668704612'/>
 <enum name='kCMVideoCodecType_DVCNTSC' value64='1685480224'/>
 <enum name='kCMVideoCodecType_DVCPAL' value64='1685480304'/>
@@ -749,6 +797,21 @@
 <arg declared_type64='CMSampleBufferRef _Nullable * _Nonnull' name='sampleBufferOut' type64='^^{opaqueCMSampleBuffer}'/>
 <retval declared_type64='OSStatus' type64='i'/>
 </function>
+<function name='CMAudioSampleBufferCreateWithPacketDescriptionsAndMakeDataReadyHandler'>
+<arg declared_type64='CFAllocatorRef _Nullable' name='allocator' type64='^{__CFAllocator=}'/>
+<arg declared_type64='CMBlockBufferRef _Nullable' name='dataBuffer' type64='^{OpaqueCMBlockBuffer=}'/>
+<arg declared_type64='Boolean' name='dataReady' type64='B'/>
+<arg declared_type64='CMFormatDescriptionRef _Nonnull' name='formatDescription' type64='^{opaqueCMFormatDescription=}'/>
+<arg declared_type64='CMItemCount' name='numSamples' type64='q'/>
+<arg declared_type64='CMTime' name='presentationTimeStamp' type64='{_CMTime=qiIq}'/>
+<arg const='true' declared_type64='AudioStreamPacketDescription * _Nullable' name='packetDescriptions' type64='^{AudioStreamPacketDescription=qII}'/>
+<arg declared_type64='CMSampleBufferRef _Nullable * _Nonnull' name='sampleBufferOut' type64='^^{opaqueCMSampleBuffer}'/>
+<arg declared_type64='CMSampleBufferMakeDataReadyHandler _Nullable' function_pointer='true' name='makeDataReadyHandler' type64='@?'>
+<arg declared_type64='CMSampleBufferRef _Nonnull' type64='^{opaqueCMSampleBuffer=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
 <function name='CMBlockBufferAccessDataBytes'>
 <arg declared_type64='CMBlockBufferRef _Nonnull' name='theBuffer' type64='^{OpaqueCMBlockBuffer=}'/>
 <arg declared_type64='size_t' name='offset' type64='Q'/>
@@ -886,6 +949,13 @@
 <arg declared_type64='CMBufferQueueRef _Nullable * _Nonnull' name='queueOut' type64='^^{opaqueCMBufferQueue}'/>
 <retval declared_type64='OSStatus' type64='i'/>
 </function>
+<function name='CMBufferQueueCreateWithHandlers'>
+<arg declared_type64='CFAllocatorRef _Nullable' name='allocator' type64='^{__CFAllocator=}'/>
+<arg declared_type64='CMItemCount' name='capacity' type64='q'/>
+<arg const='true' declared_type64='CMBufferHandlers * _Nonnull' name='handlers' type64='^{_CMBufferHandlers=Q@?@?@?@?@?^{__CFString}@?}'/>
+<arg declared_type64='CMBufferQueueRef _Nullable * _Nonnull' name='queueOut' type64='^^{opaqueCMBufferQueue}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
 <function name='CMBufferQueueDequeueAndRetain'>
 <arg declared_type64='CMBufferQueueRef _Nonnull' name='queue' type64='^{opaqueCMBufferQueue=}'/>
 <retval declared_type64='CMBufferRef _Nullable' type64='@'/>
@@ -961,6 +1031,28 @@
 <arg declared_type64='CMBufferQueueTriggerToken _Nullable * _Nullable' name='triggerTokenOut' type64='^^{opaqueCMBufferQueueTriggerToken}'/>
 <retval declared_type64='OSStatus' type64='i'/>
 </function>
+<function name='CMBufferQueueInstallTriggerHandler'>
+<arg declared_type64='CMBufferQueueRef _Nonnull' name='queue' type64='^{opaqueCMBufferQueue=}'/>
+<arg declared_type64='CMBufferQueueTriggerCondition' name='condition' type64='i'/>
+<arg declared_type64='CMTime' name='time' type64='{_CMTime=qiIq}'/>
+<arg declared_type64='CMBufferQueueTriggerToken _Nullable * _Nullable' name='triggerTokenOut' type64='^^{opaqueCMBufferQueueTriggerToken}'/>
+<arg declared_type64='CMBufferQueueTriggerHandler _Nullable' function_pointer='true' name='handler' type64='@?'>
+<arg declared_type64='CMBufferQueueTriggerToken _Nonnull' type64='^{opaqueCMBufferQueueTriggerToken=}'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='CMBufferQueueInstallTriggerHandlerWithIntegerThreshold'>
+<arg declared_type64='CMBufferQueueRef _Nonnull' name='queue' type64='^{opaqueCMBufferQueue=}'/>
+<arg declared_type64='CMBufferQueueTriggerCondition' name='condition' type64='i'/>
+<arg declared_type64='CMItemCount' name='threshold' type64='q'/>
+<arg declared_type64='CMBufferQueueTriggerToken _Nullable * _Nullable' name='triggerTokenOut' type64='^^{opaqueCMBufferQueueTriggerToken}'/>
+<arg declared_type64='CMBufferQueueTriggerHandler _Nullable' function_pointer='true' name='handler' type64='@?'>
+<arg declared_type64='CMBufferQueueTriggerToken _Nonnull' type64='^{opaqueCMBufferQueueTriggerToken=}'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
 <function name='CMBufferQueueInstallTriggerWithIntegerThreshold'>
 <arg declared_type64='CMBufferQueueRef _Nonnull' name='queue' type64='^{opaqueCMBufferQueue=}'/>
 <arg declared_type64='CMBufferQueueTriggerCallback _Nullable' function_pointer='true' name='callback' type64='^?'>
@@ -1014,6 +1106,15 @@
 <retval declared_type64='OSStatus' type64='i'/>
 </arg>
 <arg declared_type64='void * _Nullable' name='refcon' type64='^v'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='CMBufferQueueSetValidationHandler'>
+<arg declared_type64='CMBufferQueueRef _Nonnull' name='queue' type64='^{opaqueCMBufferQueue=}'/>
+<arg declared_type64='CMBufferValidationHandler _Nonnull' function_pointer='true' name='handler' type64='@?'>
+<arg declared_type64='CMBufferQueueRef _Nonnull' type64='^{opaqueCMBufferQueue=}'/>
+<arg declared_type64='CMBufferRef _Nonnull' type64='@'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
 <retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMBufferQueueTestTrigger'>
@@ -1373,6 +1474,19 @@
 <arg declared_type64='CMSampleBufferRef _Nullable * _Nonnull' name='sampleBufferOut' type64='^^{opaqueCMSampleBuffer}'/>
 <retval declared_type64='OSStatus' type64='i'/>
 </function>
+<function name='CMSampleBufferCreateForImageBufferWithMakeDataReadyHandler'>
+<arg declared_type64='CFAllocatorRef _Nullable' name='allocator' type64='^{__CFAllocator=}'/>
+<arg declared_type64='CVImageBufferRef _Nonnull' name='imageBuffer' type64='^{__CVBuffer=}'/>
+<arg declared_type64='Boolean' name='dataReady' type64='B'/>
+<arg declared_type64='CMVideoFormatDescriptionRef _Nonnull' name='formatDescription' type64='^{opaqueCMFormatDescription=}'/>
+<arg const='true' declared_type64='CMSampleTimingInfo * _Nonnull' name='sampleTiming' type64='^{_CMSampleTimingInfo={?=qiIq}{?=qiIq}{?=qiIq}}'/>
+<arg declared_type64='CMSampleBufferRef _Nullable * _Nonnull' name='sampleBufferOut' type64='^^{opaqueCMSampleBuffer}'/>
+<arg declared_type64='CMSampleBufferMakeDataReadyHandler _Nullable' function_pointer='true' name='makeDataReadyHandler' type64='@?'>
+<arg declared_type64='CMSampleBufferRef _Nonnull' type64='^{opaqueCMSampleBuffer=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
 <function name='CMSampleBufferCreateReady'>
 <arg declared_type64='CFAllocatorRef _Nullable' name='allocator' type64='^{__CFAllocator=}'/>
 <arg declared_type64='CMBlockBufferRef _Nullable' name='dataBuffer' type64='^{OpaqueCMBlockBuffer=}'/>
@@ -1391,6 +1505,23 @@
 <arg declared_type64='CMVideoFormatDescriptionRef _Nonnull' name='formatDescription' type64='^{opaqueCMFormatDescription=}'/>
 <arg const='true' declared_type64='CMSampleTimingInfo * _Nonnull' name='sampleTiming' type64='^{_CMSampleTimingInfo={?=qiIq}{?=qiIq}{?=qiIq}}'/>
 <arg declared_type64='CMSampleBufferRef _Nullable * _Nonnull' name='sampleBufferOut' type64='^^{opaqueCMSampleBuffer}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='CMSampleBufferCreateWithMakeDataReadyHandler'>
+<arg declared_type64='CFAllocatorRef _Nullable' name='allocator' type64='^{__CFAllocator=}'/>
+<arg declared_type64='CMBlockBufferRef _Nullable' name='dataBuffer' type64='^{OpaqueCMBlockBuffer=}'/>
+<arg declared_type64='Boolean' name='dataReady' type64='B'/>
+<arg declared_type64='CMFormatDescriptionRef _Nullable' name='formatDescription' type64='^{opaqueCMFormatDescription=}'/>
+<arg declared_type64='CMItemCount' name='numSamples' type64='q'/>
+<arg declared_type64='CMItemCount' name='numSampleTimingEntries' type64='q'/>
+<arg const='true' declared_type64='CMSampleTimingInfo * _Nullable' name='sampleTimingArray' type64='^{_CMSampleTimingInfo={?=qiIq}{?=qiIq}{?=qiIq}}'/>
+<arg declared_type64='CMItemCount' name='numSampleSizeEntries' type64='q'/>
+<arg const='true' declared_type64='size_t * _Nullable' name='sampleSizeArray' type64='^Q'/>
+<arg declared_type64='CMSampleBufferRef _Nullable * _Nonnull' name='sampleBufferOut' type64='^^{opaqueCMSampleBuffer}'/>
+<arg declared_type64='CMSampleBufferMakeDataReadyHandler _Nullable' function_pointer='true' name='makeDataReadyHandler' type64='@?'>
+<arg declared_type64='CMSampleBufferRef _Nonnull' type64='^{opaqueCMSampleBuffer=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</arg>
 <retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='CMSampleBufferDataIsReady'>
@@ -1417,7 +1548,7 @@
 </function>
 <function name='CMSampleBufferGetAudioStreamPacketDescriptionsPtr'>
 <arg declared_type64='CMSampleBufferRef _Nonnull' name='sbuf' type64='^{opaqueCMSampleBuffer=}'/>
-<arg const='true' declared_type64='AudioStreamPacketDescription * _Nullable * _Nullable' name='packetDescriptionsPtrOut' type64='^^{AudioStreamPacketDescription}'/>
+<arg const='true' declared_type64='AudioStreamPacketDescription * _Nullable * _Nullable' name='packetDescriptionsPointerOut' type64='^^{AudioStreamPacketDescription}'/>
 <arg declared_type64='size_t * _Nullable' name='packetDescriptionsSizeOut' type64='^Q'/>
 <retval declared_type64='OSStatus' type64='i'/>
 </function>

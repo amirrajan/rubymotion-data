@@ -1,5 +1,18 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreAudio.framework'/>
+<depends_on path='/System/Library/Frameworks/DiskArbitration.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CFNetwork.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
 <constant const='true' declared_type64='NSString * _Nonnull' name='ITLibMediaEntityPropertyPersistentID' type64='@'/>
 <constant const='true' declared_type64='NSString * _Nonnull' name='ITLibMediaItemPropertyAddedDate' type64='@'/>
 <constant const='true' declared_type64='NSString * _Nonnull' name='ITLibMediaItemPropertyAlbumArtist' type64='@'/>
@@ -112,6 +125,8 @@
 <enum name='ITLibDistinguishedPlaylistKindVoiceMemos' value64='14'/>
 <enum name='ITLibDistinguishedPlaylistKindiTunesU' value64='26'/>
 <enum name='ITLibExportFeatureNone' value64='0'/>
+<enum name='ITLibInitOptionLazyLoadData' value64='1'/>
+<enum name='ITLibInitOptionNone' value64='0'/>
 <enum name='ITLibMediaItemLocationTypeFile' value64='1'/>
 <enum name='ITLibMediaItemLocationTypeRemote' value64='3'/>
 <enum name='ITLibMediaItemLocationTypeURL' value64='2'/>
@@ -210,7 +225,7 @@
 </class>
 <class name='ITLibMediaEntity'>
 <method selector='enumerateValuesExceptForProperties:usingBlock:'>
-<arg declared_type64='NSSet * _Nonnull' index='0' name='properties' type64='@'/>
+<arg declared_type64='NSSet * _Nullable' index='0' name='properties' type64='@'/>
 <arg declared_type64='void (^ _Nonnull)(NSString * _Nonnull, id _Nonnull, BOOL * _Nonnull)' function_pointer='true' index='1' name='block' type64='@?'>
 <arg declared_type64='NSString * _Nonnull' type64='@'/>
 <arg declared_type64='id _Nonnull' type64='@'/>
@@ -220,7 +235,7 @@
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='enumerateValuesForProperties:usingBlock:'>
-<arg declared_type64='NSSet * _Nonnull' index='0' name='properties' type64='@'/>
+<arg declared_type64='NSSet * _Nullable' index='0' name='properties' type64='@'/>
 <arg declared_type64='void (^ _Nonnull)(NSString * _Nonnull, id _Nonnull, BOOL * _Nonnull)' function_pointer='true' index='1' name='block' type64='@?'>
 <arg declared_type64='NSString * _Nonnull' type64='@'/>
 <arg declared_type64='id _Nonnull' type64='@'/>
@@ -466,9 +481,21 @@
 <arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
 <retval declared_type64='instancetype _Nullable' type64='@'/>
 </method>
+<method selector='initWithAPIVersion:options:error:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='requestedAPIVersion' type64='@'/>
+<arg declared_type64='ITLibInitOptions' index='1' name='options' type64='Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
 <method class_method='true' selector='libraryWithAPIVersion:error:'>
 <arg declared_type64='NSString * _Nonnull' index='0' name='requestedAPIVersion' type64='@'/>
 <arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='libraryWithAPIVersion:options:error:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='requestedAPIVersion' type64='@'/>
+<arg declared_type64='ITLibInitOptions' index='1' name='options' type64='Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
 <retval declared_type64='instancetype _Nullable' type64='@'/>
 </method>
 <method selector='mediaFolderLocation'>
@@ -482,6 +509,9 @@
 </method>
 <method selector='shouldShowContentRating'>
 <retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='unloadData'>
+<retval declared_type64='void' type64='v'/>
 </method>
 </class>
 </signatures>

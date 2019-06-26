@@ -1,5 +1,10 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreLocation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <constant const='true' declared_type64='NSString*' name='INIntentErrorDomain' type64='@'/>
 <constant const='true' declared_type64='INPersonHandleLabel' name='INPersonHandleLabelHome' type64='@'/>
 <constant const='true' declared_type64='INPersonHandleLabel' name='INPersonHandleLabelHomeFax' type64='@'/>
@@ -92,14 +97,17 @@
 <enum name='INIntentErrorImageProxyLoop' value64='6005'/>
 <enum name='INIntentErrorImageProxyTimeout' value64='6007'/>
 <enum name='INIntentErrorImageRetrievalFailed' value64='6004'/>
+<enum name='INIntentErrorImageScalingFailed' value64='6009'/>
 <enum name='INIntentErrorImageServiceFailure' value64='6008'/>
 <enum name='INIntentErrorImageStorageFailed' value64='6002'/>
 <enum name='INIntentErrorIntentSupportedByMultipleExtension' value64='2001'/>
 <enum name='INIntentErrorInteractionOperationNotSupported' value64='1900'/>
 <enum name='INIntentErrorInvalidIntentName' value64='2004'/>
 <enum name='INIntentErrorInvalidUserVocabularyFileLocation' value64='4000'/>
+<enum name='INIntentErrorMissingInformation' value64='3002'/>
 <enum name='INIntentErrorNoAppAvailable' value64='2005'/>
 <enum name='INIntentErrorNoHandlerProvidedForIntent' value64='2003'/>
+<enum name='INIntentErrorPermissionDenied' value64='6010'/>
 <enum name='INIntentErrorRequestTimedOut' value64='3001'/>
 <enum name='INIntentErrorRestrictedIntentsNotSupportedByExtension' value64='2002'/>
 <enum name='INIntentErrorVoiceShortcutCreationFailed' value64='7000'/>
@@ -150,6 +158,7 @@
 <enum name='INPersonHandleTypePhoneNumber' value64='2'/>
 <enum name='INPersonHandleTypeUnknown' value64='0'/>
 <enum name='INPersonSuggestionTypeInstantMessageAddress' value64='2'/>
+<enum name='INPersonSuggestionTypeNone' value64='0'/>
 <enum name='INPersonSuggestionTypeSocialProfile' value64='1'/>
 <enum name='INRecurrenceFrequencyDaily' value64='3'/>
 <enum name='INRecurrenceFrequencyHourly' value64='2'/>
@@ -350,23 +359,6 @@
 <method class_method='true' selector='successWithResolvedDateComponents:'>
 <arg declared_type64='NSDateComponents * _Nonnull' index='0' name='resolvedDateComponents' type64='@'/>
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
-</method>
-</class>
-<class name='INIdentifierString'>
-<method selector='identifier'>
-<retval declared_type64='NSString * _Nullable' type64='@'/>
-</method>
-<method selector='initWithIdentifier:string:'>
-<arg declared_type64='NSString * _Nullable' index='0' name='identifier' type64='@'/>
-<arg declared_type64='NSString * _Nonnull' index='1' name='string' type64='@'/>
-<retval declared_type64='instancetype _Nonnull' type64='@'/>
-</method>
-<method selector='initWithString:'>
-<arg declared_type64='NSString * _Nonnull' index='0' name='string' type64='@'/>
-<retval declared_type64='instancetype _Nonnull' type64='@'/>
-</method>
-<method selector='string'>
-<retval declared_type64='NSString * _Nonnull' type64='@'/>
 </method>
 </class>
 <class name='INImage'>
@@ -1058,6 +1050,29 @@
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 </class>
+<class name='INSetClimateSettingsInCarIntent'>
+<method selector='initWithEnableFan:enableAirConditioner:enableClimateControl:enableAutoMode:airCirculationMode:fanSpeedIndex:fanSpeedPercentage:relativeFanSpeedSetting:temperature:relativeTemperatureSetting:climateZone:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='enableFan' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='1' name='enableAirConditioner' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='2' name='enableClimateControl' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='3' name='enableAutoMode' type64='@'/>
+<arg declared_type64='INCarAirCirculationMode' index='4' name='airCirculationMode' type64='q'/>
+<arg declared_type64='NSNumber * _Nullable' index='5' name='fanSpeedIndex' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='6' name='fanSpeedPercentage' type64='@'/>
+<arg declared_type64='INRelativeSetting' index='7' name='relativeFanSpeedSetting' type64='q'/>
+<arg declared_type64='NSMeasurement * _Nullable' index='8' name='temperature' type64='@'/>
+<arg declared_type64='INRelativeSetting' index='9' name='relativeTemperatureSetting' type64='q'/>
+<arg declared_type64='INCarSeat' index='10' name='climateZone' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INSetDefrosterSettingsInCarIntent'>
+<method selector='initWithEnable:defroster:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='enable' type64='@'/>
+<arg declared_type64='INCarDefroster' index='1' name='defroster' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
 <class name='INSetProfileInCarIntent'>
 <method selector='initWithProfileNumber:profileLabel:defaultProfile:'>
 <arg declared_type64='NSNumber * _Nullable' index='0' name='profileNumber' type64='@'/>
@@ -1065,8 +1080,25 @@
 <arg declared_type64='NSNumber * _Nullable' index='2' name='defaultProfile' type64='@'/>
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
+<method selector='initWithProfileNumber:profileName:defaultProfile:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='profileNumber' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='profileName' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='2' name='defaultProfile' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
 <method selector='profileLabel'>
 <retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='INSetSeatSettingsInCarIntent'>
+<method selector='initWithEnableHeating:enableCooling:enableMassage:seat:level:relativeLevelSetting:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='enableHeating' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='1' name='enableCooling' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='2' name='enableMassage' type64='@'/>
+<arg declared_type64='INCarSeat' index='3' name='seat' type64='q'/>
+<arg declared_type64='NSNumber * _Nullable' index='4' name='level' type64='@'/>
+<arg declared_type64='INRelativeSetting' index='5' name='relativeLevelSetting' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 </class>
 <class name='INSpeakableString'>

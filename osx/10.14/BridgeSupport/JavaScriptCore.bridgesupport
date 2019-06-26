@@ -1,5 +1,9 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
 <struct name='JSClassDefinition' type64='{_JSClassDefinition=&quot;version&quot;i&quot;attributes&quot;I&quot;className&quot;*&quot;parentClass&quot;^{OpaqueJSClass}&quot;staticValues&quot;^{_JSStaticValue=&quot;name&quot;*&quot;getProperty&quot;^?&quot;setProperty&quot;^?&quot;attributes&quot;I}&quot;staticFunctions&quot;^{_JSStaticFunction=&quot;name&quot;*&quot;callAsFunction&quot;^?&quot;attributes&quot;I}&quot;initialize&quot;^?&quot;finalize&quot;^?&quot;hasProperty&quot;^?&quot;getProperty&quot;^?&quot;setProperty&quot;^?&quot;deleteProperty&quot;^?&quot;getPropertyNames&quot;^?&quot;callAsFunction&quot;^?&quot;callAsConstructor&quot;^?&quot;hasInstance&quot;^?&quot;convertToType&quot;^?}'>
 <field declared_type64='int' name='version' type64='i'/>
 <field declared_type64='JSClassAttributes' name='attributes' type64='I'/>
@@ -142,6 +146,7 @@
 <enum name='kJSTypeNumber' value64='3'/>
 <enum name='kJSTypeObject' value64='5'/>
 <enum name='kJSTypeString' value64='4'/>
+<enum name='kJSTypeSymbol' value64='6'/>
 <enum name='kJSTypeUndefined' value64='0'/>
 <enum name='kJSTypedArrayTypeArrayBuffer' value64='9'/>
 <enum name='kJSTypedArrayTypeFloat32Array' value64='7'/>
@@ -678,6 +683,11 @@
 <function name='JSValueMakeString'>
 <arg declared_type64='JSContextRef' name='ctx' type64='^{OpaqueJSContext=}'/>
 <arg declared_type64='JSStringRef' name='string' type64='^{OpaqueJSString=}'/>
+<retval declared_type64='JSValueRef' type64='^{OpaqueJSValue=}'/>
+</function>
+<function name='JSValueMakeSymbol'>
+<arg declared_type64='JSContextRef' name='ctx' type64='^{OpaqueJSContext=}'/>
+<arg declared_type64='JSStringRef' name='description' type64='^{OpaqueJSString=}'/>
 <retval declared_type64='JSValueRef' type64='^{OpaqueJSValue=}'/>
 </function>
 <function name='JSValueMakeUndefined'>

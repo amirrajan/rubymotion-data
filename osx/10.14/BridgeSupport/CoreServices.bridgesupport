@@ -1,5 +1,24 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CFNetwork.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SharedFileList.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/DiskArbitration.framework'/>
+<depends_on path='/System/Library/Frameworks/NetFS.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/ServiceManagement.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenDirectory.framework/Versions/A/Frameworks/CFOpenDirectory.framework'/>
 <struct name='AEAddressDesc' type64='{AEDesc=&quot;descriptorType&quot;I&quot;dataHandle&quot;^^{OpaqueAEDataStorageType}}'>
 <field declared_type64='DescType' name='descriptorType' type64='I'/>
 <field declared_type64='AEDataStorage' name='dataHandle' type64='^^{OpaqueAEDataStorageType}'/>
@@ -296,6 +315,7 @@
 <enum name='enumStyle' value64='1937013100'/>
 <enum name='enumTransferMode' value64='1953653102'/>
 <enum name='errAEEventNotPermitted' value64='-1743'/>
+<enum name='errAEEventWouldRequireUserConsent' value64='-1744'/>
 <enum name='errAETargetAddressNotPermitted' value64='-1742'/>
 <enum name='eurlAFP' value64='1634103328'/>
 <enum name='eurlAT' value64='1635000352'/>
@@ -382,6 +402,7 @@
 <enum name='kAEDirectCall' value64='1'/>
 <enum name='kAEDiskEvent' value64='1684632427'/>
 <enum name='kAEDoNotAutomaticallyAddAnnotationsToEvent' value64='65536'/>
+<enum name='kAEDoNotPromptForUserConsent' value64='131072'/>
 <enum name='kAEDoObjectsExist' value64='1685022072'/>
 <enum name='kAEDoScript' value64='1685025635'/>
 <enum name='kAEDontExecute' value64='8192'/>
@@ -1282,6 +1303,13 @@
 <arg declared_type64='AppleEvent*' name='theAppleEvent' type64='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
 <arg declared_type64='AEKeyword' name='theAEKeyword' type64='I'/>
 <retval declared_type64='OSErr' type64='s'/>
+</function>
+<function name='AEDeterminePermissionToAutomateTarget'>
+<arg const='true' declared_type64='AEAddressDesc*' name='target' type64='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>
+<arg declared_type64='AEEventClass' name='theAEEventClass' type64='I'/>
+<arg declared_type64='AEEventID' name='theAEEventID' type64='I'/>
+<arg declared_type64='Boolean' name='askUserIfNeeded' type64='B'/>
+<retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='AEDisposeDesc'>
 <arg declared_type64='AEDesc*' name='theAEDesc' type64='^{AEDesc=I^^{OpaqueAEDataStorageType}}'/>

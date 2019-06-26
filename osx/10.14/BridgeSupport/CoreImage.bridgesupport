@@ -1,5 +1,19 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/ColorSync.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenCL.framework'/>
+<depends_on path='/System/Library/Frameworks/IOSurface.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenGL.framework'/>
+<depends_on path='/System/Library/Frameworks/MetalPerformanceShaders.framework'/>
+<depends_on path='/System/Library/Frameworks/Metal.framework'/>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
 <constant const='true' declared_type64='NSString * _Nonnull' name='CIDetectorAccuracy' type64='@'/>
 <constant const='true' declared_type64='NSString * _Nonnull' name='CIDetectorAccuracyHigh' type64='@'/>
 <constant const='true' declared_type64='NSString * _Nonnull' name='CIDetectorAccuracyLow' type64='@'/>
@@ -621,6 +635,24 @@
 <arg declared_type64='CGSize' index='0' name='size' type64='{CGSize=dd}'/>
 <arg declared_type64='CFDictionaryRef _Nullable' index='1' name='info' type64='^{__CFDictionary=}'/>
 <retval declared_type64='CGLayerRef _Nullable' type64='^{CGLayer=}'/>
+</method>
+<method selector='depthBlurEffectFilterForImage:disparityImage:portraitEffectsMatte:orientation:options:'>
+<arg declared_type64='CIImage * _Nonnull' index='0' name='image' type64='@'/>
+<arg declared_type64='CIImage * _Nonnull' index='1' name='disparityImage' type64='@'/>
+<arg declared_type64='CIImage * _Nullable' index='2' name='portraitEffectsMatte' type64='@'/>
+<arg declared_type64='CGImagePropertyOrientation' index='3' name='orientation' type64='I'/>
+<arg declared_type64='NSDictionary * _Nullable' index='4' name='options' type64='@'/>
+<retval declared_type64='CIFilter * _Nullable' type64='@'/>
+</method>
+<method selector='depthBlurEffectFilterForImageData:options:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='options' type64='@'/>
+<retval declared_type64='CIFilter * _Nullable' type64='@'/>
+</method>
+<method selector='depthBlurEffectFilterForImageURL:options:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='url' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='options' type64='@'/>
+<retval declared_type64='CIFilter * _Nullable' type64='@'/>
 </method>
 <method selector='drawImage:atPoint:fromRect:'>
 <arg declared_type64='CIImage * _Nonnull' index='0' name='image' type64='@'/>

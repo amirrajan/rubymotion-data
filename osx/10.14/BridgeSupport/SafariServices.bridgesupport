@@ -1,5 +1,9 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <constant const='true' declared_type64='NSString*' name='SFErrorDomain' type64='@'/>
 <enum name='SFErrorLoadingInterrupted' value64='3'/>
 <enum name='SFErrorNoAttachmentFound' value64='2'/>
@@ -7,6 +11,8 @@
 <enum name='SFSafariServicesVersion10_0' value64='0'/>
 <enum name='SFSafariServicesVersion10_1' value64='1'/>
 <enum name='SFSafariServicesVersion11_0' value64='2'/>
+<enum name='SFSafariServicesVersion12_0' value64='3'/>
+<enum name='SFSafariServicesVersion12_1' value64='4'/>
 <class name='NSObject'>
 <method selector='additionalRequestHeadersForURL:completionHandler:'>
 <arg declared_type64='NSURL * _Nonnull' index='0' name='url' type64='@'/>
@@ -111,6 +117,13 @@
 </arg>
 <retval declared_type64='void' type64='v'/>
 </method>
+<method class_method='true' selector='getAllWindowsWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
 <method class_method='true' selector='getHostApplicationWithCompletionHandler:'>
 <arg declared_type64='void (^ _Nonnull)(NSRunningApplication * _Nonnull)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
 <arg declared_type64='NSRunningApplication * _Nonnull' type64='@'/>
@@ -138,6 +151,15 @@
 <retval declared_type64='void' type64='v'/>
 </method>
 </class>
+<class name='SFSafariExtension'>
+<method class_method='true' selector='getBaseURIWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSURL * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSURL * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
 <class name='SFSafariExtensionManager'>
 <method class_method='true' selector='getStateOfSafariExtensionWithIdentifier:completionHandler:'>
 <arg declared_type64='NSString * _Nonnull' index='0' name='identifier' type64='@'/>
@@ -154,15 +176,34 @@
 <retval declared_type64='BOOL' type64='B'/>
 </method>
 </class>
+<class name='SFSafariExtensionViewController'>
+<method selector='dismissPopover'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
 <class name='SFSafariPage'>
 <method selector='dispatchMessageToScriptWithName:userInfo:'>
 <arg declared_type64='NSString * _Nonnull' index='0' name='messageName' type64='@'/>
 <arg declared_type64='NSDictionary * _Nullable' index='1' name='userInfo' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
+<method selector='getContainingTabWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(SFSafariTab * _Nonnull)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='SFSafariTab * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
 <method selector='getPagePropertiesWithCompletionHandler:'>
 <arg declared_type64='void (^ _Nonnull)(SFSafariPageProperties * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
 <arg declared_type64='SFSafariPageProperties * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='getScreenshotOfVisibleAreaWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSImage * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSImage * _Nullable' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </arg>
 <retval declared_type64='void' type64='v'/>
@@ -192,9 +233,19 @@
 </arg>
 <retval declared_type64='void' type64='v'/>
 </method>
+<method selector='close'>
+<retval declared_type64='void' type64='v'/>
+</method>
 <method selector='getActivePageWithCompletionHandler:'>
 <arg declared_type64='void (^ _Nonnull)(SFSafariPage * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
 <arg declared_type64='SFSafariPage * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='getContainingWindowWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(SFSafariWindow * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='SFSafariWindow * _Nullable' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </arg>
 <retval declared_type64='void' type64='v'/>
@@ -204,6 +255,10 @@
 <arg declared_type64='NSArray * _Nullable' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='navigateToURL:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='url' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 </class>
@@ -229,11 +284,24 @@
 <arg declared_type64='NSString * _Nullable' index='0' name='label' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
+<method selector='showPopover'>
+<retval declared_type64='void' type64='v'/>
+</method>
 </class>
 <class name='SFSafariWindow'>
+<method selector='close'>
+<retval declared_type64='void' type64='v'/>
+</method>
 <method selector='getActiveTabWithCompletionHandler:'>
 <arg declared_type64='void (^ _Nonnull)(SFSafariTab * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
 <arg declared_type64='SFSafariTab * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='getAllTabsWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </arg>
 <retval declared_type64='void' type64='v'/>

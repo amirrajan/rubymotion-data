@@ -1,0 +1,230 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<struct name='CTError' type='{_CTError=&quot;domain&quot;i&quot;error&quot;i}'>
+<field declared_type='SInt32' name='domain' type='l' type64='i'/>
+<field declared_type='SInt32' name='error' type='l' type64='i'/>
+</struct>
+<constant const='true' declared_type='NSString * _Nonnull' name='CTCallStateConnected' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CTCallStateDialing' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CTCallStateDisconnected' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CTCallStateIncoming' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CTRadioAccessTechnologyCDMA1x' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CTRadioAccessTechnologyCDMAEVDORev0' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CTRadioAccessTechnologyCDMAEVDORevA' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CTRadioAccessTechnologyCDMAEVDORevB' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CTRadioAccessTechnologyDidChangeNotification' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CTRadioAccessTechnologyEdge' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CTRadioAccessTechnologyGPRS' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CTRadioAccessTechnologyHSDPA' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CTRadioAccessTechnologyHSUPA' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CTRadioAccessTechnologyLTE' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CTRadioAccessTechnologyWCDMA' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CTRadioAccessTechnologyeHRPD' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CTServiceRadioAccessTechnologyDidChangeNotification' type='@'/>
+<constant const='true' declared_type='NSString * _Nonnull' name='CTSubscriberTokenRefreshed' type='@'/>
+<enum name='CTCellularPlanProvisioningAddPlanResultFail' value='1'/>
+<enum name='CTCellularPlanProvisioningAddPlanResultSuccess' value='2'/>
+<enum name='CTCellularPlanProvisioningAddPlanResultUnknown' value='0'/>
+<enum name='kCTCellularDataNotRestricted' value='2'/>
+<enum name='kCTCellularDataRestricted' value='1'/>
+<enum name='kCTCellularDataRestrictedStateUnknown' value='0'/>
+<enum name='kCTErrorDomainMach' value='2'/>
+<enum name='kCTErrorDomainNoError' value='0'/>
+<enum name='kCTErrorDomainPOSIX' value='1'/>
+<class name='CTCall'>
+<method selector='callID'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='callState'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='CTCallCenter'>
+<method selector='callEventHandler'>
+<retval declared_type='void (^ _Nullable)(CTCall * _Nonnull)' function_pointer='true' type='@?'>
+<arg declared_type='CTCall * _Nonnull' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='currentCalls'>
+<retval declared_type='NSSet * _Nullable' type='@'/>
+</method>
+<method selector='setCallEventHandler:'>
+<arg declared_type='void (^ _Nullable)(CTCall * _Nonnull)' function_pointer='true' index='0' name='callEventHandler' type='@?'>
+<arg declared_type='CTCall * _Nonnull' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CTCarrier'>
+<method selector='allowsVOIP'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='carrierName'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='isoCountryCode'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='mobileCountryCode'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='mobileNetworkCode'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+</class>
+<class name='CTCellularData'>
+<method selector='cellularDataRestrictionDidUpdateNotifier'>
+<retval declared_type='CellularDataRestrictionDidUpdateNotifier _Nullable' function_pointer='true' type='@?'>
+<arg declared_type='CTCellularDataRestrictedState' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='restrictedState'>
+<retval declared_type='CTCellularDataRestrictedState' type='I' type64='Q'/>
+</method>
+<method selector='setCellularDataRestrictionDidUpdateNotifier:'>
+<arg declared_type='CellularDataRestrictionDidUpdateNotifier _Nullable' function_pointer='true' index='0' name='cellularDataRestrictionDidUpdateNotifier' type='@?'>
+<arg declared_type='CTCellularDataRestrictedState' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CTCellularPlanProvisioning'>
+<method selector='addPlanWith:completionHandler:'>
+<arg declared_type='CTCellularPlanProvisioningRequest * _Nonnull' index='0' name='request' type='@'/>
+<arg declared_type='void (^ _Nonnull)(CTCellularPlanProvisioningAddPlanResult)' function_pointer='true' index='1' name='completionHandler' type='@?'>
+<arg declared_type='CTCellularPlanProvisioningAddPlanResult' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='supportsCellularPlan'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='CTCellularPlanProvisioningRequest'>
+<method selector='EID'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='ICCID'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='OID'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='address'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='confirmationCode'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='matchingID'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='setAddress:'>
+<arg declared_type='NSString * _Nonnull' index='0' name='address' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setConfirmationCode:'>
+<arg declared_type='NSString * _Nullable' index='0' name='confirmationCode' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEID:'>
+<arg declared_type='NSString * _Nullable' index='0' name='EID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setICCID:'>
+<arg declared_type='NSString * _Nullable' index='0' name='ICCID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMatchingID:'>
+<arg declared_type='NSString * _Nullable' index='0' name='matchingID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOID:'>
+<arg declared_type='NSString * _Nullable' index='0' name='OID' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CTSubscriber'>
+<method selector='carrierToken'>
+<retval declared_type='NSData * _Nullable' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CTSubscriberInfo'>
+<method class_method='true' selector='subscriber'>
+<retval declared_type='CTSubscriber * _Nonnull' type='@'/>
+</method>
+<method class_method='true' selector='subscribers'>
+<retval declared_type='NSArray * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='CTTelephonyNetworkInfo'>
+<method selector='currentRadioAccessTechnology'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='serviceCurrentRadioAccessTechnology'>
+<retval declared_type='NSDictionary * _Nullable' type='@'/>
+</method>
+<method selector='serviceSubscriberCellularProviders'>
+<retval declared_type='NSDictionary * _Nullable' type='@'/>
+</method>
+<method selector='serviceSubscriberCellularProvidersDidUpdateNotifier'>
+<retval declared_type='void (^ _Nullable)(NSString * _Nonnull)' function_pointer='true' type='@?'>
+<arg declared_type='NSString * _Nonnull' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='setServiceSubscriberCellularProvidersDidUpdateNotifier:'>
+<arg declared_type='void (^ _Nullable)(NSString * _Nonnull)' function_pointer='true' index='0' name='serviceSubscriberCellularProvidersDidUpdateNotifier' type='@?'>
+<arg declared_type='NSString * _Nonnull' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSubscriberCellularProviderDidUpdateNotifier:'>
+<arg declared_type='void (^ _Nullable)(CTCarrier * _Nonnull)' function_pointer='true' index='0' name='subscriberCellularProviderDidUpdateNotifier' type='@?'>
+<arg declared_type='CTCarrier * _Nonnull' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='subscriberCellularProvider'>
+<retval declared_type='CTCarrier * _Nullable' type='@'/>
+</method>
+<method selector='subscriberCellularProviderDidUpdateNotifier'>
+<retval declared_type='void (^ _Nullable)(CTCarrier * _Nonnull)' function_pointer='true' type='@?'>
+<arg declared_type='CTCarrier * _Nonnull' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='subscriberTokenRefreshed:'>
+<arg declared_type='CTSubscriber * _Nonnull' index='0' name='subscriber' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='CTSubscriberDelegate'>
+<method selector='subscriberTokenRefreshed:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='CTSubscriber * _Nonnull' index='0' name='subscriber' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>

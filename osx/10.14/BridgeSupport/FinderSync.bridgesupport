@@ -1,5 +1,11 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <enum name='FIMenuKindContextualMenuForContainer' value64='1'/>
 <enum name='FIMenuKindContextualMenuForItems' value64='0'/>
 <enum name='FIMenuKindContextualMenuForSidebar' value64='2'/>
@@ -10,6 +16,9 @@
 </method>
 <method selector='directoryURLs'>
 <retval declared_type64='NSSet * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='isExtensionEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='lastUsedDateForItemWithURL:'>
 <arg declared_type64='NSURL * _Nonnull' index='0' name='itemURL' type64='@'/>
@@ -49,6 +58,9 @@
 <arg declared_type64='NSError * _Nonnull' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='showExtensionManagementInterface'>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='tagDataForItemWithURL:'>

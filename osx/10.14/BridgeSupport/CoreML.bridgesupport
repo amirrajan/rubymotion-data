@@ -1,11 +1,18 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <constant const='true' declared_type64='MLModelMetadataKey' name='MLModelAuthorKey' type64='@'/>
 <constant const='true' declared_type64='MLModelMetadataKey' name='MLModelCreatorDefinedKey' type64='@'/>
 <constant const='true' declared_type64='MLModelMetadataKey' name='MLModelDescriptionKey' type64='@'/>
 <constant const='true' declared_type64='NSString * _Nonnull' name='MLModelErrorDomain' type64='@'/>
 <constant const='true' declared_type64='MLModelMetadataKey' name='MLModelLicenseKey' type64='@'/>
 <constant const='true' declared_type64='MLModelMetadataKey' name='MLModelVersionStringKey' type64='@'/>
+<enum name='MLComputeUnitsAll' value64='2'/>
+<enum name='MLComputeUnitsCPUAndGPU' value64='1'/>
+<enum name='MLComputeUnitsCPUOnly' value64='0'/>
 <enum name='MLFeatureTypeDictionary' value64='6'/>
 <enum name='MLFeatureTypeDouble' value64='2'/>
 <enum name='MLFeatureTypeImage' value64='4'/>
@@ -18,6 +25,7 @@
 <enum name='MLImageSizeConstraintTypeRange' value64='3'/>
 <enum name='MLImageSizeConstraintTypeUnspecified' value64='0'/>
 <enum name='MLModelErrorCustomLayer' value64='4'/>
+<enum name='MLModelErrorCustomModel' value64='5'/>
 <enum name='MLModelErrorFeatureType' value64='1'/>
 <enum name='MLModelErrorGeneric' value64='0'/>
 <enum name='MLModelErrorIO' value64='3'/>
@@ -195,8 +203,17 @@
 <arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
 <retval declared_type64='NSURL * _Nullable' type64='@'/>
 </method>
+<method selector='configuration'>
+<retval declared_type64='MLModelConfiguration * _Nonnull' type64='@'/>
+</method>
 <method selector='modelDescription'>
 <retval declared_type64='MLModelDescription * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='modelWithContentsOfURL:configuration:error:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='url' type64='@'/>
+<arg declared_type64='MLModelConfiguration * _Nonnull' index='1' name='configuration' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
 </method>
 <method class_method='true' selector='modelWithContentsOfURL:error:'>
 <arg declared_type64='NSURL * _Nonnull' index='0' name='url' type64='@'/>
@@ -219,6 +236,15 @@
 <arg declared_type64='MLPredictionOptions * _Nonnull' index='1' name='options' type64='@'/>
 <arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
 <retval declared_type64='id _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MLModelConfiguration'>
+<method selector='computeUnits'>
+<retval declared_type64='MLComputeUnits' type64='q'/>
+</method>
+<method selector='setComputeUnits:'>
+<arg declared_type64='MLComputeUnits' index='0' name='computeUnits' type64='q'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 </class>
 <class name='MLModelDescription'>
@@ -373,13 +399,6 @@
 <method selector='featureNames'>
 <retval declared_type64='NSSet * _Nonnull' type64='@'/>
 </method>
-<method selector='featureProviderAtIndex:'>
-<arg declared_type64='NSInteger' index='0' name='index' type64='q'/>
-<retval declared_type64='id _Nullable' type64='@'/>
-</method>
-<method selector='featureProviderCount'>
-<retval declared_type64='NSInteger' type64='q'/>
-</method>
 <method selector='featureValueForName:'>
 <arg declared_type64='NSString * _Nonnull' index='0' name='featureName' type64='@'/>
 <retval declared_type64='MLFeatureValue * _Nullable' type64='@'/>
@@ -424,13 +443,6 @@
 </class>
 <informal_protocol name='MLBatchProvider'>
 <method selector='count' type64='q16@0:8'>
-<retval declared_type64='NSInteger' type64='q'/>
-</method>
-<method selector='featureProviderAtIndex:' type64='@24@0:8q16'>
-<arg declared_type64='NSInteger' index='0' name='index' type64='q'/>
-<retval declared_type64='id _Nullable' type64='@'/>
-</method>
-<method selector='featureProviderCount' type64='q16@0:8'>
 <retval declared_type64='NSInteger' type64='q'/>
 </method>
 <method selector='featuresAtIndex:' type64='@24@0:8q16'>

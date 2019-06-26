@@ -1,0 +1,257 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Intents.framework'/>
+<depends_on path='/System/Library/Frameworks/UIKit.framework'/>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreLocation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant declared_type='double' name='IntentsUIVersionNumber' type='d'/>
+<constant const='true' declared_type='unsigned char*' name='IntentsUIVersionString' type='^C'/>
+<enum name='INUIAddVoiceShortcutButtonStyleBlack' value='2'/>
+<enum name='INUIAddVoiceShortcutButtonStyleBlackOutline' value='3'/>
+<enum name='INUIAddVoiceShortcutButtonStyleWhite' value='0'/>
+<enum name='INUIAddVoiceShortcutButtonStyleWhiteOutline' value='1'/>
+<enum name='INUIHostedViewContextMapsCard' value='1'/>
+<enum name='INUIHostedViewContextSiriSnippet' value='0'/>
+<enum name='INUIInteractiveBehaviorGenericAction' value='3'/>
+<enum name='INUIInteractiveBehaviorLaunch' value='2'/>
+<enum name='INUIInteractiveBehaviorNextView' value='1'/>
+<enum name='INUIInteractiveBehaviorNone' value='0'/>
+<class name='INImage'>
+<method selector='fetchUIImageWithCompletion:'>
+<arg declared_type='void (^ _Nonnull)(UIImage * _Nullable)' function_pointer='true' index='0' name='completion' type='@?'>
+<arg declared_type='UIImage * _Nullable' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='imageSizeForIntentResponse:'>
+<arg declared_type='INIntentResponse * _Nonnull' index='0' name='response' type='@'/>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</method>
+<method class_method='true' selector='imageWithCGImage:'>
+<arg declared_type='CGImageRef _Nonnull' index='0' name='imageRef' type='^{CGImage=}'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method class_method='true' selector='imageWithUIImage:'>
+<arg declared_type='UIImage * _Nonnull' index='0' name='image' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+</class>
+<class name='INUIAddVoiceShortcutButton'>
+<method selector='cornerRadius'>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='initWithStyle:'>
+<arg declared_type='INUIAddVoiceShortcutButtonStyle' index='0' name='style' type='I' type64='Q'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='setCornerRadius:'>
+<arg declared_type='CGFloat' index='0' name='cornerRadius' type='f' type64='d'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShortcut:'>
+<arg declared_type='INShortcut * _Nullable' index='0' name='shortcut' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shortcut'>
+<retval declared_type='INShortcut * _Nullable' type='@'/>
+</method>
+<method selector='style'>
+<retval declared_type='INUIAddVoiceShortcutButtonStyle' type='I' type64='Q'/>
+</method>
+</class>
+<class name='INUIAddVoiceShortcutViewController'>
+<method selector='delegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='initWithShortcut:'>
+<arg declared_type='INShortcut * _Nonnull' index='0' name='shortcut' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='INUIEditVoiceShortcutViewController'>
+<method selector='delegate'>
+<retval declared_type='id _Nullable' type='@'/>
+</method>
+<method selector='initWithVoiceShortcut:'>
+<arg declared_type='INVoiceShortcut * _Nonnull' index='0' name='voiceShortcut' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NSExtensionContext'>
+<method selector='hostedViewMaximumAllowedSize'>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</method>
+<method selector='hostedViewMinimumAllowedSize'>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</method>
+<method selector='interfaceParametersDescription'>
+<retval declared_type='NSString * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='addVoiceShortcutViewController:didFinishWithVoiceShortcut:error:'>
+<arg declared_type='INUIAddVoiceShortcutViewController * _Nonnull' index='0' name='controller' type='@'/>
+<arg declared_type='INVoiceShortcut * _Nullable' index='1' name='voiceShortcut' type='@'/>
+<arg declared_type='NSError * _Nullable' index='2' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addVoiceShortcutViewControllerDidCancel:'>
+<arg declared_type='INUIAddVoiceShortcutViewController * _Nonnull' index='0' name='controller' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='configureViewForParameters:ofInteraction:interactiveBehavior:context:completion:'>
+<arg declared_type='NSSet * _Nonnull' index='0' name='parameters' type='@'/>
+<arg declared_type='INInteraction * _Nonnull' index='1' name='interaction' type='@'/>
+<arg declared_type='INUIInteractiveBehavior' index='2' name='interactiveBehavior' type='I' type64='Q'/>
+<arg declared_type='INUIHostedViewContext' index='3' name='context' type='I' type64='Q'/>
+<arg declared_type='void (^ _Nonnull)(BOOL, NSSet * _Nonnull, CGSize)' function_pointer='true' index='4' name='completion' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<arg declared_type='NSSet * _Nonnull' type='@'/>
+<arg declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='configureWithInteraction:context:completion:'>
+<arg declared_type='INInteraction * _Nonnull' index='0' name='interaction' type='@'/>
+<arg declared_type='INUIHostedViewContext' index='1' name='context' type='I' type64='Q'/>
+<arg declared_type='void (^ _Nonnull)(CGSize)' function_pointer='true' index='2' name='completion' type='@?'>
+<arg declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='displaysMap'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='displaysMessage'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='displaysPaymentTransaction'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='editVoiceShortcutViewController:didDeleteVoiceShortcutWithIdentifier:'>
+<arg declared_type='INUIEditVoiceShortcutViewController * _Nonnull' index='0' name='controller' type='@'/>
+<arg declared_type='NSUUID * _Nonnull' index='1' name='deletedVoiceShortcutIdentifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='editVoiceShortcutViewController:didUpdateVoiceShortcut:error:'>
+<arg declared_type='INUIEditVoiceShortcutViewController * _Nonnull' index='0' name='controller' type='@'/>
+<arg declared_type='INVoiceShortcut * _Nullable' index='1' name='voiceShortcut' type='@'/>
+<arg declared_type='NSError * _Nullable' index='2' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='editVoiceShortcutViewControllerDidCancel:'>
+<arg declared_type='INUIEditVoiceShortcutViewController * _Nonnull' index='0' name='controller' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='presentAddVoiceShortcutViewController:forAddVoiceShortcutButton:'>
+<arg declared_type='INUIAddVoiceShortcutViewController * _Nonnull' index='0' name='addVoiceShortcutViewController' type='@'/>
+<arg declared_type='INUIAddVoiceShortcutButton * _Nonnull' index='1' name='addVoiceShortcutButton' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='presentEditVoiceShortcutViewController:forAddVoiceShortcutButton:'>
+<arg declared_type='INUIEditVoiceShortcutViewController * _Nonnull' index='0' name='editVoiceShortcutViewController' type='@'/>
+<arg declared_type='INUIAddVoiceShortcutButton * _Nonnull' index='1' name='addVoiceShortcutButton' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='INUIAddVoiceShortcutButtonDelegate'>
+<method selector='presentAddVoiceShortcutViewController:forAddVoiceShortcutButton:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='INUIAddVoiceShortcutViewController * _Nonnull' index='0' name='addVoiceShortcutViewController' type='@'/>
+<arg declared_type='INUIAddVoiceShortcutButton * _Nonnull' index='1' name='addVoiceShortcutButton' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='presentEditVoiceShortcutViewController:forAddVoiceShortcutButton:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='INUIEditVoiceShortcutViewController * _Nonnull' index='0' name='editVoiceShortcutViewController' type='@'/>
+<arg declared_type='INUIAddVoiceShortcutButton * _Nonnull' index='1' name='addVoiceShortcutButton' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='INUIAddVoiceShortcutViewControllerDelegate'>
+<method selector='addVoiceShortcutViewController:didFinishWithVoiceShortcut:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='INUIAddVoiceShortcutViewController * _Nonnull' index='0' name='controller' type='@'/>
+<arg declared_type='INVoiceShortcut * _Nullable' index='1' name='voiceShortcut' type='@'/>
+<arg declared_type='NSError * _Nullable' index='2' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addVoiceShortcutViewControllerDidCancel:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='INUIAddVoiceShortcutViewController * _Nonnull' index='0' name='controller' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='INUIEditVoiceShortcutViewControllerDelegate'>
+<method selector='editVoiceShortcutViewController:didDeleteVoiceShortcutWithIdentifier:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='INUIEditVoiceShortcutViewController * _Nonnull' index='0' name='controller' type='@'/>
+<arg declared_type='NSUUID * _Nonnull' index='1' name='deletedVoiceShortcutIdentifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='editVoiceShortcutViewController:didUpdateVoiceShortcut:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='INUIEditVoiceShortcutViewController * _Nonnull' index='0' name='controller' type='@'/>
+<arg declared_type='INVoiceShortcut * _Nullable' index='1' name='voiceShortcut' type='@'/>
+<arg declared_type='NSError * _Nullable' index='2' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='editVoiceShortcutViewControllerDidCancel:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='INUIEditVoiceShortcutViewController * _Nonnull' index='0' name='controller' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='INUIHostedViewControlling'>
+<method selector='configureViewForParameters:ofInteraction:interactiveBehavior:context:completion:' type='v28@0:4@8@12I16I20@?24' type64='v56@0:8@16@24Q32Q40@?48'>
+<arg declared_type='NSSet * _Nonnull' index='0' name='parameters' type='@'/>
+<arg declared_type='INInteraction * _Nonnull' index='1' name='interaction' type='@'/>
+<arg declared_type='INUIInteractiveBehavior' index='2' name='interactiveBehavior' type='I' type64='Q'/>
+<arg declared_type='INUIHostedViewContext' index='3' name='context' type='I' type64='Q'/>
+<arg declared_type='void (^ _Nonnull)(BOOL, NSSet * _Nonnull, CGSize)' function_pointer='true' index='4' name='completion' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<arg declared_type='NSSet * _Nonnull' type='@'/>
+<arg declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='configureWithInteraction:context:completion:' type='v20@0:4@8I12@?16' type64='v40@0:8@16Q24@?32'>
+<arg declared_type='INInteraction * _Nonnull' index='0' name='interaction' type='@'/>
+<arg declared_type='INUIHostedViewContext' index='1' name='context' type='I' type64='Q'/>
+<arg declared_type='void (^ _Nonnull)(CGSize)' function_pointer='true' index='2' name='completion' type='@?'>
+<arg declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='INUIHostedViewSiriProviding'>
+<method selector='displaysMap' type='B8@0:4' type64='B16@0:8'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='displaysMessage' type='B8@0:4' type64='B16@0:8'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='displaysPaymentTransaction' type='B8@0:4' type64='B16@0:8'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</informal_protocol>
+</signatures>

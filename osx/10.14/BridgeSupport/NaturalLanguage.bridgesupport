@@ -1,5 +1,9 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreML.framework'/>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <constant const='true' declared_type64='NLLanguage' name='NLLanguageAmharic' type64='@'/>
 <constant const='true' declared_type64='NLLanguage' name='NLLanguageArabic' type64='@'/>
 <constant const='true' declared_type64='NLLanguage' name='NLLanguageArmenian' type64='@'/>
@@ -153,6 +157,11 @@
 </method>
 <method class_method='true' selector='modelWithContentsOfURL:error:'>
 <arg declared_type64='NSURL * _Nonnull' index='0' name='url' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='modelWithMLModel:error:'>
+<arg declared_type64='MLModel * _Nonnull' index='0' name='mlModel' type64='@'/>
 <arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
 <retval declared_type64='instancetype _Nullable' type64='@'/>
 </method>

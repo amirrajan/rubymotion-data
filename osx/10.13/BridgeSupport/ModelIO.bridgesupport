@@ -11,7 +11,7 @@
 <depends_on path='/System/Library/Frameworks/CoreImage.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
 <depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
-<struct name='MDLAxisAlignedBoundingBox' type64='{MDL_EXPORT_CPPCLASS=&quot;maxBounds&quot;{_vector_float3=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}&quot;minBounds&quot;{_vector_float3=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}}'>
+<struct name='MDLAxisAlignedBoundingBox' type64='{_MDLAxisAlignedBoundingBox=&quot;maxBounds&quot;{_vector_float3=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}&quot;minBounds&quot;{_vector_float3=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}}'>
 <field declared_type64='vector_float3' name='maxBounds' type64='{_vector_float3=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}'/>
 <field declared_type64='vector_float3' name='minBounds' type64='{_vector_float3=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}'/>
 </struct>
@@ -24,10 +24,6 @@
 <struct name='MDLVoxelIndexExtent' type64='{_MDLVoxelIndexExtent=&quot;minimumExtent&quot;{_MDLVoxelIndex=&quot;x&quot;i&quot;y&quot;i&quot;z&quot;i&quot;w&quot;i}&quot;maximumExtent&quot;{_MDLVoxelIndex=&quot;x&quot;i&quot;y&quot;i&quot;z&quot;i&quot;w&quot;i}}'>
 <field declared_type64='MDLVoxelIndex' name='minimumExtent' type64='{_MDLVoxelIndex=&quot;x&quot;i&quot;y&quot;i&quot;z&quot;i&quot;w&quot;i}'/>
 <field declared_type64='MDLVoxelIndex' name='maximumExtent' type64='{_MDLVoxelIndex=&quot;x&quot;i&quot;y&quot;i&quot;z&quot;i&quot;w&quot;i}'/>
-</struct>
-<struct name='MDL_EXPORT_CPPCLASS' type64='{MDL_EXPORT_CPPCLASS=&quot;maxBounds&quot;{_vector_float3=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}&quot;minBounds&quot;{_vector_float3=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}}'>
-<field declared_type64='vector_float3' name='maxBounds' type64='{_vector_float3=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}'/>
-<field declared_type64='vector_float3' name='minBounds' type64='{_vector_float3=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}'/>
 </struct>
 <struct name='vector_float2' type64='{_vector_float2=&quot;x&quot;f&quot;y&quot;f}'>
 <field declared_type64='float' name='x' type64='f'/>
@@ -727,11 +723,11 @@
 <retval declared_type64='id _Nonnull' type64='@'/>
 </method>
 <method selector='boundingBox'>
-<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{MDL_EXPORT_CPPCLASS={_vector_float3=fff}{_vector_float3=fff}}'/>
+<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
 </method>
 <method selector='boundingBoxAtTime:'>
 <arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
-<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{MDL_EXPORT_CPPCLASS={_vector_float3=fff}{_vector_float3=fff}}'/>
+<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
 </method>
 <method selector='bufferAllocator'>
 <retval declared_type64='id _Nonnull' type64='@'/>
@@ -912,7 +908,7 @@
 <retval declared_type64='float' type64='f'/>
 </method>
 <method selector='frameBoundingBox:setNearAndFar:'>
-<arg declared_type64='MDLAxisAlignedBoundingBox' index='0' name='boundingBox' type64='{MDL_EXPORT_CPPCLASS={_vector_float3=fff}{_vector_float3=fff}}'/>
+<arg declared_type64='MDLAxisAlignedBoundingBox' index='0' name='boundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
 <arg declared_type64='BOOL' index='1' name='setNearAndFar' type64='B'/>
 <retval declared_type64='void' type64='v'/>
 </method>
@@ -1535,7 +1531,7 @@
 <retval declared_type64='id _Nonnull' type64='@'/>
 </method>
 <method selector='boundingBox'>
-<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{MDL_EXPORT_CPPCLASS={_vector_float3=fff}{_vector_float3=fff}}'/>
+<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
 </method>
 <method selector='flipTextureCoordinatesInAttributeNamed:'>
 <arg declared_type64='NSString * _Nonnull' index='0' name='textureCoordinateAttributeName' type64='@'/>
@@ -1896,7 +1892,7 @@
 </method>
 <method selector='boundingBoxAtTime:'>
 <arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
-<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{MDL_EXPORT_CPPCLASS={_vector_float3=fff}{_vector_float3=fff}}'/>
+<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
 </method>
 <method selector='children'>
 <retval declared_type64='id _Nonnull' type64='@'/>
@@ -2175,6 +2171,9 @@
 </method>
 <method selector='jointPaths'>
 <retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='jointRestTransforms'>
+<retval declared_type64='MDLMatrix4x4Array * _Nonnull' type64='@'/>
 </method>
 </class>
 <class name='MDLSkyCubeTexture'>
@@ -2577,6 +2576,11 @@
 <arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
 <retval declared_type64='instancetype _Nullable' type64='@'/>
 </method>
+<method class_method='true' selector='textureNamed:assetResolver:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='resolver' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
 <method class_method='true' selector='textureNamed:bundle:'>
 <arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
 <arg declared_type64='NSBundle * _Nullable' index='1' name='bundleOrNil' type64='@'/>
@@ -2671,6 +2675,9 @@
 </method>
 </class>
 <class name='MDLTransform'>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
 <method selector='initWithIdentity'>
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
@@ -3045,7 +3052,7 @@
 </class>
 <class name='MDLVoxelArray'>
 <method selector='boundingBox'>
-<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{MDL_EXPORT_CPPCLASS={_vector_float3=fff}{_vector_float3=fff}}'/>
+<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
 </method>
 <method selector='coarseMesh'>
 <retval declared_type64='MDLMesh * _Nullable' type64='@'/>
@@ -3092,7 +3099,7 @@
 </method>
 <method selector='initWithData:boundingBox:voxelExtent:'>
 <arg declared_type64='NSData * _Nonnull' index='0' name='voxelData' type64='@'/>
-<arg declared_type64='MDLAxisAlignedBoundingBox' index='1' name='boundingBox' type64='{MDL_EXPORT_CPPCLASS={_vector_float3=fff}{_vector_float3=fff}}'/>
+<arg declared_type64='MDLAxisAlignedBoundingBox' index='1' name='boundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
 <arg declared_type64='float' index='2' name='voxelExtent' type64='f'/>
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
@@ -3157,7 +3164,7 @@
 </method>
 <method selector='voxelBoundingBoxAtIndex:'>
 <arg declared_type64='MDLVoxelIndex' index='0' name='index' type64='{_MDLVoxelIndex=iiii}'/>
-<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{MDL_EXPORT_CPPCLASS={_vector_float3=fff}{_vector_float3=fff}}'/>
+<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
 </method>
 <method selector='voxelExistsAtIndex:allowAnyX:allowAnyY:allowAnyZ:allowAnyShell:'>
 <arg declared_type64='MDLVoxelIndex' index='0' name='index' type64='{_MDLVoxelIndex=iiii}'/>
@@ -3190,7 +3197,7 @@
 <retval declared_type64='id _Nonnull' type64='@'/>
 </method>
 <method selector='boundingBox'>
-<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{MDL_EXPORT_CPPCLASS={_vector_float3=fff}{_vector_float3=fff}}'/>
+<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
 </method>
 <method selector='canResolveAssetNamed:'>
 <arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
@@ -3295,7 +3302,7 @@
 <retval declared_type64='NSURL * _Nonnull' type64='@'/>
 </method>
 <method selector='setBoundingBox:'>
-<arg declared_type64='MDLAxisAlignedBoundingBox' index='0' name='boundingBox' type64='{MDL_EXPORT_CPPCLASS={_vector_float3=fff}{_vector_float3=fff}}'/>
+<arg declared_type64='MDLAxisAlignedBoundingBox' index='0' name='boundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setLocalTransform:'>
@@ -3348,11 +3355,11 @@
 </method>
 </informal_protocol>
 <informal_protocol name='MDLLightProbeIrradianceDataSource'>
-<method selector='boundingBox' type64='{MDL_EXPORT_CPPCLASS={?=fff}{?=fff}}16@0:8'>
-<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{MDL_EXPORT_CPPCLASS={_vector_float3=fff}{_vector_float3=fff}}'/>
+<method selector='boundingBox' type64='{?={?=fff}{?=fff}}16@0:8'>
+<retval declared_type64='MDLAxisAlignedBoundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
 </method>
-<method selector='setBoundingBox:' type64='v40@0:8{MDL_EXPORT_CPPCLASS={?=fff}{?=fff}}16'>
-<arg declared_type64='MDLAxisAlignedBoundingBox' index='0' name='boundingBox' type64='{MDL_EXPORT_CPPCLASS={_vector_float3=fff}{_vector_float3=fff}}'/>
+<method selector='setBoundingBox:' type64='v40@0:8{?={?=fff}{?=fff}}16'>
+<arg declared_type64='MDLAxisAlignedBoundingBox' index='0' name='boundingBox' type64='{_MDLAxisAlignedBoundingBox={_vector_float3=fff}{_vector_float3=fff}}'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setSphericalHarmonicsLevel:' type64='v24@0:8Q16'>

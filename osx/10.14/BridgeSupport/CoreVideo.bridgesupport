@@ -1,5 +1,14 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/ColorSync.framework'/>
+<depends_on path='/System/Library/Frameworks/Metal.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenGL.framework'/>
+<depends_on path='/System/Library/Frameworks/IOSurface.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <struct name='CVFillExtendedPixelsCallBackData' type64='{_CVFillExtendedPixelsCallBackData=&quot;version&quot;q&quot;fillCallBack&quot;^?&quot;refCon&quot;^v}'>
 <field declared_type64='CFIndex' name='version' type64='q'/>
 <field declared_type64='CVFillExtendedPixelsCallBack _Nullable' function_pointer='true' name='fillCallBack' type64='^?'>
@@ -180,6 +189,7 @@
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCVPixelFormatComponentRange_WideRange' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCVPixelFormatConstant' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCVPixelFormatContainsAlpha' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCVPixelFormatContainsGrayscale' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCVPixelFormatContainsRGB' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCVPixelFormatContainsYCbCr' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCVPixelFormatFillExtendedPixelsCallback' type64='^{__CFString=}'/>
@@ -195,13 +205,17 @@
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCVPixelFormatVerticalSubsampling' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CVTime' name='kCVZeroTime' type64='{_CVTime=qii}'/>
 <enum name='COREVIDEO_DECLARE_NULLABILITY' value64='1'/>
+<enum name='COREVIDEO_FALSE' value64='0'/>
 <enum name='COREVIDEO_SUPPORTS_COLORSPACE' value64='1'/>
 <enum name='COREVIDEO_SUPPORTS_DIRECT3D' value64='0'/>
 <enum name='COREVIDEO_SUPPORTS_DISPLAYLINK' value64='1'/>
 <enum name='COREVIDEO_SUPPORTS_IOSURFACE' value64='1'/>
+<enum name='COREVIDEO_SUPPORTS_IOSURFACE_PREFETCH' value64='0'/>
 <enum name='COREVIDEO_SUPPORTS_METAL' value64='1'/>
 <enum name='COREVIDEO_SUPPORTS_OPENGL' value64='1'/>
 <enum name='COREVIDEO_SUPPORTS_OPENGLES' value64='0'/>
+<enum name='COREVIDEO_TRUE' value64='1'/>
+<enum name='COREVIDEO_USE_DERIVED_ENUMS_FOR_CONSTANTS' value64='1'/>
 <enum name='COREVIDEO_USE_IOSURFACEREF' value64='0'/>
 <enum name='kCVAttachmentMode_ShouldNotPropagate' value64='0'/>
 <enum name='kCVAttachmentMode_ShouldPropagate' value64='1'/>

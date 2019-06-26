@@ -2,12 +2,17 @@
 <signatures version='1.0'>
 <constant const='true' declared_type='NSString * _Nonnull' name='CLKComplicationServerActiveComplicationsDidChangeNotification' type='@'/>
 <constant const='true' declared_type='NSString*' name='CLKLaunchedTimelineEntryDateKey' type='@'/>
+<constant const='true' declared_type='float' name='CLKSimpleGaugeProviderFillFractionEmpty' type='f'/>
 <enum name='CLKComplicationColumnAlignmentLeading' value='0'/>
 <enum name='CLKComplicationColumnAlignmentLeft' value='0'/>
 <enum name='CLKComplicationColumnAlignmentRight' value='1'/>
 <enum name='CLKComplicationColumnAlignmentTrailing' value='1'/>
 <enum name='CLKComplicationFamilyCircularSmall' value='4'/>
 <enum name='CLKComplicationFamilyExtraLarge' value='7'/>
+<enum name='CLKComplicationFamilyGraphicBezel' value='9'/>
+<enum name='CLKComplicationFamilyGraphicCircular' value='10'/>
+<enum name='CLKComplicationFamilyGraphicCorner' value='8'/>
+<enum name='CLKComplicationFamilyGraphicRectangular' value='11'/>
 <enum name='CLKComplicationFamilyModularLarge' value='1'/>
 <enum name='CLKComplicationFamilyModularSmall' value='0'/>
 <enum name='CLKComplicationFamilyUtilitarianLarge' value='3'/>
@@ -23,6 +28,8 @@
 <enum name='CLKComplicationTimelineAnimationBehaviorAlways' value='2'/>
 <enum name='CLKComplicationTimelineAnimationBehaviorGrouped' value='1'/>
 <enum name='CLKComplicationTimelineAnimationBehaviorNever' value='0'/>
+<enum name='CLKGaugeProviderStyleFill' value='1'/>
+<enum name='CLKGaugeProviderStyleRing' value='0'/>
 <enum name='CLKRelativeDateStyleNatural' value='0'/>
 <enum name='CLKRelativeDateStyleNaturalAbbreviated' value='3'/>
 <enum name='CLKRelativeDateStyleOffset' value='1'/>
@@ -310,6 +317,316 @@
 </method>
 <method selector='setLine2TextProvider:'>
 <arg declared_type='CLKTextProvider * _Nonnull' index='0' name='line2TextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CLKComplicationTemplateGraphicBezelCircularText'>
+<method selector='circularTemplate'>
+<retval declared_type='CLKComplicationTemplateGraphicCircular * _Nonnull' type='@'/>
+</method>
+<method selector='setCircularTemplate:'>
+<arg declared_type='CLKComplicationTemplateGraphicCircular * _Nonnull' index='0' name='circularTemplate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nullable' index='0' name='textProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='textProvider'>
+<retval declared_type='CLKTextProvider * _Nullable' type='@'/>
+</method>
+</class>
+<class name='CLKComplicationTemplateGraphicCircularClosedGaugeImage'>
+<method selector='gaugeProvider'>
+<retval declared_type='CLKGaugeProvider * _Nonnull' type='@'/>
+</method>
+<method selector='imageProvider'>
+<retval declared_type='CLKFullColorImageProvider * _Nonnull' type='@'/>
+</method>
+<method selector='setGaugeProvider:'>
+<arg declared_type='CLKGaugeProvider * _Nonnull' index='0' name='gaugeProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageProvider:'>
+<arg declared_type='CLKFullColorImageProvider * _Nonnull' index='0' name='imageProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CLKComplicationTemplateGraphicCircularClosedGaugeText'>
+<method selector='centerTextProvider'>
+<retval declared_type='CLKTextProvider * _Nonnull' type='@'/>
+</method>
+<method selector='gaugeProvider'>
+<retval declared_type='CLKGaugeProvider * _Nonnull' type='@'/>
+</method>
+<method selector='setCenterTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nonnull' index='0' name='centerTextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGaugeProvider:'>
+<arg declared_type='CLKGaugeProvider * _Nonnull' index='0' name='gaugeProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CLKComplicationTemplateGraphicCircularImage'>
+<method selector='imageProvider'>
+<retval declared_type='CLKFullColorImageProvider * _Nonnull' type='@'/>
+</method>
+<method selector='setImageProvider:'>
+<arg declared_type='CLKFullColorImageProvider * _Nonnull' index='0' name='imageProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CLKComplicationTemplateGraphicCircularOpenGaugeImage'>
+<method selector='bottomImageProvider'>
+<retval declared_type='CLKFullColorImageProvider * _Nonnull' type='@'/>
+</method>
+<method selector='centerTextProvider'>
+<retval declared_type='CLKTextProvider * _Nonnull' type='@'/>
+</method>
+<method selector='gaugeProvider'>
+<retval declared_type='CLKGaugeProvider * _Nonnull' type='@'/>
+</method>
+<method selector='setBottomImageProvider:'>
+<arg declared_type='CLKFullColorImageProvider * _Nonnull' index='0' name='bottomImageProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCenterTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nonnull' index='0' name='centerTextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGaugeProvider:'>
+<arg declared_type='CLKGaugeProvider * _Nonnull' index='0' name='gaugeProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CLKComplicationTemplateGraphicCircularOpenGaugeRangeText'>
+<method selector='centerTextProvider'>
+<retval declared_type='CLKTextProvider * _Nonnull' type='@'/>
+</method>
+<method selector='gaugeProvider'>
+<retval declared_type='CLKGaugeProvider * _Nonnull' type='@'/>
+</method>
+<method selector='leadingTextProvider'>
+<retval declared_type='CLKTextProvider * _Nonnull' type='@'/>
+</method>
+<method selector='setCenterTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nonnull' index='0' name='centerTextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGaugeProvider:'>
+<arg declared_type='CLKGaugeProvider * _Nonnull' index='0' name='gaugeProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLeadingTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nonnull' index='0' name='leadingTextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTrailingTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nonnull' index='0' name='trailingTextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='trailingTextProvider'>
+<retval declared_type='CLKTextProvider * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='CLKComplicationTemplateGraphicCircularOpenGaugeSimpleText'>
+<method selector='bottomTextProvider'>
+<retval declared_type='CLKTextProvider * _Nonnull' type='@'/>
+</method>
+<method selector='centerTextProvider'>
+<retval declared_type='CLKTextProvider * _Nonnull' type='@'/>
+</method>
+<method selector='gaugeProvider'>
+<retval declared_type='CLKGaugeProvider * _Nonnull' type='@'/>
+</method>
+<method selector='setBottomTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nonnull' index='0' name='bottomTextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCenterTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nonnull' index='0' name='centerTextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGaugeProvider:'>
+<arg declared_type='CLKGaugeProvider * _Nonnull' index='0' name='gaugeProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CLKComplicationTemplateGraphicCornerCircularImage'>
+<method selector='imageProvider'>
+<retval declared_type='CLKFullColorImageProvider * _Nonnull' type='@'/>
+</method>
+<method selector='setImageProvider:'>
+<arg declared_type='CLKFullColorImageProvider * _Nonnull' index='0' name='imageProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CLKComplicationTemplateGraphicCornerGaugeImage'>
+<method selector='gaugeProvider'>
+<retval declared_type='CLKGaugeProvider * _Nonnull' type='@'/>
+</method>
+<method selector='imageProvider'>
+<retval declared_type='CLKFullColorImageProvider * _Nonnull' type='@'/>
+</method>
+<method selector='leadingTextProvider'>
+<retval declared_type='CLKTextProvider * _Nullable' type='@'/>
+</method>
+<method selector='setGaugeProvider:'>
+<arg declared_type='CLKGaugeProvider * _Nonnull' index='0' name='gaugeProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageProvider:'>
+<arg declared_type='CLKFullColorImageProvider * _Nonnull' index='0' name='imageProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLeadingTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nullable' index='0' name='leadingTextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTrailingTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nullable' index='0' name='trailingTextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='trailingTextProvider'>
+<retval declared_type='CLKTextProvider * _Nullable' type='@'/>
+</method>
+</class>
+<class name='CLKComplicationTemplateGraphicCornerGaugeText'>
+<method selector='gaugeProvider'>
+<retval declared_type='CLKGaugeProvider * _Nonnull' type='@'/>
+</method>
+<method selector='leadingTextProvider'>
+<retval declared_type='CLKTextProvider * _Nullable' type='@'/>
+</method>
+<method selector='outerTextProvider'>
+<retval declared_type='CLKTextProvider * _Nonnull' type='@'/>
+</method>
+<method selector='setGaugeProvider:'>
+<arg declared_type='CLKGaugeProvider * _Nonnull' index='0' name='gaugeProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLeadingTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nullable' index='0' name='leadingTextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOuterTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nonnull' index='0' name='outerTextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTrailingTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nullable' index='0' name='trailingTextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='trailingTextProvider'>
+<retval declared_type='CLKTextProvider * _Nullable' type='@'/>
+</method>
+</class>
+<class name='CLKComplicationTemplateGraphicCornerStackText'>
+<method selector='innerTextProvider'>
+<retval declared_type='CLKTextProvider * _Nonnull' type='@'/>
+</method>
+<method selector='outerTextProvider'>
+<retval declared_type='CLKTextProvider * _Nonnull' type='@'/>
+</method>
+<method selector='setInnerTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nonnull' index='0' name='innerTextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOuterTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nonnull' index='0' name='outerTextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CLKComplicationTemplateGraphicCornerTextImage'>
+<method selector='imageProvider'>
+<retval declared_type='CLKFullColorImageProvider * _Nonnull' type='@'/>
+</method>
+<method selector='setImageProvider:'>
+<arg declared_type='CLKFullColorImageProvider * _Nonnull' index='0' name='imageProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nonnull' index='0' name='textProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='textProvider'>
+<retval declared_type='CLKTextProvider * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='CLKComplicationTemplateGraphicRectangularLargeImage'>
+<method selector='imageProvider'>
+<retval declared_type='CLKFullColorImageProvider * _Nonnull' type='@'/>
+</method>
+<method selector='setImageProvider:'>
+<arg declared_type='CLKFullColorImageProvider * _Nonnull' index='0' name='imageProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nonnull' index='0' name='textProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='textProvider'>
+<retval declared_type='CLKTextProvider * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='CLKComplicationTemplateGraphicRectangularStandardBody'>
+<method selector='body1TextProvider'>
+<retval declared_type='CLKTextProvider * _Nonnull' type='@'/>
+</method>
+<method selector='body2TextProvider'>
+<retval declared_type='CLKTextProvider * _Nullable' type='@'/>
+</method>
+<method selector='headerImageProvider'>
+<retval declared_type='CLKFullColorImageProvider * _Nullable' type='@'/>
+</method>
+<method selector='headerTextProvider'>
+<retval declared_type='CLKTextProvider * _Nonnull' type='@'/>
+</method>
+<method selector='setBody1TextProvider:'>
+<arg declared_type='CLKTextProvider * _Nonnull' index='0' name='body1TextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBody2TextProvider:'>
+<arg declared_type='CLKTextProvider * _Nullable' index='0' name='body2TextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeaderImageProvider:'>
+<arg declared_type='CLKFullColorImageProvider * _Nullable' index='0' name='headerImageProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeaderTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nonnull' index='0' name='headerTextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CLKComplicationTemplateGraphicRectangularTextGauge'>
+<method selector='body1TextProvider'>
+<retval declared_type='CLKTextProvider * _Nonnull' type='@'/>
+</method>
+<method selector='gaugeProvider'>
+<retval declared_type='CLKGaugeProvider * _Nonnull' type='@'/>
+</method>
+<method selector='headerImageProvider'>
+<retval declared_type='CLKFullColorImageProvider * _Nullable' type='@'/>
+</method>
+<method selector='headerTextProvider'>
+<retval declared_type='CLKTextProvider * _Nonnull' type='@'/>
+</method>
+<method selector='setBody1TextProvider:'>
+<arg declared_type='CLKTextProvider * _Nonnull' index='0' name='body1TextProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGaugeProvider:'>
+<arg declared_type='CLKGaugeProvider * _Nonnull' index='0' name='gaugeProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeaderImageProvider:'>
+<arg declared_type='CLKFullColorImageProvider * _Nullable' index='0' name='headerImageProvider' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHeaderTextProvider:'>
+<arg declared_type='CLKTextProvider * _Nonnull' index='0' name='headerTextProvider' type='@'/>
 <retval declared_type='void' type='v'/>
 </method>
 </class>
@@ -791,6 +1108,37 @@
 <retval declared_type='NSTimeZone * _Nullable' type='@'/>
 </method>
 </class>
+<class name='CLKFullColorImageProvider'>
+<method selector='accessibilityLabel'>
+<retval declared_type='NSString * _Nullable' type='@'/>
+</method>
+<method selector='image'>
+<retval declared_type='UIImage * _Nonnull' type='@'/>
+</method>
+<method class_method='true' selector='providerWithFullColorImage:'>
+<arg declared_type='UIImage * _Nonnull' index='0' name='image' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='setAccessibilityLabel:'>
+<arg declared_type='NSString * _Nullable' index='0' name='accessibilityLabel' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImage:'>
+<arg declared_type='UIImage * _Nonnull' index='0' name='image' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CLKGaugeProvider'>
+<method selector='gaugeColorLocations'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='gaugeColors'>
+<retval declared_type='NSArray * _Nullable' type='@'/>
+</method>
+<method selector='style'>
+<retval declared_type='CLKGaugeProviderStyle' type='i'/>
+</method>
+</class>
 <class name='CLKImageProvider'>
 <method selector='accessibilityLabel'>
 <retval declared_type='NSString * _Nullable' type='@'/>
@@ -867,6 +1215,24 @@
 <retval declared_type='instancetype _Nonnull' type='@'/>
 </method>
 </class>
+<class name='CLKSimpleGaugeProvider'>
+<method selector='fillFraction'>
+<retval declared_type='float' type='f'/>
+</method>
+<method class_method='true' selector='gaugeProviderWithStyle:gaugeColor:fillFraction:'>
+<arg declared_type='CLKGaugeProviderStyle' index='0' name='style' type='i'/>
+<arg declared_type='UIColor * _Nonnull' index='1' name='color' type='@'/>
+<arg declared_type='float' index='2' name='fillFraction' type='f'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method class_method='true' selector='gaugeProviderWithStyle:gaugeColors:gaugeColorLocations:fillFraction:'>
+<arg declared_type='CLKGaugeProviderStyle' index='0' name='style' type='i'/>
+<arg declared_type='NSArray * _Nullable' index='1' name='gaugeColors' type='@'/>
+<arg declared_type='NSArray * _Nullable' index='2' name='gaugeColorLocations' type='@'/>
+<arg declared_type='float' index='3' name='fillFraction' type='f'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+</class>
 <class name='CLKSimpleTextProvider'>
 <method selector='accessibilityLabel'>
 <retval declared_type='NSString * _Nullable' type='@'/>
@@ -930,6 +1296,38 @@
 </method>
 <method selector='tintColor'>
 <retval declared_type='UIColor * _Nonnull' type='@'/>
+</method>
+</class>
+<class name='CLKTimeIntervalGaugeProvider'>
+<method selector='endDate'>
+<retval declared_type='NSDate * _Nonnull' type='@'/>
+</method>
+<method selector='endFillFraction'>
+<retval declared_type='float' type='f'/>
+</method>
+<method class_method='true' selector='gaugeProviderWithStyle:gaugeColors:gaugeColorLocations:startDate:endDate:'>
+<arg declared_type='CLKGaugeProviderStyle' index='0' name='style' type='i'/>
+<arg declared_type='NSArray * _Nullable' index='1' name='gaugeColors' type='@'/>
+<arg declared_type='NSArray * _Nullable' index='2' name='gaugeColorLocations' type='@'/>
+<arg declared_type='NSDate * _Nonnull' index='3' name='startDate' type='@'/>
+<arg declared_type='NSDate * _Nonnull' index='4' name='endDate' type='@'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method class_method='true' selector='gaugeProviderWithStyle:gaugeColors:gaugeColorLocations:startDate:startFillFraction:endDate:endFillFraction:'>
+<arg declared_type='CLKGaugeProviderStyle' index='0' name='style' type='i'/>
+<arg declared_type='NSArray * _Nullable' index='1' name='gaugeColors' type='@'/>
+<arg declared_type='NSArray * _Nullable' index='2' name='gaugeColorLocations' type='@'/>
+<arg declared_type='NSDate * _Nonnull' index='3' name='startDate' type='@'/>
+<arg declared_type='float' index='4' name='startFillFraction' type='f'/>
+<arg declared_type='NSDate * _Nonnull' index='5' name='endDate' type='@'/>
+<arg declared_type='float' index='6' name='endFillFraction' type='f'/>
+<retval declared_type='instancetype _Nonnull' type='@'/>
+</method>
+<method selector='startDate'>
+<retval declared_type='NSDate * _Nonnull' type='@'/>
+</method>
+<method selector='startFillFraction'>
+<retval declared_type='float' type='f'/>
 </method>
 </class>
 <class name='CLKTimeIntervalTextProvider'>

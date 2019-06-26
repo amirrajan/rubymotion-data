@@ -1,0 +1,1876 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<cftype gettypeid_func='SSLContextGetTypeID' name='SSLContextRef' type='^{SSLContext=}'/>
+<cftype gettypeid_func='SecAccessControlGetTypeID' name='SecAccessControlRef' type='^{__SecAccessControl=}'/>
+<cftype gettypeid_func='SecCertificateGetTypeID' name='SecCertificateRef' type='^{__SecCertificate=}'/>
+<cftype gettypeid_func='SecIdentityGetTypeID' name='SecIdentityRef' type='^{__SecIdentity=}'/>
+<cftype gettypeid_func='SecKeyGetTypeID' name='SecKeyRef' type='^{__SecKey=}'/>
+<cftype gettypeid_func='SecPolicyGetTypeID' name='SecPolicyRef' type='^{__SecPolicy=}'/>
+<cftype gettypeid_func='SecTrustGetTypeID' name='SecTrustRef' type='^{__SecTrust=}'/>
+<cftype name='SSLConnectionRef' type='^v'/>
+<cftype name='SecRandomRef' type='^{__SecRandom=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSSLSessionConfig_3DES_fallback' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSSLSessionConfig_ATSv1' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSSLSessionConfig_ATSv1_noPFS' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSSLSessionConfig_RC4_fallback' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSSLSessionConfig_TLSv1_3DES_fallback' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSSLSessionConfig_TLSv1_RC4_fallback' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSSLSessionConfig_TLSv1_fallback' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSSLSessionConfig_anonymous' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSSLSessionConfig_default' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSSLSessionConfig_legacy' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSSLSessionConfig_legacy_DHE' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSSLSessionConfig_standard' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAccessControl' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAccessGroup' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAccessGroupToken' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAccessible' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAccessibleAfterFirstUnlock' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAccessibleAlways' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAccessibleAlwaysThisDeviceOnly' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAccessibleWhenUnlocked' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAccessibleWhenUnlockedThisDeviceOnly' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAccount' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrApplicationLabel' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrApplicationTag' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAuthenticationType' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAuthenticationTypeDPA' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAuthenticationTypeDefault' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAuthenticationTypeHTMLForm' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAuthenticationTypeHTTPBasic' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAuthenticationTypeHTTPDigest' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAuthenticationTypeMSN' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAuthenticationTypeNTLM' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrAuthenticationTypeRPA' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrCanDecrypt' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrCanDerive' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrCanEncrypt' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrCanSign' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrCanUnwrap' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrCanVerify' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrCanWrap' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrCertificateEncoding' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrCertificateType' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrComment' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrCreationDate' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrCreator' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrDescription' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrEffectiveKeySize' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrGeneric' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrIsExtractable' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrIsInvisible' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrIsNegative' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrIsPermanent' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrIsSensitive' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrIssuer' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrKeyClass' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrKeyClassPrivate' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrKeyClassPublic' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrKeyClassSymmetric' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrKeySizeInBits' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrKeyType' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrKeyTypeEC' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrKeyTypeECSECPrimeRandom' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrKeyTypeRSA' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrLabel' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrModificationDate' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrPath' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrPersistantReference' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrPersistentReference' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrPort' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocol' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolAFP' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolAppleTalk' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolDAAP' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolEPPC' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolFTP' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolFTPAccount' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolFTPProxy' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolFTPS' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolHTTP' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolHTTPProxy' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolHTTPS' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolHTTPSProxy' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolIMAP' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolIMAPS' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolIPP' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolIRC' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolIRCS' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolLDAP' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolLDAPS' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolNNTP' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolNNTPS' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolPOP3' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolPOP3S' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolRTSP' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolRTSPProxy' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolSMB' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolSMTP' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolSOCKS' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolSSH' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolTelnet' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrProtocolTelnetS' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrPublicKeyHash' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrSecurityDomain' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrSerialNumber' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrServer' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrService' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrSubject' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrSubjectKeyID' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrSyncViewHint' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrSynchronizable' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrSynchronizableAny' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrTokenID' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrTokenIDSecureEnclave' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecAttrType' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecClass' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecClassCertificate' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecClassGenericPassword' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecClassIdentity' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecClassInternetPassword' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecClassKey' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecImportExportPassphrase' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecImportItemCertChain' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecImportItemIdentity' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecImportItemKeyID' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecImportItemLabel' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecImportItemTrust' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDHKeyExchangeCofactor' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDHKeyExchangeCofactorX963SHA1' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDHKeyExchangeCofactorX963SHA224' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDHKeyExchangeCofactorX963SHA256' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDHKeyExchangeCofactorX963SHA384' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDHKeyExchangeCofactorX963SHA512' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDHKeyExchangeStandard' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDHKeyExchangeStandardX963SHA1' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDHKeyExchangeStandardX963SHA224' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDHKeyExchangeStandardX963SHA256' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDHKeyExchangeStandardX963SHA384' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDHKeyExchangeStandardX963SHA512' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDSASignatureDigestX962' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDSASignatureDigestX962SHA1' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDSASignatureDigestX962SHA224' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDSASignatureDigestX962SHA256' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDSASignatureDigestX962SHA384' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDSASignatureDigestX962SHA512' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDSASignatureMessageX962SHA1' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDSASignatureMessageX962SHA224' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDSASignatureMessageX962SHA256' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDSASignatureMessageX962SHA384' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDSASignatureMessageX962SHA512' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECDSASignatureRFC4754' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECIESEncryptionCofactorVariableIVX963SHA224AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECIESEncryptionCofactorVariableIVX963SHA256AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECIESEncryptionCofactorVariableIVX963SHA384AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECIESEncryptionCofactorVariableIVX963SHA512AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECIESEncryptionCofactorX963SHA1AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECIESEncryptionCofactorX963SHA224AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECIESEncryptionCofactorX963SHA256AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECIESEncryptionCofactorX963SHA384AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECIESEncryptionCofactorX963SHA512AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECIESEncryptionStandardVariableIVX963SHA224AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECIESEncryptionStandardVariableIVX963SHA256AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECIESEncryptionStandardVariableIVX963SHA384AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECIESEncryptionStandardVariableIVX963SHA512AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECIESEncryptionStandardX963SHA1AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECIESEncryptionStandardX963SHA224AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECIESEncryptionStandardX963SHA256AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECIESEncryptionStandardX963SHA384AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmECIESEncryptionStandardX963SHA512AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSAEncryptionOAEPSHA1' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSAEncryptionOAEPSHA1AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSAEncryptionOAEPSHA224' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSAEncryptionOAEPSHA224AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSAEncryptionOAEPSHA256' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSAEncryptionOAEPSHA256AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSAEncryptionOAEPSHA384' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSAEncryptionOAEPSHA384AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSAEncryptionOAEPSHA512' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSAEncryptionOAEPSHA512AESGCM' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSAEncryptionPKCS1' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSAEncryptionRaw' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureDigestPKCS1v15Raw' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureDigestPKCS1v15SHA1' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureDigestPKCS1v15SHA224' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureDigestPKCS1v15SHA256' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureDigestPKCS1v15SHA384' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureDigestPKCS1v15SHA512' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureDigestPSSSHA1' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureDigestPSSSHA224' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureDigestPSSSHA256' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureDigestPSSSHA384' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureDigestPSSSHA512' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureMessagePKCS1v15SHA1' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureMessagePKCS1v15SHA224' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureMessagePKCS1v15SHA256' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureMessagePKCS1v15SHA384' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureMessagePKCS1v15SHA512' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureMessagePSSSHA1' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureMessagePSSSHA224' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureMessagePSSSHA256' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureMessagePSSSHA384' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureMessagePSSSHA512' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyAlgorithm _Nonnull' name='kSecKeyAlgorithmRSASignatureRaw' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyKeyExchangeParameter _Nonnull' name='kSecKeyKeyExchangeParameterRequestedSize' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecKeyKeyExchangeParameter _Nonnull' name='kSecKeyKeyExchangeParameterSharedInfo' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecMatchCaseInsensitive' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecMatchEmailAddressIfPresent' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecMatchIssuers' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecMatchItemList' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecMatchLimit' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecMatchLimitAll' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecMatchLimitOne' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecMatchPolicy' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecMatchSearchList' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecMatchSubjectContains' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecMatchTrustedOnly' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecMatchValidOnDate' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPolicyAppleCodeSigning' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPolicyAppleEAP' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPolicyAppleIDValidation' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPolicyAppleIPsec' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPolicyApplePassbookSigning' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPolicyApplePayIssuerEncryption' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPolicyAppleRevocation' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPolicyAppleSMIME' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPolicyAppleSSL' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPolicyAppleTimeStamping' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPolicyAppleX509Basic' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPolicyClient' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPolicyMacAppStoreReceipt' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPolicyName' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPolicyOid' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPolicyRevocationFlags' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPolicyTeamIdentifier' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPrivateKeyAttrs' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPropertyTypeError' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPropertyTypeTitle' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecPublicKeyAttrs' type='^{__CFString=}'/>
+<constant const='true' declared_type='SecRandomRef _Nonnull' name='kSecRandomDefault' type='^{__SecRandom=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecReturnAttributes' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecReturnData' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecReturnPersistentRef' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecReturnRef' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecSharedPassword' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecTrustCertificateTransparency' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecTrustCertificateTransparencyWhiteList' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecTrustEvaluationDate' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecTrustExtendedValidation' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecTrustOrganizationName' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecTrustResultValue' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecTrustRevocationChecked' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecTrustRevocationValidUntilDate' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecUseAuthenticationContext' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecUseAuthenticationUI' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecUseAuthenticationUIAllow' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecUseAuthenticationUIFail' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecUseAuthenticationUISkip' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecUseNoAuthenticationUI' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecUseOperationPrompt' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecValueData' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecValuePersistentRef' type='^{__CFString=}'/>
+<constant const='true' declared_type='CFStringRef _Nonnull' name='kSecValueRef' type='^{__CFString=}'/>
+<enum name='SEC_OS_IPHONE' value='1'/>
+<enum name='SEC_OS_OSX' value='0'/>
+<enum name='SEC_OS_OSX_INCLUDES' value='0'/>
+<enum name='SSL_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA' value='17'/>
+<enum name='SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA' value='19'/>
+<enum name='SSL_DHE_DSS_WITH_DES_CBC_SHA' value='18'/>
+<enum name='SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA' value='20'/>
+<enum name='SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA' value='22'/>
+<enum name='SSL_DHE_RSA_WITH_DES_CBC_SHA' value='21'/>
+<enum name='SSL_DH_DSS_EXPORT_WITH_DES40_CBC_SHA' value='11'/>
+<enum name='SSL_DH_DSS_WITH_3DES_EDE_CBC_SHA' value='13'/>
+<enum name='SSL_DH_DSS_WITH_DES_CBC_SHA' value='12'/>
+<enum name='SSL_DH_RSA_EXPORT_WITH_DES40_CBC_SHA' value='14'/>
+<enum name='SSL_DH_RSA_WITH_3DES_EDE_CBC_SHA' value='16'/>
+<enum name='SSL_DH_RSA_WITH_DES_CBC_SHA' value='15'/>
+<enum name='SSL_DH_anon_EXPORT_WITH_DES40_CBC_SHA' value='25'/>
+<enum name='SSL_DH_anon_EXPORT_WITH_RC4_40_MD5' value='23'/>
+<enum name='SSL_DH_anon_WITH_3DES_EDE_CBC_SHA' value='27'/>
+<enum name='SSL_DH_anon_WITH_DES_CBC_SHA' value='26'/>
+<enum name='SSL_DH_anon_WITH_RC4_128_MD5' value='24'/>
+<enum name='SSL_FORTEZZA_DMS_WITH_FORTEZZA_CBC_SHA' value='29'/>
+<enum name='SSL_FORTEZZA_DMS_WITH_NULL_SHA' value='28'/>
+<enum name='SSL_NO_SUCH_CIPHERSUITE' value='65535'/>
+<enum name='SSL_NULL_WITH_NULL_NULL' value='0'/>
+<enum name='SSL_RSA_EXPORT_WITH_DES40_CBC_SHA' value='8'/>
+<enum name='SSL_RSA_EXPORT_WITH_RC2_CBC_40_MD5' value='6'/>
+<enum name='SSL_RSA_EXPORT_WITH_RC4_40_MD5' value='3'/>
+<enum name='SSL_RSA_WITH_3DES_EDE_CBC_MD5' value='65411'/>
+<enum name='SSL_RSA_WITH_3DES_EDE_CBC_SHA' value='10'/>
+<enum name='SSL_RSA_WITH_DES_CBC_MD5' value='65410'/>
+<enum name='SSL_RSA_WITH_DES_CBC_SHA' value='9'/>
+<enum name='SSL_RSA_WITH_IDEA_CBC_MD5' value='65409'/>
+<enum name='SSL_RSA_WITH_IDEA_CBC_SHA' value='7'/>
+<enum name='SSL_RSA_WITH_NULL_MD5' value='1'/>
+<enum name='SSL_RSA_WITH_NULL_SHA' value='2'/>
+<enum name='SSL_RSA_WITH_RC2_CBC_MD5' value='65408'/>
+<enum name='SSL_RSA_WITH_RC4_128_MD5' value='4'/>
+<enum name='SSL_RSA_WITH_RC4_128_SHA' value='5'/>
+<enum name='TLS_AES_128_CCM_8_SHA256' value='4869'/>
+<enum name='TLS_AES_128_CCM_SHA256' value='4868'/>
+<enum name='TLS_AES_128_GCM_SHA256' value='4865'/>
+<enum name='TLS_AES_256_GCM_SHA384' value='4866'/>
+<enum name='TLS_CHACHA20_POLY1305_SHA256' value='4867'/>
+<enum name='TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA' value='19'/>
+<enum name='TLS_DHE_DSS_WITH_AES_128_CBC_SHA' value='50'/>
+<enum name='TLS_DHE_DSS_WITH_AES_128_CBC_SHA256' value='64'/>
+<enum name='TLS_DHE_DSS_WITH_AES_128_GCM_SHA256' value='162'/>
+<enum name='TLS_DHE_DSS_WITH_AES_256_CBC_SHA' value='56'/>
+<enum name='TLS_DHE_DSS_WITH_AES_256_CBC_SHA256' value='106'/>
+<enum name='TLS_DHE_DSS_WITH_AES_256_GCM_SHA384' value='163'/>
+<enum name='TLS_DHE_PSK_WITH_3DES_EDE_CBC_SHA' value='143'/>
+<enum name='TLS_DHE_PSK_WITH_AES_128_CBC_SHA' value='144'/>
+<enum name='TLS_DHE_PSK_WITH_AES_128_CBC_SHA256' value='178'/>
+<enum name='TLS_DHE_PSK_WITH_AES_128_GCM_SHA256' value='170'/>
+<enum name='TLS_DHE_PSK_WITH_AES_256_CBC_SHA' value='145'/>
+<enum name='TLS_DHE_PSK_WITH_AES_256_CBC_SHA384' value='179'/>
+<enum name='TLS_DHE_PSK_WITH_AES_256_GCM_SHA384' value='171'/>
+<enum name='TLS_DHE_PSK_WITH_NULL_SHA' value='45'/>
+<enum name='TLS_DHE_PSK_WITH_NULL_SHA256' value='180'/>
+<enum name='TLS_DHE_PSK_WITH_NULL_SHA384' value='181'/>
+<enum name='TLS_DHE_PSK_WITH_RC4_128_SHA' value='142'/>
+<enum name='TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA' value='22'/>
+<enum name='TLS_DHE_RSA_WITH_AES_128_CBC_SHA' value='51'/>
+<enum name='TLS_DHE_RSA_WITH_AES_128_CBC_SHA256' value='103'/>
+<enum name='TLS_DHE_RSA_WITH_AES_128_GCM_SHA256' value='158'/>
+<enum name='TLS_DHE_RSA_WITH_AES_256_CBC_SHA' value='57'/>
+<enum name='TLS_DHE_RSA_WITH_AES_256_CBC_SHA256' value='107'/>
+<enum name='TLS_DHE_RSA_WITH_AES_256_GCM_SHA384' value='159'/>
+<enum name='TLS_DH_DSS_WITH_3DES_EDE_CBC_SHA' value='13'/>
+<enum name='TLS_DH_DSS_WITH_AES_128_CBC_SHA' value='48'/>
+<enum name='TLS_DH_DSS_WITH_AES_128_CBC_SHA256' value='62'/>
+<enum name='TLS_DH_DSS_WITH_AES_128_GCM_SHA256' value='164'/>
+<enum name='TLS_DH_DSS_WITH_AES_256_CBC_SHA' value='54'/>
+<enum name='TLS_DH_DSS_WITH_AES_256_CBC_SHA256' value='104'/>
+<enum name='TLS_DH_DSS_WITH_AES_256_GCM_SHA384' value='165'/>
+<enum name='TLS_DH_RSA_WITH_3DES_EDE_CBC_SHA' value='16'/>
+<enum name='TLS_DH_RSA_WITH_AES_128_CBC_SHA' value='49'/>
+<enum name='TLS_DH_RSA_WITH_AES_128_CBC_SHA256' value='63'/>
+<enum name='TLS_DH_RSA_WITH_AES_128_GCM_SHA256' value='160'/>
+<enum name='TLS_DH_RSA_WITH_AES_256_CBC_SHA' value='55'/>
+<enum name='TLS_DH_RSA_WITH_AES_256_CBC_SHA256' value='105'/>
+<enum name='TLS_DH_RSA_WITH_AES_256_GCM_SHA384' value='161'/>
+<enum name='TLS_DH_anon_WITH_3DES_EDE_CBC_SHA' value='27'/>
+<enum name='TLS_DH_anon_WITH_AES_128_CBC_SHA' value='52'/>
+<enum name='TLS_DH_anon_WITH_AES_128_CBC_SHA256' value='108'/>
+<enum name='TLS_DH_anon_WITH_AES_128_GCM_SHA256' value='166'/>
+<enum name='TLS_DH_anon_WITH_AES_256_CBC_SHA' value='58'/>
+<enum name='TLS_DH_anon_WITH_AES_256_CBC_SHA256' value='109'/>
+<enum name='TLS_DH_anon_WITH_AES_256_GCM_SHA384' value='167'/>
+<enum name='TLS_DH_anon_WITH_RC4_128_MD5' value='24'/>
+<enum name='TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA' value='49160'/>
+<enum name='TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA' value='49161'/>
+<enum name='TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256' value='49187'/>
+<enum name='TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256' value='49195'/>
+<enum name='TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA' value='49162'/>
+<enum name='TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384' value='49188'/>
+<enum name='TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384' value='49196'/>
+<enum name='TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256' value='52393'/>
+<enum name='TLS_ECDHE_ECDSA_WITH_NULL_SHA' value='49158'/>
+<enum name='TLS_ECDHE_ECDSA_WITH_RC4_128_SHA' value='49159'/>
+<enum name='TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA' value='49170'/>
+<enum name='TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA' value='49171'/>
+<enum name='TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256' value='49191'/>
+<enum name='TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256' value='49199'/>
+<enum name='TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA' value='49172'/>
+<enum name='TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384' value='49192'/>
+<enum name='TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384' value='49200'/>
+<enum name='TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256' value='52392'/>
+<enum name='TLS_ECDHE_RSA_WITH_NULL_SHA' value='49168'/>
+<enum name='TLS_ECDHE_RSA_WITH_RC4_128_SHA' value='49169'/>
+<enum name='TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA' value='49155'/>
+<enum name='TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA' value='49156'/>
+<enum name='TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256' value='49189'/>
+<enum name='TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256' value='49197'/>
+<enum name='TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA' value='49157'/>
+<enum name='TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384' value='49190'/>
+<enum name='TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384' value='49198'/>
+<enum name='TLS_ECDH_ECDSA_WITH_NULL_SHA' value='49153'/>
+<enum name='TLS_ECDH_ECDSA_WITH_RC4_128_SHA' value='49154'/>
+<enum name='TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA' value='49165'/>
+<enum name='TLS_ECDH_RSA_WITH_AES_128_CBC_SHA' value='49166'/>
+<enum name='TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256' value='49193'/>
+<enum name='TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256' value='49201'/>
+<enum name='TLS_ECDH_RSA_WITH_AES_256_CBC_SHA' value='49167'/>
+<enum name='TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384' value='49194'/>
+<enum name='TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384' value='49202'/>
+<enum name='TLS_ECDH_RSA_WITH_NULL_SHA' value='49163'/>
+<enum name='TLS_ECDH_RSA_WITH_RC4_128_SHA' value='49164'/>
+<enum name='TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA' value='49175'/>
+<enum name='TLS_ECDH_anon_WITH_AES_128_CBC_SHA' value='49176'/>
+<enum name='TLS_ECDH_anon_WITH_AES_256_CBC_SHA' value='49177'/>
+<enum name='TLS_ECDH_anon_WITH_NULL_SHA' value='49173'/>
+<enum name='TLS_ECDH_anon_WITH_RC4_128_SHA' value='49174'/>
+<enum name='TLS_EMPTY_RENEGOTIATION_INFO_SCSV' value='255'/>
+<enum name='TLS_NULL_WITH_NULL_NULL' value='0'/>
+<enum name='TLS_PSK_WITH_3DES_EDE_CBC_SHA' value='139'/>
+<enum name='TLS_PSK_WITH_AES_128_CBC_SHA' value='140'/>
+<enum name='TLS_PSK_WITH_AES_128_CBC_SHA256' value='174'/>
+<enum name='TLS_PSK_WITH_AES_128_GCM_SHA256' value='168'/>
+<enum name='TLS_PSK_WITH_AES_256_CBC_SHA' value='141'/>
+<enum name='TLS_PSK_WITH_AES_256_CBC_SHA384' value='175'/>
+<enum name='TLS_PSK_WITH_AES_256_GCM_SHA384' value='169'/>
+<enum name='TLS_PSK_WITH_NULL_SHA' value='44'/>
+<enum name='TLS_PSK_WITH_NULL_SHA256' value='176'/>
+<enum name='TLS_PSK_WITH_NULL_SHA384' value='177'/>
+<enum name='TLS_PSK_WITH_RC4_128_SHA' value='138'/>
+<enum name='TLS_RSA_PSK_WITH_3DES_EDE_CBC_SHA' value='147'/>
+<enum name='TLS_RSA_PSK_WITH_AES_128_CBC_SHA' value='148'/>
+<enum name='TLS_RSA_PSK_WITH_AES_128_CBC_SHA256' value='182'/>
+<enum name='TLS_RSA_PSK_WITH_AES_128_GCM_SHA256' value='172'/>
+<enum name='TLS_RSA_PSK_WITH_AES_256_CBC_SHA' value='149'/>
+<enum name='TLS_RSA_PSK_WITH_AES_256_CBC_SHA384' value='183'/>
+<enum name='TLS_RSA_PSK_WITH_AES_256_GCM_SHA384' value='173'/>
+<enum name='TLS_RSA_PSK_WITH_NULL_SHA' value='46'/>
+<enum name='TLS_RSA_PSK_WITH_NULL_SHA256' value='184'/>
+<enum name='TLS_RSA_PSK_WITH_NULL_SHA384' value='185'/>
+<enum name='TLS_RSA_PSK_WITH_RC4_128_SHA' value='146'/>
+<enum name='TLS_RSA_WITH_3DES_EDE_CBC_SHA' value='10'/>
+<enum name='TLS_RSA_WITH_AES_128_CBC_SHA' value='47'/>
+<enum name='TLS_RSA_WITH_AES_128_CBC_SHA256' value='60'/>
+<enum name='TLS_RSA_WITH_AES_128_GCM_SHA256' value='156'/>
+<enum name='TLS_RSA_WITH_AES_256_CBC_SHA' value='53'/>
+<enum name='TLS_RSA_WITH_AES_256_CBC_SHA256' value='61'/>
+<enum name='TLS_RSA_WITH_AES_256_GCM_SHA384' value='157'/>
+<enum name='TLS_RSA_WITH_NULL_MD5' value='1'/>
+<enum name='TLS_RSA_WITH_NULL_SHA' value='2'/>
+<enum name='TLS_RSA_WITH_NULL_SHA256' value='59'/>
+<enum name='TLS_RSA_WITH_RC4_128_MD5' value='4'/>
+<enum name='TLS_RSA_WITH_RC4_128_SHA' value='5'/>
+<enum name='errSSLBadCert' value='-9808'/>
+<enum name='errSSLBadCertificateStatusResponse' value='-9862'/>
+<enum name='errSSLBadCipherSuite' value='-9818'/>
+<enum name='errSSLBadConfiguration' value='-9848'/>
+<enum name='errSSLBadRecordMac' value='-9846'/>
+<enum name='errSSLBufferOverflow' value='-9817'/>
+<enum name='errSSLCertExpired' value='-9814'/>
+<enum name='errSSLCertNotYetValid' value='-9815'/>
+<enum name='errSSLCertificateRequired' value='-9863'/>
+<enum name='errSSLClientAuthCompleted' value='-9841'/>
+<enum name='errSSLClientCertRequested' value='-9842'/>
+<enum name='errSSLClientHelloReceived' value='-9851'/>
+<enum name='errSSLClosedAbort' value='-9806'/>
+<enum name='errSSLClosedGraceful' value='-9805'/>
+<enum name='errSSLClosedNoNotify' value='-9816'/>
+<enum name='errSSLConfigurationFailed' value='-9854'/>
+<enum name='errSSLConnectionRefused' value='-9844'/>
+<enum name='errSSLCrypto' value='-9809'/>
+<enum name='errSSLDecodeError' value='-9859'/>
+<enum name='errSSLDecompressFail' value='-9857'/>
+<enum name='errSSLDecryptionFail' value='-9845'/>
+<enum name='errSSLFatalAlert' value='-9802'/>
+<enum name='errSSLHandshakeFail' value='-9858'/>
+<enum name='errSSLHostNameMismatch' value='-9843'/>
+<enum name='errSSLIllegalParam' value='-9830'/>
+<enum name='errSSLInappropriateFallback' value='-9860'/>
+<enum name='errSSLInternal' value='-9810'/>
+<enum name='errSSLLast' value='-9849'/>
+<enum name='errSSLMissingExtension' value='-9861'/>
+<enum name='errSSLModuleAttach' value='-9811'/>
+<enum name='errSSLNegotiation' value='-9801'/>
+<enum name='errSSLNetworkTimeout' value='-9853'/>
+<enum name='errSSLNoRootCert' value='-9813'/>
+<enum name='errSSLPeerAccessDenied' value='-9832'/>
+<enum name='errSSLPeerAuthCompleted' value='-9841'/>
+<enum name='errSSLPeerBadCert' value='-9825'/>
+<enum name='errSSLPeerBadRecordMac' value='-9820'/>
+<enum name='errSSLPeerCertExpired' value='-9828'/>
+<enum name='errSSLPeerCertRevoked' value='-9827'/>
+<enum name='errSSLPeerCertUnknown' value='-9829'/>
+<enum name='errSSLPeerDecodeError' value='-9833'/>
+<enum name='errSSLPeerDecompressFail' value='-9823'/>
+<enum name='errSSLPeerDecryptError' value='-9834'/>
+<enum name='errSSLPeerDecryptionFail' value='-9821'/>
+<enum name='errSSLPeerExportRestriction' value='-9835'/>
+<enum name='errSSLPeerHandshakeFail' value='-9824'/>
+<enum name='errSSLPeerInsufficientSecurity' value='-9837'/>
+<enum name='errSSLPeerInternalError' value='-9838'/>
+<enum name='errSSLPeerNoRenegotiation' value='-9840'/>
+<enum name='errSSLPeerProtocolVersion' value='-9836'/>
+<enum name='errSSLPeerRecordOverflow' value='-9822'/>
+<enum name='errSSLPeerUnexpectedMsg' value='-9819'/>
+<enum name='errSSLPeerUnknownCA' value='-9831'/>
+<enum name='errSSLPeerUnsupportedCert' value='-9826'/>
+<enum name='errSSLPeerUserCancelled' value='-9839'/>
+<enum name='errSSLProtocol' value='-9800'/>
+<enum name='errSSLRecordOverflow' value='-9847'/>
+<enum name='errSSLServerAuthCompleted' value='-9841'/>
+<enum name='errSSLSessionNotFound' value='-9804'/>
+<enum name='errSSLTransportReset' value='-9852'/>
+<enum name='errSSLUnexpectedMessage' value='-9856'/>
+<enum name='errSSLUnexpectedRecord' value='-9849'/>
+<enum name='errSSLUnknownPSKIdentity' value='-9864'/>
+<enum name='errSSLUnknownRootCert' value='-9812'/>
+<enum name='errSSLUnrecognizedName' value='-9865'/>
+<enum name='errSSLUnsupportedExtension' value='-9855'/>
+<enum name='errSSLWeakPeerEphemeralDHKey' value='-9850'/>
+<enum name='errSSLWouldBlock' value='-9803'/>
+<enum name='errSSLXCertChainInvalid' value='-9807'/>
+<enum name='errSecACLAddFailed' value='-67698'/>
+<enum name='errSecACLChangeFailed' value='-67699'/>
+<enum name='errSecACLDeleteFailed' value='-67696'/>
+<enum name='errSecACLNotSimple' value='-25240'/>
+<enum name='errSecACLReplaceFailed' value='-67697'/>
+<enum name='errSecAddinLoadFailed' value='-67711'/>
+<enum name='errSecAddinUnloadFailed' value='-67714'/>
+<enum name='errSecAlgorithmMismatch' value='-67730'/>
+<enum name='errSecAllocate' value='-108'/>
+<enum name='errSecAlreadyLoggedIn' value='-67814'/>
+<enum name='errSecAppleAddAppACLSubject' value='-67589'/>
+<enum name='errSecAppleInvalidKeyEndDate' value='-67593'/>
+<enum name='errSecAppleInvalidKeyStartDate' value='-67592'/>
+<enum name='errSecApplePublicKeyIncomplete' value='-67590'/>
+<enum name='errSecAppleSSLv2Rollback' value='-67595'/>
+<enum name='errSecAppleSignatureMismatch' value='-67591'/>
+<enum name='errSecAttachHandleBusy' value='-67728'/>
+<enum name='errSecAttributeNotInContext' value='-67720'/>
+<enum name='errSecAuthFailed' value='-25293'/>
+<enum name='errSecBadReq' value='-909'/>
+<enum name='errSecBlockSizeMismatch' value='-67810'/>
+<enum name='errSecBufferTooSmall' value='-25301'/>
+<enum name='errSecCRLAlreadySigned' value='-67684'/>
+<enum name='errSecCRLBadURI' value='-67617'/>
+<enum name='errSecCRLExpired' value='-67613'/>
+<enum name='errSecCRLNotFound' value='-67615'/>
+<enum name='errSecCRLNotTrusted' value='-67620'/>
+<enum name='errSecCRLNotValidYet' value='-67614'/>
+<enum name='errSecCRLPolicyFailed' value='-67621'/>
+<enum name='errSecCRLServerDown' value='-67616'/>
+<enum name='errSecCallbackFailed' value='-67695'/>
+<enum name='errSecCertificateCannotOperate' value='-67817'/>
+<enum name='errSecCertificateExpired' value='-67818'/>
+<enum name='errSecCertificateNotValidYet' value='-67819'/>
+<enum name='errSecCertificateRevoked' value='-67820'/>
+<enum name='errSecCertificateSuspended' value='-67821'/>
+<enum name='errSecCodeSigningBadCertChainLength' value='-67647'/>
+<enum name='errSecCodeSigningBadPathLengthConstraint' value='-67649'/>
+<enum name='errSecCodeSigningDevelopment' value='-67651'/>
+<enum name='errSecCodeSigningNoBasicConstraints' value='-67648'/>
+<enum name='errSecCodeSigningNoExtendedKeyUsage' value='-67650'/>
+<enum name='errSecConversionError' value='-67594'/>
+<enum name='errSecCoreFoundationUnknown' value='-4960'/>
+<enum name='errSecCreateChainFailed' value='-25318'/>
+<enum name='errSecDataNotAvailable' value='-25316'/>
+<enum name='errSecDataNotModifiable' value='-25317'/>
+<enum name='errSecDataTooLarge' value='-25302'/>
+<enum name='errSecDatabaseLocked' value='-67869'/>
+<enum name='errSecDatastoreIsOpen' value='-67870'/>
+<enum name='errSecDecode' value='-26275'/>
+<enum name='errSecDeviceError' value='-67727'/>
+<enum name='errSecDeviceFailed' value='-67588'/>
+<enum name='errSecDeviceReset' value='-67587'/>
+<enum name='errSecDeviceVerifyFailed' value='-67812'/>
+<enum name='errSecDiskFull' value='-34'/>
+<enum name='errSecDskFull' value='-34'/>
+<enum name='errSecDuplicateCallback' value='-25297'/>
+<enum name='errSecDuplicateItem' value='-25299'/>
+<enum name='errSecDuplicateKeychain' value='-25296'/>
+<enum name='errSecEMMLoadFailed' value='-67709'/>
+<enum name='errSecEMMUnloadFailed' value='-67710'/>
+<enum name='errSecEndOfData' value='-67634'/>
+<enum name='errSecEventNotificationCallbackNotFound' value='-67723'/>
+<enum name='errSecExtendedKeyUsageNotCritical' value='-67881'/>
+<enum name='errSecFieldSpecifiedMultiple' value='-67866'/>
+<enum name='errSecFileTooBig' value='-67597'/>
+<enum name='errSecFunctionFailed' value='-67677'/>
+<enum name='errSecFunctionIntegrityFail' value='-67670'/>
+<enum name='errSecHostNameMismatch' value='-67602'/>
+<enum name='errSecIDPFailure' value='-67622'/>
+<enum name='errSecIO' value='-36'/>
+<enum name='errSecInDarkWake' value='-25320'/>
+<enum name='errSecIncompatibleDatabaseBlob' value='-67600'/>
+<enum name='errSecIncompatibleFieldFormat' value='-67867'/>
+<enum name='errSecIncompatibleKeyBlob' value='-67601'/>
+<enum name='errSecIncompatibleVersion' value='-67704'/>
+<enum name='errSecIncompleteCertRevocationCheck' value='-67635'/>
+<enum name='errSecInputLengthError' value='-67724'/>
+<enum name='errSecInsufficientClientID' value='-67586'/>
+<enum name='errSecInsufficientCredentials' value='-67822'/>
+<enum name='errSecInteractionNotAllowed' value='-25308'/>
+<enum name='errSecInteractionRequired' value='-25315'/>
+<enum name='errSecInternalComponent' value='-2070'/>
+<enum name='errSecInternalError' value='-67671'/>
+<enum name='errSecInvaldCRLAuthority' value='-67827'/>
+<enum name='errSecInvalidACL' value='-67702'/>
+<enum name='errSecInvalidAccessCredentials' value='-67700'/>
+<enum name='errSecInvalidAccessRequest' value='-67876'/>
+<enum name='errSecInvalidAction' value='-67823'/>
+<enum name='errSecInvalidAddinFunctionTable' value='-67716'/>
+<enum name='errSecInvalidAlgorithm' value='-67747'/>
+<enum name='errSecInvalidAlgorithmParms' value='-67770'/>
+<enum name='errSecInvalidAttributeAccessCredentials' value='-67796'/>
+<enum name='errSecInvalidAttributeBase' value='-67788'/>
+<enum name='errSecInvalidAttributeBlockSize' value='-67764'/>
+<enum name='errSecInvalidAttributeDLDBHandle' value='-67794'/>
+<enum name='errSecInvalidAttributeEffectiveBits' value='-67778'/>
+<enum name='errSecInvalidAttributeEndDate' value='-67782'/>
+<enum name='errSecInvalidAttributeInitVector' value='-67750'/>
+<enum name='errSecInvalidAttributeIterationCount' value='-67792'/>
+<enum name='errSecInvalidAttributeKey' value='-67748'/>
+<enum name='errSecInvalidAttributeKeyLength' value='-67762'/>
+<enum name='errSecInvalidAttributeKeyType' value='-67774'/>
+<enum name='errSecInvalidAttributeLabel' value='-67772'/>
+<enum name='errSecInvalidAttributeMode' value='-67776'/>
+<enum name='errSecInvalidAttributeOutputSize' value='-67766'/>
+<enum name='errSecInvalidAttributePadding' value='-67754'/>
+<enum name='errSecInvalidAttributePassphrase' value='-67760'/>
+<enum name='errSecInvalidAttributePrime' value='-67786'/>
+<enum name='errSecInvalidAttributePrivateKeyFormat' value='-67800'/>
+<enum name='errSecInvalidAttributePublicKeyFormat' value='-67798'/>
+<enum name='errSecInvalidAttributeRandom' value='-67756'/>
+<enum name='errSecInvalidAttributeRounds' value='-67768'/>
+<enum name='errSecInvalidAttributeSalt' value='-67752'/>
+<enum name='errSecInvalidAttributeSeed' value='-67758'/>
+<enum name='errSecInvalidAttributeStartDate' value='-67780'/>
+<enum name='errSecInvalidAttributeSubprime' value='-67790'/>
+<enum name='errSecInvalidAttributeSymmetricKeyFormat' value='-67802'/>
+<enum name='errSecInvalidAttributeVersion' value='-67784'/>
+<enum name='errSecInvalidAttributeWrappedKeyFormat' value='-67804'/>
+<enum name='errSecInvalidAuthority' value='-67824'/>
+<enum name='errSecInvalidAuthorityKeyID' value='-67606'/>
+<enum name='errSecInvalidBaseACLs' value='-67851'/>
+<enum name='errSecInvalidBundleInfo' value='-67857'/>
+<enum name='errSecInvalidCRL' value='-67830'/>
+<enum name='errSecInvalidCRLEncoding' value='-67828'/>
+<enum name='errSecInvalidCRLGroup' value='-67816'/>
+<enum name='errSecInvalidCRLIndex' value='-67858'/>
+<enum name='errSecInvalidCRLType' value='-67829'/>
+<enum name='errSecInvalidCallback' value='-25298'/>
+<enum name='errSecInvalidCertAuthority' value='-67826'/>
+<enum name='errSecInvalidCertificateGroup' value='-67691'/>
+<enum name='errSecInvalidCertificateRef' value='-67690'/>
+<enum name='errSecInvalidContext' value='-67746'/>
+<enum name='errSecInvalidDBList' value='-67681'/>
+<enum name='errSecInvalidDBLocation' value='-67875'/>
+<enum name='errSecInvalidData' value='-67673'/>
+<enum name='errSecInvalidDatabaseBlob' value='-67598'/>
+<enum name='errSecInvalidDigestAlgorithm' value='-67815'/>
+<enum name='errSecInvalidEncoding' value='-67853'/>
+<enum name='errSecInvalidExtendedKeyUsage' value='-67609'/>
+<enum name='errSecInvalidFormType' value='-67831'/>
+<enum name='errSecInvalidGUID' value='-67679'/>
+<enum name='errSecInvalidHandle' value='-67680'/>
+<enum name='errSecInvalidHandleUsage' value='-67668'/>
+<enum name='errSecInvalidID' value='-67832'/>
+<enum name='errSecInvalidIDLinkage' value='-67610'/>
+<enum name='errSecInvalidIdentifier' value='-67833'/>
+<enum name='errSecInvalidIndex' value='-67834'/>
+<enum name='errSecInvalidIndexInfo' value='-67877'/>
+<enum name='errSecInvalidInputVector' value='-67744'/>
+<enum name='errSecInvalidItemRef' value='-25304'/>
+<enum name='errSecInvalidKeyAttributeMask' value='-67738'/>
+<enum name='errSecInvalidKeyBlob' value='-67599'/>
+<enum name='errSecInvalidKeyFormat' value='-67742'/>
+<enum name='errSecInvalidKeyHierarchy' value='-67713'/>
+<enum name='errSecInvalidKeyLabel' value='-67740'/>
+<enum name='errSecInvalidKeyRef' value='-67712'/>
+<enum name='errSecInvalidKeyUsageForPolicy' value='-67608'/>
+<enum name='errSecInvalidKeyUsageMask' value='-67736'/>
+<enum name='errSecInvalidKeychain' value='-25295'/>
+<enum name='errSecInvalidLoginName' value='-67813'/>
+<enum name='errSecInvalidModifyMode' value='-67879'/>
+<enum name='errSecInvalidName' value='-67689'/>
+<enum name='errSecInvalidNetworkAddress' value='-67683'/>
+<enum name='errSecInvalidNewOwner' value='-67878'/>
+<enum name='errSecInvalidNumberOfFields' value='-67685'/>
+<enum name='errSecInvalidOutputVector' value='-67745'/>
+<enum name='errSecInvalidOwnerEdit' value='-25244'/>
+<enum name='errSecInvalidPVC' value='-67708'/>
+<enum name='errSecInvalidParsingModule' value='-67868'/>
+<enum name='errSecInvalidPassthroughID' value='-67682'/>
+<enum name='errSecInvalidPasswordRef' value='-25261'/>
+<enum name='errSecInvalidPointer' value='-67675'/>
+<enum name='errSecInvalidPolicyIdentifiers' value='-67835'/>
+<enum name='errSecInvalidPrefsDomain' value='-25319'/>
+<enum name='errSecInvalidQuery' value='-67693'/>
+<enum name='errSecInvalidReason' value='-67837'/>
+<enum name='errSecInvalidRecord' value='-67701'/>
+<enum name='errSecInvalidRequestInputs' value='-67838'/>
+<enum name='errSecInvalidRequestor' value='-67855'/>
+<enum name='errSecInvalidResponseVector' value='-67839'/>
+<enum name='errSecInvalidRoot' value='-67612'/>
+<enum name='errSecInvalidSampleValue' value='-67703'/>
+<enum name='errSecInvalidScope' value='-67706'/>
+<enum name='errSecInvalidSearchRef' value='-25305'/>
+<enum name='errSecInvalidServiceMask' value='-67717'/>
+<enum name='errSecInvalidSignature' value='-67688'/>
+<enum name='errSecInvalidStopOnPolicy' value='-67840'/>
+<enum name='errSecInvalidSubServiceID' value='-67719'/>
+<enum name='errSecInvalidSubjectKeyID' value='-67607'/>
+<enum name='errSecInvalidSubjectName' value='-67655'/>
+<enum name='errSecInvalidTimeString' value='-67836'/>
+<enum name='errSecInvalidTrustSetting' value='-25242'/>
+<enum name='errSecInvalidTrustSettings' value='-25262'/>
+<enum name='errSecInvalidTuple' value='-67841'/>
+<enum name='errSecInvalidTupleCredendtials' value='-67852'/>
+<enum name='errSecInvalidTupleGroup' value='-67850'/>
+<enum name='errSecInvalidValidityPeriod' value='-67854'/>
+<enum name='errSecInvalidValue' value='-67694'/>
+<enum name='errSecItemNotFound' value='-25300'/>
+<enum name='errSecKeyBlobTypeIncorrect' value='-67732'/>
+<enum name='errSecKeyHeaderInconsistent' value='-67733'/>
+<enum name='errSecKeyIsSensitive' value='-25258'/>
+<enum name='errSecKeySizeNotAllowed' value='-25311'/>
+<enum name='errSecKeyUsageIncorrect' value='-67731'/>
+<enum name='errSecLibraryReferenceNotFound' value='-67715'/>
+<enum name='errSecMDSError' value='-67674'/>
+<enum name='errSecMemoryError' value='-67672'/>
+<enum name='errSecMissingAlgorithmParms' value='-67771'/>
+<enum name='errSecMissingAttributeAccessCredentials' value='-67797'/>
+<enum name='errSecMissingAttributeBase' value='-67789'/>
+<enum name='errSecMissingAttributeBlockSize' value='-67765'/>
+<enum name='errSecMissingAttributeDLDBHandle' value='-67795'/>
+<enum name='errSecMissingAttributeEffectiveBits' value='-67779'/>
+<enum name='errSecMissingAttributeEndDate' value='-67783'/>
+<enum name='errSecMissingAttributeInitVector' value='-67751'/>
+<enum name='errSecMissingAttributeIterationCount' value='-67793'/>
+<enum name='errSecMissingAttributeKey' value='-67749'/>
+<enum name='errSecMissingAttributeKeyLength' value='-67763'/>
+<enum name='errSecMissingAttributeKeyType' value='-67775'/>
+<enum name='errSecMissingAttributeLabel' value='-67773'/>
+<enum name='errSecMissingAttributeMode' value='-67777'/>
+<enum name='errSecMissingAttributeOutputSize' value='-67767'/>
+<enum name='errSecMissingAttributePadding' value='-67755'/>
+<enum name='errSecMissingAttributePassphrase' value='-67761'/>
+<enum name='errSecMissingAttributePrime' value='-67787'/>
+<enum name='errSecMissingAttributePrivateKeyFormat' value='-67801'/>
+<enum name='errSecMissingAttributePublicKeyFormat' value='-67799'/>
+<enum name='errSecMissingAttributeRandom' value='-67757'/>
+<enum name='errSecMissingAttributeRounds' value='-67769'/>
+<enum name='errSecMissingAttributeSalt' value='-67753'/>
+<enum name='errSecMissingAttributeSeed' value='-67759'/>
+<enum name='errSecMissingAttributeStartDate' value='-67781'/>
+<enum name='errSecMissingAttributeSubprime' value='-67791'/>
+<enum name='errSecMissingAttributeSymmetricKeyFormat' value='-67803'/>
+<enum name='errSecMissingAttributeVersion' value='-67785'/>
+<enum name='errSecMissingAttributeWrappedKeyFormat' value='-67805'/>
+<enum name='errSecMissingEntitlement' value='-34018'/>
+<enum name='errSecMissingRequiredExtension' value='-67880'/>
+<enum name='errSecMissingValue' value='-67871'/>
+<enum name='errSecMobileMeCSRVerifyFailure' value='-67665'/>
+<enum name='errSecMobileMeFailedConsistencyCheck' value='-67666'/>
+<enum name='errSecMobileMeNoRequestPending' value='-67664'/>
+<enum name='errSecMobileMeRequestAlreadyPending' value='-67663'/>
+<enum name='errSecMobileMeRequestQueued' value='-67657'/>
+<enum name='errSecMobileMeRequestRedirected' value='-67658'/>
+<enum name='errSecMobileMeServerAlreadyExists' value='-67661'/>
+<enum name='errSecMobileMeServerError' value='-67659'/>
+<enum name='errSecMobileMeServerNotAvailable' value='-67660'/>
+<enum name='errSecMobileMeServerServiceErr' value='-67662'/>
+<enum name='errSecModuleManagerInitializeFailed' value='-67721'/>
+<enum name='errSecModuleManagerNotFound' value='-67722'/>
+<enum name='errSecModuleManifestVerifyFailed' value='-67678'/>
+<enum name='errSecModuleNotLoaded' value='-67718'/>
+<enum name='errSecMultiplePrivKeys' value='-25259'/>
+<enum name='errSecMultipleValuesUnsupported' value='-67842'/>
+<enum name='errSecNetworkFailure' value='-67636'/>
+<enum name='errSecNoAccessForItem' value='-25243'/>
+<enum name='errSecNoBasicConstraints' value='-67604'/>
+<enum name='errSecNoBasicConstraintsCA' value='-67605'/>
+<enum name='errSecNoCertificateModule' value='-25313'/>
+<enum name='errSecNoDefaultAuthority' value='-67844'/>
+<enum name='errSecNoDefaultKeychain' value='-25307'/>
+<enum name='errSecNoFieldValues' value='-67859'/>
+<enum name='errSecNoPolicyModule' value='-25314'/>
+<enum name='errSecNoStorageModule' value='-25312'/>
+<enum name='errSecNoSuchAttr' value='-25303'/>
+<enum name='errSecNoSuchClass' value='-25306'/>
+<enum name='errSecNoSuchKeychain' value='-25294'/>
+<enum name='errSecNoTrustSettings' value='-25263'/>
+<enum name='errSecNotAvailable' value='-25291'/>
+<enum name='errSecNotInitialized' value='-67667'/>
+<enum name='errSecNotLoggedIn' value='-67729'/>
+<enum name='errSecNotSigner' value='-26267'/>
+<enum name='errSecNotTrusted' value='-67843'/>
+<enum name='errSecOCSPBadRequest' value='-67631'/>
+<enum name='errSecOCSPBadResponse' value='-67630'/>
+<enum name='errSecOCSPNoSigner' value='-67640'/>
+<enum name='errSecOCSPNotTrustedToAnchor' value='-67637'/>
+<enum name='errSecOCSPResponderInternalError' value='-67642'/>
+<enum name='errSecOCSPResponderMalformedReq' value='-67641'/>
+<enum name='errSecOCSPResponderSignatureRequired' value='-67644'/>
+<enum name='errSecOCSPResponderTryLater' value='-67643'/>
+<enum name='errSecOCSPResponderUnauthorized' value='-67645'/>
+<enum name='errSecOCSPResponseNonceMismatch' value='-67646'/>
+<enum name='errSecOCSPSignatureError' value='-67639'/>
+<enum name='errSecOCSPStatusUnrecognized' value='-67633'/>
+<enum name='errSecOCSPUnavailable' value='-67632'/>
+<enum name='errSecOpWr' value='-49'/>
+<enum name='errSecOutputLengthError' value='-67725'/>
+<enum name='errSecPVCAlreadyConfigured' value='-67707'/>
+<enum name='errSecPVCReferentNotFound' value='-67669'/>
+<enum name='errSecParam' value='-50'/>
+<enum name='errSecPassphraseRequired' value='-25260'/>
+<enum name='errSecPathLengthConstraintExceeded' value='-67611'/>
+<enum name='errSecPkcs12VerifyFailure' value='-25264'/>
+<enum name='errSecPolicyNotFound' value='-25241'/>
+<enum name='errSecPrivilegeNotGranted' value='-67705'/>
+<enum name='errSecPrivilegeNotSupported' value='-67726'/>
+<enum name='errSecPublicKeyInconsistent' value='-67811'/>
+<enum name='errSecQuerySizeUnknown' value='-67809'/>
+<enum name='errSecQuotaExceeded' value='-67596'/>
+<enum name='errSecReadOnly' value='-25292'/>
+<enum name='errSecReadOnlyAttr' value='-25309'/>
+<enum name='errSecRecordModified' value='-67638'/>
+<enum name='errSecRejectedForm' value='-67845'/>
+<enum name='errSecRequestDescriptor' value='-67856'/>
+<enum name='errSecRequestLost' value='-67846'/>
+<enum name='errSecRequestRejected' value='-67847'/>
+<enum name='errSecResourceSignBadCertChainLength' value='-67652'/>
+<enum name='errSecResourceSignBadExtKeyUsage' value='-67653'/>
+<enum name='errSecSMIMEBadExtendedKeyUsage' value='-67624'/>
+<enum name='errSecSMIMEBadKeyUsage' value='-67625'/>
+<enum name='errSecSMIMEEmailAddressesNotFound' value='-67623'/>
+<enum name='errSecSMIMEKeyUsageNotCritical' value='-67626'/>
+<enum name='errSecSMIMENoEmailAddress' value='-67627'/>
+<enum name='errSecSMIMESubjAltNameNotCritical' value='-67628'/>
+<enum name='errSecSSLBadExtendedKeyUsage' value='-67629'/>
+<enum name='errSecSelfCheckFailed' value='-67676'/>
+<enum name='errSecServiceNotAvailable' value='-67585'/>
+<enum name='errSecSigningTimeMissing' value='-67894'/>
+<enum name='errSecStagedOperationInProgress' value='-67806'/>
+<enum name='errSecStagedOperationNotStarted' value='-67807'/>
+<enum name='errSecSuccess' value='0'/>
+<enum name='errSecTagNotFound' value='-67692'/>
+<enum name='errSecTimestampAddInfoNotAvailable' value='-67892'/>
+<enum name='errSecTimestampBadAlg' value='-67886'/>
+<enum name='errSecTimestampBadDataFormat' value='-67888'/>
+<enum name='errSecTimestampBadRequest' value='-67887'/>
+<enum name='errSecTimestampInvalid' value='-67883'/>
+<enum name='errSecTimestampMissing' value='-67882'/>
+<enum name='errSecTimestampNotTrusted' value='-67884'/>
+<enum name='errSecTimestampRejection' value='-67895'/>
+<enum name='errSecTimestampRevocationNotification' value='-67898'/>
+<enum name='errSecTimestampRevocationWarning' value='-67897'/>
+<enum name='errSecTimestampServiceNotAvailable' value='-67885'/>
+<enum name='errSecTimestampSystemFailure' value='-67893'/>
+<enum name='errSecTimestampTimeNotAvailable' value='-67889'/>
+<enum name='errSecTimestampUnacceptedExtension' value='-67891'/>
+<enum name='errSecTimestampUnacceptedPolicy' value='-67890'/>
+<enum name='errSecTimestampWaiting' value='-67896'/>
+<enum name='errSecTrustNotAvailable' value='-25245'/>
+<enum name='errSecTrustSettingDeny' value='-67654'/>
+<enum name='errSecUnimplemented' value='-4'/>
+<enum name='errSecUnknownCRLExtension' value='-67619'/>
+<enum name='errSecUnknownCertExtension' value='-67618'/>
+<enum name='errSecUnknownCriticalExtensionFlag' value='-67603'/>
+<enum name='errSecUnknownFormat' value='-25257'/>
+<enum name='errSecUnknownQualifiedCertStatement' value='-67656'/>
+<enum name='errSecUnknownTag' value='-67687'/>
+<enum name='errSecUnsupportedAddressType' value='-67848'/>
+<enum name='errSecUnsupportedFieldFormat' value='-67860'/>
+<enum name='errSecUnsupportedFormat' value='-25256'/>
+<enum name='errSecUnsupportedIndexInfo' value='-67861'/>
+<enum name='errSecUnsupportedKeyAttributeMask' value='-67739'/>
+<enum name='errSecUnsupportedKeyFormat' value='-67734'/>
+<enum name='errSecUnsupportedKeyLabel' value='-67741'/>
+<enum name='errSecUnsupportedKeySize' value='-67735'/>
+<enum name='errSecUnsupportedKeyUsageMask' value='-67737'/>
+<enum name='errSecUnsupportedLocality' value='-67862'/>
+<enum name='errSecUnsupportedNumAttributes' value='-67863'/>
+<enum name='errSecUnsupportedNumIndexes' value='-67864'/>
+<enum name='errSecUnsupportedNumRecordTypes' value='-67865'/>
+<enum name='errSecUnsupportedNumSelectionPreds' value='-67873'/>
+<enum name='errSecUnsupportedOperator' value='-67874'/>
+<enum name='errSecUnsupportedQueryLimits' value='-67872'/>
+<enum name='errSecUnsupportedService' value='-67849'/>
+<enum name='errSecUnsupportedVectorOfBuffers' value='-67743'/>
+<enum name='errSecUserCanceled' value='-128'/>
+<enum name='errSecVerificationFailure' value='-67686'/>
+<enum name='errSecVerifyActionFailed' value='-67825'/>
+<enum name='errSecVerifyFailed' value='-67808'/>
+<enum name='errSecWrPerm' value='-61'/>
+<enum name='errSecWrongSecVersion' value='-25310'/>
+<enum name='kAlwaysAuthenticate' value='1'/>
+<enum name='kDTLSProtocol1' value='9'/>
+<enum name='kNeverAuthenticate' value='0'/>
+<enum name='kSSLAborted' value='4'/>
+<enum name='kSSLCiphersuiteGroupATS' value='3'/>
+<enum name='kSSLCiphersuiteGroupATSCompatibility' value='4'/>
+<enum name='kSSLCiphersuiteGroupCompatibility' value='1'/>
+<enum name='kSSLCiphersuiteGroupDefault' value='0'/>
+<enum name='kSSLCiphersuiteGroupLegacy' value='2'/>
+<enum name='kSSLClientCertNone' value='0'/>
+<enum name='kSSLClientCertRejected' value='3'/>
+<enum name='kSSLClientCertRequested' value='1'/>
+<enum name='kSSLClientCertSent' value='2'/>
+<enum name='kSSLClientSide' value='1'/>
+<enum name='kSSLClosed' value='3'/>
+<enum name='kSSLConnected' value='2'/>
+<enum name='kSSLDatagramType' value='1'/>
+<enum name='kSSLHandshake' value='1'/>
+<enum name='kSSLIdle' value='0'/>
+<enum name='kSSLProtocol2' value='1'/>
+<enum name='kSSLProtocol3' value='2'/>
+<enum name='kSSLProtocol3Only' value='3'/>
+<enum name='kSSLProtocolAll' value='6'/>
+<enum name='kSSLProtocolUnknown' value='0'/>
+<enum name='kSSLServerSide' value='0'/>
+<enum name='kSSLSessionOptionAllowRenegotiation' value='8'/>
+<enum name='kSSLSessionOptionAllowServerIdentityChange' value='5'/>
+<enum name='kSSLSessionOptionBreakOnCertRequested' value='1'/>
+<enum name='kSSLSessionOptionBreakOnClientAuth' value='2'/>
+<enum name='kSSLSessionOptionBreakOnClientHello' value='7'/>
+<enum name='kSSLSessionOptionBreakOnServerAuth' value='0'/>
+<enum name='kSSLSessionOptionEnableSessionTickets' value='9'/>
+<enum name='kSSLSessionOptionFallback' value='6'/>
+<enum name='kSSLSessionOptionFalseStart' value='3'/>
+<enum name='kSSLSessionOptionSendOneByteRecord' value='4'/>
+<enum name='kSSLStreamType' value='0'/>
+<enum name='kSecAccessControlAnd' value='32768'/>
+<enum name='kSecAccessControlApplicationPassword' value='2147483648'/>
+<enum name='kSecAccessControlBiometryAny' value='2'/>
+<enum name='kSecAccessControlBiometryCurrentSet' value='8'/>
+<enum name='kSecAccessControlDevicePasscode' value='16'/>
+<enum name='kSecAccessControlOr' value='16384'/>
+<enum name='kSecAccessControlPrivateKeyUsage' value='1073741824'/>
+<enum name='kSecAccessControlTouchIDAny' value='2'/>
+<enum name='kSecAccessControlTouchIDCurrentSet' value='8'/>
+<enum name='kSecAccessControlUserPresence' value='1'/>
+<enum name='kSecKeyOperationTypeDecrypt' value='3'/>
+<enum name='kSecKeyOperationTypeEncrypt' value='2'/>
+<enum name='kSecKeyOperationTypeKeyExchange' value='4'/>
+<enum name='kSecKeyOperationTypeSign' value='0'/>
+<enum name='kSecKeyOperationTypeVerify' value='1'/>
+<enum name='kSecPaddingNone' value='0'/>
+<enum name='kSecPaddingOAEP' value='2'/>
+<enum name='kSecPaddingPKCS1' value='1'/>
+<enum name='kSecPaddingPKCS1MD2' value='32768'/>
+<enum name='kSecPaddingPKCS1MD5' value='32769'/>
+<enum name='kSecPaddingPKCS1SHA1' value='32770'/>
+<enum name='kSecPaddingPKCS1SHA224' value='32771'/>
+<enum name='kSecPaddingPKCS1SHA256' value='32772'/>
+<enum name='kSecPaddingPKCS1SHA384' value='32773'/>
+<enum name='kSecPaddingPKCS1SHA512' value='32774'/>
+<enum name='kSecPaddingSigRaw' value='16384'/>
+<enum name='kSecRevocationCRLMethod' value='2'/>
+<enum name='kSecRevocationNetworkAccessDisabled' value='16'/>
+<enum name='kSecRevocationOCSPMethod' value='1'/>
+<enum name='kSecRevocationPreferCRL' value='4'/>
+<enum name='kSecRevocationRequirePositiveResponse' value='8'/>
+<enum name='kSecRevocationUseAnyAvailableMethod' value='3'/>
+<enum name='kSecTrustResultConfirm' value='2'/>
+<enum name='kSecTrustResultDeny' value='3'/>
+<enum name='kSecTrustResultFatalTrustFailure' value='6'/>
+<enum name='kSecTrustResultInvalid' value='0'/>
+<enum name='kSecTrustResultOtherError' value='7'/>
+<enum name='kSecTrustResultProceed' value='1'/>
+<enum name='kSecTrustResultRecoverableTrustFailure' value='5'/>
+<enum name='kSecTrustResultUnspecified' value='4'/>
+<enum name='kTLSProtocol1' value='4'/>
+<enum name='kTLSProtocol11' value='7'/>
+<enum name='kTLSProtocol12' value='8'/>
+<enum name='kTLSProtocol13' value='10'/>
+<enum name='kTLSProtocol1Only' value='5'/>
+<enum name='kTLSProtocolMaxSupported' value='999'/>
+<enum name='kTryAuthenticate' value='2'/>
+<function name='SSLAddDistinguishedName'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg const='true' declared_type='void * _Nullable' name='derDN' type='^v'/>
+<arg declared_type='size_t' name='derDNLen' type='L' type64='Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLClose'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLContextGetTypeID'>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
+</function>
+<function name='SSLCopyALPNProtocols'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='CFArrayRef _Nullable * _Nonnull' name='protocols' type='^^{__CFArray}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLCopyDistinguishedNames'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='CFArrayRef _Nullable * _Nonnull' name='names' type='^^{__CFArray}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLCopyPeerTrust'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='SecTrustRef _Nullable * _Nonnull' name='trust' type='^^{__SecTrust}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLCopyRequestedPeerName'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='char * _Nonnull' name='peerName' type='*'/>
+<arg declared_type='size_t * _Nonnull' name='peerNameLen' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLCopyRequestedPeerNameLength'>
+<arg declared_type='SSLContextRef _Nonnull' name='ctx' type='^{SSLContext=}'/>
+<arg declared_type='size_t * _Nonnull' name='peerNameLen' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLCreateContext'>
+<arg declared_type='CFAllocatorRef _Nullable' name='alloc' type='^{__CFAllocator=}'/>
+<arg declared_type='SSLProtocolSide' name='protocolSide' type='i'/>
+<arg declared_type='SSLConnectionType' name='connectionType' type='i'/>
+<retval declared_type='SSLContextRef _Nullable' type='^{SSLContext=}'/>
+</function>
+<function name='SSLGetBufferedReadSize'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='size_t * _Nonnull' name='bufSize' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLGetClientCertificateState'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='SSLClientCertificateState * _Nonnull' name='clientState' type='^i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLGetConnection'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='SSLConnectionRef _Nullable * _Nonnull' name='connection' type='^^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLGetDatagramWriteSize'>
+<arg declared_type='SSLContextRef _Nonnull' name='dtlsContext' type='^{SSLContext=}'/>
+<arg declared_type='size_t * _Nonnull' name='bufSize' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLGetEnabledCiphers'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='SSLCipherSuite * _Nonnull' name='ciphers' type='^S'/>
+<arg declared_type='size_t * _Nonnull' name='numCiphers' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLGetMaxDatagramRecordSize'>
+<arg declared_type='SSLContextRef _Nonnull' name='dtlsContext' type='^{SSLContext=}'/>
+<arg declared_type='size_t * _Nonnull' name='maxSize' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLGetNegotiatedCipher'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='SSLCipherSuite * _Nonnull' name='cipherSuite' type='^S'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLGetNegotiatedProtocolVersion'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='SSLProtocol * _Nonnull' name='protocol' type='^i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLGetNumberEnabledCiphers'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='size_t * _Nonnull' name='numCiphers' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLGetNumberSupportedCiphers'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='size_t * _Nonnull' name='numCiphers' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLGetPeerDomainName'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='char * _Nonnull' name='peerName' type='*'/>
+<arg declared_type='size_t * _Nonnull' name='peerNameLen' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLGetPeerDomainNameLength'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='size_t * _Nonnull' name='peerNameLen' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLGetPeerID'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg const='true' declared_type='void * _Nullable * _Nonnull' name='peerID' type='^^v'/>
+<arg declared_type='size_t * _Nonnull' name='peerIDLen' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLGetProtocolVersionMax'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='SSLProtocol * _Nonnull' name='maxVersion' type='^i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLGetProtocolVersionMin'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='SSLProtocol * _Nonnull' name='minVersion' type='^i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLGetSessionOption'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='SSLSessionOption' name='option' type='i'/>
+<arg declared_type='Boolean * _Nonnull' name='value' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLGetSessionState'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='SSLSessionState * _Nonnull' name='state' type='^i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLGetSupportedCiphers'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='SSLCipherSuite * _Nonnull' name='ciphers' type='^S'/>
+<arg declared_type='size_t * _Nonnull' name='numCiphers' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLHandshake'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLReHandshake'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLRead'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='void * _Nonnull' name='data' type='^v'/>
+<arg declared_type='size_t' name='dataLength' type='L' type64='Q'/>
+<arg declared_type='size_t * _Nonnull' name='processed' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLSetALPNProtocols'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='CFArrayRef _Nonnull' name='protocols' type='^{__CFArray=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLSetCertificate'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='CFArrayRef _Nullable' name='certRefs' type='^{__CFArray=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLSetClientSideAuthenticate'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='SSLAuthenticate' name='auth' type='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLSetConnection'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='SSLConnectionRef _Nullable' name='connection' type='@'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLSetDatagramHelloCookie'>
+<arg declared_type='SSLContextRef _Nonnull' name='dtlsContext' type='^{SSLContext=}'/>
+<arg const='true' declared_type='void * _Nullable' name='cookie' type='^v'/>
+<arg declared_type='size_t' name='cookieLen' type='L' type64='Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLSetEnabledCiphers'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg const='true' declared_type='SSLCipherSuite * _Nonnull' name='ciphers' type='^S'/>
+<arg declared_type='size_t' name='numCiphers' type='L' type64='Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLSetEncryptionCertificate'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='CFArrayRef _Nonnull' name='certRefs' type='^{__CFArray=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLSetError'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='OSStatus' name='status' type='l' type64='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLSetIOFuncs'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='SSLReadFunc _Nonnull' function_pointer='true' name='readFunc' type='^?'>
+<arg declared_type='SSLConnectionRef _Nonnull' type='@'/>
+<arg declared_type='void * _Nonnull' type='^v'/>
+<arg declared_type='size_t * _Nonnull' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</arg>
+<arg declared_type='SSLWriteFunc _Nonnull' function_pointer='true' name='writeFunc' type='^?'>
+<arg declared_type='SSLConnectionRef _Nonnull' type='@'/>
+<arg const='true' declared_type='void * _Nonnull' type='^v'/>
+<arg declared_type='size_t * _Nonnull' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</arg>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLSetMaxDatagramRecordSize'>
+<arg declared_type='SSLContextRef _Nonnull' name='dtlsContext' type='^{SSLContext=}'/>
+<arg declared_type='size_t' name='maxSize' type='L' type64='Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLSetOCSPResponse'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='CFDataRef _Nonnull' name='response' type='^{__CFData=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLSetPeerDomainName'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg const='true' declared_type='char * _Nullable' name='peerName' type='*'/>
+<arg declared_type='size_t' name='peerNameLen' type='L' type64='Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLSetPeerID'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg const='true' declared_type='void * _Nullable' name='peerID' type='^v'/>
+<arg declared_type='size_t' name='peerIDLen' type='L' type64='Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLSetProtocolVersionMax'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='SSLProtocol' name='maxVersion' type='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLSetProtocolVersionMin'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='SSLProtocol' name='minVersion' type='i'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLSetSessionConfig'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='CFStringRef _Nonnull' name='config' type='^{__CFString=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLSetSessionOption'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='SSLSessionOption' name='option' type='i'/>
+<arg declared_type='Boolean' name='value' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLSetSessionTicketsEnabled'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg declared_type='Boolean' name='enabled' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SSLWrite'>
+<arg declared_type='SSLContextRef _Nonnull' name='context' type='^{SSLContext=}'/>
+<arg const='true' declared_type='void * _Nullable' name='data' type='^v'/>
+<arg declared_type='size_t' name='dataLength' type='L' type64='Q'/>
+<arg declared_type='size_t * _Nonnull' name='processed' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecAccessControlCreateWithFlags'>
+<arg declared_type='CFAllocatorRef _Nullable' name='allocator' type='^{__CFAllocator=}'/>
+<arg declared_type='CFTypeRef _Nonnull' name='protection' type='@'/>
+<arg declared_type='SecAccessControlCreateFlags' name='flags' type='L' type64='Q'/>
+<arg declared_type='CFErrorRef _Nullable * _Nullable' name='error' type='^^{__CFError}'/>
+<retval declared_type='SecAccessControlRef _Nullable' type='^{__SecAccessControl=}'/>
+</function>
+<function name='SecAccessControlGetTypeID'>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
+</function>
+<function name='SecAddSharedWebCredential'>
+<arg declared_type='CFStringRef _Nonnull' name='fqdn' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef _Nonnull' name='account' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef _Nullable' name='password' type='^{__CFString=}'/>
+<arg declared_type='void (^ _Nonnull)(CFErrorRef _Nullable)' function_pointer='true' name='completionHandler' type='@?'>
+<arg declared_type='CFErrorRef _Nullable' type='^{__CFError=}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='SecCertificateCopyCommonName'>
+<arg declared_type='SecCertificateRef _Nonnull' name='certificate' type='^{__SecCertificate=}'/>
+<arg declared_type='CFStringRef _Nullable * _Nonnull' name='commonName' type='^^{__CFString}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecCertificateCopyData'>
+<arg declared_type='SecCertificateRef _Nonnull' name='certificate' type='^{__SecCertificate=}'/>
+<retval declared_type='CFDataRef _Nonnull' type='^{__CFData=}'/>
+</function>
+<function name='SecCertificateCopyEmailAddresses'>
+<arg declared_type='SecCertificateRef _Nonnull' name='certificate' type='^{__SecCertificate=}'/>
+<arg declared_type='CFArrayRef _Nullable * _Nonnull' name='emailAddresses' type='^^{__CFArray}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecCertificateCopyKey'>
+<arg declared_type='SecCertificateRef _Nonnull' name='certificate' type='^{__SecCertificate=}'/>
+<retval declared_type='SecKeyRef _Nullable' type='^{__SecKey=}'/>
+</function>
+<function name='SecCertificateCopyNormalizedIssuerSequence'>
+<arg declared_type='SecCertificateRef _Nonnull' name='certificate' type='^{__SecCertificate=}'/>
+<retval declared_type='CFDataRef _Nullable' type='^{__CFData=}'/>
+</function>
+<function name='SecCertificateCopyNormalizedSubjectSequence'>
+<arg declared_type='SecCertificateRef _Nonnull' name='certificate' type='^{__SecCertificate=}'/>
+<retval declared_type='CFDataRef _Nullable' type='^{__CFData=}'/>
+</function>
+<function name='SecCertificateCopyPublicKey'>
+<arg declared_type='SecCertificateRef _Nonnull' name='certificate' type='^{__SecCertificate=}'/>
+<retval declared_type='SecKeyRef _Nullable' type='^{__SecKey=}'/>
+</function>
+<function name='SecCertificateCopySerialNumber'>
+<arg declared_type='SecCertificateRef _Nonnull' name='certificate' type='^{__SecCertificate=}'/>
+<retval declared_type='CFDataRef _Nullable' type='^{__CFData=}'/>
+</function>
+<function name='SecCertificateCopySerialNumberData'>
+<arg declared_type='SecCertificateRef _Nonnull' name='certificate' type='^{__SecCertificate=}'/>
+<arg declared_type='CFErrorRef _Nullable * _Nullable' name='error' type='^^{__CFError}'/>
+<retval declared_type='CFDataRef _Nullable' type='^{__CFData=}'/>
+</function>
+<function name='SecCertificateCopySubjectSummary'>
+<arg declared_type='SecCertificateRef _Nonnull' name='certificate' type='^{__SecCertificate=}'/>
+<retval declared_type='CFStringRef _Nullable' type='^{__CFString=}'/>
+</function>
+<function name='SecCertificateCreateWithData'>
+<arg declared_type='CFAllocatorRef _Nullable' name='allocator' type='^{__CFAllocator=}'/>
+<arg declared_type='CFDataRef _Nonnull' name='data' type='^{__CFData=}'/>
+<retval declared_type='SecCertificateRef _Nullable' type='^{__SecCertificate=}'/>
+</function>
+<function name='SecCertificateGetTypeID'>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
+</function>
+<function name='SecCopyErrorMessageString'>
+<arg declared_type='OSStatus' name='status' type='l' type64='i'/>
+<arg declared_type='void * _Nullable' name='reserved' type='^v'/>
+<retval declared_type='CFStringRef _Nullable' type='^{__CFString=}'/>
+</function>
+<function name='SecCreateSharedWebCredentialPassword'>
+<retval declared_type='CFStringRef _Nullable' type='^{__CFString=}'/>
+</function>
+<function name='SecIdentityCopyCertificate'>
+<arg declared_type='SecIdentityRef _Nonnull' name='identityRef' type='^{__SecIdentity=}'/>
+<arg declared_type='SecCertificateRef _Nullable * _Nonnull' name='certificateRef' type='^^{__SecCertificate}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecIdentityCopyPrivateKey'>
+<arg declared_type='SecIdentityRef _Nonnull' name='identityRef' type='^{__SecIdentity=}'/>
+<arg declared_type='SecKeyRef _Nullable * _Nonnull' name='privateKeyRef' type='^^{__SecKey}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecIdentityGetTypeID'>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
+</function>
+<function name='SecItemAdd'>
+<arg declared_type='CFDictionaryRef _Nonnull' name='attributes' type='^{__CFDictionary=}'/>
+<arg declared_type='CFTypeRef _Nullable * _Nullable' name='result' type='^^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecItemCopyMatching'>
+<arg declared_type='CFDictionaryRef _Nonnull' name='query' type='^{__CFDictionary=}'/>
+<arg declared_type='CFTypeRef _Nullable * _Nullable' name='result' type='^^v'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecItemDelete'>
+<arg declared_type='CFDictionaryRef _Nonnull' name='query' type='^{__CFDictionary=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecItemUpdate'>
+<arg declared_type='CFDictionaryRef _Nonnull' name='query' type='^{__CFDictionary=}'/>
+<arg declared_type='CFDictionaryRef _Nonnull' name='attributesToUpdate' type='^{__CFDictionary=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecKeyCopyAttributes'>
+<arg declared_type='SecKeyRef _Nonnull' name='key' type='^{__SecKey=}'/>
+<retval declared_type='CFDictionaryRef _Nullable' type='^{__CFDictionary=}'/>
+</function>
+<function name='SecKeyCopyExternalRepresentation'>
+<arg declared_type='SecKeyRef _Nonnull' name='key' type='^{__SecKey=}'/>
+<arg declared_type='CFErrorRef _Nullable * _Nullable' name='error' type='^^{__CFError}'/>
+<retval declared_type='CFDataRef _Nullable' type='^{__CFData=}'/>
+</function>
+<function name='SecKeyCopyKeyExchangeResult'>
+<arg declared_type='SecKeyRef _Nonnull' name='privateKey' type='^{__SecKey=}'/>
+<arg declared_type='SecKeyAlgorithm _Nonnull' name='algorithm' type='^{__CFString=}'/>
+<arg declared_type='SecKeyRef _Nonnull' name='publicKey' type='^{__SecKey=}'/>
+<arg declared_type='CFDictionaryRef _Nonnull' name='parameters' type='^{__CFDictionary=}'/>
+<arg declared_type='CFErrorRef _Nullable * _Nullable' name='error' type='^^{__CFError}'/>
+<retval declared_type='CFDataRef _Nullable' type='^{__CFData=}'/>
+</function>
+<function name='SecKeyCopyPublicKey'>
+<arg declared_type='SecKeyRef _Nonnull' name='key' type='^{__SecKey=}'/>
+<retval declared_type='SecKeyRef _Nullable' type='^{__SecKey=}'/>
+</function>
+<function name='SecKeyCreateDecryptedData'>
+<arg declared_type='SecKeyRef _Nonnull' name='key' type='^{__SecKey=}'/>
+<arg declared_type='SecKeyAlgorithm _Nonnull' name='algorithm' type='^{__CFString=}'/>
+<arg declared_type='CFDataRef _Nonnull' name='ciphertext' type='^{__CFData=}'/>
+<arg declared_type='CFErrorRef _Nullable * _Nullable' name='error' type='^^{__CFError}'/>
+<retval declared_type='CFDataRef _Nullable' type='^{__CFData=}'/>
+</function>
+<function name='SecKeyCreateEncryptedData'>
+<arg declared_type='SecKeyRef _Nonnull' name='key' type='^{__SecKey=}'/>
+<arg declared_type='SecKeyAlgorithm _Nonnull' name='algorithm' type='^{__CFString=}'/>
+<arg declared_type='CFDataRef _Nonnull' name='plaintext' type='^{__CFData=}'/>
+<arg declared_type='CFErrorRef _Nullable * _Nullable' name='error' type='^^{__CFError}'/>
+<retval declared_type='CFDataRef _Nullable' type='^{__CFData=}'/>
+</function>
+<function name='SecKeyCreateRandomKey'>
+<arg declared_type='CFDictionaryRef _Nonnull' name='parameters' type='^{__CFDictionary=}'/>
+<arg declared_type='CFErrorRef _Nullable * _Nullable' name='error' type='^^{__CFError}'/>
+<retval declared_type='SecKeyRef _Nullable' type='^{__SecKey=}'/>
+</function>
+<function name='SecKeyCreateSignature'>
+<arg declared_type='SecKeyRef _Nonnull' name='key' type='^{__SecKey=}'/>
+<arg declared_type='SecKeyAlgorithm _Nonnull' name='algorithm' type='^{__CFString=}'/>
+<arg declared_type='CFDataRef _Nonnull' name='dataToSign' type='^{__CFData=}'/>
+<arg declared_type='CFErrorRef _Nullable * _Nullable' name='error' type='^^{__CFError}'/>
+<retval declared_type='CFDataRef _Nullable' type='^{__CFData=}'/>
+</function>
+<function name='SecKeyCreateWithData'>
+<arg declared_type='CFDataRef _Nonnull' name='keyData' type='^{__CFData=}'/>
+<arg declared_type='CFDictionaryRef _Nonnull' name='attributes' type='^{__CFDictionary=}'/>
+<arg declared_type='CFErrorRef _Nullable * _Nullable' name='error' type='^^{__CFError}'/>
+<retval declared_type='SecKeyRef _Nullable' type='^{__SecKey=}'/>
+</function>
+<function name='SecKeyDecrypt'>
+<arg declared_type='SecKeyRef _Nonnull' name='key' type='^{__SecKey=}'/>
+<arg declared_type='SecPadding' name='padding' type='I'/>
+<arg const='true' declared_type='uint8_t * _Nonnull' name='cipherText' type='*'/>
+<arg declared_type='size_t' name='cipherTextLen' type='L' type64='Q'/>
+<arg declared_type='uint8_t * _Nonnull' name='plainText' type='*'/>
+<arg declared_type='size_t * _Nonnull' name='plainTextLen' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecKeyEncrypt'>
+<arg declared_type='SecKeyRef _Nonnull' name='key' type='^{__SecKey=}'/>
+<arg declared_type='SecPadding' name='padding' type='I'/>
+<arg const='true' declared_type='uint8_t * _Nonnull' name='plainText' type='*'/>
+<arg declared_type='size_t' name='plainTextLen' type='L' type64='Q'/>
+<arg declared_type='uint8_t * _Nonnull' name='cipherText' type='*'/>
+<arg declared_type='size_t * _Nonnull' name='cipherTextLen' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecKeyGeneratePair'>
+<arg declared_type='CFDictionaryRef _Nonnull' name='parameters' type='^{__CFDictionary=}'/>
+<arg declared_type='SecKeyRef _Nullable * _Nullable' name='publicKey' type='^^{__SecKey}'/>
+<arg declared_type='SecKeyRef _Nullable * _Nullable' name='privateKey' type='^^{__SecKey}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecKeyGetBlockSize'>
+<arg declared_type='SecKeyRef _Nonnull' name='key' type='^{__SecKey=}'/>
+<retval declared_type='size_t' type='L' type64='Q'/>
+</function>
+<function name='SecKeyGetTypeID'>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
+</function>
+<function name='SecKeyIsAlgorithmSupported'>
+<arg declared_type='SecKeyRef _Nonnull' name='key' type='^{__SecKey=}'/>
+<arg declared_type='SecKeyOperationType' name='operation' type='l' type64='q'/>
+<arg declared_type='SecKeyAlgorithm _Nonnull' name='algorithm' type='^{__CFString=}'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='SecKeyRawSign'>
+<arg declared_type='SecKeyRef _Nonnull' name='key' type='^{__SecKey=}'/>
+<arg declared_type='SecPadding' name='padding' type='I'/>
+<arg const='true' declared_type='uint8_t * _Nonnull' name='dataToSign' type='*'/>
+<arg declared_type='size_t' name='dataToSignLen' type='L' type64='Q'/>
+<arg declared_type='uint8_t * _Nonnull' name='sig' type='*'/>
+<arg declared_type='size_t * _Nonnull' name='sigLen' type='^I' type64='^Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecKeyRawVerify'>
+<arg declared_type='SecKeyRef _Nonnull' name='key' type='^{__SecKey=}'/>
+<arg declared_type='SecPadding' name='padding' type='I'/>
+<arg const='true' declared_type='uint8_t * _Nonnull' name='signedData' type='*'/>
+<arg declared_type='size_t' name='signedDataLen' type='L' type64='Q'/>
+<arg const='true' declared_type='uint8_t * _Nonnull' name='sig' type='*'/>
+<arg declared_type='size_t' name='sigLen' type='L' type64='Q'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecKeyVerifySignature'>
+<arg declared_type='SecKeyRef _Nonnull' name='key' type='^{__SecKey=}'/>
+<arg declared_type='SecKeyAlgorithm _Nonnull' name='algorithm' type='^{__CFString=}'/>
+<arg declared_type='CFDataRef _Nonnull' name='signedData' type='^{__CFData=}'/>
+<arg declared_type='CFDataRef _Nonnull' name='signature' type='^{__CFData=}'/>
+<arg declared_type='CFErrorRef _Nullable * _Nullable' name='error' type='^^{__CFError}'/>
+<retval declared_type='Boolean' type='B'/>
+</function>
+<function name='SecPKCS12Import'>
+<arg declared_type='CFDataRef _Nonnull' name='pkcs12_data' type='^{__CFData=}'/>
+<arg declared_type='CFDictionaryRef _Nonnull' name='options' type='^{__CFDictionary=}'/>
+<arg declared_type='CFArrayRef _Nullable * _Nonnull' name='items' type='^^{__CFArray}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecPolicyCopyProperties'>
+<arg declared_type='SecPolicyRef _Nonnull' name='policyRef' type='^{__SecPolicy=}'/>
+<retval declared_type='CFDictionaryRef _Nullable' type='^{__CFDictionary=}'/>
+</function>
+<function name='SecPolicyCreateBasicX509'>
+<retval declared_type='SecPolicyRef _Nonnull' type='^{__SecPolicy=}'/>
+</function>
+<function name='SecPolicyCreateRevocation'>
+<arg declared_type='CFOptionFlags' name='revocationFlags' type='L' type64='Q'/>
+<retval declared_type='SecPolicyRef _Nullable' type='^{__SecPolicy=}'/>
+</function>
+<function name='SecPolicyCreateSSL'>
+<arg declared_type='Boolean' name='server' type='B'/>
+<arg declared_type='CFStringRef _Nullable' name='hostname' type='^{__CFString=}'/>
+<retval declared_type='SecPolicyRef _Nonnull' type='^{__SecPolicy=}'/>
+</function>
+<function name='SecPolicyCreateWithProperties'>
+<arg declared_type='CFTypeRef _Nonnull' name='policyIdentifier' type='@'/>
+<arg declared_type='CFDictionaryRef _Nullable' name='properties' type='^{__CFDictionary=}'/>
+<retval declared_type='SecPolicyRef _Nullable' type='^{__SecPolicy=}'/>
+</function>
+<function name='SecPolicyGetTypeID'>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
+</function>
+<function name='SecRandomCopyBytes'>
+<arg declared_type='SecRandomRef _Nullable' name='rnd' type='^{__SecRandom=}'/>
+<arg declared_type='size_t' name='count' type='L' type64='Q'/>
+<arg declared_type='void * _Nonnull' name='bytes' type='^v'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='SecRequestSharedWebCredential'>
+<arg declared_type='CFStringRef _Nullable' name='fqdn' type='^{__CFString=}'/>
+<arg declared_type='CFStringRef _Nullable' name='account' type='^{__CFString=}'/>
+<arg declared_type='void (^ _Nonnull)(CFArrayRef _Nullable, CFErrorRef _Nullable)' function_pointer='true' name='completionHandler' type='@?'>
+<arg declared_type='CFArrayRef _Nullable' type='^{__CFArray=}'/>
+<arg declared_type='CFErrorRef _Nullable' type='^{__CFError=}'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='SecTrustCopyCustomAnchorCertificates'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<arg declared_type='CFArrayRef _Nullable * _Nonnull' name='anchors' type='^^{__CFArray}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecTrustCopyExceptions'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<retval declared_type='CFDataRef _Nonnull' type='^{__CFData=}'/>
+</function>
+<function name='SecTrustCopyPolicies'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<arg declared_type='CFArrayRef _Nullable * _Nonnull' name='policies' type='^^{__CFArray}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecTrustCopyProperties'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<retval declared_type='CFArrayRef _Nullable' type='^{__CFArray=}'/>
+</function>
+<function name='SecTrustCopyPublicKey'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<retval declared_type='SecKeyRef _Nullable' type='^{__SecKey=}'/>
+</function>
+<function name='SecTrustCopyResult'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<retval declared_type='CFDictionaryRef _Nullable' type='^{__CFDictionary=}'/>
+</function>
+<function name='SecTrustCreateWithCertificates'>
+<arg declared_type='CFTypeRef _Nonnull' name='certificates' type='@'/>
+<arg declared_type='CFTypeRef _Nullable' name='policies' type='@'/>
+<arg declared_type='SecTrustRef _Nullable * _Nonnull' name='trust' type='^^{__SecTrust}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecTrustEvaluate'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<arg declared_type='SecTrustResultType * _Nonnull' name='result' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecTrustEvaluateAsync'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<arg declared_type='dispatch_queue_t _Nullable' name='queue' type='@'/>
+<arg declared_type='SecTrustCallback _Nonnull' function_pointer='true' name='result' type='@?'>
+<arg declared_type='SecTrustRef _Nonnull' type='^{__SecTrust=}'/>
+<arg declared_type='SecTrustResultType' type='I'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecTrustEvaluateWithError'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<arg declared_type='CFErrorRef _Nullable * _Nullable' name='error' type='^^{__CFError}'/>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function name='SecTrustGetCertificateAtIndex'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<arg declared_type='CFIndex' name='ix' type='l' type64='q'/>
+<retval declared_type='SecCertificateRef _Nullable' type='^{__SecCertificate=}'/>
+</function>
+<function name='SecTrustGetCertificateCount'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<retval declared_type='CFIndex' type='l' type64='q'/>
+</function>
+<function name='SecTrustGetNetworkFetchAllowed'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<arg declared_type='Boolean * _Nonnull' name='allowFetch' type='^B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecTrustGetTrustResult'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<arg declared_type='SecTrustResultType * _Nonnull' name='result' type='^I'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecTrustGetTypeID'>
+<retval declared_type='CFTypeID' type='L' type64='Q'/>
+</function>
+<function name='SecTrustGetVerifyTime'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<retval declared_type='CFAbsoluteTime' type='d'/>
+</function>
+<function name='SecTrustSetAnchorCertificates'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<arg declared_type='CFArrayRef _Nonnull' name='anchorCertificates' type='^{__CFArray=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecTrustSetAnchorCertificatesOnly'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<arg declared_type='Boolean' name='anchorCertificatesOnly' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecTrustSetExceptions'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<arg declared_type='CFDataRef _Nullable' name='exceptions' type='^{__CFData=}'/>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function name='SecTrustSetNetworkFetchAllowed'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<arg declared_type='Boolean' name='allowFetch' type='B'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecTrustSetOCSPResponse'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<arg declared_type='CFTypeRef _Nullable' name='responseData' type='@'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecTrustSetPolicies'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<arg declared_type='CFTypeRef _Nonnull' name='policies' type='@'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecTrustSetSignedCertificateTimestamps'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<arg declared_type='CFArrayRef _Nullable' name='sctArray' type='^{__CFArray=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='SecTrustSetVerifyDate'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<arg declared_type='CFDateRef _Nonnull' name='verifyDate' type='^{__CFDate=}'/>
+<retval declared_type='OSStatus' type='l' type64='i'/>
+</function>
+<function name='sec_certificate_copy_ref'>
+<arg declared_type='sec_certificate_t _Nonnull' name='certificate' type='@'/>
+<retval declared_type='SecCertificateRef _Nonnull' type='^{__SecCertificate=}'/>
+</function>
+<function name='sec_certificate_create'>
+<arg declared_type='SecCertificateRef _Nonnull' name='certificate' type='^{__SecCertificate=}'/>
+<retval already_retained='true' declared_type='sec_certificate_t _Nullable' type='@'/>
+</function>
+<function name='sec_identity_copy_certificates_ref'>
+<arg declared_type='sec_identity_t _Nonnull' name='identity' type='@'/>
+<retval declared_type='CFArrayRef _Nonnull' type='^{__CFArray=}'/>
+</function>
+<function name='sec_identity_copy_ref'>
+<arg declared_type='sec_identity_t _Nonnull' name='identity' type='@'/>
+<retval declared_type='SecIdentityRef _Nonnull' type='^{__SecIdentity=}'/>
+</function>
+<function name='sec_identity_create'>
+<arg declared_type='SecIdentityRef _Nonnull' name='identity' type='^{__SecIdentity=}'/>
+<retval already_retained='true' declared_type='sec_identity_t _Nullable' type='@'/>
+</function>
+<function name='sec_identity_create_with_certificates'>
+<arg declared_type='SecIdentityRef _Nonnull' name='identity' type='^{__SecIdentity=}'/>
+<arg declared_type='CFArrayRef _Nonnull' name='certificates' type='^{__CFArray=}'/>
+<retval already_retained='true' declared_type='sec_identity_t _Nullable' type='@'/>
+</function>
+<function name='sec_protocol_metadata_access_distinguished_names'>
+<arg declared_type='sec_protocol_metadata_t _Nonnull' name='metadata' type='@'/>
+<arg declared_type='void (^ _Nonnull)(dispatch_data_t _Nonnull)' function_pointer='true' name='handler' type='@?'>
+<arg declared_type='dispatch_data_t _Nonnull' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function name='sec_protocol_metadata_access_ocsp_response'>
+<arg declared_type='sec_protocol_metadata_t _Nonnull' name='metadata' type='@'/>
+<arg declared_type='void (^ _Nonnull)(dispatch_data_t _Nonnull)' function_pointer='true' name='handler' type='@?'>
+<arg declared_type='dispatch_data_t _Nonnull' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function name='sec_protocol_metadata_access_peer_certificate_chain'>
+<arg declared_type='sec_protocol_metadata_t _Nonnull' name='metadata' type='@'/>
+<arg declared_type='void (^ _Nonnull)(sec_certificate_t _Nonnull)' function_pointer='true' name='handler' type='@?'>
+<arg declared_type='sec_certificate_t _Nonnull' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function name='sec_protocol_metadata_access_supported_signature_algorithms'>
+<arg declared_type='sec_protocol_metadata_t _Nonnull' name='metadata' type='@'/>
+<arg declared_type='void (^ _Nonnull)(uint16_t)' function_pointer='true' name='handler' type='@?'>
+<arg declared_type='uint16_t' type='S'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function name='sec_protocol_metadata_challenge_parameters_are_equal'>
+<arg declared_type='sec_protocol_metadata_t _Nonnull' name='metadataA' type='@'/>
+<arg declared_type='sec_protocol_metadata_t _Nonnull' name='metadataB' type='@'/>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function name='sec_protocol_metadata_copy_peer_public_key'>
+<arg declared_type='sec_protocol_metadata_t _Nonnull' name='metadata' type='@'/>
+<retval already_retained='true' declared_type='dispatch_data_t _Nullable' type='@'/>
+</function>
+<function name='sec_protocol_metadata_create_secret'>
+<arg declared_type='sec_protocol_metadata_t _Nonnull' name='metadata' type='@'/>
+<arg declared_type='size_t' name='label_len' type='L' type64='Q'/>
+<arg const='true' declared_type='char * _Nonnull' name='label' type='*'/>
+<arg declared_type='size_t' name='exporter_length' type='L' type64='Q'/>
+<retval already_retained='true' declared_type='dispatch_data_t _Nullable' type='@'/>
+</function>
+<function name='sec_protocol_metadata_create_secret_with_context'>
+<arg declared_type='sec_protocol_metadata_t _Nonnull' name='metadata' type='@'/>
+<arg declared_type='size_t' name='label_len' type='L' type64='Q'/>
+<arg const='true' declared_type='char * _Nonnull' name='label' type='*'/>
+<arg declared_type='size_t' name='context_len' type='L' type64='Q'/>
+<arg const='true' declared_type='uint8_t * _Nonnull' name='context' type='*'/>
+<arg declared_type='size_t' name='exporter_length' type='L' type64='Q'/>
+<retval already_retained='true' declared_type='dispatch_data_t _Nullable' type='@'/>
+</function>
+<function name='sec_protocol_metadata_get_early_data_accepted'>
+<arg declared_type='sec_protocol_metadata_t _Nonnull' name='metadata' type='@'/>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function name='sec_protocol_metadata_get_negotiated_ciphersuite'>
+<arg declared_type='sec_protocol_metadata_t _Nonnull' name='metadata' type='@'/>
+<retval declared_type='SSLCipherSuite' type='S'/>
+</function>
+<function name='sec_protocol_metadata_get_negotiated_protocol'>
+<arg declared_type='sec_protocol_metadata_t _Nonnull' name='metadata' type='@'/>
+<retval const='true' declared_type='char * _Nullable' type='*'/>
+</function>
+<function name='sec_protocol_metadata_get_negotiated_protocol_version'>
+<arg declared_type='sec_protocol_metadata_t _Nonnull' name='metadata' type='@'/>
+<retval declared_type='SSLProtocol' type='i'/>
+</function>
+<function name='sec_protocol_metadata_peers_are_equal'>
+<arg declared_type='sec_protocol_metadata_t _Nonnull' name='metadataA' type='@'/>
+<arg declared_type='sec_protocol_metadata_t _Nonnull' name='metadataB' type='@'/>
+<retval declared_type='_Bool' type='B'/>
+</function>
+<function name='sec_protocol_options_add_pre_shared_key'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg declared_type='dispatch_data_t _Nonnull' name='psk' type='@'/>
+<arg declared_type='dispatch_data_t _Nonnull' name='psk_identity' type='@'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_add_tls_application_protocol'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg const='true' declared_type='char * _Nonnull' name='application_protocol' type='*'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_add_tls_ciphersuite'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg declared_type='SSLCipherSuite' name='ciphersuite' type='S'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_add_tls_ciphersuite_group'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg declared_type='SSLCiphersuiteGroup' name='group' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_set_challenge_block'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg declared_type='sec_protocol_challenge_t _Nonnull' function_pointer='true' name='challenge_block' type='@?'>
+<arg declared_type='sec_protocol_metadata_t _Nonnull' type='@'/>
+<arg declared_type='sec_protocol_challenge_complete_t _Nonnull' function_pointer='true' type='@?'>
+<arg declared_type='sec_identity_t _Nonnull' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='dispatch_queue_t _Nonnull' name='challenge_queue' type='@'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_set_key_update_block'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg declared_type='sec_protocol_key_update_t _Nonnull' function_pointer='true' name='key_update_block' type='@?'>
+<arg declared_type='sec_protocol_metadata_t _Nonnull' type='@'/>
+<arg declared_type='sec_protocol_key_update_complete_t _Nonnull' function_pointer='true' type='@?'>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='dispatch_queue_t _Nonnull' name='key_update_queue' type='@'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_set_local_identity'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg declared_type='sec_identity_t _Nonnull' name='identity' type='@'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_set_peer_authentication_required'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg declared_type='_Bool' name='peer_authentication_required' type='B'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_set_tls_diffie_hellman_parameters'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg declared_type='dispatch_data_t _Nonnull' name='params' type='@'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_set_tls_false_start_enabled'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg declared_type='_Bool' name='false_start_enabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_set_tls_is_fallback_attempt'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg declared_type='_Bool' name='is_fallback_attempt' type='B'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_set_tls_max_version'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg declared_type='SSLProtocol' name='version' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_set_tls_min_version'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg declared_type='SSLProtocol' name='version' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_set_tls_ocsp_enabled'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg declared_type='_Bool' name='ocsp_enabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_set_tls_renegotiation_enabled'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg declared_type='_Bool' name='renegotiation_enabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_set_tls_resumption_enabled'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg declared_type='_Bool' name='resumption_enabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_set_tls_sct_enabled'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg declared_type='_Bool' name='sct_enabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_set_tls_server_name'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg const='true' declared_type='char * _Nonnull' name='server_name' type='*'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_set_tls_tickets_enabled'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg declared_type='_Bool' name='tickets_enabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_protocol_options_set_verify_block'>
+<arg declared_type='sec_protocol_options_t _Nonnull' name='options' type='@'/>
+<arg declared_type='sec_protocol_verify_t _Nonnull' function_pointer='true' name='verify_block' type='@?'>
+<arg declared_type='sec_protocol_metadata_t _Nonnull' type='@'/>
+<arg declared_type='sec_trust_t _Nonnull' type='@'/>
+<arg declared_type='sec_protocol_verify_complete_t _Nonnull' function_pointer='true' type='@?'>
+<arg declared_type='_Bool' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='dispatch_queue_t _Nonnull' name='verify_block_queue' type='@'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_release'>
+<arg declared_type='void*' name='obj' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='sec_retain'>
+<arg declared_type='void*' name='obj' type='^v'/>
+<retval declared_type='void*' type='^v'/>
+</function>
+<function name='sec_trust_copy_ref'>
+<arg declared_type='sec_trust_t _Nonnull' name='trust' type='@'/>
+<retval declared_type='SecTrustRef _Nonnull' type='^{__SecTrust=}'/>
+</function>
+<function name='sec_trust_create'>
+<arg declared_type='SecTrustRef _Nonnull' name='trust' type='^{__SecTrust=}'/>
+<retval already_retained='true' declared_type='sec_trust_t _Nullable' type='@'/>
+</function>
+</signatures>

@@ -1,5 +1,9 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreLocation.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <constant const='true' declared_type64='NSString * _Nonnull' name='CKAccountChangedNotification' type64='@'/>
 <constant const='true' declared_type64='NSString * _Nonnull' name='CKCurrentUserDefaultName' type64='@'/>
 <constant const='true' declared_type64='NSString * _Nonnull' name='CKErrorDomain' type64='@'/>
@@ -163,7 +167,7 @@
 </class>
 <class name='CKAsset'>
 <method selector='fileURL'>
-<retval declared_type64='NSURL * _Nonnull' type64='@'/>
+<retval declared_type64='NSURL * _Nullable' type64='@'/>
 </method>
 <method selector='initWithFileURL:'>
 <arg declared_type64='NSURL * _Nonnull' index='0' name='fileURL' type64='@'/>
@@ -1612,7 +1616,7 @@
 </method>
 <method class_method='true' selector='notificationFromRemoteNotificationDictionary:'>
 <arg declared_type64='NSDictionary * _Nonnull' index='0' name='notificationDictionary' type64='@'/>
-<retval declared_type64='instancetype _Nonnull' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
 </method>
 <method selector='notificationID'>
 <retval declared_type64='CKNotificationID * _Nullable' type64='@'/>

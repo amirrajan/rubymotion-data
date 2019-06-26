@@ -6252,6 +6252,15 @@
 <arg declared_type='Py_UNICODE' name='ch' type='S'/>
 <retval declared_type='Py_UNICODE' type='S'/>
 </function>
+<function name='_Py_Compare'>
+<arg declared_type64='expr_ty' name='left' type64='^{_expr=}'/>
+<arg declared_type64='asdl_int_seq*' name='ops' type64='^{_asdl_int_seq=i[1i]}'/>
+<arg declared_type64='asdl_seq*' name='comparators' type64='^{_asdl_seq=i[1^v]}'/>
+<arg declared_type64='int' name='lineno' type64='i'/>
+<arg declared_type64='int' name='col_offset' type64='i'/>
+<arg declared_type64='PyArena*' name='arena' type64='^{_arena=}'/>
+<retval declared_type64='expr_ty' type64='^{_expr=}'/>
+</function>
 <function name='_Py_c_abs'>
 <arg declared_type='Py_complex' type='{_Py_complex=dd}'/>
 <retval declared_type='double' type='d'/>
@@ -6380,7 +6389,6 @@
 </function>
 <function_alias name='PyBytes_AsString' original='PyString_AsString'/>
 <function_alias name='PyBytes_AsStringAndSize' original='PyString_AsStringAndSize'/>
-<function_alias name='PyBytes_CheckExact' original='PyString_Concat'/>
 <function_alias name='PyBytes_Concat' original='PyString_Concat'/>
 <function_alias name='PyBytes_ConcatAndDel' original='PyString_ConcatAndDel'/>
 <function_alias name='PyBytes_DecodeEscape' original='PyString_DecodeEscape'/>
@@ -6502,6 +6510,7 @@
 <function_alias name='_PyUnicode_ToUppercase' original='_PyUnicodeUCS2_ToUppercase'/>
 <function_alias name='addfirstsets' original='addfirstsets'/>
 <function_alias name='addlabel' original='addlabel'/>
+<function_alias name='addstate' original='addstate'/>
 <function_alias name='c_abs' original='_Py_c_abs'/>
 <function_alias name='c_diff' original='_Py_c_diff'/>
 <function_alias name='c_neg' original='_Py_c_neg'/>
@@ -6509,7 +6518,10 @@
 <function_alias name='c_prod' original='_Py_c_prod'/>
 <function_alias name='c_quot' original='_Py_c_quot'/>
 <function_alias name='c_sum' original='_Py_c_sum'/>
+<function_alias name='dumptree' original='_Py_Compare'/>
 <function_alias name='findlabel' original='findlabel'/>
+<function_alias name='meta_grammar' original='meta_grammar'/>
+<function_alias name='newgrammar' original='newgrammar'/>
 <function_alias name='printgrammar' original='printgrammar'/>
 <function_alias name='printnonterminals' original='printnonterminals'/>
 <function_alias name='translatelabels' original='translatelabels'/>

@@ -1,5 +1,8 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
 <struct name='AuthorizationCallbacks' type64='{AuthorizationCallbacks=&quot;version&quot;I&quot;SetResult&quot;^?&quot;RequestInterrupt&quot;^?&quot;DidDeactivate&quot;^?&quot;GetContextValue&quot;^?&quot;SetContextValue&quot;^?&quot;GetHintValue&quot;^?&quot;SetHintValue&quot;^?&quot;GetArguments&quot;^?&quot;GetSessionId&quot;^?&quot;GetImmutableHintValue&quot;^?&quot;GetLAContext&quot;^?&quot;GetTokenIdentities&quot;^?&quot;GetTKTokenWatcher&quot;^?}'>
 <field declared_type64='UInt32' name='version' type64='I'/>
 <field declared_type64='OSStatus (* _Nonnull)(AuthorizationEngineRef _Nonnull, AuthorizationResult)' function_pointer='true' name='SetResult' type64='^?'>
@@ -8013,6 +8016,7 @@
 <string_constant name='kSecTrustSettingsResult' nsstring='true' value='kSecTrustSettingsResult'/>
 <string_constant name='kSystemKeychainDir' value='/Library/Keychains/'/>
 <string_constant name='kSystemKeychainName' value='System.keychain'/>
+<string_constant name='kSystemKeychainPath' value='/Library/Keychains/System.keychain'/>
 <string_constant name='kSystemUnlockFile' value='/var/db/SystemKey'/>
 <enum name='APPLE_ADS_OID' value64='100'/>
 <enum name='APPLE_ADS_OID_LENGTH' value64='7'/>
@@ -10488,6 +10492,7 @@
 <enum name='errSecCSResourcesInvalid' value64='-67055'/>
 <enum name='errSecCSResourcesNotFound' value64='-67056'/>
 <enum name='errSecCSResourcesNotSealed' value64='-67057'/>
+<enum name='errSecCSRevokedNotarization' value64='-66992'/>
 <enum name='errSecCSSigDBAccess' value64='-67032'/>
 <enum name='errSecCSSigDBDenied' value64='-67033'/>
 <enum name='errSecCSSignatureFailed' value64='-67061'/>
@@ -10968,6 +10973,7 @@
 <enum name='kSecAuthenticationTypeNTLM' value64='1835824238'/>
 <enum name='kSecAuthenticationTypeRPA' value64='1633775730'/>
 <enum name='kSecCSBasicValidateOnly' value64='6'/>
+<enum name='kSecCSCalculateCMSDigest' value64='64'/>
 <enum name='kSecCSCheckAllArchitectures' value64='1'/>
 <enum name='kSecCSCheckGatekeeperArchitectures' value64='65'/>
 <enum name='kSecCSCheckNestedCode' value64='8'/>
@@ -10991,6 +10997,7 @@
 <enum name='kSecCSRestrictSymlinks' value64='128'/>
 <enum name='kSecCSRestrictToAppLike' value64='256'/>
 <enum name='kSecCSSigningInformation' value64='2'/>
+<enum name='kSecCSSingleThreaded' value64='4096'/>
 <enum name='kSecCSSkipResourceDirectory' value64='32'/>
 <enum name='kSecCSStrictValidate' value64='16'/>
 <enum name='kSecCSUseAllArchitectures' value64='1'/>
@@ -14914,6 +14921,11 @@
 <function name='SecTrustSetPolicies'>
 <arg declared_type64='SecTrustRef _Nonnull' name='trust' type64='^{__SecTrust=}'/>
 <arg declared_type64='CFTypeRef _Nonnull' name='policies' type64='@'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='SecTrustSetSignedCertificateTimestamps'>
+<arg declared_type64='SecTrustRef _Nonnull' name='trust' type64='^{__SecTrust=}'/>
+<arg declared_type64='CFArrayRef _Nullable' name='sctArray' type64='^{__CFArray=}'/>
 <retval declared_type64='OSStatus' type64='i'/>
 </function>
 <function name='SecTrustSetVerifyDate'>

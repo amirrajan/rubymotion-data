@@ -1,5 +1,11 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
 <struct name='ALMXGlyphEntry' type64='{ALMXGlyphEntry=&quot;GlyphIndexOffset&quot;s&quot;HorizontalAdvance&quot;s&quot;XOffsetToHOrigin&quot;s&quot;VerticalAdvance&quot;s&quot;YOffsetToVOrigin&quot;s}'>
 <field declared_type64='SInt16' name='GlyphIndexOffset' type64='s'/>
 <field declared_type64='SInt16' name='HorizontalAdvance' type64='s'/>
@@ -764,6 +770,7 @@
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCTStrokeWidthAttributeName' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCTSuperscriptAttributeName' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCTTabColumnTerminatorsAttributeName' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCTTypesetterOptionAllowUnboundedLayout' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCTTypesetterOptionDisableBidiProcessing' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCTTypesetterOptionForcedEmbeddingLevel' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCTUnderlineColorAttributeName' type64='^{__CFString=}'/>
@@ -1143,6 +1150,7 @@
 <enum name='kCTVersionNumber10_11' value64='524288'/>
 <enum name='kCTVersionNumber10_12' value64='589824'/>
 <enum name='kCTVersionNumber10_13' value64='655360'/>
+<enum name='kCTVersionNumber10_14' value64='720896'/>
 <enum name='kCTVersionNumber10_5' value64='131072'/>
 <enum name='kCTVersionNumber10_5_2' value64='131073'/>
 <enum name='kCTVersionNumber10_5_3' value64='131074'/>
@@ -2389,6 +2397,10 @@
 <arg declared_type64='CFAttributedStringRef _Nonnull' name='string' type64='^{__CFAttributedString=}'/>
 <retval declared_type64='CTFramesetterRef _Nonnull' type64='^{__CTFramesetter=}'/>
 </function>
+<function name='CTFramesetterCreateWithTypesetter'>
+<arg declared_type64='CTTypesetterRef _Nonnull' name='typesetter' type64='^{__CTTypesetter=}'/>
+<retval declared_type64='CTFramesetterRef _Nonnull' type64='^{__CTFramesetter=}'/>
+</function>
 <function name='CTFramesetterGetTypeID'>
 <retval declared_type64='CFTypeID' type64='Q'/>
 </function>
@@ -2718,7 +2730,7 @@
 <function name='CTTypesetterCreateWithAttributedStringAndOptions'>
 <arg declared_type64='CFAttributedStringRef _Nonnull' name='string' type64='^{__CFAttributedString=}'/>
 <arg declared_type64='CFDictionaryRef _Nullable' name='options' type64='^{__CFDictionary=}'/>
-<retval declared_type64='CTTypesetterRef _Nonnull' type64='^{__CTTypesetter=}'/>
+<retval declared_type64='CTTypesetterRef _Nullable' type64='^{__CTTypesetter=}'/>
 </function>
 <function name='CTTypesetterGetTypeID'>
 <retval declared_type64='CFTypeID' type64='Q'/>

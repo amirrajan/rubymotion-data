@@ -1,5 +1,8 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
 <struct name='CTError' type64='{_CTError=&quot;domain&quot;i&quot;error&quot;i}'>
 <field declared_type64='SInt32' name='domain' type64='i'/>
 <field declared_type64='SInt32' name='error' type64='i'/>
@@ -7,4 +10,16 @@
 <enum name='kCTErrorDomainMach' value64='2'/>
 <enum name='kCTErrorDomainNoError' value64='0'/>
 <enum name='kCTErrorDomainPOSIX' value64='1'/>
+<class name='NSObject'>
+<method selector='subscriberTokenRefreshed:'>
+<arg declared_type64='CTSubscriber * _Nonnull' index='0' name='subscriber' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='CTSubscriberDelegate'>
+<method selector='subscriberTokenRefreshed:' type64='v24@0:8@16'>
+<arg declared_type64='CTSubscriber * _Nonnull' index='0' name='subscriber' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
 </signatures>

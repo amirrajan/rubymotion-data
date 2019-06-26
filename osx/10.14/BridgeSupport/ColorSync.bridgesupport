@@ -1,5 +1,9 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
 <struct name='ColorSyncMD5' type64='{_ColorSyncMD5=&quot;digest&quot;[16C]}'>
 <field declared_type64='uint8_t*' name='digest' type64='[16C]'/>
 </struct>
@@ -169,6 +173,14 @@
 <enum name='kColorSyncByteOrder32Little' value64='8192'/>
 <enum name='kColorSyncByteOrderDefault' value64='0'/>
 <enum name='kColorSyncByteOrderMask' value64='28672'/>
+<function name='CGDisplayCreateUUIDFromDisplayID'>
+<arg declared_type64='uint32_t' name='displayID' type64='I'/>
+<retval declared_type64='CFUUIDRef _Nonnull' type64='^{__CFUUID=}'/>
+</function>
+<function name='CGDisplayGetDisplayIDFromUUID'>
+<arg declared_type64='CFUUIDRef _Nonnull' name='uuid' type64='^{__CFUUID=}'/>
+<retval declared_type64='uint32_t' type64='I'/>
+</function>
 <function name='ColorSyncCMMCopyCMMIdentifier'>
 <arg declared_type64='ColorSyncCMMRef _Nonnull' type64='^{ColorSyncCMM=}'/>
 <retval declared_type64='CFStringRef _Nullable' type64='^{__CFString=}'/>

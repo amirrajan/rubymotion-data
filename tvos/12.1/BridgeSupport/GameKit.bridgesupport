@@ -1,0 +1,1897 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/UIKit.framework'/>
+<depends_on path='/System/Library/Frameworks/SpriteKit.framework'/>
+<depends_on path='/System/Library/Frameworks/SceneKit.framework'/>
+<depends_on path='/System/Library/Frameworks/GameplayKit.framework'/>
+<depends_on path='/System/Library/Frameworks/GameController.framework'/>
+<depends_on path='/System/Library/Frameworks/ModelIO.framework'/>
+<depends_on path='/System/Library/Frameworks/ReplayKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<constant declared_type64='NSString * _Nonnull' name='GKErrorDomain' type64='@'/>
+<constant declared_type64='NSTimeInterval' name='GKExchangeTimeoutDefault' type64='d'/>
+<constant declared_type64='NSTimeInterval' name='GKExchangeTimeoutNone' type64='d'/>
+<constant declared_type64='NSString * _Nonnull' name='GKGameSessionErrorDomain' type64='@'/>
+<constant declared_type64='NSNotificationName _Nonnull' name='GKPlayerAuthenticationDidChangeNotificationName' type64='@'/>
+<constant declared_type64='NSNotificationName _Nonnull' name='GKPlayerDidChangeNotificationName' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='GKSessionErrorDomain' type64='@'/>
+<constant declared_type64='NSTimeInterval' name='GKTurnTimeoutDefault' type64='d'/>
+<constant declared_type64='NSTimeInterval' name='GKTurnTimeoutNone' type64='d'/>
+<constant const='true' declared_type64='NSString*' name='GKVoiceChatServiceErrorDomain' type64='@'/>
+<enum name='GKAuthenticatingWithAuthKitInvocation' value64='2'/>
+<enum name='GKAuthenticatingWithGreenBuddyUI' value64='1'/>
+<enum name='GKAuthenticatingWithoutUI' value64='0'/>
+<enum name='GKChallengeStateCompleted' value64='2'/>
+<enum name='GKChallengeStateDeclined' value64='3'/>
+<enum name='GKChallengeStateInvalid' value64='0'/>
+<enum name='GKChallengeStatePending' value64='1'/>
+<enum name='GKConnectionStateConnected' value64='1'/>
+<enum name='GKConnectionStateNotConnected' value64='0'/>
+<enum name='GKErrorAuthenticationInProgress' value64='7'/>
+<enum name='GKErrorCancelled' value64='2'/>
+<enum name='GKErrorChallengeInvalid' value64='19'/>
+<enum name='GKErrorCommunicationsFailure' value64='3'/>
+<enum name='GKErrorGameSessionRequestInvalid' value64='29'/>
+<enum name='GKErrorGameUnrecognized' value64='15'/>
+<enum name='GKErrorInvalidCredentials' value64='5'/>
+<enum name='GKErrorInvalidParameter' value64='17'/>
+<enum name='GKErrorInvalidPlayer' value64='8'/>
+<enum name='GKErrorInvitationsDisabled' value64='25'/>
+<enum name='GKErrorMatchNotConnected' value64='28'/>
+<enum name='GKErrorMatchRequestInvalid' value64='13'/>
+<enum name='GKErrorNotAuthenticated' value64='6'/>
+<enum name='GKErrorNotSupported' value64='16'/>
+<enum name='GKErrorParentalControlsBlocked' value64='10'/>
+<enum name='GKErrorPlayerPhotoFailure' value64='26'/>
+<enum name='GKErrorPlayerStatusExceedsMaximumLength' value64='11'/>
+<enum name='GKErrorPlayerStatusInvalid' value64='12'/>
+<enum name='GKErrorScoreNotSet' value64='9'/>
+<enum name='GKErrorTurnBasedInvalidParticipant' value64='22'/>
+<enum name='GKErrorTurnBasedInvalidState' value64='24'/>
+<enum name='GKErrorTurnBasedInvalidTurn' value64='23'/>
+<enum name='GKErrorTurnBasedMatchDataTooLarge' value64='20'/>
+<enum name='GKErrorTurnBasedTooManySessions' value64='21'/>
+<enum name='GKErrorUbiquityContainerUnavailable' value64='27'/>
+<enum name='GKErrorUnderage' value64='14'/>
+<enum name='GKErrorUnexpectedConnection' value64='18'/>
+<enum name='GKErrorUnknown' value64='1'/>
+<enum name='GKErrorUserDenied' value64='4'/>
+<enum name='GKGameCenterViewControllerStateAchievements' value64='1'/>
+<enum name='GKGameCenterViewControllerStateChallenges' value64='2'/>
+<enum name='GKGameCenterViewControllerStateDefault' value64='-1'/>
+<enum name='GKGameCenterViewControllerStateLeaderboards' value64='0'/>
+<enum name='GKGameSessionErrorBadContainer' value64='12'/>
+<enum name='GKGameSessionErrorCloudDriveDisabled' value64='15'/>
+<enum name='GKGameSessionErrorCloudQuotaExceeded' value64='13'/>
+<enum name='GKGameSessionErrorConnectionCancelledByUser' value64='5'/>
+<enum name='GKGameSessionErrorConnectionFailed' value64='6'/>
+<enum name='GKGameSessionErrorInvalidSession' value64='16'/>
+<enum name='GKGameSessionErrorNetworkFailure' value64='14'/>
+<enum name='GKGameSessionErrorNotAuthenticated' value64='2'/>
+<enum name='GKGameSessionErrorSendDataNoRecipients' value64='9'/>
+<enum name='GKGameSessionErrorSendDataNotConnected' value64='8'/>
+<enum name='GKGameSessionErrorSendDataNotReachable' value64='10'/>
+<enum name='GKGameSessionErrorSendRateLimitReached' value64='11'/>
+<enum name='GKGameSessionErrorSessionConflict' value64='3'/>
+<enum name='GKGameSessionErrorSessionHasMaxConnectedPlayers' value64='7'/>
+<enum name='GKGameSessionErrorSessionNotShared' value64='4'/>
+<enum name='GKGameSessionErrorUnknown' value64='1'/>
+<enum name='GKInviteRecipientResponseAccepted' value64='0'/>
+<enum name='GKInviteRecipientResponseDeclined' value64='1'/>
+<enum name='GKInviteRecipientResponseFailed' value64='2'/>
+<enum name='GKInviteRecipientResponseIncompatible' value64='3'/>
+<enum name='GKInviteRecipientResponseNoAnswer' value64='5'/>
+<enum name='GKInviteRecipientResponseUnableToConnect' value64='4'/>
+<enum name='GKInviteeResponseAccepted' value64='0'/>
+<enum name='GKInviteeResponseDeclined' value64='1'/>
+<enum name='GKInviteeResponseFailed' value64='2'/>
+<enum name='GKInviteeResponseIncompatible' value64='3'/>
+<enum name='GKInviteeResponseNoAnswer' value64='5'/>
+<enum name='GKInviteeResponseUnableToConnect' value64='4'/>
+<enum name='GKLeaderboardPlayerScopeFriendsOnly' value64='1'/>
+<enum name='GKLeaderboardPlayerScopeGlobal' value64='0'/>
+<enum name='GKLeaderboardTimeScopeAllTime' value64='2'/>
+<enum name='GKLeaderboardTimeScopeToday' value64='0'/>
+<enum name='GKLeaderboardTimeScopeWeek' value64='1'/>
+<enum name='GKMatchSendDataReliable' value64='0'/>
+<enum name='GKMatchSendDataUnreliable' value64='1'/>
+<enum name='GKMatchTypeHosted' value64='1'/>
+<enum name='GKMatchTypePeerToPeer' value64='0'/>
+<enum name='GKMatchTypeTurnBased' value64='2'/>
+<enum name='GKPeerStateAvailable' value64='0'/>
+<enum name='GKPeerStateConnected' value64='2'/>
+<enum name='GKPeerStateConnecting' value64='4'/>
+<enum name='GKPeerStateDisconnected' value64='3'/>
+<enum name='GKPeerStateUnavailable' value64='1'/>
+<enum name='GKPhotoSizeNormal' value64='1'/>
+<enum name='GKPhotoSizeSmall' value64='0'/>
+<enum name='GKPlayerStateConnected' value64='1'/>
+<enum name='GKPlayerStateDisconnected' value64='2'/>
+<enum name='GKPlayerStateUnknown' value64='0'/>
+<enum name='GKSendDataReliable' value64='0'/>
+<enum name='GKSendDataUnreliable' value64='1'/>
+<enum name='GKSessionCancelledError' value64='30504'/>
+<enum name='GKSessionCannotEnableError' value64='30509'/>
+<enum name='GKSessionConnectionClosedError' value64='30506'/>
+<enum name='GKSessionConnectionFailedError' value64='30505'/>
+<enum name='GKSessionConnectivityError' value64='30201'/>
+<enum name='GKSessionDataTooBigError' value64='30507'/>
+<enum name='GKSessionDeclinedError' value64='30502'/>
+<enum name='GKSessionInProgressError' value64='30510'/>
+<enum name='GKSessionInternalError' value64='30203'/>
+<enum name='GKSessionInvalidParameterError' value64='30500'/>
+<enum name='GKSessionModeClient' value64='1'/>
+<enum name='GKSessionModePeer' value64='2'/>
+<enum name='GKSessionModeServer' value64='0'/>
+<enum name='GKSessionNotConnectedError' value64='30508'/>
+<enum name='GKSessionPeerNotFoundError' value64='30501'/>
+<enum name='GKSessionSystemError' value64='30205'/>
+<enum name='GKSessionTimedOutError' value64='30503'/>
+<enum name='GKSessionTransportError' value64='30202'/>
+<enum name='GKSessionUnknownError' value64='30204'/>
+<enum name='GKTransportTypeReliable' value64='1'/>
+<enum name='GKTransportTypeUnreliable' value64='0'/>
+<enum name='GKTurnBasedExchangeStatusActive' value64='1'/>
+<enum name='GKTurnBasedExchangeStatusCanceled' value64='4'/>
+<enum name='GKTurnBasedExchangeStatusComplete' value64='2'/>
+<enum name='GKTurnBasedExchangeStatusResolved' value64='3'/>
+<enum name='GKTurnBasedExchangeStatusUnknown' value64='0'/>
+<enum name='GKTurnBasedMatchOutcomeCustomRange' value64='16711680'/>
+<enum name='GKTurnBasedMatchOutcomeFirst' value64='6'/>
+<enum name='GKTurnBasedMatchOutcomeFourth' value64='9'/>
+<enum name='GKTurnBasedMatchOutcomeLost' value64='3'/>
+<enum name='GKTurnBasedMatchOutcomeNone' value64='0'/>
+<enum name='GKTurnBasedMatchOutcomeQuit' value64='1'/>
+<enum name='GKTurnBasedMatchOutcomeSecond' value64='7'/>
+<enum name='GKTurnBasedMatchOutcomeThird' value64='8'/>
+<enum name='GKTurnBasedMatchOutcomeTied' value64='4'/>
+<enum name='GKTurnBasedMatchOutcomeTimeExpired' value64='5'/>
+<enum name='GKTurnBasedMatchOutcomeWon' value64='2'/>
+<enum name='GKTurnBasedMatchStatusEnded' value64='2'/>
+<enum name='GKTurnBasedMatchStatusMatching' value64='3'/>
+<enum name='GKTurnBasedMatchStatusOpen' value64='1'/>
+<enum name='GKTurnBasedMatchStatusUnknown' value64='0'/>
+<enum name='GKTurnBasedParticipantStatusActive' value64='4'/>
+<enum name='GKTurnBasedParticipantStatusDeclined' value64='2'/>
+<enum name='GKTurnBasedParticipantStatusDone' value64='5'/>
+<enum name='GKTurnBasedParticipantStatusInvited' value64='1'/>
+<enum name='GKTurnBasedParticipantStatusMatching' value64='3'/>
+<enum name='GKTurnBasedParticipantStatusUnknown' value64='0'/>
+<enum name='GKVoiceChatPlayerConnected' value64='0'/>
+<enum name='GKVoiceChatPlayerConnecting' value64='4'/>
+<enum name='GKVoiceChatPlayerDisconnected' value64='1'/>
+<enum name='GKVoiceChatPlayerSilent' value64='3'/>
+<enum name='GKVoiceChatPlayerSpeaking' value64='2'/>
+<enum name='GKVoiceChatServiceAudioUnavailableError' value64='32005'/>
+<enum name='GKVoiceChatServiceClientMissingRequiredMethodsError' value64='32007'/>
+<enum name='GKVoiceChatServiceInternalError' value64='32000'/>
+<enum name='GKVoiceChatServiceInvalidCallIDError' value64='32004'/>
+<enum name='GKVoiceChatServiceInvalidParameterError' value64='32016'/>
+<enum name='GKVoiceChatServiceMethodCurrentlyInvalidError' value64='32012'/>
+<enum name='GKVoiceChatServiceNetworkConfigurationError' value64='32013'/>
+<enum name='GKVoiceChatServiceNoRemotePacketsError' value64='32001'/>
+<enum name='GKVoiceChatServiceOutOfMemoryError' value64='32015'/>
+<enum name='GKVoiceChatServiceRemoteParticipantBusyError' value64='32008'/>
+<enum name='GKVoiceChatServiceRemoteParticipantCancelledError' value64='32009'/>
+<enum name='GKVoiceChatServiceRemoteParticipantDeclinedInviteError' value64='32011'/>
+<enum name='GKVoiceChatServiceRemoteParticipantHangupError' value64='32003'/>
+<enum name='GKVoiceChatServiceRemoteParticipantResponseInvalidError' value64='32010'/>
+<enum name='GKVoiceChatServiceUnableToConnectError' value64='32002'/>
+<enum name='GKVoiceChatServiceUninitializedClientError' value64='32006'/>
+<enum name='GKVoiceChatServiceUnsupportedRemoteVersionError' value64='32014'/>
+<class name='GKAchievement'>
+<method selector='challengeComposeControllerWithMessage:players:completionHandler:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='message' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='players' type64='@'/>
+<arg declared_type64='GKChallengeComposeCompletionBlock _Nullable' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='UIViewController * _Nonnull' type64='@'/>
+<arg declared_type64='BOOL' type64='B'/>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='UIViewController * _Nonnull' type64='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='initWithIdentifier:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='identifier' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithIdentifier:player:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='identifier' type64='@'/>
+<arg declared_type64='GKPlayer * _Nonnull' index='1' name='player' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='isCompleted'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='lastReportedDate'>
+<retval declared_type64='NSDate * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='loadAchievementsWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='percentComplete'>
+<retval declared_type64='double' type64='d'/>
+</method>
+<method selector='player'>
+<retval declared_type64='GKPlayer * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='reportAchievements:withCompletionHandler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='achievements' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='reportAchievements:withEligibleChallenges:withCompletionHandler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='achievements' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='challenges' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='resetAchievementsWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='selectChallengeablePlayers:withCompletionHandler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='players' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setIdentifier:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='identifier' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPercentComplete:'>
+<arg declared_type64='double' index='0' name='percentComplete' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShowsCompletionBanner:'>
+<arg declared_type64='BOOL' index='0' name='showsCompletionBanner' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='showsCompletionBanner'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='GKAchievementChallenge'>
+<method selector='achievement'>
+<retval declared_type64='GKAchievement * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='GKAchievementDescription'>
+<method selector='achievedDescription'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='groupIdentifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='image'>
+<retval declared_type64='UIImage * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='incompleteAchievementImage'>
+<retval declared_type64='UIImage * _Nonnull' type64='@'/>
+</method>
+<method selector='isHidden'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isReplayable'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='loadAchievementDescriptionsWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='loadImageWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(UIImage * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='UIImage * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='maximumPoints'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method class_method='true' selector='placeholderCompletedAchievementImage'>
+<retval declared_type64='UIImage * _Nonnull' type64='@'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='unachievedDescription'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='GKAchievementViewController'>
+<method selector='achievementDelegate'>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='setAchievementDelegate:'>
+<arg declared_type64='id' index='0' name='achievementDelegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='GKBasePlayer'>
+<method selector='displayName'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='playerID'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='GKChallenge'>
+<method selector='completionDate'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+<method selector='decline'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='issueDate'>
+<retval declared_type64='NSDate * _Nonnull' type64='@'/>
+</method>
+<method selector='issuingPlayer'>
+<retval declared_type64='GKPlayer * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='loadReceivedChallengesWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='message'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='receivingPlayer'>
+<retval declared_type64='GKPlayer * _Nullable' type64='@'/>
+</method>
+<method selector='state'>
+<retval declared_type64='GKChallengeState' type64='q'/>
+</method>
+</class>
+<class name='GKCloudPlayer'>
+<method class_method='true' selector='getCurrentSignedInPlayerForContainer:completionHandler:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='containerName' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(GKCloudPlayer * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='handler' type64='@?'>
+<arg declared_type64='GKCloudPlayer * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='GKFriendRequestComposeViewController'>
+<method selector='addRecipientPlayers:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='players' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='addRecipientsWithEmailAddresses:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='emailAddresses' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='maxNumberOfRecipients'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='setMessage:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='message' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='GKGameCenterViewController'>
+<method selector='gameCenterDelegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='setGameCenterDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='gameCenterDelegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='GKGameSession'>
+<method class_method='true' selector='addEventListener:'>
+<arg declared_type64='NSObject * _Nonnull' index='0' name='listener' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='badgedPlayers'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='clearBadgeForPlayers:completionHandler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='players' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='createSessionInContainer:withTitle:maxConnectedPlayers:completionHandler:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='containerName' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='title' type64='@'/>
+<arg declared_type64='NSInteger' index='2' name='maxPlayers' type64='q'/>
+<arg declared_type64='void (^ _Nonnull)(GKGameSession * _Nullable, NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='GKGameSession * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='getShareURLWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSURL * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSURL * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='identifier'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='lastModifiedDate'>
+<retval declared_type64='NSDate * _Nonnull' type64='@'/>
+</method>
+<method selector='lastModifiedPlayer'>
+<retval declared_type64='GKCloudPlayer * _Nonnull' type64='@'/>
+</method>
+<method selector='loadDataWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='loadSessionWithIdentifier:completionHandler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='identifier' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(GKGameSession * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='GKGameSession * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='loadSessionsInContainer:completionHandler:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='containerName' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='maxNumberOfConnectedPlayers'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='owner'>
+<retval declared_type64='GKCloudPlayer * _Nonnull' type64='@'/>
+</method>
+<method selector='players'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='playersWithConnectionState:'>
+<arg declared_type64='GKConnectionState' index='0' name='state' type64='q'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='removeEventListener:'>
+<arg declared_type64='NSObject * _Nonnull' index='0' name='listener' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='removeSessionWithIdentifier:completionHandler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='identifier' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='saveData:completionHandler:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sendData:withTransportType:completionHandler:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='GKTransportType' index='1' name='transport' type64='q'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sendMessageWithLocalizedFormatKey:arguments:data:toPlayers:badgePlayers:completionHandler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='key' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='arguments' type64='@'/>
+<arg declared_type64='NSData * _Nullable' index='2' name='data' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='3' name='players' type64='@'/>
+<arg declared_type64='BOOL' index='4' name='badgePlayers' type64='B'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='5' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setConnectionState:completionHandler:'>
+<arg declared_type64='GKConnectionState' index='0' name='state' type64='q'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='GKGameSessionSharingViewController'>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='initWithSession:'>
+<arg declared_type64='GKGameSession * _Nonnull' index='0' name='session' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='session'>
+<retval declared_type64='GKGameSession * _Nonnull' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='GKInvite'>
+<method selector='isHosted'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='playerAttributes'>
+<retval declared_type64='uint32_t' type64='I'/>
+</method>
+<method selector='playerGroup'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='sender'>
+<retval declared_type64='GKPlayer * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='GKLeaderboard'>
+<method selector='groupIdentifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithPlayers:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='players' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='isLoading'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='loadLeaderboardsWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='loadScoresWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='localPlayerScore'>
+<retval declared_type64='GKScore * _Nullable' type64='@'/>
+</method>
+<method selector='maxRange'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='playerScope'>
+<retval declared_type64='GKLeaderboardPlayerScope' type64='q'/>
+</method>
+<method selector='range'>
+<retval declared_type64='NSRange' type64='{_NSRange=QQ}'/>
+</method>
+<method selector='scores'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='setIdentifier:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='identifier' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPlayerScope:'>
+<arg declared_type64='GKLeaderboardPlayerScope' index='0' name='playerScope' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRange:'>
+<arg declared_type64='NSRange' index='0' name='range' type64='{_NSRange=QQ}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTimeScope:'>
+<arg declared_type64='GKLeaderboardTimeScope' index='0' name='timeScope' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='timeScope'>
+<retval declared_type64='GKLeaderboardTimeScope' type64='q'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='GKLeaderboardSet'>
+<method selector='groupIdentifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='loadLeaderboardSetsWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='loadLeaderboardsWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setIdentifier:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='identifier' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='GKLeaderboardViewController'>
+<method selector='category'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='leaderboardDelegate'>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='setCategory:'>
+<arg declared_type64='NSString*' index='0' name='category' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLeaderboardDelegate:'>
+<arg declared_type64='id' index='0' name='leaderboardDelegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTimeScope:'>
+<arg declared_type64='GKLeaderboardTimeScope' index='0' name='timeScope' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='timeScope'>
+<retval declared_type64='GKLeaderboardTimeScope' type64='q'/>
+</method>
+</class>
+<class name='GKLocalPlayer'>
+<method selector='authenticateHandler'>
+<retval declared_type64='void (^ _Nullable)(UIViewController * _Nullable, NSError * _Nullable)' function_pointer='true' type64='@?'>
+<arg declared_type64='UIViewController * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='generateIdentityVerificationSignatureWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(NSURL * _Nullable, NSData * _Nullable, NSData * _Nullable, uint64_t, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSURL * _Nullable' type64='@'/>
+<arg declared_type64='NSData * _Nullable' type64='@'/>
+<arg declared_type64='NSData * _Nullable' type64='@'/>
+<arg declared_type64='uint64_t' type64='Q'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='isAuthenticated'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isUnderage'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='loadDefaultLeaderboardIdentifierWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(NSString * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSString * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='loadFriendPlayersWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='loadRecentPlayersWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='localPlayer'>
+<retval declared_type64='GKLocalPlayer * _Nonnull' type64='@'/>
+</method>
+<method selector='registerListener:'>
+<arg declared_type64='id _Nonnull' index='0' name='listener' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setAuthenticateHandler:'>
+<arg declared_type64='void (^ _Nullable)(UIViewController * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='authenticateHandler' type64='@?'>
+<arg declared_type64='UIViewController * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDefaultLeaderboardIdentifier:completionHandler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='leaderboardIdentifier' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='unregisterAllListeners'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='unregisterListener:'>
+<arg declared_type64='id _Nonnull' index='0' name='listener' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='GKMatch'>
+<method selector='chooseBestHostingPlayerWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(GKPlayer * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='GKPlayer * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='disconnect'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='expectedPlayerCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='players'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='rematchWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(GKMatch * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='GKMatch * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sendData:toPlayers:dataMode:error:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='players' type64='@'/>
+<arg declared_type64='GKMatchSendDataMode' index='2' name='mode' type64='q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='3' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='sendDataToAllPlayers:withDataMode:error:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='GKMatchSendDataMode' index='1' name='mode' type64='q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='voiceChatWithName:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='GKVoiceChat * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='GKMatchRequest'>
+<method selector='defaultNumberOfPlayers'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='inviteMessage'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='maxPlayers'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method class_method='true' selector='maxPlayersAllowedForMatchOfType:'>
+<arg declared_type64='GKMatchType' index='0' name='matchType' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='minPlayers'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='playerAttributes'>
+<retval declared_type64='uint32_t' type64='I'/>
+</method>
+<method selector='playerGroup'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='recipientResponseHandler'>
+<retval declared_type64='void (^ _Nullable)(GKPlayer * _Nonnull, GKInviteRecipientResponse)' function_pointer='true' type64='@?'>
+<arg declared_type64='GKPlayer * _Nonnull' type64='@'/>
+<arg declared_type64='GKInviteRecipientResponse' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='recipients'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='setDefaultNumberOfPlayers:'>
+<arg declared_type64='NSUInteger' index='0' name='defaultNumberOfPlayers' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setInviteMessage:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='inviteMessage' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMaxPlayers:'>
+<arg declared_type64='NSUInteger' index='0' name='maxPlayers' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMinPlayers:'>
+<arg declared_type64='NSUInteger' index='0' name='minPlayers' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPlayerAttributes:'>
+<arg declared_type64='uint32_t' index='0' name='playerAttributes' type64='I'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPlayerGroup:'>
+<arg declared_type64='NSUInteger' index='0' name='playerGroup' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRecipientResponseHandler:'>
+<arg declared_type64='void (^ _Nullable)(GKPlayer * _Nonnull, GKInviteRecipientResponse)' function_pointer='true' index='0' name='recipientResponseHandler' type64='@?'>
+<arg declared_type64='GKPlayer * _Nonnull' type64='@'/>
+<arg declared_type64='GKInviteRecipientResponse' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRecipients:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='recipients' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='GKMatchmaker'>
+<method selector='addPlayersToMatch:matchRequest:completionHandler:'>
+<arg declared_type64='GKMatch * _Nonnull' index='0' name='match' type64='@'/>
+<arg declared_type64='GKMatchRequest * _Nonnull' index='1' name='matchRequest' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='cancel'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='cancelPendingInviteToPlayer:'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='findMatchForRequest:withCompletionHandler:'>
+<arg declared_type64='GKMatchRequest * _Nonnull' index='0' name='request' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(GKMatch * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='GKMatch * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='findPlayersForHostedRequest:withCompletionHandler:'>
+<arg declared_type64='GKMatchRequest * _Nonnull' index='0' name='request' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='finishMatchmakingForMatch:'>
+<arg declared_type64='GKMatch * _Nonnull' index='0' name='match' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='matchForInvite:completionHandler:'>
+<arg declared_type64='GKInvite * _Nonnull' index='0' name='invite' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(GKMatch * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='GKMatch * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='queryActivityWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(NSInteger, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='queryPlayerGroupActivity:withCompletionHandler:'>
+<arg declared_type64='NSUInteger' index='0' name='playerGroup' type64='Q'/>
+<arg declared_type64='void (^ _Nullable)(NSInteger, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='sharedMatchmaker'>
+<retval declared_type64='GKMatchmaker * _Nonnull' type64='@'/>
+</method>
+<method selector='startBrowsingForNearbyPlayersWithHandler:'>
+<arg declared_type64='void (^ _Nullable)(GKPlayer * _Nonnull, BOOL)' function_pointer='true' index='0' name='reachableHandler' type64='@?'>
+<arg declared_type64='GKPlayer * _Nonnull' type64='@'/>
+<arg declared_type64='BOOL' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stopBrowsingForNearbyPlayers'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='GKMatchmakerViewController'>
+<method selector='addPlayersToMatch:'>
+<arg declared_type64='GKMatch * _Nonnull' index='0' name='match' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='initWithInvite:'>
+<arg declared_type64='GKInvite * _Nonnull' index='0' name='invite' type64='@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='initWithMatchRequest:'>
+<arg declared_type64='GKMatchRequest * _Nonnull' index='0' name='request' type64='@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='isHosted'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='matchRequest'>
+<retval declared_type64='GKMatchRequest * _Nonnull' type64='@'/>
+</method>
+<method selector='matchmakerDelegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='setHosted:'>
+<arg declared_type64='BOOL' index='0' name='hosted' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setHostedPlayer:didConnect:'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='connected' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMatchmakerDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='matchmakerDelegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='GKNotificationBanner'>
+<method class_method='true' selector='showBannerWithTitle:message:completionHandler:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='title' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='message' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(void)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='showBannerWithTitle:message:duration:completionHandler:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='title' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='message' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='2' name='duration' type64='d'/>
+<arg declared_type64='void (^ _Nullable)(void)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='GKPlayer'>
+<method selector='alias'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='anonymousGuestPlayerWithIdentifier:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='guestIdentifier' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='displayName'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='guestIdentifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='loadPhotoForSize:withCompletionHandler:'>
+<arg declared_type64='GKPhotoSize' index='0' name='size' type64='q'/>
+<arg declared_type64='void (^ _Nullable)(UIImage * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='UIImage * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='loadPlayersForIdentifiers:withCompletionHandler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='identifiers' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerID'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='GKScore'>
+<method selector='challengeComposeControllerWithMessage:players:completionHandler:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='message' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='1' name='players' type64='@'/>
+<arg declared_type64='GKChallengeComposeCompletionBlock _Nullable' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='UIViewController * _Nonnull' type64='@'/>
+<arg declared_type64='BOOL' type64='B'/>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='UIViewController * _Nonnull' type64='@'/>
+</method>
+<method selector='context'>
+<retval declared_type64='uint64_t' type64='Q'/>
+</method>
+<method selector='date'>
+<retval declared_type64='NSDate * _Nonnull' type64='@'/>
+</method>
+<method selector='formattedValue'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='initWithLeaderboardIdentifier:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='identifier' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithLeaderboardIdentifier:player:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='identifier' type64='@'/>
+<arg declared_type64='GKPlayer * _Nonnull' index='1' name='player' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='leaderboardIdentifier'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='player'>
+<retval declared_type64='GKPlayer * _Nullable' type64='@'/>
+</method>
+<method selector='rank'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method class_method='true' selector='reportScores:withCompletionHandler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='scores' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='reportScores:withEligibleChallenges:withCompletionHandler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='scores' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='challenges' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setContext:'>
+<arg declared_type64='uint64_t' index='0' name='context' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLeaderboardIdentifier:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='leaderboardIdentifier' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShouldSetDefaultLeaderboard:'>
+<arg declared_type64='BOOL' index='0' name='shouldSetDefaultLeaderboard' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setValue:'>
+<arg declared_type64='int64_t' index='0' name='value' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='shouldSetDefaultLeaderboard'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='value'>
+<retval declared_type64='int64_t' type64='q'/>
+</method>
+</class>
+<class name='GKScoreChallenge'>
+<method selector='score'>
+<retval declared_type64='GKScore * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='GKTurnBasedExchange'>
+<method selector='cancelWithLocalizableMessageKey:arguments:completionHandler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='key' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='arguments' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='completionDate'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+<method selector='data'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='exchangeID'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='message'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='recipients'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='replies'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='replyWithLocalizableMessageKey:arguments:data:completionHandler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='key' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='arguments' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='2' name='data' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sendDate'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+<method selector='sender'>
+<retval declared_type64='GKTurnBasedParticipant * _Nullable' type64='@'/>
+</method>
+<method selector='status'>
+<retval declared_type64='GKTurnBasedExchangeStatus' type64='c'/>
+</method>
+<method selector='timeoutDate'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='GKTurnBasedExchangeReply'>
+<method selector='data'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='message'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='recipient'>
+<retval declared_type64='GKTurnBasedParticipant * _Nullable' type64='@'/>
+</method>
+<method selector='replyDate'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='GKTurnBasedMatch'>
+<method selector='acceptInviteWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(GKTurnBasedMatch * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='GKTurnBasedMatch * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='activeExchanges'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='completedExchanges'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='creationDate'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+<method selector='currentParticipant'>
+<retval declared_type64='GKTurnBasedParticipant * _Nullable' type64='@'/>
+</method>
+<method selector='declineInviteWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='endMatchInTurnWithMatchData:completionHandler:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='matchData' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='endMatchInTurnWithMatchData:scores:achievements:completionHandler:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='matchData' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='1' name='scores' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='2' name='achievements' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='endTurnWithNextParticipants:turnTimeout:matchData:completionHandler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='nextParticipants' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='1' name='timeout' type64='d'/>
+<arg declared_type64='NSData * _Nonnull' index='2' name='matchData' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='exchangeDataMaximumSize'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='exchangeMaxInitiatedExchangesPerPlayer'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='exchanges'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='findMatchForRequest:withCompletionHandler:'>
+<arg declared_type64='GKMatchRequest * _Nonnull' index='0' name='request' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(GKTurnBasedMatch * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='GKTurnBasedMatch * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='loadMatchDataWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(NSData * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='loadMatchWithID:withCompletionHandler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='matchID' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(GKTurnBasedMatch * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='GKTurnBasedMatch * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='loadMatchesWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(NSArray * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='matchData'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='matchDataMaximumSize'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='matchID'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='message'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='participantQuitInTurnWithOutcome:nextParticipants:turnTimeout:matchData:completionHandler:'>
+<arg declared_type64='GKTurnBasedMatchOutcome' index='0' name='matchOutcome' type64='q'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='nextParticipants' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='2' name='timeout' type64='d'/>
+<arg declared_type64='NSData * _Nonnull' index='3' name='matchData' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='4' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='participantQuitOutOfTurnWithOutcome:withCompletionHandler:'>
+<arg declared_type64='GKTurnBasedMatchOutcome' index='0' name='matchOutcome' type64='q'/>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='participants'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='rematchWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(GKTurnBasedMatch * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='GKTurnBasedMatch * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='removeWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='saveCurrentTurnWithMatchData:completionHandler:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='matchData' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='saveMergedMatchData:withResolvedExchanges:completionHandler:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='matchData' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='exchanges' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sendExchangeToParticipants:data:localizableMessageKey:arguments:timeout:completionHandler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='participants' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='data' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='2' name='key' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='3' name='arguments' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='4' name='timeout' type64='d'/>
+<arg declared_type64='void (^ _Nullable)(GKTurnBasedExchange * _Nullable, NSError * _Nullable)' function_pointer='true' index='5' name='completionHandler' type64='@?'>
+<arg declared_type64='GKTurnBasedExchange * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sendReminderToParticipants:localizableMessageKey:arguments:completionHandler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='participants' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='key' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='arguments' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLocalizableMessageWithKey:arguments:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='key' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='1' name='arguments' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMessage:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='message' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='status'>
+<retval declared_type64='GKTurnBasedMatchStatus' type64='q'/>
+</method>
+</class>
+<class name='GKTurnBasedMatchmakerViewController'>
+<method selector='initWithMatchRequest:'>
+<arg declared_type64='GKMatchRequest * _Nonnull' index='0' name='request' type64='@'/>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='setShowExistingMatches:'>
+<arg declared_type64='BOOL' index='0' name='showExistingMatches' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTurnBasedMatchmakerDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='turnBasedMatchmakerDelegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='showExistingMatches'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='turnBasedMatchmakerDelegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+</class>
+<class name='GKTurnBasedParticipant'>
+<method selector='lastTurnDate'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+<method selector='matchOutcome'>
+<retval declared_type64='GKTurnBasedMatchOutcome' type64='q'/>
+</method>
+<method selector='player'>
+<retval declared_type64='GKPlayer * _Nullable' type64='@'/>
+</method>
+<method selector='setMatchOutcome:'>
+<arg declared_type64='GKTurnBasedMatchOutcome' index='0' name='matchOutcome' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='status'>
+<retval declared_type64='GKTurnBasedParticipantStatus' type64='q'/>
+</method>
+<method selector='timeoutDate'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='GKVoiceChat'>
+<method selector='isActive'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='isVoIPAllowed'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='playerVoiceChatStateDidChangeHandler'>
+<retval declared_type64='void (^ _Nonnull)(GKPlayer * _Nonnull, GKVoiceChatPlayerState)' function_pointer='true' type64='@?'>
+<arg declared_type64='GKPlayer * _Nonnull' type64='@'/>
+<arg declared_type64='GKVoiceChatPlayerState' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='players'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='setActive:'>
+<arg declared_type64='BOOL' index='0' name='active' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPlayer:muted:'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='isMuted' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPlayerVoiceChatStateDidChangeHandler:'>
+<arg declared_type64='void (^ _Nonnull)(GKPlayer * _Nonnull, GKVoiceChatPlayerState)' function_pointer='true' index='0' name='playerVoiceChatStateDidChangeHandler' type64='@?'>
+<arg declared_type64='GKPlayer * _Nonnull' type64='@'/>
+<arg declared_type64='GKVoiceChatPlayerState' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVolume:'>
+<arg declared_type64='float' index='0' name='volume' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='start'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stop'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='volume'>
+<retval declared_type64='float' type64='f'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='gameCenterViewControllerDidFinish:'>
+<arg declared_type64='GKGameCenterViewController * _Nonnull' index='0' name='gameCenterViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='match:didFailWithError:'>
+<arg declared_type64='GKMatch * _Nonnull' index='0' name='match' type64='@'/>
+<arg declared_type64='NSError * _Nullable' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='match:didReceiveData:forRecipient:fromRemotePlayer:'>
+<arg declared_type64='GKMatch * _Nonnull' index='0' name='match' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='data' type64='@'/>
+<arg declared_type64='GKPlayer * _Nonnull' index='2' name='recipient' type64='@'/>
+<arg declared_type64='GKPlayer * _Nonnull' index='3' name='player' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='match:didReceiveData:fromRemotePlayer:'>
+<arg declared_type64='GKMatch * _Nonnull' index='0' name='match' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='data' type64='@'/>
+<arg declared_type64='GKPlayer * _Nonnull' index='2' name='player' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='match:player:didChangeConnectionState:'>
+<arg declared_type64='GKMatch * _Nonnull' index='0' name='match' type64='@'/>
+<arg declared_type64='GKPlayer * _Nonnull' index='1' name='player' type64='@'/>
+<arg declared_type64='GKPlayerConnectionState' index='2' name='state' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='match:shouldReinviteDisconnectedPlayer:'>
+<arg declared_type64='GKMatch * _Nonnull' index='0' name='match' type64='@'/>
+<arg declared_type64='GKPlayer * _Nonnull' index='1' name='player' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='matchmakerViewController:didFailWithError:'>
+<arg declared_type64='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='matchmakerViewController:didFindHostedPlayers:'>
+<arg declared_type64='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='players' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='matchmakerViewController:didFindMatch:'>
+<arg declared_type64='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type64='@'/>
+<arg declared_type64='GKMatch * _Nonnull' index='1' name='match' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='matchmakerViewController:hostedPlayerDidAccept:'>
+<arg declared_type64='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type64='@'/>
+<arg declared_type64='GKPlayer * _Nonnull' index='1' name='player' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='matchmakerViewControllerWasCancelled:'>
+<arg declared_type64='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:didAcceptInvite:'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKInvite * _Nonnull' index='1' name='invite' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:didCompleteChallenge:issuedByFriend:'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKChallenge * _Nonnull' index='1' name='challenge' type64='@'/>
+<arg declared_type64='GKPlayer * _Nonnull' index='2' name='friendPlayer' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:didReceiveChallenge:'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKChallenge * _Nonnull' index='1' name='challenge' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:didRequestMatchWithOtherPlayers:'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='playersToInvite' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:didRequestMatchWithRecipients:'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='recipientPlayers' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:issuedChallengeWasCompleted:byFriend:'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKChallenge * _Nonnull' index='1' name='challenge' type64='@'/>
+<arg declared_type64='GKPlayer * _Nonnull' index='2' name='friendPlayer' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:matchEnded:'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKTurnBasedMatch * _Nonnull' index='1' name='match' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:receivedExchangeCancellation:forMatch:'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKTurnBasedExchange * _Nonnull' index='1' name='exchange' type64='@'/>
+<arg declared_type64='GKTurnBasedMatch * _Nonnull' index='2' name='match' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:receivedExchangeReplies:forCompletedExchange:forMatch:'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='replies' type64='@'/>
+<arg declared_type64='GKTurnBasedExchange * _Nonnull' index='2' name='exchange' type64='@'/>
+<arg declared_type64='GKTurnBasedMatch * _Nonnull' index='3' name='match' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:receivedExchangeRequest:forMatch:'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKTurnBasedExchange * _Nonnull' index='1' name='exchange' type64='@'/>
+<arg declared_type64='GKTurnBasedMatch * _Nonnull' index='2' name='match' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:receivedTurnEventForMatch:didBecomeActive:'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKTurnBasedMatch * _Nonnull' index='1' name='match' type64='@'/>
+<arg declared_type64='BOOL' index='2' name='didBecomeActive' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:wantsToPlayChallenge:'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKChallenge * _Nonnull' index='1' name='challenge' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:wantsToQuitMatch:'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKTurnBasedMatch * _Nonnull' index='1' name='match' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:didAddPlayer:'>
+<arg declared_type64='GKGameSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='GKCloudPlayer * _Nonnull' index='1' name='player' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:didReceiveData:fromPlayer:'>
+<arg declared_type64='GKGameSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='data' type64='@'/>
+<arg declared_type64='GKCloudPlayer * _Nonnull' index='2' name='player' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:didReceiveMessage:withData:fromPlayer:'>
+<arg declared_type64='GKGameSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='message' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='2' name='data' type64='@'/>
+<arg declared_type64='GKCloudPlayer * _Nonnull' index='3' name='player' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:didRemovePlayer:'>
+<arg declared_type64='GKGameSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='GKCloudPlayer * _Nonnull' index='1' name='player' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:player:didChangeConnectionState:'>
+<arg declared_type64='GKGameSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='GKCloudPlayer * _Nonnull' index='1' name='player' type64='@'/>
+<arg declared_type64='GKConnectionState' index='2' name='newState' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:player:didSaveData:'>
+<arg declared_type64='GKGameSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='GKCloudPlayer * _Nonnull' index='1' name='player' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='2' name='data' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sharingViewController:didFinishWithError:'>
+<arg declared_type64='GKGameSessionSharingViewController * _Nonnull' index='0' name='viewController' type64='@'/>
+<arg declared_type64='NSError * _Nullable' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='turnBasedMatchmakerViewController:didFailWithError:'>
+<arg declared_type64='GKTurnBasedMatchmakerViewController * _Nonnull' index='0' name='viewController' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='turnBasedMatchmakerViewControllerWasCancelled:'>
+<arg declared_type64='GKTurnBasedMatchmakerViewController * _Nonnull' index='0' name='viewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='GKChallengeListener'>
+<method selector='player:didCompleteChallenge:issuedByFriend:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKChallenge * _Nonnull' index='1' name='challenge' type64='@'/>
+<arg declared_type64='GKPlayer * _Nonnull' index='2' name='friendPlayer' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:didReceiveChallenge:' type64='v32@0:8@16@24'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKChallenge * _Nonnull' index='1' name='challenge' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:issuedChallengeWasCompleted:byFriend:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKChallenge * _Nonnull' index='1' name='challenge' type64='@'/>
+<arg declared_type64='GKPlayer * _Nonnull' index='2' name='friendPlayer' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:wantsToPlayChallenge:' type64='v32@0:8@16@24'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKChallenge * _Nonnull' index='1' name='challenge' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKGameCenterControllerDelegate'>
+<method selector='gameCenterViewControllerDidFinish:' type64='v24@0:8@16'>
+<arg declared_type64='GKGameCenterViewController * _Nonnull' index='0' name='gameCenterViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKGameSessionEventListener'>
+<method selector='session:didAddPlayer:' type64='v32@0:8@16@24'>
+<arg declared_type64='GKGameSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='GKCloudPlayer * _Nonnull' index='1' name='player' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:didReceiveData:fromPlayer:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='GKGameSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='data' type64='@'/>
+<arg declared_type64='GKCloudPlayer * _Nonnull' index='2' name='player' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:didReceiveMessage:withData:fromPlayer:' type64='v48@0:8@16@24@32@40'>
+<arg declared_type64='GKGameSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='message' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='2' name='data' type64='@'/>
+<arg declared_type64='GKCloudPlayer * _Nonnull' index='3' name='player' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:didRemovePlayer:' type64='v32@0:8@16@24'>
+<arg declared_type64='GKGameSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='GKCloudPlayer * _Nonnull' index='1' name='player' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:player:didChangeConnectionState:' type64='v40@0:8@16@24q32'>
+<arg declared_type64='GKGameSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='GKCloudPlayer * _Nonnull' index='1' name='player' type64='@'/>
+<arg declared_type64='GKConnectionState' index='2' name='newState' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session:player:didSaveData:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='GKGameSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='GKCloudPlayer * _Nonnull' index='1' name='player' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='2' name='data' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKGameSessionSharingViewControllerDelegate'>
+<method selector='sharingViewController:didFinishWithError:' type64='v32@0:8@16@24'>
+<arg declared_type64='GKGameSessionSharingViewController * _Nonnull' index='0' name='viewController' type64='@'/>
+<arg declared_type64='NSError * _Nullable' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKInviteEventListener'>
+<method selector='player:didAcceptInvite:' type64='v32@0:8@16@24'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKInvite * _Nonnull' index='1' name='invite' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:didRequestMatchWithRecipients:' type64='v32@0:8@16@24'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='recipientPlayers' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKMatchDelegate'>
+<method selector='match:didFailWithError:' type64='v32@0:8@16@24'>
+<arg declared_type64='GKMatch * _Nonnull' index='0' name='match' type64='@'/>
+<arg declared_type64='NSError * _Nullable' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='match:didReceiveData:forRecipient:fromRemotePlayer:' type64='v48@0:8@16@24@32@40'>
+<arg declared_type64='GKMatch * _Nonnull' index='0' name='match' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='data' type64='@'/>
+<arg declared_type64='GKPlayer * _Nonnull' index='2' name='recipient' type64='@'/>
+<arg declared_type64='GKPlayer * _Nonnull' index='3' name='player' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='match:didReceiveData:fromRemotePlayer:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='GKMatch * _Nonnull' index='0' name='match' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='data' type64='@'/>
+<arg declared_type64='GKPlayer * _Nonnull' index='2' name='player' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='match:player:didChangeConnectionState:' type64='v40@0:8@16@24q32'>
+<arg declared_type64='GKMatch * _Nonnull' index='0' name='match' type64='@'/>
+<arg declared_type64='GKPlayer * _Nonnull' index='1' name='player' type64='@'/>
+<arg declared_type64='GKPlayerConnectionState' index='2' name='state' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='match:shouldReinviteDisconnectedPlayer:' type64='B32@0:8@16@24'>
+<arg declared_type64='GKMatch * _Nonnull' index='0' name='match' type64='@'/>
+<arg declared_type64='GKPlayer * _Nonnull' index='1' name='player' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKMatchmakerViewControllerDelegate'>
+<method selector='matchmakerViewController:didFailWithError:' type64='v32@0:8@16@24'>
+<arg declared_type64='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='matchmakerViewController:didFindHostedPlayers:' type64='v32@0:8@16@24'>
+<arg declared_type64='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='players' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='matchmakerViewController:didFindMatch:' type64='v32@0:8@16@24'>
+<arg declared_type64='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type64='@'/>
+<arg declared_type64='GKMatch * _Nonnull' index='1' name='match' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='matchmakerViewController:hostedPlayerDidAccept:' type64='v32@0:8@16@24'>
+<arg declared_type64='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type64='@'/>
+<arg declared_type64='GKPlayer * _Nonnull' index='1' name='player' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='matchmakerViewControllerWasCancelled:' type64='v24@0:8@16'>
+<arg declared_type64='GKMatchmakerViewController * _Nonnull' index='0' name='viewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKTurnBasedEventListener'>
+<method selector='player:didRequestMatchWithOtherPlayers:' type64='v32@0:8@16@24'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='playersToInvite' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:matchEnded:' type64='v32@0:8@16@24'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKTurnBasedMatch * _Nonnull' index='1' name='match' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:receivedExchangeCancellation:forMatch:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKTurnBasedExchange * _Nonnull' index='1' name='exchange' type64='@'/>
+<arg declared_type64='GKTurnBasedMatch * _Nonnull' index='2' name='match' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:receivedExchangeReplies:forCompletedExchange:forMatch:' type64='v48@0:8@16@24@32@40'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='replies' type64='@'/>
+<arg declared_type64='GKTurnBasedExchange * _Nonnull' index='2' name='exchange' type64='@'/>
+<arg declared_type64='GKTurnBasedMatch * _Nonnull' index='3' name='match' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:receivedExchangeRequest:forMatch:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKTurnBasedExchange * _Nonnull' index='1' name='exchange' type64='@'/>
+<arg declared_type64='GKTurnBasedMatch * _Nonnull' index='2' name='match' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:receivedTurnEventForMatch:didBecomeActive:' type64='v36@0:8@16@24B32'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKTurnBasedMatch * _Nonnull' index='1' name='match' type64='@'/>
+<arg declared_type64='BOOL' index='2' name='didBecomeActive' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='player:wantsToQuitMatch:' type64='v32@0:8@16@24'>
+<arg declared_type64='GKPlayer * _Nonnull' index='0' name='player' type64='@'/>
+<arg declared_type64='GKTurnBasedMatch * _Nonnull' index='1' name='match' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GKTurnBasedMatchmakerViewControllerDelegate'>
+<method selector='turnBasedMatchmakerViewController:didFailWithError:' type64='v32@0:8@16@24'>
+<arg declared_type64='GKTurnBasedMatchmakerViewController * _Nonnull' index='0' name='viewController' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='turnBasedMatchmakerViewControllerWasCancelled:' type64='v24@0:8@16'>
+<arg declared_type64='GKTurnBasedMatchmakerViewController * _Nonnull' index='0' name='viewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

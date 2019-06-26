@@ -1,5 +1,8 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <constant const='true' declared_type64='UNAuthorizationOptions' name='UNAuthorizationOptionNone' type64='Q'/>
 <constant const='true' declared_type64='NSString*' name='UNErrorDomain' type64='@'/>
 <constant const='true' declared_type64='UNNotificationActionOptions' name='UNNotificationActionOptionNone' type64='Q'/>
@@ -94,16 +97,6 @@
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 </class>
-<class name='UNLocationNotificationTrigger'>
-<method selector='region'>
-<retval declared_type64='CLRegion * _Nonnull' type64='@'/>
-</method>
-<method class_method='true' selector='triggerWithRegion:repeats:'>
-<arg declared_type64='CLRegion * _Nonnull' index='0' name='region' type64='@'/>
-<arg declared_type64='BOOL' index='1' name='repeats' type64='B'/>
-<retval declared_type64='instancetype _Nonnull' type64='@'/>
-</method>
-</class>
 <class name='UNMutableNotificationContent'>
 <method selector='attachments'>
 <retval declared_type64='NSArray * _Nonnull' type64='@'/>
@@ -115,9 +108,6 @@
 <retval declared_type64='NSString * _Nonnull' type64='@'/>
 </method>
 <method selector='categoryIdentifier'>
-<retval declared_type64='NSString * _Nonnull' type64='@'/>
-</method>
-<method selector='launchImageName'>
 <retval declared_type64='NSString * _Nonnull' type64='@'/>
 </method>
 <method selector='setAttachments:'>
@@ -134,10 +124,6 @@
 </method>
 <method selector='setCategoryIdentifier:'>
 <arg declared_type64='NSString * _Nonnull' index='0' name='categoryIdentifier' type64='@'/>
-<retval declared_type64='void' type64='v'/>
-</method>
-<method selector='setLaunchImageName:'>
-<arg declared_type64='NSString * _Nonnull' index='0' name='launchImageName' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setSound:'>
@@ -290,9 +276,6 @@
 <method selector='categoryIdentifier'>
 <retval declared_type64='NSString * _Nonnull' type64='@'/>
 </method>
-<method selector='launchImageName'>
-<retval declared_type64='NSString * _Nonnull' type64='@'/>
-</method>
 <method selector='sound'>
 <retval declared_type64='UNNotificationSound * _Nullable' type64='@'/>
 </method>
@@ -364,9 +347,6 @@
 <retval declared_type64='UNAuthorizationStatus' type64='q'/>
 </method>
 <method selector='badgeSetting'>
-<retval declared_type64='UNNotificationSetting' type64='q'/>
-</method>
-<method selector='carPlaySetting'>
 <retval declared_type64='UNNotificationSetting' type64='q'/>
 </method>
 <method selector='criticalAlertSetting'>

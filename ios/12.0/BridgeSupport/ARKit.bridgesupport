@@ -80,6 +80,16 @@
 <enum name='ARHitTestResultTypeFeaturePoint' value='1'/>
 <enum name='ARPlaneAnchorAlignmentHorizontal' value='0'/>
 <enum name='ARPlaneAnchorAlignmentVertical' value='1'/>
+<enum name='ARPlaneClassificationCeiling' value='3'/>
+<enum name='ARPlaneClassificationFloor' value='2'/>
+<enum name='ARPlaneClassificationNone' value='0'/>
+<enum name='ARPlaneClassificationSeat' value='5'/>
+<enum name='ARPlaneClassificationStatusKnown' value='3'/>
+<enum name='ARPlaneClassificationStatusNotAvailable' value='0'/>
+<enum name='ARPlaneClassificationStatusUndetermined' value='1'/>
+<enum name='ARPlaneClassificationStatusUnknown' value='2'/>
+<enum name='ARPlaneClassificationTable' value='4'/>
+<enum name='ARPlaneClassificationWall' value='1'/>
 <enum name='ARPlaneDetectionHorizontal' value='1'/>
 <enum name='ARPlaneDetectionNone' value='0'/>
 <enum name='ARPlaneDetectionVertical' value='2'/>
@@ -429,11 +439,20 @@
 <method selector='center'>
 <retval declared_type='simd_float3' type=''/>
 </method>
+<method selector='classification'>
+<retval declared_type='ARPlaneClassification' type='i' type64='q'/>
+</method>
+<method selector='classificationStatus'>
+<retval declared_type='ARPlaneClassificationStatus' type='i' type64='q'/>
+</method>
 <method selector='extent'>
 <retval declared_type='simd_float3' type=''/>
 </method>
 <method selector='geometry'>
 <retval declared_type='ARPlaneGeometry * _Nonnull' type='@'/>
+</method>
+<method class_method='true' selector='isClassificationSupported'>
+<retval declared_type='BOOL' type='B'/>
 </method>
 </class>
 <class name='ARPlaneGeometry'>

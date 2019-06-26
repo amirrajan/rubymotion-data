@@ -367,6 +367,9 @@
 <method selector='focus'>
 <retval declared_type='void' type='v'/>
 </method>
+<method selector='isHapticFeedbackEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
 <method selector='isIdle'>
 <retval declared_type='BOOL' type='B'/>
 </method>
@@ -378,6 +381,10 @@
 </method>
 <method selector='setDelegate:'>
 <arg declared_type='id _Nullable' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHapticFeedbackEnabled:'>
+<arg declared_type='BOOL' index='0' name='hapticFeedbackEnabled' type='B'/>
 <retval declared_type='void' type='v'/>
 </method>
 </class>
@@ -567,6 +574,9 @@
 <method selector='contentFrame'>
 <retval declared_type='CGRect' type='{CGRect={CGPoint=ff}{CGSize=ff}}'/>
 </method>
+<method selector='contentSafeAreaInsets'>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}'/>
+</method>
 <method selector='contextForSegueWithIdentifier:'>
 <arg declared_type='NSString * _Nonnull' index='0' name='segueIdentifier' type='@'/>
 <retval declared_type='id _Nullable' type='@'/>
@@ -642,6 +652,9 @@
 </method>
 <method selector='invalidateUserActivity'>
 <retval declared_type='void' type='v'/>
+</method>
+<method selector='isTableScrollingHapticFeedbackEnabled'>
+<retval declared_type='BOOL' type='B'/>
 </method>
 <method selector='pickerDidFocus:'>
 <arg declared_type='WKInterfacePicker * _Nonnull' index='0' name='picker' type='@'/>
@@ -751,9 +764,16 @@
 <arg declared_type='BOOL' index='2' name='animated' type='B'/>
 <retval declared_type='void' type='v'/>
 </method>
+<method selector='setTableScrollingHapticFeedbackEnabled:'>
+<arg declared_type='BOOL' index='0' name='tableScrollingHapticFeedbackEnabled' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
 <method selector='setTitle:'>
 <arg declared_type='NSString * _Nullable' index='0' name='title' type='@'/>
 <retval declared_type='void' type='v'/>
+</method>
+<method selector='systemMinimumLayoutMargins'>
+<retval declared_type='NSDirectionalEdgeInsets' type='{NSDirectionalEdgeInsets=ffff}'/>
 </method>
 <method selector='table:didSelectRowAtIndex:'>
 <arg declared_type='WKInterfaceTable * _Nonnull' index='0' name='table' type='@'/>

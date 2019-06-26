@@ -1,5 +1,11 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreData.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/Accounts.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <constant const='true' declared_type64='NSString * _Nonnull' name='CNContactBirthdayKey' type64='@'/>
 <constant const='true' declared_type64='NSString * _Nonnull' name='CNContactDatesKey' type64='@'/>
 <constant const='true' declared_type64='NSString * _Nonnull' name='CNContactDepartmentNameKey' type64='@'/>
@@ -137,6 +143,7 @@
 <enum name='CNErrorCodePolicyViolation' value64='500'/>
 <enum name='CNErrorCodePredicateInvalid' value64='400'/>
 <enum name='CNErrorCodeRecordDoesNotExist' value64='200'/>
+<enum name='CNErrorCodeRecordIdentifierInvalid' value64='205'/>
 <enum name='CNErrorCodeVCardMalformed' value64='700'/>
 <enum name='CNErrorCodeVCardSummarizationError' value64='701'/>
 <enum name='CNErrorCodeValidationConfigurationError' value64='302'/>
@@ -257,8 +264,16 @@
 <arg declared_type64='NSString * _Nonnull' index='0' name='groupIdentifier' type64='@'/>
 <retval declared_type64='NSPredicate * _Nonnull' type64='@'/>
 </method>
+<method class_method='true' selector='predicateForContactsMatchingEmailAddress:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='emailAddress' type64='@'/>
+<retval declared_type64='NSPredicate * _Nonnull' type64='@'/>
+</method>
 <method class_method='true' selector='predicateForContactsMatchingName:'>
 <arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='NSPredicate * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='predicateForContactsMatchingPhoneNumber:'>
+<arg declared_type64='CNPhoneNumber * _Nonnull' index='0' name='phoneNumber' type64='@'/>
 <retval declared_type64='NSPredicate * _Nonnull' type64='@'/>
 </method>
 <method class_method='true' selector='predicateForContactsWithIdentifiers:'>

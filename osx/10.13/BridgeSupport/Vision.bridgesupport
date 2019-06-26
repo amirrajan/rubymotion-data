@@ -28,11 +28,25 @@
 <constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyPDF417' type64='@'/>
 <constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyQR' type64='@'/>
 <constant const='true' declared_type64='VNBarcodeSymbology' name='VNBarcodeSymbologyUPCE' type64='@'/>
+<constant const='true' declared_type64='NSUInteger' name='VNCoreMLRequestRevision1' type64='Q'/>
+<constant const='true' declared_type64='NSUInteger' name='VNDetectBarcodesRequestRevision1' type64='Q'/>
+<constant const='true' declared_type64='NSUInteger' name='VNDetectFaceLandmarksRequestRevision1' type64='Q'/>
+<constant const='true' declared_type64='NSUInteger' name='VNDetectFaceLandmarksRequestRevision2' type64='Q'/>
+<constant const='true' declared_type64='NSUInteger' name='VNDetectFaceRectanglesRequestRevision1' type64='Q'/>
+<constant const='true' declared_type64='NSUInteger' name='VNDetectFaceRectanglesRequestRevision2' type64='Q'/>
+<constant const='true' declared_type64='NSUInteger' name='VNDetectHorizonRequestRevision1' type64='Q'/>
+<constant const='true' declared_type64='NSUInteger' name='VNDetectRectanglesRequestRevision1' type64='Q'/>
+<constant const='true' declared_type64='NSUInteger' name='VNDetectTextRectanglesRequestRevision1' type64='Q'/>
 <constant const='true' declared_type64='NSString*' name='VNErrorDomain' type64='@'/>
+<constant const='true' declared_type64='NSUInteger' name='VNHomographicImageRegistrationRequestRevision1' type64='Q'/>
 <constant const='true' declared_type64='VNImageOption _Nonnull' name='VNImageOptionCIContext' type64='@'/>
 <constant const='true' declared_type64='VNImageOption _Nonnull' name='VNImageOptionCameraIntrinsics' type64='@'/>
 <constant const='true' declared_type64='VNImageOption _Nonnull' name='VNImageOptionProperties' type64='@'/>
 <constant const='true' declared_type64='CGRect' name='VNNormalizedIdentityRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<constant const='true' declared_type64='NSUInteger' name='VNRequestRevisionUnspecified' type64='Q'/>
+<constant const='true' declared_type64='NSUInteger' name='VNTrackObjectRequestRevision1' type64='Q'/>
+<constant const='true' declared_type64='NSUInteger' name='VNTrackRectangleRequestRevision1' type64='Q'/>
+<constant const='true' declared_type64='NSUInteger' name='VNTranslationalImageRegistrationRequestRevision1' type64='Q'/>
 <constant declared_type64='double' name='VNVisionVersionNumber' type64='d'/>
 <enum name='VNErrorIOError' value64='6'/>
 <enum name='VNErrorInternalError' value64='9'/>
@@ -50,6 +64,7 @@
 <enum name='VNErrorOutOfMemory' value64='10'/>
 <enum name='VNErrorRequestCancelled' value64='1'/>
 <enum name='VNErrorUnknownError' value64='11'/>
+<enum name='VNErrorUnsupportedRevision' value64='16'/>
 <enum name='VNImageCropAndScaleOptionCenterCrop' value64='0'/>
 <enum name='VNImageCropAndScaleOptionScaleFill' value64='2'/>
 <enum name='VNImageCropAndScaleOptionScaleFit' value64='1'/>
@@ -94,6 +109,9 @@
 <class name='NSObject'>
 <method selector='inputFaceObservations'>
 <retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='requestRevision'>
+<retval declared_type64='NSUInteger' type64='Q'/>
 </method>
 <method selector='setInputFaceObservations:'>
 <arg declared_type64='NSArray * _Nullable' index='0' name='inputFaceObservations' type64='@'/>
@@ -226,6 +244,11 @@
 <arg declared_type64='CGRect' index='0' name='boundingBox' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
+<method class_method='true' selector='observationWithRequestRevision:boundingBox:'>
+<arg declared_type64='NSUInteger' index='0' name='requestRevision' type64='Q'/>
+<arg declared_type64='CGRect' index='1' name='boundingBox' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
 </class>
 <class name='VNFaceLandmarkRegion'>
 <method selector='pointCount'>
@@ -288,8 +311,21 @@
 </method>
 </class>
 <class name='VNFaceObservation'>
+<method class_method='true' selector='faceObservationWithRequestRevision:boundingBox:roll:yaw:'>
+<arg declared_type64='NSUInteger' index='0' name='requestRevision' type64='Q'/>
+<arg declared_type64='CGRect' index='1' name='boundingBox' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='NSNumber * _Nullable' index='2' name='roll' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='3' name='yaw' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
 <method selector='landmarks'>
 <retval declared_type64='VNFaceLandmarks2D * _Nullable' type64='@'/>
+</method>
+<method selector='roll'>
+<retval declared_type64='NSNumber * _Nullable' type64='@'/>
+</method>
+<method selector='yaw'>
+<retval declared_type64='NSNumber * _Nullable' type64='@'/>
 </method>
 </class>
 <class name='VNHorizonObservation'>
@@ -402,6 +438,11 @@
 <retval declared_type64='CVPixelBufferRef _Nonnull' type64='^{__CVBuffer=}'/>
 </method>
 </class>
+<class name='VNRecognizedObjectObservation'>
+<method selector='labels'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
 <class name='VNRectangleObservation'>
 <method selector='bottomLeft'>
 <retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
@@ -424,6 +465,12 @@
 <retval declared_type64='void' type64='v'/>
 </retval>
 </method>
+<method class_method='true' selector='currentRevision'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method class_method='true' selector='defaultRevision'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
 <method selector='init'>
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
@@ -441,13 +488,23 @@
 <method selector='results'>
 <retval declared_type64='NSArray * _Nullable' type64='@'/>
 </method>
+<method selector='revision'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
 <method selector='setPreferBackgroundProcessing:'>
 <arg declared_type64='BOOL' index='0' name='preferBackgroundProcessing' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRevision:'>
+<arg declared_type64='NSUInteger' index='0' name='revision' type64='Q'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setUsesCPUOnly:'>
 <arg declared_type64='BOOL' index='0' name='usesCPUOnly' type64='B'/>
 <retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='supportedRevisions'>
+<retval declared_type64='NSIndexSet * _Nonnull' type64='@'/>
 </method>
 <method selector='usesCPUOnly'>
 <retval declared_type64='BOOL' type64='B'/>
@@ -750,6 +807,11 @@
 <method selector='setInputFaceObservations:' type64='v24@0:8@16'>
 <arg declared_type64='NSArray * _Nullable' index='0' name='inputFaceObservations' type64='@'/>
 <retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='VNRequestRevisionProviding'>
+<method selector='requestRevision' type64='Q16@0:8'>
+<retval declared_type64='NSUInteger' type64='Q'/>
 </method>
 </informal_protocol>
 </signatures>

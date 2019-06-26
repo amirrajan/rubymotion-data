@@ -1,5 +1,28 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Metal.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/IOSurface.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioUnit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreData.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SpeechRecognition.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreAudio.framework'/>
+<depends_on path='/System/Library/Frameworks/DiskArbitration.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenGL.framework'/>
+<depends_on path='/System/Library/Frameworks/ColorSync.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreImage.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
 <cftype name='NSModalSession' type64='^{_NSModalSession=}'/>
 <cftype name='NSOpenGLContextAuxiliary' type64='^{_CGLContextObject=}'/>
 <cftype name='NSScreenAuxiliaryOpaque' type64='^{NSScreenAuxiliary=}'/>
@@ -415,6 +438,7 @@
 <constant const='true' declared_type64='NSAppKitVersion' name='NSAppKitVersionNumberWithDockTilePlugInSupport' type64='d'/>
 <constant const='true' declared_type64='NSAppKitVersion' name='NSAppKitVersionNumberWithPatternColorLeakFix' type64='d'/>
 <constant declared_type64='NSExceptionName _Nonnull' name='NSAppKitVirtualMemoryException' type64='@'/>
+<constant declared_type64='NSAttributedStringDocumentAttributeKey _Nonnull' name='NSAppearanceDocumentAttribute' type64='@'/>
 <constant const='true' declared_type64='NSAppearanceName _Nonnull' name='NSAppearanceNameAccessibilityHighContrastAqua' type64='@'/>
 <constant const='true' declared_type64='NSAppearanceName _Nonnull' name='NSAppearanceNameAccessibilityHighContrastDarkAqua' type64='@'/>
 <constant const='true' declared_type64='NSAppearanceName _Nonnull' name='NSAppearanceNameAccessibilityHighContrastVibrantDark' type64='@'/>
@@ -958,6 +982,7 @@
 <constant declared_type64='NSNotificationName _Nonnull' name='NSMenuDidEndTrackingNotification' type64='@'/>
 <constant declared_type64='NSNotificationName _Nonnull' name='NSMenuDidRemoveItemNotification' type64='@'/>
 <constant declared_type64='NSNotificationName _Nonnull' name='NSMenuDidSendActionNotification' type64='@'/>
+<constant const='true' declared_type64='NSUserInterfaceItemIdentifier _Nonnull' name='NSMenuItemImportFromDeviceIdentifier' type64='@'/>
 <constant declared_type64='NSNotificationName _Nonnull' name='NSMenuWillSendActionNotification' type64='@'/>
 <constant declared_type64='NSBindingName _Nonnull' name='NSMinValueBinding' type64='@'/>
 <constant declared_type64='NSBindingName _Nonnull' name='NSMinWidthBinding' type64='@'/>
@@ -3078,6 +3103,12 @@
 <enum name='NSWindowUserTabbingPreferenceManual' value64='0'/>
 <enum name='NSWindowZoomButton' value64='2'/>
 <enum name='NSWindows95InterfaceStyle' value64='2'/>
+<enum name='NSWorkspaceAuthorizationInvalidError' value64='67328'/>
+<enum name='NSWorkspaceAuthorizationTypeCreateSymbolicLink' value64='0'/>
+<enum name='NSWorkspaceAuthorizationTypeReplaceFile' value64='2'/>
+<enum name='NSWorkspaceAuthorizationTypeSetAttributes' value64='1'/>
+<enum name='NSWorkspaceErrorMaximum' value64='67455'/>
+<enum name='NSWorkspaceErrorMinimum' value64='67328'/>
 <enum name='NSWorkspaceLaunchAllowingClassicStartup' value64='131072'/>
 <enum name='NSWorkspaceLaunchAndHide' value64='1048576'/>
 <enum name='NSWorkspaceLaunchAndHideOthers' value64='2097152'/>
@@ -3118,7 +3149,7 @@
 <function name='NSAccessibilityPostNotificationWithUserInfo'>
 <arg declared_type64='id _Nonnull' name='element' type64='@'/>
 <arg declared_type64='NSAccessibilityNotificationName _Nonnull' name='notification' type64='@'/>
-<arg declared_type64='NSDictionary * _Nonnull' name='userInfo' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' name='userInfo' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </function>
 <function name='NSAccessibilityRaiseBadArgumentException'>
@@ -3440,7 +3471,7 @@
 <retval declared_type64='NSInteger' type64='q'/>
 </function>
 <function name='NSOpenGLGetOption'>
-<arg declared_type64='NSOpenGLGlobalOption' name='pname' type64='i'/>
+<arg declared_type64='NSOpenGLGlobalOption' name='pname' type64='I'/>
 <arg declared_type64='GLint * _Nonnull' name='param' type64='^i'/>
 <retval declared_type64='void' type64='v'/>
 </function>
@@ -3450,7 +3481,7 @@
 <retval declared_type64='void' type64='v'/>
 </function>
 <function name='NSOpenGLSetOption'>
-<arg declared_type64='NSOpenGLGlobalOption' name='pname' type64='i'/>
+<arg declared_type64='NSOpenGLGlobalOption' name='pname' type64='I'/>
 <arg declared_type64='GLint' name='param' type64='i'/>
 <retval declared_type64='void' type64='v'/>
 </function>
@@ -5470,6 +5501,17 @@
 </method>
 <method selector='windingRule'>
 <retval declared_type64='NSWindingRule' type64='Q'/>
+</method>
+</class>
+<class name='NSBindingSelectionMarker'>
+<method class_method='true' selector='multipleValuesSelectionMarker'>
+<retval declared_type64='NSBindingSelectionMarker * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='noSelectionMarker'>
+<retval declared_type64='NSBindingSelectionMarker * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='notApplicableSelectionMarker'>
+<retval declared_type64='NSBindingSelectionMarker * _Nonnull' type64='@'/>
 </method>
 </class>
 <class name='NSBitmapImageRep'>
@@ -10852,10 +10894,6 @@
 <arg declared_type64='NSCoder * _Nonnull' index='0' name='coder' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
-<method selector='restoreUserActivityState:'>
-<arg declared_type64='NSUserActivity * _Nonnull' index='0' name='activity' type64='@'/>
-<retval declared_type64='void' type64='v'/>
-</method>
 <method selector='revertDocumentToSaved:'>
 <arg declared_type64='id _Nullable' index='0' name='sender' type64='@'/>
 <retval declared_type64='void' type64='v'/>
@@ -11985,6 +12023,12 @@
 </method>
 <method selector='windowNumber'>
 <retval declared_type64='NSInteger' type64='q'/>
+</method>
+</class>
+<class name='NSFileManager'>
+<method class_method='true' selector='fileManagerWithAuthorization:'>
+<arg declared_type64='NSWorkspaceAuthorization * _Nonnull' index='0' name='authorization' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 </class>
 <class name='NSFilePromiseProvider'>
@@ -15021,6 +15065,9 @@
 <arg declared_type64='NSRange' index='1' name='glyphRange' type64='{_NSRange=QQ}'/>
 <retval declared_type64='NSRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
 </method>
+<method selector='limitsLayoutForSuspiciousContents'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
 <method selector='lineFragmentRectForGlyphAtIndex:effectiveRange:'>
 <arg declared_type64='NSUInteger' index='0' name='glyphIndex' type64='Q'/>
 <arg declared_type64='NSRangePointer _Nullable' index='1' name='effectiveGlyphRange' type64='^{_NSRange=QQ}'/>
@@ -15184,6 +15231,10 @@
 <arg declared_type64='NSRect' index='0' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
 <arg declared_type64='NSTextBlock * _Nonnull' index='1' name='block' type64='@'/>
 <arg declared_type64='NSRange' index='2' name='glyphRange' type64='{_NSRange=QQ}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLimitsLayoutForSuspiciousContents:'>
+<arg declared_type64='BOOL' index='0' name='limitsLayoutForSuspiciousContents' type64='B'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setLineFragmentRect:forGlyphRange:usedRect:'>
@@ -17523,8 +17574,8 @@
 <method selector='application:continueUserActivity:restorationHandler:'>
 <arg declared_type64='NSApplication * _Nonnull' index='0' name='application' type64='@'/>
 <arg declared_type64='NSUserActivity * _Nonnull' index='1' name='userActivity' type64='@'/>
-<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull)' function_pointer='true' index='2' name='restorationHandler' type64='@?'>
-<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray&gt; * _Nonnull)' function_pointer='true' index='2' name='restorationHandler' type64='@?'>
+<arg declared_type64='NSArray&gt; * _Nonnull' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </arg>
 <retval declared_type64='BOOL' type64='B'/>
@@ -19937,6 +19988,10 @@
 <method selector='resetSpringLoading'>
 <retval declared_type64='void' type64='v'/>
 </method>
+<method selector='restoreUserActivityState:'>
+<arg declared_type64='NSUserActivity * _Nonnull' index='0' name='userActivity' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
 <method class_method='true' selector='restoreWindowWithIdentifier:state:completionHandler:'>
 <arg declared_type64='NSUserInterfaceItemIdentifier _Nonnull' index='0' name='identifier' type64='@'/>
 <arg declared_type64='NSCoder * _Nonnull' index='1' name='state' type64='@'/>
@@ -22248,8 +22303,22 @@
 <arg declared_type64='NSOpenGLPixelFormat * _Nullable' index='0' name='pixelFormat' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
+<method selector='setWantsBestResolutionOpenGLSurface:'>
+<arg declared_type64='BOOL' index='0' name='wantsBestResolutionOpenGLSurface' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setWantsExtendedDynamicRangeOpenGLSurface:'>
+<arg declared_type64='BOOL' index='0' name='wantsExtendedDynamicRangeOpenGLSurface' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
 <method selector='update'>
 <retval declared_type64='void' type64='v'/>
+</method>
+<method selector='wantsBestResolutionOpenGLSurface'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='wantsExtendedDynamicRangeOpenGLSurface'>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 </class>
 <class name='NSOpenPanel'>
@@ -24662,10 +24731,6 @@
 </method>
 <method selector='restoreStateWithCoder:'>
 <arg declared_type64='NSCoder * _Nonnull' index='0' name='coder' type64='@'/>
-<retval declared_type64='void' type64='v'/>
-</method>
-<method selector='restoreUserActivityState:'>
-<arg declared_type64='NSUserActivity * _Nonnull' index='0' name='userActivity' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='rightMouseDown:'>
@@ -30213,12 +30278,6 @@
 </method>
 <method selector='setImage:'>
 <arg declared_type64='NSImage * _Nullable' index='0' name='image' type64='@'/>
-<retval declared_type64='void' type64='v'/>
-</method>
-</class>
-<class name='NSTextAttachmentCell'>
-<method selector='setCellBaselineOffset:'>
-<arg declared_type64='NSPoint' index='0' name='offset' type64='{CGPoint=dd}'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 </class>
@@ -36109,6 +36168,15 @@
 </arg>
 <retval declared_type64='void' type64='v'/>
 </method>
+<method selector='requestAuthorizationOfType:completionHandler:'>
+<arg declared_type64='NSWorkspaceAuthorizationType' index='0' name='type' type64='q'/>
+<arg declared_type64='void (^ _Nonnull)(NSWorkspaceAuthorization * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSWorkspaceAuthorization * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
 <method selector='runningApplications'>
 <retval declared_type64='NSArray * _Nonnull' type64='@'/>
 </method>
@@ -37460,8 +37528,8 @@
 <method selector='application:continueUserActivity:restorationHandler:' type64='B40@0:8@16@24@?32'>
 <arg declared_type64='NSApplication * _Nonnull' index='0' name='application' type64='@'/>
 <arg declared_type64='NSUserActivity * _Nonnull' index='1' name='userActivity' type64='@'/>
-<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull)' function_pointer='true' index='2' name='restorationHandler' type64='@?'>
-<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray&gt; * _Nonnull)' function_pointer='true' index='2' name='restorationHandler' type64='@?'>
+<arg declared_type64='NSArray&gt; * _Nonnull' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </arg>
 <retval declared_type64='BOOL' type64='B'/>
@@ -41303,6 +41371,12 @@
 <informal_protocol name='NSTouchBarProvider'>
 <method selector='touchBar' type64='@16@0:8'>
 <retval declared_type64='NSTouchBar * _Nullable' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NSUserActivityRestoring'>
+<method selector='restoreUserActivityState:' type64='v24@0:8@16'>
+<arg declared_type64='NSUserActivity * _Nonnull' index='0' name='userActivity' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 </informal_protocol>
 <informal_protocol name='NSUserInterfaceCompression'>

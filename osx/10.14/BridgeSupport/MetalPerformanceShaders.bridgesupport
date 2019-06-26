@@ -1,5 +1,15 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSCore.framework'/>
+<depends_on path='/System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSImage.framework'/>
+<depends_on path='/System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSNeuralNetwork.framework'/>
+<depends_on path='/System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSMatrix.framework'/>
+<depends_on path='/System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSRayIntersector.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IOSurface.framework'/>
+<depends_on path='/System/Library/Frameworks/Metal.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<enum name='MetalPerformanceShaders_h' value64='1'/>
 <function name='MPSHintTemporaryMemoryHighWaterMark'>
 <arg declared_type64='id _Nonnull' name='cmdBuf' type64='@'/>
 <arg declared_type64='NSUInteger' name='bytes' type64='Q'/>
@@ -42,9 +52,18 @@
 <field declared_type64='uint16_t' name='imageArrayOffset' type64='S'/>
 <field declared_type64='uint16_t' name='imageArraySize' type64='S'/>
 </struct>
+<struct name='MPSImageCoordinate' type64='{MPSImageCoordinate=&quot;x&quot;Q&quot;y&quot;Q&quot;channel&quot;Q}'>
+<field declared_type64='NSUInteger' name='x' type64='Q'/>
+<field declared_type64='NSUInteger' name='y' type64='Q'/>
+<field declared_type64='NSUInteger' name='channel' type64='Q'/>
+</struct>
 <struct name='MPSImageReadWriteParams' type64='{_MPSImageReadWriteParams=&quot;featureChannelOffset&quot;Q&quot;numberOfFeatureChannelsToReadWrite&quot;Q}'>
 <field declared_type64='NSUInteger' name='featureChannelOffset' type64='Q'/>
 <field declared_type64='NSUInteger' name='numberOfFeatureChannelsToReadWrite' type64='Q'/>
+</struct>
+<struct name='MPSImageRegion' type64='{MPSImageRegion=&quot;offset&quot;{MPSImageCoordinate=&quot;x&quot;Q&quot;y&quot;Q&quot;channel&quot;Q}&quot;size&quot;{MPSImageCoordinate=&quot;x&quot;Q&quot;y&quot;Q&quot;channel&quot;Q}}'>
+<field declared_type64='MPSImageCoordinate' name='offset' type64='{MPSImageCoordinate=&quot;x&quot;Q&quot;y&quot;Q&quot;channel&quot;Q}'/>
+<field declared_type64='MPSImageCoordinate' name='size' type64='{MPSImageCoordinate=&quot;x&quot;Q&quot;y&quot;Q&quot;channel&quot;Q}'/>
 </struct>
 <struct name='MPSIntegerDivisionParams' type64='{_MPSIntegerDivisionParams=&quot;divisor&quot;S&quot;recip&quot;S&quot;addend&quot;S&quot;shift&quot;S}'>
 <field declared_type64='uint16_t' name='divisor' type64='S'/>
@@ -113,7 +132,11 @@
 <enum name='MPSDataTypeUnorm8' value64='1073741832'/>
 <enum name='MPSFunctionConstantIndex' value64='127'/>
 <enum name='MPSImageEdgeModeClamp' value64='1'/>
+<enum name='MPSImageEdgeModeConstant' value64='4'/>
+<enum name='MPSImageEdgeModeMirror' value64='2'/>
+<enum name='MPSImageEdgeModeMirrorWithEdge' value64='3'/>
 <enum name='MPSImageEdgeModeZero' value64='0'/>
+<enum name='MPSImageFeatureChannelFormatCount' value64='5'/>
 <enum name='MPSImageFeatureChannelFormatFloat16' value64='3'/>
 <enum name='MPSImageFeatureChannelFormatFloat32' value64='4'/>
 <enum name='MPSImageFeatureChannelFormatNone' value64='0'/>
@@ -173,6 +196,15 @@
 <arg declared_type64='MPSImageBatch * _Nonnull' name='batch' type64='^{NSArray=#}'/>
 <arg declared_type64='NSInteger' name='amount' type64='q'/>
 <retval declared_type64='NSUInteger' type64='Q'/>
+</function>
+<function name='MPSImageBatchIterate'>
+<arg declared_type64='MPSImageBatch * _Nonnull' name='batch' type64='^{NSArray=#}'/>
+<arg declared_type64='NSInteger (^ _Nonnull)(MPSImage * _Nonnull, NSUInteger)' function_pointer='true' name='iteratorBlock' type64='@?'>
+<arg declared_type64='MPSImage * _Nonnull' type64='@'/>
+<arg declared_type64='NSUInteger' type64='Q'/>
+<retval declared_type64='NSInteger' type64='q'/>
+</arg>
+<retval declared_type64='NSInteger' type64='q'/>
 </function>
 <function name='MPSImageBatchResourceSize'>
 <arg declared_type64='MPSImageBatch * _Nonnull' name='batch' type64='^{NSArray=#}'/>
@@ -336,6 +368,10 @@
 <class name='MPSImageDescriptor'>
 <method selector='channelFormat'>
 <retval declared_type64='MPSImageFeatureChannelFormat' type64='Q'/>
+</method>
+<method selector='copyWithZone:'>
+<arg declared_type64='NSZone * _Nullable' index='0' name='zone' type64='^{_NSZone=}'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method selector='cpuCacheMode'>
 <retval declared_type64='MTLCPUCacheMode' type64='Q'/>
@@ -653,6 +689,13 @@
 </method>
 </class>
 <class name='NSObject'>
+<method selector='imageBatchForCommandBuffer:imageDescriptor:kernel:count:'>
+<arg declared_type64='id _Nonnull' index='0' name='cmdBuf' type64='@'/>
+<arg declared_type64='MPSImageDescriptor * _Nonnull' index='1' name='descriptor' type64='@'/>
+<arg declared_type64='MPSKernel * _Nonnull' index='2' name='kernel' type64='@'/>
+<arg declared_type64='NSUInteger' index='3' name='count' type64='Q'/>
+<retval declared_type64='MPSImageBatch * _Nonnull' type64='^{NSArray=#}'/>
+</method>
 <method selector='imageForCommandBuffer:imageDescriptor:kernel:'>
 <arg declared_type64='id _Nonnull' index='0' name='cmdBuf' type64='@'/>
 <arg declared_type64='MPSImageDescriptor * _Nonnull' index='1' name='descriptor' type64='@'/>
@@ -669,6 +712,13 @@
 </method>
 </informal_protocol>
 <informal_protocol name='MPSImageAllocator'>
+<method selector='imageBatchForCommandBuffer:imageDescriptor:kernel:count:' type64='^{NSArray=#}48@0:8@16@24@32Q40'>
+<arg declared_type64='id _Nonnull' index='0' name='cmdBuf' type64='@'/>
+<arg declared_type64='MPSImageDescriptor * _Nonnull' index='1' name='descriptor' type64='@'/>
+<arg declared_type64='MPSKernel * _Nonnull' index='2' name='kernel' type64='@'/>
+<arg declared_type64='NSUInteger' index='3' name='count' type64='Q'/>
+<retval declared_type64='MPSImageBatch * _Nonnull' type64='^{NSArray=#}'/>
+</method>
 <method selector='imageForCommandBuffer:imageDescriptor:kernel:' type64='@40@0:8@16@24@32'>
 <arg declared_type64='id _Nonnull' index='0' name='cmdBuf' type64='@'/>
 <arg declared_type64='MPSImageDescriptor * _Nonnull' index='1' name='descriptor' type64='@'/>
@@ -943,6 +993,12 @@
 </method>
 <method selector='destinationMatrixOrigin'>
 <retval declared_type64='MTLOrigin' type64='{_MTLOrigin=QQQ}'/>
+</method>
+<method selector='encodeBatchToCommandBuffer:sourceImages:destinationMatrix:'>
+<arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImages' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSMatrix * _Nonnull' index='2' name='destinationMatrix' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='encodeToCommandBuffer:sourceImage:destinationMatrix:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
@@ -1254,6 +1310,47 @@
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 </class>
+<class name='MPSImageNormalizedHistogram'>
+<method selector='clipRectSource'>
+<retval declared_type64='MTLRegion' type64='{_MTLRegion={?=QQQ}{?=QQQ}}'/>
+</method>
+<method selector='encodeToCommandBuffer:sourceTexture:minmaxTexture:histogram:histogramOffset:'>
+<arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='source' type64='@'/>
+<arg declared_type64='id _Nonnull' index='2' name='minmaxTexture' type64='@'/>
+<arg declared_type64='id _Nonnull' index='3' name='histogram' type64='@'/>
+<arg declared_type64='NSUInteger' index='4' name='histogramOffset' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='histogramInfo'>
+<retval declared_type64='MPSImageHistogramInfo' type64='{_MPSImageHistogramInfo=QB}'/>
+</method>
+<method selector='histogramSizeForSourceFormat:'>
+<arg declared_type64='MTLPixelFormat' index='0' name='sourceFormat' type64='Q'/>
+<retval declared_type64='size_t' type64='Q'/>
+</method>
+<method selector='initWithCoder:device:'>
+<arg declared_type64='NSCoder * _Nonnull' index='0' name='aDecoder' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='initWithDevice:histogramInfo:'>
+<arg declared_type64='id _Nonnull' index='0' name='device' type64='@'/>
+<arg const='true' declared_type64='MPSImageHistogramInfo * _Nonnull' index='1' name='histogramInfo' type64='^{_MPSImageHistogramInfo=QB}'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setClipRectSource:'>
+<arg declared_type64='MTLRegion' index='0' name='clipRectSource' type64='{_MTLRegion={?=QQQ}{?=QQQ}}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setZeroHistogram:'>
+<arg declared_type64='BOOL' index='0' name='zeroHistogram' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='zeroHistogram'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
 <class name='MPSImagePyramid'>
 <method selector='initWithCoder:device:'>
 <arg declared_type64='NSCoder * _Nonnull' index='0' name='aDecoder' type64='@'/>
@@ -1543,6 +1640,12 @@
 <class name='MPSMatrixCopyToImage'>
 <method selector='dataLayout'>
 <retval declared_type64='MPSDataLayout' type64='Q'/>
+</method>
+<method selector='encodeBatchToCommandBuffer:sourceMatrix:destinationImages:'>
+<arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
+<arg declared_type64='MPSMatrix * _Nonnull' index='1' name='sourceMatrix' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='destinationImages' type64='^{NSArray=#}'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='encodeToCommandBuffer:sourceMatrix:destinationImage:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
@@ -2353,6 +2456,12 @@
 <enum name='MPSCNNWeightsQuantizationTypeLinear' value64='1'/>
 <enum name='MPSCNNWeightsQuantizationTypeLookupTable' value64='2'/>
 <enum name='MPSCNNWeightsQuantizationTypeNone' value64='0'/>
+<enum name='MPSNNComparisonTypeEqual' value64='0'/>
+<enum name='MPSNNComparisonTypeGreater' value64='4'/>
+<enum name='MPSNNComparisonTypeGreaterOrEqual' value64='5'/>
+<enum name='MPSNNComparisonTypeLess' value64='2'/>
+<enum name='MPSNNComparisonTypeLessOrEqual' value64='3'/>
+<enum name='MPSNNComparisonTypeNotEqual' value64='1'/>
 <enum name='MPSNNConvolutionAccumulatorPrecisionOptionFloat' value64='1'/>
 <enum name='MPSNNConvolutionAccumulatorPrecisionOptionHalf' value64='0'/>
 <enum name='MPSNNPaddingMethodAddRemainderToBottomLeft' value64='8'/>
@@ -2366,6 +2475,7 @@
 <enum name='MPSNNPaddingMethodAlignTopLeft' value64='1'/>
 <enum name='MPSNNPaddingMethodAlign_reserved' value64='3'/>
 <enum name='MPSNNPaddingMethodCustom' value64='16384'/>
+<enum name='MPSNNPaddingMethodCustomWhitelistForNodeFusion' value64='8192'/>
 <enum name='MPSNNPaddingMethodExcludeEdges' value64='32768'/>
 <enum name='MPSNNPaddingMethodSizeFull' value64='32'/>
 <enum name='MPSNNPaddingMethodSizeMask' value64='2032'/>
@@ -2571,6 +2681,12 @@
 <arg declared_type64='id _Nonnull' index='1' name='dataSource' type64='@'/>
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
+<method selector='initWithDevice:dataSource:fusedNeuronDescriptor:'>
+<arg declared_type64='id _Nonnull' index='0' name='device' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='dataSource' type64='@'/>
+<arg declared_type64='MPSNNNeuronDescriptor * _Nullable' index='2' name='fusedNeuronDescriptor' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
 <method selector='numberOfFeatureChannels'>
 <retval declared_type64='NSUInteger' type64='Q'/>
 </method>
@@ -2642,6 +2758,16 @@
 <arg declared_type64='MPSCNNBatchNormalizationState * _Nonnull' index='3' name='batchNormalizationState' type64='@'/>
 <arg declared_type64='MPSImage * _Nonnull' index='4' name='destinationGradient' type64='@'/>
 <retval declared_type64='void' type64='v'/>
+</method>
+<method selector='initWithCoder:device:'>
+<arg declared_type64='NSCoder * _Nonnull' index='0' name='aDecoder' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='initWithDevice:fusedNeuronDescriptor:'>
+<arg declared_type64='id _Nonnull' index='0' name='device' type64='@'/>
+<arg declared_type64='MPSNNNeuronDescriptor * _Nullable' index='1' name='fusedNeuronDescriptor' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 </class>
 <class name='MPSCNNBatchNormalizationGradientNode'>
@@ -2727,6 +2853,16 @@
 <arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='sourceImages' type64='^{NSArray=#}'/>
 <arg declared_type64='MPSCNNBatchNormalizationState * _Nonnull' index='3' name='batchNormalizationState' type64='@'/>
 <retval declared_type64='void' type64='v'/>
+</method>
+<method selector='initWithCoder:device:'>
+<arg declared_type64='NSCoder * _Nonnull' index='0' name='aDecoder' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='initWithDevice:fusedNeuronDescriptor:'>
+<arg declared_type64='id _Nonnull' index='0' name='device' type64='@'/>
+<arg declared_type64='MPSNNNeuronDescriptor * _Nullable' index='1' name='fusedNeuronDescriptor' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 </class>
 <class name='MPSCNNBinaryConvolution'>
@@ -3117,6 +3253,9 @@
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
 <arg declared_type64='BOOL' index='1' name='resultStateCanBeTemporary' type64='B'/>
 <retval declared_type64='MPSCNNConvolutionWeightsAndBiasesState * _Nonnull' type64='@'/>
+</method>
+<method selector='fusedNeuronDescriptor'>
+<retval declared_type64='MPSNNNeuronDescriptor * _Nullable' type64='@'/>
 </method>
 <method selector='groups'>
 <retval declared_type64='NSUInteger' type64='Q'/>
@@ -4623,7 +4762,7 @@
 <method class_method='true' selector='cnnLossDescriptorWithType:reductionType:'>
 <arg declared_type64='MPSCNNLossType' index='0' name='lossType' type64='I'/>
 <arg declared_type64='MPSCNNReductionType' index='1' name='reductionType' type64='i'/>
-<retval declared_type64='MPSCNNLossDescriptor * _Nullable' type64='@'/>
+<retval declared_type64='MPSCNNLossDescriptor * _Nonnull' type64='@'/>
 </method>
 <method selector='delta'>
 <retval declared_type64='float' type64='f'/>
@@ -4977,6 +5116,11 @@
 </method>
 <method selector='c'>
 <retval declared_type64='float' type64='f'/>
+</method>
+<method class_method='true' selector='nodeWithSource:descriptor:'>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='0' name='sourceNode' type64='@'/>
+<arg declared_type64='MPSNNNeuronDescriptor * _Nonnull' index='1' name='descriptor' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 </class>
 <class name='MPSCNNNeuronPReLU'>
@@ -5965,7 +6109,7 @@
 <arg declared_type64='MPSCNNReductionType' index='4' name='reductionType' type64='i'/>
 <arg declared_type64='NSData * _Nonnull' index='5' name='anchorBoxes' type64='@'/>
 <arg declared_type64='NSUInteger' index='6' name='numberOfAnchorBoxes' type64='Q'/>
-<retval declared_type64='MPSCNNYOLOLossDescriptor * _Nullable' type64='@'/>
+<retval declared_type64='MPSCNNYOLOLossDescriptor * _Nonnull' type64='@'/>
 </method>
 <method selector='confidenceLossDescriptor'>
 <retval declared_type64='MPSCNNLossDescriptor * _Nonnull' type64='@'/>
@@ -6921,6 +7065,35 @@
 <retval declared_type64='void' type64='v'/>
 </method>
 </class>
+<class name='MPSNNCompare'>
+<method selector='comparisonType'>
+<retval declared_type64='MPSNNComparisonType' type64='Q'/>
+</method>
+<method selector='initWithDevice:'>
+<arg declared_type64='id _Nonnull' index='0' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setComparisonType:'>
+<arg declared_type64='MPSNNComparisonType' index='0' name='comparisonType' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setThreshold:'>
+<arg declared_type64='float' index='0' name='threshold' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='threshold'>
+<retval declared_type64='float' type64='f'/>
+</method>
+</class>
+<class name='MPSNNComparisonNode'>
+<method selector='comparisonType'>
+<retval declared_type64='MPSNNComparisonType' type64='Q'/>
+</method>
+<method selector='setComparisonType:'>
+<arg declared_type64='MPSNNComparisonType' index='0' name='comparisonType' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
 <class name='MPSNNConcatenationGradientNode'>
 <method selector='initWithSourceGradient:sourceImage:gradientState:'>
 <arg declared_type64='MPSNNImageNode * _Nonnull' index='0' name='gradientSourceNode' type64='@'/>
@@ -6943,6 +7116,33 @@
 <method class_method='true' selector='nodeWithSources:'>
 <arg declared_type64='NSArray * _Nonnull' index='0' name='sourceNodes' type64='@'/>
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MPSNNCropAndResizeBilinear'>
+<method selector='initWithCoder:device:'>
+<arg declared_type64='NSCoder * _Nonnull' index='0' name='aDecoder' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='initWithDevice:resizeWidth:resizeHeight:numberOfRegions:regions:'>
+<arg declared_type64='id _Nonnull' index='0' name='device' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='resizeWidth' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='resizeHeight' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='numberOfRegions' type64='Q'/>
+<arg const='true' declared_type64='MPSRegion * _Nonnull' index='4' name='regions' type64='^{MPSRegion={MPSOrigin=ddd}{MPSSize=ddd}}'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='numberOfRegions'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='regions'>
+<retval const='true' declared_type64='MPSRegion * _Nonnull' type64='^{MPSRegion={MPSOrigin=ddd}{MPSSize=ddd}}'/>
+</method>
+<method selector='resizeHeight'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='resizeWidth'>
+<retval declared_type64='NSUInteger' type64='Q'/>
 </method>
 </class>
 <class name='MPSNNDefaultPadding'>
@@ -7000,6 +7200,17 @@
 <arg declared_type64='id _Nonnull' index='0' name='paddingPolicy' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
+<method selector='trainingGraphWithSourceGradient:nodeHandler:'>
+<arg declared_type64='MPSNNImageNode * _Nullable' index='0' name='gradientImage' type64='@'/>
+<arg declared_type64='MPSGradientNodeBlock _Nullable' function_pointer='true' index='1' name='nodeHandler' type64='@?'>
+<arg declared_type64='MPSNNFilterNode * _Nonnull' type64='@'/>
+<arg declared_type64='MPSNNFilterNode * _Nonnull' type64='@'/>
+<arg declared_type64='MPSNNImageNode * _Nonnull' type64='@'/>
+<arg declared_type64='MPSNNImageNode * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
 </class>
 <class name='MPSNNGraph'>
 <method selector='destinationImageAllocator'>
@@ -7055,6 +7266,12 @@
 <arg declared_type64='BOOL' index='2' name='resultIsNeeded' type64='B'/>
 <retval declared_type64='instancetype _Nullable' type64='@'/>
 </method>
+<method class_method='true' selector='graphWithDevice:resultImages:resultsAreNeeded:'>
+<arg declared_type64='id _Nonnull' index='0' name='device' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='resultImages' type64='@'/>
+<arg declared_type64='BOOL * _Nullable' index='2' name='areResultsNeeded' type64='^B'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
 <method selector='initWithCoder:device:'>
 <arg declared_type64='NSCoder * _Nonnull' index='0' name='aDecoder' type64='@'/>
 <arg declared_type64='id _Nonnull' index='1' name='device' type64='@'/>
@@ -7071,11 +7288,25 @@
 <arg declared_type64='BOOL' index='2' name='resultIsNeeded' type64='B'/>
 <retval declared_type64='instancetype _Nullable' type64='@'/>
 </method>
+<method selector='initWithDevice:resultImages:resultsAreNeeded:'>
+<arg declared_type64='id _Nonnull' index='0' name='device' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='resultImages' type64='@'/>
+<arg declared_type64='BOOL * _Nullable' index='2' name='areResultsNeeded' type64='^B'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
 <method selector='intermediateImageHandles'>
 <retval declared_type64='NSArray&gt; * _Nullable' type64='@'/>
 </method>
 <method selector='outputStateIsTemporary'>
 <retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='readCountForSourceImageAtIndex:'>
+<arg declared_type64='NSUInteger' index='0' name='index' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='readCountForSourceStateAtIndex:'>
+<arg declared_type64='NSUInteger' index='0' name='index' type64='Q'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
 </method>
 <method selector='reloadFromDataSources'>
 <retval declared_type64='void' type64='v'/>
@@ -7149,9 +7380,16 @@
 <arg declared_type64='id _Nonnull' index='0' name='imageAllocator' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
+<method selector='setStopGradient:'>
+<arg declared_type64='BOOL' index='0' name='stopGradient' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
 <method selector='setSynchronizeResource:'>
 <arg declared_type64='BOOL' index='0' name='synchronizeResource' type64='B'/>
 <retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stopGradient'>
+<retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='synchronizeResource'>
 <retval declared_type64='BOOL' type64='B'/>
@@ -7259,6 +7497,32 @@
 <method selector='beta2'>
 <retval declared_type64='double' type64='d'/>
 </method>
+<method selector='encodeToCommandBuffer:batchNormalizationGradientState:batchNormalizationSourceState:inputMomentumVectors:inputVelocityVectors:resultState:'>
+<arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
+<arg declared_type64='MPSCNNBatchNormalizationState * _Nonnull' index='1' name='batchNormalizationGradientState' type64='@'/>
+<arg declared_type64='MPSCNNBatchNormalizationState * _Nonnull' index='2' name='batchNormalizationSourceState' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='3' name='inputMomentumVectors' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='4' name='inputVelocityVectors' type64='@'/>
+<arg declared_type64='MPSCNNNormalizationGammaAndBetaState * _Nonnull' index='5' name='resultState' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='encodeToCommandBuffer:batchNormalizationState:inputMomentumVectors:inputVelocityVectors:resultState:'>
+<arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
+<arg declared_type64='MPSCNNBatchNormalizationState * _Nonnull' index='1' name='batchNormalizationState' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='2' name='inputMomentumVectors' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='3' name='inputVelocityVectors' type64='@'/>
+<arg declared_type64='MPSCNNNormalizationGammaAndBetaState * _Nonnull' index='4' name='resultState' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='encodeToCommandBuffer:convolutionGradientState:convolutionSourceState:inputMomentumVectors:inputVelocityVectors:resultState:'>
+<arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
+<arg declared_type64='MPSCNNConvolutionGradientState * _Nonnull' index='1' name='convolutionGradientState' type64='@'/>
+<arg declared_type64='MPSCNNConvolutionWeightsAndBiasesState * _Nonnull' index='2' name='convolutionSourceState' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='3' name='inputMomentumVectors' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='4' name='inputVelocityVectors' type64='@'/>
+<arg declared_type64='MPSCNNConvolutionWeightsAndBiasesState * _Nonnull' index='5' name='resultState' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
 <method selector='encodeToCommandBuffer:inputGradientVector:inputValuesVector:inputMomentumVector:inputVelocityVector:resultValuesVector:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
 <arg declared_type64='MPSVector * _Nonnull' index='1' name='inputGradientVector' type64='@'/>
@@ -7284,6 +7548,10 @@
 <arg declared_type64='id _Nonnull' index='0' name='device' type64='@'/>
 <arg declared_type64='float' index='1' name='learningRate' type64='f'/>
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setTimeStep:'>
+<arg declared_type64='NSUInteger' index='0' name='timeStep' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='timeStep'>
 <retval declared_type64='NSUInteger' type64='Q'/>
@@ -7378,6 +7646,29 @@
 <method selector='decay'>
 <retval declared_type64='double' type64='d'/>
 </method>
+<method selector='encodeToCommandBuffer:batchNormalizationGradientState:batchNormalizationSourceState:inputSumOfSquaresVectors:resultState:'>
+<arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
+<arg declared_type64='MPSCNNBatchNormalizationState * _Nonnull' index='1' name='batchNormalizationGradientState' type64='@'/>
+<arg declared_type64='MPSCNNBatchNormalizationState * _Nonnull' index='2' name='batchNormalizationSourceState' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='3' name='inputSumOfSquaresVectors' type64='@'/>
+<arg declared_type64='MPSCNNNormalizationGammaAndBetaState * _Nonnull' index='4' name='resultState' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='encodeToCommandBuffer:batchNormalizationState:inputSumOfSquaresVectors:resultState:'>
+<arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
+<arg declared_type64='MPSCNNBatchNormalizationState * _Nonnull' index='1' name='batchNormalizationState' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='2' name='inputSumOfSquaresVectors' type64='@'/>
+<arg declared_type64='MPSCNNNormalizationGammaAndBetaState * _Nonnull' index='3' name='resultState' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='encodeToCommandBuffer:convolutionGradientState:convolutionSourceState:inputSumOfSquaresVectors:resultState:'>
+<arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
+<arg declared_type64='MPSCNNConvolutionGradientState * _Nonnull' index='1' name='convolutionGradientState' type64='@'/>
+<arg declared_type64='MPSCNNConvolutionWeightsAndBiasesState * _Nonnull' index='2' name='convolutionSourceState' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='3' name='inputSumOfSquaresVectors' type64='@'/>
+<arg declared_type64='MPSCNNConvolutionWeightsAndBiasesState * _Nonnull' index='4' name='resultState' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
 <method selector='encodeToCommandBuffer:inputGradientVector:inputValuesVector:inputSumOfSquaresVector:resultValuesVector:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
 <arg declared_type64='MPSVector * _Nonnull' index='1' name='inputGradientVector' type64='@'/>
@@ -7403,6 +7694,29 @@
 </method>
 </class>
 <class name='MPSNNOptimizerStochasticGradientDescent'>
+<method selector='encodeToCommandBuffer:batchNormalizationGradientState:batchNormalizationSourceState:inputMomentumVectors:resultState:'>
+<arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
+<arg declared_type64='MPSCNNBatchNormalizationState * _Nonnull' index='1' name='batchNormalizationGradientState' type64='@'/>
+<arg declared_type64='MPSCNNBatchNormalizationState * _Nonnull' index='2' name='batchNormalizationSourceState' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='3' name='inputMomentumVectors' type64='@'/>
+<arg declared_type64='MPSCNNNormalizationGammaAndBetaState * _Nonnull' index='4' name='resultState' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='encodeToCommandBuffer:batchNormalizationState:inputMomentumVectors:resultState:'>
+<arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
+<arg declared_type64='MPSCNNBatchNormalizationState * _Nonnull' index='1' name='batchNormalizationState' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='2' name='inputMomentumVectors' type64='@'/>
+<arg declared_type64='MPSCNNNormalizationGammaAndBetaState * _Nonnull' index='3' name='resultState' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='encodeToCommandBuffer:convolutionGradientState:convolutionSourceState:inputMomentumVectors:resultState:'>
+<arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
+<arg declared_type64='MPSCNNConvolutionGradientState * _Nonnull' index='1' name='convolutionGradientState' type64='@'/>
+<arg declared_type64='MPSCNNConvolutionWeightsAndBiasesState * _Nonnull' index='2' name='convolutionSourceState' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='3' name='inputMomentumVectors' type64='@'/>
+<arg declared_type64='MPSCNNConvolutionWeightsAndBiasesState * _Nonnull' index='4' name='resultState' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
 <method selector='encodeToCommandBuffer:inputGradientVector:inputValuesVector:inputMomentumVector:resultValuesVector:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
 <arg declared_type64='MPSVector * _Nonnull' index='1' name='inputGradientVector' type64='@'/>
@@ -7428,6 +7742,99 @@
 </method>
 <method selector='useNestrovMomentum'>
 <retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='MPSNNPad'>
+<method selector='fillValue'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='initWithCoder:device:'>
+<arg declared_type64='NSCoder * _Nonnull' index='0' name='aDecoder' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='initWithDevice:'>
+<arg declared_type64='id _Nonnull' index='0' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithDevice:paddingSizeBefore:paddingSizeAfter:'>
+<arg declared_type64='id _Nonnull' index='0' name='device' type64='@'/>
+<arg declared_type64='MPSImageCoordinate' index='1' name='paddingSizeBefore' type64='{MPSImageCoordinate=QQQ}'/>
+<arg declared_type64='MPSImageCoordinate' index='2' name='paddingSizeAfter' type64='{MPSImageCoordinate=QQQ}'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithDevice:paddingSizeBefore:paddingSizeAfter:fillValueArray:'>
+<arg declared_type64='id _Nonnull' index='0' name='device' type64='@'/>
+<arg declared_type64='MPSImageCoordinate' index='1' name='paddingSizeBefore' type64='{MPSImageCoordinate=QQQ}'/>
+<arg declared_type64='MPSImageCoordinate' index='2' name='paddingSizeAfter' type64='{MPSImageCoordinate=QQQ}'/>
+<arg declared_type64='NSData * _Nullable' index='3' name='fillValueArray' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='paddingSizeAfter'>
+<retval declared_type64='MPSImageCoordinate' type64='{MPSImageCoordinate=QQQ}'/>
+</method>
+<method selector='paddingSizeBefore'>
+<retval declared_type64='MPSImageCoordinate' type64='{MPSImageCoordinate=QQQ}'/>
+</method>
+<method selector='setFillValue:'>
+<arg declared_type64='float' index='0' name='fillValue' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPaddingSizeAfter:'>
+<arg declared_type64='MPSImageCoordinate' index='0' name='paddingSizeAfter' type64='{MPSImageCoordinate=QQQ}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPaddingSizeBefore:'>
+<arg declared_type64='MPSImageCoordinate' index='0' name='paddingSizeBefore' type64='{MPSImageCoordinate=QQQ}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MPSNNPadGradient'>
+<method selector='initWithCoder:device:'>
+<arg declared_type64='NSCoder * _Nonnull' index='0' name='aDecoder' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='initWithDevice:'>
+<arg declared_type64='id _Nonnull' index='0' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MPSNNPadGradientNode'>
+<method selector='initWithSourceGradient:sourceImage:gradientState:'>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='0' name='sourceGradient' type64='@'/>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='1' name='sourceImage' type64='@'/>
+<arg declared_type64='MPSNNGradientStateNode * _Nonnull' index='2' name='gradientState' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='nodeWithSourceGradient:sourceImage:gradientState:'>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='0' name='sourceGradient' type64='@'/>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='1' name='sourceImage' type64='@'/>
+<arg declared_type64='MPSNNGradientStateNode * _Nonnull' index='2' name='gradientState' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MPSNNPadNode'>
+<method selector='fillValue'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='initWithSource:paddingSizeBefore:paddingSizeAfter:edgeMode:'>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='0' name='source' type64='@'/>
+<arg declared_type64='MPSImageCoordinate' index='1' name='paddingSizeBefore' type64='{MPSImageCoordinate=QQQ}'/>
+<arg declared_type64='MPSImageCoordinate' index='2' name='paddingSizeAfter' type64='{MPSImageCoordinate=QQQ}'/>
+<arg declared_type64='MPSImageEdgeMode' index='3' name='edgeMode' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='nodeWithSource:paddingSizeBefore:paddingSizeAfter:edgeMode:'>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='0' name='source' type64='@'/>
+<arg declared_type64='MPSImageCoordinate' index='1' name='paddingSizeBefore' type64='{MPSImageCoordinate=QQQ}'/>
+<arg declared_type64='MPSImageCoordinate' index='2' name='paddingSizeAfter' type64='{MPSImageCoordinate=QQQ}'/>
+<arg declared_type64='MPSImageEdgeMode' index='3' name='edgeMode' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setFillValue:'>
+<arg declared_type64='float' index='0' name='fillValue' type64='f'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 </class>
 <class name='MPSNNReduceBinary'>
@@ -7566,6 +7973,29 @@
 <retval declared_type64='void' type64='v'/>
 </method>
 </class>
+<class name='MPSNNReductionFeatureChannelsSumNode'>
+<method selector='setWeight:'>
+<arg declared_type64='float' index='0' name='weight' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='weight'>
+<retval declared_type64='float' type64='f'/>
+</method>
+</class>
+<class name='MPSNNReductionSpatialMeanGradientNode'>
+<method selector='initWithSourceGradient:sourceImage:gradientState:'>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='0' name='sourceGradient' type64='@'/>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='1' name='sourceImage' type64='@'/>
+<arg declared_type64='MPSNNGradientStateNode * _Nonnull' index='2' name='gradientState' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='nodeWithSourceGradient:sourceImage:gradientState:'>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='0' name='sourceGradient' type64='@'/>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='1' name='sourceImage' type64='@'/>
+<arg declared_type64='MPSNNGradientStateNode * _Nonnull' index='2' name='gradientState' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
 <class name='MPSNNReshape'>
 <method selector='initWithCoder:device:'>
 <arg declared_type64='NSCoder * _Nonnull' index='0' name='aDecoder' type64='@'/>
@@ -7575,6 +8005,70 @@
 <method selector='initWithDevice:'>
 <arg declared_type64='id _Nonnull' index='0' name='device' type64='@'/>
 <retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MPSNNReshapeGradient'>
+<method selector='initWithCoder:device:'>
+<arg declared_type64='NSCoder * _Nonnull' index='0' name='aDecoder' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='initWithDevice:'>
+<arg declared_type64='id _Nonnull' index='0' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MPSNNReshapeGradientNode'>
+<method selector='initWithSourceGradient:sourceImage:gradientState:'>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='0' name='sourceGradient' type64='@'/>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='1' name='sourceImage' type64='@'/>
+<arg declared_type64='MPSNNGradientStateNode * _Nonnull' index='2' name='gradientState' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='nodeWithSourceGradient:sourceImage:gradientState:'>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='0' name='sourceGradient' type64='@'/>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='1' name='sourceImage' type64='@'/>
+<arg declared_type64='MPSNNGradientStateNode * _Nonnull' index='2' name='gradientState' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MPSNNReshapeNode'>
+<method selector='initWithSource:resultWidth:resultHeight:resultFeatureChannels:'>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='0' name='source' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='resultWidth' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='resultHeight' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='resultFeatureChannels' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='nodeWithSource:resultWidth:resultHeight:resultFeatureChannels:'>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='0' name='source' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='resultWidth' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='resultHeight' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='resultFeatureChannels' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MPSNNResizeBilinear'>
+<method selector='alignCorners'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='initWithCoder:device:'>
+<arg declared_type64='NSCoder * _Nonnull' index='0' name='aDecoder' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='initWithDevice:resizeWidth:resizeHeight:alignCorners:'>
+<arg declared_type64='id _Nonnull' index='0' name='device' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='resizeWidth' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='resizeHeight' type64='Q'/>
+<arg declared_type64='BOOL' index='3' name='alignCorners' type64='B'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='resizeHeight'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='resizeWidth'>
+<retval declared_type64='NSUInteger' type64='Q'/>
 </method>
 </class>
 <class name='MPSNNScaleNode'>
@@ -7633,6 +8127,23 @@
 </method>
 <method selector='synchronizeResource'>
 <retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='MPSNNUnaryReductionNode'>
+<method selector='clipRectSource'>
+<retval declared_type64='MTLRegion' type64='{_MTLRegion={?=QQQ}{?=QQQ}}'/>
+</method>
+<method selector='initWithSource:'>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='0' name='sourceNode' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='nodeWithSource:'>
+<arg declared_type64='MPSNNImageNode * _Nonnull' index='0' name='sourceNode' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setClipRectSource:'>
+<arg declared_type64='MTLRegion' index='0' name='clipRectSource' type64='{_MTLRegion={?=QQQ}{?=QQQ}}'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 </class>
 <class name='MPSRNNDescriptor'>
@@ -7985,6 +8496,11 @@
 <method selector='biasTerms'>
 <retval declared_type64='float * _Nullable' type64='^f'/>
 </method>
+<method selector='copyWithZone:device:'>
+<arg declared_type64='NSZone * _Nullable' index='0' name='zone' type64='^{_NSZone=}'/>
+<arg declared_type64='id _Nullable' index='1' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
 <method selector='dataType'>
 <retval declared_type64='MPSDataType' type64='I'/>
 </method>
@@ -8004,9 +8520,6 @@
 </method>
 <method selector='epsilon'>
 <retval declared_type64='float' type64='f'/>
-</method>
-<method selector='fusedNeuronDescriptor'>
-<retval declared_type64='MPSNNNeuronDescriptor * _Nonnull' type64='@'/>
 </method>
 <method selector='gamma'>
 <retval declared_type64='float * _Nullable' type64='^f'/>
@@ -8115,15 +8628,17 @@
 <method selector='beta' type64='^f16@0:8'>
 <retval declared_type64='float * _Nullable' type64='^f'/>
 </method>
+<method selector='copyWithZone:device:' type64='@32@0:8^{_NSZone=}16@24'>
+<arg declared_type64='NSZone * _Nullable' index='0' name='zone' type64='^{_NSZone=}'/>
+<arg declared_type64='id _Nullable' index='1' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
 <method selector='encodeWithCoder:' type64='v24@0:8@16'>
 <arg declared_type64='NSCoder * _Nonnull' index='0' name='aCoder' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='epsilon' type64='f16@0:8'>
 <retval declared_type64='float' type64='f'/>
-</method>
-<method selector='fusedNeuronDescriptor' type64='@16@0:8'>
-<retval declared_type64='MPSNNNeuronDescriptor * _Nonnull' type64='@'/>
 </method>
 <method selector='gamma' type64='^f16@0:8'>
 <retval declared_type64='float * _Nullable' type64='^f'/>
@@ -8176,6 +8691,11 @@
 <method selector='biasTerms' type64='^f16@0:8'>
 <retval declared_type64='float * _Nullable' type64='^f'/>
 </method>
+<method selector='copyWithZone:device:' type64='@32@0:8^{_NSZone=}16@24'>
+<arg declared_type64='NSZone * _Nullable' index='0' name='zone' type64='^{_NSZone=}'/>
+<arg declared_type64='id _Nullable' index='1' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
 <method selector='dataType' type64='I16@0:8'>
 <retval declared_type64='MPSDataType' type64='I'/>
 </method>
@@ -8218,6 +8738,11 @@
 <informal_protocol name='MPSCNNInstanceNormalizationDataSource'>
 <method selector='beta' type64='^f16@0:8'>
 <retval declared_type64='float * _Nullable' type64='^f'/>
+</method>
+<method selector='copyWithZone:device:' type64='@32@0:8^{_NSZone=}16@24'>
+<arg declared_type64='NSZone * _Nullable' index='0' name='zone' type64='^{_NSZone=}'/>
+<arg declared_type64='id _Nullable' index='1' name='device' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
 </method>
 <method selector='encodeWithCoder:' type64='v24@0:8@16'>
 <arg declared_type64='NSCoder * _Nonnull' index='0' name='aCoder' type64='@'/>
@@ -8306,28 +8831,28 @@
 <struct name='MPSIntersectionDistance' type64='{_MPSIntersectionDistance=&quot;distance&quot;f}'>
 <field declared_type64='float' name='distance' type64='f'/>
 </struct>
-<struct name='MPSIntersectionDistancePrimitiveIndex' type64='{_MPSIntersectionDistancePrimitiveIndex=&quot;distance&quot;f&quot;primitiveIndex&quot;i}'>
+<struct name='MPSIntersectionDistancePrimitiveIndex' type64='{_MPSIntersectionDistancePrimitiveIndex=&quot;distance&quot;f&quot;primitiveIndex&quot;I}'>
 <field declared_type64='float' name='distance' type64='f'/>
-<field declared_type64='int' name='primitiveIndex' type64='i'/>
+<field declared_type64='unsigned int' name='primitiveIndex' type64='I'/>
 </struct>
-<struct name='MPSIntersectionDistancePrimitiveIndexCoordinates' type64='{_MPSIntersectionDistancePrimitiveIndexCoordinates=&quot;distance&quot;f&quot;primitiveIndex&quot;i&quot;coordinates&quot;}'>
+<struct name='MPSIntersectionDistancePrimitiveIndexCoordinates' type64='{_MPSIntersectionDistancePrimitiveIndexCoordinates=&quot;distance&quot;f&quot;primitiveIndex&quot;I&quot;coordinates&quot;}'>
 <field declared_type64='float' name='distance' type64='f'/>
-<field declared_type64='int' name='primitiveIndex' type64='i'/>
+<field declared_type64='unsigned int' name='primitiveIndex' type64='I'/>
 <field declared_type64='vector_float2' name='coordinates' type64=''/>
 </struct>
-<struct name='MPSIntersectionDistancePrimitiveIndexInstanceIndex' type64='{_MPSIntersectionDistancePrimitiveIndexInstanceIndex=&quot;distance&quot;f&quot;primitiveIndex&quot;i&quot;instanceIndex&quot;i}'>
+<struct name='MPSIntersectionDistancePrimitiveIndexInstanceIndex' type64='{_MPSIntersectionDistancePrimitiveIndexInstanceIndex=&quot;distance&quot;f&quot;primitiveIndex&quot;I&quot;instanceIndex&quot;I}'>
 <field declared_type64='float' name='distance' type64='f'/>
-<field declared_type64='int' name='primitiveIndex' type64='i'/>
-<field declared_type64='int' name='instanceIndex' type64='i'/>
+<field declared_type64='unsigned int' name='primitiveIndex' type64='I'/>
+<field declared_type64='unsigned int' name='instanceIndex' type64='I'/>
 </struct>
-<struct name='MPSIntersectionDistancePrimitiveIndexInstanceIndexCoordinates' type64='{_MPSIntersectionDistancePrimitiveIndexInstanceIndexCoordinates=&quot;distance&quot;f&quot;primitiveIndex&quot;i&quot;instanceIndex&quot;i&quot;coordinates&quot;}'>
+<struct name='MPSIntersectionDistancePrimitiveIndexInstanceIndexCoordinates' type64='{_MPSIntersectionDistancePrimitiveIndexInstanceIndexCoordinates=&quot;distance&quot;f&quot;primitiveIndex&quot;I&quot;instanceIndex&quot;I&quot;coordinates&quot;}'>
 <field declared_type64='float' name='distance' type64='f'/>
-<field declared_type64='int' name='primitiveIndex' type64='i'/>
-<field declared_type64='int' name='instanceIndex' type64='i'/>
+<field declared_type64='unsigned int' name='primitiveIndex' type64='I'/>
+<field declared_type64='unsigned int' name='instanceIndex' type64='I'/>
 <field declared_type64='vector_float2' name='coordinates' type64=''/>
 </struct>
 <struct name='MPSPackedFloat3' type64='{_MPSPackedFloat3=&quot;&quot;(?=&quot;&quot;{?=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}&quot;elements&quot;[3f])}'>
-<field declared_type64='union _MPSPackedFloat3::(anonymous at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSRayIntersector.framework/Headers/MPSRayIntersectorTypes.h:24:5)' type64='(?=&quot;&quot;{?=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}&quot;elements&quot;[3f])'/>
+<field declared_type64='union _MPSPackedFloat3::(anonymous at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSRayIntersector.framework/Headers/MPSRayIntersectorTypes.h:26:5)' type64='(?=&quot;&quot;{?=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}&quot;elements&quot;[3f])'/>
 </struct>
 <struct name='MPSRayOriginDirection' type64='{_MPSRayOriginDirection=&quot;origin&quot;&quot;direction&quot;}'>
 <field declared_type64='vector_float3' name='origin' type64=''/>
@@ -8350,13 +8875,13 @@
 <enum name='MPSAccelerationStructureUsageFrequentRebuild' value64='2'/>
 <enum name='MPSAccelerationStructureUsageNone' value64='0'/>
 <enum name='MPSAccelerationStructureUsageRefit' value64='1'/>
+<enum name='MPSBoundingBoxIntersectionTestTypeAxisAligned' value64='1'/>
+<enum name='MPSBoundingBoxIntersectionTestTypeDefault' value64='0'/>
 <enum name='MPSIntersectionDataTypeDistance' value64='0'/>
 <enum name='MPSIntersectionDataTypeDistancePrimitiveIndex' value64='1'/>
 <enum name='MPSIntersectionDataTypeDistancePrimitiveIndexCoordinates' value64='2'/>
 <enum name='MPSIntersectionDataTypeDistancePrimitiveIndexInstanceIndex' value64='3'/>
 <enum name='MPSIntersectionDataTypeDistancePrimitiveIndexInstanceIndexCoordinates' value64='4'/>
-<enum name='MPSIntersectionTestTypeDefault' value64='0'/>
-<enum name='MPSIntersectionTestTypeWatertight' value64='1'/>
 <enum name='MPSIntersectionTypeAny' value64='1'/>
 <enum name='MPSIntersectionTypeNearest' value64='0'/>
 <enum name='MPSRayDataTypeOriginDirection' value64='0'/>
@@ -8367,6 +8892,8 @@
 <enum name='MPSRayMaskOptionPrimitive' value64='1'/>
 <enum name='MPSTransformTypeFloat4x4' value64='0'/>
 <enum name='MPSTransformTypeIdentity' value64='1'/>
+<enum name='MPSTriangleIntersectionTestTypeDefault' value64='0'/>
+<enum name='MPSTriangleIntersectionTestTypeWatertight' value64='1'/>
 <class name='MPSAccelerationStructure'>
 <method selector='boundingBox'>
 <retval declared_type64='MPSAxisAlignedBoundingBox' type64='{_MPSAxisAlignedBoundingBox=}'/>
@@ -8441,14 +8968,14 @@
 </method>
 </class>
 <class name='MPSInstanceAccelerationStructure'>
-<method selector='accelerationStructureIndexBuffer'>
-<retval declared_type64='id _Nullable' type64='@'/>
-</method>
-<method selector='accelerationStructureIndexBufferOffset'>
-<retval declared_type64='NSUInteger' type64='Q'/>
-</method>
 <method selector='accelerationStructures'>
 <retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='instanceBuffer'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='instanceBufferOffset'>
+<retval declared_type64='NSUInteger' type64='Q'/>
 </method>
 <method selector='instanceCount'>
 <retval declared_type64='NSUInteger' type64='Q'/>
@@ -8459,16 +8986,16 @@
 <method selector='maskBufferOffset'>
 <retval declared_type64='NSUInteger' type64='Q'/>
 </method>
-<method selector='setAccelerationStructureIndexBuffer:'>
-<arg declared_type64='id _Nullable' index='0' name='accelerationStructureIndexBuffer' type64='@'/>
-<retval declared_type64='void' type64='v'/>
-</method>
-<method selector='setAccelerationStructureIndexBufferOffset:'>
-<arg declared_type64='NSUInteger' index='0' name='accelerationStructureIndexBufferOffset' type64='Q'/>
-<retval declared_type64='void' type64='v'/>
-</method>
 <method selector='setAccelerationStructures:'>
 <arg declared_type64='NSArray * _Nullable' index='0' name='accelerationStructures' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setInstanceBuffer:'>
+<arg declared_type64='id _Nullable' index='0' name='instanceBuffer' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setInstanceBufferOffset:'>
+<arg declared_type64='NSUInteger' index='0' name='instanceBufferOffset' type64='Q'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setInstanceCount:'>
@@ -8506,6 +9033,9 @@
 </method>
 </class>
 <class name='MPSRayIntersector'>
+<method selector='boundingBoxIntersectionTestType'>
+<retval declared_type64='MPSBoundingBoxIntersectionTestType' type64='Q'/>
+</method>
 <method selector='copyWithZone:device:'>
 <arg declared_type64='NSZone * _Nullable' index='0' name='zone' type64='^{_NSZone=}'/>
 <arg declared_type64='id _Nullable' index='1' name='device' type64='@'/>
@@ -8559,9 +9089,6 @@
 <method selector='intersectionStride'>
 <retval declared_type64='NSUInteger' type64='Q'/>
 </method>
-<method selector='intersectionTestType'>
-<retval declared_type64='MPSIntersectionTestType' type64='Q'/>
-</method>
 <method selector='rayDataType'>
 <retval declared_type64='MPSRayDataType' type64='Q'/>
 </method>
@@ -8574,6 +9101,10 @@
 <method selector='recommendedMinimumRayBatchSizeForRayCount:'>
 <arg declared_type64='NSUInteger' index='0' name='rayCount' type64='Q'/>
 <retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='setBoundingBoxIntersectionTestType:'>
+<arg declared_type64='MPSBoundingBoxIntersectionTestType' index='0' name='boundingBoxIntersectionTestType' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 <method selector='setCullMode:'>
 <arg declared_type64='MTLCullMode' index='0' name='cullMode' type64='Q'/>
@@ -8591,10 +9122,6 @@
 <arg declared_type64='NSUInteger' index='0' name='intersectionStride' type64='Q'/>
 <retval declared_type64='void' type64='v'/>
 </method>
-<method selector='setIntersectionTestType:'>
-<arg declared_type64='MPSIntersectionTestType' index='0' name='intersectionTestType' type64='Q'/>
-<retval declared_type64='void' type64='v'/>
-</method>
 <method selector='setRayDataType:'>
 <arg declared_type64='MPSRayDataType' index='0' name='rayDataType' type64='Q'/>
 <retval declared_type64='void' type64='v'/>
@@ -8606,6 +9133,13 @@
 <method selector='setRayStride:'>
 <arg declared_type64='NSUInteger' index='0' name='rayStride' type64='Q'/>
 <retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTriangleIntersectionTestType:'>
+<arg declared_type64='MPSTriangleIntersectionTestType' index='0' name='triangleIntersectionTestType' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='triangleIntersectionTestType'>
+<retval declared_type64='MPSTriangleIntersectionTestType' type64='Q'/>
 </method>
 </class>
 <class name='MPSTriangleAccelerationStructure'>
