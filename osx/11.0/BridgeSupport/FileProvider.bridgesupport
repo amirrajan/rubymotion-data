@@ -1,0 +1,961 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Accounts.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type64='NSNotificationName _Nonnull' name='NSFileProviderDomainDidChange' type64='@'/>
+<constant const='true' declared_type64='NSErrorDomain _Nonnull' name='NSFileProviderErrorDomain' type64='@'/>
+<constant const='true' declared_type64='NSErrorUserInfoKey _Nonnull' name='NSFileProviderErrorItemKey' type64='@'/>
+<constant const='true' declared_type64='NSErrorUserInfoKey _Nonnull' name='NSFileProviderErrorNonExistentItemIdentifierKey' type64='@'/>
+<constant const='true' declared_type64='unsigned long long' name='NSFileProviderFavoriteRankUnranked' type64='Q'/>
+<constant const='true' declared_type64='NSFileProviderPage _Nonnull' name='NSFileProviderInitialPageSortedByDate' type64='@'/>
+<constant const='true' declared_type64='NSFileProviderPage _Nonnull' name='NSFileProviderInitialPageSortedByName' type64='@'/>
+<constant const='true' declared_type64='NSFileProviderItemIdentifier _Nonnull' name='NSFileProviderRootContainerItemIdentifier' type64='@'/>
+<constant const='true' declared_type64='NSFileProviderItemIdentifier _Nonnull' name='NSFileProviderTrashContainerItemIdentifier' type64='@'/>
+<constant const='true' declared_type64='NSFileProviderItemIdentifier _Nonnull' name='NSFileProviderWorkingSetContainerItemIdentifier' type64='@'/>
+<enum name='NSFileProviderCreateItemMayAlreadyExist' value64='1'/>
+<enum name='NSFileProviderDeleteItemRecursive' value64='1'/>
+<enum name='NSFileProviderErrorCannotSynchronize' value64='-2005'/>
+<enum name='NSFileProviderErrorDeletionRejected' value64='-1006'/>
+<enum name='NSFileProviderErrorDirectoryNotEmpty' value64='-1007'/>
+<enum name='NSFileProviderErrorFilenameCollision' value64='-1001'/>
+<enum name='NSFileProviderErrorInsufficientQuota' value64='-1003'/>
+<enum name='NSFileProviderErrorNewerExtensionVersionFound' value64='-2004'/>
+<enum name='NSFileProviderErrorNoSuchItem' value64='-1005'/>
+<enum name='NSFileProviderErrorNotAuthenticated' value64='-1000'/>
+<enum name='NSFileProviderErrorOlderExtensionVersionRunning' value64='-2003'/>
+<enum name='NSFileProviderErrorPageExpired' value64='-1002'/>
+<enum name='NSFileProviderErrorProviderNotFound' value64='-2001'/>
+<enum name='NSFileProviderErrorProviderTranslocated' value64='-2002'/>
+<enum name='NSFileProviderErrorServerUnreachable' value64='-1004'/>
+<enum name='NSFileProviderErrorSyncAnchorExpired' value64='-1002'/>
+<enum name='NSFileProviderFileSystemHidden' value64='8'/>
+<enum name='NSFileProviderFileSystemPathExtensionHidden' value64='16'/>
+<enum name='NSFileProviderFileSystemUserExecutable' value64='1'/>
+<enum name='NSFileProviderFileSystemUserReadable' value64='2'/>
+<enum name='NSFileProviderFileSystemUserWritable' value64='4'/>
+<enum name='NSFileProviderItemCapabilitiesAllowsAddingSubItems' value64='2'/>
+<enum name='NSFileProviderItemCapabilitiesAllowsAll' value64='127'/>
+<enum name='NSFileProviderItemCapabilitiesAllowsContentEnumerating' value64='1'/>
+<enum name='NSFileProviderItemCapabilitiesAllowsDeleting' value64='32'/>
+<enum name='NSFileProviderItemCapabilitiesAllowsEvicting' value64='64'/>
+<enum name='NSFileProviderItemCapabilitiesAllowsReading' value64='1'/>
+<enum name='NSFileProviderItemCapabilitiesAllowsRenaming' value64='8'/>
+<enum name='NSFileProviderItemCapabilitiesAllowsReparenting' value64='4'/>
+<enum name='NSFileProviderItemCapabilitiesAllowsTrashing' value64='16'/>
+<enum name='NSFileProviderItemCapabilitiesAllowsWriting' value64='2'/>
+<enum name='NSFileProviderItemContentModificationDate' value64='128'/>
+<enum name='NSFileProviderItemContents' value64='1'/>
+<enum name='NSFileProviderItemCreationDate' value64='64'/>
+<enum name='NSFileProviderItemExtendedAttributes' value64='512'/>
+<enum name='NSFileProviderItemFavoriteRank' value64='32'/>
+<enum name='NSFileProviderItemFileSystemFlags' value64='256'/>
+<enum name='NSFileProviderItemFilename' value64='2'/>
+<enum name='NSFileProviderItemLastUsedDate' value64='8'/>
+<enum name='NSFileProviderItemParentItemIdentifier' value64='4'/>
+<enum name='NSFileProviderItemTagData' value64='16'/>
+<enum name='NSFileProviderManagerDisconnectionOptionsTemporary' value64='1'/>
+<enum name='NSFileProviderModifyItemMayAlreadyExist' value64='1'/>
+<class name='NSError'>
+<method class_method='true' selector='fileProviderErrorForCollisionWithItem:'>
+<arg declared_type64='NSFileProviderItem _Nonnull' index='0' name='existingItem' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='fileProviderErrorForNonExistentItemWithIdentifier:'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='itemIdentifier' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='fileProviderErrorForRejectedDeletionOfItem:'>
+<arg declared_type64='NSFileProviderItem _Nonnull' index='0' name='updatedVersion' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='NSFileProviderDomain'>
+<method selector='displayName'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type64='NSFileProviderDomainIdentifier _Nonnull' type64='@'/>
+</method>
+<method selector='initWithIdentifier:displayName:'>
+<arg declared_type64='NSFileProviderDomainIdentifier _Nonnull' index='0' name='identifier' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='displayName' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='isDisconnected'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isHidden'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setHidden:'>
+<arg declared_type64='BOOL' index='0' name='hidden' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='userEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='NSFileProviderExtension'>
+<method selector='createDirectoryWithName:inParentItemIdentifier:completionHandler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='directoryName' type64='@'/>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='1' name='parentItemIdentifier' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderItem _Nullable, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='deleteItemWithIdentifier:completionHandler:'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='itemIdentifier' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='domain'>
+<retval declared_type64='NSFileProviderDomain * _Nullable' type64='@'/>
+</method>
+<method selector='enumeratorForContainerItemIdentifier:error:'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='containerItemIdentifier' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='importDocumentAtURL:toParentItemIdentifier:completionHandler:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='fileURL' type64='@'/>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='1' name='parentItemIdentifier' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderItem _Nullable, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='renameItemWithIdentifier:toName:completionHandler:'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='itemIdentifier' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='itemName' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderItem _Nullable, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='reparentItemWithIdentifier:toParentItemWithIdentifier:newName:completionHandler:'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='itemIdentifier' type64='@'/>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='1' name='parentItemIdentifier' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='newName' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderItem _Nullable, NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFavoriteRank:forItemIdentifier:completionHandler:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='favoriteRank' type64='@'/>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='1' name='itemIdentifier' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderItem _Nullable, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLastUsedDate:forItemIdentifier:completionHandler:'>
+<arg declared_type64='NSDate * _Nullable' index='0' name='lastUsedDate' type64='@'/>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='1' name='itemIdentifier' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderItem _Nullable, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTagData:forItemIdentifier:completionHandler:'>
+<arg declared_type64='NSData * _Nullable' index='0' name='tagData' type64='@'/>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='1' name='itemIdentifier' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderItem _Nullable, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='trashItemWithIdentifier:completionHandler:'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='itemIdentifier' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderItem _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='untrashItemWithIdentifier:toParentItemIdentifier:completionHandler:'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='itemIdentifier' type64='@'/>
+<arg declared_type64='NSFileProviderItemIdentifier _Nullable' index='1' name='parentItemIdentifier' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderItem _Nullable, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NSFileProviderItemVersion'>
+<method selector='contentVersion'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithContentVersion:metadataVersion:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='contentVersion' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='metadataVersion' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='metadataVersion'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='NSFileProviderManager'>
+<method class_method='true' selector='addDomain:completionHandler:'>
+<arg declared_type64='NSFileProviderDomain * _Nonnull' index='0' name='domain' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='disconnectWithReason:options:completionHandler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='localizedReason' type64='@'/>
+<arg declared_type64='NSFileProviderManagerDisconnectionOptions' index='1' name='options' type64='Q'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='enumeratorForMaterializedItems'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='evictItemWithIdentifier:completionHandler:'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='itemIdentifier' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='getDomainsWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='getIdentifierForUserVisibleFileAtURL:completionHandler:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='url' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderItemIdentifier _Nullable, NSFileProviderDomainIdentifier _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nullable' type64='@'/>
+<arg declared_type64='NSFileProviderDomainIdentifier _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='getUserVisibleURLForItemIdentifier:completionHandler:'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='itemIdentifier' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSURL * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSURL * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='importDomain:fromDirectoryAtURL:completionHandler:'>
+<arg declared_type64='NSFileProviderDomain * _Nonnull' index='0' name='domain' type64='@'/>
+<arg declared_type64='NSURL * _Nonnull' index='1' name='url' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='managerForDomain:'>
+<arg declared_type64='NSFileProviderDomain * _Nonnull' index='0' name='domain' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='reconnectWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='registerURLSessionTask:forItemWithIdentifier:completionHandler:'>
+<arg declared_type64='NSURLSessionTask * _Nonnull' index='0' name='task' type64='@'/>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='1' name='identifier' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='2' name='completion' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='reimportItemsBelowItemWithIdentifier:completionHandler:'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='itemIdentifier' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='removeAllDomainsWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='removeDomain:completionHandler:'>
+<arg declared_type64='NSFileProviderDomain * _Nonnull' index='0' name='domain' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='signalEnumeratorForContainerItemIdentifier:completionHandler:'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='containerItemIdentifier' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='signalErrorResolved:completionHandler:'>
+<arg declared_type64='NSError * _Nonnull' index='0' name='error' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='temporaryDirectoryURLWithError:'>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='error' type64='^@'/>
+<retval declared_type64='NSURL * _Nullable' type64='@'/>
+</method>
+<method selector='waitForChangesOnItemsBelowItemWithIdentifier:completionHandler:'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='itemIdentifier' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='waitForStabilizationWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NSFileProviderRequest'>
+<method selector='isFileViewerRequest'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isSystemRequest'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='requestingExecutable'>
+<retval declared_type64='NSURL * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='capabilities'>
+<retval declared_type64='NSFileProviderItemCapabilities' type64='Q'/>
+</method>
+<method selector='childItemCount'>
+<retval declared_type64='NSNumber * _Nullable' type64='@'/>
+</method>
+<method selector='contentModificationDate'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+<method selector='contentType'>
+<retval declared_type64='UTType * _Nonnull' type64='@'/>
+</method>
+<method selector='createItemBasedOnTemplate:fields:contents:options:request:completionHandler:'>
+<arg declared_type64='NSFileProviderItem _Nonnull' index='0' name='itemTemplate' type64='@'/>
+<arg declared_type64='NSFileProviderItemFields' index='1' name='fields' type64='Q'/>
+<arg declared_type64='NSURL * _Nullable' index='2' name='url' type64='@'/>
+<arg declared_type64='NSFileProviderCreateItemOptions' index='3' name='options' type64='Q'/>
+<arg declared_type64='NSFileProviderRequest * _Nonnull' index='4' name='request' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderItem _Nullable, NSFileProviderItemFields, BOOL, NSError * _Nullable)' function_pointer='true' index='5' name='completionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSFileProviderItemFields' type64='Q'/>
+<arg declared_type64='BOOL' type64='B'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+<method selector='creationDate'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+<method selector='currentSyncAnchorWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderSyncAnchor _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderSyncAnchor _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='decorations'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='deleteItemWithIdentifier:baseVersion:options:request:completionHandler:'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='identifier' type64='@'/>
+<arg declared_type64='NSFileProviderItemVersion * _Nonnull' index='1' name='version' type64='@'/>
+<arg declared_type64='NSFileProviderDeleteItemOptions' index='2' name='options' type64='Q'/>
+<arg declared_type64='NSFileProviderRequest * _Nonnull' index='3' name='request' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='4' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+<method selector='didDeleteItemsWithIdentifiers:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='deletedItemIdentifiers' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='didEnumerateItems:'>
+<arg declared_type64='NSArray&gt; * _Nonnull' index='0' name='updatedItems' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='didUpdateItems:'>
+<arg declared_type64='NSArray&gt; * _Nonnull' index='0' name='updatedItems' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='documentSize'>
+<retval declared_type64='NSNumber * _Nullable' type64='@'/>
+</method>
+<method selector='downloadingError'>
+<retval declared_type64='NSError * _Nullable' type64='@'/>
+</method>
+<method selector='enumerateChangesForObserver:fromSyncAnchor:'>
+<arg declared_type64='id _Nonnull' index='0' name='observer' type64='@'/>
+<arg declared_type64='NSFileProviderSyncAnchor _Nonnull' index='1' name='syncAnchor' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='enumerateItemsForObserver:startingAtPage:'>
+<arg declared_type64='id _Nonnull' index='0' name='observer' type64='@'/>
+<arg declared_type64='NSFileProviderPage _Nonnull' index='1' name='page' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='enumeratorForContainerItemIdentifier:request:error:'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='containerItemIdentifier' type64='@'/>
+<arg declared_type64='NSFileProviderRequest * _Nonnull' index='1' name='request' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='extendedAttributes'>
+<retval declared_type64='NSDictionary * _Nonnull' type64='@'/>
+</method>
+<method selector='fetchContentsForItemWithIdentifier:version:request:completionHandler:'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='itemIdentifier' type64='@'/>
+<arg declared_type64='NSFileProviderItemVersion * _Nullable' index='1' name='requestedVersion' type64='@'/>
+<arg declared_type64='NSFileProviderRequest * _Nonnull' index='2' name='request' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSURL * _Nullable, NSFileProviderItem _Nullable, NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSURL * _Nullable' type64='@'/>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+<method selector='fetchContentsForItemWithIdentifier:version:usingExistingContentsAtURL:existingVersion:request:completionHandler:'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='itemIdentifier' type64='@'/>
+<arg declared_type64='NSFileProviderItemVersion * _Nullable' index='1' name='requestedVersion' type64='@'/>
+<arg declared_type64='NSURL * _Nonnull' index='2' name='existingContents' type64='@'/>
+<arg declared_type64='NSFileProviderItemVersion * _Nonnull' index='3' name='existingVersion' type64='@'/>
+<arg declared_type64='NSFileProviderRequest * _Nonnull' index='4' name='request' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSURL * _Nullable, NSFileProviderItem _Nullable, NSError * _Nullable)' function_pointer='true' index='5' name='completionHandler' type64='@?'>
+<arg declared_type64='NSURL * _Nullable' type64='@'/>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+<method selector='fetchThumbnailsForItemIdentifiers:requestedSize:perThumbnailCompletionHandler:completionHandler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='itemIdentifiers' type64='@'/>
+<arg declared_type64='CGSize' index='1' name='size' type64='{CGSize=dd}'/>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderItemIdentifier _Nonnull, NSData * _Nullable, NSError * _Nullable)' function_pointer='true' index='2' name='perThumbnailCompletionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' type64='@'/>
+<arg declared_type64='NSData * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+<method selector='fileSystemFlags'>
+<retval declared_type64='NSFileProviderFileSystemFlags' type64='Q'/>
+</method>
+<method selector='filename'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='finishEnumeratingChangesUpToSyncAnchor:moreComing:'>
+<arg declared_type64='NSFileProviderSyncAnchor _Nonnull' index='0' name='anchor' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='moreComing' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='finishEnumeratingUpToPage:'>
+<arg declared_type64='NSFileProviderPage _Nullable' index='0' name='nextPage' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='finishEnumeratingWithError:'>
+<arg declared_type64='NSError * _Nonnull' index='0' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='importDidFinishWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(void)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='initWithDomain:'>
+<arg declared_type64='NSFileProviderDomain * _Nonnull' index='0' name='domain' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='invalidate'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='isDownloaded'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isDownloading'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isMostRecentVersionDownloaded'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isShared'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isSharedByCurrentUser'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isUploaded'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isUploading'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='itemForIdentifier:request:completionHandler:'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='identifier' type64='@'/>
+<arg declared_type64='NSFileProviderRequest * _Nonnull' index='1' name='request' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderItem _Nullable, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+<method selector='itemIdentifier'>
+<retval declared_type64='NSFileProviderItemIdentifier _Nonnull' type64='@'/>
+</method>
+<method selector='itemVersion'>
+<retval declared_type64='NSFileProviderItemVersion * _Nonnull' type64='@'/>
+</method>
+<method selector='lastUsedDate'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+<method selector='makeListenerEndpointAndReturnError:'>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='error' type64='^@'/>
+<retval declared_type64='NSXPCListenerEndpoint * _Nullable' type64='@'/>
+</method>
+<method selector='materializedItemsDidChangeWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(void)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='modifyItem:baseVersion:changedFields:contents:options:request:completionHandler:'>
+<arg declared_type64='NSFileProviderItem _Nonnull' index='0' name='item' type64='@'/>
+<arg declared_type64='NSFileProviderItemVersion * _Nonnull' index='1' name='version' type64='@'/>
+<arg declared_type64='NSFileProviderItemFields' index='2' name='changedFields' type64='Q'/>
+<arg declared_type64='NSURL * _Nullable' index='3' name='newContents' type64='@'/>
+<arg declared_type64='NSFileProviderModifyItemOptions' index='4' name='options' type64='Q'/>
+<arg declared_type64='NSFileProviderRequest * _Nonnull' index='5' name='request' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderItem _Nullable, NSFileProviderItemFields, BOOL, NSError * _Nullable)' function_pointer='true' index='6' name='completionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSFileProviderItemFields' type64='Q'/>
+<arg declared_type64='BOOL' type64='B'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+<method selector='mostRecentEditorNameComponents'>
+<retval declared_type64='NSPersonNameComponents * _Nullable' type64='@'/>
+</method>
+<method selector='ownerNameComponents'>
+<retval declared_type64='NSPersonNameComponents * _Nullable' type64='@'/>
+</method>
+<method selector='parentItemIdentifier'>
+<retval declared_type64='NSFileProviderItemIdentifier _Nonnull' type64='@'/>
+</method>
+<method selector='performActionWithIdentifier:onItemsWithIdentifiers:completionHandler:'>
+<arg declared_type64='NSFileProviderExtensionActionIdentifier _Nonnull' index='0' name='actionIdentifier' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='itemIdentifiers' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+<method selector='serviceName'>
+<retval declared_type64='NSFileProviderServiceName _Nonnull' type64='@'/>
+</method>
+<method selector='suggestedBatchSize'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='suggestedPageSize'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='supportedServiceSourcesForItemIdentifier:completionHandler:'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='itemIdentifier' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray&gt; * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray&gt; * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+<method selector='symlinkTargetPath'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='tagData'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='uploadingError'>
+<retval declared_type64='NSError * _Nullable' type64='@'/>
+</method>
+<method selector='userInfo'>
+<retval declared_type64='NSDictionary * _Nullable' type64='@'/>
+</method>
+</class>
+<informal_protocol name='NSFileProviderChangeObserver'>
+<method selector='didDeleteItemsWithIdentifiers:' type64='v24@0:8@16'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='deletedItemIdentifiers' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='didUpdateItems:' type64='v24@0:8@16'>
+<arg declared_type64='NSArray&gt; * _Nonnull' index='0' name='updatedItems' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='finishEnumeratingChangesUpToSyncAnchor:moreComing:' type64='v28@0:8@16B24'>
+<arg declared_type64='NSFileProviderSyncAnchor _Nonnull' index='0' name='anchor' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='moreComing' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='finishEnumeratingWithError:' type64='v24@0:8@16'>
+<arg declared_type64='NSError * _Nonnull' index='0' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='suggestedBatchSize' type64='q16@0:8'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NSFileProviderCustomAction'>
+<method selector='performActionWithIdentifier:onItemsWithIdentifiers:completionHandler:' type64='@40@0:8@16@24@?32'>
+<arg declared_type64='NSFileProviderExtensionActionIdentifier _Nonnull' index='0' name='actionIdentifier' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='itemIdentifiers' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NSFileProviderEnumerating'>
+<method selector='enumeratorForContainerItemIdentifier:request:error:' type64='@40@0:8@16@24^@32'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='containerItemIdentifier' type64='@'/>
+<arg declared_type64='NSFileProviderRequest * _Nonnull' index='1' name='request' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NSFileProviderEnumerationObserver'>
+<method selector='didEnumerateItems:' type64='v24@0:8@16'>
+<arg declared_type64='NSArray&gt; * _Nonnull' index='0' name='updatedItems' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='finishEnumeratingUpToPage:' type64='v24@0:8@16'>
+<arg declared_type64='NSFileProviderPage _Nullable' index='0' name='nextPage' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='finishEnumeratingWithError:' type64='v24@0:8@16'>
+<arg declared_type64='NSError * _Nonnull' index='0' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='suggestedPageSize' type64='q16@0:8'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NSFileProviderEnumerator'>
+<method selector='currentSyncAnchorWithCompletionHandler:' type64='v24@0:8@?16'>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderSyncAnchor _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderSyncAnchor _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='enumerateChangesForObserver:fromSyncAnchor:' type64='v32@0:8@16@24'>
+<arg declared_type64='id _Nonnull' index='0' name='observer' type64='@'/>
+<arg declared_type64='NSFileProviderSyncAnchor _Nonnull' index='1' name='syncAnchor' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='enumerateItemsForObserver:startingAtPage:' type64='v32@0:8@16@24'>
+<arg declared_type64='id _Nonnull' index='0' name='observer' type64='@'/>
+<arg declared_type64='NSFileProviderPage _Nonnull' index='1' name='page' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='invalidate' type64='v16@0:8'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NSFileProviderIncrementalContentFetching'>
+<method selector='fetchContentsForItemWithIdentifier:version:usingExistingContentsAtURL:existingVersion:request:completionHandler:' type64='@64@0:8@16@24@32@40@48@?56'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='itemIdentifier' type64='@'/>
+<arg declared_type64='NSFileProviderItemVersion * _Nullable' index='1' name='requestedVersion' type64='@'/>
+<arg declared_type64='NSURL * _Nonnull' index='2' name='existingContents' type64='@'/>
+<arg declared_type64='NSFileProviderItemVersion * _Nonnull' index='3' name='existingVersion' type64='@'/>
+<arg declared_type64='NSFileProviderRequest * _Nonnull' index='4' name='request' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSURL * _Nullable, NSFileProviderItem _Nullable, NSError * _Nullable)' function_pointer='true' index='5' name='completionHandler' type64='@?'>
+<arg declared_type64='NSURL * _Nullable' type64='@'/>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NSFileProviderItem'>
+<method selector='capabilities' type64='Q16@0:8'>
+<retval declared_type64='NSFileProviderItemCapabilities' type64='Q'/>
+</method>
+<method selector='childItemCount' type64='@16@0:8'>
+<retval declared_type64='NSNumber * _Nullable' type64='@'/>
+</method>
+<method selector='contentModificationDate' type64='@16@0:8'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+<method selector='contentType' type64='@16@0:8'>
+<retval declared_type64='UTType * _Nonnull' type64='@'/>
+</method>
+<method selector='creationDate' type64='@16@0:8'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+<method selector='documentSize' type64='@16@0:8'>
+<retval declared_type64='NSNumber * _Nullable' type64='@'/>
+</method>
+<method selector='downloadingError' type64='@16@0:8'>
+<retval declared_type64='NSError * _Nullable' type64='@'/>
+</method>
+<method selector='extendedAttributes' type64='@16@0:8'>
+<retval declared_type64='NSDictionary * _Nonnull' type64='@'/>
+</method>
+<method selector='fileSystemFlags' type64='Q16@0:8'>
+<retval declared_type64='NSFileProviderFileSystemFlags' type64='Q'/>
+</method>
+<method selector='filename' type64='@16@0:8'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='isDownloaded' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isDownloading' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isMostRecentVersionDownloaded' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isShared' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isSharedByCurrentUser' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isUploaded' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isUploading' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='itemIdentifier' type64='@16@0:8'>
+<retval declared_type64='NSFileProviderItemIdentifier _Nonnull' type64='@'/>
+</method>
+<method selector='itemVersion' type64='@16@0:8'>
+<retval declared_type64='NSFileProviderItemVersion * _Nonnull' type64='@'/>
+</method>
+<method selector='lastUsedDate' type64='@16@0:8'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+<method selector='mostRecentEditorNameComponents' type64='@16@0:8'>
+<retval declared_type64='NSPersonNameComponents * _Nullable' type64='@'/>
+</method>
+<method selector='ownerNameComponents' type64='@16@0:8'>
+<retval declared_type64='NSPersonNameComponents * _Nullable' type64='@'/>
+</method>
+<method selector='parentItemIdentifier' type64='@16@0:8'>
+<retval declared_type64='NSFileProviderItemIdentifier _Nonnull' type64='@'/>
+</method>
+<method selector='symlinkTargetPath' type64='@16@0:8'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='tagData' type64='@16@0:8'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='uploadingError' type64='@16@0:8'>
+<retval declared_type64='NSError * _Nullable' type64='@'/>
+</method>
+<method selector='userInfo' type64='@16@0:8'>
+<retval declared_type64='NSDictionary * _Nullable' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NSFileProviderItemDecorating'>
+<method selector='decorations' type64='@16@0:8'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NSFileProviderReplicatedExtension'>
+<method selector='createItemBasedOnTemplate:fields:contents:options:request:completionHandler:' type64='@64@0:8@16Q24@32Q40@48@?56'>
+<arg declared_type64='NSFileProviderItem _Nonnull' index='0' name='itemTemplate' type64='@'/>
+<arg declared_type64='NSFileProviderItemFields' index='1' name='fields' type64='Q'/>
+<arg declared_type64='NSURL * _Nullable' index='2' name='url' type64='@'/>
+<arg declared_type64='NSFileProviderCreateItemOptions' index='3' name='options' type64='Q'/>
+<arg declared_type64='NSFileProviderRequest * _Nonnull' index='4' name='request' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderItem _Nullable, NSFileProviderItemFields, BOOL, NSError * _Nullable)' function_pointer='true' index='5' name='completionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSFileProviderItemFields' type64='Q'/>
+<arg declared_type64='BOOL' type64='B'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+<method selector='deleteItemWithIdentifier:baseVersion:options:request:completionHandler:' type64='@56@0:8@16@24Q32@40@?48'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='identifier' type64='@'/>
+<arg declared_type64='NSFileProviderItemVersion * _Nonnull' index='1' name='version' type64='@'/>
+<arg declared_type64='NSFileProviderDeleteItemOptions' index='2' name='options' type64='Q'/>
+<arg declared_type64='NSFileProviderRequest * _Nonnull' index='3' name='request' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='4' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+<method selector='fetchContentsForItemWithIdentifier:version:request:completionHandler:' type64='@48@0:8@16@24@32@?40'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='itemIdentifier' type64='@'/>
+<arg declared_type64='NSFileProviderItemVersion * _Nullable' index='1' name='requestedVersion' type64='@'/>
+<arg declared_type64='NSFileProviderRequest * _Nonnull' index='2' name='request' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSURL * _Nullable, NSFileProviderItem _Nullable, NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSURL * _Nullable' type64='@'/>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+<method selector='importDidFinishWithCompletionHandler:' type64='v24@0:8@?16'>
+<arg declared_type64='void (^ _Nonnull)(void)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='initWithDomain:' type64='@24@0:8@16'>
+<arg declared_type64='NSFileProviderDomain * _Nonnull' index='0' name='domain' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='invalidate' type64='v16@0:8'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='itemForIdentifier:request:completionHandler:' type64='@40@0:8@16@24@?32'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='identifier' type64='@'/>
+<arg declared_type64='NSFileProviderRequest * _Nonnull' index='1' name='request' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderItem _Nullable, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+<method selector='materializedItemsDidChangeWithCompletionHandler:' type64='v24@0:8@?16'>
+<arg declared_type64='void (^ _Nonnull)(void)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='modifyItem:baseVersion:changedFields:contents:options:request:completionHandler:' type64='@72@0:8@16@24Q32@40Q48@56@?64'>
+<arg declared_type64='NSFileProviderItem _Nonnull' index='0' name='item' type64='@'/>
+<arg declared_type64='NSFileProviderItemVersion * _Nonnull' index='1' name='version' type64='@'/>
+<arg declared_type64='NSFileProviderItemFields' index='2' name='changedFields' type64='Q'/>
+<arg declared_type64='NSURL * _Nullable' index='3' name='newContents' type64='@'/>
+<arg declared_type64='NSFileProviderModifyItemOptions' index='4' name='options' type64='Q'/>
+<arg declared_type64='NSFileProviderRequest * _Nonnull' index='5' name='request' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderItem _Nullable, NSFileProviderItemFields, BOOL, NSError * _Nullable)' function_pointer='true' index='6' name='completionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderItem _Nullable' type64='@'/>
+<arg declared_type64='NSFileProviderItemFields' type64='Q'/>
+<arg declared_type64='BOOL' type64='B'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NSFileProviderServiceSource'>
+<method selector='makeListenerEndpointAndReturnError:' type64='@24@0:8^@16'>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='error' type64='^@'/>
+<retval declared_type64='NSXPCListenerEndpoint * _Nullable' type64='@'/>
+</method>
+<method selector='serviceName' type64='@16@0:8'>
+<retval declared_type64='NSFileProviderServiceName _Nonnull' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NSFileProviderServicing'>
+<method selector='supportedServiceSourcesForItemIdentifier:completionHandler:' type64='@32@0:8@16@?24'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' index='0' name='itemIdentifier' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray&gt; * _Nullable, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray&gt; * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NSFileProviderThumbnailing'>
+<method selector='fetchThumbnailsForItemIdentifiers:requestedSize:perThumbnailCompletionHandler:completionHandler:' type64='@56@0:8@16{CGSize=dd}24@?40@?48'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='itemIdentifiers' type64='@'/>
+<arg declared_type64='CGSize' index='1' name='size' type64='{CGSize=dd}'/>
+<arg declared_type64='void (^ _Nonnull)(NSFileProviderItemIdentifier _Nonnull, NSData * _Nullable, NSError * _Nullable)' function_pointer='true' index='2' name='perThumbnailCompletionHandler' type64='@?'>
+<arg declared_type64='NSFileProviderItemIdentifier _Nonnull' type64='@'/>
+<arg declared_type64='NSData * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+</informal_protocol>
+</signatures>

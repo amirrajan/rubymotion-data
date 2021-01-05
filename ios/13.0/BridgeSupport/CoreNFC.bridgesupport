@@ -1,0 +1,1397 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type64='NSErrorDomain _Nonnull' name='NFCErrorDomain' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='NFCISO15693TagResponseErrorKey' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='NFCTagResponseUnexpectedLengthErrorKey' type64='@'/>
+<enum name='EncryptionIdAES' value64='79'/>
+<enum name='EncryptionIdAES_DES' value64='65'/>
+<enum name='NFCMiFareDESFire' value64='4'/>
+<enum name='NFCMiFarePlus' value64='3'/>
+<enum name='NFCMiFareUltralight' value64='2'/>
+<enum name='NFCMiFareUnknown' value64='1'/>
+<enum name='NFCNDEFStatusNotSupported' value64='1'/>
+<enum name='NFCNDEFStatusReadOnly' value64='3'/>
+<enum name='NFCNDEFStatusReadWrite' value64='2'/>
+<enum name='NFCNdefReaderSessionErrorTagNotWritable' value64='400'/>
+<enum name='NFCNdefReaderSessionErrorTagSizeTooSmall' value64='402'/>
+<enum name='NFCNdefReaderSessionErrorTagUpdateFailure' value64='401'/>
+<enum name='NFCNdefReaderSessionErrorZeroLengthMessage' value64='403'/>
+<enum name='NFCPollingISO14443' value64='1'/>
+<enum name='NFCPollingISO15693' value64='2'/>
+<enum name='NFCPollingISO18092' value64='4'/>
+<enum name='NFCReaderErrorInvalidParameter' value64='3'/>
+<enum name='NFCReaderErrorInvalidParameterLength' value64='4'/>
+<enum name='NFCReaderErrorParameterOutOfBound' value64='5'/>
+<enum name='NFCReaderErrorSecurityViolation' value64='2'/>
+<enum name='NFCReaderErrorUnsupportedFeature' value64='1'/>
+<enum name='NFCReaderSessionInvalidationErrorFirstNDEFTagRead' value64='204'/>
+<enum name='NFCReaderSessionInvalidationErrorSessionTerminatedUnexpectedly' value64='202'/>
+<enum name='NFCReaderSessionInvalidationErrorSessionTimeout' value64='201'/>
+<enum name='NFCReaderSessionInvalidationErrorSystemIsBusy' value64='203'/>
+<enum name='NFCReaderSessionInvalidationErrorUserCanceled' value64='200'/>
+<enum name='NFCReaderTransceiveErrorRetryExceeded' value64='101'/>
+<enum name='NFCReaderTransceiveErrorSessionInvalidated' value64='103'/>
+<enum name='NFCReaderTransceiveErrorTagConnectionLost' value64='100'/>
+<enum name='NFCReaderTransceiveErrorTagNotConnected' value64='104'/>
+<enum name='NFCReaderTransceiveErrorTagResponseError' value64='102'/>
+<enum name='NFCTagCommandConfigurationErrorInvalidParameters' value64='300'/>
+<enum name='NFCTagTypeFeliCa' value64='2'/>
+<enum name='NFCTagTypeISO15693' value64='1'/>
+<enum name='NFCTagTypeISO7816Compatible' value64='3'/>
+<enum name='NFCTagTypeMiFare' value64='4'/>
+<enum name='NFCTypeNameFormatAbsoluteURI' value64='3'/>
+<enum name='NFCTypeNameFormatEmpty' value64='0'/>
+<enum name='NFCTypeNameFormatMedia' value64='2'/>
+<enum name='NFCTypeNameFormatNFCExternal' value64='4'/>
+<enum name='NFCTypeNameFormatNFCWellKnown' value64='1'/>
+<enum name='NFCTypeNameFormatUnchanged' value64='6'/>
+<enum name='NFCTypeNameFormatUnknown' value64='5'/>
+<enum name='PollingRequestCodeCommunicationPerformance' value64='2'/>
+<enum name='PollingRequestCodeNoRequest' value64='0'/>
+<enum name='PollingRequestCodeSystemCode' value64='1'/>
+<enum name='PollingTimeSlotMax1' value64='0'/>
+<enum name='PollingTimeSlotMax16' value64='15'/>
+<enum name='PollingTimeSlotMax2' value64='1'/>
+<enum name='PollingTimeSlotMax4' value64='3'/>
+<enum name='PollingTimeSlotMax8' value64='7'/>
+<enum name='RequestFlagAddress' value64='32'/>
+<enum name='RequestFlagDualSubCarriers' value64='1'/>
+<enum name='RequestFlagHighDataRate' value64='2'/>
+<enum name='RequestFlagOption' value64='64'/>
+<enum name='RequestFlagProtocolExtension' value64='8'/>
+<enum name='RequestFlagSelect' value64='16'/>
+<enum name='VASErrorCodeDataNotActivated' value64='25223'/>
+<enum name='VASErrorCodeDataNotFound' value64='27267'/>
+<enum name='VASErrorCodeIncorrectData' value64='27264'/>
+<enum name='VASErrorCodeSuccess' value64='36864'/>
+<enum name='VASErrorCodeUnsupportedApplicationVersion' value64='25408'/>
+<enum name='VASErrorCodeUserIntervention' value64='27012'/>
+<enum name='VASErrorCodeWrongLCField' value64='26368'/>
+<enum name='VASErrorCodeWrongParameters' value64='27392'/>
+<enum name='VASModeNormal' value64='1'/>
+<enum name='VASModeURLOnly' value64='0'/>
+<class name='NFCISO15693CustomCommandConfiguration'>
+<method selector='customCommandCode'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='initWithManufacturerCode:customCommandCode:requestParameters:'>
+<arg declared_type64='NSUInteger' index='0' name='manufacturerCode' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='customCommandCode' type64='Q'/>
+<arg declared_type64='NSData * _Nullable' index='2' name='requestParameters' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithManufacturerCode:customCommandCode:requestParameters:maximumRetries:retryInterval:'>
+<arg declared_type64='NSUInteger' index='0' name='manufacturerCode' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='customCommandCode' type64='Q'/>
+<arg declared_type64='NSData * _Nullable' index='2' name='requestParameters' type64='@'/>
+<arg declared_type64='NSUInteger' index='3' name='maximumRetries' type64='Q'/>
+<arg declared_type64='NSTimeInterval' index='4' name='retryInterval' type64='d'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='manufacturerCode'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='requestParameters'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='setCustomCommandCode:'>
+<arg declared_type64='NSUInteger' index='0' name='customCommandCode' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setManufacturerCode:'>
+<arg declared_type64='NSUInteger' index='0' name='manufacturerCode' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRequestParameters:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='requestParameters' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NFCISO15693ReadMultipleBlocksConfiguration'>
+<method selector='chunkSize'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='initWithRange:chunkSize:'>
+<arg declared_type64='NSRange' index='0' name='range' type64='{_NSRange=QQ}'/>
+<arg declared_type64='NSUInteger' index='1' name='chunkSize' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithRange:chunkSize:maximumRetries:retryInterval:'>
+<arg declared_type64='NSRange' index='0' name='range' type64='{_NSRange=QQ}'/>
+<arg declared_type64='NSUInteger' index='1' name='chunkSize' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='maximumRetries' type64='Q'/>
+<arg declared_type64='NSTimeInterval' index='3' name='retryInterval' type64='d'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='range'>
+<retval declared_type64='NSRange' type64='{_NSRange=QQ}'/>
+</method>
+<method selector='setChunkSize:'>
+<arg declared_type64='NSUInteger' index='0' name='chunkSize' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRange:'>
+<arg declared_type64='NSRange' index='0' name='range' type64='{_NSRange=QQ}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NFCISO15693ReaderSession'>
+<method selector='initWithDelegate:queue:'>
+<arg declared_type64='id _Nonnull' index='0' name='delegate' type64='@'/>
+<arg declared_type64='dispatch_queue_t _Nullable' index='1' name='queue' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='restartPolling'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NFCISO7816APDU'>
+<method selector='data'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='expectedResponseLength'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='initWithData:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='initWithInstructionClass:instructionCode:p1Parameter:p2Parameter:data:expectedResponseLength:'>
+<arg declared_type64='uint8_t' index='0' name='instructionClass' type64='C'/>
+<arg declared_type64='uint8_t' index='1' name='instructionCode' type64='C'/>
+<arg declared_type64='uint8_t' index='2' name='p1Parameter' type64='C'/>
+<arg declared_type64='uint8_t' index='3' name='p2Parameter' type64='C'/>
+<arg declared_type64='NSData * _Nonnull' index='4' name='data' type64='@'/>
+<arg declared_type64='NSInteger' index='5' name='expectedResponseLength' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='instructionClass'>
+<retval declared_type64='uint8_t' type64='C'/>
+</method>
+<method selector='instructionCode'>
+<retval declared_type64='uint8_t' type64='C'/>
+</method>
+<method selector='p1Parameter'>
+<retval declared_type64='uint8_t' type64='C'/>
+</method>
+<method selector='p2Parameter'>
+<retval declared_type64='uint8_t' type64='C'/>
+</method>
+</class>
+<class name='NFCNDEFMessage'>
+<method selector='initWithNDEFRecords:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='records' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='length'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method class_method='true' selector='ndefMessageWithData:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='records'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='setRecords:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='records' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NFCNDEFPayload'>
+<method selector='identifier'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithFormat:type:identifier:payload:'>
+<arg declared_type64='NFCTypeNameFormat' index='0' name='format' type64='C'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='type' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='2' name='identifier' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='3' name='payload' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithFormat:type:identifier:payload:chunkSize:'>
+<arg declared_type64='NFCTypeNameFormat' index='0' name='format' type64='C'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='type' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='2' name='identifier' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='3' name='payload' type64='@'/>
+<arg declared_type64='size_t' index='4' name='chunkSize' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='payload'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='setIdentifier:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='identifier' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPayload:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='payload' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setType:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='type' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTypeNameFormat:'>
+<arg declared_type64='NFCTypeNameFormat' index='0' name='typeNameFormat' type64='C'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='type'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='typeNameFormat'>
+<retval declared_type64='NFCTypeNameFormat' type64='C'/>
+</method>
+<method class_method='true' selector='wellKnowTypeTextPayloadWithString:locale:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='text' type64='@'/>
+<arg declared_type64='NSLocale * _Nonnull' index='1' name='locale' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='wellKnownTypeTextPayloadWithLocale:'>
+<arg declared_type64='NSLocale * _Nullable * _Nonnull' index='0' name='locale' type64='^@'/>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='wellKnownTypeTextPayloadWithString:locale:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='text' type64='@'/>
+<arg declared_type64='NSLocale * _Nonnull' index='1' name='locale' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='wellKnownTypeURIPayload'>
+<retval declared_type64='NSURL * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='wellKnownTypeURIPayloadWithString:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='uri' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='wellKnownTypeURIPayloadWithURL:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='url' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+</class>
+<class name='NFCNDEFReaderSession'>
+<method selector='connectToTag:completionHandler:'>
+<arg declared_type64='id _Nonnull' index='0' name='tag' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='initWithDelegate:queue:invalidateAfterFirstRead:'>
+<arg declared_type64='id _Nonnull' index='0' name='delegate' type64='@'/>
+<arg declared_type64='dispatch_queue_t _Nullable' index='1' name='queue' type64='@'/>
+<arg declared_type64='BOOL' index='2' name='invalidateAfterFirstRead' type64='B'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='restartPolling'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NFCReaderSession'>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='readingAvailable'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='sessionQueue'>
+<retval declared_type64='dispatch_queue_t _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='NFCTagCommandConfiguration'>
+<method selector='maximumRetries'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='retryInterval'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='setMaximumRetries:'>
+<arg declared_type64='NSUInteger' index='0' name='maximumRetries' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRetryInterval:'>
+<arg declared_type64='NSTimeInterval' index='0' name='retryInterval' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NFCTagReaderSession'>
+<method selector='connectToTag:completionHandler:'>
+<arg declared_type64='id _Nonnull' index='0' name='tag' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='connectedTag'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='initWithPollingOption:delegate:queue:'>
+<arg declared_type64='NFCPollingOption' index='0' name='pollingOption' type64='q'/>
+<arg declared_type64='id _Nonnull' index='1' name='delegate' type64='@'/>
+<arg declared_type64='dispatch_queue_t _Nullable' index='2' name='queue' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='restartPolling'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NFCVASCommandConfiguration'>
+<method selector='initWithVASMode:passTypeIdentifier:url:'>
+<arg declared_type64='VASMode' index='0' name='mode' type64='q'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='passTypeIdentifier' type64='@'/>
+<arg declared_type64='NSURL * _Nullable' index='2' name='url' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='mode'>
+<retval declared_type64='VASMode' type64='q'/>
+</method>
+<method selector='passTypeIdentifier'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='setMode:'>
+<arg declared_type64='VASMode' index='0' name='mode' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPassTypeIdentifier:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='passTypeIdentifier' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setUrl:'>
+<arg declared_type64='NSURL * _Nullable' index='0' name='url' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='url'>
+<retval declared_type64='NSURL * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='NFCVASReaderSession'>
+<method selector='initWithVASCommandConfigurations:delegate:queue:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='commandConfigurations' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='delegate' type64='@'/>
+<arg declared_type64='dispatch_queue_t _Nullable' index='2' name='queue' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='NFCVASResponse'>
+<method selector='mobileToken'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='status'>
+<retval declared_type64='VASErrorCode' type64='q'/>
+</method>
+<method selector='vasData'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='alertMessage'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='applicationData'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='asNFCFeliCaTag'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='asNFCISO15693Tag'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='asNFCISO7816Tag'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='asNFCMiFareTag'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='beginSession'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='currentIDm'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='currentSystemCode'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='customCommandWithRequestFlag:customCommandCode:customRequestParameters:completionHandler:'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='NSInteger' index='1' name='customCommandCode' type64='q'/>
+<arg declared_type64='NSData * _Nonnull' index='2' name='customRequestParameters' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='extendedLockBlockWithRequestFlags:blockNumber:completionHandler:'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='NSInteger' index='1' name='blockNumber' type64='q'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='extendedReadMultipleBlocksWithRequestFlags:blockRange:completionHandler:'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='NSRange' index='1' name='blockRange' type64='{_NSRange=QQ}'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='extendedReadSingleBlockWithRequestFlags:blockNumber:completionHandler:'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='NSInteger' index='1' name='blockNumber' type64='q'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='extendedWriteSingleBlockWithRequestFlags:blockNumber:dataBlock:completionHandler:'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='NSInteger' index='1' name='blockNumber' type64='q'/>
+<arg declared_type64='NSData * _Nonnull' index='2' name='dataBlock' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='getMultipleBlockSecurityStatusWithRequestFlag:blockRange:completionHandler:'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='NSRange' index='1' name='blockRange' type64='{_NSRange=QQ}'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='getSystemInfoWithRequestFlag:completionHandler:'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='void (^ _Nonnull)(NSInteger, NSInteger, NSInteger, NSInteger, NSInteger, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='historicalBytes'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='icManufacturerCode'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='icSerialNumber'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='initialSelectedAID'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='invalidateSession'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='invalidateSessionWithErrorMessage:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='errorMessage' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='isAvailable'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isReady'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='lockAFIWithRequestFlag:completionHandler:'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='lockBlockWithRequestFlags:blockNumber:completionHandler:'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='uint8_t' index='1' name='blockNumber' type64='C'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='lockDFSIDWithRequestFlag:completionHandler:'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mifareFamily'>
+<retval declared_type64='NFCMiFareFamily' type64='Q'/>
+</method>
+<method selector='pollingWithSystemCode:requestCode:timeSlot:completionHandler:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='systemCode' type64='@'/>
+<arg declared_type64='PollingRequestCode' index='1' name='requestCode' type64='q'/>
+<arg declared_type64='PollingTimeSlot' index='2' name='timeSlot' type64='q'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, NSData * _Nonnull, NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='proprietaryApplicationDataCoding'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='queryNDEFStatusWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NFCNDEFStatus, NSUInteger, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NFCNDEFStatus' type64='Q'/>
+<arg declared_type64='NSUInteger' type64='Q'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readMultipleBlocksWithConfiguration:completionHandler:'>
+<arg declared_type64='NFCISO15693ReadMultipleBlocksConfiguration * _Nonnull' index='0' name='readConfiguration' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readMultipleBlocksWithRequestFlags:blockRange:completionHandler:'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='NSRange' index='1' name='blockRange' type64='{_NSRange=QQ}'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readNDEFWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NFCNDEFMessage * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NFCNDEFMessage * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readSingleBlockWithRequestFlags:blockNumber:completionHandler:'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='uint8_t' index='1' name='blockNumber' type64='C'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readWithoutEncryptionWithServiceCodeList:blockList:completionHandler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='serviceCodeList' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='blockList' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSInteger, NSInteger, NSArray * _Nonnull, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readerSession:didDetectNDEFs:'>
+<arg declared_type64='NFCNDEFReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='messages' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readerSession:didDetectTags:'>
+<arg declared_type64='NFCNDEFReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSArray&gt; * _Nonnull' index='1' name='tags' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readerSession:didInvalidateWithError:'>
+<arg declared_type64='NFCVASReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readerSession:didReceiveVASResponses:'>
+<arg declared_type64='NFCVASReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='responses' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readerSessionDidBecomeActive:'>
+<arg declared_type64='NFCVASReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='requestResponseWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSInteger, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='requestServiceV2WithNodeCodeList:completionHandler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='nodeCodeList' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSInteger, NSInteger, EncryptionId, NSArray * _Nonnull, NSArray * _Nonnull, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='EncryptionId' type64='q'/>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='requestServiceWithNodeCodeList:completionHandler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='nodeCodeList' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='requestSpecificationVersionWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSInteger, NSInteger, NSData * _Nonnull, NSData * _Nonnull, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='requestSystemCodeWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resetModeWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSInteger, NSInteger, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resetToReadyWithRequestFlags:completionHandler:'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='selectWithRequestFlags:completionHandler:'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sendCommandAPDU:completionHandler:'>
+<arg declared_type64='NFCISO7816APDU * _Nonnull' index='0' name='apdu' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, uint8_t, uint8_t, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='uint8_t' type64='C'/>
+<arg declared_type64='uint8_t' type64='C'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sendCustomCommandWithConfiguration:completionHandler:'>
+<arg declared_type64='NFCISO15693CustomCommandConfiguration * _Nonnull' index='0' name='commandConfiguration' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sendFeliCaCommandPacket:completionHandler:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='commandPacket' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sendMiFareCommand:completionHandler:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='command' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sendMiFareISO7816Command:completionHandler:'>
+<arg declared_type64='NFCISO7816APDU * _Nonnull' index='0' name='apdu' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, uint8_t, uint8_t, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='uint8_t' type64='C'/>
+<arg declared_type64='uint8_t' type64='C'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='session'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='setAlertMessage:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='alertMessage' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stayQuietWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='tagReaderSession:didDetectTags:'>
+<arg declared_type64='NFCTagReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSArray&gt; * _Nonnull' index='1' name='tags' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='tagReaderSession:didInvalidateWithError:'>
+<arg declared_type64='NFCTagReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='tagReaderSessionDidBecomeActive:'>
+<arg declared_type64='NFCTagReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='type'>
+<retval declared_type64='NFCTagType' type64='Q'/>
+</method>
+<method selector='writeAFIWithRequestFlag:afi:completionHandler:'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='uint8_t' index='1' name='afi' type64='C'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='writeDSFIDWithRequestFlag:dsfid:completionHandler:'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='uint8_t' index='1' name='dsfid' type64='C'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='writeLockWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='writeMultipleBlocksWithRequestFlags:blockRange:dataBlocks:completionHandler:'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='NSRange' index='1' name='blockRange' type64='{_NSRange=QQ}'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='dataBlocks' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='writeNDEF:completionHandler:'>
+<arg declared_type64='NFCNDEFMessage * _Nonnull' index='0' name='ndefMessage' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='writeSingleBlockWithRequestFlags:blockNumber:dataBlock:completionHandler:'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='uint8_t' index='1' name='blockNumber' type64='C'/>
+<arg declared_type64='NSData * _Nonnull' index='2' name='dataBlock' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='writeWithoutEncryptionWithServiceCodeList:blockList:blockData:completionHandler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='serviceCodeList' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='blockList' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='blockData' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSInteger, NSInteger, NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NSUserActivity'>
+<method selector='ndefMessagePayload'>
+<retval declared_type64='NFCNDEFMessage * _Nonnull' type64='@'/>
+</method>
+</class>
+<informal_protocol name='NFCFeliCaTag'>
+<method selector='currentIDm' type64='@16@0:8'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='currentSystemCode' type64='@16@0:8'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='pollingWithSystemCode:requestCode:timeSlot:completionHandler:' type64='v48@0:8@16q24q32@?40'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='systemCode' type64='@'/>
+<arg declared_type64='PollingRequestCode' index='1' name='requestCode' type64='q'/>
+<arg declared_type64='PollingTimeSlot' index='2' name='timeSlot' type64='q'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, NSData * _Nonnull, NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readWithoutEncryptionWithServiceCodeList:blockList:completionHandler:' type64='v40@0:8@16@24@?32'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='serviceCodeList' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='blockList' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSInteger, NSInteger, NSArray * _Nonnull, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='requestResponseWithCompletionHandler:' type64='v24@0:8@?16'>
+<arg declared_type64='void (^ _Nonnull)(NSInteger, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='requestServiceV2WithNodeCodeList:completionHandler:' type64='v32@0:8@16@?24'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='nodeCodeList' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSInteger, NSInteger, EncryptionId, NSArray * _Nonnull, NSArray * _Nonnull, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='EncryptionId' type64='q'/>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='requestServiceWithNodeCodeList:completionHandler:' type64='v32@0:8@16@?24'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='nodeCodeList' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='requestSpecificationVersionWithCompletionHandler:' type64='v24@0:8@?16'>
+<arg declared_type64='void (^ _Nonnull)(NSInteger, NSInteger, NSData * _Nonnull, NSData * _Nonnull, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='requestSystemCodeWithCompletionHandler:' type64='v24@0:8@?16'>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resetModeWithCompletionHandler:' type64='v24@0:8@?16'>
+<arg declared_type64='void (^ _Nonnull)(NSInteger, NSInteger, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sendFeliCaCommandPacket:completionHandler:' type64='v32@0:8@16@?24'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='commandPacket' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='writeWithoutEncryptionWithServiceCodeList:blockList:blockData:completionHandler:' type64='v48@0:8@16@24@32@?40'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='serviceCodeList' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='blockList' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='blockData' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSInteger, NSInteger, NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NFCISO15693Tag'>
+<method selector='customCommandWithRequestFlag:customCommandCode:customRequestParameters:completionHandler:' type64='v44@0:8C16q20@28@?36'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='NSInteger' index='1' name='customCommandCode' type64='q'/>
+<arg declared_type64='NSData * _Nonnull' index='2' name='customRequestParameters' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='extendedLockBlockWithRequestFlags:blockNumber:completionHandler:' type64='v36@0:8C16q20@?28'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='NSInteger' index='1' name='blockNumber' type64='q'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='extendedReadMultipleBlocksWithRequestFlags:blockRange:completionHandler:' type64='v44@0:8C16{_NSRange=QQ}20@?36'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='NSRange' index='1' name='blockRange' type64='{_NSRange=QQ}'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='extendedReadSingleBlockWithRequestFlags:blockNumber:completionHandler:' type64='v36@0:8C16q20@?28'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='NSInteger' index='1' name='blockNumber' type64='q'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='extendedWriteSingleBlockWithRequestFlags:blockNumber:dataBlock:completionHandler:' type64='v44@0:8C16q20@28@?36'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='NSInteger' index='1' name='blockNumber' type64='q'/>
+<arg declared_type64='NSData * _Nonnull' index='2' name='dataBlock' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='getMultipleBlockSecurityStatusWithRequestFlag:blockRange:completionHandler:' type64='v44@0:8C16{_NSRange=QQ}20@?36'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='NSRange' index='1' name='blockRange' type64='{_NSRange=QQ}'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='getSystemInfoWithRequestFlag:completionHandler:' type64='v28@0:8C16@?20'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='void (^ _Nonnull)(NSInteger, NSInteger, NSInteger, NSInteger, NSInteger, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSInteger' type64='q'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='icManufacturerCode' type64='Q16@0:8'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='icSerialNumber' type64='@16@0:8'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='identifier' type64='@16@0:8'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='lockAFIWithRequestFlag:completionHandler:' type64='v28@0:8C16@?20'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='lockBlockWithRequestFlags:blockNumber:completionHandler:' type64='v32@0:8C16C20@?24'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='uint8_t' index='1' name='blockNumber' type64='C'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='lockDFSIDWithRequestFlag:completionHandler:' type64='v28@0:8C16@?20'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readMultipleBlocksWithConfiguration:completionHandler:' type64='v32@0:8@16@?24'>
+<arg declared_type64='NFCISO15693ReadMultipleBlocksConfiguration * _Nonnull' index='0' name='readConfiguration' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readMultipleBlocksWithRequestFlags:blockRange:completionHandler:' type64='v44@0:8C16{_NSRange=QQ}20@?36'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='NSRange' index='1' name='blockRange' type64='{_NSRange=QQ}'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readSingleBlockWithRequestFlags:blockNumber:completionHandler:' type64='v32@0:8C16C20@?24'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='uint8_t' index='1' name='blockNumber' type64='C'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resetToReadyWithRequestFlags:completionHandler:' type64='v28@0:8C16@?20'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='selectWithRequestFlags:completionHandler:' type64='v28@0:8C16@?20'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sendCustomCommandWithConfiguration:completionHandler:' type64='v32@0:8@16@?24'>
+<arg declared_type64='NFCISO15693CustomCommandConfiguration * _Nonnull' index='0' name='commandConfiguration' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stayQuietWithCompletionHandler:' type64='v24@0:8@?16'>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='writeAFIWithRequestFlag:afi:completionHandler:' type64='v32@0:8C16C20@?24'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='uint8_t' index='1' name='afi' type64='C'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='writeDSFIDWithRequestFlag:dsfid:completionHandler:' type64='v32@0:8C16C20@?24'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='uint8_t' index='1' name='dsfid' type64='C'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='writeMultipleBlocksWithRequestFlags:blockRange:dataBlocks:completionHandler:' type64='v52@0:8C16{_NSRange=QQ}20@36@?44'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='NSRange' index='1' name='blockRange' type64='{_NSRange=QQ}'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='dataBlocks' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='writeSingleBlockWithRequestFlags:blockNumber:dataBlock:completionHandler:' type64='v40@0:8C16C20@24@?32'>
+<arg declared_type64='RequestFlag' index='0' name='flags' type64='C'/>
+<arg declared_type64='uint8_t' index='1' name='blockNumber' type64='C'/>
+<arg declared_type64='NSData * _Nonnull' index='2' name='dataBlock' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NFCISO7816Tag'>
+<method selector='applicationData' type64='@16@0:8'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='historicalBytes' type64='@16@0:8'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='identifier' type64='@16@0:8'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='initialSelectedAID' type64='@16@0:8'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='proprietaryApplicationDataCoding' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='sendCommandAPDU:completionHandler:' type64='v32@0:8@16@?24'>
+<arg declared_type64='NFCISO7816APDU * _Nonnull' index='0' name='apdu' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, uint8_t, uint8_t, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='uint8_t' type64='C'/>
+<arg declared_type64='uint8_t' type64='C'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NFCMiFareTag'>
+<method selector='historicalBytes' type64='@16@0:8'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='identifier' type64='@16@0:8'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='mifareFamily' type64='Q16@0:8'>
+<retval declared_type64='NFCMiFareFamily' type64='Q'/>
+</method>
+<method selector='sendMiFareCommand:completionHandler:' type64='v32@0:8@16@?24'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='command' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sendMiFareISO7816Command:completionHandler:' type64='v32@0:8@16@?24'>
+<arg declared_type64='NFCISO7816APDU * _Nonnull' index='0' name='apdu' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSData * _Nonnull, uint8_t, uint8_t, NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSData * _Nonnull' type64='@'/>
+<arg declared_type64='uint8_t' type64='C'/>
+<arg declared_type64='uint8_t' type64='C'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NFCNDEFReaderSessionDelegate'>
+<method selector='readerSession:didDetectNDEFs:' type64='v32@0:8@16@24'>
+<arg declared_type64='NFCNDEFReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='messages' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readerSession:didDetectTags:' type64='v32@0:8@16@24'>
+<arg declared_type64='NFCNDEFReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSArray&gt; * _Nonnull' index='1' name='tags' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readerSession:didInvalidateWithError:' type64='v32@0:8@16@24'>
+<arg declared_type64='NFCNDEFReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readerSessionDidBecomeActive:' type64='v24@0:8@16'>
+<arg declared_type64='NFCNDEFReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NFCNDEFTag'>
+<method selector='isAvailable' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='queryNDEFStatusWithCompletionHandler:' type64='v24@0:8@?16'>
+<arg declared_type64='void (^ _Nonnull)(NFCNDEFStatus, NSUInteger, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NFCNDEFStatus' type64='Q'/>
+<arg declared_type64='NSUInteger' type64='Q'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readNDEFWithCompletionHandler:' type64='v24@0:8@?16'>
+<arg declared_type64='void (^ _Nonnull)(NFCNDEFMessage * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NFCNDEFMessage * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='writeLockWithCompletionHandler:' type64='v24@0:8@?16'>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='writeNDEF:completionHandler:' type64='v32@0:8@16@?24'>
+<arg declared_type64='NFCNDEFMessage * _Nonnull' index='0' name='ndefMessage' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NFCReaderSession'>
+<method selector='alertMessage' type64='@16@0:8'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='beginSession' type64='v16@0:8'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='invalidateSession' type64='v16@0:8'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='invalidateSessionWithErrorMessage:' type64='v24@0:8@16'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='errorMessage' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='isReady' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setAlertMessage:' type64='v24@0:8@16'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='alertMessage' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NFCReaderSessionDelegate'>
+<method selector='readerSession:didDetectTags:' type64='v32@0:8@16@24'>
+<arg declared_type64='NFCNDEFReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSArray&gt; * _Nonnull' index='1' name='tags' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readerSession:didInvalidateWithError:' type64='v32@0:8@16@24'>
+<arg declared_type64='NFCVASReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readerSessionDidBecomeActive:' type64='v24@0:8@16'>
+<arg declared_type64='NFCVASReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NFCTag'>
+<method selector='asNFCFeliCaTag' type64='@16@0:8'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='asNFCISO15693Tag' type64='@16@0:8'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='asNFCISO7816Tag' type64='@16@0:8'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='asNFCMiFareTag' type64='@16@0:8'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='isAvailable' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='session' type64='@16@0:8'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='type' type64='Q16@0:8'>
+<retval declared_type64='NFCTagType' type64='Q'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NFCTagReaderSessionDelegate'>
+<method selector='tagReaderSession:didDetectTags:' type64='v32@0:8@16@24'>
+<arg declared_type64='NFCTagReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSArray&gt; * _Nonnull' index='1' name='tags' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='tagReaderSession:didInvalidateWithError:' type64='v32@0:8@16@24'>
+<arg declared_type64='NFCTagReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='tagReaderSessionDidBecomeActive:' type64='v24@0:8@16'>
+<arg declared_type64='NFCTagReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='NFCVASReaderSessionDelegate'>
+<method selector='readerSession:didInvalidateWithError:' type64='v32@0:8@16@24'>
+<arg declared_type64='NFCVASReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readerSession:didReceiveVASResponses:' type64='v32@0:8@16@24'>
+<arg declared_type64='NFCVASReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='responses' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='readerSessionDidBecomeActive:' type64='v24@0:8@16'>
+<arg declared_type64='NFCVASReaderSession * _Nonnull' index='0' name='session' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

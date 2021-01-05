@@ -1,0 +1,100 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type64='NSErrorDomain _Nonnull' name='BGTaskSchedulerErrorDomain' type64='@'/>
+<enum name='BGTaskSchedulerErrorCodeNotPermitted' value64='3'/>
+<enum name='BGTaskSchedulerErrorCodeTooManyPendingTaskRequests' value64='2'/>
+<enum name='BGTaskSchedulerErrorCodeUnavailable' value64='1'/>
+<class name='BGAppRefreshTaskRequest'>
+<method selector='initWithIdentifier:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='identifier' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='BGProcessingTaskRequest'>
+<method selector='initWithIdentifier:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='identifier' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='requiresExternalPower'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='requiresNetworkConnectivity'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setRequiresExternalPower:'>
+<arg declared_type64='BOOL' index='0' name='requiresExternalPower' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRequiresNetworkConnectivity:'>
+<arg declared_type64='BOOL' index='0' name='requiresNetworkConnectivity' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='BGTask'>
+<method selector='expirationHandler'>
+<retval declared_type64='void (^ _Nullable)(void)' function_pointer='true' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='identifier'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='setExpirationHandler:'>
+<arg declared_type64='void (^ _Nullable)(void)' function_pointer='true' index='0' name='expirationHandler' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTaskCompletedWithSuccess:'>
+<arg declared_type64='BOOL' index='0' name='success' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='BGTaskRequest'>
+<method selector='earliestBeginDate'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='setEarliestBeginDate:'>
+<arg declared_type64='NSDate * _Nullable' index='0' name='earliestBeginDate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='BGTaskScheduler'>
+<method selector='cancelAllTaskRequests'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='cancelTaskRequestWithIdentifier:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='identifier' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='getPendingTaskRequestsWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='registerForTaskWithIdentifier:usingQueue:launchHandler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='identifier' type64='@'/>
+<arg declared_type64='dispatch_queue_t _Nullable' index='1' name='queue' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(__kindof BGTask * _Nonnull)' function_pointer='true' index='2' name='launchHandler' type64='@?'>
+<arg declared_type64='__kindof BGTask * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='sharedScheduler'>
+<retval declared_type64='__kindof BGTaskScheduler * _Nonnull' type64='@'/>
+</method>
+<method selector='submitTaskRequest:error:'>
+<arg declared_type64='BGTaskRequest * _Nonnull' index='0' name='taskRequest' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+</signatures>

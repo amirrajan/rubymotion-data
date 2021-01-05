@@ -1,0 +1,488 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<constant const='true' declared_type64='PHProjectCategory' name='PHProjectCategoryBook' type64='@'/>
+<constant const='true' declared_type64='PHProjectCategory' name='PHProjectCategoryCalendar' type64='@'/>
+<constant const='true' declared_type64='PHProjectCategory' name='PHProjectCategoryCard' type64='@'/>
+<constant const='true' declared_type64='PHProjectCategory' name='PHProjectCategoryOther' type64='@'/>
+<constant const='true' declared_type64='PHProjectCategory' name='PHProjectCategoryPrints' type64='@'/>
+<constant const='true' declared_type64='PHProjectCategory' name='PHProjectCategorySlideshow' type64='@'/>
+<constant const='true' declared_type64='PHProjectCategory' name='PHProjectCategoryUndefined' type64='@'/>
+<constant const='true' declared_type64='PHProjectCategory' name='PHProjectCategoryWallDecor' type64='@'/>
+<constant const='true' declared_type64='PHProjectType' name='PHProjectTypeUndefined' type64='@'/>
+<enum name='PHLivePhotoViewContentModeAspectFill' value64='1'/>
+<enum name='PHLivePhotoViewContentModeAspectFit' value64='0'/>
+<enum name='PHLivePhotoViewPlaybackStyleFull' value64='1'/>
+<enum name='PHLivePhotoViewPlaybackStyleHint' value64='2'/>
+<enum name='PHLivePhotoViewPlaybackStyleUndefined' value64='0'/>
+<enum name='PHProjectCreationSourceAlbum' value64='2'/>
+<enum name='PHProjectCreationSourceMemory' value64='3'/>
+<enum name='PHProjectCreationSourceMoment' value64='4'/>
+<enum name='PHProjectCreationSourceProject' value64='20'/>
+<enum name='PHProjectCreationSourceProjectBook' value64='21'/>
+<enum name='PHProjectCreationSourceProjectCalendar' value64='22'/>
+<enum name='PHProjectCreationSourceProjectCard' value64='23'/>
+<enum name='PHProjectCreationSourceProjectExtension' value64='26'/>
+<enum name='PHProjectCreationSourceProjectPrintOrder' value64='24'/>
+<enum name='PHProjectCreationSourceProjectSlideshow' value64='25'/>
+<enum name='PHProjectCreationSourceUndefined' value64='0'/>
+<enum name='PHProjectCreationSourceUserSelection' value64='1'/>
+<enum name='PHProjectSectionTypeAuxiliary' value64='3'/>
+<enum name='PHProjectSectionTypeContent' value64='2'/>
+<enum name='PHProjectSectionTypeCover' value64='1'/>
+<enum name='PHProjectSectionTypeUndefined' value64='0'/>
+<enum name='PHProjectTextElementTypeBody' value64='0'/>
+<enum name='PHProjectTextElementTypeSubtitle' value64='2'/>
+<enum name='PHProjectTextElementTypeTitle' value64='1'/>
+<class name='NSObject'>
+<method selector='beginProjectWithExtensionContext:projectInfo:completion:'>
+<arg declared_type64='PHProjectExtensionContext * _Nonnull' index='0' name='extensionContext' type64='@'/>
+<arg declared_type64='PHProjectInfo * _Nonnull' index='1' name='projectInfo' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='2' name='completion' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='canHandleAdjustmentData:'>
+<arg declared_type64='PHAdjustmentData * _Nonnull' index='0' name='adjustmentData' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='cancelContentEditing'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='extensionWillDiscardDataSource'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='finishContentEditingWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(PHContentEditingOutput * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='PHContentEditingOutput * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='finishProjectWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(void)' function_pointer='true' index='0' name='completion' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='footerTextForSubtypesOfProjectType:'>
+<arg declared_type64='PHProjectType _Nonnull' index='0' name='projectType' type64='@'/>
+<retval declared_type64='NSAttributedString * _Nullable' type64='@'/>
+</method>
+<method selector='invalidateFooterTextForSubtypesOfProjectType:'>
+<arg declared_type64='PHProjectType _Nonnull' index='0' name='projectType' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='invalidateTypeDescriptionForProjectType:'>
+<arg declared_type64='PHProjectType _Nonnull' index='0' name='projectType' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='livePhotoView:didEndPlaybackWithStyle:'>
+<arg declared_type64='PHLivePhotoView * _Nonnull' index='0' name='livePhotoView' type64='@'/>
+<arg declared_type64='PHLivePhotoViewPlaybackStyle' index='1' name='playbackStyle' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='livePhotoView:willBeginPlaybackWithStyle:'>
+<arg declared_type64='PHLivePhotoView * _Nonnull' index='0' name='livePhotoView' type64='@'/>
+<arg declared_type64='PHLivePhotoViewPlaybackStyle' index='1' name='playbackStyle' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resumeProjectWithExtensionContext:completion:'>
+<arg declared_type64='PHProjectExtensionContext * _Nonnull' index='0' name='extensionContext' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='shouldShowCancelConfirmation'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='startContentEditingWithInput:placeholderImage:'>
+<arg declared_type64='PHContentEditingInput * _Nonnull' index='0' name='contentEditingInput' type64='@'/>
+<arg declared_type64='NSImage * _Nonnull' index='1' name='placeholderImage' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='subtypesForProjectType:'>
+<arg declared_type64='PHProjectType _Nonnull' index='0' name='projectType' type64='@'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='supportedProjectTypes'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='typeDescriptionDataSourceForCategory:invalidator:'>
+<arg declared_type64='PHProjectCategory _Nonnull' index='0' name='category' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='invalidator' type64='@'/>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='typeDescriptionForProjectType:'>
+<arg declared_type64='PHProjectType _Nonnull' index='0' name='projectType' type64='@'/>
+<retval declared_type64='PHProjectTypeDescription * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='PHLivePhotoView'>
+<method selector='audioVolume'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='contentMode'>
+<retval declared_type64='PHLivePhotoViewContentMode' type64='q'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='isMuted'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='livePhoto'>
+<retval declared_type64='PHLivePhoto * _Nullable' type64='@'/>
+</method>
+<method selector='livePhotoBadgeView'>
+<retval declared_type64='NSView * _Nullable' type64='@'/>
+</method>
+<method selector='setAudioVolume:'>
+<arg declared_type64='float' index='0' name='audioVolume' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setContentMode:'>
+<arg declared_type64='PHLivePhotoViewContentMode' index='0' name='contentMode' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLivePhoto:'>
+<arg declared_type64='PHLivePhoto * _Nullable' index='0' name='livePhoto' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMuted:'>
+<arg declared_type64='BOOL' index='0' name='muted' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='startPlaybackWithStyle:'>
+<arg declared_type64='PHLivePhotoViewPlaybackStyle' index='0' name='playbackStyle' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stopPlayback'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stopPlaybackAnimated:'>
+<arg declared_type64='BOOL' index='0' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='PHProjectAssetElement'>
+<method selector='annotation'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='cloudAssetIdentifier'>
+<retval declared_type64='PHCloudIdentifier * _Nonnull' type64='@'/>
+</method>
+<method selector='cropRect'>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='horizontallyFlipped'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='regionsOfInterest'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='verticallyFlipped'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='PHProjectElement'>
+<method selector='placement'>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='weight'>
+<retval declared_type64='double' type64='d'/>
+</method>
+</class>
+<class name='PHProjectExtensionContext'>
+<method selector='photoLibrary'>
+<retval declared_type64='PHPhotoLibrary * _Nonnull' type64='@'/>
+</method>
+<method selector='project'>
+<retval declared_type64='PHProject * _Nonnull' type64='@'/>
+</method>
+<method selector='showEditorForAsset:'>
+<arg declared_type64='PHAsset * _Nonnull' index='0' name='asset' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='updatedProjectInfoFromProjectInfo:completion:'>
+<arg declared_type64='PHProjectInfo * _Nullable' index='0' name='existingProjectInfo' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(PHProjectInfo * _Nullable)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='PHProjectInfo * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='NSProgress * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='PHProjectInfo'>
+<method selector='brandingEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='creationSource'>
+<retval declared_type64='PHProjectCreationSource' type64='q'/>
+</method>
+<method selector='pageNumbersEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='productIdentifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='projectType'>
+<retval declared_type64='PHProjectType _Nonnull' type64='@'/>
+</method>
+<method selector='sections'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='themeIdentifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='PHProjectJournalEntryElement'>
+<method selector='assetElement'>
+<retval declared_type64='PHProjectAssetElement * _Nullable' type64='@'/>
+</method>
+<method selector='date'>
+<retval declared_type64='NSDate * _Nonnull' type64='@'/>
+</method>
+<method selector='textElement'>
+<retval declared_type64='PHProjectTextElement * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='PHProjectMapElement'>
+<method selector='altitude'>
+<retval declared_type64='CLLocationDistance' type64='d'/>
+</method>
+<method selector='annotations'>
+<retval declared_type64='NSArray&gt; * _Nonnull' type64='@'/>
+</method>
+<method selector='centerCoordinate'>
+<retval declared_type64='CLLocationCoordinate2D' type64='{CLLocationCoordinate2D=dd}'/>
+</method>
+<method selector='heading'>
+<retval declared_type64='CLLocationDirection' type64='d'/>
+</method>
+<method selector='mapType'>
+<retval declared_type64='MKMapType' type64='Q'/>
+</method>
+<method selector='pitch'>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+</class>
+<class name='PHProjectRegionOfInterest'>
+<method selector='identifier'>
+<retval declared_type64='PHProjectRegionOfInterestIdentifier _Nonnull' type64='@'/>
+</method>
+<method selector='quality'>
+<retval declared_type64='double' type64='d'/>
+</method>
+<method selector='rect'>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='weight'>
+<retval declared_type64='double' type64='d'/>
+</method>
+</class>
+<class name='PHProjectSection'>
+<method selector='sectionContents'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='sectionType'>
+<retval declared_type64='PHProjectSectionType' type64='q'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='PHProjectSectionContent'>
+<method selector='aspectRatio'>
+<retval declared_type64='double' type64='d'/>
+</method>
+<method selector='backgroundColor'>
+<retval declared_type64='NSColor * _Nullable' type64='@'/>
+</method>
+<method selector='cloudAssetIdentifiers'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='elements'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='numberOfColumns'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+</class>
+<class name='PHProjectTextElement'>
+<method selector='attributedText'>
+<retval declared_type64='NSAttributedString * _Nullable' type64='@'/>
+</method>
+<method selector='text'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='textElementType'>
+<retval declared_type64='PHProjectTextElementType' type64='q'/>
+</method>
+</class>
+<class name='PHProjectTypeDescription'>
+<method selector='canProvideSubtypes'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='image'>
+<retval declared_type64='NSImage * _Nullable' type64='@'/>
+</method>
+<method selector='initWithProjectType:title:attributedDescription:image:canProvideSubtypes:'>
+<arg declared_type64='PHProjectType _Nonnull' index='0' name='projectType' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='localizedTitle' type64='@'/>
+<arg declared_type64='NSAttributedString * _Nullable' index='2' name='localizedAttributedDescription' type64='@'/>
+<arg declared_type64='NSImage * _Nullable' index='3' name='image' type64='@'/>
+<arg declared_type64='BOOL' index='4' name='canProvideSubtypes' type64='B'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithProjectType:title:attributedDescription:image:subtypeDescriptions:'>
+<arg declared_type64='PHProjectType _Nonnull' index='0' name='projectType' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='localizedTitle' type64='@'/>
+<arg declared_type64='NSAttributedString * _Nullable' index='2' name='localizedAttributedDescription' type64='@'/>
+<arg declared_type64='NSImage * _Nullable' index='3' name='image' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='4' name='subtypeDescriptions' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithProjectType:title:description:image:'>
+<arg declared_type64='PHProjectType _Nonnull' index='0' name='projectType' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='localizedTitle' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='localizedDescription' type64='@'/>
+<arg declared_type64='NSImage * _Nullable' index='3' name='image' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithProjectType:title:description:image:canProvideSubtypes:'>
+<arg declared_type64='PHProjectType _Nonnull' index='0' name='projectType' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='localizedTitle' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='localizedDescription' type64='@'/>
+<arg declared_type64='NSImage * _Nullable' index='3' name='image' type64='@'/>
+<arg declared_type64='BOOL' index='4' name='canProvideSubtypes' type64='B'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithProjectType:title:description:image:subtypeDescriptions:'>
+<arg declared_type64='PHProjectType _Nonnull' index='0' name='projectType' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='localizedTitle' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='localizedDescription' type64='@'/>
+<arg declared_type64='NSImage * _Nullable' index='3' name='image' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='4' name='subtypeDescriptions' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='localizedAttributedDescription'>
+<retval declared_type64='NSAttributedString * _Nullable' type64='@'/>
+</method>
+<method selector='localizedDescription'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='localizedTitle'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='projectType'>
+<retval declared_type64='PHProjectType _Nonnull' type64='@'/>
+</method>
+<method selector='subtypeDescriptions'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<informal_protocol name='PHContentEditingController'>
+<method selector='canHandleAdjustmentData:' type64='B24@0:8@16'>
+<arg declared_type64='PHAdjustmentData * _Nonnull' index='0' name='adjustmentData' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='cancelContentEditing' type64='v16@0:8'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='finishContentEditingWithCompletionHandler:' type64='v24@0:8@?16'>
+<arg declared_type64='void (^ _Nonnull)(PHContentEditingOutput * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='PHContentEditingOutput * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='shouldShowCancelConfirmation' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='startContentEditingWithInput:placeholderImage:' type64='v32@0:8@16@24'>
+<arg declared_type64='PHContentEditingInput * _Nonnull' index='0' name='contentEditingInput' type64='@'/>
+<arg declared_type64='NSImage * _Nonnull' index='1' name='placeholderImage' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='PHLivePhotoViewDelegate'>
+<method selector='livePhotoView:didEndPlaybackWithStyle:' type64='v32@0:8@16q24'>
+<arg declared_type64='PHLivePhotoView * _Nonnull' index='0' name='livePhotoView' type64='@'/>
+<arg declared_type64='PHLivePhotoViewPlaybackStyle' index='1' name='playbackStyle' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='livePhotoView:willBeginPlaybackWithStyle:' type64='v32@0:8@16q24'>
+<arg declared_type64='PHLivePhotoView * _Nonnull' index='0' name='livePhotoView' type64='@'/>
+<arg declared_type64='PHLivePhotoViewPlaybackStyle' index='1' name='playbackStyle' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='PHProjectExtensionController'>
+<method selector='beginProjectWithExtensionContext:projectInfo:completion:' type64='v40@0:8@16@24@?32'>
+<arg declared_type64='PHProjectExtensionContext * _Nonnull' index='0' name='extensionContext' type64='@'/>
+<arg declared_type64='PHProjectInfo * _Nonnull' index='1' name='projectInfo' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='2' name='completion' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='finishProjectWithCompletionHandler:' type64='v24@0:8@?16'>
+<arg declared_type64='void (^ _Nonnull)(void)' function_pointer='true' index='0' name='completion' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resumeProjectWithExtensionContext:completion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='PHProjectExtensionContext * _Nonnull' index='0' name='extensionContext' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSError * _Nullable)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='supportedProjectTypes' type64='@16@0:8'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='typeDescriptionDataSourceForCategory:invalidator:' type64='@32@0:8@16@24'>
+<arg declared_type64='PHProjectCategory _Nonnull' index='0' name='category' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='invalidator' type64='@'/>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='PHProjectTypeDescriptionDataSource'>
+<method selector='extensionWillDiscardDataSource' type64='v16@0:8'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='footerTextForSubtypesOfProjectType:' type64='@24@0:8@16'>
+<arg declared_type64='PHProjectType _Nonnull' index='0' name='projectType' type64='@'/>
+<retval declared_type64='NSAttributedString * _Nullable' type64='@'/>
+</method>
+<method selector='subtypesForProjectType:' type64='@24@0:8@16'>
+<arg declared_type64='PHProjectType _Nonnull' index='0' name='projectType' type64='@'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='typeDescriptionForProjectType:' type64='@24@0:8@16'>
+<arg declared_type64='PHProjectType _Nonnull' index='0' name='projectType' type64='@'/>
+<retval declared_type64='PHProjectTypeDescription * _Nullable' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='PHProjectTypeDescriptionInvalidator'>
+<method selector='invalidateFooterTextForSubtypesOfProjectType:' type64='v24@0:8@16'>
+<arg declared_type64='PHProjectType _Nonnull' index='0' name='projectType' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='invalidateTypeDescriptionForProjectType:' type64='v24@0:8@16'>
+<arg declared_type64='PHProjectType _Nonnull' index='0' name='projectType' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

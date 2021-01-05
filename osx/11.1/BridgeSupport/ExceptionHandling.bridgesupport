@@ -1,0 +1,80 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<constant declared_type64='NSString*' name='NSStackTraceKey' type64='@'/>
+<constant declared_type64='NSString*' name='NSUncaughtRuntimeErrorException' type64='@'/>
+<constant declared_type64='NSString*' name='NSUncaughtSystemExceptionException' type64='@'/>
+<enum name='NSHandleOtherExceptionMask' value64='512'/>
+<enum name='NSHandleTopLevelExceptionMask' value64='128'/>
+<enum name='NSHandleUncaughtExceptionMask' value64='2'/>
+<enum name='NSHandleUncaughtRuntimeErrorMask' value64='32'/>
+<enum name='NSHandleUncaughtSystemExceptionMask' value64='8'/>
+<enum name='NSHangOnEveryExceptionMask' value64='31'/>
+<enum name='NSHangOnOtherExceptionMask' value64='16'/>
+<enum name='NSHangOnTopLevelExceptionMask' value64='8'/>
+<enum name='NSHangOnUncaughtExceptionMask' value64='1'/>
+<enum name='NSHangOnUncaughtRuntimeErrorMask' value64='4'/>
+<enum name='NSHangOnUncaughtSystemExceptionMask' value64='2'/>
+<enum name='NSLogAndHandleEveryExceptionMask' value64='1023'/>
+<enum name='NSLogOtherExceptionMask' value64='256'/>
+<enum name='NSLogTopLevelExceptionMask' value64='64'/>
+<enum name='NSLogUncaughtExceptionMask' value64='1'/>
+<enum name='NSLogUncaughtRuntimeErrorMask' value64='16'/>
+<enum name='NSLogUncaughtSystemExceptionMask' value64='4'/>
+<function name='NSExceptionHandlerResume'>
+<retval declared_type64='void' type64='v'/>
+</function>
+<class name='NSExceptionHandler'>
+<method class_method='true' selector='defaultExceptionHandler'>
+<retval declared_type64='NSExceptionHandler*' type64='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='exceptionHandlingMask'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='exceptionHangingMask'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id' index='0' name='anObject' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setExceptionHandlingMask:'>
+<arg declared_type64='NSUInteger' index='0' name='aMask' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setExceptionHangingMask:'>
+<arg declared_type64='NSUInteger' index='0' name='aMask' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='exceptionHandler:shouldHandleException:mask:'>
+<arg declared_type64='NSExceptionHandler*' index='0' name='sender' type64='@'/>
+<arg declared_type64='NSException*' index='1' name='exception' type64='@'/>
+<arg declared_type64='NSUInteger' index='2' name='aMask' type64='Q'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='exceptionHandler:shouldLogException:mask:'>
+<arg declared_type64='NSExceptionHandler*' index='0' name='sender' type64='@'/>
+<arg declared_type64='NSException*' index='1' name='exception' type64='@'/>
+<arg declared_type64='NSUInteger' index='2' name='aMask' type64='Q'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<informal_protocol name='NSExceptionHandlerDelegate'>
+<method selector='exceptionHandler:shouldHandleException:mask:' type64='B40@0:8@16@24Q32'>
+<arg declared_type64='NSExceptionHandler*' index='0' name='sender' type64='@'/>
+<arg declared_type64='NSException*' index='1' name='exception' type64='@'/>
+<arg declared_type64='NSUInteger' index='2' name='aMask' type64='Q'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='exceptionHandler:shouldLogException:mask:' type64='B40@0:8@16@24Q32'>
+<arg declared_type64='NSExceptionHandler*' index='0' name='sender' type64='@'/>
+<arg declared_type64='NSException*' index='1' name='exception' type64='@'/>
+<arg declared_type64='NSUInteger' index='2' name='aMask' type64='Q'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</informal_protocol>
+</signatures>

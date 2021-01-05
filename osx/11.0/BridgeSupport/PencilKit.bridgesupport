@@ -1,0 +1,272 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/IOSurface.framework'/>
+<depends_on path='/System/Library/Frameworks/Metal.framework'/>
+<depends_on path='/System/Library/Frameworks/MetalKit.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreImage.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='PKAppleDrawingTypeIdentifier' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='PKInkType' name='PKInkTypeMarker' type64='@'/>
+<constant const='true' declared_type64='PKInkType' name='PKInkTypePen' type64='@'/>
+<constant const='true' declared_type64='PKInkType' name='PKInkTypePencil' type64='@'/>
+<enum name='PKEraserTypeBitmap' value64='1'/>
+<enum name='PKEraserTypeVector' value64='0'/>
+<class name='PKDrawing'>
+<method selector='bounds'>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='dataRepresentation'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method selector='drawingByAppendingDrawing:'>
+<arg declared_type64='PKDrawing * _Nonnull' index='0' name='drawing' type64='@'/>
+<retval declared_type64='PKDrawing * _Nonnull' type64='@'/>
+</method>
+<method selector='drawingByAppendingStrokes:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='strokes' type64='@'/>
+<retval declared_type64='PKDrawing * _Nonnull' type64='@'/>
+</method>
+<method selector='drawingByApplyingTransform:'>
+<arg declared_type64='CGAffineTransform' index='0' name='transform' type64='{CGAffineTransform=dddddd}'/>
+<retval declared_type64='PKDrawing * _Nonnull' type64='@'/>
+</method>
+<method selector='imageFromRect:scale:'>
+<arg declared_type64='CGRect' index='0' name='rect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type64='CGFloat' index='1' name='scale' type64='d'/>
+<retval declared_type64='NSImage * _Nonnull' type64='@'/>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithData:error:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='initWithStrokes:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='strokes' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='strokes'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='PKEraserTool'>
+<method selector='eraserType'>
+<retval declared_type64='PKEraserType' type64='q'/>
+</method>
+<method selector='initWithEraserType:'>
+<arg declared_type64='PKEraserType' index='0' name='eraserType' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='PKFloatRange'>
+<method selector='initWithLowerBound:upperBound:'>
+<arg declared_type64='CGFloat' index='0' name='lowerBound' type64='d'/>
+<arg declared_type64='CGFloat' index='1' name='upperBound' type64='d'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='lowerBound'>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+<method selector='upperBound'>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+</class>
+<class name='PKInk'>
+<method selector='color'>
+<retval declared_type64='NSColor * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithInkType:color:'>
+<arg declared_type64='PKInkType _Nonnull' index='0' name='type' type64='@'/>
+<arg declared_type64='NSColor * _Nonnull' index='1' name='color' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='inkType'>
+<retval declared_type64='PKInkType _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='PKInkingTool'>
+<method selector='color'>
+<retval declared_type64='NSColor * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='defaultWidthForInkType:'>
+<arg declared_type64='PKInkType _Nonnull' index='0' name='inkType' type64='@'/>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+<method selector='initWithInk:width:'>
+<arg declared_type64='PKInk * _Nonnull' index='0' name='ink' type64='@'/>
+<arg declared_type64='CGFloat' index='1' name='width' type64='d'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithInkType:color:'>
+<arg declared_type64='PKInkType _Nonnull' index='0' name='type' type64='@'/>
+<arg declared_type64='NSColor * _Nonnull' index='1' name='color' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithInkType:color:width:'>
+<arg declared_type64='PKInkType _Nonnull' index='0' name='type' type64='@'/>
+<arg declared_type64='NSColor * _Nonnull' index='1' name='color' type64='@'/>
+<arg declared_type64='CGFloat' index='2' name='width' type64='d'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='ink'>
+<retval declared_type64='PKInk * _Nonnull' type64='@'/>
+</method>
+<method selector='inkType'>
+<retval declared_type64='PKInkType _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='maximumWidthForInkType:'>
+<arg declared_type64='PKInkType _Nonnull' index='0' name='inkType' type64='@'/>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+<method class_method='true' selector='minimumWidthForInkType:'>
+<arg declared_type64='PKInkType _Nonnull' index='0' name='inkType' type64='@'/>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+<method selector='width'>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+</class>
+<class name='PKLassoTool'>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='PKStroke'>
+<method selector='initWithInk:strokePath:transform:mask:'>
+<arg declared_type64='PKInk * _Nonnull' index='0' name='ink' type64='@'/>
+<arg declared_type64='PKStrokePath * _Nonnull' index='1' name='strokePath' type64='@'/>
+<arg declared_type64='CGAffineTransform' index='2' name='transform' type64='{CGAffineTransform=dddddd}'/>
+<arg declared_type64='NSBezierPath * _Nullable' index='3' name='mask' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='ink'>
+<retval declared_type64='PKInk * _Nonnull' type64='@'/>
+</method>
+<method selector='mask'>
+<retval declared_type64='NSBezierPath * _Nullable' type64='@'/>
+</method>
+<method selector='maskedPathRanges'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='path'>
+<retval declared_type64='PKStrokePath * _Nonnull' type64='@'/>
+</method>
+<method selector='renderBounds'>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='transform'>
+<retval declared_type64='CGAffineTransform' type64='{CGAffineTransform=dddddd}'/>
+</method>
+</class>
+<class name='PKStrokePath'>
+<method selector='count'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='creationDate'>
+<retval declared_type64='NSDate * _Nonnull' type64='@'/>
+</method>
+<method selector='enumerateInterpolatedPointsInRange:strideByDistance:usingBlock:'>
+<arg declared_type64='PKFloatRange * _Nonnull' index='0' name='range' type64='@'/>
+<arg declared_type64='CGFloat' index='1' name='distanceStep' type64='d'/>
+<arg declared_type64='void (^ _Nonnull)(PKStrokePoint * _Nonnull, BOOL * _Nonnull)' function_pointer='true' index='2' name='block' type64='@?'>
+<arg declared_type64='PKStrokePoint * _Nonnull' type64='@'/>
+<arg declared_type64='BOOL * _Nonnull' type64='^B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='enumerateInterpolatedPointsInRange:strideByParametricStep:usingBlock:'>
+<arg declared_type64='PKFloatRange * _Nonnull' index='0' name='range' type64='@'/>
+<arg declared_type64='CGFloat' index='1' name='parametricStep' type64='d'/>
+<arg declared_type64='void (^ _Nonnull)(PKStrokePoint * _Nonnull, BOOL * _Nonnull)' function_pointer='true' index='2' name='block' type64='@?'>
+<arg declared_type64='PKStrokePoint * _Nonnull' type64='@'/>
+<arg declared_type64='BOOL * _Nonnull' type64='^B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='enumerateInterpolatedPointsInRange:strideByTime:usingBlock:'>
+<arg declared_type64='PKFloatRange * _Nonnull' index='0' name='range' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='1' name='timeStep' type64='d'/>
+<arg declared_type64='void (^ _Nonnull)(PKStrokePoint * _Nonnull, BOOL * _Nonnull)' function_pointer='true' index='2' name='block' type64='@?'>
+<arg declared_type64='PKStrokePoint * _Nonnull' type64='@'/>
+<arg declared_type64='BOOL * _Nonnull' type64='^B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='initWithControlPoints:creationDate:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='controlPoints' type64='@'/>
+<arg declared_type64='NSDate * _Nonnull' index='1' name='creationDate' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='interpolatedLocationAt:'>
+<arg declared_type64='CGFloat' index='0' name='parametricValue' type64='d'/>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</method>
+<method selector='interpolatedPointAt:'>
+<arg declared_type64='CGFloat' index='0' name='parametricValue' type64='d'/>
+<retval declared_type64='PKStrokePoint * _Nonnull' type64='@'/>
+</method>
+<method selector='objectAtIndexedSubscript:'>
+<arg declared_type64='NSUInteger' index='0' name='i' type64='Q'/>
+<retval declared_type64='PKStrokePoint * _Nonnull' type64='@'/>
+</method>
+<method selector='parametricValue:offsetByDistance:'>
+<arg declared_type64='CGFloat' index='0' name='parametricValue' type64='d'/>
+<arg declared_type64='CGFloat' index='1' name='distanceStep' type64='d'/>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+<method selector='parametricValue:offsetByTime:'>
+<arg declared_type64='CGFloat' index='0' name='parametricValue' type64='d'/>
+<arg declared_type64='NSTimeInterval' index='1' name='timeStep' type64='d'/>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+<method selector='pointAtIndex:'>
+<arg declared_type64='NSUInteger' index='0' name='i' type64='Q'/>
+<retval declared_type64='PKStrokePoint * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='PKStrokePoint'>
+<method selector='altitude'>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+<method selector='azimuth'>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+<method selector='force'>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+<method selector='initWithLocation:timeOffset:size:opacity:force:azimuth:altitude:'>
+<arg declared_type64='CGPoint' index='0' name='location' type64='{CGPoint=dd}'/>
+<arg declared_type64='NSTimeInterval' index='1' name='timeOffset' type64='d'/>
+<arg declared_type64='CGSize' index='2' name='size' type64='{CGSize=dd}'/>
+<arg declared_type64='CGFloat' index='3' name='opacity' type64='d'/>
+<arg declared_type64='CGFloat' index='4' name='force' type64='d'/>
+<arg declared_type64='CGFloat' index='5' name='azimuth' type64='d'/>
+<arg declared_type64='CGFloat' index='6' name='altitude' type64='d'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='location'>
+<retval declared_type64='CGPoint' type64='{CGPoint=dd}'/>
+</method>
+<method selector='opacity'>
+<retval declared_type64='CGFloat' type64='d'/>
+</method>
+<method selector='size'>
+<retval declared_type64='CGSize' type64='{CGSize=dd}'/>
+</method>
+<method selector='timeOffset'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+</class>
+</signatures>

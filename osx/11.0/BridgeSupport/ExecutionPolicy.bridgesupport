@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type64='NSErrorDomain' name='EPErrorDomain' type64='@'/>
+<enum name='EPDeveloperToolStatusAuthorized' value64='3'/>
+<enum name='EPDeveloperToolStatusDenied' value64='2'/>
+<enum name='EPDeveloperToolStatusNotDetermined' value64='0'/>
+<enum name='EPDeveloperToolStatusRestricted' value64='1'/>
+<enum name='EPErrorGeneric' value64='1'/>
+<enum name='EPErrorNotADeveloperTool' value64='2'/>
+<class name='EPDeveloperTool'>
+<method selector='authorizationStatus'>
+<retval declared_type64='EPDeveloperToolStatus' type64='q'/>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='requestDeveloperToolAccessWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(BOOL)' function_pointer='true' index='0' name='handler' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='EPExecutionPolicy'>
+<method selector='addPolicyExceptionForURL:error:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='url' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+</signatures>

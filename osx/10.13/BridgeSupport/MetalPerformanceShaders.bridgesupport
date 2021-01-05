@@ -179,12 +179,12 @@
 <retval declared_type64='unsigned long' type64='Q'/>
 </function>
 <function name='MPSImageBatchIncrementReadCount'>
-<arg declared_type64='MPSImageBatch * _Nonnull' name='batch' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' name='batch' type64='@'/>
 <arg declared_type64='NSInteger' name='amount' type64='q'/>
 <retval declared_type64='NSUInteger' type64='Q'/>
 </function>
 <function name='MPSImageBatchIterate'>
-<arg declared_type64='MPSImageBatch * _Nonnull' name='batch' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' name='batch' type64='@'/>
 <arg declared_type64='NSInteger (^ _Nonnull)(MPSImage * _Nonnull, NSUInteger)' function_pointer='true' name='iteratorBlock' type64='@?'>
 <arg declared_type64='MPSImage * _Nonnull' type64='@'/>
 <arg declared_type64='NSUInteger' type64='Q'/>
@@ -193,35 +193,35 @@
 <retval declared_type64='NSInteger' type64='q'/>
 </function>
 <function name='MPSImageBatchResourceSize'>
-<arg declared_type64='MPSImageBatch * _Nonnull' name='batch' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' name='batch' type64='@'/>
 <retval declared_type64='NSUInteger' type64='Q'/>
 </function>
 <function name='MPSImageBatchSynchronize'>
-<arg declared_type64='MPSImageBatch * _Nonnull' name='batch' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' name='batch' type64='@'/>
 <arg declared_type64='id _Nonnull' name='cmdBuf' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </function>
 <function name='MPSStateBatchIncrementReadCount'>
-<arg declared_type64='MPSStateBatch * _Nullable' name='batch' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSStateBatch * _Nullable' name='batch' type64='@'/>
 <arg declared_type64='NSInteger' name='amount' type64='q'/>
 <retval declared_type64='NSUInteger' type64='Q'/>
 </function>
 <function name='MPSStateBatchResourceSize'>
-<arg declared_type64='MPSStateBatch * _Nullable' name='batch' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSStateBatch * _Nullable' name='batch' type64='@'/>
 <retval declared_type64='NSUInteger' type64='Q'/>
 </function>
 <function name='MPSStateBatchSynchronize'>
-<arg declared_type64='MPSStateBatch * _Nonnull' name='batch' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSStateBatch * _Nonnull' name='batch' type64='@'/>
 <arg declared_type64='id _Nonnull' name='cmdBuf' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </function>
 <class name='MPSImage'>
 <method selector='batchRepresentation'>
-<retval declared_type64='MPSImageBatch * _Nonnull' type64='^{NSArray=#}'/>
+<retval declared_type64='MPSImageBatch * _Nonnull' type64='@'/>
 </method>
 <method selector='batchRepresentationWithSubRange:'>
 <arg declared_type64='NSRange' index='0' name='subRange' type64='{_NSRange=QQ}'/>
-<retval declared_type64='MPSImageBatch * _Nonnull' type64='^{NSArray=#}'/>
+<retval declared_type64='MPSImageBatch * _Nonnull' type64='@'/>
 </method>
 <method class_method='true' selector='defaultAllocator'>
 <retval declared_type64='id _Nonnull' type64='@'/>
@@ -680,7 +680,7 @@
 <arg declared_type64='MPSImageDescriptor * _Nonnull' index='1' name='descriptor' type64='@'/>
 <arg declared_type64='MPSKernel * _Nonnull' index='2' name='kernel' type64='@'/>
 <arg declared_type64='NSUInteger' index='3' name='count' type64='Q'/>
-<retval declared_type64='MPSImageBatch * _Nonnull' type64='^{NSArray=#}'/>
+<retval declared_type64='MPSImageBatch * _Nonnull' type64='@'/>
 </method>
 <method selector='imageForCommandBuffer:imageDescriptor:kernel:'>
 <arg declared_type64='id _Nonnull' index='0' name='cmdBuf' type64='@'/>
@@ -703,7 +703,7 @@
 <arg declared_type64='MPSImageDescriptor * _Nonnull' index='1' name='descriptor' type64='@'/>
 <arg declared_type64='MPSKernel * _Nonnull' index='2' name='kernel' type64='@'/>
 <arg declared_type64='NSUInteger' index='3' name='count' type64='Q'/>
-<retval declared_type64='MPSImageBatch * _Nonnull' type64='^{NSArray=#}'/>
+<retval declared_type64='MPSImageBatch * _Nonnull' type64='@'/>
 </method>
 <method selector='imageForCommandBuffer:imageDescriptor:kernel:' type64='@40@0:8@16@24@32'>
 <arg declared_type64='id _Nonnull' index='0' name='cmdBuf' type64='@'/>
@@ -982,7 +982,7 @@
 </method>
 <method selector='encodeBatchToCommandBuffer:sourceImages:destinationMatrix:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImages' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImages' type64='@'/>
 <arg declared_type64='MPSMatrix * _Nonnull' index='2' name='destinationMatrix' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
@@ -1630,7 +1630,7 @@
 <method selector='encodeBatchToCommandBuffer:sourceMatrix:destinationImages:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
 <arg declared_type64='MPSMatrix * _Nonnull' index='1' name='sourceMatrix' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='destinationImages' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='destinationImages' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='encodeToCommandBuffer:sourceMatrix:destinationImage:'>
@@ -2522,10 +2522,10 @@
 </method>
 <method selector='encodeBatchToCommandBuffer:primaryImages:secondaryImages:destinationStates:destinationImages:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='primaryImages' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='secondaryImages' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSCNNArithmeticGradientStateBatch * _Nonnull' index='3' name='destinationStates' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='4' name='destinationImages' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='primaryImages' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='secondaryImages' type64='@'/>
+<arg declared_type64='MPSCNNArithmeticGradientStateBatch * _Nonnull' index='3' name='destinationStates' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='4' name='destinationImages' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='encodeToCommandBuffer:primaryImage:secondaryImage:destinationState:destinationImage:'>
@@ -2636,9 +2636,9 @@
 </method>
 <method selector='encodeBatchToCommandBuffer:sourceImages:batchNormalizationState:destinationImages:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImages' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImages' type64='@'/>
 <arg declared_type64='MPSCNNBatchNormalizationState * _Nonnull' index='2' name='batchNormalizationState' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='3' name='destinationImages' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='3' name='destinationImages' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='encodeToCommandBuffer:sourceImage:batchNormalizationState:destinationImage:'>
@@ -2711,17 +2711,17 @@
 <class name='MPSCNNBatchNormalizationGradient'>
 <method selector='encodeBatchToCommandBuffer:sourceGradients:sourceImages:batchNormalizationState:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceGradients' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='sourceImages' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceGradients' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='sourceImages' type64='@'/>
 <arg declared_type64='MPSCNNBatchNormalizationState * _Nonnull' index='3' name='batchNormalizationState' type64='@'/>
-<retval declared_type64='MPSImageBatch * _Nonnull' type64='^{NSArray=#}'/>
+<retval declared_type64='MPSImageBatch * _Nonnull' type64='@'/>
 </method>
 <method selector='encodeBatchToCommandBuffer:sourceGradients:sourceImages:batchNormalizationState:destinationGradients:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceGradients' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='sourceImages' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceGradients' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='sourceImages' type64='@'/>
 <arg declared_type64='MPSCNNBatchNormalizationState * _Nonnull' index='3' name='batchNormalizationState' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='4' name='destinationGradients' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='4' name='destinationGradients' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='encodeToCommandBuffer:sourceGradient:sourceImage:batchNormalizationState:'>
@@ -2812,7 +2812,7 @@
 <class name='MPSCNNBatchNormalizationStatistics'>
 <method selector='encodeBatchToCommandBuffer:sourceImages:batchNormalizationState:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImages' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImages' type64='@'/>
 <arg declared_type64='MPSCNNBatchNormalizationState * _Nonnull' index='2' name='batchNormalizationState' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
@@ -2829,8 +2829,8 @@
 <class name='MPSCNNBatchNormalizationStatisticsGradient'>
 <method selector='encodeBatchToCommandBuffer:sourceGradients:sourceImages:batchNormalizationState:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceGradients' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='sourceImages' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceGradients' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='sourceImages' type64='@'/>
 <arg declared_type64='MPSCNNBatchNormalizationState * _Nonnull' index='3' name='batchNormalizationState' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
@@ -3003,24 +3003,24 @@
 </method>
 <method selector='encodeBatchToCommandBuffer:primaryImages:secondaryImages:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='primaryImage' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='secondaryImage' type64='^{NSArray=#}'/>
-<retval declared_type64='MPSImageBatch * _Nonnull' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='primaryImage' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='secondaryImage' type64='@'/>
+<retval declared_type64='MPSImageBatch * _Nonnull' type64='@'/>
 </method>
 <method selector='encodeBatchToCommandBuffer:primaryImages:secondaryImages:destinationImages:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='primaryImages' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='secondaryImages' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='3' name='destinationImages' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='primaryImages' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='secondaryImages' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='3' name='destinationImages' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='encodeBatchToCommandBuffer:primaryImages:secondaryImages:destinationStates:destinationStateIsTemporary:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='primaryImages' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='secondaryImages' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSStateBatch * _Nullable * _Nonnull' index='3' name='outState' type64='^^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='primaryImages' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='secondaryImages' type64='@'/>
+<arg declared_type64='MPSStateBatch * _Nullable * _Nonnull' index='3' name='outState' type64='@'/>
 <arg declared_type64='BOOL' index='4' name='isTemporary' type64='B'/>
-<retval declared_type64='MPSImageBatch * _Nonnull' type64='^{NSArray=#}'/>
+<retval declared_type64='MPSImageBatch * _Nonnull' type64='@'/>
 </method>
 <method selector='encodeToCommandBuffer:primaryImage:secondaryImage:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
@@ -3095,11 +3095,11 @@
 <retval declared_type64='NSUInteger' type64='Q'/>
 </method>
 <method selector='resultStateBatchForPrimaryImage:secondaryImage:sourceStates:destinationImage:'>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='0' name='primaryImage' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='secondaryImage' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='0' name='primaryImage' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='secondaryImage' type64='@'/>
 <arg declared_type64='NSArray * _Nullable' index='2' name='sourceStates' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='3' name='destinationImage' type64='^{NSArray=#}'/>
-<retval declared_type64='MPSStateBatch * _Nullable' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='3' name='destinationImage' type64='@'/>
+<retval declared_type64='MPSStateBatch * _Nullable' type64='@'/>
 </method>
 <method selector='resultStateForPrimaryImage:secondaryImage:sourceStates:destinationImage:'>
 <arg declared_type64='MPSImage * _Nonnull' index='0' name='primaryImage' type64='@'/>
@@ -3204,11 +3204,11 @@
 </method>
 <method selector='temporaryResultStateBatchForCommandBuffer:primaryImage:secondaryImage:sourceStates:destinationImage:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='primaryImage' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='secondaryImage' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='primaryImage' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='secondaryImage' type64='@'/>
 <arg declared_type64='NSArray * _Nullable' index='3' name='sourceStates' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='4' name='destinationImage' type64='^{NSArray=#}'/>
-<retval declared_type64='MPSStateBatch * _Nullable' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='4' name='destinationImage' type64='@'/>
+<retval declared_type64='MPSStateBatch * _Nullable' type64='@'/>
 </method>
 <method selector='temporaryResultStateForCommandBuffer:primaryImage:secondaryImage:sourceStates:destinationImage:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
@@ -3292,10 +3292,10 @@
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='resultStateBatchForSourceImage:sourceStates:destinationImage:'>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='0' name='sourceImage' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='0' name='sourceImage' type64='@'/>
 <arg declared_type64='NSArray * _Nullable' index='1' name='sourceStates' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='destinationImage' type64='^{NSArray=#}'/>
-<retval declared_type64='MPSCNNConvolutionGradientStateBatch * _Nullable' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='destinationImage' type64='@'/>
+<retval declared_type64='MPSCNNConvolutionGradientStateBatch * _Nullable' type64='@'/>
 </method>
 <method selector='resultStateForSourceImage:sourceStates:destinationImage:'>
 <arg declared_type64='MPSImage * _Nonnull' index='0' name='sourceImage' type64='@'/>
@@ -3312,10 +3312,10 @@
 </method>
 <method selector='temporaryResultStateBatchForCommandBuffer:sourceImage:sourceStates:destinationImage:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImage' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImage' type64='@'/>
 <arg declared_type64='NSArray * _Nullable' index='2' name='sourceStates' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='3' name='destinationImage' type64='^{NSArray=#}'/>
-<retval declared_type64='MPSCNNConvolutionGradientStateBatch * _Nullable' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='3' name='destinationImage' type64='@'/>
+<retval declared_type64='MPSCNNConvolutionGradientStateBatch * _Nullable' type64='@'/>
 </method>
 <method selector='temporaryResultStateForCommandBuffer:sourceImage:sourceStates:destinationImage:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
@@ -3561,15 +3561,15 @@
 </method>
 <method selector='encodeBatchToCommandBuffer:sourceImages:convolutionGradientStates:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImage' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSCNNConvolutionGradientStateBatch * _Nullable' index='2' name='convolutionGradientState' type64='^{NSArray=#}'/>
-<retval declared_type64='MPSImageBatch * _Nonnull' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImage' type64='@'/>
+<arg declared_type64='MPSCNNConvolutionGradientStateBatch * _Nullable' index='2' name='convolutionGradientState' type64='@'/>
+<retval declared_type64='MPSImageBatch * _Nonnull' type64='@'/>
 </method>
 <method selector='encodeBatchToCommandBuffer:sourceImages:convolutionGradientStates:destinationImages:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImage' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSCNNConvolutionGradientStateBatch * _Nullable' index='2' name='convolutionGradientState' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='3' name='destinationImage' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImage' type64='@'/>
+<arg declared_type64='MPSCNNConvolutionGradientStateBatch * _Nullable' index='2' name='convolutionGradientState' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='3' name='destinationImage' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='encodeToCommandBuffer:sourceImage:convolutionGradientState:'>
@@ -4069,17 +4069,17 @@
 <class name='MPSCNNGradientKernel'>
 <method selector='encodeBatchToCommandBuffer:sourceGradients:sourceImages:gradientStates:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceGradients' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='sourceImages' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSStateBatch * _Nonnull' index='3' name='gradientStates' type64='^{NSArray=#}'/>
-<retval declared_type64='MPSImageBatch * _Nonnull' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceGradients' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='sourceImages' type64='@'/>
+<arg declared_type64='MPSStateBatch * _Nonnull' index='3' name='gradientStates' type64='@'/>
+<retval declared_type64='MPSImageBatch * _Nonnull' type64='@'/>
 </method>
 <method selector='encodeBatchToCommandBuffer:sourceGradients:sourceImages:gradientStates:destinationGradients:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceGradients' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='sourceImages' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSStateBatch * _Nonnull' index='3' name='gradientStates' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='4' name='destinationGradients' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceGradients' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='sourceImages' type64='@'/>
+<arg declared_type64='MPSStateBatch * _Nonnull' index='3' name='gradientStates' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='4' name='destinationGradients' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='encodeToCommandBuffer:sourceGradient:sourceImage:gradientState:'>
@@ -4240,28 +4240,28 @@
 </method>
 <method selector='encodeBatchToCommandBuffer:sourceImages:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImages' type64='^{NSArray=#}'/>
-<retval declared_type64='MPSImageBatch * _Nonnull' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImages' type64='@'/>
+<retval declared_type64='MPSImageBatch * _Nonnull' type64='@'/>
 </method>
 <method selector='encodeBatchToCommandBuffer:sourceImages:destinationImages:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImages' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='destinationImages' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImages' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='destinationImages' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='encodeBatchToCommandBuffer:sourceImages:destinationStates:destinationImages:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImages' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSStateBatch * _Nullable' index='2' name='destinationStates' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='3' name='destinationImages' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImages' type64='@'/>
+<arg declared_type64='MPSStateBatch * _Nullable' index='2' name='destinationStates' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='3' name='destinationImages' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='encodeBatchToCommandBuffer:sourceImages:destinationStates:destinationStateIsTemporary:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImages' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSStateBatch * _Nullable * _Nonnull' index='2' name='outStates' type64='^^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImages' type64='@'/>
+<arg declared_type64='MPSStateBatch * _Nullable * _Nonnull' index='2' name='outStates' type64='@'/>
 <arg declared_type64='BOOL' index='3' name='isTemporary' type64='B'/>
-<retval declared_type64='MPSImageBatch * _Nonnull' type64='^{NSArray=#}'/>
+<retval declared_type64='MPSImageBatch * _Nonnull' type64='@'/>
 </method>
 <method selector='encodeToCommandBuffer:sourceImage:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
@@ -4319,10 +4319,10 @@
 <retval declared_type64='id _Nonnull' type64='@'/>
 </method>
 <method selector='resultStateBatchForSourceImage:sourceStates:destinationImage:'>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='0' name='sourceImage' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='0' name='sourceImage' type64='@'/>
 <arg declared_type64='NSArray * _Nullable' index='1' name='sourceStates' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='destinationImage' type64='^{NSArray=#}'/>
-<retval declared_type64='MPSStateBatch * _Nullable' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='2' name='destinationImage' type64='@'/>
+<retval declared_type64='MPSStateBatch * _Nullable' type64='@'/>
 </method>
 <method selector='resultStateForSourceImage:sourceStates:destinationImage:'>
 <arg declared_type64='MPSImage * _Nonnull' index='0' name='sourceImage' type64='@'/>
@@ -4376,10 +4376,10 @@
 </method>
 <method selector='temporaryResultStateBatchForCommandBuffer:sourceImage:sourceStates:destinationImage:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImage' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImage' type64='@'/>
 <arg declared_type64='NSArray * _Nullable' index='2' name='sourceStates' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='3' name='destinationImage' type64='^{NSArray=#}'/>
-<retval declared_type64='MPSStateBatch * _Nullable' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='3' name='destinationImage' type64='@'/>
+<retval declared_type64='MPSStateBatch * _Nullable' type64='@'/>
 </method>
 <method selector='temporaryResultStateForCommandBuffer:sourceImage:sourceStates:destinationImage:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
@@ -4657,15 +4657,15 @@
 </method>
 <method selector='encodeBatchToCommandBuffer:sourceImages:labels:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImage' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSCNNLossLabelsBatch * _Nonnull' index='2' name='labels' type64='^{NSArray=#}'/>
-<retval declared_type64='MPSImageBatch * _Nonnull' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImage' type64='@'/>
+<arg declared_type64='MPSCNNLossLabelsBatch * _Nonnull' index='2' name='labels' type64='@'/>
+<retval declared_type64='MPSImageBatch * _Nonnull' type64='@'/>
 </method>
 <method selector='encodeBatchToCommandBuffer:sourceImages:labels:destinationImages:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImage' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSCNNLossLabelsBatch * _Nonnull' index='2' name='labels' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='3' name='destinationImage' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImage' type64='@'/>
+<arg declared_type64='MPSCNNLossLabelsBatch * _Nonnull' index='2' name='labels' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='3' name='destinationImage' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='encodeToCommandBuffer:sourceImage:labels:'>
@@ -5994,15 +5994,15 @@
 </method>
 <method selector='encodeBatchToCommandBuffer:sourceImages:labels:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImage' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSCNNLossLabelsBatch * _Nonnull' index='2' name='labels' type64='^{NSArray=#}'/>
-<retval declared_type64='MPSImageBatch * _Nonnull' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImage' type64='@'/>
+<arg declared_type64='MPSCNNLossLabelsBatch * _Nonnull' index='2' name='labels' type64='@'/>
+<retval declared_type64='MPSImageBatch * _Nonnull' type64='@'/>
 </method>
 <method selector='encodeBatchToCommandBuffer:sourceImages:labels:destinationImages:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImage' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSCNNLossLabelsBatch * _Nonnull' index='2' name='labels' type64='^{NSArray=#}'/>
-<arg declared_type64='MPSImageBatch * _Nonnull' index='3' name='destinationImage' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='1' name='sourceImage' type64='@'/>
+<arg declared_type64='MPSCNNLossLabelsBatch * _Nonnull' index='2' name='labels' type64='@'/>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='3' name='destinationImage' type64='@'/>
 <retval declared_type64='void' type64='v'/>
 </method>
 <method selector='encodeToCommandBuffer:sourceImage:labels:'>
@@ -7171,7 +7171,7 @@
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
 <arg declared_type64='NSArray * _Nonnull' index='1' name='sourceImages' type64='@'/>
 <arg declared_type64='NSArray * _Nullable' index='2' name='sourceStates' type64='@'/>
-<retval declared_type64='MPSImageBatch * _Nullable' type64='^{NSArray=#}'/>
+<retval declared_type64='MPSImageBatch * _Nullable' type64='@'/>
 </method>
 <method selector='encodeBatchToCommandBuffer:sourceImages:sourceStates:intermediateImages:destinationStates:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
@@ -7179,7 +7179,7 @@
 <arg declared_type64='NSArray * _Nullable' index='2' name='sourceStates' type64='@'/>
 <arg declared_type64='NSMutableArray * _Nullable' index='3' name='intermediateImages' type64='@'/>
 <arg declared_type64='NSMutableArray * _Nullable' index='4' name='destinationStates' type64='@'/>
-<retval declared_type64='MPSImageBatch * _Nullable' type64='^{NSArray=#}'/>
+<retval declared_type64='MPSImageBatch * _Nullable' type64='@'/>
 </method>
 <method selector='encodeToCommandBuffer:sourceImages:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
@@ -8344,11 +8344,11 @@
 </method>
 <method selector='updateGammaAndBetaWithCommandBuffer:instanceNormalizationStateBatch:'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSCNNInstanceNormalizationGradientStateBatch * _Nonnull' index='1' name='instanceNormalizationStateBatch' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSCNNInstanceNormalizationGradientStateBatch * _Nonnull' index='1' name='instanceNormalizationStateBatch' type64='@'/>
 <retval declared_type64='MPSCNNNormalizationGammaAndBetaState * _Nullable' type64='@'/>
 </method>
 <method selector='updateGammaAndBetaWithInstanceNormalizationStateBatch:'>
-<arg declared_type64='MPSCNNInstanceNormalizationGradientStateBatch * _Nonnull' index='0' name='instanceNormalizationStateBatch' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSCNNInstanceNormalizationGradientStateBatch * _Nonnull' index='0' name='instanceNormalizationStateBatch' type64='@'/>
 <retval declared_type64='BOOL' type64='B'/>
 </method>
 <method selector='updateMeanAndVarianceWithBatchNormalizationState:'>
@@ -8526,11 +8526,11 @@
 </method>
 <method selector='updateGammaAndBetaWithCommandBuffer:instanceNormalizationStateBatch:' type64='@32@0:8@16^{NSArray=#}24'>
 <arg declared_type64='id _Nonnull' index='0' name='commandBuffer' type64='@'/>
-<arg declared_type64='MPSCNNInstanceNormalizationGradientStateBatch * _Nonnull' index='1' name='instanceNormalizationStateBatch' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSCNNInstanceNormalizationGradientStateBatch * _Nonnull' index='1' name='instanceNormalizationStateBatch' type64='@'/>
 <retval declared_type64='MPSCNNNormalizationGammaAndBetaState * _Nullable' type64='@'/>
 </method>
 <method selector='updateGammaAndBetaWithInstanceNormalizationStateBatch:' type64='B24@0:8^{NSArray=#}16'>
-<arg declared_type64='MPSCNNInstanceNormalizationGradientStateBatch * _Nonnull' index='0' name='instanceNormalizationStateBatch' type64='^{NSArray=#}'/>
+<arg declared_type64='MPSCNNInstanceNormalizationGradientStateBatch * _Nonnull' index='0' name='instanceNormalizationStateBatch' type64='@'/>
 <retval declared_type64='BOOL' type64='B'/>
 </method>
 </informal_protocol>

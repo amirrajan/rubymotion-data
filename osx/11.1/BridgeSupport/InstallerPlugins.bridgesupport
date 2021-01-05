@@ -1,0 +1,159 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<cftype name='InstallerPane_Private' type64='^{InstallerPane_Private=}'/>
+<cftype name='InstallerSection_Private' type64='^{InstallerSection_Private=}'/>
+<cftype name='InstallerState_Private' type64='^{InstallerState_Private=}'/>
+<constant const='true' declared_type64='NSString*' name='InstallerState_Choice_CustomLocation' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='InstallerState_Choice_Identifier' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='InstallerState_Choice_Installed' type64='@'/>
+<enum name='InstallerDirectionBackward' value64='1'/>
+<enum name='InstallerDirectionForward' value64='0'/>
+<enum name='InstallerDirectionUndefined' value64='2'/>
+<class name='InstallerPane'>
+<method selector='contentView'>
+<retval declared_type64='NSView*' type64='@'/>
+</method>
+<method selector='didEnterPane:'>
+<arg declared_type64='InstallerSectionDirection' index='0' name='dir' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='didExitPane:'>
+<arg declared_type64='InstallerSectionDirection' index='0' name='dir' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='firstKeyView'>
+<retval declared_type64='NSView*' type64='@'/>
+</method>
+<method selector='gotoNextPane'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='gotoPreviousPane'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='initWithSection:'>
+<arg declared_type64='id' index='0' name='parent' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='initialKeyView'>
+<retval declared_type64='NSView*' type64='@'/>
+</method>
+<method selector='lastKeyView'>
+<retval declared_type64='NSView*' type64='@'/>
+</method>
+<method selector='nextEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='nextPane'>
+<retval declared_type64='InstallerPane*' type64='@'/>
+</method>
+<method selector='previousEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='section'>
+<retval declared_type64='InstallerSection*' type64='@'/>
+</method>
+<method selector='setContentView:'>
+<arg declared_type64='NSView*' index='0' name='contentView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFirstKeyView:'>
+<arg declared_type64='NSView*' index='0' name='firstKeyView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setInitialKeyView:'>
+<arg declared_type64='NSView*' index='0' name='initialKeyView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLastKeyView:'>
+<arg declared_type64='NSView*' index='0' name='lastKeyView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setNextEnabled:'>
+<arg declared_type64='BOOL' index='0' name='nextEnabled' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setNextPane:'>
+<arg declared_type64='InstallerPane*' index='0' name='nextPane' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPreviousEnabled:'>
+<arg declared_type64='BOOL' index='0' name='previousEnabled' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='shouldExitPane:'>
+<arg declared_type64='InstallerSectionDirection' index='0' name='dir' type64='q'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='willEnterPane:'>
+<arg declared_type64='InstallerSectionDirection' index='0' name='dir' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='willExitPane:'>
+<arg declared_type64='InstallerSectionDirection' index='0' name='dir' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='InstallerSection'>
+<method selector='activePane'>
+<retval declared_type64='InstallerPane*' type64='@'/>
+</method>
+<method selector='bundle'>
+<retval declared_type64='NSBundle*' type64='@'/>
+</method>
+<method selector='didLoadMainNib'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='firstPane'>
+<retval declared_type64='InstallerPane*' type64='@'/>
+</method>
+<method selector='gotoPane:'>
+<arg declared_type64='InstallerPane*' index='0' name='pane' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='installerState'>
+<retval declared_type64='InstallerState*' type64='@'/>
+</method>
+<method selector='sharedDictionary'>
+<retval declared_type64='NSMutableDictionary*' type64='@'/>
+</method>
+<method selector='shouldLoad'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='willLoadMainNib'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='InstallerState'>
+<method selector='choiceDictionaries'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='choiceDictionaryForIdentifier:'>
+<arg declared_type64='NSString*' index='0' name='choiceIdentifier' type64='@'/>
+<retval declared_type64='NSDictionary*' type64='@'/>
+</method>
+<method selector='installStarted'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='installSucceeded'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='licenseAgreed'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='licenseAgreedLanguage'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='targetPath'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='targetVolumePath'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+</class>
+</signatures>

@@ -1,0 +1,58 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<enum name='AXCustomContentImportanceDefault' value64='0'/>
+<enum name='AXCustomContentImportanceHigh' value64='1'/>
+<function name='AXNameFromColor'>
+<arg declared_type64='CGColorRef _Nonnull' name='color' type64='^{CGColor=}'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</function>
+<class name='AXCustomContent'>
+<method selector='attributedLabel'>
+<retval declared_type64='NSAttributedString * _Nonnull' type64='@'/>
+</method>
+<method selector='attributedValue'>
+<retval declared_type64='NSAttributedString * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='customContentWithAttributedLabel:attributedValue:'>
+<arg declared_type64='NSAttributedString * _Nonnull' index='0' name='label' type64='@'/>
+<arg declared_type64='NSAttributedString * _Nonnull' index='1' name='value' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='customContentWithLabel:value:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='label' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='value' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='importance'>
+<retval declared_type64='AXCustomContentImportance' type64='Q'/>
+</method>
+<method selector='label'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='setImportance:'>
+<arg declared_type64='AXCustomContentImportance' index='0' name='importance' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='value'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='accessibilityCustomContent'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='setAccessibilityCustomContent:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='accessibilityCustomContent' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='AXCustomContentProvider'>
+<method selector='accessibilityCustomContent' type64='@16@0:8'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='setAccessibilityCustomContent:' type64='v24@0:8@16'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='accessibilityCustomContent' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

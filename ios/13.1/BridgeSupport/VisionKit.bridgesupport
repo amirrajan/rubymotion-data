@@ -1,0 +1,73 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreImage.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/MobileCoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/UIKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Vision.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<class name='NSObject'>
+<method selector='documentCameraViewController:didFailWithError:'>
+<arg declared_type64='VNDocumentCameraViewController * _Nonnull' index='0' name='controller' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='documentCameraViewController:didFinishWithScan:'>
+<arg declared_type64='VNDocumentCameraViewController * _Nonnull' index='0' name='controller' type64='@'/>
+<arg declared_type64='VNDocumentCameraScan * _Nonnull' index='1' name='scan' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='documentCameraViewControllerDidCancel:'>
+<arg declared_type64='VNDocumentCameraViewController * _Nonnull' index='0' name='controller' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='VNDocumentCameraScan'>
+<method selector='imageOfPageAtIndex:'>
+<arg declared_type64='NSUInteger' index='0' name='index' type64='Q'/>
+<retval declared_type64='UIImage * _Nonnull' type64='@'/>
+</method>
+<method selector='pageCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='VNDocumentCameraViewController'>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='isSupported'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='VNDocumentCameraViewControllerDelegate'>
+<method selector='documentCameraViewController:didFailWithError:' type64='v32@0:8@16@24'>
+<arg declared_type64='VNDocumentCameraViewController * _Nonnull' index='0' name='controller' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='documentCameraViewController:didFinishWithScan:' type64='v32@0:8@16@24'>
+<arg declared_type64='VNDocumentCameraViewController * _Nonnull' index='0' name='controller' type64='@'/>
+<arg declared_type64='VNDocumentCameraScan * _Nonnull' index='1' name='scan' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='documentCameraViewControllerDidCancel:' type64='v24@0:8@16'>
+<arg declared_type64='VNDocumentCameraViewController * _Nonnull' index='0' name='controller' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

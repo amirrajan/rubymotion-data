@@ -1,0 +1,70 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/AutomaticAssessmentConfiguration.framework/Frameworks/AACDependencies.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type64='NSErrorDomain _Nonnull' name='AEAssessmentErrorDomain' type64='@'/>
+<enum name='AEAssessmentErrorUnknown' value64='1'/>
+<class name='AEAssessmentSession'>
+<method selector='begin'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='end'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='initWithConfiguration:'>
+<arg declared_type64='AEAssessmentConfiguration * _Nonnull' index='0' name='configuration' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='isActive'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='assessmentSession:failedToBeginWithError:'>
+<arg declared_type64='AEAssessmentSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='assessmentSession:wasInterruptedWithError:'>
+<arg declared_type64='AEAssessmentSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='assessmentSessionDidBegin:'>
+<arg declared_type64='AEAssessmentSession * _Nonnull' index='0' name='session' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='assessmentSessionDidEnd:'>
+<arg declared_type64='AEAssessmentSession * _Nonnull' index='0' name='session' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='AEAssessmentSessionDelegate'>
+<method selector='assessmentSession:failedToBeginWithError:' type64='v32@0:8@16@24'>
+<arg declared_type64='AEAssessmentSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='assessmentSession:wasInterruptedWithError:' type64='v32@0:8@16@24'>
+<arg declared_type64='AEAssessmentSession * _Nonnull' index='0' name='session' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='assessmentSessionDidBegin:' type64='v24@0:8@16'>
+<arg declared_type64='AEAssessmentSession * _Nonnull' index='0' name='session' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='assessmentSessionDidEnd:' type64='v24@0:8@16'>
+<arg declared_type64='AEAssessmentSession * _Nonnull' index='0' name='session' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

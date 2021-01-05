@@ -1,0 +1,333 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Contacts.framework'/>
+<depends_on path='/System/Library/Frameworks/ContactsUI.framework'/>
+<depends_on path='/System/Library/Frameworks/AddressBook.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/UIKit.framework'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonBirthdayProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonDatesProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonDepartmentNameProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonEmailAddressesProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonFamilyNameProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonGivenNameProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonInstantMessageAddressesProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonJobTitleProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonMiddleNameProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonNamePrefixProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonNameSuffixProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonNicknameProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonNoteProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonOrganizationNameProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonPhoneNumbersProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonPhoneticFamilyNameProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonPhoneticGivenNameProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonPhoneticMiddleNameProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonPostalAddressesProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonPreviousFamilyNameProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonRelatedNamesProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonSocialProfilesProperty' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='ABPersonUrlAddressesProperty' type64='@'/>
+<function name='ABCreateStringWithAddressDictionary'>
+<arg declared_type64='NSDictionary * _Nonnull' name='address' type64='@'/>
+<arg declared_type64='BOOL' name='addCountryName' type64='B'/>
+<retval already_retained='true' declared_type64='NSString * _Nonnull' type64='@'/>
+</function>
+<class name='ABNewPersonViewController'>
+<method selector='addressBook'>
+<retval declared_type64='ABAddressBookRef _Nullable' type64='@'/>
+</method>
+<method selector='displayedPerson'>
+<retval declared_type64='ABRecordRef _Nullable' type64='@'/>
+</method>
+<method selector='newPersonViewDelegate'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='parentGroup'>
+<retval declared_type64='ABRecordRef _Nullable' type64='@'/>
+</method>
+<method selector='setAddressBook:'>
+<arg declared_type64='ABAddressBookRef _Nullable' index='0' name='addressBook' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDisplayedPerson:'>
+<arg declared_type64='ABRecordRef _Nullable' index='0' name='displayedPerson' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setNewPersonViewDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='newPersonViewDelegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setParentGroup:'>
+<arg declared_type64='ABRecordRef _Nullable' index='0' name='parentGroup' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='ABPeoplePickerNavigationController'>
+<method selector='addressBook'>
+<retval declared_type64='ABAddressBookRef _Nullable' type64='@'/>
+</method>
+<method selector='displayedProperties'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='peoplePickerDelegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='predicateForEnablingPerson'>
+<retval declared_type64='NSPredicate * _Nullable' type64='@'/>
+</method>
+<method selector='predicateForSelectionOfPerson'>
+<retval declared_type64='NSPredicate * _Nullable' type64='@'/>
+</method>
+<method selector='predicateForSelectionOfProperty'>
+<retval declared_type64='NSPredicate * _Nullable' type64='@'/>
+</method>
+<method selector='setAddressBook:'>
+<arg declared_type64='ABAddressBookRef _Nullable' index='0' name='addressBook' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDisplayedProperties:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='displayedProperties' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPeoplePickerDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='peoplePickerDelegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPredicateForEnablingPerson:'>
+<arg declared_type64='NSPredicate * _Nullable' index='0' name='predicateForEnablingPerson' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPredicateForSelectionOfPerson:'>
+<arg declared_type64='NSPredicate * _Nullable' index='0' name='predicateForSelectionOfPerson' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPredicateForSelectionOfProperty:'>
+<arg declared_type64='NSPredicate * _Nullable' index='0' name='predicateForSelectionOfProperty' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='ABPersonViewController'>
+<method selector='addressBook'>
+<retval declared_type64='ABAddressBookRef _Nullable' type64='@'/>
+</method>
+<method selector='allowsActions'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='allowsEditing'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='displayedPerson'>
+<retval declared_type64='ABRecordRef _Nonnull' type64='@'/>
+</method>
+<method selector='displayedProperties'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='personViewDelegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='setAddressBook:'>
+<arg declared_type64='ABAddressBookRef _Nullable' index='0' name='addressBook' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setAllowsActions:'>
+<arg declared_type64='BOOL' index='0' name='allowsActions' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setAllowsEditing:'>
+<arg declared_type64='BOOL' index='0' name='allowsEditing' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDisplayedPerson:'>
+<arg declared_type64='ABRecordRef _Nonnull' index='0' name='displayedPerson' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDisplayedProperties:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='displayedProperties' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setHighlightedItemForProperty:withIdentifier:'>
+<arg declared_type64='ABPropertyID' index='0' name='property' type64='i'/>
+<arg declared_type64='ABMultiValueIdentifier' index='1' name='identifier' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPersonViewDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='personViewDelegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShouldShowLinkedPeople:'>
+<arg declared_type64='BOOL' index='0' name='shouldShowLinkedPeople' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='shouldShowLinkedPeople'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='ABUnknownPersonViewController'>
+<method selector='addressBook'>
+<retval declared_type64='ABAddressBookRef _Nullable' type64='@'/>
+</method>
+<method selector='allowsActions'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='allowsAddingToAddressBook'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='alternateName'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='displayedPerson'>
+<retval declared_type64='ABRecordRef _Nonnull' type64='@'/>
+</method>
+<method selector='message'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='setAddressBook:'>
+<arg declared_type64='ABAddressBookRef _Nullable' index='0' name='addressBook' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setAllowsActions:'>
+<arg declared_type64='BOOL' index='0' name='allowsActions' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setAllowsAddingToAddressBook:'>
+<arg declared_type64='BOOL' index='0' name='allowsAddingToAddressBook' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setAlternateName:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='alternateName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDisplayedPerson:'>
+<arg declared_type64='ABRecordRef _Nonnull' index='0' name='displayedPerson' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMessage:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='message' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setUnknownPersonViewDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='unknownPersonViewDelegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='unknownPersonViewDelegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='newPersonViewController:didCompleteWithNewPerson:'>
+<arg declared_type64='ABNewPersonViewController * _Nonnull' index='0' name='newPersonView' type64='@'/>
+<arg declared_type64='ABRecordRef _Nullable' index='1' name='person' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='peoplePickerNavigationController:didSelectPerson:'>
+<arg declared_type64='ABPeoplePickerNavigationController * _Nonnull' index='0' name='peoplePicker' type64='@'/>
+<arg declared_type64='ABRecordRef _Nonnull' index='1' name='person' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='peoplePickerNavigationController:didSelectPerson:property:identifier:'>
+<arg declared_type64='ABPeoplePickerNavigationController * _Nonnull' index='0' name='peoplePicker' type64='@'/>
+<arg declared_type64='ABRecordRef _Nonnull' index='1' name='person' type64='@'/>
+<arg declared_type64='ABPropertyID' index='2' name='property' type64='i'/>
+<arg declared_type64='ABMultiValueIdentifier' index='3' name='identifier' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='peoplePickerNavigationController:shouldContinueAfterSelectingPerson:'>
+<arg declared_type64='ABPeoplePickerNavigationController * _Nonnull' index='0' name='peoplePicker' type64='@'/>
+<arg declared_type64='ABRecordRef _Nonnull' index='1' name='person' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='peoplePickerNavigationController:shouldContinueAfterSelectingPerson:property:identifier:'>
+<arg declared_type64='ABPeoplePickerNavigationController * _Nonnull' index='0' name='peoplePicker' type64='@'/>
+<arg declared_type64='ABRecordRef _Nonnull' index='1' name='person' type64='@'/>
+<arg declared_type64='ABPropertyID' index='2' name='property' type64='i'/>
+<arg declared_type64='ABMultiValueIdentifier' index='3' name='identifier' type64='i'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='peoplePickerNavigationControllerDidCancel:'>
+<arg declared_type64='ABPeoplePickerNavigationController * _Nonnull' index='0' name='peoplePicker' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='personViewController:shouldPerformDefaultActionForPerson:property:identifier:'>
+<arg declared_type64='ABPersonViewController * _Nonnull' index='0' name='personViewController' type64='@'/>
+<arg declared_type64='ABRecordRef _Nonnull' index='1' name='person' type64='@'/>
+<arg declared_type64='ABPropertyID' index='2' name='property' type64='i'/>
+<arg declared_type64='ABMultiValueIdentifier' index='3' name='identifier' type64='i'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='unknownPersonViewController:didResolveToPerson:'>
+<arg declared_type64='ABUnknownPersonViewController * _Nonnull' index='0' name='unknownCardViewController' type64='@'/>
+<arg declared_type64='ABRecordRef _Nullable' index='1' name='person' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='unknownPersonViewController:shouldPerformDefaultActionForPerson:property:identifier:'>
+<arg declared_type64='ABUnknownPersonViewController * _Nonnull' index='0' name='personViewController' type64='@'/>
+<arg declared_type64='ABRecordRef _Nonnull' index='1' name='person' type64='@'/>
+<arg declared_type64='ABPropertyID' index='2' name='property' type64='i'/>
+<arg declared_type64='ABMultiValueIdentifier' index='3' name='identifier' type64='i'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<informal_protocol name='ABNewPersonViewControllerDelegate'>
+<method selector='newPersonViewController:didCompleteWithNewPerson:' type64='v32@0:8@16r^v24'>
+<arg declared_type64='ABNewPersonViewController * _Nonnull' index='0' name='newPersonView' type64='@'/>
+<arg declared_type64='ABRecordRef _Nullable' index='1' name='person' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='ABPeoplePickerNavigationControllerDelegate'>
+<method selector='peoplePickerNavigationController:didSelectPerson:' type64='v32@0:8@16r^v24'>
+<arg declared_type64='ABPeoplePickerNavigationController * _Nonnull' index='0' name='peoplePicker' type64='@'/>
+<arg declared_type64='ABRecordRef _Nonnull' index='1' name='person' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='peoplePickerNavigationController:didSelectPerson:property:identifier:' type64='v40@0:8@16r^v24i32i36'>
+<arg declared_type64='ABPeoplePickerNavigationController * _Nonnull' index='0' name='peoplePicker' type64='@'/>
+<arg declared_type64='ABRecordRef _Nonnull' index='1' name='person' type64='@'/>
+<arg declared_type64='ABPropertyID' index='2' name='property' type64='i'/>
+<arg declared_type64='ABMultiValueIdentifier' index='3' name='identifier' type64='i'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='peoplePickerNavigationController:shouldContinueAfterSelectingPerson:' type64='B32@0:8@16r^v24'>
+<arg declared_type64='ABPeoplePickerNavigationController * _Nonnull' index='0' name='peoplePicker' type64='@'/>
+<arg declared_type64='ABRecordRef _Nonnull' index='1' name='person' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='peoplePickerNavigationController:shouldContinueAfterSelectingPerson:property:identifier:' type64='B40@0:8@16r^v24i32i36'>
+<arg declared_type64='ABPeoplePickerNavigationController * _Nonnull' index='0' name='peoplePicker' type64='@'/>
+<arg declared_type64='ABRecordRef _Nonnull' index='1' name='person' type64='@'/>
+<arg declared_type64='ABPropertyID' index='2' name='property' type64='i'/>
+<arg declared_type64='ABMultiValueIdentifier' index='3' name='identifier' type64='i'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='peoplePickerNavigationControllerDidCancel:' type64='v24@0:8@16'>
+<arg declared_type64='ABPeoplePickerNavigationController * _Nonnull' index='0' name='peoplePicker' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='ABPersonViewControllerDelegate'>
+<method selector='personViewController:shouldPerformDefaultActionForPerson:property:identifier:' type64='B40@0:8@16r^v24i32i36'>
+<arg declared_type64='ABPersonViewController * _Nonnull' index='0' name='personViewController' type64='@'/>
+<arg declared_type64='ABRecordRef _Nonnull' index='1' name='person' type64='@'/>
+<arg declared_type64='ABPropertyID' index='2' name='property' type64='i'/>
+<arg declared_type64='ABMultiValueIdentifier' index='3' name='identifier' type64='i'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</informal_protocol>
+<informal_protocol name='ABUnknownPersonViewControllerDelegate'>
+<method selector='unknownPersonViewController:didResolveToPerson:' type64='v32@0:8@16r^v24'>
+<arg declared_type64='ABUnknownPersonViewController * _Nonnull' index='0' name='unknownCardViewController' type64='@'/>
+<arg declared_type64='ABRecordRef _Nullable' index='1' name='person' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='unknownPersonViewController:shouldPerformDefaultActionForPerson:property:identifier:' type64='B40@0:8@16r^v24i32i36'>
+<arg declared_type64='ABUnknownPersonViewController * _Nonnull' index='0' name='personViewController' type64='@'/>
+<arg declared_type64='ABRecordRef _Nonnull' index='1' name='person' type64='@'/>
+<arg declared_type64='ABPropertyID' index='2' name='property' type64='i'/>
+<arg declared_type64='ABMultiValueIdentifier' index='3' name='identifier' type64='i'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</informal_protocol>
+</signatures>

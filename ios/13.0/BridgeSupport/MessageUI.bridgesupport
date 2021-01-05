@@ -1,0 +1,180 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/ContactsUI.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+<depends_on path='/System/Library/Frameworks/VisionKit.framework'/>
+<depends_on path='/System/Library/Frameworks/EventKit.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/Intents.framework'/>
+<depends_on path='/System/Library/Frameworks/LinkPresentation.framework'/>
+<depends_on path='/System/Library/Frameworks/MapKit.framework'/>
+<depends_on path='/System/Library/Frameworks/PDFKit.framework'/>
+<depends_on path='/System/Library/Frameworks/PencilKit.framework'/>
+<depends_on path='/System/Library/Frameworks/VideoToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/WebKit.framework'/>
+<depends_on path='/System/Library/Frameworks/IOSurface.framework'/>
+<depends_on path='/System/Library/Frameworks/Photos.framework'/>
+<depends_on path='/System/Library/Frameworks/Contacts.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreSpotlight.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/UIKit.framework'/>
+<constant const='true' declared_type64='NSErrorDomain _Nonnull' name='MFMailComposeErrorDomain' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MFMessageComposeViewControllerAttachmentAlternateFilename' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MFMessageComposeViewControllerAttachmentURL' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MFMessageComposeViewControllerTextMessageAvailabilityDidChangeNotification' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='MFMessageComposeViewControllerTextMessageAvailabilityKey' type64='@'/>
+<enum name='MFMailComposeErrorCodeSaveFailed' value64='0'/>
+<enum name='MFMailComposeErrorCodeSendFailed' value64='1'/>
+<enum name='MFMailComposeResultCancelled' value64='0'/>
+<enum name='MFMailComposeResultFailed' value64='3'/>
+<enum name='MFMailComposeResultSaved' value64='1'/>
+<enum name='MFMailComposeResultSent' value64='2'/>
+<enum name='MessageComposeResultCancelled' value64='0'/>
+<enum name='MessageComposeResultFailed' value64='2'/>
+<enum name='MessageComposeResultSent' value64='1'/>
+<class name='MFMailComposeViewController'>
+<method selector='addAttachmentData:mimeType:fileName:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='attachment' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='mimeType' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='2' name='filename' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='canSendMail'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='mailComposeDelegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='setBccRecipients:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='bccRecipients' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCcRecipients:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='ccRecipients' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMailComposeDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='mailComposeDelegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMessageBody:isHTML:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='body' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='isHTML' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPreferredSendingEmailAddress:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='emailAddress' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSubject:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='subject' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setToRecipients:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='toRecipients' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MFMessageComposeViewController'>
+<method selector='addAttachmentData:typeIdentifier:filename:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='attachmentData' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='uti' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='2' name='filename' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='addAttachmentURL:withAlternateFilename:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='attachmentURL' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='alternateFilename' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='attachments'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='body'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='canSendAttachments'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='canSendSubject'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='canSendText'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='disableUserAttachments'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='isSupportedAttachmentUTI:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='uti' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='message'>
+<retval declared_type64='MSMessage * _Nullable' type64='@'/>
+</method>
+<method selector='messageComposeDelegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='recipients'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='setBody:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='body' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMessage:'>
+<arg declared_type64='MSMessage * _Nullable' index='0' name='message' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMessageComposeDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='messageComposeDelegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRecipients:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='recipients' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSubject:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='subject' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='subject'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='mailComposeController:didFinishWithResult:error:'>
+<arg declared_type64='MFMailComposeViewController * _Nonnull' index='0' name='controller' type64='@'/>
+<arg declared_type64='MFMailComposeResult' index='1' name='result' type64='q'/>
+<arg declared_type64='NSError * _Nullable' index='2' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='messageComposeViewController:didFinishWithResult:'>
+<arg declared_type64='MFMessageComposeViewController * _Nonnull' index='0' name='controller' type64='@'/>
+<arg declared_type64='MessageComposeResult' index='1' name='result' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='MFMailComposeViewControllerDelegate'>
+<method selector='mailComposeController:didFinishWithResult:error:' type64='v40@0:8@16q24@32'>
+<arg declared_type64='MFMailComposeViewController * _Nonnull' index='0' name='controller' type64='@'/>
+<arg declared_type64='MFMailComposeResult' index='1' name='result' type64='q'/>
+<arg declared_type64='NSError * _Nullable' index='2' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='MFMessageComposeViewControllerDelegate'>
+<method selector='messageComposeViewController:didFinishWithResult:' type64='v32@0:8@16q24'>
+<arg declared_type64='MFMessageComposeViewController * _Nonnull' index='0' name='controller' type64='@'/>
+<arg declared_type64='MessageComposeResult' index='1' name='result' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

@@ -1,0 +1,172 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreData.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type64='NSString*' name='ACAccountStoreDidChangeNotification' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ACAccountTypeIdentifierFacebook' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ACAccountTypeIdentifierLinkedIn' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ACAccountTypeIdentifierSinaWeibo' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ACAccountTypeIdentifierTencentWeibo' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ACAccountTypeIdentifierTwitter' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ACErrorDomain' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ACFacebookAppIdKey' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ACFacebookAudienceEveryone' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ACFacebookAudienceFriends' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ACFacebookAudienceKey' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ACFacebookAudienceOnlyMe' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ACFacebookPermissionsKey' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ACLinkedInAppIdKey' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ACLinkedInPermissionsKey' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ACTencentWeiboAppIdKey' type64='@'/>
+<enum name='ACAccountCredentialRenewResultFailed' value64='2'/>
+<enum name='ACAccountCredentialRenewResultRejected' value64='1'/>
+<enum name='ACAccountCredentialRenewResultRenewed' value64='0'/>
+<enum name='ACErrorAccessDeniedByProtectionPolicy' value64='10'/>
+<enum name='ACErrorAccessInfoInvalid' value64='8'/>
+<enum name='ACErrorAccountAlreadyExists' value64='5'/>
+<enum name='ACErrorAccountAuthenticationFailed' value64='3'/>
+<enum name='ACErrorAccountMissingRequiredProperty' value64='2'/>
+<enum name='ACErrorAccountNotFound' value64='6'/>
+<enum name='ACErrorAccountTypeInvalid' value64='4'/>
+<enum name='ACErrorClientPermissionDenied' value64='9'/>
+<enum name='ACErrorCoreDataSaveFailed' value64='18'/>
+<enum name='ACErrorCredentialItemNotExpired' value64='23'/>
+<enum name='ACErrorCredentialItemNotFound' value64='22'/>
+<enum name='ACErrorCredentialNotFound' value64='11'/>
+<enum name='ACErrorDeniedByPlugin' value64='17'/>
+<enum name='ACErrorFailedSerializingAccountInfo' value64='19'/>
+<enum name='ACErrorFetchCredentialFailed' value64='12'/>
+<enum name='ACErrorInvalidClientBundleID' value64='16'/>
+<enum name='ACErrorInvalidCommand' value64='20'/>
+<enum name='ACErrorMissingTransportMessageID' value64='21'/>
+<enum name='ACErrorPermissionDenied' value64='7'/>
+<enum name='ACErrorRemoveCredentialFailed' value64='14'/>
+<enum name='ACErrorStoreCredentialFailed' value64='13'/>
+<enum name='ACErrorUnknown' value64='1'/>
+<enum name='ACErrorUpdatingNonexistentAccount' value64='15'/>
+<class name='ACAccount'>
+<method selector='accountDescription'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='accountType'>
+<retval declared_type64='ACAccountType*' type64='@'/>
+</method>
+<method selector='credential'>
+<retval declared_type64='ACAccountCredential*' type64='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='initWithAccountType:'>
+<arg declared_type64='ACAccountType*' index='0' name='type' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='setAccountDescription:'>
+<arg declared_type64='NSString*' index='0' name='accountDescription' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setAccountType:'>
+<arg declared_type64='ACAccountType*' index='0' name='accountType' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCredential:'>
+<arg declared_type64='ACAccountCredential*' index='0' name='credential' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setUsername:'>
+<arg declared_type64='NSString*' index='0' name='username' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='username'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+</class>
+<class name='ACAccountCredential'>
+<method selector='initWithOAuth2Token:refreshToken:expiryDate:'>
+<arg declared_type64='NSString*' index='0' name='token' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='refreshToken' type64='@'/>
+<arg declared_type64='NSDate*' index='2' name='expiryDate' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='initWithOAuthToken:tokenSecret:'>
+<arg declared_type64='NSString*' index='0' name='token' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='secret' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='oauthToken'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='setOauthToken:'>
+<arg declared_type64='NSString*' index='0' name='oauthToken' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='ACAccountStore'>
+<method selector='accountTypeWithAccountTypeIdentifier:'>
+<arg declared_type64='NSString*' index='0' name='typeIdentifier' type64='@'/>
+<retval declared_type64='ACAccountType*' type64='@'/>
+</method>
+<method selector='accountWithIdentifier:'>
+<arg declared_type64='NSString*' index='0' name='identifier' type64='@'/>
+<retval declared_type64='ACAccount*' type64='@'/>
+</method>
+<method selector='accounts'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='accountsWithAccountType:'>
+<arg declared_type64='ACAccountType*' index='0' name='accountType' type64='@'/>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='removeAccount:withCompletionHandler:'>
+<arg declared_type64='ACAccount*' index='0' name='account' type64='@'/>
+<arg declared_type64='ACAccountStoreRemoveCompletionHandler' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='renewCredentialsForAccount:completion:'>
+<arg declared_type64='ACAccount*' index='0' name='account' type64='@'/>
+<arg declared_type64='ACAccountStoreCredentialRenewalHandler' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='ACAccountCredentialRenewResult' type64='q'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='requestAccessToAccountsWithType:options:completion:'>
+<arg declared_type64='ACAccountType*' index='0' name='accountType' type64='@'/>
+<arg declared_type64='NSDictionary*' index='1' name='options' type64='@'/>
+<arg declared_type64='ACAccountStoreRequestAccessCompletionHandler' function_pointer='true' index='2' name='completion' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='saveAccount:withCompletionHandler:'>
+<arg declared_type64='ACAccount*' index='0' name='account' type64='@'/>
+<arg declared_type64='ACAccountStoreSaveCompletionHandler' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='ACAccountType'>
+<method selector='accessGranted'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='accountTypeDescription'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+</class>
+</signatures>

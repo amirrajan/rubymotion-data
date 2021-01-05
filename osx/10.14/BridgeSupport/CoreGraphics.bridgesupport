@@ -5,6 +5,7 @@
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
 <depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
 <struct name='CGAffineTransform' type64='{CGAffineTransform=&quot;a&quot;d&quot;b&quot;d&quot;c&quot;d&quot;d&quot;d&quot;tx&quot;d&quot;ty&quot;d}'>
 <field declared_type64='CGFloat' name='a' type64='d'/>
 <field declared_type64='CGFloat' name='b' type64='d'/>
@@ -222,7 +223,9 @@
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceDCIP3' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceDisplayP3' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceExtendedGray' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceExtendedLinearDisplayP3' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceExtendedLinearGray' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceExtendedLinearITUR_2020' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceExtendedLinearSRGB' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceExtendedSRGB' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceGenericCMYK' type64='^{__CFString=}'/>
@@ -233,6 +236,7 @@
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceGenericRGBLinear' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceGenericXYZ' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceITUR_2020' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceITUR_2020_PQ_EOTF' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceITUR_709' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceLinearGray' type64='^{__CFString=}'/>
 <constant const='true' declared_type64='CFStringRef _Nonnull' name='kCGColorSpaceLinearSRGB' type64='^{__CFString=}'/>
@@ -884,6 +888,12 @@
 <arg declared_type64='CGColorConversionInfoTransformType' type64='I'/>
 <arg declared_type64='CGColorRenderingIntent' type64='i'/>
 <arg declared_type64='struct __va_list_tag*' type64='^{__va_list_tag=II^v^v}'/>
+<retval declared_type64='CGColorConversionInfoRef _Nullable' type64='^{CGColorConversionInfo=}'/>
+</function>
+<function name='CGColorConversionInfoCreateWithOptions'>
+<arg declared_type64='CGColorSpaceRef _Nonnull' name='src' type64='^{CGColorSpace=}'/>
+<arg declared_type64='CGColorSpaceRef _Nonnull' name='dst' type64='^{CGColorSpace=}'/>
+<arg declared_type64='CFDictionaryRef _Nullable' name='options' type64='^{__CFDictionary=}'/>
 <retval declared_type64='CGColorConversionInfoRef _Nullable' type64='^{CGColorConversionInfo=}'/>
 </function>
 <function name='CGColorConversionInfoGetTypeID'>

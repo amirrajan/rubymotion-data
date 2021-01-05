@@ -1,0 +1,330 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/MobileCoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetLibraryDeletedAssetGroupsKey' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetLibraryInsertedAssetGroupsKey' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetLibraryUpdatedAssetGroupsKey' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetLibraryUpdatedAssetsKey' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetPropertyAssetURL' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetPropertyDate' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetPropertyDuration' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetPropertyLocation' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetPropertyOrientation' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetPropertyRepresentations' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetPropertyType' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetPropertyURLs' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetTypePhoto' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetTypeUnknown' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetTypeVideo' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetsGroupPropertyName' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetsGroupPropertyPersistentID' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetsGroupPropertyType' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetsGroupPropertyURL' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetsLibraryChangedNotification' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALAssetsLibraryErrorDomain' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ALErrorInvalidProperty' type64='@'/>
+<enum name='ALAssetOrientationDown' value64='1'/>
+<enum name='ALAssetOrientationDownMirrored' value64='5'/>
+<enum name='ALAssetOrientationLeft' value64='2'/>
+<enum name='ALAssetOrientationLeftMirrored' value64='6'/>
+<enum name='ALAssetOrientationRight' value64='3'/>
+<enum name='ALAssetOrientationRightMirrored' value64='7'/>
+<enum name='ALAssetOrientationUp' value64='0'/>
+<enum name='ALAssetOrientationUpMirrored' value64='4'/>
+<enum name='ALAssetsGroupAlbum' value64='2'/>
+<enum name='ALAssetsGroupAll' value64='4294967295'/>
+<enum name='ALAssetsGroupEvent' value64='4'/>
+<enum name='ALAssetsGroupFaces' value64='8'/>
+<enum name='ALAssetsGroupLibrary' value64='1'/>
+<enum name='ALAssetsGroupPhotoStream' value64='32'/>
+<enum name='ALAssetsGroupSavedPhotos' value64='16'/>
+<enum name='ALAssetsLibraryAccessGloballyDeniedError' value64='-3312'/>
+<enum name='ALAssetsLibraryAccessUserDeniedError' value64='-3311'/>
+<enum name='ALAssetsLibraryDataUnavailableError' value64='-3310'/>
+<enum name='ALAssetsLibraryUnknownError' value64='-1'/>
+<enum name='ALAssetsLibraryWriteBusyError' value64='-3301'/>
+<enum name='ALAssetsLibraryWriteDataEncodingError' value64='-3304'/>
+<enum name='ALAssetsLibraryWriteDiskSpaceError' value64='-3305'/>
+<enum name='ALAssetsLibraryWriteFailedError' value64='-3300'/>
+<enum name='ALAssetsLibraryWriteIncompatibleDataError' value64='-3303'/>
+<enum name='ALAssetsLibraryWriteInvalidDataError' value64='-3302'/>
+<enum name='ALAuthorizationStatusAuthorized' value64='3'/>
+<enum name='ALAuthorizationStatusDenied' value64='2'/>
+<enum name='ALAuthorizationStatusNotDetermined' value64='0'/>
+<enum name='ALAuthorizationStatusRestricted' value64='1'/>
+<class name='ALAsset'>
+<method selector='aspectRatioThumbnail'>
+<retval declared_type64='CGImageRef' type64='^{CGImage=}'/>
+</method>
+<method selector='defaultRepresentation'>
+<retval declared_type64='ALAssetRepresentation*' type64='@'/>
+</method>
+<method selector='isEditable'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='originalAsset'>
+<retval declared_type64='ALAsset*' type64='@'/>
+</method>
+<method selector='representationForUTI:'>
+<arg declared_type64='NSString*' index='0' name='representationUTI' type64='@'/>
+<retval declared_type64='ALAssetRepresentation*' type64='@'/>
+</method>
+<method selector='setImageData:metadata:completionBlock:'>
+<arg declared_type64='NSData*' index='0' name='imageData' type64='@'/>
+<arg declared_type64='NSDictionary*' index='1' name='metadata' type64='@'/>
+<arg declared_type64='ALAssetsLibraryWriteImageCompletionBlock' function_pointer='true' index='2' name='completionBlock' type64='@?'>
+<arg declared_type64='NSURL*' type64='@'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVideoAtPath:completionBlock:'>
+<arg declared_type64='NSURL*' index='0' name='videoPathURL' type64='@'/>
+<arg declared_type64='ALAssetsLibraryWriteVideoCompletionBlock' function_pointer='true' index='1' name='completionBlock' type64='@?'>
+<arg declared_type64='NSURL*' type64='@'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='thumbnail'>
+<retval declared_type64='CGImageRef' type64='^{CGImage=}'/>
+</method>
+<method selector='valueForProperty:'>
+<arg declared_type64='NSString*' index='0' name='property' type64='@'/>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='writeModifiedImageDataToSavedPhotosAlbum:metadata:completionBlock:'>
+<arg declared_type64='NSData*' index='0' name='imageData' type64='@'/>
+<arg declared_type64='NSDictionary*' index='1' name='metadata' type64='@'/>
+<arg declared_type64='ALAssetsLibraryWriteImageCompletionBlock' function_pointer='true' index='2' name='completionBlock' type64='@?'>
+<arg declared_type64='NSURL*' type64='@'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='writeModifiedVideoAtPathToSavedPhotosAlbum:completionBlock:'>
+<arg declared_type64='NSURL*' index='0' name='videoPathURL' type64='@'/>
+<arg declared_type64='ALAssetsLibraryWriteVideoCompletionBlock' function_pointer='true' index='1' name='completionBlock' type64='@?'>
+<arg declared_type64='NSURL*' type64='@'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='ALAssetRepresentation'>
+<method selector='CGImageWithOptions:'>
+<arg declared_type64='NSDictionary*' index='0' name='options' type64='@'/>
+<retval declared_type64='CGImageRef' type64='^{CGImage=}'/>
+</method>
+<method selector='UTI'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='dimensions'>
+<retval declared_type64='CGSize' type64='{CGSize=dd}'/>
+</method>
+<method selector='filename'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='fullResolutionImage'>
+<retval declared_type64='CGImageRef' type64='^{CGImage=}'/>
+</method>
+<method selector='fullScreenImage'>
+<retval declared_type64='CGImageRef' type64='^{CGImage=}'/>
+</method>
+<method selector='getBytes:fromOffset:length:error:'>
+<arg declared_type64='uint8_t*' index='0' name='buffer' type64='*'/>
+<arg declared_type64='long long' index='1' name='offset' type64='q'/>
+<arg declared_type64='NSUInteger' index='2' name='length' type64='Q'/>
+<arg declared_type64='NSError**' index='3' name='error' type64='^@'/>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='metadata'>
+<retval declared_type64='NSDictionary*' type64='@'/>
+</method>
+<method selector='orientation'>
+<retval declared_type64='ALAssetOrientation' type64='q'/>
+</method>
+<method selector='scale'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='size'>
+<retval declared_type64='long long' type64='q'/>
+</method>
+<method selector='url'>
+<retval declared_type64='NSURL*' type64='@'/>
+</method>
+</class>
+<class name='ALAssetsFilter'>
+<method class_method='true' selector='allAssets'>
+<retval declared_type64='ALAssetsFilter*' type64='@'/>
+</method>
+<method class_method='true' selector='allPhotos'>
+<retval declared_type64='ALAssetsFilter*' type64='@'/>
+</method>
+<method class_method='true' selector='allVideos'>
+<retval declared_type64='ALAssetsFilter*' type64='@'/>
+</method>
+</class>
+<class name='ALAssetsGroup'>
+<method selector='addAsset:'>
+<arg declared_type64='ALAsset*' index='0' name='asset' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='enumerateAssetsAtIndexes:options:usingBlock:'>
+<arg declared_type64='NSIndexSet*' index='0' name='indexSet' type64='@'/>
+<arg declared_type64='NSEnumerationOptions' index='1' name='options' type64='Q'/>
+<arg declared_type64='ALAssetsGroupEnumerationResultsBlock' function_pointer='true' index='2' name='enumerationBlock' type64='@?'>
+<arg declared_type64='ALAsset*' type64='@'/>
+<arg declared_type64='NSUInteger' type64='Q'/>
+<arg declared_type64='BOOL*' type64='^B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='enumerateAssetsUsingBlock:'>
+<arg declared_type64='ALAssetsGroupEnumerationResultsBlock' function_pointer='true' index='0' name='enumerationBlock' type64='@?'>
+<arg declared_type64='ALAsset*' type64='@'/>
+<arg declared_type64='NSUInteger' type64='Q'/>
+<arg declared_type64='BOOL*' type64='^B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='enumerateAssetsWithOptions:usingBlock:'>
+<arg declared_type64='NSEnumerationOptions' index='0' name='options' type64='Q'/>
+<arg declared_type64='ALAssetsGroupEnumerationResultsBlock' function_pointer='true' index='1' name='enumerationBlock' type64='@?'>
+<arg declared_type64='ALAsset*' type64='@'/>
+<arg declared_type64='NSUInteger' type64='Q'/>
+<arg declared_type64='BOOL*' type64='^B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='isEditable'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='numberOfAssets'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='posterImage'>
+<retval declared_type64='CGImageRef' type64='^{CGImage=}'/>
+</method>
+<method selector='setAssetsFilter:'>
+<arg declared_type64='ALAssetsFilter*' index='0' name='filter' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='valueForProperty:'>
+<arg declared_type64='NSString*' index='0' name='property' type64='@'/>
+<retval declared_type64='id' type64='@'/>
+</method>
+</class>
+<class name='ALAssetsLibrary'>
+<method selector='addAssetsGroupAlbumWithName:resultBlock:failureBlock:'>
+<arg declared_type64='NSString*' index='0' name='name' type64='@'/>
+<arg declared_type64='ALAssetsLibraryGroupResultBlock' function_pointer='true' index='1' name='resultBlock' type64='@?'>
+<arg declared_type64='ALAssetsGroup*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='ALAssetsLibraryAccessFailureBlock' function_pointer='true' index='2' name='failureBlock' type64='@?'>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='assetForURL:resultBlock:failureBlock:'>
+<arg declared_type64='NSURL*' index='0' name='assetURL' type64='@'/>
+<arg declared_type64='ALAssetsLibraryAssetForURLResultBlock' function_pointer='true' index='1' name='resultBlock' type64='@?'>
+<arg declared_type64='ALAsset*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='ALAssetsLibraryAccessFailureBlock' function_pointer='true' index='2' name='failureBlock' type64='@?'>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='authorizationStatus'>
+<retval declared_type64='ALAuthorizationStatus' type64='q'/>
+</method>
+<method class_method='true' selector='disableSharedPhotoStreamsSupport'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='enumerateGroupsWithTypes:usingBlock:failureBlock:'>
+<arg declared_type64='ALAssetsGroupType' index='0' name='types' type64='Q'/>
+<arg declared_type64='ALAssetsLibraryGroupsEnumerationResultsBlock' function_pointer='true' index='1' name='enumerationBlock' type64='@?'>
+<arg declared_type64='ALAssetsGroup*' type64='@'/>
+<arg declared_type64='BOOL*' type64='^B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='ALAssetsLibraryAccessFailureBlock' function_pointer='true' index='2' name='failureBlock' type64='@?'>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='groupForURL:resultBlock:failureBlock:'>
+<arg declared_type64='NSURL*' index='0' name='groupURL' type64='@'/>
+<arg declared_type64='ALAssetsLibraryGroupResultBlock' function_pointer='true' index='1' name='resultBlock' type64='@?'>
+<arg declared_type64='ALAssetsGroup*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='ALAssetsLibraryAccessFailureBlock' function_pointer='true' index='2' name='failureBlock' type64='@?'>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='videoAtPathIsCompatibleWithSavedPhotosAlbum:'>
+<arg declared_type64='NSURL*' index='0' name='videoPathURL' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='writeImageDataToSavedPhotosAlbum:metadata:completionBlock:'>
+<arg declared_type64='NSData*' index='0' name='imageData' type64='@'/>
+<arg declared_type64='NSDictionary*' index='1' name='metadata' type64='@'/>
+<arg declared_type64='ALAssetsLibraryWriteImageCompletionBlock' function_pointer='true' index='2' name='completionBlock' type64='@?'>
+<arg declared_type64='NSURL*' type64='@'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='writeImageToSavedPhotosAlbum:metadata:completionBlock:'>
+<arg declared_type64='CGImageRef' index='0' name='imageRef' type64='^{CGImage=}'/>
+<arg declared_type64='NSDictionary*' index='1' name='metadata' type64='@'/>
+<arg declared_type64='ALAssetsLibraryWriteImageCompletionBlock' function_pointer='true' index='2' name='completionBlock' type64='@?'>
+<arg declared_type64='NSURL*' type64='@'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='writeImageToSavedPhotosAlbum:orientation:completionBlock:'>
+<arg declared_type64='CGImageRef' index='0' name='imageRef' type64='^{CGImage=}'/>
+<arg declared_type64='ALAssetOrientation' index='1' name='orientation' type64='q'/>
+<arg declared_type64='ALAssetsLibraryWriteImageCompletionBlock' function_pointer='true' index='2' name='completionBlock' type64='@?'>
+<arg declared_type64='NSURL*' type64='@'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='writeVideoAtPathToSavedPhotosAlbum:completionBlock:'>
+<arg declared_type64='NSURL*' index='0' name='videoPathURL' type64='@'/>
+<arg declared_type64='ALAssetsLibraryWriteVideoCompletionBlock' function_pointer='true' index='1' name='completionBlock' type64='@?'>
+<arg declared_type64='NSURL*' type64='@'/>
+<arg declared_type64='NSError*' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+</signatures>

@@ -1,0 +1,300 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/SafariServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CFNetwork.framework'/>
+<depends_on path='/System/Library/Frameworks/WebKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/AVKit.framework'/>
+<depends_on path='/System/Library/Frameworks/AdSupport.framework'/>
+<depends_on path='/System/Library/Frameworks/MediaPlayer.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/UIKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type='NSString*' name='ADBannerContentSizeIdentifier320x50' type='@'/>
+<constant const='true' declared_type='NSString*' name='ADBannerContentSizeIdentifier480x32' type='@'/>
+<constant const='true' declared_type='NSString*' name='ADBannerContentSizeIdentifierLandscape' type='@'/>
+<constant const='true' declared_type='NSString*' name='ADBannerContentSizeIdentifierPortrait' type='@'/>
+<constant const='true' declared_type='NSString*' name='ADClientErrorDomain' type='@'/>
+<constant const='true' declared_type='NSString*' name='ADErrorDomain' type='@'/>
+<enum name='ADAdTypeBanner' value='0'/>
+<enum name='ADAdTypeMediumRectangle' value='1'/>
+<enum name='ADClientErrorLimitAdTracking' value='1'/>
+<enum name='ADClientErrorUnknown' value='0'/>
+<enum name='ADErrorAdAssetLoadPending' value='10'/>
+<enum name='ADErrorAdResponseValidateFailure' value='9'/>
+<enum name='ADErrorAdUnloaded' value='7'/>
+<enum name='ADErrorApplicationInactive' value='6'/>
+<enum name='ADErrorAssetLoadFailure' value='8'/>
+<enum name='ADErrorBannerVisibleWithoutContent' value='5'/>
+<enum name='ADErrorConfigurationError' value='4'/>
+<enum name='ADErrorInventoryUnavailable' value='3'/>
+<enum name='ADErrorLoadingThrottled' value='2'/>
+<enum name='ADErrorServerFailure' value='1'/>
+<enum name='ADErrorUnknown' value='0'/>
+<enum name='ADInterstitialPresentationPolicyAutomatic' value='1'/>
+<enum name='ADInterstitialPresentationPolicyManual' value='2'/>
+<enum name='ADInterstitialPresentationPolicyNone' value='0'/>
+<class name='ADBannerView'>
+<method selector='adType'>
+<retval declared_type='ADAdType' type='i' type64='q'/>
+</method>
+<method selector='advertisingSection'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='cancelBannerViewAction'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='currentContentSizeIdentifier'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithAdType:'>
+<arg declared_type='ADAdType' index='0' name='type' type='i' type64='q'/>
+<retval declared_type='instancetype' type='@'/>
+</method>
+<method selector='isBannerLoaded'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isBannerViewActionInProgress'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='requiredContentSizeIdentifiers'>
+<retval declared_type='NSSet*' type='@'/>
+</method>
+<method selector='setAdvertisingSection:'>
+<arg declared_type='NSString*' index='0' name='advertisingSection' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCurrentContentSizeIdentifier:'>
+<arg declared_type='NSString*' index='0' name='currentContentSizeIdentifier' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRequiredContentSizeIdentifiers:'>
+<arg declared_type='NSSet*' index='0' name='requiredContentSizeIdentifiers' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sizeFromBannerContentSizeIdentifier:'>
+<arg declared_type='NSString*' index='0' name='contentSizeIdentifier' type='@'/>
+<retval declared_type='CGSize' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+</method>
+</class>
+<class name='ADClient'>
+<method selector='addClientToSegments:replaceExisting:'>
+<arg declared_type='NSArray*' index='0' name='segmentIdentifiers' type='@'/>
+<arg declared_type='BOOL' index='1' name='replaceExisting' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='determineAppInstallationAttributionWithCompletionHandler:'>
+<arg declared_type='void (^)(BOOL)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lookupAdConversionDetails:'>
+<arg declared_type='void (^)(NSDate *, NSDate *)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSDate*' type='@'/>
+<arg declared_type='NSDate*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='requestAttributionDetailsWithBlock:'>
+<arg declared_type='void (^)(NSDictionary *, NSError *)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSDictionary*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sharedClient'>
+<retval declared_type='ADClient*' type='@'/>
+</method>
+</class>
+<class name='ADInterstitialAd'>
+<method selector='cancelAction'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='isActionInProgress'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isLoaded'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='presentFromViewController:'>
+<arg declared_type='UIViewController*' index='0' name='viewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='presentInView:'>
+<arg declared_type='UIView*' index='0' name='containerView' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='AVPlayerViewController'>
+<method selector='cancelPreroll'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='playPrerollAdWithCompletionHandler:'>
+<arg declared_type='void (^)(NSError *)' function_pointer='true' index='0' name='completionHandler' type='@?'>
+<arg declared_type='NSError*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='preparePrerollAds'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='bannerView:didFailToReceiveAdWithError:'>
+<arg declared_type='ADBannerView*' index='0' name='banner' type='@'/>
+<arg declared_type='NSError*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='bannerViewActionDidFinish:'>
+<arg declared_type='ADBannerView*' index='0' name='banner' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='bannerViewActionShouldBegin:willLeaveApplication:'>
+<arg declared_type='ADBannerView*' index='0' name='banner' type='@'/>
+<arg declared_type='BOOL' index='1' name='willLeave' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='bannerViewDidLoadAd:'>
+<arg declared_type='ADBannerView*' index='0' name='banner' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='bannerViewWillLoadAd:'>
+<arg declared_type='ADBannerView*' index='0' name='banner' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='interstitialAd:didFailWithError:'>
+<arg declared_type='ADInterstitialAd*' index='0' name='interstitialAd' type='@'/>
+<arg declared_type='NSError*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='interstitialAdActionDidFinish:'>
+<arg declared_type='ADInterstitialAd*' index='0' name='interstitialAd' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='interstitialAdActionShouldBegin:willLeaveApplication:'>
+<arg declared_type='ADInterstitialAd*' index='0' name='interstitialAd' type='@'/>
+<arg declared_type='BOOL' index='1' name='willLeave' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='interstitialAdDidLoad:'>
+<arg declared_type='ADInterstitialAd*' index='0' name='interstitialAd' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='interstitialAdDidUnload:'>
+<arg declared_type='ADInterstitialAd*' index='0' name='interstitialAd' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='interstitialAdWillLoad:'>
+<arg declared_type='ADInterstitialAd*' index='0' name='interstitialAd' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='UIViewController'>
+<method selector='canDisplayBannerAds'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='interstitialPresentationPolicy'>
+<retval declared_type='ADInterstitialPresentationPolicy' type='i' type64='q'/>
+</method>
+<method selector='isDisplayingBannerAd'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isPresentingFullScreenAd'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='originalContentView'>
+<retval declared_type='UIView*' type='@'/>
+</method>
+<method class_method='true' selector='prepareInterstitialAds'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='requestInterstitialAdPresentation'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setCanDisplayBannerAds:'>
+<arg declared_type='BOOL' index='0' name='canDisplayBannerAds' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInterstitialPresentationPolicy:'>
+<arg declared_type='ADInterstitialPresentationPolicy' index='0' name='interstitialPresentationPolicy' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldPresentInterstitialAd'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<informal_protocol name='ADBannerViewDelegate'>
+<method selector='bannerView:didFailToReceiveAdWithError:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='ADBannerView*' index='0' name='banner' type='@'/>
+<arg declared_type='NSError*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='bannerViewActionDidFinish:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='ADBannerView*' index='0' name='banner' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='bannerViewActionShouldBegin:willLeaveApplication:' type='B16@0:4@8B12' type64='B28@0:8@16B24'>
+<arg declared_type='ADBannerView*' index='0' name='banner' type='@'/>
+<arg declared_type='BOOL' index='1' name='willLeave' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='bannerViewDidLoadAd:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='ADBannerView*' index='0' name='banner' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='bannerViewWillLoadAd:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='ADBannerView*' index='0' name='banner' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='ADInterstitialAdDelegate'>
+<method selector='interstitialAd:didFailWithError:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='ADInterstitialAd*' index='0' name='interstitialAd' type='@'/>
+<arg declared_type='NSError*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='interstitialAdActionDidFinish:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='ADInterstitialAd*' index='0' name='interstitialAd' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='interstitialAdActionShouldBegin:willLeaveApplication:' type='B16@0:4@8B12' type64='B28@0:8@16B24'>
+<arg declared_type='ADInterstitialAd*' index='0' name='interstitialAd' type='@'/>
+<arg declared_type='BOOL' index='1' name='willLeave' type='B'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='interstitialAdDidLoad:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='ADInterstitialAd*' index='0' name='interstitialAd' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='interstitialAdDidUnload:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='ADInterstitialAd*' index='0' name='interstitialAd' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='interstitialAdWillLoad:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='ADInterstitialAd*' index='0' name='interstitialAd' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>

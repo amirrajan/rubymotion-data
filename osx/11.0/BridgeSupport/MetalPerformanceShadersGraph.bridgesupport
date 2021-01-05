@@ -1,0 +1,1434 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<enum name='MPSGraphDeviceTypeMetal' value64='0'/>
+<enum name='MPSGraphLossReductionTypeAxis' value64='0'/>
+<enum name='MPSGraphLossReductionTypeSum' value64='1'/>
+<enum name='MPSGraphOptionsDefault' value64='1'/>
+<enum name='MPSGraphOptionsNone' value64='0'/>
+<enum name='MPSGraphOptionsSynchronizeResults' value64='1'/>
+<enum name='MPSGraphOptionsVerbose' value64='2'/>
+<enum name='MPSGraphPaddingModeConstant' value64='0'/>
+<enum name='MPSGraphPaddingModeReflect' value64='1'/>
+<enum name='MPSGraphPaddingModeSymmetric' value64='2'/>
+<enum name='MPSGraphPaddingStyleExplicit' value64='0'/>
+<enum name='MPSGraphPaddingStyleTF_SAME' value64='2'/>
+<enum name='MPSGraphPaddingStyleTF_VALID' value64='1'/>
+<enum name='MPSGraphResizeBilinear' value64='1'/>
+<enum name='MPSGraphResizeNearest' value64='0'/>
+<enum name='MPSGraphTensorNamedDataLayoutCHW' value64='4'/>
+<enum name='MPSGraphTensorNamedDataLayoutHW' value64='6'/>
+<enum name='MPSGraphTensorNamedDataLayoutHWC' value64='5'/>
+<enum name='MPSGraphTensorNamedDataLayoutHWIO' value64='3'/>
+<enum name='MPSGraphTensorNamedDataLayoutNCHW' value64='0'/>
+<enum name='MPSGraphTensorNamedDataLayoutNHWC' value64='1'/>
+<enum name='MPSGraphTensorNamedDataLayoutOIHW' value64='2'/>
+<class name='MPSGraph'>
+<method selector='absoluteWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='acosWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='acoshWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='additionWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='applyStochasticGradientDescentWithLearningRateTensor:variable:gradientTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='learningRateTensor' type64='@'/>
+<arg declared_type64='MPSGraphVariableOp * _Nonnull' index='1' name='variable' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='2' name='gradientTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='name' type64='@'/>
+<retval declared_type64='MPSGraphOperation * _Nonnull' type64='@'/>
+</method>
+<method selector='asinWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='asinhWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='assignVariable:withValueOfTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='variable' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphOperation * _Nonnull' type64='@'/>
+</method>
+<method selector='atan2WithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='atanWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='atanhWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='avgPooling2DGradientWithGradientTensor:sourceTensor:descriptor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='gradient' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='source' type64='@'/>
+<arg declared_type64='MPSGraphPooling2DOpDescriptor * _Nonnull' index='2' name='descriptor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='avgPooling2DWithSourceTensor:descriptor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='source' type64='@'/>
+<arg declared_type64='MPSGraphPooling2DOpDescriptor * _Nonnull' index='1' name='descriptor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='ceilWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='clampWithTensor:minValueTensor:maxValueTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='minValueTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='2' name='maxValueTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='concatTensor:withTensor:dimension:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='tensor2' type64='@'/>
+<arg declared_type64='NSUInteger' index='2' name='dimensionIndex' type64='Q'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='concatTensors:dimension:name:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='tensors' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='dimensionIndex' type64='Q'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='constantWithData:shape:dataType:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='MPSShape * _Nonnull' index='1' name='shape' type64='@'/>
+<arg declared_type64='MPSDataType' index='2' name='dataType' type64='I'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='constantWithScalar:dataType:'>
+<arg declared_type64='double' index='0' name='scalar' type64='d'/>
+<arg declared_type64='MPSDataType' index='1' name='dataType' type64='I'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='constantWithScalar:shape:dataType:'>
+<arg declared_type64='double' index='0' name='scalar' type64='d'/>
+<arg declared_type64='MPSShape * _Nonnull' index='1' name='shape' type64='@'/>
+<arg declared_type64='MPSDataType' index='2' name='dataType' type64='I'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='convolution2DDataGradientWithIncomingGradientTensor:weightsTensor:outputShape:forwardConvolutionDescriptor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='incomingGradient' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='weights' type64='@'/>
+<arg declared_type64='MPSShape * _Nonnull' index='2' name='outputShape' type64='@'/>
+<arg declared_type64='MPSGraphConvolution2DOpDescriptor * _Nonnull' index='3' name='forwardConvolutionDescriptor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='convolution2DWeightsGradientWithIncomingGradientTensor:sourceTensor:outputShape:forwardConvolutionDescriptor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='incomingGradient' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='source' type64='@'/>
+<arg declared_type64='MPSShape * _Nonnull' index='2' name='outputShape' type64='@'/>
+<arg declared_type64='MPSGraphConvolution2DOpDescriptor * _Nonnull' index='3' name='forwardConvolutionDescriptor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='convolution2DWithSourceTensor:weightsTensor:descriptor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='source' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='weights' type64='@'/>
+<arg declared_type64='MPSGraphConvolution2DOpDescriptor * _Nonnull' index='2' name='descriptor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='convolutionTranspose2DDataGradientWithIncomingGradientTensor:weightsTensor:outputShape:forwardConvolutionDescriptor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='incomingGradient' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='weights' type64='@'/>
+<arg declared_type64='MPSShape * _Nonnull' index='2' name='outputShape' type64='@'/>
+<arg declared_type64='MPSGraphConvolution2DOpDescriptor * _Nonnull' index='3' name='forwardConvolutionDescriptor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='convolutionTranspose2DWeightsGradientWithIncomingGradientTensor:sourceTensor:outputShape:forwardConvolutionDescriptor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='incomingGradientTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='source' type64='@'/>
+<arg declared_type64='MPSShape * _Nonnull' index='2' name='outputShape' type64='@'/>
+<arg declared_type64='MPSGraphConvolution2DOpDescriptor * _Nonnull' index='3' name='forwardConvolutionDescriptor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='convolutionTranspose2DWithSourceTensor:weightsTensor:outputShape:descriptor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='source' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='weights' type64='@'/>
+<arg declared_type64='MPSShape * _Nonnull' index='2' name='outputShape' type64='@'/>
+<arg declared_type64='MPSGraphConvolution2DOpDescriptor * _Nonnull' index='3' name='descriptor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='cosWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='coshWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='depthwiseConvolution2DDataGradientWithIncomingGradientTensor:weightsTensor:outputShape:descriptor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='incomingGradient' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='weights' type64='@'/>
+<arg declared_type64='MPSShape * _Nonnull' index='2' name='outputShape' type64='@'/>
+<arg declared_type64='MPSGraphDepthwiseConvolution2DOpDescriptor * _Nonnull' index='3' name='descriptor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='depthwiseConvolution2DWeightsGradientWithIncomingGradientTensor:sourceTensor:outputShape:descriptor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='incomingGradient' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='source' type64='@'/>
+<arg declared_type64='MPSShape * _Nonnull' index='2' name='outputShape' type64='@'/>
+<arg declared_type64='MPSGraphDepthwiseConvolution2DOpDescriptor * _Nonnull' index='3' name='descriptor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='depthwiseConvolution2DWithSourceTensor:weightsTensor:descriptor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='source' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='weights' type64='@'/>
+<arg declared_type64='MPSGraphDepthwiseConvolution2DOpDescriptor * _Nonnull' index='2' name='descriptor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='divisionNoNaNWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='divisionWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='dropoutTensor:rate:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='double' index='1' name='rate' type64='d'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='dropoutTensor:rateTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='rate' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='encodeToCommandBuffer:feeds:targetOperations:resultsDictionary:executionDescriptor:'>
+<arg declared_type64='MPSCommandBuffer * _Nonnull' index='0' name='commandBuffer' type64='@'/>
+<arg declared_type64='MPSGraphTensorDataDictionary * _Nonnull' index='1' name='feeds' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='2' name='targetOperations' type64='@'/>
+<arg declared_type64='MPSGraphTensorDataDictionary * _Nonnull' index='3' name='resultsDictionary' type64='@'/>
+<arg declared_type64='MPSGraphExecutionDescriptor * _Nullable' index='4' name='executionDescriptor' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='encodeToCommandBuffer:feeds:targetTensors:targetOperations:executionDescriptor:'>
+<arg declared_type64='MPSCommandBuffer * _Nonnull' index='0' name='commandBuffer' type64='@'/>
+<arg declared_type64='MPSGraphTensorDataDictionary * _Nonnull' index='1' name='feeds' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='targetTensors' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='3' name='targetOperations' type64='@'/>
+<arg declared_type64='MPSGraphExecutionDescriptor * _Nullable' index='4' name='executionDescriptor' type64='@'/>
+<retval declared_type64='MPSGraphTensorDataDictionary * _Nonnull' type64='@'/>
+</method>
+<method selector='equalWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='erfWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='exponentBase10WithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='exponentBase2WithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='exponentWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='floorModuloWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='floorWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='gatherNDWithUpdatesTensor:indicesTensor:batchDimensions:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='updatesTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='indicesTensor' type64='@'/>
+<arg declared_type64='NSUInteger' index='2' name='batchDimensions' type64='Q'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='gatherWithUpdatesTensor:indicesTensor:axis:batchDimensions:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='updatesTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='indicesTensor' type64='@'/>
+<arg declared_type64='NSUInteger' index='2' name='axis' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='batchDimensions' type64='Q'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='gradientForPrimaryTensor:withTensors:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='tensors' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='NSDictionary * _Nonnull' type64='@'/>
+</method>
+<method selector='greaterThanOrEqualToWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='greaterThanWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='identityWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='isFiniteWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='isInfiniteWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='isNaNWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='lessThanOrEqualToWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='lessThanWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='logarithmBase10WithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='logarithmBase2WithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='logarithmWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='logicalANDWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='logicalNANDWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='logicalNORWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='logicalORWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='logicalXNORWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='logicalXORWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='matrixMultiplicationWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='maxPooling2DGradientWithGradientTensor:sourceTensor:descriptor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='gradient' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='source' type64='@'/>
+<arg declared_type64='MPSGraphPooling2DOpDescriptor * _Nonnull' index='2' name='descriptor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='maxPooling2DWithSourceTensor:descriptor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='source' type64='@'/>
+<arg declared_type64='MPSGraphPooling2DOpDescriptor * _Nonnull' index='1' name='descriptor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='maximumWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='meanOfTensor:axes:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='axes' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='minimumWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='moduloWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='multiplicationWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='negativeWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='new'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='normalizationBetaGradientWithIncomingGradientTensor:sourceTensor:reductionAxes:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='incomingGradientTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='sourceTensor' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='axes' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='normalizationGammaGradientWithIncomingGradientTensor:sourceTensor:meanTensor:varianceTensor:reductionAxes:epsilon:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='incomingGradientTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='sourceTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='2' name='meanTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='3' name='varianceTensor' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='4' name='axes' type64='@'/>
+<arg declared_type64='float' index='5' name='epsilon' type64='f'/>
+<arg declared_type64='NSString * _Nullable' index='6' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='normalizationGradientWithIncomingGradientTensor:sourceTensor:meanTensor:varianceTensor:gammaTensor:gammaGradientTensor:betaGradientTensor:reductionAxes:epsilon:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='incomingGradientTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='sourceTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='2' name='meanTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='3' name='varianceTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nullable' index='4' name='gamma' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nullable' index='5' name='gammaGradient' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nullable' index='6' name='betaGradient' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='7' name='axes' type64='@'/>
+<arg declared_type64='float' index='8' name='epsilon' type64='f'/>
+<arg declared_type64='NSString * _Nullable' index='9' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='normalizationWithTensor:meanTensor:varianceTensor:gammaTensor:betaTensor:epsilon:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='mean' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='2' name='variance' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nullable' index='3' name='gamma' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nullable' index='4' name='beta' type64='@'/>
+<arg declared_type64='float' index='5' name='epsilon' type64='f'/>
+<arg declared_type64='NSString * _Nullable' index='6' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='notEqualWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='notWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='oneHotWithIndicesTensor:depth:axis:dataType:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='indicesTensor' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='depth' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='axis' type64='Q'/>
+<arg declared_type64='MPSDataType' index='3' name='dataType' type64='I'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='oneHotWithIndicesTensor:depth:axis:dataType:onValue:offValue:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='indicesTensor' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='depth' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='axis' type64='Q'/>
+<arg declared_type64='MPSDataType' index='3' name='dataType' type64='I'/>
+<arg declared_type64='double' index='4' name='onValue' type64='d'/>
+<arg declared_type64='double' index='5' name='offValue' type64='d'/>
+<arg declared_type64='NSString * _Nullable' index='6' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='oneHotWithIndicesTensor:depth:axis:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='indicesTensor' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='depth' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='axis' type64='Q'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='oneHotWithIndicesTensor:depth:dataType:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='indicesTensor' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='depth' type64='Q'/>
+<arg declared_type64='MPSDataType' index='2' name='dataType' type64='I'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='oneHotWithIndicesTensor:depth:dataType:onValue:offValue:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='indicesTensor' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='depth' type64='Q'/>
+<arg declared_type64='MPSDataType' index='2' name='dataType' type64='I'/>
+<arg declared_type64='double' index='3' name='onValue' type64='d'/>
+<arg declared_type64='double' index='4' name='offValue' type64='d'/>
+<arg declared_type64='NSString * _Nullable' index='5' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='oneHotWithIndicesTensor:depth:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='indicesTensor' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='depth' type64='Q'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='options'>
+<retval declared_type64='MPSGraphOptions' type64='Q'/>
+</method>
+<method selector='padGradientWithIncomingGradientTensor:sourceTensor:paddingMode:leftPadding:rightPadding:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='incomingGradientTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='sourceTensor' type64='@'/>
+<arg declared_type64='MPSGraphPaddingMode' index='2' name='paddingMode' type64='q'/>
+<arg declared_type64='MPSShape * _Nonnull' index='3' name='leftPadding' type64='@'/>
+<arg declared_type64='MPSShape * _Nonnull' index='4' name='rightPadding' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='5' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='padTensor:withPaddingMode:leftPadding:rightPadding:constantValue:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='MPSGraphPaddingMode' index='1' name='paddingMode' type64='q'/>
+<arg declared_type64='MPSShape * _Nonnull' index='2' name='leftPadding' type64='@'/>
+<arg declared_type64='MPSShape * _Nonnull' index='3' name='rightPadding' type64='@'/>
+<arg declared_type64='double' index='4' name='constantValue' type64='d'/>
+<arg declared_type64='NSString * _Nullable' index='5' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='placeholderTensors'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='placeholderWithShape:dataType:name:'>
+<arg declared_type64='MPSShape * _Nullable' index='0' name='shape' type64='@'/>
+<arg declared_type64='MPSDataType' index='1' name='dataType' type64='I'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='placeholderWithShape:name:'>
+<arg declared_type64='MPSShape * _Nullable' index='0' name='shape' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='powerWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='reLUGradientWithIncomingGradient:sourceTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='gradient' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='source' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='reLUWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='readVariable:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='variable' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='reciprocalWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='reductionMaximumWithTensor:axes:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='axes' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='reductionMaximumWithTensor:axis:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSInteger' index='1' name='axis' type64='q'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='reductionMinimumWithTensor:axes:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='axes' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='reductionMinimumWithTensor:axis:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSInteger' index='1' name='axis' type64='q'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='reductionProductWithTensor:axes:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='axes' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='reductionProductWithTensor:axis:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSInteger' index='1' name='axis' type64='q'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='reductionSumWithTensor:axes:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='axes' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='reductionSumWithTensor:axis:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSInteger' index='1' name='axis' type64='q'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='reshapeTensor:withShape:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='MPSShape * _Nonnull' index='1' name='shape' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='resizeTensor:size:mode:centerResult:alignCorners:layout:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='imagesTensor' type64='@'/>
+<arg declared_type64='MPSShape * _Nonnull' index='1' name='size' type64='@'/>
+<arg declared_type64='MPSGraphResizeMode' index='2' name='mode' type64='Q'/>
+<arg declared_type64='BOOL' index='3' name='centerResult' type64='B'/>
+<arg declared_type64='BOOL' index='4' name='alignCorners' type64='B'/>
+<arg declared_type64='MPSGraphTensorNamedDataLayout' index='5' name='layout' type64='Q'/>
+<arg declared_type64='NSString * _Nullable' index='6' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='resizeWithGradientTensor:input:mode:centerResult:alignCorners:layout:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='gradient' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='input' type64='@'/>
+<arg declared_type64='MPSGraphResizeMode' index='2' name='mode' type64='Q'/>
+<arg declared_type64='BOOL' index='3' name='centerResult' type64='B'/>
+<arg declared_type64='BOOL' index='4' name='alignCorners' type64='B'/>
+<arg declared_type64='MPSGraphTensorNamedDataLayout' index='5' name='layout' type64='Q'/>
+<arg declared_type64='NSString * _Nullable' index='6' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='reverseSquareRootWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='rintWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='roundWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='runAsyncWithFeeds:targetTensors:targetOperations:executionDescriptor:'>
+<arg declared_type64='MPSGraphTensorDataDictionary * _Nonnull' index='0' name='feeds' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='targetTensors' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='2' name='targetOperations' type64='@'/>
+<arg declared_type64='MPSGraphExecutionDescriptor * _Nullable' index='3' name='executionDescriptor' type64='@'/>
+<retval declared_type64='MPSGraphTensorDataDictionary * _Nonnull' type64='@'/>
+</method>
+<method selector='runAsyncWithMTLCommandQueue:feeds:targetOperations:resultsDictionary:executionDescriptor:'>
+<arg declared_type64='id _Nonnull' index='0' name='commandQueue' type64='@'/>
+<arg declared_type64='MPSGraphTensorDataDictionary * _Nonnull' index='1' name='feeds' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='2' name='targetOperations' type64='@'/>
+<arg declared_type64='MPSGraphTensorDataDictionary * _Nonnull' index='3' name='resultsDictionary' type64='@'/>
+<arg declared_type64='MPSGraphExecutionDescriptor * _Nullable' index='4' name='executionDescriptor' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='runAsyncWithMTLCommandQueue:feeds:targetTensors:targetOperations:executionDescriptor:'>
+<arg declared_type64='id _Nonnull' index='0' name='commandQueue' type64='@'/>
+<arg declared_type64='MPSGraphTensorDataDictionary * _Nonnull' index='1' name='feeds' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='targetTensors' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='3' name='targetOperations' type64='@'/>
+<arg declared_type64='MPSGraphExecutionDescriptor * _Nullable' index='4' name='executionDescriptor' type64='@'/>
+<retval declared_type64='MPSGraphTensorDataDictionary * _Nonnull' type64='@'/>
+</method>
+<method selector='runWithFeeds:targetTensors:targetOperations:'>
+<arg declared_type64='MPSGraphTensorDataDictionary * _Nonnull' index='0' name='feeds' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='targetTensors' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='2' name='targetOperations' type64='@'/>
+<retval declared_type64='MPSGraphTensorDataDictionary * _Nonnull' type64='@'/>
+</method>
+<method selector='runWithMTLCommandQueue:feeds:targetOperations:resultsDictionary:'>
+<arg declared_type64='id _Nonnull' index='0' name='commandQueue' type64='@'/>
+<arg declared_type64='MPSGraphTensorDataDictionary * _Nonnull' index='1' name='feeds' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='2' name='targetOperations' type64='@'/>
+<arg declared_type64='MPSGraphTensorDataDictionary * _Nonnull' index='3' name='resultsDictionary' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='runWithMTLCommandQueue:feeds:targetTensors:targetOperations:'>
+<arg declared_type64='id _Nonnull' index='0' name='commandQueue' type64='@'/>
+<arg declared_type64='MPSGraphTensorDataDictionary * _Nonnull' index='1' name='feeds' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='targetTensors' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='3' name='targetOperations' type64='@'/>
+<retval declared_type64='MPSGraphTensorDataDictionary * _Nonnull' type64='@'/>
+</method>
+<method selector='scatterNDWithUpdatesTensor:indicesTensor:shape:batchDimensions:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='updatesTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='indicesTensor' type64='@'/>
+<arg declared_type64='MPSShape * _Nonnull' index='2' name='shape' type64='@'/>
+<arg declared_type64='NSUInteger' index='3' name='batchDimensions' type64='Q'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='selectWithPredicateTensor:truePredicateTensor:falsePredicateTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='predicateTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='truePredicateTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='2' name='falseSelectTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='setOptions:'>
+<arg declared_type64='MPSGraphOptions' index='0' name='options' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sigmoidGradientWithIncomingGradient:sourceTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='gradient' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='source' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='sigmoidWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='signWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='signbitWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='sinWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='sinhWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='sliceTensor:dimension:start:length:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='dimensionIndex' type64='Q'/>
+<arg declared_type64='NSInteger' index='2' name='start' type64='q'/>
+<arg declared_type64='NSInteger' index='3' name='length' type64='q'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='softMaxCrossEntropyGradientWithIncomingGradientTensor:sourceTensor:labelsTensor:axis:reductionType:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='gradientTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='sourceTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='2' name='labelsTensor' type64='@'/>
+<arg declared_type64='NSInteger' index='3' name='axis' type64='q'/>
+<arg declared_type64='MPSGraphLossReductionType' index='4' name='reductionType' type64='Q'/>
+<arg declared_type64='NSString * _Nullable' index='5' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='softMaxCrossEntropyWithSourceTensor:labelsTensor:axis:reductionType:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='sourceTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='labelsTensor' type64='@'/>
+<arg declared_type64='NSInteger' index='2' name='axis' type64='q'/>
+<arg declared_type64='MPSGraphLossReductionType' index='3' name='reductionType' type64='Q'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='softMaxGradientWithIncomingGradient:sourceTensor:axis:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='gradient' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='source' type64='@'/>
+<arg declared_type64='NSInteger' index='2' name='axis' type64='q'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='softMaxWithTensor:axis:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSInteger' index='1' name='axis' type64='q'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='squareRootWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='squareWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='stochasticGradientDescentWithLearningRateTensor:valuesTensor:gradientTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='learningRateTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='valuesTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='2' name='gradientTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='subtractionWithPrimaryTensor:secondaryTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='primaryTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='secondaryTensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='tanWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='tanhWithTensor:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='tileGradientWithIncomingGradientTensor:sourceTensor:withMultiplier:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='incomingGradientTensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='sourceTensor' type64='@'/>
+<arg declared_type64='MPSShape * _Nonnull' index='2' name='multiplier' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='tileTensor:withMultiplier:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='MPSShape * _Nonnull' index='1' name='multiplier' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='transposeTensor:dimension:withDimension:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='dimensionIndex' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='dimensionIndex2' type64='Q'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='variableWithData:shape:dataType:name:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='MPSShape * _Nonnull' index='1' name='shape' type64='@'/>
+<arg declared_type64='MPSDataType' index='2' name='dataType' type64='I'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='varianceOfTensor:axes:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='axes' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='varianceOfTensor:meanTensor:axes:name:'>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='MPSGraphTensor * _Nonnull' index='1' name='meanTensor' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='axes' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='name' type64='@'/>
+<retval declared_type64='MPSGraphTensor * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MPSGraphConvolution2DOpDescriptor'>
+<method selector='dataLayout'>
+<retval declared_type64='MPSGraphTensorNamedDataLayout' type64='Q'/>
+</method>
+<method class_method='true' selector='descriptorWithStrideInX:strideInY:dilationRateInX:dilationRateInY:groups:paddingLeft:paddingRight:paddingTop:paddingBottom:paddingStyle:dataLayout:weightsLayout:'>
+<arg declared_type64='NSUInteger' index='0' name='strideInX' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='strideInY' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='dilationRateInX' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='dilationRateInY' type64='Q'/>
+<arg declared_type64='NSUInteger' index='4' name='groups' type64='Q'/>
+<arg declared_type64='NSUInteger' index='5' name='paddingLeft' type64='Q'/>
+<arg declared_type64='NSUInteger' index='6' name='paddingRight' type64='Q'/>
+<arg declared_type64='NSUInteger' index='7' name='paddingTop' type64='Q'/>
+<arg declared_type64='NSUInteger' index='8' name='paddingBottom' type64='Q'/>
+<arg declared_type64='MPSGraphPaddingStyle' index='9' name='paddingStyle' type64='Q'/>
+<arg declared_type64='MPSGraphTensorNamedDataLayout' index='10' name='dataLayout' type64='Q'/>
+<arg declared_type64='MPSGraphTensorNamedDataLayout' index='11' name='weightsLayout' type64='Q'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithStrideInX:strideInY:dilationRateInX:dilationRateInY:groups:paddingStyle:dataLayout:weightsLayout:'>
+<arg declared_type64='NSUInteger' index='0' name='strideInX' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='strideInY' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='dilationRateInX' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='dilationRateInY' type64='Q'/>
+<arg declared_type64='NSUInteger' index='4' name='groups' type64='Q'/>
+<arg declared_type64='MPSGraphPaddingStyle' index='5' name='paddingStyle' type64='Q'/>
+<arg declared_type64='MPSGraphTensorNamedDataLayout' index='6' name='dataLayout' type64='Q'/>
+<arg declared_type64='MPSGraphTensorNamedDataLayout' index='7' name='weightsLayout' type64='Q'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='dilationRateInX'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='dilationRateInY'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='groups'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingBottom'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingLeft'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingRight'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingStyle'>
+<retval declared_type64='MPSGraphPaddingStyle' type64='Q'/>
+</method>
+<method selector='paddingTop'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='setDataLayout:'>
+<arg declared_type64='MPSGraphTensorNamedDataLayout' index='0' name='dataLayout' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDilationRateInX:'>
+<arg declared_type64='NSUInteger' index='0' name='dilationRateInX' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDilationRateInY:'>
+<arg declared_type64='NSUInteger' index='0' name='dilationRateInY' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setExplicitPaddingWithPaddingLeft:paddingRight:paddingTop:paddingBottom:'>
+<arg declared_type64='NSUInteger' index='0' name='paddingLeft' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='paddingRight' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='paddingTop' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='paddingBottom' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setGroups:'>
+<arg declared_type64='NSUInteger' index='0' name='groups' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPaddingBottom:'>
+<arg declared_type64='NSUInteger' index='0' name='paddingBottom' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPaddingLeft:'>
+<arg declared_type64='NSUInteger' index='0' name='paddingLeft' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPaddingRight:'>
+<arg declared_type64='NSUInteger' index='0' name='paddingRight' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPaddingStyle:'>
+<arg declared_type64='MPSGraphPaddingStyle' index='0' name='paddingStyle' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPaddingTop:'>
+<arg declared_type64='NSUInteger' index='0' name='paddingTop' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setStrideInX:'>
+<arg declared_type64='NSUInteger' index='0' name='strideInX' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setStrideInY:'>
+<arg declared_type64='NSUInteger' index='0' name='strideInY' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setWeightsLayout:'>
+<arg declared_type64='MPSGraphTensorNamedDataLayout' index='0' name='weightsLayout' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='strideInX'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='strideInY'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='weightsLayout'>
+<retval declared_type64='MPSGraphTensorNamedDataLayout' type64='Q'/>
+</method>
+</class>
+<class name='MPSGraphDepthwiseConvolution2DOpDescriptor'>
+<method selector='dataLayout'>
+<retval declared_type64='MPSGraphTensorNamedDataLayout' type64='Q'/>
+</method>
+<method class_method='true' selector='descriptorWithDataLayout:weightsLayout:'>
+<arg declared_type64='MPSGraphTensorNamedDataLayout' index='0' name='dataLayout' type64='Q'/>
+<arg declared_type64='MPSGraphTensorNamedDataLayout' index='1' name='weightsLayout' type64='Q'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithStrideInX:strideInY:dilationRateInX:dilationRateInY:paddingLeft:paddingRight:paddingTop:paddingBottom:paddingStyle:dataLayout:weightsLayout:'>
+<arg declared_type64='NSUInteger' index='0' name='strideInX' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='strideInY' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='dilationRateInX' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='dilationRateInY' type64='Q'/>
+<arg declared_type64='NSUInteger' index='4' name='paddingLeft' type64='Q'/>
+<arg declared_type64='NSUInteger' index='5' name='paddingRight' type64='Q'/>
+<arg declared_type64='NSUInteger' index='6' name='paddingTop' type64='Q'/>
+<arg declared_type64='NSUInteger' index='7' name='paddingBottom' type64='Q'/>
+<arg declared_type64='MPSGraphPaddingStyle' index='8' name='paddingStyle' type64='Q'/>
+<arg declared_type64='MPSGraphTensorNamedDataLayout' index='9' name='dataLayout' type64='Q'/>
+<arg declared_type64='MPSGraphTensorNamedDataLayout' index='10' name='weightsLayout' type64='Q'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='dilationRateInX'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='dilationRateInY'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingBottom'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingLeft'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingRight'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingStyle'>
+<retval declared_type64='MPSGraphPaddingStyle' type64='Q'/>
+</method>
+<method selector='paddingTop'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='setDataLayout:'>
+<arg declared_type64='MPSGraphTensorNamedDataLayout' index='0' name='dataLayout' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDilationRateInX:'>
+<arg declared_type64='NSUInteger' index='0' name='dilationRateInX' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDilationRateInY:'>
+<arg declared_type64='NSUInteger' index='0' name='dilationRateInY' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setExplicitPaddingWithPaddingLeft:paddingRight:paddingTop:paddingBottom:'>
+<arg declared_type64='NSUInteger' index='0' name='paddingLeft' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='paddingRight' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='paddingTop' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='paddingBottom' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPaddingBottom:'>
+<arg declared_type64='NSUInteger' index='0' name='paddingBottom' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPaddingLeft:'>
+<arg declared_type64='NSUInteger' index='0' name='paddingLeft' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPaddingRight:'>
+<arg declared_type64='NSUInteger' index='0' name='paddingRight' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPaddingStyle:'>
+<arg declared_type64='MPSGraphPaddingStyle' index='0' name='paddingStyle' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPaddingTop:'>
+<arg declared_type64='NSUInteger' index='0' name='paddingTop' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setStrideInX:'>
+<arg declared_type64='NSUInteger' index='0' name='strideInX' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setStrideInY:'>
+<arg declared_type64='NSUInteger' index='0' name='strideInY' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setWeightsLayout:'>
+<arg declared_type64='MPSGraphTensorNamedDataLayout' index='0' name='weightsLayout' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='strideInX'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='strideInY'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='weightsLayout'>
+<retval declared_type64='MPSGraphTensorNamedDataLayout' type64='Q'/>
+</method>
+</class>
+<class name='MPSGraphDevice'>
+<method class_method='true' selector='deviceWithMTLDevice:'>
+<arg declared_type64='id _Nonnull' index='0' name='metalDevice' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='metalDevice'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='type'>
+<retval declared_type64='MPSGraphDeviceType' type64='I'/>
+</method>
+</class>
+<class name='MPSGraphExecutionDescriptor'>
+<method selector='completionHandler'>
+<retval declared_type64='MPSGraphCompletionHandler _Nonnull' function_pointer='true' type64='@?'>
+<arg declared_type64='MPSGraphTensorDataDictionary * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='scheduledHandler'>
+<retval declared_type64='MPSGraphScheduledHandler _Nonnull' function_pointer='true' type64='@?'>
+<arg declared_type64='MPSGraphTensorDataDictionary * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='setCompletionHandler:'>
+<arg declared_type64='MPSGraphCompletionHandler _Nonnull' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='MPSGraphTensorDataDictionary * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setScheduledHandler:'>
+<arg declared_type64='MPSGraphScheduledHandler _Nonnull' function_pointer='true' index='0' name='scheduledHandler' type64='@?'>
+<arg declared_type64='MPSGraphTensorDataDictionary * _Nonnull' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setWaitUntilCompleted:'>
+<arg declared_type64='BOOL' index='0' name='waitUntilCompleted' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='waitUntilCompleted'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='MPSGraphOperation'>
+<method selector='controlDependencies'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='graph'>
+<retval declared_type64='MPSGraph * _Nonnull' type64='@'/>
+</method>
+<method selector='inputTensors'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='outputTensors'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MPSGraphPooling2DOpDescriptor'>
+<method selector='dataLayout'>
+<retval declared_type64='MPSGraphTensorNamedDataLayout' type64='Q'/>
+</method>
+<method class_method='true' selector='descriptorWithKernelWidth:kernelHeight:strideInX:strideInY:dilationRateInX:dilationRateInY:paddingLeft:paddingRight:paddingTop:paddingBottom:paddingStyle:dataLayout:'>
+<arg declared_type64='NSUInteger' index='0' name='kernelWidth' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='kernelHeight' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='strideInX' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='strideInY' type64='Q'/>
+<arg declared_type64='NSUInteger' index='4' name='dilationRateInX' type64='Q'/>
+<arg declared_type64='NSUInteger' index='5' name='dilationRateInY' type64='Q'/>
+<arg declared_type64='NSUInteger' index='6' name='paddingLeft' type64='Q'/>
+<arg declared_type64='NSUInteger' index='7' name='paddingRight' type64='Q'/>
+<arg declared_type64='NSUInteger' index='8' name='paddingTop' type64='Q'/>
+<arg declared_type64='NSUInteger' index='9' name='paddingBottom' type64='Q'/>
+<arg declared_type64='MPSGraphPaddingStyle' index='10' name='paddingStyle' type64='Q'/>
+<arg declared_type64='MPSGraphTensorNamedDataLayout' index='11' name='dataLayout' type64='Q'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithKernelWidth:kernelHeight:strideInX:strideInY:paddingStyle:dataLayout:'>
+<arg declared_type64='NSUInteger' index='0' name='kernelWidth' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='kernelHeight' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='strideInX' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='strideInY' type64='Q'/>
+<arg declared_type64='MPSGraphPaddingStyle' index='4' name='paddingStyle' type64='Q'/>
+<arg declared_type64='MPSGraphTensorNamedDataLayout' index='5' name='dataLayout' type64='Q'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='dilationRateInX'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='dilationRateInY'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='kernelHeight'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='kernelWidth'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingBottom'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingLeft'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingRight'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingStyle'>
+<retval declared_type64='MPSGraphPaddingStyle' type64='Q'/>
+</method>
+<method selector='paddingTop'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='setDataLayout:'>
+<arg declared_type64='MPSGraphTensorNamedDataLayout' index='0' name='dataLayout' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDilationRateInX:'>
+<arg declared_type64='NSUInteger' index='0' name='dilationRateInX' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDilationRateInY:'>
+<arg declared_type64='NSUInteger' index='0' name='dilationRateInY' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setExplicitPaddingWithPaddingLeft:paddingRight:paddingTop:paddingBottom:'>
+<arg declared_type64='NSUInteger' index='0' name='paddingLeft' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='paddingRight' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='paddingTop' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='paddingBottom' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setKernelHeight:'>
+<arg declared_type64='NSUInteger' index='0' name='kernelHeight' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setKernelWidth:'>
+<arg declared_type64='NSUInteger' index='0' name='kernelWidth' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPaddingBottom:'>
+<arg declared_type64='NSUInteger' index='0' name='paddingBottom' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPaddingLeft:'>
+<arg declared_type64='NSUInteger' index='0' name='paddingLeft' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPaddingRight:'>
+<arg declared_type64='NSUInteger' index='0' name='paddingRight' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPaddingStyle:'>
+<arg declared_type64='MPSGraphPaddingStyle' index='0' name='paddingStyle' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPaddingTop:'>
+<arg declared_type64='NSUInteger' index='0' name='paddingTop' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setStrideInX:'>
+<arg declared_type64='NSUInteger' index='0' name='strideInX' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setStrideInY:'>
+<arg declared_type64='NSUInteger' index='0' name='strideInY' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='strideInX'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='strideInY'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+</class>
+<class name='MPSGraphShapedType'>
+<method selector='dataType'>
+<retval declared_type64='MPSDataType' type64='I'/>
+</method>
+<method selector='initWithShape:dataType:'>
+<arg declared_type64='MPSShape * _Nullable' index='0' name='shape' type64='@'/>
+<arg declared_type64='MPSDataType' index='1' name='dataType' type64='I'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='isEqualTo:'>
+<arg declared_type64='MPSGraphShapedType * _Nullable' index='0' name='object' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setDataType:'>
+<arg declared_type64='MPSDataType' index='0' name='dataType' type64='I'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShape:'>
+<arg declared_type64='MPSShape * _Nullable' index='0' name='shape' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='shape'>
+<retval declared_type64='MPSShape * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MPSGraphTensor'>
+<method selector='dataType'>
+<retval declared_type64='MPSDataType' type64='I'/>
+</method>
+<method selector='operation'>
+<retval declared_type64='MPSGraphOperation * _Nonnull' type64='@'/>
+</method>
+<method selector='shape'>
+<retval declared_type64='MPSShape * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MPSGraphTensorData'>
+<method selector='dataType'>
+<retval declared_type64='MPSDataType' type64='I'/>
+</method>
+<method selector='device'>
+<retval declared_type64='MPSGraphDevice * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithDevice:data:shape:dataType:'>
+<arg declared_type64='MPSGraphDevice * _Nonnull' index='0' name='device' type64='@'/>
+<arg declared_type64='NSData * _Nonnull' index='1' name='data' type64='@'/>
+<arg declared_type64='MPSShape * _Nonnull' index='2' name='shape' type64='@'/>
+<arg declared_type64='MPSDataType' index='3' name='dataType' type64='I'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithMPSImageBatch:'>
+<arg declared_type64='MPSImageBatch * _Nonnull' index='0' name='imageBatch' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithMPSMatrix:'>
+<arg declared_type64='MPSMatrix * _Nonnull' index='0' name='matrix' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithMPSMatrix:rank:'>
+<arg declared_type64='MPSMatrix * _Nonnull' index='0' name='matrix' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='rank' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithMPSNDArray:'>
+<arg declared_type64='MPSNDArray * _Nonnull' index='0' name='ndarray' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithMPSVector:'>
+<arg declared_type64='MPSVector * _Nonnull' index='0' name='vector' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithMPSVector:rank:'>
+<arg declared_type64='MPSVector * _Nonnull' index='0' name='vector' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='rank' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithMTLBuffer:shape:dataType:'>
+<arg declared_type64='id _Nonnull' index='0' name='buffer' type64='@'/>
+<arg declared_type64='MPSShape * _Nonnull' index='1' name='shape' type64='@'/>
+<arg declared_type64='MPSDataType' index='2' name='dataType' type64='I'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='mpsndarray'>
+<retval declared_type64='MPSNDArray * _Nonnull' type64='@'/>
+</method>
+<method selector='shape'>
+<retval declared_type64='MPSShape * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MPSGraphVariableOp'>
+<method selector='dataType'>
+<retval declared_type64='MPSDataType' type64='I'/>
+</method>
+<method selector='shape'>
+<retval declared_type64='MPSShape * _Nonnull' type64='@'/>
+</method>
+</class>
+</signatures>

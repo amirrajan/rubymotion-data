@@ -1,0 +1,227 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Accounts.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreData.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/Intents.framework'/>
+<depends_on path='/System/Library/Frameworks/MediaPlayer.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenGLES.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/UIKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Contacts.framework'/>
+<depends_on path='/System/Library/Frameworks/ContactsUI.framework'/>
+<depends_on path='/System/Library/Frameworks/Metal.framework'/>
+<depends_on path='/System/Library/Frameworks/Social.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreLocation.framework'/>
+<depends_on path='/System/Library/Frameworks/Photos.framework'/>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreImage.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/MediaToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<enum name='PHLivePhotoBadgeOptionsLiveOff' value64='2'/>
+<enum name='PHLivePhotoBadgeOptionsOverContent' value64='1'/>
+<enum name='PHLivePhotoViewPlaybackStyleFull' value64='1'/>
+<enum name='PHLivePhotoViewPlaybackStyleHint' value64='2'/>
+<enum name='PHLivePhotoViewPlaybackStyleUndefined' value64='0'/>
+<enum name='PHPickerConfigurationAssetRepresentationModeAutomatic' value64='0'/>
+<enum name='PHPickerConfigurationAssetRepresentationModeCompatible' value64='2'/>
+<enum name='PHPickerConfigurationAssetRepresentationModeCurrent' value64='1'/>
+<class name='NSObject'>
+<method selector='canHandleAdjustmentData:'>
+<arg declared_type64='PHAdjustmentData * _Nonnull' index='0' name='adjustmentData' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='cancelContentEditing'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='finishContentEditingWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(PHContentEditingOutput * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='PHContentEditingOutput * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='livePhotoView:didEndPlaybackWithStyle:'>
+<arg declared_type64='PHLivePhotoView * _Nonnull' index='0' name='livePhotoView' type64='@'/>
+<arg declared_type64='PHLivePhotoViewPlaybackStyle' index='1' name='playbackStyle' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='livePhotoView:willBeginPlaybackWithStyle:'>
+<arg declared_type64='PHLivePhotoView * _Nonnull' index='0' name='livePhotoView' type64='@'/>
+<arg declared_type64='PHLivePhotoViewPlaybackStyle' index='1' name='playbackStyle' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='picker:didFinishPicking:'>
+<arg declared_type64='PHPickerViewController * _Nonnull' index='0' name='picker' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='results' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='shouldShowCancelConfirmation'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='startContentEditingWithInput:placeholderImage:'>
+<arg declared_type64='PHContentEditingInput * _Nonnull' index='0' name='contentEditingInput' type64='@'/>
+<arg declared_type64='UIImage * _Nonnull' index='1' name='placeholderImage' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='PHLivePhotoView'>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='isMuted'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='livePhoto'>
+<retval declared_type64='PHLivePhoto * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='livePhotoBadgeImageWithOptions:'>
+<arg declared_type64='PHLivePhotoBadgeOptions' index='0' name='badgeOptions' type64='Q'/>
+<retval declared_type64='UIImage * _Nonnull' type64='@'/>
+</method>
+<method selector='playbackGestureRecognizer'>
+<retval declared_type64='UIGestureRecognizer * _Nonnull' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLivePhoto:'>
+<arg declared_type64='PHLivePhoto * _Nullable' index='0' name='livePhoto' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMuted:'>
+<arg declared_type64='BOOL' index='0' name='muted' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='startPlaybackWithStyle:'>
+<arg declared_type64='PHLivePhotoViewPlaybackStyle' index='0' name='playbackStyle' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stopPlayback'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='PHPhotoLibrary'>
+<method selector='presentLimitedLibraryPickerFromViewController:'>
+<arg declared_type64='UIViewController * _Nonnull' index='0' name='controller' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='PHPickerConfiguration'>
+<method selector='filter'>
+<retval declared_type64='PHPickerFilter * _Nullable' type64='@'/>
+</method>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithPhotoLibrary:'>
+<arg declared_type64='PHPhotoLibrary * _Nonnull' index='0' name='photoLibrary' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='preferredAssetRepresentationMode'>
+<retval declared_type64='PHPickerConfigurationAssetRepresentationMode' type64='q'/>
+</method>
+<method selector='selectionLimit'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='setFilter:'>
+<arg declared_type64='PHPickerFilter * _Nullable' index='0' name='filter' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPreferredAssetRepresentationMode:'>
+<arg declared_type64='PHPickerConfigurationAssetRepresentationMode' index='0' name='preferredAssetRepresentationMode' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSelectionLimit:'>
+<arg declared_type64='NSInteger' index='0' name='selectionLimit' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='PHPickerFilter'>
+<method class_method='true' selector='anyFilterMatchingSubfilters:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='subfilters' type64='@'/>
+<retval declared_type64='PHPickerFilter * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='imagesFilter'>
+<retval declared_type64='PHPickerFilter * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='livePhotosFilter'>
+<retval declared_type64='PHPickerFilter * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='videosFilter'>
+<retval declared_type64='PHPickerFilter * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='PHPickerResult'>
+<method selector='assetIdentifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='itemProvider'>
+<retval declared_type64='NSItemProvider * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='PHPickerViewController'>
+<method selector='configuration'>
+<retval declared_type64='PHPickerConfiguration * _Nonnull' type64='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='initWithConfiguration:'>
+<arg declared_type64='PHPickerConfiguration * _Nonnull' index='0' name='configuration' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='PHContentEditingController'>
+<method selector='canHandleAdjustmentData:' type64='B24@0:8@16'>
+<arg declared_type64='PHAdjustmentData * _Nonnull' index='0' name='adjustmentData' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='cancelContentEditing' type64='v16@0:8'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='finishContentEditingWithCompletionHandler:' type64='v24@0:8@?16'>
+<arg declared_type64='void (^ _Nonnull)(PHContentEditingOutput * _Nullable)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='PHContentEditingOutput * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='shouldShowCancelConfirmation' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='startContentEditingWithInput:placeholderImage:' type64='v32@0:8@16@24'>
+<arg declared_type64='PHContentEditingInput * _Nonnull' index='0' name='contentEditingInput' type64='@'/>
+<arg declared_type64='UIImage * _Nonnull' index='1' name='placeholderImage' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='PHLivePhotoViewDelegate'>
+<method selector='livePhotoView:didEndPlaybackWithStyle:' type64='v32@0:8@16q24'>
+<arg declared_type64='PHLivePhotoView * _Nonnull' index='0' name='livePhotoView' type64='@'/>
+<arg declared_type64='PHLivePhotoViewPlaybackStyle' index='1' name='playbackStyle' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='livePhotoView:willBeginPlaybackWithStyle:' type64='v32@0:8@16q24'>
+<arg declared_type64='PHLivePhotoView * _Nonnull' index='0' name='livePhotoView' type64='@'/>
+<arg declared_type64='PHLivePhotoViewPlaybackStyle' index='1' name='playbackStyle' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='PHPickerViewControllerDelegate'>
+<method selector='picker:didFinishPicking:' type64='v32@0:8@16@24'>
+<arg declared_type64='PHPickerViewController * _Nonnull' index='0' name='picker' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='results' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

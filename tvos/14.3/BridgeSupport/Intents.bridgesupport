@@ -1,0 +1,1513 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreLocation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type64='NSString*' name='INIntentErrorDomain' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='INSetMessageAttributeIntentIdentifier' type64='@'/>
+<constant declared_type64='double' name='IntentsVersionNumber' type64='d'/>
+<constant const='true' declared_type64='unsigned char*' name='IntentsVersionString' type64='^C'/>
+<enum name='INAddMediaIntentResponseCodeFailure' value64='5'/>
+<enum name='INAddMediaIntentResponseCodeFailureRequiringAppLaunch' value64='6'/>
+<enum name='INAddMediaIntentResponseCodeHandleInApp' value64='4'/>
+<enum name='INAddMediaIntentResponseCodeInProgress' value64='2'/>
+<enum name='INAddMediaIntentResponseCodeReady' value64='1'/>
+<enum name='INAddMediaIntentResponseCodeSuccess' value64='3'/>
+<enum name='INAddMediaIntentResponseCodeUnspecified' value64='0'/>
+<enum name='INAddMediaMediaDestinationUnsupportedReasonPlaylistNameNotFound' value64='1'/>
+<enum name='INAddMediaMediaDestinationUnsupportedReasonPlaylistNotEditable' value64='2'/>
+<enum name='INAddMediaMediaItemUnsupportedReasonCellularDataSettings' value64='5'/>
+<enum name='INAddMediaMediaItemUnsupportedReasonExplicitContentSettings' value64='4'/>
+<enum name='INAddMediaMediaItemUnsupportedReasonLoginRequired' value64='1'/>
+<enum name='INAddMediaMediaItemUnsupportedReasonRegionRestriction' value64='8'/>
+<enum name='INAddMediaMediaItemUnsupportedReasonRestrictedContent' value64='6'/>
+<enum name='INAddMediaMediaItemUnsupportedReasonServiceUnavailable' value64='7'/>
+<enum name='INAddMediaMediaItemUnsupportedReasonSubscriptionRequired' value64='2'/>
+<enum name='INAddMediaMediaItemUnsupportedReasonUnsupportedMediaType' value64='3'/>
+<enum name='INBookRestaurantReservationIntentCodeDenied' value64='1'/>
+<enum name='INBookRestaurantReservationIntentCodeFailure' value64='2'/>
+<enum name='INBookRestaurantReservationIntentCodeFailureRequiringAppLaunch' value64='3'/>
+<enum name='INBookRestaurantReservationIntentCodeFailureRequiringAppLaunchMustVerifyCredentials' value64='4'/>
+<enum name='INBookRestaurantReservationIntentCodeFailureRequiringAppLaunchServiceTemporarilyUnavailable' value64='5'/>
+<enum name='INBookRestaurantReservationIntentCodeSuccess' value64='0'/>
+<enum name='INGetAvailableRestaurantReservationBookingDefaultsIntentResponseCodeFailure' value64='1'/>
+<enum name='INGetAvailableRestaurantReservationBookingDefaultsIntentResponseCodeSuccess' value64='0'/>
+<enum name='INGetAvailableRestaurantReservationBookingDefaultsIntentResponseCodeUnspecified' value64='2'/>
+<enum name='INGetAvailableRestaurantReservationBookingsIntentCodeFailure' value64='1'/>
+<enum name='INGetAvailableRestaurantReservationBookingsIntentCodeFailureRequestUnsatisfiable' value64='2'/>
+<enum name='INGetAvailableRestaurantReservationBookingsIntentCodeFailureRequestUnspecified' value64='3'/>
+<enum name='INGetAvailableRestaurantReservationBookingsIntentCodeSuccess' value64='0'/>
+<enum name='INGetRestaurantGuestIntentResponseCodeFailure' value64='1'/>
+<enum name='INGetRestaurantGuestIntentResponseCodeSuccess' value64='0'/>
+<enum name='INGetUserCurrentRestaurantReservationBookingsIntentResponseCodeFailure' value64='1'/>
+<enum name='INGetUserCurrentRestaurantReservationBookingsIntentResponseCodeFailureRequestUnsatisfiable' value64='2'/>
+<enum name='INGetUserCurrentRestaurantReservationBookingsIntentResponseCodeSuccess' value64='0'/>
+<enum name='INGetUserCurrentRestaurantReservationBookingsIntentResponseCodeUnspecified' value64='3'/>
+<enum name='INIntentErrorDecodingGeneric' value64='9000'/>
+<enum name='INIntentErrorDeletingAllInteractions' value64='1902'/>
+<enum name='INIntentErrorDeletingInteractionWithGroupIdentifier' value64='1904'/>
+<enum name='INIntentErrorDeletingInteractionWithIdentifiers' value64='1903'/>
+<enum name='INIntentErrorDonatingInteraction' value64='1901'/>
+<enum name='INIntentErrorEncodingFailed' value64='8001'/>
+<enum name='INIntentErrorEncodingGeneric' value64='8000'/>
+<enum name='INIntentErrorExtensionBringUpFailed' value64='5001'/>
+<enum name='INIntentErrorExtensionLaunchingTimeout' value64='5000'/>
+<enum name='INIntentErrorImageGeneric' value64='6000'/>
+<enum name='INIntentErrorImageLoadingFailed' value64='6003'/>
+<enum name='INIntentErrorImageNoServiceAvailable' value64='6001'/>
+<enum name='INIntentErrorImageProxyInvalid' value64='6006'/>
+<enum name='INIntentErrorImageProxyLoop' value64='6005'/>
+<enum name='INIntentErrorImageProxyTimeout' value64='6007'/>
+<enum name='INIntentErrorImageRetrievalFailed' value64='6004'/>
+<enum name='INIntentErrorImageScalingFailed' value64='6009'/>
+<enum name='INIntentErrorImageServiceFailure' value64='6008'/>
+<enum name='INIntentErrorImageStorageFailed' value64='6002'/>
+<enum name='INIntentErrorIntentSupportedByMultipleExtension' value64='2001'/>
+<enum name='INIntentErrorInteractionOperationNotSupported' value64='1900'/>
+<enum name='INIntentErrorInvalidIntentName' value64='2004'/>
+<enum name='INIntentErrorInvalidUserVocabularyFileLocation' value64='4000'/>
+<enum name='INIntentErrorMissingInformation' value64='3002'/>
+<enum name='INIntentErrorNoAppAvailable' value64='2005'/>
+<enum name='INIntentErrorNoHandlerProvidedForIntent' value64='2003'/>
+<enum name='INIntentErrorPermissionDenied' value64='6010'/>
+<enum name='INIntentErrorRequestTimedOut' value64='3001'/>
+<enum name='INIntentErrorRestrictedIntentsNotSupportedByExtension' value64='2002'/>
+<enum name='INIntentErrorVoiceShortcutCreationFailed' value64='7000'/>
+<enum name='INIntentErrorVoiceShortcutDeleteFailed' value64='7002'/>
+<enum name='INIntentErrorVoiceShortcutGetFailed' value64='7001'/>
+<enum name='INIntentHandlingStatusDeferredToApplication' value64='5'/>
+<enum name='INIntentHandlingStatusFailure' value64='4'/>
+<enum name='INIntentHandlingStatusInProgress' value64='2'/>
+<enum name='INIntentHandlingStatusReady' value64='1'/>
+<enum name='INIntentHandlingStatusSuccess' value64='3'/>
+<enum name='INIntentHandlingStatusUnspecified' value64='0'/>
+<enum name='INIntentHandlingStatusUserConfirmationRequired' value64='6'/>
+<enum name='INInteractionDirectionIncoming' value64='2'/>
+<enum name='INInteractionDirectionOutgoing' value64='1'/>
+<enum name='INInteractionDirectionUnspecified' value64='0'/>
+<enum name='INMediaAffinityTypeDislike' value64='2'/>
+<enum name='INMediaAffinityTypeLike' value64='1'/>
+<enum name='INMediaAffinityTypeUnknown' value64='0'/>
+<enum name='INMediaDestinationTypeLibrary' value64='1'/>
+<enum name='INMediaDestinationTypePlaylist' value64='2'/>
+<enum name='INMediaDestinationTypeUnknown' value64='0'/>
+<enum name='INMediaItemTypeAlbum' value64='2'/>
+<enum name='INMediaItemTypeAlgorithmicRadioStation' value64='19'/>
+<enum name='INMediaItemTypeArtist' value64='3'/>
+<enum name='INMediaItemTypeAudioBook' value64='10'/>
+<enum name='INMediaItemTypeGenre' value64='4'/>
+<enum name='INMediaItemTypeMovie' value64='11'/>
+<enum name='INMediaItemTypeMusic' value64='18'/>
+<enum name='INMediaItemTypeMusicStation' value64='9'/>
+<enum name='INMediaItemTypeMusicVideo' value64='14'/>
+<enum name='INMediaItemTypeNews' value64='20'/>
+<enum name='INMediaItemTypePlaylist' value64='5'/>
+<enum name='INMediaItemTypePodcastEpisode' value64='7'/>
+<enum name='INMediaItemTypePodcastPlaylist' value64='8'/>
+<enum name='INMediaItemTypePodcastShow' value64='6'/>
+<enum name='INMediaItemTypePodcastStation' value64='15'/>
+<enum name='INMediaItemTypeRadioStation' value64='16'/>
+<enum name='INMediaItemTypeSong' value64='1'/>
+<enum name='INMediaItemTypeStation' value64='17'/>
+<enum name='INMediaItemTypeTVShow' value64='12'/>
+<enum name='INMediaItemTypeTVShowEpisode' value64='13'/>
+<enum name='INMediaItemTypeUnknown' value64='0'/>
+<enum name='INMediaReferenceCurrentlyPlaying' value64='1'/>
+<enum name='INMediaReferenceUnknown' value64='0'/>
+<enum name='INMediaSortOrderBest' value64='3'/>
+<enum name='INMediaSortOrderNewest' value64='1'/>
+<enum name='INMediaSortOrderOldest' value64='2'/>
+<enum name='INMediaSortOrderPopular' value64='5'/>
+<enum name='INMediaSortOrderRecommended' value64='8'/>
+<enum name='INMediaSortOrderTrending' value64='7'/>
+<enum name='INMediaSortOrderUnknown' value64='0'/>
+<enum name='INMediaSortOrderUnpopular' value64='6'/>
+<enum name='INMediaSortOrderWorst' value64='4'/>
+<enum name='INMediaUserContextSubscriptionStatusNotSubscribed' value64='1'/>
+<enum name='INMediaUserContextSubscriptionStatusSubscribed' value64='2'/>
+<enum name='INMediaUserContextSubscriptionStatusUnknown' value64='0'/>
+<enum name='INPlayMediaIntentResponseCodeContinueInApp' value64='2'/>
+<enum name='INPlayMediaIntentResponseCodeFailure' value64='6'/>
+<enum name='INPlayMediaIntentResponseCodeFailureNoUnplayedContent' value64='9'/>
+<enum name='INPlayMediaIntentResponseCodeFailureRequiringAppLaunch' value64='7'/>
+<enum name='INPlayMediaIntentResponseCodeFailureRestrictedContent' value64='10'/>
+<enum name='INPlayMediaIntentResponseCodeFailureUnknownMediaType' value64='8'/>
+<enum name='INPlayMediaIntentResponseCodeHandleInApp' value64='5'/>
+<enum name='INPlayMediaIntentResponseCodeInProgress' value64='3'/>
+<enum name='INPlayMediaIntentResponseCodeReady' value64='1'/>
+<enum name='INPlayMediaIntentResponseCodeSuccess' value64='4'/>
+<enum name='INPlayMediaIntentResponseCodeUnspecified' value64='0'/>
+<enum name='INPlayMediaMediaItemUnsupportedReasonCellularDataSettings' value64='5'/>
+<enum name='INPlayMediaMediaItemUnsupportedReasonExplicitContentSettings' value64='4'/>
+<enum name='INPlayMediaMediaItemUnsupportedReasonLoginRequired' value64='1'/>
+<enum name='INPlayMediaMediaItemUnsupportedReasonRegionRestriction' value64='8'/>
+<enum name='INPlayMediaMediaItemUnsupportedReasonRestrictedContent' value64='6'/>
+<enum name='INPlayMediaMediaItemUnsupportedReasonServiceUnavailable' value64='7'/>
+<enum name='INPlayMediaMediaItemUnsupportedReasonSubscriptionRequired' value64='2'/>
+<enum name='INPlayMediaMediaItemUnsupportedReasonUnsupportedMediaType' value64='3'/>
+<enum name='INPlayMediaPlaybackSpeedUnsupportedReasonAboveMaximum' value64='2'/>
+<enum name='INPlayMediaPlaybackSpeedUnsupportedReasonBelowMinimum' value64='1'/>
+<enum name='INPlaybackQueueLocationLater' value64='3'/>
+<enum name='INPlaybackQueueLocationNext' value64='2'/>
+<enum name='INPlaybackQueueLocationNow' value64='1'/>
+<enum name='INPlaybackQueueLocationUnknown' value64='0'/>
+<enum name='INPlaybackRepeatModeAll' value64='2'/>
+<enum name='INPlaybackRepeatModeNone' value64='1'/>
+<enum name='INPlaybackRepeatModeOne' value64='3'/>
+<enum name='INPlaybackRepeatModeUnknown' value64='0'/>
+<enum name='INRestaurantReservationUserBookingStatusConfirmed' value64='1'/>
+<enum name='INRestaurantReservationUserBookingStatusDenied' value64='2'/>
+<enum name='INRestaurantReservationUserBookingStatusPending' value64='0'/>
+<enum name='INSearchForMediaIntentResponseCodeContinueInApp' value64='2'/>
+<enum name='INSearchForMediaIntentResponseCodeFailure' value64='5'/>
+<enum name='INSearchForMediaIntentResponseCodeFailureRequiringAppLaunch' value64='6'/>
+<enum name='INSearchForMediaIntentResponseCodeInProgress' value64='3'/>
+<enum name='INSearchForMediaIntentResponseCodeReady' value64='1'/>
+<enum name='INSearchForMediaIntentResponseCodeSuccess' value64='4'/>
+<enum name='INSearchForMediaIntentResponseCodeUnspecified' value64='0'/>
+<enum name='INSearchForMediaMediaItemUnsupportedReasonCellularDataSettings' value64='5'/>
+<enum name='INSearchForMediaMediaItemUnsupportedReasonExplicitContentSettings' value64='4'/>
+<enum name='INSearchForMediaMediaItemUnsupportedReasonLoginRequired' value64='1'/>
+<enum name='INSearchForMediaMediaItemUnsupportedReasonRegionRestriction' value64='8'/>
+<enum name='INSearchForMediaMediaItemUnsupportedReasonRestrictedContent' value64='6'/>
+<enum name='INSearchForMediaMediaItemUnsupportedReasonServiceUnavailable' value64='7'/>
+<enum name='INSearchForMediaMediaItemUnsupportedReasonSubscriptionRequired' value64='2'/>
+<enum name='INSearchForMediaMediaItemUnsupportedReasonUnsupportedMediaType' value64='3'/>
+<enum name='INSiriAuthorizationStatusAuthorized' value64='3'/>
+<enum name='INSiriAuthorizationStatusDenied' value64='2'/>
+<enum name='INSiriAuthorizationStatusNotDetermined' value64='0'/>
+<enum name='INSiriAuthorizationStatusRestricted' value64='1'/>
+<enum name='INUpdateMediaAffinityIntentResponseCodeFailure' value64='4'/>
+<enum name='INUpdateMediaAffinityIntentResponseCodeFailureRequiringAppLaunch' value64='5'/>
+<enum name='INUpdateMediaAffinityIntentResponseCodeInProgress' value64='2'/>
+<enum name='INUpdateMediaAffinityIntentResponseCodeReady' value64='1'/>
+<enum name='INUpdateMediaAffinityIntentResponseCodeSuccess' value64='3'/>
+<enum name='INUpdateMediaAffinityIntentResponseCodeUnspecified' value64='0'/>
+<enum name='INUpdateMediaAffinityMediaItemUnsupportedReasonCellularDataSettings' value64='5'/>
+<enum name='INUpdateMediaAffinityMediaItemUnsupportedReasonExplicitContentSettings' value64='4'/>
+<enum name='INUpdateMediaAffinityMediaItemUnsupportedReasonLoginRequired' value64='1'/>
+<enum name='INUpdateMediaAffinityMediaItemUnsupportedReasonRegionRestriction' value64='8'/>
+<enum name='INUpdateMediaAffinityMediaItemUnsupportedReasonRestrictedContent' value64='6'/>
+<enum name='INUpdateMediaAffinityMediaItemUnsupportedReasonServiceUnavailable' value64='7'/>
+<enum name='INUpdateMediaAffinityMediaItemUnsupportedReasonSubscriptionRequired' value64='2'/>
+<enum name='INUpdateMediaAffinityMediaItemUnsupportedReasonUnsupportedMediaType' value64='3'/>
+<enum name='INVocabularyStringTypeCarName' value64='301'/>
+<enum name='INVocabularyStringTypeCarProfileName' value64='300'/>
+<enum name='INVocabularyStringTypeContactGroupName' value64='2'/>
+<enum name='INVocabularyStringTypeContactName' value64='1'/>
+<enum name='INVocabularyStringTypeMediaAudiobookAuthorName' value64='703'/>
+<enum name='INVocabularyStringTypeMediaAudiobookTitle' value64='702'/>
+<enum name='INVocabularyStringTypeMediaMusicArtistName' value64='701'/>
+<enum name='INVocabularyStringTypeMediaPlaylistTitle' value64='700'/>
+<enum name='INVocabularyStringTypeMediaShowTitle' value64='704'/>
+<enum name='INVocabularyStringTypeNotebookItemGroupName' value64='501'/>
+<enum name='INVocabularyStringTypeNotebookItemTitle' value64='500'/>
+<enum name='INVocabularyStringTypePaymentsAccountNickname' value64='401'/>
+<enum name='INVocabularyStringTypePaymentsOrganizationName' value64='400'/>
+<enum name='INVocabularyStringTypePhotoAlbumName' value64='101'/>
+<enum name='INVocabularyStringTypePhotoTag' value64='100'/>
+<enum name='INVocabularyStringTypeWorkoutActivityName' value64='200'/>
+<class name='INAddMediaIntent'>
+<method selector='initWithMediaItems:mediaSearch:mediaDestination:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='mediaItems' type64='@'/>
+<arg declared_type64='INMediaSearch * _Nullable' index='1' name='mediaSearch' type64='@'/>
+<arg declared_type64='INMediaDestination * _Nullable' index='2' name='mediaDestination' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='mediaDestination'>
+<retval declared_type64='INMediaDestination * _Nullable' type64='@'/>
+</method>
+<method selector='mediaItems'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='mediaSearch'>
+<retval declared_type64='INMediaSearch * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='INAddMediaIntentResponse'>
+<method selector='code'>
+<retval declared_type64='INAddMediaIntentResponseCode' type64='q'/>
+</method>
+<method selector='initWithCode:userActivity:'>
+<arg declared_type64='INAddMediaIntentResponseCode' index='0' name='code' type64='q'/>
+<arg declared_type64='NSUserActivity * _Nullable' index='1' name='userActivity' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INAddMediaMediaDestinationResolutionResult'>
+<method selector='initWithMediaDestinationResolutionResult:'>
+<arg declared_type64='INMediaDestinationResolutionResult * _Nonnull' index='0' name='mediaDestinationResolutionResult' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='unsupportedForReason:'>
+<arg declared_type64='INAddMediaMediaDestinationUnsupportedReason' index='0' name='reason' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INAddMediaMediaItemResolutionResult'>
+<method selector='initWithMediaItemResolutionResult:'>
+<arg declared_type64='INMediaItemResolutionResult * _Nonnull' index='0' name='mediaItemResolutionResult' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='successesWithResolvedMediaItems:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='resolvedMediaItems' type64='@'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='unsupportedForReason:'>
+<arg declared_type64='INAddMediaMediaItemUnsupportedReason' index='0' name='reason' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INAddTasksIntent'>
+<method selector='initWithTargetTaskList:taskTitles:spatialEventTrigger:temporalEventTrigger:'>
+<arg declared_type64='INTaskList * _Nullable' index='0' name='targetTaskList' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='1' name='taskTitles' type64='@'/>
+<arg declared_type64='INSpatialEventTrigger * _Nullable' index='2' name='spatialEventTrigger' type64='@'/>
+<arg declared_type64='INTemporalEventTrigger * _Nullable' index='3' name='temporalEventTrigger' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INBooleanResolutionResult'>
+<method class_method='true' selector='confirmationRequiredWithValueToConfirm:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='valueToConfirm' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='successWithResolvedValue:'>
+<arg declared_type64='BOOL' index='0' name='resolvedValue' type64='B'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INDateComponentsRange'>
+<method selector='EKRecurrenceRule'>
+<retval declared_type64='EKRecurrenceRule * _Nullable' type64='@'/>
+</method>
+<method selector='endDateComponents'>
+<retval declared_type64='NSDateComponents * _Nullable' type64='@'/>
+</method>
+<method selector='initWithEKRecurrenceRule:'>
+<arg declared_type64='EKRecurrenceRule * _Nonnull' index='0' name='recurrenceRule' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithStartDateComponents:endDateComponents:'>
+<arg declared_type64='NSDateComponents * _Nullable' index='0' name='startDateComponents' type64='@'/>
+<arg declared_type64='NSDateComponents * _Nullable' index='1' name='endDateComponents' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithStartDateComponents:endDateComponents:recurrenceRule:'>
+<arg declared_type64='NSDateComponents * _Nullable' index='0' name='startDateComponents' type64='@'/>
+<arg declared_type64='NSDateComponents * _Nullable' index='1' name='endDateComponents' type64='@'/>
+<arg declared_type64='INRecurrenceRule * _Nullable' index='2' name='recurrenceRule' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='recurrenceRule'>
+<retval declared_type64='INRecurrenceRule * _Nullable' type64='@'/>
+</method>
+<method selector='startDateComponents'>
+<retval declared_type64='NSDateComponents * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='INDoubleResolutionResult'>
+<method class_method='true' selector='confirmationRequiredWithValueToConfirm:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='valueToConfirm' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='successWithResolvedValue:'>
+<arg declared_type64='double' index='0' name='resolvedValue' type64='d'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INImage'>
+<method class_method='true' selector='imageNamed:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='name' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='imageWithImageData:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='imageData' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='imageWithURL:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='URL' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='imageWithURL:width:height:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='URL' type64='@'/>
+<arg declared_type64='double' index='1' name='width' type64='d'/>
+<arg declared_type64='double' index='2' name='height' type64='d'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='systemImageNamed:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='systemImageName' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INIntegerResolutionResult'>
+<method class_method='true' selector='confirmationRequiredWithValueToConfirm:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='valueToConfirm' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='successWithResolvedValue:'>
+<arg declared_type64='NSInteger' index='0' name='resolvedValue' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INIntent'>
+<method selector='identifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='imageForParameterNamed:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='parameterName' type64='@'/>
+<retval declared_type64='INImage * _Nullable' type64='@'/>
+</method>
+<method selector='intentDescription'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='keyImage'>
+<retval declared_type64='INImage * _Nullable' type64='@'/>
+</method>
+<method selector='setImage:forParameterNamed:'>
+<arg declared_type64='INImage * _Nullable' index='0' name='image' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='parameterName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSuggestedInvocationPhrase:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='suggestedInvocationPhrase' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='suggestedInvocationPhrase'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='INIntentResolutionResult'>
+<method class_method='true' selector='confirmationRequiredWithItemToConfirm:forReason:'>
+<arg declared_type64='id _Nonnull' index='0' name='itemToConfirm' type64='@'/>
+<arg declared_type64='NSInteger' index='1' name='reason' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='needsValue'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='notRequired'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='unsupported'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='unsupportedWithReason:'>
+<arg declared_type64='NSInteger' index='0' name='reason' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INIntentResponse'>
+<method selector='setUserActivity:'>
+<arg declared_type64='NSUserActivity * _Nullable' index='0' name='userActivity' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='userActivity'>
+<retval declared_type64='NSUserActivity * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='INInteraction'>
+<method selector='dateInterval'>
+<retval declared_type64='NSDateInterval * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='deleteAllInteractionsWithCompletion:'>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='0' name='completion' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='deleteInteractionsWithGroupIdentifier:completion:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='groupIdentifier' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='deleteInteractionsWithIdentifiers:completion:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='identifiers' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='direction'>
+<retval declared_type64='INInteractionDirection' type64='q'/>
+</method>
+<method selector='donateInteractionWithCompletion:'>
+<arg declared_type64='void (^ _Nullable)(NSError * _Nullable)' function_pointer='true' index='0' name='completion' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='groupIdentifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithIntent:response:'>
+<arg declared_type64='INIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='INIntentResponse * _Nullable' index='1' name='response' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='intent'>
+<retval declared_type64='INIntent * _Nonnull' type64='@'/>
+</method>
+<method selector='intentHandlingStatus'>
+<retval declared_type64='INIntentHandlingStatus' type64='q'/>
+</method>
+<method selector='intentResponse'>
+<retval declared_type64='INIntentResponse * _Nullable' type64='@'/>
+</method>
+<method selector='setDateInterval:'>
+<arg declared_type64='NSDateInterval * _Nullable' index='0' name='dateInterval' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDirection:'>
+<arg declared_type64='INInteractionDirection' index='0' name='direction' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setGroupIdentifier:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='groupIdentifier' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setIdentifier:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='identifier' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='INMediaAffinityTypeResolutionResult'>
+<method class_method='true' selector='confirmationRequiredWithMediaAffinityTypeToConfirm:'>
+<arg declared_type64='INMediaAffinityType' index='0' name='mediaAffinityTypeToConfirm' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='successWithResolvedMediaAffinityType:'>
+<arg declared_type64='INMediaAffinityType' index='0' name='resolvedMediaAffinityType' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INMediaDestination'>
+<method class_method='true' selector='libraryDestination'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='mediaDestinationType'>
+<retval declared_type64='INMediaDestinationType' type64='q'/>
+</method>
+<method class_method='true' selector='playlistDestinationWithName:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='playlistName' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='playlistName'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='INMediaDestinationResolutionResult'>
+<method class_method='true' selector='confirmationRequiredWithMediaDestinationToConfirm:'>
+<arg declared_type64='INMediaDestination * _Nullable' index='0' name='mediaDestinationToConfirm' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='disambiguationWithMediaDestinationsToDisambiguate:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='mediaDestinationsToDisambiguate' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='successWithResolvedMediaDestination:'>
+<arg declared_type64='INMediaDestination * _Nonnull' index='0' name='resolvedMediaDestination' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INMediaItem'>
+<method selector='artist'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='artwork'>
+<retval declared_type64='INImage * _Nullable' type64='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='initWithIdentifier:title:type:artwork:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='identifier' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='title' type64='@'/>
+<arg declared_type64='INMediaItemType' index='2' name='type' type64='q'/>
+<arg declared_type64='INImage * _Nullable' index='3' name='artwork' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithIdentifier:title:type:artwork:artist:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='identifier' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='title' type64='@'/>
+<arg declared_type64='INMediaItemType' index='2' name='type' type64='q'/>
+<arg declared_type64='INImage * _Nullable' index='3' name='artwork' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='artist' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='type'>
+<retval declared_type64='INMediaItemType' type64='q'/>
+</method>
+</class>
+<class name='INMediaItemResolutionResult'>
+<method class_method='true' selector='confirmationRequiredWithMediaItemToConfirm:'>
+<arg declared_type64='INMediaItem * _Nullable' index='0' name='mediaItemToConfirm' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='disambiguationWithMediaItemsToDisambiguate:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='mediaItemsToDisambiguate' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='successWithResolvedMediaItem:'>
+<arg declared_type64='INMediaItem * _Nonnull' index='0' name='resolvedMediaItem' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='successesWithResolvedMediaItems:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='resolvedMediaItems' type64='@'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INMediaSearch'>
+<method selector='activityNames'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='albumName'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='artistName'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='genreNames'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='initWithMediaType:sortOrder:mediaName:artistName:albumName:genreNames:moodNames:releaseDate:reference:mediaIdentifier:'>
+<arg declared_type64='INMediaItemType' index='0' name='mediaType' type64='q'/>
+<arg declared_type64='INMediaSortOrder' index='1' name='sortOrder' type64='q'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='mediaName' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='artistName' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='albumName' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='5' name='genreNames' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='6' name='moodNames' type64='@'/>
+<arg declared_type64='INDateComponentsRange * _Nullable' index='7' name='releaseDate' type64='@'/>
+<arg declared_type64='INMediaReference' index='8' name='reference' type64='q'/>
+<arg declared_type64='NSString * _Nullable' index='9' name='mediaIdentifier' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='mediaIdentifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='mediaName'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='mediaType'>
+<retval declared_type64='INMediaItemType' type64='q'/>
+</method>
+<method selector='moodNames'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='reference'>
+<retval declared_type64='INMediaReference' type64='q'/>
+</method>
+<method selector='releaseDate'>
+<retval declared_type64='INDateComponentsRange * _Nullable' type64='@'/>
+</method>
+<method selector='sortOrder'>
+<retval declared_type64='INMediaSortOrder' type64='q'/>
+</method>
+</class>
+<class name='INMediaUserContext'>
+<method selector='init'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='numberOfLibraryItems'>
+<retval declared_type64='NSNumber * _Nullable' type64='@'/>
+</method>
+<method selector='setNumberOfLibraryItems:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='numberOfLibraryItems' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSubscriptionStatus:'>
+<arg declared_type64='INMediaUserContextSubscriptionStatus' index='0' name='subscriptionStatus' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='subscriptionStatus'>
+<retval declared_type64='INMediaUserContextSubscriptionStatus' type64='q'/>
+</method>
+</class>
+<class name='INPerson'>
+<method selector='aliases'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='initWithPersonHandle:nameComponents:displayName:image:contactIdentifier:customIdentifier:aliases:suggestionType:'>
+<arg declared_type64='INPersonHandle * _Nonnull' index='0' name='personHandle' type64='@'/>
+<arg declared_type64='NSPersonNameComponents * _Nullable' index='1' name='nameComponents' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='displayName' type64='@'/>
+<arg declared_type64='INImage * _Nullable' index='3' name='image' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='contactIdentifier' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='5' name='customIdentifier' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='6' name='aliases' type64='@'/>
+<arg declared_type64='INPersonSuggestionType' index='7' name='suggestionType' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='suggestionType'>
+<retval declared_type64='INPersonSuggestionType' type64='q'/>
+</method>
+</class>
+<class name='INPlayMediaIntent'>
+<method selector='initWithMediaItems:mediaContainer:playShuffled:playbackRepeatMode:resumePlayback:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='mediaItems' type64='@'/>
+<arg declared_type64='INMediaItem * _Nullable' index='1' name='mediaContainer' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='2' name='playShuffled' type64='@'/>
+<arg declared_type64='INPlaybackRepeatMode' index='3' name='playbackRepeatMode' type64='q'/>
+<arg declared_type64='NSNumber * _Nullable' index='4' name='resumePlayback' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithMediaItems:mediaContainer:playShuffled:playbackRepeatMode:resumePlayback:playbackQueueLocation:playbackSpeed:mediaSearch:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='mediaItems' type64='@'/>
+<arg declared_type64='INMediaItem * _Nullable' index='1' name='mediaContainer' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='2' name='playShuffled' type64='@'/>
+<arg declared_type64='INPlaybackRepeatMode' index='3' name='playbackRepeatMode' type64='q'/>
+<arg declared_type64='NSNumber * _Nullable' index='4' name='resumePlayback' type64='@'/>
+<arg declared_type64='INPlaybackQueueLocation' index='5' name='playbackQueueLocation' type64='q'/>
+<arg declared_type64='NSNumber * _Nullable' index='6' name='playbackSpeed' type64='@'/>
+<arg declared_type64='INMediaSearch * _Nullable' index='7' name='mediaSearch' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='mediaContainer'>
+<retval declared_type64='INMediaItem * _Nullable' type64='@'/>
+</method>
+<method selector='mediaItems'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='mediaSearch'>
+<retval declared_type64='INMediaSearch * _Nullable' type64='@'/>
+</method>
+<method selector='playShuffled'>
+<retval declared_type64='NSNumber * _Nullable' type64='@'/>
+</method>
+<method selector='playbackQueueLocation'>
+<retval declared_type64='INPlaybackQueueLocation' type64='q'/>
+</method>
+<method selector='playbackRepeatMode'>
+<retval declared_type64='INPlaybackRepeatMode' type64='q'/>
+</method>
+<method selector='playbackSpeed'>
+<retval declared_type64='NSNumber * _Nullable' type64='@'/>
+</method>
+<method selector='resumePlayback'>
+<retval declared_type64='NSNumber * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='INPlayMediaIntentResponse'>
+<method selector='code'>
+<retval declared_type64='INPlayMediaIntentResponseCode' type64='q'/>
+</method>
+<method selector='initWithCode:userActivity:'>
+<arg declared_type64='INPlayMediaIntentResponseCode' index='0' name='code' type64='q'/>
+<arg declared_type64='NSUserActivity * _Nullable' index='1' name='userActivity' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='nowPlayingInfo'>
+<retval declared_type64='NSDictionary * _Nullable' type64='@'/>
+</method>
+<method selector='setNowPlayingInfo:'>
+<arg declared_type64='NSDictionary * _Nullable' index='0' name='nowPlayingInfo' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='INPlayMediaMediaItemResolutionResult'>
+<method selector='initWithMediaItemResolutionResult:'>
+<arg declared_type64='INMediaItemResolutionResult * _Nonnull' index='0' name='mediaItemResolutionResult' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='successesWithResolvedMediaItems:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='resolvedMediaItems' type64='@'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='unsupportedForReason:'>
+<arg declared_type64='INPlayMediaMediaItemUnsupportedReason' index='0' name='reason' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INPlayMediaPlaybackSpeedResolutionResult'>
+<method selector='initWithDoubleResolutionResult:'>
+<arg declared_type64='INDoubleResolutionResult * _Nonnull' index='0' name='doubleResolutionResult' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='unsupportedForReason:'>
+<arg declared_type64='INPlayMediaPlaybackSpeedUnsupportedReason' index='0' name='reason' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INPlaybackQueueLocationResolutionResult'>
+<method class_method='true' selector='confirmationRequiredWithPlaybackQueueLocationToConfirm:'>
+<arg declared_type64='INPlaybackQueueLocation' index='0' name='playbackQueueLocationToConfirm' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='successWithResolvedPlaybackQueueLocation:'>
+<arg declared_type64='INPlaybackQueueLocation' index='0' name='resolvedPlaybackQueueLocation' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INPlaybackRepeatModeResolutionResult'>
+<method class_method='true' selector='confirmationRequiredWithPlaybackRepeatModeToConfirm:'>
+<arg declared_type64='INPlaybackRepeatMode' index='0' name='playbackRepeatModeToConfirm' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='successWithResolvedPlaybackRepeatMode:'>
+<arg declared_type64='INPlaybackRepeatMode' index='0' name='resolvedPlaybackRepeatMode' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INPreferences'>
+<method class_method='true' selector='requestSiriAuthorization:'>
+<arg declared_type64='void (^ _Nonnull)(INSiriAuthorizationStatus)' function_pointer='true' index='0' name='handler' type64='@?'>
+<arg declared_type64='INSiriAuthorizationStatus' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='siriAuthorizationStatus'>
+<retval declared_type64='INSiriAuthorizationStatus' type64='q'/>
+</method>
+<method class_method='true' selector='siriLanguageCode'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INRequestRideIntent'>
+<method selector='initWithPickupLocation:dropOffLocation:rideOptionName:partySize:paymentMethod:'>
+<arg declared_type64='CLPlacemark * _Nullable' index='0' name='pickupLocation' type64='@'/>
+<arg declared_type64='CLPlacemark * _Nullable' index='1' name='dropOffLocation' type64='@'/>
+<arg declared_type64='INSpeakableString * _Nullable' index='2' name='rideOptionName' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='3' name='partySize' type64='@'/>
+<arg declared_type64='INPaymentMethod * _Nullable' index='4' name='paymentMethod' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INRideDriver'>
+<method selector='initWithHandle:displayName:image:rating:phoneNumber:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='handle' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='displayName' type64='@'/>
+<arg declared_type64='INImage * _Nullable' index='2' name='image' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='rating' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='phoneNumber' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithHandle:nameComponents:image:rating:phoneNumber:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='handle' type64='@'/>
+<arg declared_type64='NSPersonNameComponents * _Nonnull' index='1' name='nameComponents' type64='@'/>
+<arg declared_type64='INImage * _Nullable' index='2' name='image' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='rating' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='phoneNumber' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithPersonHandle:nameComponents:displayName:image:rating:phoneNumber:'>
+<arg declared_type64='INPersonHandle * _Nonnull' index='0' name='personHandle' type64='@'/>
+<arg declared_type64='NSPersonNameComponents * _Nullable' index='1' name='nameComponents' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='displayName' type64='@'/>
+<arg declared_type64='INImage * _Nullable' index='3' name='image' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='rating' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='5' name='phoneNumber' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INRideOption'>
+<method selector='identifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='setIdentifier:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='identifier' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='INSaveProfileInCarIntent'>
+<method selector='initWithProfileNumber:profileLabel:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='profileNumber' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='profileLabel' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='profileLabel'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='INSearchCallHistoryIntent'>
+<method selector='callType'>
+<retval declared_type64='INCallRecordType' type64='q'/>
+</method>
+<method selector='initWithCallType:dateCreated:recipient:callCapabilities:'>
+<arg declared_type64='INCallRecordType' index='0' name='callType' type64='q'/>
+<arg declared_type64='INDateComponentsRange * _Nullable' index='1' name='dateCreated' type64='@'/>
+<arg declared_type64='INPerson * _Nullable' index='2' name='recipient' type64='@'/>
+<arg declared_type64='INCallCapabilityOptions' index='3' name='callCapabilities' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INSearchForMediaIntent'>
+<method selector='initWithMediaItems:mediaSearch:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='mediaItems' type64='@'/>
+<arg declared_type64='INMediaSearch * _Nullable' index='1' name='mediaSearch' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='mediaItems'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='mediaSearch'>
+<retval declared_type64='INMediaSearch * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='INSearchForMediaIntentResponse'>
+<method selector='code'>
+<retval declared_type64='INSearchForMediaIntentResponseCode' type64='q'/>
+</method>
+<method selector='initWithCode:userActivity:'>
+<arg declared_type64='INSearchForMediaIntentResponseCode' index='0' name='code' type64='q'/>
+<arg declared_type64='NSUserActivity * _Nullable' index='1' name='userActivity' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='mediaItems'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='setMediaItems:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='mediaItems' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='INSearchForMediaMediaItemResolutionResult'>
+<method selector='initWithMediaItemResolutionResult:'>
+<arg declared_type64='INMediaItemResolutionResult * _Nonnull' index='0' name='mediaItemResolutionResult' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='successesWithResolvedMediaItems:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='resolvedMediaItems' type64='@'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='unsupportedForReason:'>
+<arg declared_type64='INSearchForMediaMediaItemUnsupportedReason' index='0' name='reason' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INSearchForMessagesIntent'>
+<method selector='groupNames'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='groupNamesOperator'>
+<retval declared_type64='INConditionalOperator' type64='q'/>
+</method>
+<method selector='initWithRecipients:senders:searchTerms:attributes:dateTimeRange:identifiers:notificationIdentifiers:groupNames:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='recipients' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='1' name='senders' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='2' name='searchTerms' type64='@'/>
+<arg declared_type64='INMessageAttributeOptions' index='3' name='attributes' type64='Q'/>
+<arg declared_type64='INDateComponentsRange * _Nullable' index='4' name='dateTimeRange' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='5' name='identifiers' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='6' name='notificationIdentifiers' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='7' name='groupNames' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithRecipients:senders:searchTerms:attributes:dateTimeRange:identifiers:notificationIdentifiers:speakableGroupNames:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='recipients' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='1' name='senders' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='2' name='searchTerms' type64='@'/>
+<arg declared_type64='INMessageAttributeOptions' index='3' name='attributes' type64='Q'/>
+<arg declared_type64='INDateComponentsRange * _Nullable' index='4' name='dateTimeRange' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='5' name='identifiers' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='6' name='notificationIdentifiers' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='7' name='speakableGroupNames' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INSearchForNotebookItemsIntent'>
+<method selector='initWithTitle:content:itemType:status:location:locationSearchType:dateTime:dateSearchType:'>
+<arg declared_type64='INSpeakableString * _Nullable' index='0' name='title' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='content' type64='@'/>
+<arg declared_type64='INNotebookItemType' index='2' name='itemType' type64='q'/>
+<arg declared_type64='INTaskStatus' index='3' name='status' type64='q'/>
+<arg declared_type64='CLPlacemark * _Nullable' index='4' name='location' type64='@'/>
+<arg declared_type64='INLocationSearchType' index='5' name='locationSearchType' type64='q'/>
+<arg declared_type64='INDateComponentsRange * _Nullable' index='6' name='dateTime' type64='@'/>
+<arg declared_type64='INDateSearchType' index='7' name='dateSearchType' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTitle:content:itemType:status:location:locationSearchType:dateTime:dateSearchType:notebookItemIdentifier:'>
+<arg declared_type64='INSpeakableString * _Nullable' index='0' name='title' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='content' type64='@'/>
+<arg declared_type64='INNotebookItemType' index='2' name='itemType' type64='q'/>
+<arg declared_type64='INTaskStatus' index='3' name='status' type64='q'/>
+<arg declared_type64='CLPlacemark * _Nullable' index='4' name='location' type64='@'/>
+<arg declared_type64='INLocationSearchType' index='5' name='locationSearchType' type64='q'/>
+<arg declared_type64='INDateComponentsRange * _Nullable' index='6' name='dateTime' type64='@'/>
+<arg declared_type64='INDateSearchType' index='7' name='dateSearchType' type64='q'/>
+<arg declared_type64='NSString * _Nullable' index='8' name='notebookItemIdentifier' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INSendMessageIntent'>
+<method selector='groupName'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='initWithRecipients:content:groupName:serviceName:sender:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='recipients' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='content' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='groupName' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='serviceName' type64='@'/>
+<arg declared_type64='INPerson * _Nullable' index='4' name='sender' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithRecipients:content:speakableGroupName:conversationIdentifier:serviceName:sender:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='recipients' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='content' type64='@'/>
+<arg declared_type64='INSpeakableString * _Nullable' index='2' name='speakableGroupName' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='3' name='conversationIdentifier' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='serviceName' type64='@'/>
+<arg declared_type64='INPerson * _Nullable' index='5' name='sender' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithRecipients:outgoingMessageType:content:speakableGroupName:conversationIdentifier:serviceName:sender:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='recipients' type64='@'/>
+<arg declared_type64='INOutgoingMessageType' index='1' name='outgoingMessageType' type64='q'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='content' type64='@'/>
+<arg declared_type64='INSpeakableString * _Nullable' index='3' name='speakableGroupName' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='4' name='conversationIdentifier' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='5' name='serviceName' type64='@'/>
+<arg declared_type64='INPerson * _Nullable' index='6' name='sender' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INSetClimateSettingsInCarIntent'>
+<method selector='initWithEnableFan:enableAirConditioner:enableClimateControl:enableAutoMode:airCirculationMode:fanSpeedIndex:fanSpeedPercentage:relativeFanSpeedSetting:temperature:relativeTemperatureSetting:climateZone:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='enableFan' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='1' name='enableAirConditioner' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='2' name='enableClimateControl' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='3' name='enableAutoMode' type64='@'/>
+<arg declared_type64='INCarAirCirculationMode' index='4' name='airCirculationMode' type64='q'/>
+<arg declared_type64='NSNumber * _Nullable' index='5' name='fanSpeedIndex' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='6' name='fanSpeedPercentage' type64='@'/>
+<arg declared_type64='INRelativeSetting' index='7' name='relativeFanSpeedSetting' type64='q'/>
+<arg declared_type64='NSMeasurement * _Nullable' index='8' name='temperature' type64='@'/>
+<arg declared_type64='INRelativeSetting' index='9' name='relativeTemperatureSetting' type64='q'/>
+<arg declared_type64='INCarSeat' index='10' name='climateZone' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INSetDefrosterSettingsInCarIntent'>
+<method selector='initWithEnable:defroster:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='enable' type64='@'/>
+<arg declared_type64='INCarDefroster' index='1' name='defroster' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INSetProfileInCarIntent'>
+<method selector='initWithProfileNumber:profileLabel:defaultProfile:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='profileNumber' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='profileLabel' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='2' name='defaultProfile' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithProfileNumber:profileName:defaultProfile:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='profileNumber' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='profileName' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='2' name='defaultProfile' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='profileLabel'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='INSetSeatSettingsInCarIntent'>
+<method selector='initWithEnableHeating:enableCooling:enableMassage:seat:level:relativeLevelSetting:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='enableHeating' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='1' name='enableCooling' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='2' name='enableMassage' type64='@'/>
+<arg declared_type64='INCarSeat' index='3' name='seat' type64='q'/>
+<arg declared_type64='NSNumber * _Nullable' index='4' name='level' type64='@'/>
+<arg declared_type64='INRelativeSetting' index='5' name='relativeLevelSetting' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INSetTaskAttributeIntent'>
+<method selector='initWithTargetTask:status:spatialEventTrigger:temporalEventTrigger:'>
+<arg declared_type64='INTask * _Nullable' index='0' name='targetTask' type64='@'/>
+<arg declared_type64='INTaskStatus' index='1' name='status' type64='q'/>
+<arg declared_type64='INSpatialEventTrigger * _Nullable' index='2' name='spatialEventTrigger' type64='@'/>
+<arg declared_type64='INTemporalEventTrigger * _Nullable' index='3' name='temporalEventTrigger' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INSpeakableString'>
+<method selector='initWithSpokenPhrase:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='spokenPhrase' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithVocabularyIdentifier:spokenPhrase:pronunciationHint:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='vocabularyIdentifier' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='spokenPhrase' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='pronunciationHint' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INStartAudioCallIntent'>
+<method selector='initWithContacts:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='contacts' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INStartCallIntent'>
+<method selector='initWithAudioRoute:destinationType:contacts:recordTypeForRedialing:callCapability:'>
+<arg declared_type64='INCallAudioRoute' index='0' name='audioRoute' type64='q'/>
+<arg declared_type64='INCallDestinationType' index='1' name='destinationType' type64='q'/>
+<arg declared_type64='NSArray * _Nullable' index='2' name='contacts' type64='@'/>
+<arg declared_type64='INCallRecordType' index='3' name='recordTypeForRedialing' type64='q'/>
+<arg declared_type64='INCallCapability' index='4' name='callCapability' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='recordTypeForRedialing'>
+<retval declared_type64='INCallRecordType' type64='q'/>
+</method>
+</class>
+<class name='INUpdateMediaAffinityIntent'>
+<method selector='affinityType'>
+<retval declared_type64='INMediaAffinityType' type64='q'/>
+</method>
+<method selector='initWithMediaItems:mediaSearch:affinityType:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='mediaItems' type64='@'/>
+<arg declared_type64='INMediaSearch * _Nullable' index='1' name='mediaSearch' type64='@'/>
+<arg declared_type64='INMediaAffinityType' index='2' name='affinityType' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='mediaItems'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='mediaSearch'>
+<retval declared_type64='INMediaSearch * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='INUpdateMediaAffinityIntentResponse'>
+<method selector='code'>
+<retval declared_type64='INUpdateMediaAffinityIntentResponseCode' type64='q'/>
+</method>
+<method selector='initWithCode:userActivity:'>
+<arg declared_type64='INUpdateMediaAffinityIntentResponseCode' index='0' name='code' type64='q'/>
+<arg declared_type64='NSUserActivity * _Nullable' index='1' name='userActivity' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INUpdateMediaAffinityMediaItemResolutionResult'>
+<method selector='initWithMediaItemResolutionResult:'>
+<arg declared_type64='INMediaItemResolutionResult * _Nonnull' index='0' name='mediaItemResolutionResult' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='successesWithResolvedMediaItems:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='resolvedMediaItems' type64='@'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='unsupportedForReason:'>
+<arg declared_type64='INUpdateMediaAffinityMediaItemUnsupportedReason' index='0' name='reason' type64='q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='INUserContext'>
+<method selector='becomeCurrent'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='INVocabulary'>
+<method selector='removeAllVocabularyStrings'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVocabulary:ofType:'>
+<arg declared_type64='NSOrderedSet&gt; * _Nonnull' index='0' name='vocabulary' type64='@'/>
+<arg declared_type64='INVocabularyStringType' index='1' name='type' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVocabularyStrings:ofType:'>
+<arg declared_type64='NSOrderedSet * _Nonnull' index='0' name='vocabulary' type64='@'/>
+<arg declared_type64='INVocabularyStringType' index='1' name='type' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='sharedVocabulary'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='alternativeSpeakableMatches'>
+<retval declared_type64='NSArray&gt; * _Nullable' type64='@'/>
+</method>
+<method selector='confirmAddMedia:completion:'>
+<arg declared_type64='INAddMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INAddMediaIntentResponse * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INAddMediaIntentResponse * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='confirmPlayMedia:completion:'>
+<arg declared_type64='INPlayMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INPlayMediaIntentResponse * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INPlayMediaIntentResponse * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='confirmSearchForMedia:completion:'>
+<arg declared_type64='INSearchForMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INSearchForMediaIntentResponse * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INSearchForMediaIntentResponse * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='confirmUpdateMediaAffinity:completion:'>
+<arg declared_type64='INUpdateMediaAffinityIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INUpdateMediaAffinityIntentResponse * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INUpdateMediaAffinityIntentResponse * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='handleAddMedia:completion:'>
+<arg declared_type64='INAddMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INAddMediaIntentResponse * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INAddMediaIntentResponse * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='handlePlayMedia:completion:'>
+<arg declared_type64='INPlayMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INPlayMediaIntentResponse * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INPlayMediaIntentResponse * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='handleSearchForMedia:completion:'>
+<arg declared_type64='INSearchForMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INSearchForMediaIntentResponse * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INSearchForMediaIntentResponse * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='handleUpdateMediaAffinity:completion:'>
+<arg declared_type64='INUpdateMediaAffinityIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INUpdateMediaAffinityIntentResponse * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INUpdateMediaAffinityIntentResponse * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='handlerForIntent:'>
+<arg declared_type64='INIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='pronunciationHint'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='resolveAffinityTypeForUpdateMediaAffinity:withCompletion:'>
+<arg declared_type64='INUpdateMediaAffinityIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INMediaAffinityTypeResolutionResult * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INMediaAffinityTypeResolutionResult * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolveMediaDestinationForAddMedia:withCompletion:'>
+<arg declared_type64='INAddMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INAddMediaMediaDestinationResolutionResult * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INAddMediaMediaDestinationResolutionResult * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolveMediaItemsForAddMedia:withCompletion:'>
+<arg declared_type64='INAddMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolveMediaItemsForPlayMedia:withCompletion:'>
+<arg declared_type64='INPlayMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolveMediaItemsForSearchForMedia:withCompletion:'>
+<arg declared_type64='INSearchForMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolveMediaItemsForUpdateMediaAffinity:withCompletion:'>
+<arg declared_type64='INUpdateMediaAffinityIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolvePlayShuffledForPlayMedia:withCompletion:'>
+<arg declared_type64='INPlayMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INBooleanResolutionResult * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INBooleanResolutionResult * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolvePlaybackQueueLocationForPlayMedia:withCompletion:'>
+<arg declared_type64='INPlayMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INPlaybackQueueLocationResolutionResult * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INPlaybackQueueLocationResolutionResult * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolvePlaybackRepeatModeForPlayMedia:withCompletion:'>
+<arg declared_type64='INPlayMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INPlaybackRepeatModeResolutionResult * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INPlaybackRepeatModeResolutionResult * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolvePlaybackSpeedForPlayMedia:withCompletion:'>
+<arg declared_type64='INPlayMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INPlayMediaPlaybackSpeedResolutionResult * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INPlayMediaPlaybackSpeedResolutionResult * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolveResumePlaybackForPlayMedia:withCompletion:'>
+<arg declared_type64='INPlayMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INBooleanResolutionResult * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INBooleanResolutionResult * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='spokenPhrase'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='vocabularyIdentifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='NSString'>
+<method class_method='true' selector='deferredLocalizedIntentsStringWithFormat:' variadic='true'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='format' printf_format='true' type64='@'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='deferredLocalizedIntentsStringWithFormat:fromTable:' variadic='true'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='format' printf_format='true' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='table' type64='@'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='deferredLocalizedIntentsStringWithFormat:fromTable:arguments:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='format' printf_format='true' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='table' type64='@'/>
+<arg declared_type64='struct __va_list_tag*' index='2' name='arguments' type64='^{__va_list_tag=II^v^v}'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='NSUserActivity'>
+<method selector='interaction'>
+<retval declared_type64='INInteraction * _Nullable' type64='@'/>
+</method>
+</class>
+<informal_protocol name='INAddMediaIntentHandling'>
+<method selector='confirmAddMedia:completion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INAddMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INAddMediaIntentResponse * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INAddMediaIntentResponse * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='handleAddMedia:completion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INAddMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INAddMediaIntentResponse * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INAddMediaIntentResponse * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolveMediaDestinationForAddMedia:withCompletion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INAddMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INAddMediaMediaDestinationResolutionResult * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INAddMediaMediaDestinationResolutionResult * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolveMediaItemsForAddMedia:withCompletion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INAddMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='INIntentHandlerProviding'>
+<method selector='handlerForIntent:' type64='@24@0:8@16'>
+<arg declared_type64='INIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='INPlayMediaIntentHandling'>
+<method selector='confirmPlayMedia:completion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INPlayMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INPlayMediaIntentResponse * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INPlayMediaIntentResponse * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='handlePlayMedia:completion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INPlayMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INPlayMediaIntentResponse * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INPlayMediaIntentResponse * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolveMediaItemsForPlayMedia:withCompletion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INPlayMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolvePlayShuffledForPlayMedia:withCompletion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INPlayMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INBooleanResolutionResult * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INBooleanResolutionResult * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolvePlaybackQueueLocationForPlayMedia:withCompletion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INPlayMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INPlaybackQueueLocationResolutionResult * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INPlaybackQueueLocationResolutionResult * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolvePlaybackRepeatModeForPlayMedia:withCompletion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INPlayMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INPlaybackRepeatModeResolutionResult * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INPlaybackRepeatModeResolutionResult * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolvePlaybackSpeedForPlayMedia:withCompletion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INPlayMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INPlayMediaPlaybackSpeedResolutionResult * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INPlayMediaPlaybackSpeedResolutionResult * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolveResumePlaybackForPlayMedia:withCompletion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INPlayMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INBooleanResolutionResult * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INBooleanResolutionResult * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='INSearchForMediaIntentHandling'>
+<method selector='confirmSearchForMedia:completion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INSearchForMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INSearchForMediaIntentResponse * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INSearchForMediaIntentResponse * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='handleSearchForMedia:completion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INSearchForMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INSearchForMediaIntentResponse * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INSearchForMediaIntentResponse * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolveMediaItemsForSearchForMedia:withCompletion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INSearchForMediaIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='INSpeakable'>
+<method selector='alternativeSpeakableMatches' type64='@16@0:8'>
+<retval declared_type64='NSArray&gt; * _Nullable' type64='@'/>
+</method>
+<method selector='identifier' type64='@16@0:8'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='pronunciationHint' type64='@16@0:8'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='spokenPhrase' type64='@16@0:8'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='vocabularyIdentifier' type64='@16@0:8'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='INUpdateMediaAffinityIntentHandling'>
+<method selector='confirmUpdateMediaAffinity:completion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INUpdateMediaAffinityIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INUpdateMediaAffinityIntentResponse * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INUpdateMediaAffinityIntentResponse * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='handleUpdateMediaAffinity:completion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INUpdateMediaAffinityIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INUpdateMediaAffinityIntentResponse * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INUpdateMediaAffinityIntentResponse * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolveAffinityTypeForUpdateMediaAffinity:withCompletion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INUpdateMediaAffinityIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(INMediaAffinityTypeResolutionResult * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='INMediaAffinityTypeResolutionResult * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resolveMediaItemsForUpdateMediaAffinity:withCompletion:' type64='v32@0:8@16@?24'>
+<arg declared_type64='INUpdateMediaAffinityIntent * _Nonnull' index='0' name='intent' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

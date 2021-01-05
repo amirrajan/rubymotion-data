@@ -1,0 +1,226 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<constant const='true' declared_type64='VSAccountProviderAuthenticationScheme _Nonnull' name='VSAccountProviderAuthenticationSchemeAPI' type64='@'/>
+<constant const='true' declared_type64='VSAccountProviderAuthenticationScheme _Nonnull' name='VSAccountProviderAuthenticationSchemeSAML' type64='@'/>
+<constant const='true' declared_type64='VSCheckAccessOption _Nonnull' name='VSCheckAccessOptionPrompt' type64='@'/>
+<constant const='true' declared_type64='NSErrorDomain _Nonnull' name='VSErrorDomain' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='VSErrorInfoKeyAccountProviderResponse' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='VSErrorInfoKeySAMLResponse' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='VSErrorInfoKeySAMLResponseStatus' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='VSErrorInfoKeyUnsupportedProviderIdentifier' type64='@'/>
+<enum name='VSAccountAccessStatusDenied' value64='2'/>
+<enum name='VSAccountAccessStatusGranted' value64='3'/>
+<enum name='VSAccountAccessStatusNotDetermined' value64='0'/>
+<enum name='VSAccountAccessStatusRestricted' value64='1'/>
+<enum name='VSErrorCodeAccessNotGranted' value64='0'/>
+<enum name='VSErrorCodeInvalidVerificationToken' value64='5'/>
+<enum name='VSErrorCodeProviderRejected' value64='4'/>
+<enum name='VSErrorCodeRejected' value64='6'/>
+<enum name='VSErrorCodeServiceTemporarilyUnavailable' value64='3'/>
+<enum name='VSErrorCodeUnsupportedProvider' value64='1'/>
+<enum name='VSErrorCodeUserCancelled' value64='2'/>
+<enum name='VSSubscriptionAccessLevelFreeWithAccount' value64='1'/>
+<enum name='VSSubscriptionAccessLevelPaid' value64='2'/>
+<enum name='VSSubscriptionAccessLevelUnknown' value64='0'/>
+<class name='NSObject'>
+<method selector='accountManager:dismissViewController:'>
+<arg declared_type64='VSAccountManager * _Nonnull' index='0' name='accountManager' type64='@'/>
+<arg declared_type64='UIViewController * _Nonnull' index='1' name='viewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='accountManager:presentViewController:'>
+<arg declared_type64='VSAccountManager * _Nonnull' index='0' name='accountManager' type64='@'/>
+<arg declared_type64='UIViewController * _Nonnull' index='1' name='viewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='accountManager:shouldAuthenticateAccountProviderWithIdentifier:'>
+<arg declared_type64='VSAccountManager * _Nonnull' index='0' name='accountManager' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='accountProviderIdentifier' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='VSAccountManager'>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='VSAccountManagerResult'>
+<method selector='cancel'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='VSAccountMetadata'>
+<method selector='SAMLAttributeQueryResponse'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='accountProviderIdentifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='accountProviderResponse'>
+<retval declared_type64='VSAccountProviderResponse * _Nullable' type64='@'/>
+</method>
+<method selector='authenticationExpirationDate'>
+<retval declared_type64='NSDate * _Nullable' type64='@'/>
+</method>
+<method selector='verificationData'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='VSAccountMetadataRequest'>
+<method selector='accountProviderAuthenticationToken'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='attributeNames'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='channelIdentifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='featuredAccountProviderIdentifiers'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='forceAuthentication'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='includeAccountProviderIdentifier'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='includeAuthenticationExpirationDate'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isInterruptionAllowed'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='localizedVideoTitle'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='setAccountProviderAuthenticationToken:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='accountProviderAuthenticationToken' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setAttributeNames:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='attributeNames' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setChannelIdentifier:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='channelIdentifier' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFeaturedAccountProviderIdentifiers:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='featuredAccountProviderIdentifiers' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setForceAuthentication:'>
+<arg declared_type64='BOOL' index='0' name='forceAuthentication' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setIncludeAccountProviderIdentifier:'>
+<arg declared_type64='BOOL' index='0' name='includeAccountProviderIdentifier' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setIncludeAuthenticationExpirationDate:'>
+<arg declared_type64='BOOL' index='0' name='includeAuthenticationExpirationDate' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setInterruptionAllowed:'>
+<arg declared_type64='BOOL' index='0' name='interruptionAllowed' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLocalizedVideoTitle:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='localizedVideoTitle' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSupportedAccountProviderIdentifiers:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='supportedAccountProviderIdentifiers' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSupportedAuthenticationSchemes:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='supportedAuthenticationSchemes' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVerificationToken:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='verificationToken' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='supportedAccountProviderIdentifiers'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='supportedAuthenticationSchemes'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='verificationToken'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='VSAccountProviderResponse'>
+<method selector='authenticationScheme'>
+<retval declared_type64='VSAccountProviderAuthenticationScheme _Nonnull' type64='@'/>
+</method>
+<method selector='body'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='status'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='VSSubscription'>
+<method selector='accessLevel'>
+<retval declared_type64='VSSubscriptionAccessLevel' type64='q'/>
+</method>
+<method selector='billingIdentifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='expirationDate'>
+<retval declared_type64='NSDate * _Nonnull' type64='@'/>
+</method>
+<method selector='setAccessLevel:'>
+<arg declared_type64='VSSubscriptionAccessLevel' index='0' name='accessLevel' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setBillingIdentifier:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='billingIdentifier' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setExpirationDate:'>
+<arg declared_type64='NSDate * _Nullable' index='0' name='expirationDate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTierIdentifiers:'>
+<arg declared_type64='NSArray * _Nullable' index='0' name='tierIdentifiers' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='tierIdentifiers'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='VSSubscriptionRegistrationCenter'>
+<method class_method='true' selector='defaultSubscriptionRegistrationCenter'>
+<retval declared_type64='VSSubscriptionRegistrationCenter * _Nonnull' type64='@'/>
+</method>
+<method selector='setCurrentSubscription:'>
+<arg declared_type64='VSSubscription * _Nullable' index='0' name='currentSubscription' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='VSAccountManagerDelegate'>
+<method selector='accountManager:dismissViewController:' type64='v32@0:8@16@24'>
+<arg declared_type64='VSAccountManager * _Nonnull' index='0' name='accountManager' type64='@'/>
+<arg declared_type64='UIViewController * _Nonnull' index='1' name='viewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='accountManager:presentViewController:' type64='v32@0:8@16@24'>
+<arg declared_type64='VSAccountManager * _Nonnull' index='0' name='accountManager' type64='@'/>
+<arg declared_type64='UIViewController * _Nonnull' index='1' name='viewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='accountManager:shouldAuthenticateAccountProviderWithIdentifier:' type64='B32@0:8@16@24'>
+<arg declared_type64='VSAccountManager * _Nonnull' index='0' name='accountManager' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='accountProviderIdentifier' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</informal_protocol>
+</signatures>

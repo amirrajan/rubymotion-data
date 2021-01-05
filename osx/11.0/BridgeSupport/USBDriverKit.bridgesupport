@@ -1,0 +1,779 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/DriverKit.framework'/>
+<struct name='IOUSB20HubDescriptor' type64='{IOUSB20HubDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bNumberPorts&quot;C&quot;wHubCharacteristics&quot;S&quot;bPowerOnToPowerGood&quot;C&quot;bHubControllerCurrent&quot;C&quot;deviceRemovable&quot;[2C]&quot;reserved&quot;[2C]}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint8_t' name='bNumberPorts' type64='C'/>
+<field declared_type64='uint16_t' name='wHubCharacteristics' type64='S'/>
+<field declared_type64='uint8_t' name='bPowerOnToPowerGood' type64='C'/>
+<field declared_type64='uint8_t' name='bHubControllerCurrent' type64='C'/>
+<field declared_type64='uint8_t*' name='deviceRemovable' type64='[2C]'/>
+<field declared_type64='uint8_t*' name='reserved' type64='[2C]'/>
+</struct>
+<struct name='IOUSB30HubPortStatusExt' type64='{IOUSB30HubPortStatusExt=&quot;wPortStatus&quot;S&quot;wPortChange&quot;S&quot;dwExtPortStatus&quot;I}'>
+<field declared_type64='uint16_t' name='wPortStatus' type64='S'/>
+<field declared_type64='uint16_t' name='wPortChange' type64='S'/>
+<field declared_type64='uint32_t' name='dwExtPortStatus' type64='I'/>
+</struct>
+<struct name='IOUSBBOSDescriptor' type64='{IOUSBBOSDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;wTotalLength&quot;S&quot;bNumDeviceCaps&quot;C}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint16_t' name='wTotalLength' type64='S'/>
+<field declared_type64='uint8_t' name='bNumDeviceCaps' type64='C'/>
+</struct>
+<struct name='IOUSBConfigurationDescHeader' type64='{IOUSBConfigurationDescHeader=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;wTotalLength&quot;S}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint16_t' name='wTotalLength' type64='S'/>
+</struct>
+<struct name='IOUSBConfigurationDescriptor' type64='{IOUSBConfigurationDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;wTotalLength&quot;S&quot;bNumInterfaces&quot;C&quot;bConfigurationValue&quot;C&quot;iConfiguration&quot;C&quot;bmAttributes&quot;C&quot;MaxPower&quot;C}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint16_t' name='wTotalLength' type64='S'/>
+<field declared_type64='uint8_t' name='bNumInterfaces' type64='C'/>
+<field declared_type64='uint8_t' name='bConfigurationValue' type64='C'/>
+<field declared_type64='uint8_t' name='iConfiguration' type64='C'/>
+<field declared_type64='uint8_t' name='bmAttributes' type64='C'/>
+<field declared_type64='uint8_t' name='MaxPower' type64='C'/>
+</struct>
+<struct name='IOUSBDFUDescriptor' type64='{IOUSBDFUDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bmAttributes&quot;C&quot;wDetachTimeout&quot;S&quot;wTransferSize&quot;S}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint8_t' name='bmAttributes' type64='C'/>
+<field declared_type64='uint16_t' name='wDetachTimeout' type64='S'/>
+<field declared_type64='uint16_t' name='wTransferSize' type64='S'/>
+</struct>
+<struct name='IOUSBDescriptor' type64='{IOUSBDescriptorHeader=&quot;bLength&quot;C&quot;bDescriptorType&quot;C}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+</struct>
+<struct name='IOUSBDescriptorHeader' type64='{IOUSBDescriptorHeader=&quot;bLength&quot;C&quot;bDescriptorType&quot;C}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+</struct>
+<struct name='IOUSBDeviceCapabilityBillboard' type64='{IOUSBDeviceCapabilityBillboard=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bDevCapabilityType&quot;C&quot;iAdditionalInfoURL&quot;C&quot;bNumberOfAlternateModes&quot;C&quot;bPreferredAlternateMode&quot;C&quot;vCONNPower&quot;S&quot;bmConfigured&quot;[32C]&quot;bcdVersion&quot;S&quot;bAdditionalFailureInfo&quot;C&quot;bReserved&quot;C&quot;pAltConfigurations&quot;[0{IOUSBDeviceCapabilityBillboardAltConfig=&quot;wSVID&quot;S&quot;bAltenateMode&quot;C&quot;iAlternateModeString&quot;C}]}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint8_t' name='bDevCapabilityType' type64='C'/>
+<field declared_type64='uint8_t' name='iAdditionalInfoURL' type64='C'/>
+<field declared_type64='uint8_t' name='bNumberOfAlternateModes' type64='C'/>
+<field declared_type64='uint8_t' name='bPreferredAlternateMode' type64='C'/>
+<field declared_type64='uint16_t' name='vCONNPower' type64='S'/>
+<field declared_type64='uint8_t*' name='bmConfigured' type64='[32C]'/>
+<field declared_type64='uint16_t' name='bcdVersion' type64='S'/>
+<field declared_type64='uint8_t' name='bAdditionalFailureInfo' type64='C'/>
+<field declared_type64='uint8_t' name='bReserved' type64='C'/>
+<field declared_type64='IOUSBDeviceCapabilityBillboardAltConfig*' name='pAltConfigurations' type64='^{IOUSBDeviceCapabilityBillboardAltConfig=&quot;wSVID&quot;S&quot;bAltenateMode&quot;C&quot;iAlternateModeString&quot;C}'/>
+</struct>
+<struct name='IOUSBDeviceCapabilityBillboardAltConfig' type64='{IOUSBDeviceCapabilityBillboardAltConfig=&quot;wSVID&quot;S&quot;bAltenateMode&quot;C&quot;iAlternateModeString&quot;C}'>
+<field declared_type64='uint16_t' name='wSVID' type64='S'/>
+<field declared_type64='uint8_t' name='bAltenateMode' type64='C'/>
+<field declared_type64='uint8_t' name='iAlternateModeString' type64='C'/>
+</struct>
+<struct name='IOUSBDeviceCapabilityBillboardAltConfigCompatibility' type64='{IOUSBDeviceCapabilityBillboardAltConfigCompatibility=&quot;wSVID&quot;S&quot;dwAlternateMode&quot;I&quot;iAlternateModeString&quot;C}'>
+<field declared_type64='uint16_t' name='wSVID' type64='S'/>
+<field declared_type64='uint32_t' name='dwAlternateMode' type64='I'/>
+<field declared_type64='uint8_t' name='iAlternateModeString' type64='C'/>
+</struct>
+<struct name='IOUSBDeviceCapabilityBillboardAltMode' type64='{IOUSBDeviceCapabilityBillboardAltMode=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bDevCapabilityType&quot;C&quot;bIndex&quot;C&quot;dwAlternateModeVdo&quot;S}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint8_t' name='bDevCapabilityType' type64='C'/>
+<field declared_type64='uint8_t' name='bIndex' type64='C'/>
+<field declared_type64='uint16_t' name='dwAlternateModeVdo' type64='S'/>
+</struct>
+<struct name='IOUSBDeviceCapabilityContainerID' type64='{IOUSBDeviceCapabilityContainerID=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bDevCapabilityType&quot;C&quot;bReservedID&quot;C&quot;containerID&quot;[16C]}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint8_t' name='bDevCapabilityType' type64='C'/>
+<field declared_type64='uint8_t' name='bReservedID' type64='C'/>
+<field declared_type64='uint8_t*' name='containerID' type64='[16C]'/>
+</struct>
+<struct name='IOUSBDeviceCapabilityDescriptorHeader' type64='{IOUSBDeviceCapabilityDescriptorHeader=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bDevCapabilityType&quot;C}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint8_t' name='bDevCapabilityType' type64='C'/>
+</struct>
+<struct name='IOUSBDeviceCapabilitySuperSpeedPlusUSB' type64='{IOUSBDeviceCapabilitySuperSpeedPlusUSB=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bDevCapabilityType&quot;C&quot;bReserved&quot;C&quot;bmAttributes&quot;I&quot;wFunctionalitySupport&quot;S&quot;wReserved&quot;S&quot;bmSublinkSpeedAttr&quot;[0I]}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint8_t' name='bDevCapabilityType' type64='C'/>
+<field declared_type64='uint8_t' name='bReserved' type64='C'/>
+<field declared_type64='uint32_t' name='bmAttributes' type64='I'/>
+<field declared_type64='uint16_t' name='wFunctionalitySupport' type64='S'/>
+<field declared_type64='uint16_t' name='wReserved' type64='S'/>
+<field declared_type64='uint32_t*' name='bmSublinkSpeedAttr' type64='^I'/>
+</struct>
+<struct name='IOUSBDeviceCapabilitySuperSpeedUSB' type64='{IOUSBDeviceCapabilitySuperSpeedUSB=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bDevCapabilityType&quot;C&quot;bmAttributes&quot;C&quot;wSpeedsSupported&quot;S&quot;bFunctionalitySupport&quot;C&quot;bU1DevExitLat&quot;C&quot;wU2DevExitLat&quot;S}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint8_t' name='bDevCapabilityType' type64='C'/>
+<field declared_type64='uint8_t' name='bmAttributes' type64='C'/>
+<field declared_type64='uint16_t' name='wSpeedsSupported' type64='S'/>
+<field declared_type64='uint8_t' name='bFunctionalitySupport' type64='C'/>
+<field declared_type64='uint8_t' name='bU1DevExitLat' type64='C'/>
+<field declared_type64='uint16_t' name='wU2DevExitLat' type64='S'/>
+</struct>
+<struct name='IOUSBDeviceCapabilityUSB2Extension' type64='{IOUSBDeviceCapabilityUSB2Extension=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bDevCapabilityType&quot;C&quot;bmAttributes&quot;I}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint8_t' name='bDevCapabilityType' type64='C'/>
+<field declared_type64='uint32_t' name='bmAttributes' type64='I'/>
+</struct>
+<struct name='IOUSBDeviceDescriptor' type64='{IOUSBDeviceDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bcdUSB&quot;S&quot;bDeviceClass&quot;C&quot;bDeviceSubClass&quot;C&quot;bDeviceProtocol&quot;C&quot;bMaxPacketSize0&quot;C&quot;idVendor&quot;S&quot;idProduct&quot;S&quot;bcdDevice&quot;S&quot;iManufacturer&quot;C&quot;iProduct&quot;C&quot;iSerialNumber&quot;C&quot;bNumConfigurations&quot;C}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint16_t' name='bcdUSB' type64='S'/>
+<field declared_type64='uint8_t' name='bDeviceClass' type64='C'/>
+<field declared_type64='uint8_t' name='bDeviceSubClass' type64='C'/>
+<field declared_type64='uint8_t' name='bDeviceProtocol' type64='C'/>
+<field declared_type64='uint8_t' name='bMaxPacketSize0' type64='C'/>
+<field declared_type64='uint16_t' name='idVendor' type64='S'/>
+<field declared_type64='uint16_t' name='idProduct' type64='S'/>
+<field declared_type64='uint16_t' name='bcdDevice' type64='S'/>
+<field declared_type64='uint8_t' name='iManufacturer' type64='C'/>
+<field declared_type64='uint8_t' name='iProduct' type64='C'/>
+<field declared_type64='uint8_t' name='iSerialNumber' type64='C'/>
+<field declared_type64='uint8_t' name='bNumConfigurations' type64='C'/>
+</struct>
+<struct name='IOUSBDeviceQualifierDescriptor' type64='{IOUSBDeviceQualifierDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bcdUSB&quot;S&quot;bDeviceClass&quot;C&quot;bDeviceSubClass&quot;C&quot;bDeviceProtocol&quot;C&quot;bMaxPacketSize0&quot;C&quot;bNumConfigurations&quot;C&quot;bReserved&quot;C}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint16_t' name='bcdUSB' type64='S'/>
+<field declared_type64='uint8_t' name='bDeviceClass' type64='C'/>
+<field declared_type64='uint8_t' name='bDeviceSubClass' type64='C'/>
+<field declared_type64='uint8_t' name='bDeviceProtocol' type64='C'/>
+<field declared_type64='uint8_t' name='bMaxPacketSize0' type64='C'/>
+<field declared_type64='uint8_t' name='bNumConfigurations' type64='C'/>
+<field declared_type64='uint8_t' name='bReserved' type64='C'/>
+</struct>
+<struct name='IOUSBDeviceRequest' type64='{IOUSBDeviceRequest=&quot;bmRequestType&quot;C&quot;bRequest&quot;C&quot;wValue&quot;S&quot;wIndex&quot;S&quot;wLength&quot;S}'>
+<field declared_type64='uint8_t' name='bmRequestType' type64='C'/>
+<field declared_type64='uint8_t' name='bRequest' type64='C'/>
+<field declared_type64='uint16_t' name='wValue' type64='S'/>
+<field declared_type64='uint16_t' name='wIndex' type64='S'/>
+<field declared_type64='uint16_t' name='wLength' type64='S'/>
+</struct>
+<struct name='IOUSBDeviceRequestSetSELData' type64='{IOUSBDeviceRequestSetSELData=&quot;u1Sel&quot;C&quot;u1Pel&quot;C&quot;u2Sel&quot;S&quot;u2Pel&quot;S}'>
+<field declared_type64='uint8_t' name='u1Sel' type64='C'/>
+<field declared_type64='uint8_t' name='u1Pel' type64='C'/>
+<field declared_type64='uint16_t' name='u2Sel' type64='S'/>
+<field declared_type64='uint16_t' name='u2Pel' type64='S'/>
+</struct>
+<struct name='IOUSBEndpointDescriptor' type64='{IOUSBEndpointDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bEndpointAddress&quot;C&quot;bmAttributes&quot;C&quot;wMaxPacketSize&quot;S&quot;bInterval&quot;C}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint8_t' name='bEndpointAddress' type64='C'/>
+<field declared_type64='uint8_t' name='bmAttributes' type64='C'/>
+<field declared_type64='uint16_t' name='wMaxPacketSize' type64='S'/>
+<field declared_type64='uint8_t' name='bInterval' type64='C'/>
+</struct>
+<struct name='IOUSBHIDDescriptor' type64='{IOUSBHIDDescriptor=&quot;descLen&quot;C&quot;descType&quot;C&quot;descVersNum&quot;S&quot;hidCountryCode&quot;C&quot;hidNumDescriptors&quot;C&quot;hidDescriptorType&quot;C&quot;hidDescriptorLengthLo&quot;C&quot;hidDescriptorLengthHi&quot;C}'>
+<field declared_type64='uint8_t' name='descLen' type64='C'/>
+<field declared_type64='uint8_t' name='descType' type64='C'/>
+<field declared_type64='uint16_t' name='descVersNum' type64='S'/>
+<field declared_type64='uint8_t' name='hidCountryCode' type64='C'/>
+<field declared_type64='uint8_t' name='hidNumDescriptors' type64='C'/>
+<field declared_type64='uint8_t' name='hidDescriptorType' type64='C'/>
+<field declared_type64='uint8_t' name='hidDescriptorLengthLo' type64='C'/>
+<field declared_type64='uint8_t' name='hidDescriptorLengthHi' type64='C'/>
+</struct>
+<struct name='IOUSBHIDReportDesc' type64='{IOUSBHIDReportDesc=&quot;hidDescriptorType&quot;C&quot;hidDescriptorLengthLo&quot;C&quot;hidDescriptorLengthHi&quot;C}'>
+<field declared_type64='uint8_t' name='hidDescriptorType' type64='C'/>
+<field declared_type64='uint8_t' name='hidDescriptorLengthLo' type64='C'/>
+<field declared_type64='uint8_t' name='hidDescriptorLengthHi' type64='C'/>
+</struct>
+<struct name='IOUSBInterfaceAssociationDescriptor' type64='{IOUSBInterfaceAssociationDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bFirstInterface&quot;C&quot;bInterfaceCount&quot;C&quot;bFunctionClass&quot;C&quot;bFunctionSubClass&quot;C&quot;bFunctionProtocol&quot;C&quot;iFunction&quot;C}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint8_t' name='bFirstInterface' type64='C'/>
+<field declared_type64='uint8_t' name='bInterfaceCount' type64='C'/>
+<field declared_type64='uint8_t' name='bFunctionClass' type64='C'/>
+<field declared_type64='uint8_t' name='bFunctionSubClass' type64='C'/>
+<field declared_type64='uint8_t' name='bFunctionProtocol' type64='C'/>
+<field declared_type64='uint8_t' name='iFunction' type64='C'/>
+</struct>
+<struct name='IOUSBInterfaceDescriptor' type64='{IOUSBInterfaceDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bInterfaceNumber&quot;C&quot;bAlternateSetting&quot;C&quot;bNumEndpoints&quot;C&quot;bInterfaceClass&quot;C&quot;bInterfaceSubClass&quot;C&quot;bInterfaceProtocol&quot;C&quot;iInterface&quot;C}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint8_t' name='bInterfaceNumber' type64='C'/>
+<field declared_type64='uint8_t' name='bAlternateSetting' type64='C'/>
+<field declared_type64='uint8_t' name='bNumEndpoints' type64='C'/>
+<field declared_type64='uint8_t' name='bInterfaceClass' type64='C'/>
+<field declared_type64='uint8_t' name='bInterfaceSubClass' type64='C'/>
+<field declared_type64='uint8_t' name='bInterfaceProtocol' type64='C'/>
+<field declared_type64='uint8_t' name='iInterface' type64='C'/>
+</struct>
+<struct name='IOUSBIsochronousFrame' type64='{IOUSBIsochronousFrame=&quot;status&quot;i&quot;requestCount&quot;I&quot;completeCount&quot;I&quot;reserved&quot;I&quot;timeStamp&quot;Q}'>
+<field declared_type64='IOReturn' name='status' type64='i'/>
+<field declared_type64='uint32_t' name='requestCount' type64='I'/>
+<field declared_type64='uint32_t' name='completeCount' type64='I'/>
+<field declared_type64='uint32_t' name='reserved' type64='I'/>
+<field declared_type64='uint64_t' name='timeStamp' type64='Q'/>
+</struct>
+<struct name='IOUSBPlatformCapabilityDescriptor' type64='{IOUSBPlatformCapabilityDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bDevCapabilityType&quot;C&quot;bReserved&quot;C&quot;PlatformCapabilityUUID&quot;[16C]}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint8_t' name='bDevCapabilityType' type64='C'/>
+<field declared_type64='uint8_t' name='bReserved' type64='C'/>
+<field declared_type64='uuid_t' name='PlatformCapabilityUUID' type64='[16C]'/>
+</struct>
+<struct name='IOUSBStandardEndpointDescriptors' type64='{IOUSBStandardEndpointDescriptors=&quot;bcdUSB&quot;S&quot;descriptor&quot;{IOUSBEndpointDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bEndpointAddress&quot;C&quot;bmAttributes&quot;C&quot;wMaxPacketSize&quot;S&quot;bInterval&quot;C}&quot;ssCompanionDescriptor&quot;{IOUSBSuperSpeedEndpointCompanionDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bMaxBurst&quot;C&quot;bmAttributes&quot;C&quot;wBytesPerInterval&quot;S}&quot;sspCompanionDescriptor&quot;{IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;wReserved&quot;S&quot;dwBytesPerInterval&quot;I}}'>
+<field declared_type64='uint16_t' name='bcdUSB' type64='S'/>
+<field declared_type64='IOUSBEndpointDescriptor' name='descriptor' type64='{IOUSBEndpointDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bEndpointAddress&quot;C&quot;bmAttributes&quot;C&quot;wMaxPacketSize&quot;S&quot;bInterval&quot;C}'/>
+<field declared_type64='IOUSBSuperSpeedEndpointCompanionDescriptor' name='ssCompanionDescriptor' type64='{IOUSBSuperSpeedEndpointCompanionDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bMaxBurst&quot;C&quot;bmAttributes&quot;C&quot;wBytesPerInterval&quot;S}'/>
+<field declared_type64='IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor' name='sspCompanionDescriptor' type64='{IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;wReserved&quot;S&quot;dwBytesPerInterval&quot;I}'/>
+</struct>
+<struct name='IOUSBStringDescriptor' type64='{IOUSBStringDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bString&quot;[1C]}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint8_t*' name='bString' type64='[1C]'/>
+</struct>
+<struct name='IOUSBSuperSpeedEndpointCompanionDescriptor' type64='{IOUSBSuperSpeedEndpointCompanionDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bMaxBurst&quot;C&quot;bmAttributes&quot;C&quot;wBytesPerInterval&quot;S}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint8_t' name='bMaxBurst' type64='C'/>
+<field declared_type64='uint8_t' name='bmAttributes' type64='C'/>
+<field declared_type64='uint16_t' name='wBytesPerInterval' type64='S'/>
+</struct>
+<struct name='IOUSBSuperSpeedHubDescriptor' type64='{IOUSBSuperSpeedHubDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bNumberPorts&quot;C&quot;wHubCharacteristics&quot;S&quot;bPowerOnToPowerGood&quot;C&quot;bHubControllerCurrent&quot;C&quot;bHubDecodeLatency&quot;C&quot;wHubDelay&quot;S&quot;deviceRemovable&quot;S}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint8_t' name='bNumberPorts' type64='C'/>
+<field declared_type64='uint16_t' name='wHubCharacteristics' type64='S'/>
+<field declared_type64='uint8_t' name='bPowerOnToPowerGood' type64='C'/>
+<field declared_type64='uint8_t' name='bHubControllerCurrent' type64='C'/>
+<field declared_type64='uint8_t' name='bHubDecodeLatency' type64='C'/>
+<field declared_type64='uint16_t' name='wHubDelay' type64='S'/>
+<field declared_type64='uint16_t' name='deviceRemovable' type64='S'/>
+</struct>
+<struct name='IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor' type64='{IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;wReserved&quot;S&quot;dwBytesPerInterval&quot;I}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint16_t' name='wReserved' type64='S'/>
+<field declared_type64='uint32_t' name='dwBytesPerInterval' type64='I'/>
+</struct>
+<struct name='UASPipeDescriptor' type64='{UASPipeDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bPipeID&quot;C&quot;bReserved&quot;C}'>
+<field declared_type64='uint8_t' name='bLength' type64='C'/>
+<field declared_type64='uint8_t' name='bDescriptorType' type64='C'/>
+<field declared_type64='uint8_t' name='bPipeID' type64='C'/>
+<field declared_type64='uint8_t' name='bReserved' type64='C'/>
+</struct>
+<constant declared_type64='int' name='IOService' type64='i'/>
+<constant declared_type64='int' name='IOUSBHostDevice' type64='i'/>
+<constant declared_type64='int' name='IOUSBHostDeviceInterface' type64='i'/>
+<constant declared_type64='int' name='IOUSBHostDeviceMetaClass' type64='i'/>
+<constant const='true' declared_type64='struct OSClassLoadInformation' name='IOUSBHostDevice_Class' type64='{OSClassLoadInformation=}'/>
+<constant declared_type64='int' name='IOUSBHostInterface' type64='i'/>
+<constant declared_type64='int' name='IOUSBHostInterfaceInterface' type64='i'/>
+<constant declared_type64='int' name='IOUSBHostInterfaceMetaClass' type64='i'/>
+<constant const='true' declared_type64='struct OSClassLoadInformation' name='IOUSBHostInterface_Class' type64='{OSClassLoadInformation=}'/>
+<constant declared_type64='int' name='IOUSBHostPipe' type64='i'/>
+<constant declared_type64='int' name='IOUSBHostPipeInterface' type64='i'/>
+<constant declared_type64='int' name='IOUSBHostPipeMetaClass' type64='i'/>
+<constant const='true' declared_type64='struct OSClassLoadInformation' name='IOUSBHostPipe_Class' type64='{OSClassLoadInformation=}'/>
+<constant declared_type64='int' name='OSInterface' type64='i'/>
+<constant declared_type64='int' name='OSMetaClass' type64='i'/>
+<constant declared_type64='int' name='OSObject' type64='i'/>
+<constant declared_type64='int*' name='gIOUSBHostDeviceMetaClass' type64='^i'/>
+<constant declared_type64='int*' name='gIOUSBHostInterfaceMetaClass' type64='^i'/>
+<constant declared_type64='int*' name='gIOUSBHostPipeMetaClass' type64='^i'/>
+<enum name='IOUSBEndpointFeatureSelectorStall' value64='0'/>
+<enum name='IOUSBEndpointStatusHalt' value64='1'/>
+<enum name='IOUSBHostDevice_AbortDeviceRequests_ID' value64='16202437263373529022'/>
+<enum name='IOUSBHostDevice_AsyncDeviceRequest_ID' value64='13162617338949287811'/>
+<enum name='IOUSBHostDevice_Close_ID' value64='17705116102457411945'/>
+<enum name='IOUSBHostDevice_CompleteAsyncDeviceRequest_ID' value64='14161979792661403473'/>
+<enum name='IOUSBHostDevice_CopyInterface_ID' value64='14822896234663410015'/>
+<enum name='IOUSBHostDevice_CreateIOBuffer_ID' value64='13112107152791207459'/>
+<enum name='IOUSBHostDevice_CreateInterfaceIterator_ID' value64='12094964985451232005'/>
+<enum name='IOUSBHostDevice_DestroyInterfaceIterator_ID' value64='14164105578687953696'/>
+<enum name='IOUSBHostDevice_DeviceRequest_ID' value64='9667793499594652158'/>
+<enum name='IOUSBHostDevice_GetAddress_ID' value64='13151348788343910867'/>
+<enum name='IOUSBHostDevice_GetFrameNumber_ID' value64='14294620212770830995'/>
+<enum name='IOUSBHostDevice_GetPortStatus_ID' value64='11551392065057887927'/>
+<enum name='IOUSBHostDevice_GetSpeed_ID' value64='11705238347281178209'/>
+<enum name='IOUSBHostDevice_Open_ID' value64='16229247675911467686'/>
+<enum name='IOUSBHostDevice_Reset_ID' value64='15058882093409305441'/>
+<enum name='IOUSBHostDevice_SetConfiguration_ID' value64='11995927397945505420'/>
+<enum name='IOUSBHostDevice__GetDescriptor_ID' value64='14369123242134957838'/>
+<enum name='IOUSBHostInterface_Close_ID' value64='14721573757907517485'/>
+<enum name='IOUSBHostInterface_CopyDevice_ID' value64='13426176782754009964'/>
+<enum name='IOUSBHostInterface_CopyPipe_ID' value64='9708467043572829856'/>
+<enum name='IOUSBHostInterface_GetFrameNumber_ID' value64='11911391000863026461'/>
+<enum name='IOUSBHostInterface_GetIdlePolicy_ID' value64='14265636102703313698'/>
+<enum name='IOUSBHostInterface_GetPortStatus_ID' value64='13749511903215066524'/>
+<enum name='IOUSBHostInterface_Open_ID' value64='16272875264299230245'/>
+<enum name='IOUSBHostInterface_SelectAlternateSetting_ID' value64='13774482175421169875'/>
+<enum name='IOUSBHostInterface_SetIdlePolicy_ID' value64='9448553041744138143'/>
+<enum name='IOUSBHostInterface__GetInterfaceDescriptorHeader_ID' value64='10679422199616166041'/>
+<enum name='IOUSBHostPipe_Abort_ID' value64='17232094868865032499'/>
+<enum name='IOUSBHostPipe_AdjustPipe_ID' value64='15900706211374499863'/>
+<enum name='IOUSBHostPipe_AsyncIOBundled_ID' value64='11997506505167757104'/>
+<enum name='IOUSBHostPipe_AsyncIO_ID' value64='16530109133573314528'/>
+<enum name='IOUSBHostPipe_ClearStall_ID' value64='11327877611209900339'/>
+<enum name='IOUSBHostPipe_CompleteAsyncIOBundled_ID' value64='15926456485417729028'/>
+<enum name='IOUSBHostPipe_CompleteAsyncIO_ID' value64='14060418282086907978'/>
+<enum name='IOUSBHostPipe_CompleteAsyncIsochIO_ID' value64='15476025420281060388'/>
+<enum name='IOUSBHostPipe_CreateMemoryDescriptorRing_ID' value64='10820354966400741619'/>
+<enum name='IOUSBHostPipe_GetDescriptors_ID' value64='14882552239423776927'/>
+<enum name='IOUSBHostPipe_GetDeviceAddress_ID' value64='9776292992035822794'/>
+<enum name='IOUSBHostPipe_GetIdlePolicy_ID' value64='15672703661089358733'/>
+<enum name='IOUSBHostPipe_GetSpeed_ID' value64='16284514718566417324'/>
+<enum name='IOUSBHostPipe_IO_ID' value64='9393734059898975518'/>
+<enum name='IOUSBHostPipe_IsochIO_ID' value64='16505210534836179159'/>
+<enum name='IOUSBHostPipe_SetIdlePolicy_ID' value64='11162932737544273762'/>
+<enum name='IOUSBHostPipe_SetMemoryDescriptor_ID' value64='16198938597214631751'/>
+<enum name='kIOUSB20BusCurrentDefault' value64='500'/>
+<enum name='kIOUSB20BusCurrentMaxPowerUnits' value64='2'/>
+<enum name='kIOUSB20BusCurrentMinimum' value64='100'/>
+<enum name='kIOUSB30Bitrate10Gbps' value64='10000000000'/>
+<enum name='kIOUSB30Bitrate5Gbps' value64='5000000000'/>
+<enum name='kIOUSB30BusCurrentDefault' value64='900'/>
+<enum name='kIOUSB30BusCurrentMaxPowerUnits' value64='8'/>
+<enum name='kIOUSB30BusCurrentMinimum' value64='150'/>
+<enum name='kIOUSB30DeviceNotificationTypeBusIntervalAdjustment' value64='3'/>
+<enum name='kIOUSB30DeviceNotificationTypeFunctionWake' value64='1'/>
+<enum name='kIOUSB30DeviceNotificationTypeHostRoleRequest' value64='4'/>
+<enum name='kIOUSB30DeviceNotificationTypeLatencyTolerance' value64='2'/>
+<enum name='kIOUSB30DeviceNotificationTypeSublinkSpeed' value64='5'/>
+<enum name='kIOUSB30HubExtStatusRxLaneCount' value64='3840'/>
+<enum name='kIOUSB30HubExtStatusRxLaneCountPhase' value64='8'/>
+<enum name='kIOUSB30HubExtStatusRxSublinkSpeedID' value64='15'/>
+<enum name='kIOUSB30HubExtStatusRxSublinkSpeedIDPhase' value64='0'/>
+<enum name='kIOUSB30HubExtStatusTxLaneCount' value64='61440'/>
+<enum name='kIOUSB30HubExtStatusTxLaneCountPhase' value64='12'/>
+<enum name='kIOUSB30HubExtStatusTxSublinkSpeedID' value64='240'/>
+<enum name='kIOUSB30HubExtStatusTxSublinkSpeedIDPhase' value64='4'/>
+<enum name='kIOUSB30HubPortStatusCodeCount' value64='3'/>
+<enum name='kIOUSB30HubPortStatusCodeExt' value64='2'/>
+<enum name='kIOUSB30HubPortStatusCodePD' value64='1'/>
+<enum name='kIOUSB30HubPortStatusCodeStandard' value64='0'/>
+<enum name='kIOUSB30LinKStateU2RxDetectDelay' value64='100'/>
+<enum name='kIOUSB30LinkStateHotResetActiveTimeout' value64='12'/>
+<enum name='kIOUSB30LinkStateHotResetExistTimeout' value64='2'/>
+<enum name='kIOUSB30LinkStateLoopbackExitTimeout' value64='2'/>
+<enum name='kIOUSB30LinkStatePollingActiveTimeout' value64='12'/>
+<enum name='kIOUSB30LinkStatePollingConfigurationTimeout' value64='12'/>
+<enum name='kIOUSB30LinkStatePollingDeadline' value64='387'/>
+<enum name='kIOUSB30LinkStatePollingIdleTimeout' value64='2'/>
+<enum name='kIOUSB30LinkStatePollingLFPSTimeout' value64='360'/>
+<enum name='kIOUSB30LinkStateRecoveryActiveTimeout' value64='12'/>
+<enum name='kIOUSB30LinkStateRecoveryConfigurationTimeout' value64='6'/>
+<enum name='kIOUSB30LinkStateRecoveryIdleTimeout' value64='2'/>
+<enum name='kIOUSB30LinkStateRxDetectQuietTimeout' value64='12'/>
+<enum name='kIOUSB30LinkStateSSInactiveQuietTimeout' value64='12'/>
+<enum name='kIOUSB30LinkStateSSResumeDeadline' value64='130'/>
+<enum name='kIOUSB30LinkStateU0LTimeout' value64='0'/>
+<enum name='kIOUSB30LinkStateU0RecoveryTimeout' value64='1'/>
+<enum name='kIOUSB30LinkStateU1NoLFPSResponseTimeout' value64='2'/>
+<enum name='kIOUSB30LinkStateU1PingTimeout' value64='300'/>
+<enum name='kIOUSB30LinkStateU2NoLFPSResponseTimeout' value64='2'/>
+<enum name='kIOUSB30LinkStateU3NoLFPSResponseTimeout' value64='10'/>
+<enum name='kIOUSB30LinkStateU3RxDetectDelay' value64='100'/>
+<enum name='kIOUSB30LinkStateU3WakeupRetryDelay' value64='100'/>
+<enum name='kIOUSB30ResetMaximumTimeout' value64='120'/>
+<enum name='kIOUSB30ResetMaximumWithMarginTimeout' value64='150'/>
+<enum name='kIOUSB30ResetMinimumTimeout' value64='80'/>
+<enum name='kIOUSB30ResetTypicalTimeout' value64='100'/>
+<enum name='kIOUSB30RetimerDepthLimit' value64='4'/>
+<enum name='kIOUSB30TimingParameterBELTDefaultNs' value64='1000000'/>
+<enum name='kIOUSB30TimingParameterBELTMinNs' value64='125000'/>
+<enum name='kIOUSB32Bitrate20Gbps' value64='20000000000'/>
+<enum name='kIOUSBAbortAsynchronous' value64='0'/>
+<enum name='kIOUSBAbortSynchronous' value64='1'/>
+<enum name='kIOUSBAppleVendorID' value64='1452'/>
+<enum name='kIOUSBBusVoltageDefault' value64='5'/>
+<enum name='kIOUSBConfigurationDescriptorAttributeRemoteWakeCapable' value64='32'/>
+<enum name='kIOUSBConfigurationDescriptorAttributeSelfPowered' value64='64'/>
+<enum name='kIOUSBDecriptorTypeHID' value64='33'/>
+<enum name='kIOUSBDecriptorTypeReport' value64='34'/>
+<enum name='kIOUSBDescriptorHeaderSize' value64='2'/>
+<enum name='kIOUSBDescriptorSizeBOS' value64='5'/>
+<enum name='kIOUSBDescriptorSizeBillboardDeviceMaximum' value64='256'/>
+<enum name='kIOUSBDescriptorSizeBillboardDeviceMinimum' value64='44'/>
+<enum name='kIOUSBDescriptorSizeConfiguration' value64='9'/>
+<enum name='kIOUSBDescriptorSizeContainerIDCapability' value64='20'/>
+<enum name='kIOUSBDescriptorSizeDevice' value64='18'/>
+<enum name='kIOUSBDescriptorSizeDeviceCapability' value64='3'/>
+<enum name='kIOUSBDescriptorSizeDeviceQualifier' value64='10'/>
+<enum name='kIOUSBDescriptorSizeEndpoint' value64='7'/>
+<enum name='kIOUSBDescriptorSizeHubMaximum' value64='21'/>
+<enum name='kIOUSBDescriptorSizeHubMinimum' value64='9'/>
+<enum name='kIOUSBDescriptorSizeInterface' value64='9'/>
+<enum name='kIOUSBDescriptorSizeInterfaceAssociation' value64='8'/>
+<enum name='kIOUSBDescriptorSizePlatformCapability' value64='20'/>
+<enum name='kIOUSBDescriptorSizePlatformECIDCapability' value64='28'/>
+<enum name='kIOUSBDescriptorSizeStringMaximum' value64='255'/>
+<enum name='kIOUSBDescriptorSizeStringMinimum' value64='2'/>
+<enum name='kIOUSBDescriptorSizeSuperSpeedHub' value64='12'/>
+<enum name='kIOUSBDescriptorSizeSuperSpeedPlusIsochronousEndpointCompanion' value64='8'/>
+<enum name='kIOUSBDescriptorSizeSuperSpeedUSBDeviceCapability' value64='10'/>
+<enum name='kIOUSBDescriptorSizeSuperSpeedUSBEndpointCompanion' value64='6'/>
+<enum name='kIOUSBDescriptorSizeUSB20ExtensionCapability' value64='7'/>
+<enum name='kIOUSBDescriptorTypeBOS' value64='15'/>
+<enum name='kIOUSBDescriptorTypeConfiguration' value64='2'/>
+<enum name='kIOUSBDescriptorTypeDebug' value64='10'/>
+<enum name='kIOUSBDescriptorTypeDevice' value64='1'/>
+<enum name='kIOUSBDescriptorTypeDeviceCapability' value64='16'/>
+<enum name='kIOUSBDescriptorTypeDeviceQualifier' value64='6'/>
+<enum name='kIOUSBDescriptorTypeEndpoint' value64='5'/>
+<enum name='kIOUSBDescriptorTypeHub' value64='41'/>
+<enum name='kIOUSBDescriptorTypeInterface' value64='4'/>
+<enum name='kIOUSBDescriptorTypeInterfaceAssociation' value64='11'/>
+<enum name='kIOUSBDescriptorTypeInterfacePower' value64='8'/>
+<enum name='kIOUSBDescriptorTypeOTG' value64='9'/>
+<enum name='kIOUSBDescriptorTypeOtherSpeedConfiguration' value64='7'/>
+<enum name='kIOUSBDescriptorTypePhysical' value64='35'/>
+<enum name='kIOUSBDescriptorTypeString' value64='3'/>
+<enum name='kIOUSBDescriptorTypeSuperSpeedHub' value64='42'/>
+<enum name='kIOUSBDescriptorTypeSuperSpeedPlusIsochronousEndpointCompanion' value64='49'/>
+<enum name='kIOUSBDescriptorTypeSuperSpeedUSBEndpointCompanion' value64='48'/>
+<enum name='kIOUSBDeviceCapabilityTypeBatteryInfo' value64='7'/>
+<enum name='kIOUSBDeviceCapabilityTypeBillboard' value64='13'/>
+<enum name='kIOUSBDeviceCapabilityTypeBillboardAltMode' value64='15'/>
+<enum name='kIOUSBDeviceCapabilityTypeContainerID' value64='4'/>
+<enum name='kIOUSBDeviceCapabilityTypePdConsumerPort' value64='8'/>
+<enum name='kIOUSBDeviceCapabilityTypePdProviderPort' value64='9'/>
+<enum name='kIOUSBDeviceCapabilityTypePlatform' value64='5'/>
+<enum name='kIOUSBDeviceCapabilityTypePowerDelivery' value64='6'/>
+<enum name='kIOUSBDeviceCapabilityTypePrecisionMeasurement' value64='11'/>
+<enum name='kIOUSBDeviceCapabilityTypeSuperSpeed' value64='3'/>
+<enum name='kIOUSBDeviceCapabilityTypeSuperSpeedPlus' value64='10'/>
+<enum name='kIOUSBDeviceCapabilityTypeUSB20Extension' value64='2'/>
+<enum name='kIOUSBDeviceCapabilityTypeWireless' value64='1'/>
+<enum name='kIOUSBDeviceCapabilityTypeWirelessExt' value64='12'/>
+<enum name='kIOUSBDeviceFeatureSelectorLTMEnable' value64='50'/>
+<enum name='kIOUSBDeviceFeatureSelectorRemoteWakeup' value64='1'/>
+<enum name='kIOUSBDeviceFeatureSelectorTestMode' value64='2'/>
+<enum name='kIOUSBDeviceFeatureSelectorU1Enable' value64='48'/>
+<enum name='kIOUSBDeviceFeatureSelectorU2Enable' value64='49'/>
+<enum name='kIOUSBDeviceRequestClearFeature' value64='1'/>
+<enum name='kIOUSBDeviceRequestDirectionIn' value64='128'/>
+<enum name='kIOUSBDeviceRequestDirectionMask' value64='128'/>
+<enum name='kIOUSBDeviceRequestDirectionOut' value64='0'/>
+<enum name='kIOUSBDeviceRequestDirectionPhase' value64='7'/>
+<enum name='kIOUSBDeviceRequestDirectionValueIn' value64='1'/>
+<enum name='kIOUSBDeviceRequestDirectionValueOut' value64='0'/>
+<enum name='kIOUSBDeviceRequestGetConfiguration' value64='8'/>
+<enum name='kIOUSBDeviceRequestGetDescriptor' value64='6'/>
+<enum name='kIOUSBDeviceRequestGetInterface' value64='10'/>
+<enum name='kIOUSBDeviceRequestGetState' value64='2'/>
+<enum name='kIOUSBDeviceRequestGetStatus' value64='0'/>
+<enum name='kIOUSBDeviceRequestRecipientDevice' value64='0'/>
+<enum name='kIOUSBDeviceRequestRecipientEndpoint' value64='2'/>
+<enum name='kIOUSBDeviceRequestRecipientInterface' value64='1'/>
+<enum name='kIOUSBDeviceRequestRecipientMask' value64='31'/>
+<enum name='kIOUSBDeviceRequestRecipientOther' value64='3'/>
+<enum name='kIOUSBDeviceRequestRecipientPhase' value64='0'/>
+<enum name='kIOUSBDeviceRequestRecipientValueDevice' value64='0'/>
+<enum name='kIOUSBDeviceRequestRecipientValueEndpoint' value64='2'/>
+<enum name='kIOUSBDeviceRequestRecipientValueInterface' value64='1'/>
+<enum name='kIOUSBDeviceRequestRecipientValueOther' value64='3'/>
+<enum name='kIOUSBDeviceRequestSetAddress' value64='5'/>
+<enum name='kIOUSBDeviceRequestSetConfiguration' value64='9'/>
+<enum name='kIOUSBDeviceRequestSetDescriptor' value64='7'/>
+<enum name='kIOUSBDeviceRequestSetFeature' value64='3'/>
+<enum name='kIOUSBDeviceRequestSetInterface' value64='11'/>
+<enum name='kIOUSBDeviceRequestSetIsochronousDelay' value64='49'/>
+<enum name='kIOUSBDeviceRequestSetSel' value64='48'/>
+<enum name='kIOUSBDeviceRequestSize' value64='8'/>
+<enum name='kIOUSBDeviceRequestSynchFrame' value64='12'/>
+<enum name='kIOUSBDeviceRequestTypeClass' value64='32'/>
+<enum name='kIOUSBDeviceRequestTypeMask' value64='96'/>
+<enum name='kIOUSBDeviceRequestTypePhase' value64='5'/>
+<enum name='kIOUSBDeviceRequestTypeStandard' value64='0'/>
+<enum name='kIOUSBDeviceRequestTypeValueClass' value64='1'/>
+<enum name='kIOUSBDeviceRequestTypeValueStandard' value64='0'/>
+<enum name='kIOUSBDeviceRequestTypeValueVendor' value64='2'/>
+<enum name='kIOUSBDeviceRequestTypeVendor' value64='64'/>
+<enum name='kIOUSBDeviceStatusLTMEnable' value64='16'/>
+<enum name='kIOUSBDeviceStatusRemoteWakeEnable' value64='2'/>
+<enum name='kIOUSBDeviceStatusSelfPowered' value64='1'/>
+<enum name='kIOUSBDeviceStatusU1Enable' value64='4'/>
+<enum name='kIOUSBDeviceStatusU2Enable' value64='8'/>
+<enum name='kIOUSBEndpointDescriptorDirection' value64='128'/>
+<enum name='kIOUSBEndpointDescriptorDirectionIn' value64='128'/>
+<enum name='kIOUSBEndpointDescriptorDirectionOut' value64='0'/>
+<enum name='kIOUSBEndpointDescriptorDirectionPhase' value64='7'/>
+<enum name='kIOUSBEndpointDescriptorEndpointAddressReserved' value64='112'/>
+<enum name='kIOUSBEndpointDescriptorNumber' value64='15'/>
+<enum name='kIOUSBEndpointDescriptorNumberPhase' value64='0'/>
+<enum name='kIOUSBEndpointDescriptorPacketSize' value64='2047'/>
+<enum name='kIOUSBEndpointDescriptorPacketSizeMult' value64='6144'/>
+<enum name='kIOUSBEndpointDescriptorPacketSizeMultPhase' value64='11'/>
+<enum name='kIOUSBEndpointDescriptorPacketSizePhase' value64='0'/>
+<enum name='kIOUSBEndpointDescriptorReserved' value64='57344'/>
+<enum name='kIOUSBEndpointDescriptorReservedPhase' value64='13'/>
+<enum name='kIOUSBEndpointDescriptorSynchronizationType' value64='12'/>
+<enum name='kIOUSBEndpointDescriptorSynchronizationTypeAdaptive' value64='8'/>
+<enum name='kIOUSBEndpointDescriptorSynchronizationTypeAsynchronous' value64='4'/>
+<enum name='kIOUSBEndpointDescriptorSynchronizationTypeNone' value64='0'/>
+<enum name='kIOUSBEndpointDescriptorSynchronizationTypePhase' value64='2'/>
+<enum name='kIOUSBEndpointDescriptorSynchronizationTypeSynchronous' value64='12'/>
+<enum name='kIOUSBEndpointDescriptorTransferType' value64='3'/>
+<enum name='kIOUSBEndpointDescriptorTransferTypeBulk' value64='2'/>
+<enum name='kIOUSBEndpointDescriptorTransferTypeControl' value64='0'/>
+<enum name='kIOUSBEndpointDescriptorTransferTypeInterrupt' value64='3'/>
+<enum name='kIOUSBEndpointDescriptorTransferTypeIsochronous' value64='1'/>
+<enum name='kIOUSBEndpointDescriptorTransferTypePhase' value64='0'/>
+<enum name='kIOUSBEndpointDescriptorUsageType' value64='48'/>
+<enum name='kIOUSBEndpointDescriptorUsageTypeInterruptNotification' value64='16'/>
+<enum name='kIOUSBEndpointDescriptorUsageTypeInterruptPeriodic' value64='0'/>
+<enum name='kIOUSBEndpointDescriptorUsageTypeInterruptReserved1' value64='32'/>
+<enum name='kIOUSBEndpointDescriptorUsageTypeInterruptReserved2' value64='48'/>
+<enum name='kIOUSBEndpointDescriptorUsageTypeIsocData' value64='0'/>
+<enum name='kIOUSBEndpointDescriptorUsageTypeIsocFeedback' value64='16'/>
+<enum name='kIOUSBEndpointDescriptorUsageTypeIsocImplicit' value64='32'/>
+<enum name='kIOUSBEndpointDescriptorUsageTypeIsocReserved' value64='48'/>
+<enum name='kIOUSBEndpointDescriptorUsageTypePhase' value64='4'/>
+<enum name='kIOUSBEndpointDirectionIn' value64='1'/>
+<enum name='kIOUSBEndpointDirectionOut' value64='0'/>
+<enum name='kIOUSBEndpointDirectionUnknown' value64='2'/>
+<enum name='kIOUSBEndpointSynchronizationTypeAdaptive' value64='2'/>
+<enum name='kIOUSBEndpointSynchronizationTypeAsynchronous' value64='1'/>
+<enum name='kIOUSBEndpointSynchronizationTypeNone' value64='0'/>
+<enum name='kIOUSBEndpointSynchronizationTypeSynchronous' value64='3'/>
+<enum name='kIOUSBEndpointTypeBulk' value64='2'/>
+<enum name='kIOUSBEndpointTypeControl' value64='0'/>
+<enum name='kIOUSBEndpointTypeInterrupt' value64='3'/>
+<enum name='kIOUSBEndpointTypeIsochronous' value64='1'/>
+<enum name='kIOUSBEndpointUsageTypeIsocData' value64='0'/>
+<enum name='kIOUSBEndpointUsageTypeIsocFeedback' value64='1'/>
+<enum name='kIOUSBEndpointUsageTypeIsocImplicit' value64='2'/>
+<enum name='kIOUSBGetEndpointDescriptorCurrentPolicy' value64='1'/>
+<enum name='kIOUSBGetEndpointDescriptorOriginal' value64='0'/>
+<enum name='kIOUSBHostPipeBundlingMax' value64='16'/>
+<enum name='kIOUSBHubDelayNs' value64='400'/>
+<enum name='kIOUSBHubPort2PortExitLatencyNs' value64='1000'/>
+<enum name='kIOUSBInterfaceFeatureSelectorSuspend' value64='0'/>
+<enum name='kIOUSBInterfaceStatusRemoteWakeCapable' value64='1'/>
+<enum name='kIOUSBInterfaceStatusRemoteWakeEnable' value64='2'/>
+<enum name='kIOUSBInterfaceSuspendLowPower' value64='1'/>
+<enum name='kIOUSBInterfaceSuspendRemoteWakeEnable' value64='2'/>
+<enum name='kIOUSBLanguageIDEnglishUS' value64='1033'/>
+<enum name='kIOUSBPingResponseTimeNs' value64='400'/>
+<enum name='kIOUSBSuperSpeedDeviceCapability5Gb' value64='8'/>
+<enum name='kIOUSBSuperSpeedDeviceCapabilityFullSpeed' value64='2'/>
+<enum name='kIOUSBSuperSpeedDeviceCapabilityHighSpeed' value64='4'/>
+<enum name='kIOUSBSuperSpeedDeviceCapabilityLTM' value64='2'/>
+<enum name='kIOUSBSuperSpeedDeviceCapabilityLowSpeed' value64='1'/>
+<enum name='kIOUSBSuperSpeedDeviceCapabilitySupport5Gb' value64='3'/>
+<enum name='kIOUSBSuperSpeedDeviceCapabilitySupportFullSpeed' value64='1'/>
+<enum name='kIOUSBSuperSpeedDeviceCapabilitySupportHighSpeed' value64='2'/>
+<enum name='kIOUSBSuperSpeedDeviceCapabilitySupportLowSpeed' value64='0'/>
+<enum name='kIOUSBSuperSpeedDeviceCapabilityU1DevExitLatMax' value64='10'/>
+<enum name='kIOUSBSuperSpeedDeviceCapabilityU2DevExitLatMax' value64='2047'/>
+<enum name='kIOUSBSuperSpeedEndpointCompanionDescriptorBulkMaxStreams' value64='31'/>
+<enum name='kIOUSBSuperSpeedEndpointCompanionDescriptorBulkMaxStreamsPhase' value64='0'/>
+<enum name='kIOUSBSuperSpeedEndpointCompanionDescriptorBulkReserved' value64='224'/>
+<enum name='kIOUSBSuperSpeedEndpointCompanionDescriptorBulkReservedPhase' value64='5'/>
+<enum name='kIOUSBSuperSpeedEndpointCompanionDescriptorIsocMult' value64='3'/>
+<enum name='kIOUSBSuperSpeedEndpointCompanionDescriptorIsocMultPhase' value64='0'/>
+<enum name='kIOUSBSuperSpeedEndpointCompanionDescriptorIsocReserved' value64='124'/>
+<enum name='kIOUSBSuperSpeedEndpointCompanionDescriptorIsocReservedPhase' value64='2'/>
+<enum name='kIOUSBSuperSpeedEndpointCompanionDescriptorMaxBurst' value64='31'/>
+<enum name='kIOUSBSuperSpeedEndpointCompanionDescriptorMaxBurstPhase' value64='0'/>
+<enum name='kIOUSBSuperSpeedEndpointCompanionDescriptorSSPIsocCompanion' value64='128'/>
+<enum name='kIOUSBSuperSpeedHubCharacteristicsCompoundDevice' value64='4'/>
+<enum name='kIOUSBSuperSpeedHubCharacteristicsOverCurrentGlobal' value64='0'/>
+<enum name='kIOUSBSuperSpeedHubCharacteristicsOverCurrentIndividual' value64='8'/>
+<enum name='kIOUSBSuperSpeedHubCharacteristicsOverCurrentMask' value64='24'/>
+<enum name='kIOUSBSuperSpeedHubCharacteristicsPowerSwitchingGanged' value64='0'/>
+<enum name='kIOUSBSuperSpeedHubCharacteristicsPowerSwitchingIndividual' value64='1'/>
+<enum name='kIOUSBSuperSpeedHubCharacteristicsPowerSwitchingMask' value64='3'/>
+<enum name='kIOUSBSuperSpeedHubCharacteristicsReserved' value64='65504'/>
+<enum name='kIOUSBSuperSpeedHubDecodeLatencyMax' value64='10'/>
+<enum name='kIOUSBSuperSpeedHubDelayMax' value64='400'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilityMinRxLaneCount' value64='3840'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilityMinRxLaneCountPhase' value64='8'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilityMinTxLaneCount' value64='61440'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilityMinTxLaneCountPhase' value64='12'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilityReserved' value64='240'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilityReservedPhase' value64='4'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkAsymmetric' value64='64'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkDirection' value64='128'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkDirectionPhase' value64='7'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkDirectionRx' value64='0'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkDirectionTx' value64='128'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkLSE' value64='48'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkLSEBits' value64='0'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkLSEGbits' value64='48'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkLSEKbits' value64='16'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkLSEMbits' value64='32'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkLSEPhase' value64='4'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkMinSpeedId' value64='15'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkMinSpeedIdPhase' value64='0'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkProtocol' value64='49152'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkProtocolPhase' value64='14'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkReserved' value64='16128'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkReservedPhase' value64='8'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkSpeedAttrCount' value64='31'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkSpeedAttrCountPhase' value64='0'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkSpeedId' value64='15'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkSpeedIdCount' value64='480'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkSpeedIdCountPhase' value64='5'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkSpeedIdPhase' value64='0'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkSpeedMantissa' value64='4294901760'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkSpeedMantissaPhase' value64='16'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkSymmetric' value64='0'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkSymmetry' value64='64'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkSymmetryPhase' value64='6'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkType' value64='192'/>
+<enum name='kIOUSBSuperSpeedPlusDeviceCapabilitySublinkTypePhase' value64='6'/>
+<enum name='kIOUSBUSB20ExtensionCapabilityBESL' value64='3840'/>
+<enum name='kIOUSBUSB20ExtensionCapabilityBESLD' value64='61440'/>
+<enum name='kIOUSBUSB20ExtensionCapabilityBESLDPhase' value64='12'/>
+<enum name='kIOUSBUSB20ExtensionCapabilityBESLDValid' value64='16'/>
+<enum name='kIOUSBUSB20ExtensionCapabilityBESLPhase' value64='8'/>
+<enum name='kIOUSBUSB20ExtensionCapabilityBESLSupport' value64='4'/>
+<enum name='kIOUSBUSB20ExtensionCapabilityBESLValid' value64='8'/>
+<enum name='kIOUSBUSB20ExtensionCapabilityLPM' value64='2'/>
+<function name='IOUSBGetBillboardDescriptor'>
+<arg const='true' declared_type64='IOUSBBOSDescriptor*' name='bosDescriptor' type64='^{IOUSBBOSDescriptor=CCSC}'/>
+<retval const='true' declared_type64='IOUSBDeviceCapabilityBillboard*' type64='^{IOUSBDeviceCapabilityBillboard=CCCCCCS[32C]SCC[0{IOUSBDeviceCapabilityBillboardAltConfig=SCC}]}'/>
+</function>
+<function name='IOUSBGetConfigurationMaxPowerMilliAmps'>
+<arg declared_type64='uint32_t' name='usbDeviceSpeed' type64='I'/>
+<arg const='true' declared_type64='IOUSBConfigurationDescriptor*' name='descriptor' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+<retval declared_type64='uint32_t' type64='I'/>
+</function>
+<function name='IOUSBGetContainerIDDescriptor'>
+<arg const='true' declared_type64='IOUSBBOSDescriptor*' name='bosDescriptor' type64='^{IOUSBBOSDescriptor=CCSC}'/>
+<retval const='true' declared_type64='IOUSBDeviceCapabilityContainerID*' type64='^{IOUSBDeviceCapabilityContainerID=CCCC[16C]}'/>
+</function>
+<function name='IOUSBGetEndpointAddress'>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<retval declared_type64='uint8_t' type64='C'/>
+</function>
+<function name='IOUSBGetEndpointBurstSize'>
+<arg declared_type64='uint32_t' name='usbDeviceSpeed' type64='I'/>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<arg const='true' declared_type64='IOUSBSuperSpeedEndpointCompanionDescriptor*' name='companionDescriptor' type64='^{IOUSBSuperSpeedEndpointCompanionDescriptor=CCCCS}'/>
+<arg const='true' declared_type64='IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor*' name='sspCompanionDescriptor' type64='^{IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor=CCSI}'/>
+<retval declared_type64='uint32_t' type64='I'/>
+</function>
+<function name='IOUSBGetEndpointDirection'>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<retval declared_type64='uint8_t' type64='C'/>
+</function>
+<function name='IOUSBGetEndpointIntervalEncodedMicroframes'>
+<arg declared_type64='uint32_t' name='usbDeviceSpeed' type64='I'/>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<retval declared_type64='uint32_t' type64='I'/>
+</function>
+<function name='IOUSBGetEndpointIntervalFrames'>
+<arg declared_type64='uint32_t' name='usbDeviceSpeed' type64='I'/>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<retval declared_type64='uint32_t' type64='I'/>
+</function>
+<function name='IOUSBGetEndpointIntervalMicroframes'>
+<arg declared_type64='uint32_t' name='usbDeviceSpeed' type64='I'/>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<retval declared_type64='uint32_t' type64='I'/>
+</function>
+<function name='IOUSBGetEndpointMaxPacketSize'>
+<arg declared_type64='uint32_t' name='usbDeviceSpeed' type64='I'/>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<retval declared_type64='uint16_t' type64='S'/>
+</function>
+<function name='IOUSBGetEndpointMaxStreams'>
+<arg declared_type64='uint32_t' name='usbDeviceSpeed' type64='I'/>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<arg const='true' declared_type64='IOUSBSuperSpeedEndpointCompanionDescriptor*' name='companionDescriptor' type64='^{IOUSBSuperSpeedEndpointCompanionDescriptor=CCCCS}'/>
+<retval declared_type64='uint32_t' type64='I'/>
+</function>
+<function name='IOUSBGetEndpointMaxStreamsEncoded'>
+<arg declared_type64='uint32_t' name='usbDeviceSpeed' type64='I'/>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<arg const='true' declared_type64='IOUSBSuperSpeedEndpointCompanionDescriptor*' name='companionDescriptor' type64='^{IOUSBSuperSpeedEndpointCompanionDescriptor=CCCCS}'/>
+<retval declared_type64='uint32_t' type64='I'/>
+</function>
+<function name='IOUSBGetEndpointMult'>
+<arg declared_type64='uint32_t' name='usbDeviceSpeed' type64='I'/>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<arg const='true' declared_type64='IOUSBSuperSpeedEndpointCompanionDescriptor*' name='companionDescriptor' type64='^{IOUSBSuperSpeedEndpointCompanionDescriptor=CCCCS}'/>
+<arg const='true' declared_type64='IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor*' name='sspCompanionDescriptor' type64='^{IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor=CCSI}'/>
+<retval declared_type64='uint8_t' type64='C'/>
+</function>
+<function name='IOUSBGetEndpointNumber'>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<retval declared_type64='uint8_t' type64='C'/>
+</function>
+<function name='IOUSBGetEndpointType'>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<retval declared_type64='uint8_t' type64='C'/>
+</function>
+<function name='IOUSBGetNextAssociatedDescriptor'>
+<arg const='true' declared_type64='IOUSBConfigurationDescriptor*' name='configurationDescriptor' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+<arg const='true' declared_type64='IOUSBDescriptorHeader*' name='parentDescriptor' type64='^{IOUSBDescriptorHeader=CC}'/>
+<arg const='true' declared_type64='IOUSBDescriptorHeader*' name='currentDescriptor' type64='^{IOUSBDescriptorHeader=CC}'/>
+<retval const='true' declared_type64='IOUSBDescriptorHeader*' type64='^{IOUSBDescriptorHeader=CC}'/>
+</function>
+<function name='IOUSBGetNextAssociatedDescriptorWithType'>
+<arg const='true' declared_type64='IOUSBConfigurationDescriptor*' name='configurationDescriptor' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+<arg const='true' declared_type64='IOUSBDescriptorHeader*' name='parentDescriptor' type64='^{IOUSBDescriptorHeader=CC}'/>
+<arg const='true' declared_type64='IOUSBDescriptorHeader*' name='currentDescriptor' type64='^{IOUSBDescriptorHeader=CC}'/>
+<arg const='true' declared_type64='uint8_t' name='type' type64='C'/>
+<retval const='true' declared_type64='IOUSBDescriptorHeader*' type64='^{IOUSBDescriptorHeader=CC}'/>
+</function>
+<function name='IOUSBGetNextCapabilityDescriptor'>
+<arg const='true' declared_type64='IOUSBBOSDescriptor*' name='bosDescriptor' type64='^{IOUSBBOSDescriptor=CCSC}'/>
+<arg const='true' declared_type64='IOUSBDeviceCapabilityDescriptorHeader*' name='currentDescriptor' type64='^{IOUSBDeviceCapabilityDescriptorHeader=CCC}'/>
+<retval const='true' declared_type64='IOUSBDeviceCapabilityDescriptorHeader*' type64='^{IOUSBDeviceCapabilityDescriptorHeader=CCC}'/>
+</function>
+<function name='IOUSBGetNextCapabilityDescriptorWithType'>
+<arg const='true' declared_type64='IOUSBBOSDescriptor*' name='bosDescriptor' type64='^{IOUSBBOSDescriptor=CCSC}'/>
+<arg const='true' declared_type64='IOUSBDeviceCapabilityDescriptorHeader*' name='currentDescriptor' type64='^{IOUSBDeviceCapabilityDescriptorHeader=CCC}'/>
+<arg const='true' declared_type64='uint8_t' name='type' type64='C'/>
+<retval const='true' declared_type64='IOUSBDeviceCapabilityDescriptorHeader*' type64='^{IOUSBDeviceCapabilityDescriptorHeader=CCC}'/>
+</function>
+<function name='IOUSBGetNextDescriptor'>
+<arg const='true' declared_type64='IOUSBConfigurationDescriptor*' name='configurationDescriptor' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+<arg const='true' declared_type64='IOUSBDescriptorHeader*' name='currentDescriptor' type64='^{IOUSBDescriptorHeader=CC}'/>
+<retval const='true' declared_type64='IOUSBDescriptorHeader*' type64='^{IOUSBDescriptorHeader=CC}'/>
+</function>
+<function name='IOUSBGetNextDescriptorWithType'>
+<arg const='true' declared_type64='IOUSBConfigurationDescriptor*' name='configurationDescriptor' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+<arg const='true' declared_type64='IOUSBDescriptorHeader*' name='currentDescriptor' type64='^{IOUSBDescriptorHeader=CC}'/>
+<arg const='true' declared_type64='uint8_t' name='type' type64='C'/>
+<retval const='true' declared_type64='IOUSBDescriptorHeader*' type64='^{IOUSBDescriptorHeader=CC}'/>
+</function>
+<function name='IOUSBGetNextEndpointDescriptor'>
+<arg const='true' declared_type64='IOUSBConfigurationDescriptor*' name='configurationDescriptor' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+<arg const='true' declared_type64='IOUSBInterfaceDescriptor*' name='interfaceDescriptor' type64='^{IOUSBInterfaceDescriptor=CCCCCCCCC}'/>
+<arg const='true' declared_type64='IOUSBDescriptorHeader*' name='currentDescriptor' type64='^{IOUSBDescriptorHeader=CC}'/>
+<retval const='true' declared_type64='IOUSBEndpointDescriptor*' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+</function>
+<function name='IOUSBGetNextInterfaceAssociationDescriptor'>
+<arg const='true' declared_type64='IOUSBConfigurationDescriptor*' name='configurationDescriptor' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+<arg const='true' declared_type64='IOUSBDescriptorHeader*' name='currentDescriptor' type64='^{IOUSBDescriptorHeader=CC}'/>
+<retval const='true' declared_type64='IOUSBInterfaceAssociationDescriptor*' type64='^{IOUSBInterfaceAssociationDescriptor=CCCCCCCC}'/>
+</function>
+<function name='IOUSBGetNextInterfaceDescriptor'>
+<arg const='true' declared_type64='IOUSBConfigurationDescriptor*' name='configurationDescriptor' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+<arg const='true' declared_type64='IOUSBDescriptorHeader*' name='currentDescriptor' type64='^{IOUSBDescriptorHeader=CC}'/>
+<retval const='true' declared_type64='IOUSBInterfaceDescriptor*' type64='^{IOUSBInterfaceDescriptor=CCCCCCCCC}'/>
+</function>
+<function name='IOUSBGetPlatformCapabilityDescriptor'>
+<arg const='true' declared_type64='IOUSBBOSDescriptor*' name='bosDescriptor' type64='^{IOUSBBOSDescriptor=CCSC}'/>
+<retval const='true' declared_type64='IOUSBPlatformCapabilityDescriptor*' type64='^{IOUSBPlatformCapabilityDescriptor=CCCC[16C]}'/>
+</function>
+<function name='IOUSBGetSuperSpeedDeviceCapabilityDescriptor'>
+<arg const='true' declared_type64='IOUSBBOSDescriptor*' name='bosDescriptor' type64='^{IOUSBBOSDescriptor=CCSC}'/>
+<retval const='true' declared_type64='IOUSBDeviceCapabilitySuperSpeedUSB*' type64='^{IOUSBDeviceCapabilitySuperSpeedUSB=CCCCSCCS}'/>
+</function>
+<function name='IOUSBGetSuperSpeedPlusDeviceCapabilityDescriptor'>
+<arg const='true' declared_type64='IOUSBBOSDescriptor*' name='bosDescriptor' type64='^{IOUSBBOSDescriptor=CCSC}'/>
+<retval const='true' declared_type64='IOUSBDeviceCapabilitySuperSpeedPlusUSB*' type64='^{IOUSBDeviceCapabilitySuperSpeedPlusUSB=CCCCISS[0I]}'/>
+</function>
+<function name='IOUSBGetUSB20ExtensionDeviceCapabilityDescriptor'>
+<arg const='true' declared_type64='IOUSBBOSDescriptor*' name='bosDescriptor' type64='^{IOUSBBOSDescriptor=CCSC}'/>
+<retval const='true' declared_type64='IOUSBDeviceCapabilityUSB2Extension*' type64='^{IOUSBDeviceCapabilityUSB2Extension=CCCI}'/>
+</function>
+<function name='IOUSBHostFreeDescriptor'>
+<arg const='true' declared_type64='IOUSBStringDescriptor*' name='descriptor' type64='^{IOUSBStringDescriptor=CC[1C]}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+</signatures>

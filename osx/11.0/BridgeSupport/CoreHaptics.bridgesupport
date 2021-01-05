@@ -1,0 +1,594 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant declared_type64='CHHapticDynamicParameterID _Nonnull' name='CHHapticDynamicParameterIDAudioAttackTimeControl' type64='@'/>
+<constant declared_type64='CHHapticDynamicParameterID _Nonnull' name='CHHapticDynamicParameterIDAudioBrightnessControl' type64='@'/>
+<constant declared_type64='CHHapticDynamicParameterID _Nonnull' name='CHHapticDynamicParameterIDAudioDecayTimeControl' type64='@'/>
+<constant declared_type64='CHHapticDynamicParameterID _Nonnull' name='CHHapticDynamicParameterIDAudioPanControl' type64='@'/>
+<constant declared_type64='CHHapticDynamicParameterID _Nonnull' name='CHHapticDynamicParameterIDAudioPitchControl' type64='@'/>
+<constant declared_type64='CHHapticDynamicParameterID _Nonnull' name='CHHapticDynamicParameterIDAudioReleaseTimeControl' type64='@'/>
+<constant declared_type64='CHHapticDynamicParameterID _Nonnull' name='CHHapticDynamicParameterIDAudioVolumeControl' type64='@'/>
+<constant declared_type64='CHHapticDynamicParameterID _Nonnull' name='CHHapticDynamicParameterIDHapticAttackTimeControl' type64='@'/>
+<constant declared_type64='CHHapticDynamicParameterID _Nonnull' name='CHHapticDynamicParameterIDHapticDecayTimeControl' type64='@'/>
+<constant declared_type64='CHHapticDynamicParameterID _Nonnull' name='CHHapticDynamicParameterIDHapticIntensityControl' type64='@'/>
+<constant declared_type64='CHHapticDynamicParameterID _Nonnull' name='CHHapticDynamicParameterIDHapticReleaseTimeControl' type64='@'/>
+<constant declared_type64='CHHapticDynamicParameterID _Nonnull' name='CHHapticDynamicParameterIDHapticSharpnessControl' type64='@'/>
+<constant declared_type64='CHHapticEventParameterID _Nonnull' name='CHHapticEventParameterIDAttackTime' type64='@'/>
+<constant declared_type64='CHHapticEventParameterID _Nonnull' name='CHHapticEventParameterIDAudioBrightness' type64='@'/>
+<constant declared_type64='CHHapticEventParameterID _Nonnull' name='CHHapticEventParameterIDAudioPan' type64='@'/>
+<constant declared_type64='CHHapticEventParameterID _Nonnull' name='CHHapticEventParameterIDAudioPitch' type64='@'/>
+<constant declared_type64='CHHapticEventParameterID _Nonnull' name='CHHapticEventParameterIDAudioVolume' type64='@'/>
+<constant declared_type64='CHHapticEventParameterID _Nonnull' name='CHHapticEventParameterIDDecayTime' type64='@'/>
+<constant declared_type64='CHHapticEventParameterID _Nonnull' name='CHHapticEventParameterIDHapticIntensity' type64='@'/>
+<constant declared_type64='CHHapticEventParameterID _Nonnull' name='CHHapticEventParameterIDHapticSharpness' type64='@'/>
+<constant declared_type64='CHHapticEventParameterID _Nonnull' name='CHHapticEventParameterIDReleaseTime' type64='@'/>
+<constant declared_type64='CHHapticEventParameterID _Nonnull' name='CHHapticEventParameterIDSustained' type64='@'/>
+<constant declared_type64='CHHapticEventType _Nonnull' name='CHHapticEventTypeAudioContinuous' type64='@'/>
+<constant declared_type64='CHHapticEventType _Nonnull' name='CHHapticEventTypeAudioCustom' type64='@'/>
+<constant declared_type64='CHHapticEventType _Nonnull' name='CHHapticEventTypeHapticContinuous' type64='@'/>
+<constant declared_type64='CHHapticEventType _Nonnull' name='CHHapticEventTypeHapticTransient' type64='@'/>
+<constant declared_type64='CHHapticPatternKey _Nonnull' name='CHHapticPatternKeyEvent' type64='@'/>
+<constant declared_type64='CHHapticPatternKey _Nonnull' name='CHHapticPatternKeyEventDuration' type64='@'/>
+<constant declared_type64='CHHapticPatternKey _Nonnull' name='CHHapticPatternKeyEventParameters' type64='@'/>
+<constant declared_type64='CHHapticPatternKey _Nonnull' name='CHHapticPatternKeyEventType' type64='@'/>
+<constant declared_type64='CHHapticPatternKey _Nonnull' name='CHHapticPatternKeyEventWaveformPath' type64='@'/>
+<constant declared_type64='CHHapticPatternKey _Nonnull' name='CHHapticPatternKeyParameter' type64='@'/>
+<constant declared_type64='CHHapticPatternKey _Nonnull' name='CHHapticPatternKeyParameterCurve' type64='@'/>
+<constant declared_type64='CHHapticPatternKey _Nonnull' name='CHHapticPatternKeyParameterCurveControlPoints' type64='@'/>
+<constant declared_type64='CHHapticPatternKey _Nonnull' name='CHHapticPatternKeyParameterID' type64='@'/>
+<constant declared_type64='CHHapticPatternKey _Nonnull' name='CHHapticPatternKeyParameterValue' type64='@'/>
+<constant declared_type64='CHHapticPatternKey _Nonnull' name='CHHapticPatternKeyPattern' type64='@'/>
+<constant declared_type64='CHHapticPatternKey _Nonnull' name='CHHapticPatternKeyTime' type64='@'/>
+<constant declared_type64='CHHapticPatternKey _Nonnull' name='CHHapticPatternKeyVersion' type64='@'/>
+<constant declared_type64='NSErrorDomain' name='CoreHapticsErrorDomain' type64='@'/>
+<enum name='CHHapticEngineFinishedActionLeaveEngineRunning' value64='2'/>
+<enum name='CHHapticEngineFinishedActionStopEngine' value64='1'/>
+<enum name='CHHapticEngineStoppedReasonApplicationSuspended' value64='2'/>
+<enum name='CHHapticEngineStoppedReasonAudioSessionInterrupt' value64='1'/>
+<enum name='CHHapticEngineStoppedReasonEngineDestroyed' value64='5'/>
+<enum name='CHHapticEngineStoppedReasonGameControllerDisconnect' value64='6'/>
+<enum name='CHHapticEngineStoppedReasonIdleTimeout' value64='3'/>
+<enum name='CHHapticEngineStoppedReasonNotifyWhenFinished' value64='4'/>
+<enum name='CHHapticEngineStoppedReasonSystemError' value64='-1'/>
+<enum name='CHHapticErrorCodeBadEventEntry' value64='-4830'/>
+<enum name='CHHapticErrorCodeBadParameterEntry' value64='-4831'/>
+<enum name='CHHapticErrorCodeEngineNotRunning' value64='-4805'/>
+<enum name='CHHapticErrorCodeEngineStartTimeout' value64='-4808'/>
+<enum name='CHHapticErrorCodeInvalidAudioResource' value64='-4824'/>
+<enum name='CHHapticErrorCodeInvalidAudioSession' value64='-4815'/>
+<enum name='CHHapticErrorCodeInvalidEventDuration' value64='-4823'/>
+<enum name='CHHapticErrorCodeInvalidEventTime' value64='-4822'/>
+<enum name='CHHapticErrorCodeInvalidEventType' value64='-4821'/>
+<enum name='CHHapticErrorCodeInvalidParameterType' value64='-4820'/>
+<enum name='CHHapticErrorCodeInvalidPatternData' value64='-4813'/>
+<enum name='CHHapticErrorCodeInvalidPatternDictionary' value64='-4814'/>
+<enum name='CHHapticErrorCodeInvalidPatternPlayer' value64='-4812'/>
+<enum name='CHHapticErrorCodeInvalidTime' value64='-4840'/>
+<enum name='CHHapticErrorCodeMemoryError' value64='-4899'/>
+<enum name='CHHapticErrorCodeNotSupported' value64='-4809'/>
+<enum name='CHHapticErrorCodeOperationNotPermitted' value64='-4806'/>
+<enum name='CHHapticErrorCodeResourceNotAvailable' value64='-4825'/>
+<enum name='CHHapticErrorCodeServerInitFailed' value64='-4810'/>
+<enum name='CHHapticErrorCodeServerInterrupted' value64='-4811'/>
+<enum name='CHHapticErrorCodeUnknownError' value64='-4898'/>
+<enum name='CHHapticTimeImmediate' value64='0'/>
+<class name='CHHapticDynamicParameter'>
+<method selector='initWithParameterID:value:relativeTime:'>
+<arg declared_type64='CHHapticDynamicParameterID _Nonnull' index='0' name='parameterID' type64='@'/>
+<arg declared_type64='float' index='1' name='value' type64='f'/>
+<arg declared_type64='NSTimeInterval' index='2' name='time' type64='d'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='parameterID'>
+<retval declared_type64='CHHapticDynamicParameterID _Nonnull' type64='@'/>
+</method>
+<method selector='relativeTime'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='setRelativeTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='relativeTime' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setValue:'>
+<arg declared_type64='float' index='0' name='value' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='value'>
+<retval declared_type64='float' type64='f'/>
+</method>
+</class>
+<class name='CHHapticEngine'>
+<method class_method='true' selector='capabilitiesForHardware'>
+<retval declared_type64='id _Nonnull' type64='@'/>
+</method>
+<method selector='createAdvancedPlayerWithPattern:error:'>
+<arg declared_type64='CHHapticPattern * _Nonnull' index='0' name='pattern' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='outError' type64='^@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='createPlayerWithPattern:error:'>
+<arg declared_type64='CHHapticPattern * _Nonnull' index='0' name='pattern' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='outError' type64='^@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='currentTime'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='initAndReturnError:'>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='error' type64='^@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='initWithAudioSession:error:'>
+<arg declared_type64='AVAudioSession * _Nullable' index='0' name='audioSession' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='isAutoShutdownEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isMutedForAudio'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isMutedForHaptics'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='notifyWhenPlayersFinished:'>
+<arg declared_type64='CHHapticEngineFinishedHandler _Nonnull' function_pointer='true' index='0' name='finishedHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='CHHapticEngineFinishedAction' type64='q'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playPatternFromData:error:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='playPatternFromURL:error:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='fileURL' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='playsHapticsOnly'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='registerAudioResource:options:error:'>
+<arg declared_type64='NSURL * _Nonnull' index='0' name='resourceURL' type64='@'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='1' name='options' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='outError' type64='^@'/>
+<retval declared_type64='CHHapticAudioResourceID' type64='Q'/>
+</method>
+<method selector='resetHandler'>
+<retval declared_type64='CHHapticEngineResetHandler _Nonnull' function_pointer='true' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='setAutoShutdownEnabled:'>
+<arg declared_type64='BOOL' index='0' name='autoShutdownEnabled' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setIsMutedForAudio:'>
+<arg declared_type64='BOOL' index='0' name='isMutedForAudio' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setIsMutedForHaptics:'>
+<arg declared_type64='BOOL' index='0' name='isMutedForHaptics' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPlaysHapticsOnly:'>
+<arg declared_type64='BOOL' index='0' name='playsHapticsOnly' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setResetHandler:'>
+<arg declared_type64='CHHapticEngineResetHandler _Nonnull' function_pointer='true' index='0' name='resetHandler' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setStoppedHandler:'>
+<arg declared_type64='CHHapticEngineStoppedHandler _Nonnull' function_pointer='true' index='0' name='stoppedHandler' type64='@?'>
+<arg declared_type64='CHHapticEngineStoppedReason' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='startAndReturnError:'>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='startWithCompletionHandler:'>
+<arg declared_type64='CHHapticCompletionHandler _Nullable' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stopWithCompletionHandler:'>
+<arg declared_type64='CHHapticCompletionHandler _Nullable' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stoppedHandler'>
+<retval declared_type64='CHHapticEngineStoppedHandler _Nonnull' function_pointer='true' type64='@?'>
+<arg declared_type64='CHHapticEngineStoppedReason' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='unregisterAudioResource:error:'>
+<arg declared_type64='CHHapticAudioResourceID' index='0' name='resourceID' type64='Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='CHHapticEvent'>
+<method selector='duration'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='eventParameters'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithAudioResourceID:parameters:relativeTime:'>
+<arg declared_type64='CHHapticAudioResourceID' index='0' name='resID' type64='Q'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='eventParams' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='2' name='time' type64='d'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithAudioResourceID:parameters:relativeTime:duration:'>
+<arg declared_type64='CHHapticAudioResourceID' index='0' name='resID' type64='Q'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='eventParams' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='2' name='time' type64='d'/>
+<arg declared_type64='NSTimeInterval' index='3' name='duration' type64='d'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithEventType:parameters:relativeTime:'>
+<arg declared_type64='CHHapticEventType _Nonnull' index='0' name='type' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='eventParams' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='2' name='time' type64='d'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithEventType:parameters:relativeTime:duration:'>
+<arg declared_type64='CHHapticEventType _Nonnull' index='0' name='type' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='eventParams' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='2' name='time' type64='d'/>
+<arg declared_type64='NSTimeInterval' index='3' name='duration' type64='d'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='relativeTime'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='setDuration:'>
+<arg declared_type64='NSTimeInterval' index='0' name='duration' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRelativeTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='relativeTime' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='type'>
+<retval declared_type64='CHHapticEventType _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='CHHapticEventParameter'>
+<method selector='initWithParameterID:value:'>
+<arg declared_type64='CHHapticEventParameterID _Nonnull' index='0' name='parameterID' type64='@'/>
+<arg declared_type64='float' index='1' name='value' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='parameterID'>
+<retval declared_type64='CHHapticEventParameterID _Nonnull' type64='@'/>
+</method>
+<method selector='setValue:'>
+<arg declared_type64='float' index='0' name='value' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='value'>
+<retval declared_type64='float' type64='f'/>
+</method>
+</class>
+<class name='CHHapticParameterCurve'>
+<method selector='controlPoints'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithParameterID:controlPoints:relativeTime:'>
+<arg declared_type64='CHHapticDynamicParameterID _Nonnull' index='0' name='parameterID' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='controlPoints' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='2' name='relativeTime' type64='d'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='parameterID'>
+<retval declared_type64='CHHapticDynamicParameterID _Nonnull' type64='@'/>
+</method>
+<method selector='relativeTime'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='setRelativeTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='relativeTime' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CHHapticParameterCurveControlPoint'>
+<method selector='initWithRelativeTime:value:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<arg declared_type64='float' index='1' name='value' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='relativeTime'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='setRelativeTime:'>
+<arg declared_type64='NSTimeInterval' index='0' name='relativeTime' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setValue:'>
+<arg declared_type64='float' index='0' name='value' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='value'>
+<retval declared_type64='float' type64='f'/>
+</method>
+</class>
+<class name='CHHapticPattern'>
+<method selector='duration'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='exportDictionaryAndReturnError:'>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='outError' type64='^@'/>
+<retval declared_type64='NSDictionary * _Nullable' type64='@'/>
+</method>
+<method selector='initWithDictionary:error:'>
+<arg declared_type64='NSDictionary * _Nonnull' index='0' name='patternDict' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='outError' type64='^@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='initWithEvents:parameterCurves:error:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='events' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='parameterCurves' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='outError' type64='^@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='initWithEvents:parameters:error:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='events' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='parameters' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='outError' type64='^@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='attributesForDynamicParameter:error:'>
+<arg declared_type64='CHHapticDynamicParameterID _Nonnull' index='0' name='inParameter' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='outError' type64='^@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='attributesForEventParameter:eventType:error:'>
+<arg declared_type64='CHHapticEventParameterID _Nonnull' index='0' name='inParameter' type64='@'/>
+<arg declared_type64='CHHapticEventType _Nonnull' index='1' name='type' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='outError' type64='^@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='cancelAndReturnError:'>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='completionHandler'>
+<retval declared_type64='CHHapticAdvancedPatternPlayerCompletionHandler _Nonnull' function_pointer='true' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='defaultValue'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='isMuted'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='loopEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='loopEnd'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='maxValue'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='minValue'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='pauseAtTime:error:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='playbackRate'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='resumeAtTime:error:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='scheduleParameterCurve:atTime:error:'>
+<arg declared_type64='CHHapticParameterCurve * _Nonnull' index='0' name='parameterCurve' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='seekToOffset:error:'>
+<arg declared_type64='NSTimeInterval' index='0' name='offsetTime' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='sendParameters:atTime:error:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='parameters' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setCompletionHandler:'>
+<arg declared_type64='CHHapticAdvancedPatternPlayerCompletionHandler _Nonnull' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setIsMuted:'>
+<arg declared_type64='BOOL' index='0' name='isMuted' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLoopEnabled:'>
+<arg declared_type64='BOOL' index='0' name='loopEnabled' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLoopEnd:'>
+<arg declared_type64='NSTimeInterval' index='0' name='loopEnd' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPlaybackRate:'>
+<arg declared_type64='float' index='0' name='playbackRate' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='startAtTime:error:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='stopAtTime:error:'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='supportsAudio'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='supportsHaptics'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<informal_protocol name='CHHapticAdvancedPatternPlayer'>
+<method selector='completionHandler' type64='@?16@0:8'>
+<retval declared_type64='CHHapticAdvancedPatternPlayerCompletionHandler _Nonnull' function_pointer='true' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='isMuted' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='loopEnabled' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='loopEnd' type64='d16@0:8'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='pauseAtTime:error:' type64='B32@0:8d16^@24'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='playbackRate' type64='f16@0:8'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='resumeAtTime:error:' type64='B32@0:8d16^@24'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='seekToOffset:error:' type64='B32@0:8d16^@24'>
+<arg declared_type64='NSTimeInterval' index='0' name='offsetTime' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setCompletionHandler:' type64='v24@0:8@?16'>
+<arg declared_type64='CHHapticAdvancedPatternPlayerCompletionHandler _Nonnull' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setIsMuted:' type64='v20@0:8B16'>
+<arg declared_type64='BOOL' index='0' name='isMuted' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLoopEnabled:' type64='v20@0:8B16'>
+<arg declared_type64='BOOL' index='0' name='loopEnabled' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLoopEnd:' type64='v24@0:8d16'>
+<arg declared_type64='NSTimeInterval' index='0' name='loopEnd' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPlaybackRate:' type64='v20@0:8f16'>
+<arg declared_type64='float' index='0' name='playbackRate' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='CHHapticDeviceCapability'>
+<method selector='attributesForDynamicParameter:error:' type64='@32@0:8@16^@24'>
+<arg declared_type64='CHHapticDynamicParameterID _Nonnull' index='0' name='inParameter' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='outError' type64='^@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='attributesForEventParameter:eventType:error:' type64='@40@0:8@16@24^@32'>
+<arg declared_type64='CHHapticEventParameterID _Nonnull' index='0' name='inParameter' type64='@'/>
+<arg declared_type64='CHHapticEventType _Nonnull' index='1' name='type' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='outError' type64='^@'/>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='supportsAudio' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='supportsHaptics' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</informal_protocol>
+<informal_protocol name='CHHapticParameterAttributes'>
+<method selector='defaultValue' type64='f16@0:8'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='maxValue' type64='f16@0:8'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='minValue' type64='f16@0:8'>
+<retval declared_type64='float' type64='f'/>
+</method>
+</informal_protocol>
+<informal_protocol name='CHHapticPatternPlayer'>
+<method selector='cancelAndReturnError:' type64='B24@0:8^@16'>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isMuted' type64='B16@0:8'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='scheduleParameterCurve:atTime:error:' type64='B40@0:8@16d24^@32'>
+<arg declared_type64='CHHapticParameterCurve * _Nonnull' index='0' name='parameterCurve' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='sendParameters:atTime:error:' type64='B40@0:8@16d24^@32'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='parameters' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setIsMuted:' type64='v20@0:8B16'>
+<arg declared_type64='BOOL' index='0' name='isMuted' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='startAtTime:error:' type64='B32@0:8d16^@24'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='stopAtTime:error:' type64='B32@0:8d16^@24'>
+<arg declared_type64='NSTimeInterval' index='0' name='time' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</informal_protocol>
+</signatures>

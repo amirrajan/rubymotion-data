@@ -1,0 +1,560 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<enum name='CPU_BASED2_APIC_REG_VIRT' value64='256'/>
+<enum name='CPU_BASED2_DESC_TABLE' value64='4'/>
+<enum name='CPU_BASED2_EPT' value64='2'/>
+<enum name='CPU_BASED2_EPT_VE' value64='262144'/>
+<enum name='CPU_BASED2_INVPCID' value64='4096'/>
+<enum name='CPU_BASED2_PAUSE_LOOP' value64='1024'/>
+<enum name='CPU_BASED2_RDRAND' value64='2048'/>
+<enum name='CPU_BASED2_RDSEED' value64='65536'/>
+<enum name='CPU_BASED2_RDTSCP' value64='8'/>
+<enum name='CPU_BASED2_UNRESTRICTED' value64='128'/>
+<enum name='CPU_BASED2_VIRTUAL_APIC' value64='1'/>
+<enum name='CPU_BASED2_VIRT_INTR_DELIVERY' value64='512'/>
+<enum name='CPU_BASED2_VMCS_SHADOW' value64='16384'/>
+<enum name='CPU_BASED2_VMFUNC' value64='8192'/>
+<enum name='CPU_BASED2_VPID' value64='32'/>
+<enum name='CPU_BASED2_WBINVD' value64='64'/>
+<enum name='CPU_BASED2_X2APIC' value64='16'/>
+<enum name='CPU_BASED2_XSAVES_XRSTORS' value64='1048576'/>
+<enum name='CPU_BASED_CR3_LOAD' value64='32768'/>
+<enum name='CPU_BASED_CR3_STORE' value64='65536'/>
+<enum name='CPU_BASED_CR8_LOAD' value64='524288'/>
+<enum name='CPU_BASED_CR8_STORE' value64='1048576'/>
+<enum name='CPU_BASED_HLT' value64='128'/>
+<enum name='CPU_BASED_INVLPG' value64='512'/>
+<enum name='CPU_BASED_IO_BITMAPS' value64='33554432'/>
+<enum name='CPU_BASED_IRQ_WND' value64='4'/>
+<enum name='CPU_BASED_MONITOR' value64='536870912'/>
+<enum name='CPU_BASED_MOV_DR' value64='8388608'/>
+<enum name='CPU_BASED_MSR_BITMAPS' value64='268435456'/>
+<enum name='CPU_BASED_MTF' value64='134217728'/>
+<enum name='CPU_BASED_MWAIT' value64='1024'/>
+<enum name='CPU_BASED_PAUSE' value64='1073741824'/>
+<enum name='CPU_BASED_RDPMC' value64='2048'/>
+<enum name='CPU_BASED_RDTSC' value64='4096'/>
+<enum name='CPU_BASED_SECONDARY_CTLS' value64='2147483648'/>
+<enum name='CPU_BASED_TPR_SHADOW' value64='2097152'/>
+<enum name='CPU_BASED_TSC_OFFSET' value64='8'/>
+<enum name='CPU_BASED_UNCOND_IO' value64='16777216'/>
+<enum name='CPU_BASED_VIRTUAL_NMI_WND' value64='4194304'/>
+<enum name='HV_BAD_ARGUMENT' value64='-85377021'/>
+<enum name='HV_BUSY' value64='-85377022'/>
+<enum name='HV_CAP_ADDRSPACEMAX' value64='1'/>
+<enum name='HV_CAP_VCPUMAX' value64='0'/>
+<enum name='HV_ERROR' value64='-85377023'/>
+<enum name='HV_MEMORY_EXEC' value64='4'/>
+<enum name='HV_MEMORY_READ' value64='1'/>
+<enum name='HV_MEMORY_WRITE' value64='2'/>
+<enum name='HV_NO_DEVICE' value64='-85377018'/>
+<enum name='HV_NO_RESOURCES' value64='-85377019'/>
+<enum name='HV_SHADOW_VMCS_NONE' value64='0'/>
+<enum name='HV_SHADOW_VMCS_READ' value64='1'/>
+<enum name='HV_SHADOW_VMCS_WRITE' value64='2'/>
+<enum name='HV_SUCCESS' value64='0'/>
+<enum name='HV_UNSUPPORTED' value64='-85377009'/>
+<enum name='HV_VCPU_DEFAULT' value64='0'/>
+<enum name='HV_VMX_CAP_ENTRY' value64='3'/>
+<enum name='HV_VMX_CAP_EXIT' value64='4'/>
+<enum name='HV_VMX_CAP_PINBASED' value64='0'/>
+<enum name='HV_VMX_CAP_PREEMPTION_TIMER' value64='32'/>
+<enum name='HV_VMX_CAP_PROCBASED' value64='1'/>
+<enum name='HV_VMX_CAP_PROCBASED2' value64='2'/>
+<enum name='HV_VM_DEFAULT' value64='0'/>
+<enum name='HV_VM_MITIGATION_A_ENABLE' value64='2'/>
+<enum name='HV_VM_MITIGATION_B_ENABLE' value64='4'/>
+<enum name='HV_VM_MITIGATION_C_ENABLE' value64='8'/>
+<enum name='HV_VM_MITIGATION_D_ENABLE' value64='16'/>
+<enum name='HV_VM_SPACE_DEFAULT' value64='0'/>
+<enum name='HV_VM_SPECIFY_MITIGATIONS' value64='1'/>
+<enum name='HV_X86_CR0' value64='36'/>
+<enum name='HV_X86_CR1' value64='37'/>
+<enum name='HV_X86_CR2' value64='38'/>
+<enum name='HV_X86_CR3' value64='39'/>
+<enum name='HV_X86_CR4' value64='40'/>
+<enum name='HV_X86_CS' value64='18'/>
+<enum name='HV_X86_DR0' value64='41'/>
+<enum name='HV_X86_DR1' value64='42'/>
+<enum name='HV_X86_DR2' value64='43'/>
+<enum name='HV_X86_DR3' value64='44'/>
+<enum name='HV_X86_DR4' value64='45'/>
+<enum name='HV_X86_DR5' value64='46'/>
+<enum name='HV_X86_DR6' value64='47'/>
+<enum name='HV_X86_DR7' value64='48'/>
+<enum name='HV_X86_DS' value64='20'/>
+<enum name='HV_X86_ES' value64='21'/>
+<enum name='HV_X86_FS' value64='22'/>
+<enum name='HV_X86_GDT_BASE' value64='26'/>
+<enum name='HV_X86_GDT_LIMIT' value64='27'/>
+<enum name='HV_X86_GS' value64='23'/>
+<enum name='HV_X86_IDT_BASE' value64='24'/>
+<enum name='HV_X86_IDT_LIMIT' value64='25'/>
+<enum name='HV_X86_LDTR' value64='28'/>
+<enum name='HV_X86_LDT_AR' value64='31'/>
+<enum name='HV_X86_LDT_BASE' value64='29'/>
+<enum name='HV_X86_LDT_LIMIT' value64='30'/>
+<enum name='HV_X86_R10' value64='12'/>
+<enum name='HV_X86_R11' value64='13'/>
+<enum name='HV_X86_R12' value64='14'/>
+<enum name='HV_X86_R13' value64='15'/>
+<enum name='HV_X86_R14' value64='16'/>
+<enum name='HV_X86_R15' value64='17'/>
+<enum name='HV_X86_R8' value64='10'/>
+<enum name='HV_X86_R9' value64='11'/>
+<enum name='HV_X86_RAX' value64='2'/>
+<enum name='HV_X86_RBP' value64='9'/>
+<enum name='HV_X86_RBX' value64='5'/>
+<enum name='HV_X86_RCX' value64='3'/>
+<enum name='HV_X86_RDI' value64='7'/>
+<enum name='HV_X86_RDX' value64='4'/>
+<enum name='HV_X86_REGISTERS_MAX' value64='51'/>
+<enum name='HV_X86_RFLAGS' value64='1'/>
+<enum name='HV_X86_RIP' value64='0'/>
+<enum name='HV_X86_RSI' value64='6'/>
+<enum name='HV_X86_RSP' value64='8'/>
+<enum name='HV_X86_SS' value64='19'/>
+<enum name='HV_X86_TPR' value64='49'/>
+<enum name='HV_X86_TR' value64='32'/>
+<enum name='HV_X86_TSS_AR' value64='35'/>
+<enum name='HV_X86_TSS_BASE' value64='33'/>
+<enum name='HV_X86_TSS_LIMIT' value64='34'/>
+<enum name='HV_X86_XCR0' value64='50'/>
+<enum name='IRQ_INFO_ERROR_VALID' value64='2048'/>
+<enum name='IRQ_INFO_EXT_IRQ' value64='0'/>
+<enum name='IRQ_INFO_HARD_EXC' value64='768'/>
+<enum name='IRQ_INFO_NMI' value64='512'/>
+<enum name='IRQ_INFO_PRIV_SOFT_EXC' value64='1280'/>
+<enum name='IRQ_INFO_SOFT_EXC' value64='1536'/>
+<enum name='IRQ_INFO_SOFT_IRQ' value64='1024'/>
+<enum name='IRQ_INFO_VALID' value64='2147483648'/>
+<enum name='PIN_BASED_INTR' value64='1'/>
+<enum name='PIN_BASED_NMI' value64='8'/>
+<enum name='PIN_BASED_POSTED_INTR' value64='128'/>
+<enum name='PIN_BASED_PREEMPTION_TIMER' value64='64'/>
+<enum name='PIN_BASED_VIRTUAL_NMI' value64='32'/>
+<enum name='VMCS_CTRL_APIC_ACCESS' value64='8212'/>
+<enum name='VMCS_CTRL_CPU_BASED' value64='16386'/>
+<enum name='VMCS_CTRL_CPU_BASED2' value64='16414'/>
+<enum name='VMCS_CTRL_CR0_MASK' value64='24576'/>
+<enum name='VMCS_CTRL_CR0_SHADOW' value64='24580'/>
+<enum name='VMCS_CTRL_CR3_COUNT' value64='16394'/>
+<enum name='VMCS_CTRL_CR3_VALUE0' value64='24584'/>
+<enum name='VMCS_CTRL_CR3_VALUE1' value64='24586'/>
+<enum name='VMCS_CTRL_CR3_VALUE2' value64='24588'/>
+<enum name='VMCS_CTRL_CR3_VALUE3' value64='24590'/>
+<enum name='VMCS_CTRL_CR4_MASK' value64='24578'/>
+<enum name='VMCS_CTRL_CR4_SHADOW' value64='24582'/>
+<enum name='VMCS_CTRL_ENCLS_EXITING_BITMAP' value64='8238'/>
+<enum name='VMCS_CTRL_EOI_EXIT_BITMAP_0' value64='8220'/>
+<enum name='VMCS_CTRL_EOI_EXIT_BITMAP_1' value64='8222'/>
+<enum name='VMCS_CTRL_EOI_EXIT_BITMAP_2' value64='8224'/>
+<enum name='VMCS_CTRL_EOI_EXIT_BITMAP_3' value64='8226'/>
+<enum name='VMCS_CTRL_EPTP' value64='8218'/>
+<enum name='VMCS_CTRL_EPTP_INDEX' value64='4'/>
+<enum name='VMCS_CTRL_EPTP_LIST_ADDR' value64='8228'/>
+<enum name='VMCS_CTRL_EXC_BITMAP' value64='16388'/>
+<enum name='VMCS_CTRL_EXECUTIVE_VMCS_PTR' value64='8204'/>
+<enum name='VMCS_CTRL_IO_BITMAP_A' value64='8192'/>
+<enum name='VMCS_CTRL_IO_BITMAP_B' value64='8194'/>
+<enum name='VMCS_CTRL_MSR_BITMAPS' value64='8196'/>
+<enum name='VMCS_CTRL_PF_ERROR_MASK' value64='16390'/>
+<enum name='VMCS_CTRL_PF_ERROR_MATCH' value64='16392'/>
+<enum name='VMCS_CTRL_PIN_BASED' value64='16384'/>
+<enum name='VMCS_CTRL_PLE_GAP' value64='16416'/>
+<enum name='VMCS_CTRL_PLE_WINDOW' value64='16418'/>
+<enum name='VMCS_CTRL_PML_ADDR' value64='8206'/>
+<enum name='VMCS_CTRL_POSTED_INT_DESC_ADDR' value64='8214'/>
+<enum name='VMCS_CTRL_POSTED_INT_N_VECTOR' value64='2'/>
+<enum name='VMCS_CTRL_TPR_THRESHOLD' value64='16412'/>
+<enum name='VMCS_CTRL_TSC_MULTIPLIER' value64='8242'/>
+<enum name='VMCS_CTRL_TSC_OFFSET' value64='8208'/>
+<enum name='VMCS_CTRL_VIRTUAL_APIC' value64='8210'/>
+<enum name='VMCS_CTRL_VIRT_EXC_INFO_ADDR' value64='8234'/>
+<enum name='VMCS_CTRL_VMENTRY_CONTROLS' value64='16402'/>
+<enum name='VMCS_CTRL_VMENTRY_EXC_ERROR' value64='16408'/>
+<enum name='VMCS_CTRL_VMENTRY_INSTR_LEN' value64='16410'/>
+<enum name='VMCS_CTRL_VMENTRY_IRQ_INFO' value64='16406'/>
+<enum name='VMCS_CTRL_VMENTRY_MSR_LOAD_ADDR' value64='8202'/>
+<enum name='VMCS_CTRL_VMENTRY_MSR_LOAD_COUNT' value64='16404'/>
+<enum name='VMCS_CTRL_VMEXIT_CONTROLS' value64='16396'/>
+<enum name='VMCS_CTRL_VMEXIT_MSR_LOAD_ADDR' value64='8200'/>
+<enum name='VMCS_CTRL_VMEXIT_MSR_LOAD_COUNT' value64='16400'/>
+<enum name='VMCS_CTRL_VMEXIT_MSR_STORE_ADDR' value64='8198'/>
+<enum name='VMCS_CTRL_VMEXIT_MSR_STORE_COUNT' value64='16398'/>
+<enum name='VMCS_CTRL_VMFUNC_CTRL' value64='8216'/>
+<enum name='VMCS_CTRL_VMREAD_BITMAP_ADDR' value64='8230'/>
+<enum name='VMCS_CTRL_VMWRITE_BITMAP_ADDR' value64='8232'/>
+<enum name='VMCS_CTRL_XSS_EXITING_BITMAP' value64='8236'/>
+<enum name='VMCS_GUESTPML_INDEX' value64='2066'/>
+<enum name='VMCS_GUEST_ACTIVITY_STATE' value64='18470'/>
+<enum name='VMCS_GUEST_CR0' value64='26624'/>
+<enum name='VMCS_GUEST_CR3' value64='26626'/>
+<enum name='VMCS_GUEST_CR4' value64='26628'/>
+<enum name='VMCS_GUEST_CS' value64='2050'/>
+<enum name='VMCS_GUEST_CS_AR' value64='18454'/>
+<enum name='VMCS_GUEST_CS_BASE' value64='26632'/>
+<enum name='VMCS_GUEST_CS_LIMIT' value64='18434'/>
+<enum name='VMCS_GUEST_DEBUG_EXC' value64='26658'/>
+<enum name='VMCS_GUEST_DR7' value64='26650'/>
+<enum name='VMCS_GUEST_DS' value64='2054'/>
+<enum name='VMCS_GUEST_DS_AR' value64='18458'/>
+<enum name='VMCS_GUEST_DS_BASE' value64='26636'/>
+<enum name='VMCS_GUEST_DS_LIMIT' value64='18438'/>
+<enum name='VMCS_GUEST_ES' value64='2048'/>
+<enum name='VMCS_GUEST_ES_AR' value64='18452'/>
+<enum name='VMCS_GUEST_ES_BASE' value64='26630'/>
+<enum name='VMCS_GUEST_ES_LIMIT' value64='18432'/>
+<enum name='VMCS_GUEST_FS' value64='2056'/>
+<enum name='VMCS_GUEST_FS_AR' value64='18460'/>
+<enum name='VMCS_GUEST_FS_BASE' value64='26638'/>
+<enum name='VMCS_GUEST_FS_LIMIT' value64='18440'/>
+<enum name='VMCS_GUEST_GDTR_BASE' value64='26646'/>
+<enum name='VMCS_GUEST_GDTR_LIMIT' value64='18448'/>
+<enum name='VMCS_GUEST_GS' value64='2058'/>
+<enum name='VMCS_GUEST_GS_AR' value64='18462'/>
+<enum name='VMCS_GUEST_GS_BASE' value64='26640'/>
+<enum name='VMCS_GUEST_GS_LIMIT' value64='18442'/>
+<enum name='VMCS_GUEST_IA32_BNDCFGS' value64='10258'/>
+<enum name='VMCS_GUEST_IA32_DEBUGCTL' value64='10242'/>
+<enum name='VMCS_GUEST_IA32_EFER' value64='10246'/>
+<enum name='VMCS_GUEST_IA32_PAT' value64='10244'/>
+<enum name='VMCS_GUEST_IA32_PERF_GLOBAL_CTRL' value64='10248'/>
+<enum name='VMCS_GUEST_IA32_SYSENTER_CS' value64='18474'/>
+<enum name='VMCS_GUEST_IDTR_BASE' value64='26648'/>
+<enum name='VMCS_GUEST_IDTR_LIMIT' value64='18450'/>
+<enum name='VMCS_GUEST_IGNORE_IRQ' value64='18468'/>
+<enum name='VMCS_GUEST_INT_STATUS' value64='2064'/>
+<enum name='VMCS_GUEST_LDTR' value64='2060'/>
+<enum name='VMCS_GUEST_LDTR_AR' value64='18464'/>
+<enum name='VMCS_GUEST_LDTR_BASE' value64='26642'/>
+<enum name='VMCS_GUEST_LDTR_LIMIT' value64='18444'/>
+<enum name='VMCS_GUEST_LINK_POINTER' value64='10240'/>
+<enum name='VMCS_GUEST_PDPTE0' value64='10250'/>
+<enum name='VMCS_GUEST_PDPTE1' value64='10252'/>
+<enum name='VMCS_GUEST_PDPTE2' value64='10254'/>
+<enum name='VMCS_GUEST_PDPTE3' value64='10256'/>
+<enum name='VMCS_GUEST_PHYSICAL_ADDRESS' value64='9216'/>
+<enum name='VMCS_GUEST_RFLAGS' value64='26656'/>
+<enum name='VMCS_GUEST_RIP' value64='26654'/>
+<enum name='VMCS_GUEST_RSP' value64='26652'/>
+<enum name='VMCS_GUEST_SMBASE' value64='18472'/>
+<enum name='VMCS_GUEST_SS' value64='2052'/>
+<enum name='VMCS_GUEST_SS_AR' value64='18456'/>
+<enum name='VMCS_GUEST_SS_BASE' value64='26634'/>
+<enum name='VMCS_GUEST_SS_LIMIT' value64='18436'/>
+<enum name='VMCS_GUEST_SYSENTER_EIP' value64='26662'/>
+<enum name='VMCS_GUEST_SYSENTER_ESP' value64='26660'/>
+<enum name='VMCS_GUEST_TR' value64='2062'/>
+<enum name='VMCS_GUEST_TR_AR' value64='18466'/>
+<enum name='VMCS_GUEST_TR_BASE' value64='26644'/>
+<enum name='VMCS_GUEST_TR_LIMIT' value64='18446'/>
+<enum name='VMCS_GUEST_VMX_TIMER_VALUE' value64='18478'/>
+<enum name='VMCS_HOST_CR0' value64='27648'/>
+<enum name='VMCS_HOST_CR3' value64='27650'/>
+<enum name='VMCS_HOST_CR4' value64='27652'/>
+<enum name='VMCS_HOST_CS' value64='3074'/>
+<enum name='VMCS_HOST_DS' value64='3078'/>
+<enum name='VMCS_HOST_ES' value64='3072'/>
+<enum name='VMCS_HOST_FS' value64='3080'/>
+<enum name='VMCS_HOST_FS_BASE' value64='27654'/>
+<enum name='VMCS_HOST_GDTR_BASE' value64='27660'/>
+<enum name='VMCS_HOST_GS' value64='3082'/>
+<enum name='VMCS_HOST_GS_BASE' value64='27656'/>
+<enum name='VMCS_HOST_IA32_EFER' value64='11266'/>
+<enum name='VMCS_HOST_IA32_PAT' value64='11264'/>
+<enum name='VMCS_HOST_IA32_PERF_GLOBAL_CTRL' value64='11268'/>
+<enum name='VMCS_HOST_IA32_SYSENTER_CS' value64='19456'/>
+<enum name='VMCS_HOST_IA32_SYSENTER_EIP' value64='27666'/>
+<enum name='VMCS_HOST_IA32_SYSENTER_ESP' value64='27664'/>
+<enum name='VMCS_HOST_IDTR_BASE' value64='27662'/>
+<enum name='VMCS_HOST_RIP' value64='27670'/>
+<enum name='VMCS_HOST_RSP' value64='27668'/>
+<enum name='VMCS_HOST_SS' value64='3076'/>
+<enum name='VMCS_HOST_TR' value64='3084'/>
+<enum name='VMCS_HOST_TR_BASE' value64='27658'/>
+<enum name='VMCS_MAX' value64='27672'/>
+<enum name='VMCS_RO_EXIT_QUALIFIC' value64='25600'/>
+<enum name='VMCS_RO_EXIT_REASON' value64='17410'/>
+<enum name='VMCS_RO_GUEST_LIN_ADDR' value64='25610'/>
+<enum name='VMCS_RO_IDT_VECTOR_ERROR' value64='17418'/>
+<enum name='VMCS_RO_IDT_VECTOR_INFO' value64='17416'/>
+<enum name='VMCS_RO_INSTR_ERROR' value64='17408'/>
+<enum name='VMCS_RO_IO_RCX' value64='25602'/>
+<enum name='VMCS_RO_IO_RDI' value64='25606'/>
+<enum name='VMCS_RO_IO_RIP' value64='25608'/>
+<enum name='VMCS_RO_IO_RSI' value64='25604'/>
+<enum name='VMCS_RO_VMEXIT_INSTR_LEN' value64='17420'/>
+<enum name='VMCS_RO_VMEXIT_IRQ_ERROR' value64='17414'/>
+<enum name='VMCS_RO_VMEXIT_IRQ_INFO' value64='17412'/>
+<enum name='VMCS_RO_VMX_INSTR_INFO' value64='17422'/>
+<enum name='VMCS_VPID' value64='0'/>
+<enum name='VMENTRY_DEACTIVATE_DUAL_MONITOR' value64='2048'/>
+<enum name='VMENTRY_GUEST_IA32E' value64='512'/>
+<enum name='VMENTRY_LOAD_DBG_CONTROLS' value64='4'/>
+<enum name='VMENTRY_LOAD_EFER' value64='32768'/>
+<enum name='VMENTRY_LOAD_IA32_PAT' value64='16384'/>
+<enum name='VMENTRY_LOAD_IA32_PERF_GLOBAL_CTRL' value64='8192'/>
+<enum name='VMENTRY_SMM' value64='1024'/>
+<enum name='VMEXIT_ACK_INTR' value64='32768'/>
+<enum name='VMEXIT_HOST_IA32E' value64='512'/>
+<enum name='VMEXIT_LOAD_EFER' value64='2097152'/>
+<enum name='VMEXIT_LOAD_IA32_PAT' value64='524288'/>
+<enum name='VMEXIT_LOAD_IA32_PERF_GLOBAL_CTRL' value64='4096'/>
+<enum name='VMEXIT_SAVE_DBG_CONTROLS' value64='4'/>
+<enum name='VMEXIT_SAVE_EFER' value64='1048576'/>
+<enum name='VMEXIT_SAVE_IA32_PAT' value64='262144'/>
+<enum name='VMEXIT_SAVE_VMX_TIMER' value64='4194304'/>
+<enum name='VMX_BASIC_TRUE_CTLS' value64='36028797018963968'/>
+<enum name='VMX_EPT_VPID_SUPPORT_AD' value64='2097152'/>
+<enum name='VMX_EPT_VPID_SUPPORT_EXONLY' value64='1'/>
+<enum name='VMX_REASON_APIC_ACCESS' value64='44'/>
+<enum name='VMX_REASON_APIC_WRITE' value64='56'/>
+<enum name='VMX_REASON_CPUID' value64='10'/>
+<enum name='VMX_REASON_EPT_INVEPT' value64='50'/>
+<enum name='VMX_REASON_EPT_MISCONFIG' value64='49'/>
+<enum name='VMX_REASON_EPT_VIOLATION' value64='48'/>
+<enum name='VMX_REASON_EXC_NMI' value64='0'/>
+<enum name='VMX_REASON_GDTR_IDTR' value64='46'/>
+<enum name='VMX_REASON_GETSEC' value64='11'/>
+<enum name='VMX_REASON_HLT' value64='12'/>
+<enum name='VMX_REASON_INIT' value64='3'/>
+<enum name='VMX_REASON_INVD' value64='13'/>
+<enum name='VMX_REASON_INVLPG' value64='14'/>
+<enum name='VMX_REASON_INVPCID' value64='58'/>
+<enum name='VMX_REASON_INVVPID' value64='53'/>
+<enum name='VMX_REASON_IO' value64='30'/>
+<enum name='VMX_REASON_IO_SMI' value64='5'/>
+<enum name='VMX_REASON_IRQ' value64='1'/>
+<enum name='VMX_REASON_IRQ_WND' value64='7'/>
+<enum name='VMX_REASON_LDTR_TR' value64='47'/>
+<enum name='VMX_REASON_MONITOR' value64='39'/>
+<enum name='VMX_REASON_MOV_CR' value64='28'/>
+<enum name='VMX_REASON_MOV_DR' value64='29'/>
+<enum name='VMX_REASON_MTF' value64='37'/>
+<enum name='VMX_REASON_MWAIT' value64='36'/>
+<enum name='VMX_REASON_OTHER_SMI' value64='6'/>
+<enum name='VMX_REASON_PAUSE' value64='40'/>
+<enum name='VMX_REASON_RDMSR' value64='31'/>
+<enum name='VMX_REASON_RDPMC' value64='15'/>
+<enum name='VMX_REASON_RDRAND' value64='57'/>
+<enum name='VMX_REASON_RDSEED' value64='61'/>
+<enum name='VMX_REASON_RDTSC' value64='16'/>
+<enum name='VMX_REASON_RDTSCP' value64='51'/>
+<enum name='VMX_REASON_RSM' value64='17'/>
+<enum name='VMX_REASON_SIPI' value64='4'/>
+<enum name='VMX_REASON_TASK' value64='9'/>
+<enum name='VMX_REASON_TPR_THRESHOLD' value64='43'/>
+<enum name='VMX_REASON_TRIPLE_FAULT' value64='2'/>
+<enum name='VMX_REASON_VIRTUALIZED_EOI' value64='45'/>
+<enum name='VMX_REASON_VIRTUAL_NMI_WND' value64='8'/>
+<enum name='VMX_REASON_VMCALL' value64='18'/>
+<enum name='VMX_REASON_VMCLEAR' value64='19'/>
+<enum name='VMX_REASON_VMENTRY_GUEST' value64='33'/>
+<enum name='VMX_REASON_VMENTRY_MC' value64='41'/>
+<enum name='VMX_REASON_VMENTRY_MSR' value64='34'/>
+<enum name='VMX_REASON_VMFUNC' value64='59'/>
+<enum name='VMX_REASON_VMLAUNCH' value64='20'/>
+<enum name='VMX_REASON_VMOFF' value64='26'/>
+<enum name='VMX_REASON_VMON' value64='27'/>
+<enum name='VMX_REASON_VMPTRLD' value64='21'/>
+<enum name='VMX_REASON_VMPTRST' value64='22'/>
+<enum name='VMX_REASON_VMREAD' value64='23'/>
+<enum name='VMX_REASON_VMRESUME' value64='24'/>
+<enum name='VMX_REASON_VMWRITE' value64='25'/>
+<enum name='VMX_REASON_VMX_TIMER_EXPIRED' value64='52'/>
+<enum name='VMX_REASON_WBINVD' value64='54'/>
+<enum name='VMX_REASON_WRMSR' value64='32'/>
+<enum name='VMX_REASON_XRSTORS' value64='64'/>
+<enum name='VMX_REASON_XSAVES' value64='63'/>
+<enum name='VMX_REASON_XSETBV' value64='55'/>
+<enum name='err_common_hypervisor' value64='-85377024'/>
+<enum name='err_sub_hypervisor' value64='48840704'/>
+<function name='hv_capability'>
+<arg declared_type64='hv_capability_t' name='capability' type64='Q'/>
+<arg declared_type64='uint64_t*' name='value' type64='^Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vcpu_create'>
+<arg declared_type64='hv_vcpuid_t*' name='vcpu' type64='^I'/>
+<arg declared_type64='hv_vcpu_options_t' name='flags' type64='Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vcpu_destroy'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vcpu_enable_native_msr'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<arg declared_type64='uint32_t' name='msr' type64='I'/>
+<arg declared_type64='_Bool' name='enable' type64='B'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vcpu_flush'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vcpu_get_exec_time'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<arg declared_type64='uint64_t*' name='time' type64='^Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vcpu_interrupt'>
+<arg declared_type64='hv_vcpuid_t*' name='vcpus' type64='^I'/>
+<arg declared_type64='unsigned int' name='vcpu_count' type64='I'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vcpu_invalidate_tlb'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vcpu_read_fpstate'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<arg declared_type64='void*' name='buffer' type64='^v'/>
+<arg declared_type64='size_t' name='size' type64='Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vcpu_read_msr'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<arg declared_type64='uint32_t' name='msr' type64='I'/>
+<arg declared_type64='uint64_t*' name='value' type64='^Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vcpu_read_register'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<arg declared_type64='hv_x86_reg_t' name='reg' type64='i'/>
+<arg declared_type64='uint64_t*' name='value' type64='^Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vcpu_run'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vcpu_run_until'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<arg declared_type64='uint64_t' name='deadline' type64='Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vcpu_set_space'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<arg declared_type64='hv_vm_space_t' name='asid' type64='I'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vcpu_write_fpstate'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<arg declared_type64='void*' name='buffer' type64='^v'/>
+<arg declared_type64='size_t' name='size' type64='Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vcpu_write_msr'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<arg declared_type64='uint32_t' name='msr' type64='I'/>
+<arg declared_type64='uint64_t' name='value' type64='Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vcpu_write_register'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<arg declared_type64='hv_x86_reg_t' name='reg' type64='i'/>
+<arg declared_type64='uint64_t' name='value' type64='Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vm_create'>
+<arg declared_type64='hv_vm_options_t' name='flags' type64='Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vm_destroy'>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vm_map'>
+<arg declared_type64='hv_uvaddr_t' name='uva' type64='^v'/>
+<arg declared_type64='hv_gpaddr_t' name='gpa' type64='Q'/>
+<arg declared_type64='size_t' name='size' type64='Q'/>
+<arg declared_type64='hv_memory_flags_t' name='flags' type64='Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vm_map_space'>
+<arg declared_type64='hv_vm_space_t' name='asid' type64='I'/>
+<arg declared_type64='hv_uvaddr_t' name='uva' type64='^v'/>
+<arg declared_type64='hv_gpaddr_t' name='gpa' type64='Q'/>
+<arg declared_type64='size_t' name='size' type64='Q'/>
+<arg declared_type64='hv_memory_flags_t' name='flags' type64='Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vm_protect'>
+<arg declared_type64='hv_gpaddr_t' name='gpa' type64='Q'/>
+<arg declared_type64='size_t' name='size' type64='Q'/>
+<arg declared_type64='hv_memory_flags_t' name='flags' type64='Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vm_protect_space'>
+<arg declared_type64='hv_vm_space_t' name='asid' type64='I'/>
+<arg declared_type64='hv_gpaddr_t' name='gpa' type64='Q'/>
+<arg declared_type64='size_t' name='size' type64='Q'/>
+<arg declared_type64='hv_memory_flags_t' name='flags' type64='Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vm_space_create'>
+<arg declared_type64='hv_vm_space_t*' name='asid' type64='^I'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vm_space_destroy'>
+<arg declared_type64='hv_vm_space_t' name='asid' type64='I'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vm_sync_tsc'>
+<arg declared_type64='uint64_t' name='tsc' type64='Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vm_unmap'>
+<arg declared_type64='hv_gpaddr_t' name='gpa' type64='Q'/>
+<arg declared_type64='size_t' name='size' type64='Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vm_unmap_space'>
+<arg declared_type64='hv_vm_space_t' name='asid' type64='I'/>
+<arg declared_type64='hv_gpaddr_t' name='gpa' type64='Q'/>
+<arg declared_type64='size_t' name='size' type64='Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vmx_read_capability'>
+<arg declared_type64='hv_vmx_capability_t' name='field' type64='i'/>
+<arg declared_type64='uint64_t*' name='value' type64='^Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vmx_vcpu_read_shadow_vmcs'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<arg declared_type64='uint32_t' name='field' type64='I'/>
+<arg declared_type64='uint64_t*' name='value' type64='^Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vmx_vcpu_read_vmcs'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<arg declared_type64='uint32_t' name='field' type64='I'/>
+<arg declared_type64='uint64_t*' name='value' type64='^Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vmx_vcpu_set_apic_address'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<arg declared_type64='hv_gpaddr_t' name='gpa' type64='Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vmx_vcpu_set_shadow_access'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<arg declared_type64='uint32_t' name='field' type64='I'/>
+<arg declared_type64='hv_shadow_flags_t' name='flags' type64='Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vmx_vcpu_write_shadow_vmcs'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<arg declared_type64='uint32_t' name='field' type64='I'/>
+<arg declared_type64='uint64_t' name='value' type64='Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+<function name='hv_vmx_vcpu_write_vmcs'>
+<arg declared_type64='hv_vcpuid_t' name='vcpu' type64='I'/>
+<arg declared_type64='uint32_t' name='field' type64='I'/>
+<arg declared_type64='uint64_t' name='value' type64='Q'/>
+<retval declared_type64='hv_return_t' type64='i'/>
+</function>
+</signatures>

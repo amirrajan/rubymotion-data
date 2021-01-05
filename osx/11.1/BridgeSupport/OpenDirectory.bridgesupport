@@ -1,0 +1,1772 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<constant const='true' declared_type64='NSString*' name='ODFrameworkErrorDomain' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ODSessionProxyAddress' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ODSessionProxyPassword' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ODSessionProxyPort' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ODSessionProxyUsername' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ODTrustTypeAnonymous' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ODTrustTypeJoined' type64='@'/>
+<constant const='true' declared_type64='NSString*' name='ODTrustTypeUsingCredentials' type64='@'/>
+<enum name='ODPacketEncryptionAllow' value64='1'/>
+<enum name='ODPacketEncryptionDisabled' value64='0'/>
+<enum name='ODPacketEncryptionRequired' value64='2'/>
+<enum name='ODPacketEncryptionSSL' value64='3'/>
+<enum name='ODPacketSigningAllow' value64='1'/>
+<enum name='ODPacketSigningDisabled' value64='0'/>
+<enum name='ODPacketSigningRequired' value64='2'/>
+<class name='NSObject'>
+<method selector='query:foundResults:error:'>
+<arg declared_type64='ODQuery*' index='0' name='inQuery' type64='@'/>
+<arg declared_type64='NSArray*' index='1' name='inResults' type64='@'/>
+<arg declared_type64='NSError*' index='2' name='inError' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='ODAttributeMap'>
+<method class_method='true' selector='attributeMapWithStaticValue:'>
+<arg declared_type64='NSString*' index='0' name='staticValue' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method class_method='true' selector='attributeMapWithValue:'>
+<arg declared_type64='NSString*' index='0' name='value' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='customAttributes'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='customQueryFunction'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='customTranslationFunction'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='setCustomAttributes:'>
+<arg declared_type64='NSArray*' index='0' name='customAttributes' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCustomQueryFunction:'>
+<arg declared_type64='NSString*' index='0' name='customQueryFunction' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setCustomTranslationFunction:'>
+<arg declared_type64='NSString*' index='0' name='customTranslationFunction' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setStaticValue:'>
+<arg declared_type64='NSString*' index='0' name='staticValue' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setValue:'>
+<arg declared_type64='NSString*' index='0' name='value' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVariableSubstitution:'>
+<arg declared_type64='NSString*' index='0' name='variableSubstitution' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='value'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+</class>
+<class name='ODConfiguration'>
+<method selector='addTrustType:trustAccount:trustPassword:username:password:joinExisting:error:'>
+<arg declared_type64='NSString*' index='0' name='trustType' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='account' type64='@'/>
+<arg declared_type64='NSString*' index='2' name='accountPassword' type64='@'/>
+<arg declared_type64='NSString*' index='3' name='username' type64='@'/>
+<arg declared_type64='NSString*' index='4' name='password' type64='@'/>
+<arg declared_type64='BOOL' index='5' name='join' type64='B'/>
+<arg declared_type64='NSError**' index='6' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='authenticationModuleEntries'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='comment'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method class_method='true' selector='configuration'>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='connectionIdleTimeoutInSeconds'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='connectionSetupTimeoutInSeconds'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='defaultMappings'>
+<retval declared_type64='ODMappings*' type64='@'/>
+</method>
+<method selector='defaultModuleEntries'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='discoveryModuleEntries'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='generalModuleEntries'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='hideRegistration'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='manInTheMiddleProtection'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='nodeName'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='packetEncryption'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='packetSigning'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='preferredDestinationHostName'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='preferredDestinationHostPort'>
+<retval declared_type64='uint16_t' type64='S'/>
+</method>
+<method selector='queryTimeoutInSeconds'>
+<retval declared_type64='NSInteger' type64='q'/>
+</method>
+<method selector='removeTrustUsingUsername:password:deleteTrustAccount:error:'>
+<arg declared_type64='NSString*' index='0' name='username' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='password' type64='@'/>
+<arg declared_type64='BOOL' index='2' name='deleteAccount' type64='B'/>
+<arg declared_type64='NSError**' index='3' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='saveUsingAuthorization:error:'>
+<arg declared_type64='SFAuthorization*' index='0' name='authorization' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setAuthenticationModuleEntries:'>
+<arg declared_type64='NSArray*' index='0' name='authenticationModuleEntries' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setComment:'>
+<arg declared_type64='NSString*' index='0' name='comment' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setConnectionIdleTimeoutInSeconds:'>
+<arg declared_type64='NSInteger' index='0' name='connectionIdleTimeoutInSeconds' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setConnectionSetupTimeoutInSeconds:'>
+<arg declared_type64='NSInteger' index='0' name='connectionSetupTimeoutInSeconds' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDefaultMappings:'>
+<arg declared_type64='ODMappings*' index='0' name='defaultMappings' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDefaultModuleEntries:'>
+<arg declared_type64='NSArray*' index='0' name='defaultModuleEntries' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDiscoveryModuleEntries:'>
+<arg declared_type64='NSArray*' index='0' name='discoveryModuleEntries' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setGeneralModuleEntries:'>
+<arg declared_type64='NSArray*' index='0' name='generalModuleEntries' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setHideRegistration:'>
+<arg declared_type64='BOOL' index='0' name='hideRegistration' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setManInTheMiddleProtection:'>
+<arg declared_type64='BOOL' index='0' name='manInTheMiddleProtection' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setNodeName:'>
+<arg declared_type64='NSString*' index='0' name='nodeName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPacketEncryption:'>
+<arg declared_type64='NSInteger' index='0' name='packetEncryption' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPacketSigning:'>
+<arg declared_type64='NSInteger' index='0' name='packetSigning' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPreferredDestinationHostName:'>
+<arg declared_type64='NSString*' index='0' name='preferredDestinationHostName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPreferredDestinationHostPort:'>
+<arg declared_type64='uint16_t' index='0' name='preferredDestinationHostPort' type64='S'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setQueryTimeoutInSeconds:'>
+<arg declared_type64='NSInteger' index='0' name='queryTimeoutInSeconds' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTemplateName:'>
+<arg declared_type64='NSString*' index='0' name='templateName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVirtualSubnodes:'>
+<arg declared_type64='NSArray*' index='0' name='virtualSubnodes' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='suggestedTrustAccount:'>
+<arg declared_type64='NSString*' index='0' name='hostname' type64='@'/>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method class_method='true' selector='suggestedTrustPassword:'>
+<arg declared_type64='size_t' index='0' name='length' type64='Q'/>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='templateName'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='trustAccount'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='trustKerberosPrincipal'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='trustMetaAccount'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='trustType'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='trustUsesKerberosKeytab'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='trustUsesMutualAuthentication'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='trustUsesSystemKeychain'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='virtualSubnodes'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+</class>
+<class name='ODMappings'>
+<method selector='comment'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='function'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='functionAttributes'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method class_method='true' selector='mappings'>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='recordMapForStandardRecordType:'>
+<arg declared_type64='NSString*' index='0' name='stdType' type64='@'/>
+<retval declared_type64='ODRecordMap*' type64='@'/>
+</method>
+<method selector='recordTypes'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='setComment:'>
+<arg declared_type64='NSString*' index='0' name='comment' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFunction:'>
+<arg declared_type64='NSString*' index='0' name='function' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFunctionAttributes:'>
+<arg declared_type64='NSArray*' index='0' name='functionAttributes' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setIdentifier:'>
+<arg declared_type64='NSString*' index='0' name='identifier' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRecordMap:forStandardRecordType:'>
+<arg declared_type64='ODRecordMap*' index='0' name='map' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='stdType' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTemplateName:'>
+<arg declared_type64='NSString*' index='0' name='templateName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateName'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+</class>
+<class name='ODModuleEntry'>
+<method selector='mappings'>
+<retval declared_type64='ODMappings*' type64='@'/>
+</method>
+<method class_method='true' selector='moduleEntryWithName:xpcServiceName:'>
+<arg declared_type64='NSString*' index='0' name='name' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='xpcServiceName' type64='@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='name'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='option:'>
+<arg declared_type64='NSString*' index='0' name='optionName' type64='@'/>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='setMappings:'>
+<arg declared_type64='ODMappings*' index='0' name='mappings' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setName:'>
+<arg declared_type64='NSString*' index='0' name='name' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setOption:value:'>
+<arg declared_type64='NSString*' index='0' name='optionName' type64='@'/>
+<arg declared_type64='id' index='1' name='value' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setUuidString:'>
+<arg declared_type64='NSString*' index='0' name='uuidString' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setXpcServiceName:'>
+<arg declared_type64='NSString*' index='0' name='xpcServiceName' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='supportedOptions'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='uuidString'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='xpcServiceName'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+</class>
+<class name='ODNode'>
+<method selector='accountPoliciesAndReturnError:'>
+<arg declared_type64='NSError**' index='0' name='error' type64='^@'/>
+<retval declared_type64='NSDictionary*' type64='@'/>
+</method>
+<method selector='addAccountPolicy:toCategory:error:'>
+<arg declared_type64='NSDictionary*' index='0' name='policy' type64='@'/>
+<arg declared_type64='ODPolicyCategoryType' index='1' name='category' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='configuration'>
+<retval declared_type64='ODConfiguration*' type64='@'/>
+</method>
+<method selector='createRecordWithRecordType:name:attributes:error:'>
+<arg declared_type64='ODRecordType' index='0' name='inRecordType' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='inRecordName' type64='@'/>
+<arg declared_type64='NSDictionary*' index='2' name='inAttributes' type64='@'/>
+<arg declared_type64='NSError**' index='3' name='outError' type64='^@'/>
+<retval declared_type64='ODRecord*' type64='@'/>
+</method>
+<method selector='customCall:sendData:error:'>
+<arg declared_type64='NSInteger' index='0' name='inCustomCode' type64='q'/>
+<arg declared_type64='NSData*' index='1' name='inSendData' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='outError' type64='^@'/>
+<retval declared_type64='NSData*' type64='@'/>
+</method>
+<method selector='customFunction:payload:error:'>
+<arg declared_type64='NSString*' index='0' name='function' type64='@'/>
+<arg declared_type64='id' index='1' name='payload' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='error' type64='^@'/>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='initWithSession:name:error:'>
+<arg declared_type64='ODSession*' index='0' name='inSession' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='inName' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='outError' type64='^@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='initWithSession:type:error:'>
+<arg declared_type64='ODSession*' index='0' name='inSession' type64='@'/>
+<arg declared_type64='ODNodeType' index='1' name='inType' type64='I'/>
+<arg declared_type64='NSError**' index='2' name='outError' type64='^@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='nodeDetailsForKeys:error:'>
+<arg declared_type64='NSArray*' index='0' name='inKeys' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='outError' type64='^@'/>
+<retval declared_type64='NSDictionary*' type64='@'/>
+</method>
+<method selector='nodeName'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method class_method='true' selector='nodeWithSession:name:error:'>
+<arg declared_type64='ODSession*' index='0' name='inSession' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='inName' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='outError' type64='^@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method class_method='true' selector='nodeWithSession:type:error:'>
+<arg declared_type64='ODSession*' index='0' name='inSession' type64='@'/>
+<arg declared_type64='ODNodeType' index='1' name='inType' type64='I'/>
+<arg declared_type64='NSError**' index='2' name='outError' type64='^@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='passwordContentCheck:forRecordName:error:'>
+<arg declared_type64='NSString*' index='0' name='password' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='recordName' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='policiesAndReturnError:'>
+<arg declared_type64='NSError**' index='0' name='error' type64='^@'/>
+<retval declared_type64='NSDictionary*' type64='@'/>
+</method>
+<method selector='recordWithRecordType:name:attributes:error:'>
+<arg declared_type64='ODRecordType' index='0' name='inRecordType' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='inRecordName' type64='@'/>
+<arg declared_type64='id' index='2' name='inAttributes' type64='@'/>
+<arg declared_type64='NSError**' index='3' name='outError' type64='^@'/>
+<retval declared_type64='ODRecord*' type64='@'/>
+</method>
+<method selector='removeAccountPolicy:fromCategory:error:'>
+<arg declared_type64='NSDictionary*' index='0' name='policy' type64='@'/>
+<arg declared_type64='ODPolicyCategoryType' index='1' name='category' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='removePolicy:error:'>
+<arg declared_type64='ODPolicyType' index='0' name='policy' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setAccountPolicies:error:'>
+<arg declared_type64='NSDictionary*' index='0' name='policies' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setCredentialsUsingKerberosCache:error:'>
+<arg declared_type64='NSString*' index='0' name='inCacheName' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setCredentialsWithRecordType:authenticationType:authenticationItems:continueItems:context:error:'>
+<arg declared_type64='ODRecordType' index='0' name='inRecordType' type64='@'/>
+<arg declared_type64='ODAuthenticationType' index='1' name='inType' type64='@'/>
+<arg declared_type64='NSArray*' index='2' name='inItems' type64='@'/>
+<arg declared_type64='NSArray**' index='3' name='outItems' type64='^@'/>
+<arg declared_type64='id*' index='4' name='outContext' type64='^@'/>
+<arg declared_type64='NSError**' index='5' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setCredentialsWithRecordType:recordName:password:error:'>
+<arg declared_type64='ODRecordType' index='0' name='inRecordType' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='inRecordName' type64='@'/>
+<arg declared_type64='NSString*' index='2' name='inPassword' type64='@'/>
+<arg declared_type64='NSError**' index='3' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setPolicies:error:'>
+<arg declared_type64='NSDictionary*' index='0' name='policies' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setPolicy:value:error:'>
+<arg declared_type64='ODPolicyType' index='0' name='policy' type64='@'/>
+<arg declared_type64='id' index='1' name='value' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='subnodeNamesAndReturnError:'>
+<arg declared_type64='NSError**' index='0' name='outError' type64='^@'/>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='supportedAttributesForRecordType:error:'>
+<arg declared_type64='ODRecordType' index='0' name='inRecordType' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='outError' type64='^@'/>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='supportedPoliciesAndReturnError:'>
+<arg declared_type64='NSError**' index='0' name='error' type64='^@'/>
+<retval declared_type64='NSDictionary*' type64='@'/>
+</method>
+<method selector='supportedRecordTypesAndReturnError:'>
+<arg declared_type64='NSError**' index='0' name='outError' type64='^@'/>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='unreachableSubnodeNamesAndReturnError:'>
+<arg declared_type64='NSError**' index='0' name='outError' type64='^@'/>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+</class>
+<class name='ODQuery'>
+<method selector='delegate'>
+<retval declared_type64='id' type64='@'/>
+</method>
+<method selector='initWithNode:forRecordTypes:attribute:matchType:queryValues:returnAttributes:maximumResults:error:'>
+<arg declared_type64='ODNode*' index='0' name='inNode' type64='@'/>
+<arg declared_type64='id' index='1' name='inRecordTypeOrList' type64='@'/>
+<arg declared_type64='ODAttributeType' index='2' name='inAttribute' type64='@'/>
+<arg declared_type64='ODMatchType' index='3' name='inMatchType' type64='I'/>
+<arg declared_type64='id' index='4' name='inQueryValueOrList' type64='@'/>
+<arg declared_type64='id' index='5' name='inReturnAttributeOrList' type64='@'/>
+<arg declared_type64='NSInteger' index='6' name='inMaximumResults' type64='q'/>
+<arg declared_type64='NSError**' index='7' name='outError' type64='^@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='operationQueue'>
+<retval declared_type64='NSOperationQueue*' type64='@'/>
+</method>
+<method class_method='true' selector='queryWithNode:forRecordTypes:attribute:matchType:queryValues:returnAttributes:maximumResults:error:'>
+<arg declared_type64='ODNode*' index='0' name='inNode' type64='@'/>
+<arg declared_type64='id' index='1' name='inRecordTypeOrList' type64='@'/>
+<arg declared_type64='ODAttributeType' index='2' name='inAttribute' type64='@'/>
+<arg declared_type64='ODMatchType' index='3' name='inMatchType' type64='I'/>
+<arg declared_type64='id' index='4' name='inQueryValueOrList' type64='@'/>
+<arg declared_type64='id' index='5' name='inReturnAttributeOrList' type64='@'/>
+<arg declared_type64='NSInteger' index='6' name='inMaximumResults' type64='q'/>
+<arg declared_type64='NSError**' index='7' name='outError' type64='^@'/>
+<retval declared_type64='ODQuery*' type64='@'/>
+</method>
+<method selector='removeFromRunLoop:forMode:'>
+<arg declared_type64='NSRunLoop*' index='0' name='inRunLoop' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='inMode' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='resultsAllowingPartial:error:'>
+<arg declared_type64='BOOL' index='0' name='inAllowPartialResults' type64='B'/>
+<arg declared_type64='NSError**' index='1' name='outError' type64='^@'/>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='scheduleInRunLoop:forMode:'>
+<arg declared_type64='NSRunLoop*' index='0' name='inRunLoop' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='inMode' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setOperationQueue:'>
+<arg declared_type64='NSOperationQueue*' index='0' name='operationQueue' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='synchronize'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='ODRecord'>
+<method selector='accountPoliciesAndReturnError:'>
+<arg declared_type64='NSError**' index='0' name='error' type64='^@'/>
+<retval declared_type64='NSDictionary*' type64='@'/>
+</method>
+<method selector='addAccountPolicy:toCategory:error:'>
+<arg declared_type64='NSDictionary*' index='0' name='policy' type64='@'/>
+<arg declared_type64='ODPolicyCategoryType' index='1' name='category' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='addMemberRecord:error:'>
+<arg declared_type64='ODRecord*' index='0' name='inRecord' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='addValue:toAttribute:error:'>
+<arg declared_type64='id' index='0' name='inValue' type64='@'/>
+<arg declared_type64='ODAttributeType' index='1' name='inAttribute' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='authenticationAllowedAndReturnError:'>
+<arg declared_type64='NSError**' index='0' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='changePassword:toPassword:error:'>
+<arg declared_type64='NSString*' index='0' name='oldPassword' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='newPassword' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='deleteRecordAndReturnError:'>
+<arg declared_type64='NSError**' index='0' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='effectivePoliciesAndReturnError:'>
+<arg declared_type64='NSError**' index='0' name='error' type64='^@'/>
+<retval declared_type64='NSDictionary*' type64='@'/>
+</method>
+<method selector='isMemberRecord:error:'>
+<arg declared_type64='ODRecord*' index='0' name='inRecord' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='passwordChangeAllowed:error:'>
+<arg declared_type64='NSString*' index='0' name='newPassword' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='passwordPolicyAndReturnError:'>
+<arg declared_type64='NSError**' index='0' name='outError' type64='^@'/>
+<retval declared_type64='NSDictionary*' type64='@'/>
+</method>
+<method selector='policiesAndReturnError:'>
+<arg declared_type64='NSError**' index='0' name='error' type64='^@'/>
+<retval declared_type64='NSDictionary*' type64='@'/>
+</method>
+<method selector='recordDetailsForAttributes:error:'>
+<arg declared_type64='NSArray*' index='0' name='inAttributes' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='outError' type64='^@'/>
+<retval declared_type64='NSDictionary*' type64='@'/>
+</method>
+<method selector='recordName'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='recordType'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='removeAccountPolicy:fromCategory:error:'>
+<arg declared_type64='NSDictionary*' index='0' name='policy' type64='@'/>
+<arg declared_type64='ODPolicyCategoryType' index='1' name='category' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='removeMemberRecord:error:'>
+<arg declared_type64='ODRecord*' index='0' name='inRecord' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='removePolicy:error:'>
+<arg declared_type64='ODPolicyType' index='0' name='policy' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='removeValue:fromAttribute:error:'>
+<arg declared_type64='id' index='0' name='inValue' type64='@'/>
+<arg declared_type64='ODAttributeType' index='1' name='inAttribute' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='removeValuesForAttribute:error:'>
+<arg declared_type64='ODAttributeType' index='0' name='inAttribute' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='secondsUntilAuthenticationsExpire'>
+<retval declared_type64='int64_t' type64='q'/>
+</method>
+<method selector='secondsUntilPasswordExpires'>
+<retval declared_type64='int64_t' type64='q'/>
+</method>
+<method selector='setAccountPolicies:error:'>
+<arg declared_type64='NSDictionary*' index='0' name='policies' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setNodeCredentials:password:error:'>
+<arg declared_type64='NSString*' index='0' name='inUsername' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='inPassword' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setNodeCredentialsUsingKerberosCache:error:'>
+<arg declared_type64='NSString*' index='0' name='inCacheName' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setNodeCredentialsWithRecordType:authenticationType:authenticationItems:continueItems:context:error:'>
+<arg declared_type64='ODRecordType' index='0' name='inRecordType' type64='@'/>
+<arg declared_type64='ODAuthenticationType' index='1' name='inType' type64='@'/>
+<arg declared_type64='NSArray*' index='2' name='inItems' type64='@'/>
+<arg declared_type64='NSArray**' index='3' name='outItems' type64='^@'/>
+<arg declared_type64='id*' index='4' name='outContext' type64='^@'/>
+<arg declared_type64='NSError**' index='5' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setPolicies:error:'>
+<arg declared_type64='NSDictionary*' index='0' name='policies' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setPolicy:value:error:'>
+<arg declared_type64='ODPolicyType' index='0' name='policy' type64='@'/>
+<arg declared_type64='id' index='1' name='value' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setValue:forAttribute:error:'>
+<arg declared_type64='id' index='0' name='inValueOrValues' type64='@'/>
+<arg declared_type64='ODAttributeType' index='1' name='inAttribute' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='supportedPoliciesAndReturnError:'>
+<arg declared_type64='NSError**' index='0' name='error' type64='^@'/>
+<retval declared_type64='NSDictionary*' type64='@'/>
+</method>
+<method selector='synchronizeAndReturnError:'>
+<arg declared_type64='NSError**' index='0' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='valuesForAttribute:error:'>
+<arg declared_type64='ODAttributeType' index='0' name='inAttribute' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='outError' type64='^@'/>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='verifyExtendedWithAuthenticationType:authenticationItems:continueItems:context:error:'>
+<arg declared_type64='ODAuthenticationType' index='0' name='inType' type64='@'/>
+<arg declared_type64='NSArray*' index='1' name='inItems' type64='@'/>
+<arg declared_type64='NSArray**' index='2' name='outItems' type64='^@'/>
+<arg declared_type64='id*' index='3' name='outContext' type64='^@'/>
+<arg declared_type64='NSError**' index='4' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='verifyPassword:error:'>
+<arg declared_type64='NSString*' index='0' name='inPassword' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='outError' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='willAuthenticationsExpire:'>
+<arg declared_type64='uint64_t' index='0' name='willExpireIn' type64='Q'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='willPasswordExpire:'>
+<arg declared_type64='uint64_t' index='0' name='willExpireIn' type64='Q'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='ODRecordMap'>
+<method selector='attributeMapForStandardAttribute:'>
+<arg declared_type64='NSString*' index='0' name='standardAttribute' type64='@'/>
+<retval declared_type64='ODAttributeMap*' type64='@'/>
+</method>
+<method selector='attributes'>
+<retval declared_type64='NSDictionary*' type64='@'/>
+</method>
+<method selector='native'>
+<retval declared_type64='NSString*' type64='@'/>
+</method>
+<method selector='odPredicate'>
+<retval declared_type64='NSDictionary*' type64='@'/>
+</method>
+<method class_method='true' selector='recordMap'>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='setAttributeMap:forStandardAttribute:'>
+<arg declared_type64='ODAttributeMap*' index='0' name='attributeMap' type64='@'/>
+<arg declared_type64='NSString*' index='1' name='standardAttribute' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setNative:'>
+<arg declared_type64='NSString*' index='0' name='native' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setOdPredicate:'>
+<arg declared_type64='NSDictionary*' index='0' name='odPredicate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='standardAttributeTypes'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+</class>
+<class name='ODSession'>
+<method selector='addConfiguration:authorization:error:'>
+<arg declared_type64='ODConfiguration*' index='0' name='configuration' type64='@'/>
+<arg declared_type64='SFAuthorization*' index='1' name='authorization' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='configurationAuthorizationAllowingUserInteraction:error:'>
+<arg declared_type64='BOOL' index='0' name='allowInteraction' type64='B'/>
+<arg declared_type64='NSError**' index='1' name='error' type64='^@'/>
+<retval declared_type64='SFAuthorization*' type64='@'/>
+</method>
+<method selector='configurationForNodename:'>
+<arg declared_type64='NSString*' index='0' name='nodename' type64='@'/>
+<retval declared_type64='ODConfiguration*' type64='@'/>
+</method>
+<method selector='configurationTemplateNames'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method class_method='true' selector='defaultSession'>
+<retval declared_type64='ODSession*' type64='@'/>
+</method>
+<method selector='deleteConfiguration:authorization:error:'>
+<arg declared_type64='ODConfiguration*' index='0' name='configuration' type64='@'/>
+<arg declared_type64='SFAuthorization*' index='1' name='authorization' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='deleteConfigurationWithNodename:authorization:error:'>
+<arg declared_type64='NSString*' index='0' name='nodename' type64='@'/>
+<arg declared_type64='SFAuthorization*' index='1' name='authorization' type64='@'/>
+<arg declared_type64='NSError**' index='2' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='initWithOptions:error:'>
+<arg declared_type64='NSDictionary*' index='0' name='inOptions' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='outError' type64='^@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+<method selector='mappingTemplateNames'>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method selector='nodeNamesAndReturnError:'>
+<arg declared_type64='NSError**' index='0' name='outError' type64='^@'/>
+<retval declared_type64='NSArray*' type64='@'/>
+</method>
+<method class_method='true' selector='sessionWithOptions:error:'>
+<arg declared_type64='NSDictionary*' index='0' name='inOptions' type64='@'/>
+<arg declared_type64='NSError**' index='1' name='outError' type64='^@'/>
+<retval declared_type64='instancetype' type64='@'/>
+</method>
+</class>
+<informal_protocol name='ODQueryDelegate'>
+<method selector='query:foundResults:error:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='ODQuery*' index='0' name='inQuery' type64='@'/>
+<arg declared_type64='NSArray*' index='1' name='inResults' type64='@'/>
+<arg declared_type64='NSError*' index='2' name='inError' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<cftype gettypeid_func='ODContextGetTypeID' name='ODContextRef' type64='^{__ODContext=}'/>
+<cftype gettypeid_func='ODNodeGetTypeID' name='ODNodeRef' type64='^{__ODNode=}'/>
+<cftype gettypeid_func='ODQueryGetTypeID' name='ODQueryRef' type64='^{__ODQuery=}'/>
+<cftype gettypeid_func='ODRecordGetTypeID' name='ODRecordRef' type64='^{__ODRecord=}'/>
+<cftype gettypeid_func='ODSessionGetTypeID' name='ODSessionRef' type64='^{__ODSession=}'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAccessControlEntry' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAddressLine1' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAddressLine2' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAddressLine3' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAdminLimits' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAdvertisedServices' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAlias' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAllAttributes' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAllTypes' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAltSecurityIdentities' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAreaCode' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAttrListRefCount' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAttrListRefs' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAttrListValueRefCount' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAttrListValueRefs' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAuthCredential' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAuthMethod' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAuthenticationAuthority' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAuthenticationHint' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAuthorityRevocationList' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAutomaticSearchPath' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeAutomountInformation' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeBirthday' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeBootParams' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeBuildVersion' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeBuilding' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeCACertificate' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeCapacity' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeCertificateRevocationList' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeCity' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeComment' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeCompany' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeComputers' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeConfigAvailable' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeConfigFile' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeContactGUID' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeContactPerson' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeCopyTimestamp' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeCoreFWVersion' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeCountry' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeCreationTimestamp' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeCrossCertificatePair' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeCustomSearchPath' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeDNSDomain' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeDNSName' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeDNSNameServer' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeDataStamp' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeDateRecordCreated' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeDepartment' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeDirRefCount' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeDirRefs' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeEMailAddress' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeEMailContacts' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeENetAddress' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeExpire' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeFWVersion' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeFaxNumber' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeFirstName' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeFullName' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeFunctionalState' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeGUID' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeGroup' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeGroupMembers' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeGroupMembership' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeGroupServices' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeHTML' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeHardwareUUID' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeHomeDirectory' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeHomeDirectoryQuota' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeHomeDirectorySoftQuota' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeHomeLocOwner' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeHomePhoneNumber' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeIMHandle' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeIPAddress' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeIPAddressAndENetAddress' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeIPv6Address' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeInternetAlias' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeJPEGPhoto' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeJobTitle' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeKDCAuthKey' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeKDCConfigData' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeKerberosRealm' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeKerberosServices' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeKeywords' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeLDAPReadReplicas' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeLDAPSearchBaseSuffix' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeLDAPWriteReplicas' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeLastName' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeLocalOnlySearchPath' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeLocaleRelay' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeLocaleSubnets' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeLocation' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeMCXFlags' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeMCXSettings' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeMIME' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeMailAttribute' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeMapCoordinates' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeMapGUID' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeMapURI' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeMetaAmbiguousName' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeMetaAugmentedAttributes' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeMetaAutomountMap' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeMetaNodeLocation' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeMetaRecordName' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeMiddleName' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeMobileNumber' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeModificationTimestamp' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeNFSHomeDirectory' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeNTDomainComputerAccount' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeNamePrefix' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeNameSuffix' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeNativeOnly' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeNestedGroups' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeNetGroupTriplet' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeNetGroups' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeNetworkInterfaces' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeNetworkNumber' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeNickName' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeNodeOptions' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeNodePath' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeNodeRefCount' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeNodeRefs' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeNodeSASLRealm' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeNote' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeNumTableList' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeOperatingSystem' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeOperatingSystemVersion' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeOrganizationInfo' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeOrganizationName' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeOriginalHomeDirectory' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeOriginalNFSHomeDirectory' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeOriginalNodeName' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeOwner' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeOwnerGUID' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePGPPublicKey' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePIDValue' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePagerNumber' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeParentLocales' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePassword' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePasswordPlus' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePasswordPolicyOptions' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePasswordServerList' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePasswordServerLocation' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePhoneContacts' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePhoneNumber' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePicture' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePlugInInfo' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePluginIndex' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePort' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePostalAddress' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePostalAddressContacts' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePostalCode' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePresetUserIsAdmin' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePrimaryComputerGUID' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePrimaryComputerList' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePrimaryGroupID' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePrimaryLocale' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePrimaryNTDomain' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePrintServiceInfoText' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePrintServiceInfoXML' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePrintServiceUserData' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePrinter1284DeviceID' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePrinterLPRHost' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePrinterLPRQueue' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePrinterMakeAndModel' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePrinterType' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePrinterURI' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePrinterXRISupported' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeProcessName' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeProfiles' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeProfilesTimestamp' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeProtocolNumber' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeProtocols' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypePwdAgingPolicy' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeRPCNumber' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeReadOnlyNode' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeRealUserID' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeRecRefCount' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeRecRefs' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeRecordName' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeRecordType' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeRelationships' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeRelativeDNPrefix' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeResourceInfo' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeResourceType' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSMBAcctFlags' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSMBGroupRID' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSMBHome' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSMBHomeDrive' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSMBKickoffTime' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSMBLogoffTime' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSMBLogonTime' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSMBPWDLastSet' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSMBPrimaryGroupSID' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSMBProfilePath' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSMBRID' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSMBSID' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSMBScriptPath' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSMBUserWorkstations' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSchema' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSearchPath' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSearchPolicy' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeServiceType' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeServicesLocator' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSetupAdvertising' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSetupAutoRegister' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSetupLocation' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSetupOccupation' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeStandardOnly' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeState' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeStreet' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeSubNodes' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeTimePackage' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeTimeToLive' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeTotalRefCount' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeTotalSize' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeTrustInformation' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeURL' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeUniqueID' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeUserCertificate' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeUserPKCS12Data' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeUserSMIMECertificate' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeUserShell' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeVFSDumpFreq' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeVFSLinkDir' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeVFSOpts' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeVFSPassNo' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeVFSType' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeVersion' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeWeblogURI' type64='@'/>
+<constant const='true' declared_type64='ODAttributeType' name='kODAttributeTypeXMLPlist' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationType2WayRandom' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationType2WayRandomChangePasswd' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeAPOP' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeCRAM_MD5' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeChangePasswd' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeClearText' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeClearTextReadOnly' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeCrypt' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeDIGEST_MD5' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeDeleteUser' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeGetEffectivePolicy' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeGetGlobalPolicy' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeGetKerberosPrincipal' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeGetPolicy' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeGetUserData' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeGetUserName' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeKerberosTickets' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeMPPEMasterKeys' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeMSCHAP2' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeNTLMv2' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeNTLMv2WithSessionKey' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeNewUser' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeNewUserWithPolicy' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeNodeNativeClearTextOK' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeNodeNativeNoClearText' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeReadSecureHash' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeSMBNTv2UserSessionKey' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeSMBWorkstationCredentialSessionKey' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeSMB_LM_Key' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeSMB_NT_Key' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeSMB_NT_UserSessionKey' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeSMB_NT_WithUserSessionKey' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeSecureHash' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeSetCertificateHashAsCurrent' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeSetGlobalPolicy' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeSetLMHash' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeSetNTHash' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeSetPassword' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeSetPasswordAsCurrent' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeSetPolicy' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeSetPolicyAsCurrent' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeSetUserData' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeSetUserName' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeSetWorkstationPassword' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeWithAuthorizationRef' type64='@'/>
+<constant const='true' declared_type64='ODAuthenticationType' name='kODAuthenticationTypeWriteSecureHash' type64='@'/>
+<constant declared_type64='ODErrorUserInfoKeyType' name='kODBackOffSeconds' type64='@'/>
+<constant const='true' declared_type64='CFStringRef' name='kODErrorDomainFramework' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kODModuleConfigOptionConnectionIdleDisconnect' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kODModuleConfigOptionConnectionSetupTimeout' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kODModuleConfigOptionManInTheMiddle' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kODModuleConfigOptionPacketEncryption' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kODModuleConfigOptionPacketSigning' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kODModuleConfigOptionQueryTimeout' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kODNodeOptionsQuerySkippedSubnode' type64='^{__CFString=}'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeCreationTime' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeCurrentDate' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeCurrentDayOfWeek' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeCurrentTime' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeCurrentTimeOfDay' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeDaysUntilExpiration' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeEnableAtTimeOfDay' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeEnableOnDate' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeEnableOnDayOfWeek' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeExpiresAtTimeOfDay' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeExpiresEveryNDays' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeExpiresOnDate' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeExpiresOnDayOfWeek' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeFailedAuthentications' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeLastAuthenticationTime' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeLastFailedAuthenticationTime' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeLastPasswordChangeTime' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeMaximumFailedAuthentications' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeNewPasswordRequiredTime' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributePassword' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributePasswordHashes' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributePasswordHistory' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributePasswordHistoryDepth' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeRecordName' type64='@'/>
+<constant declared_type64='ODPolicyAttributeType' name='kODPolicyAttributeRecordType' type64='@'/>
+<constant declared_type64='ODPolicyCategoryType' name='kODPolicyCategoryAuthentication' type64='@'/>
+<constant declared_type64='ODPolicyCategoryType' name='kODPolicyCategoryPasswordChange' type64='@'/>
+<constant declared_type64='ODPolicyCategoryType' name='kODPolicyCategoryPasswordContent' type64='@'/>
+<constant const='true' declared_type64='ODPolicyKeyType' name='kODPolicyKeyContent' type64='@'/>
+<constant const='true' declared_type64='ODPolicyKeyType' name='kODPolicyKeyContentDescription' type64='@'/>
+<constant const='true' declared_type64='ODPolicyKeyType' name='kODPolicyKeyEvaluationDetails' type64='@'/>
+<constant const='true' declared_type64='ODPolicyKeyType' name='kODPolicyKeyIdentifier' type64='@'/>
+<constant const='true' declared_type64='ODPolicyKeyType' name='kODPolicyKeyParameters' type64='@'/>
+<constant const='true' declared_type64='ODPolicyKeyType' name='kODPolicyKeyPolicySatisfied' type64='@'/>
+<constant const='true' declared_type64='ODPolicyType' name='kODPolicyTypeAccountExpiresOnDate' type64='@'/>
+<constant const='true' declared_type64='ODPolicyType' name='kODPolicyTypeAccountMaximumFailedLogins' type64='@'/>
+<constant const='true' declared_type64='ODPolicyType' name='kODPolicyTypeAccountMaximumMinutesOfNonUse' type64='@'/>
+<constant const='true' declared_type64='ODPolicyType' name='kODPolicyTypeAccountMaximumMinutesUntilDisabled' type64='@'/>
+<constant const='true' declared_type64='ODPolicyType' name='kODPolicyTypeAccountMinutesUntilFailedLoginReset' type64='@'/>
+<constant const='true' declared_type64='ODPolicyType' name='kODPolicyTypePasswordCannotBeAccountName' type64='@'/>
+<constant const='true' declared_type64='ODPolicyType' name='kODPolicyTypePasswordChangeRequired' type64='@'/>
+<constant const='true' declared_type64='ODPolicyType' name='kODPolicyTypePasswordHistory' type64='@'/>
+<constant const='true' declared_type64='ODPolicyType' name='kODPolicyTypePasswordMaximumAgeInMinutes' type64='@'/>
+<constant const='true' declared_type64='ODPolicyType' name='kODPolicyTypePasswordMaximumNumberOfCharacters' type64='@'/>
+<constant const='true' declared_type64='ODPolicyType' name='kODPolicyTypePasswordMinimumNumberOfCharacters' type64='@'/>
+<constant const='true' declared_type64='ODPolicyType' name='kODPolicyTypePasswordRequiresAlpha' type64='@'/>
+<constant const='true' declared_type64='ODPolicyType' name='kODPolicyTypePasswordRequiresMixedCase' type64='@'/>
+<constant const='true' declared_type64='ODPolicyType' name='kODPolicyTypePasswordRequiresNumeric' type64='@'/>
+<constant const='true' declared_type64='ODPolicyType' name='kODPolicyTypePasswordRequiresSymbol' type64='@'/>
+<constant const='true' declared_type64='ODPolicyType' name='kODPolicyTypePasswordSelfModification' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeAFPServer' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeAliases' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeAttributeTypes' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeAugments' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeAutoServerSetup' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeAutomount' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeAutomountMap' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeBootp' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeCertificateAuthorities' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeComputerGroups' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeComputerLists' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeComputers' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeConfiguration' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeEthernets' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeFTPServer' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeFileMakerServers' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeGroups' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeHostServices' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeHosts' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeLDAPServer' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeLocations' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeMounts' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeNFS' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeNetDomains' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeNetGroups' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeNetworks' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypePeople' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypePresetComputerGroups' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypePresetComputerLists' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypePresetComputers' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypePresetGroups' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypePresetUsers' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypePrintService' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypePrintServiceUser' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypePrinters' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeProtocols' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeQTSServer' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeQueryInformation' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeRPC' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeRecordTypes' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeResources' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeSMBServer' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeServer' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeServices' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeSharePoints' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeUsers' type64='@'/>
+<constant const='true' declared_type64='ODRecordType' name='kODRecordTypeWebServer' type64='@'/>
+<constant declared_type64='ODSessionRef' name='kODSessionDefault' type64='^{__ODSession=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kODSessionProxyAddress' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kODSessionProxyPassword' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kODSessionProxyPort' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kODSessionProxyUsername' type64='^{__CFString=}'/>
+<enum name='kODErrorCredentialsAccountDisabled' value64='5301'/>
+<enum name='kODErrorCredentialsAccountExpired' value64='5302'/>
+<enum name='kODErrorCredentialsAccountInactive' value64='5303'/>
+<enum name='kODErrorCredentialsAccountLocked' value64='5305'/>
+<enum name='kODErrorCredentialsAccountNotFound' value64='5300'/>
+<enum name='kODErrorCredentialsAccountTemporarilyLocked' value64='5304'/>
+<enum name='kODErrorCredentialsContactMaster' value64='5204'/>
+<enum name='kODErrorCredentialsInvalid' value64='5000'/>
+<enum name='kODErrorCredentialsInvalidComputer' value64='5501'/>
+<enum name='kODErrorCredentialsInvalidLogonHours' value64='5500'/>
+<enum name='kODErrorCredentialsMethodNotSupported' value64='5100'/>
+<enum name='kODErrorCredentialsNotAuthorized' value64='5101'/>
+<enum name='kODErrorCredentialsOperationFailed' value64='5103'/>
+<enum name='kODErrorCredentialsParameterError' value64='5102'/>
+<enum name='kODErrorCredentialsPasswordChangeRequired' value64='5401'/>
+<enum name='kODErrorCredentialsPasswordChangeTooSoon' value64='5407'/>
+<enum name='kODErrorCredentialsPasswordExpired' value64='5400'/>
+<enum name='kODErrorCredentialsPasswordNeedsDigit' value64='5406'/>
+<enum name='kODErrorCredentialsPasswordNeedsLetter' value64='5405'/>
+<enum name='kODErrorCredentialsPasswordQualityFailed' value64='5402'/>
+<enum name='kODErrorCredentialsPasswordTooLong' value64='5404'/>
+<enum name='kODErrorCredentialsPasswordTooShort' value64='5403'/>
+<enum name='kODErrorCredentialsPasswordUnrecoverable' value64='5408'/>
+<enum name='kODErrorCredentialsServerCommunicationError' value64='5205'/>
+<enum name='kODErrorCredentialsServerError' value64='5202'/>
+<enum name='kODErrorCredentialsServerNotFound' value64='5201'/>
+<enum name='kODErrorCredentialsServerTimeout' value64='5203'/>
+<enum name='kODErrorCredentialsServerUnreachable' value64='5200'/>
+<enum name='kODErrorDaemonError' value64='10002'/>
+<enum name='kODErrorNodeConnectionFailed' value64='2100'/>
+<enum name='kODErrorNodeDisabled' value64='2002'/>
+<enum name='kODErrorNodeUnknownHost' value64='2200'/>
+<enum name='kODErrorNodeUnknownName' value64='2000'/>
+<enum name='kODErrorNodeUnknownType' value64='2001'/>
+<enum name='kODErrorPluginError' value64='10001'/>
+<enum name='kODErrorPluginOperationNotSupported' value64='10000'/>
+<enum name='kODErrorPluginOperationTimeout' value64='10003'/>
+<enum name='kODErrorPolicyOutOfRange' value64='6001'/>
+<enum name='kODErrorPolicyUnsupported' value64='6000'/>
+<enum name='kODErrorQueryInvalidMatchType' value64='3100'/>
+<enum name='kODErrorQuerySynchronize' value64='3000'/>
+<enum name='kODErrorQueryTimeout' value64='3102'/>
+<enum name='kODErrorQueryUnsupportedMatchType' value64='3101'/>
+<enum name='kODErrorRecordAlreadyExists' value64='4102'/>
+<enum name='kODErrorRecordAttributeNotFound' value64='4201'/>
+<enum name='kODErrorRecordAttributeUnknownType' value64='4200'/>
+<enum name='kODErrorRecordAttributeValueNotFound' value64='4203'/>
+<enum name='kODErrorRecordAttributeValueSchemaError' value64='4202'/>
+<enum name='kODErrorRecordInvalidType' value64='4101'/>
+<enum name='kODErrorRecordNoLongerExists' value64='4104'/>
+<enum name='kODErrorRecordParameterError' value64='4100'/>
+<enum name='kODErrorRecordPermissionError' value64='4001'/>
+<enum name='kODErrorRecordReadOnlyNode' value64='4000'/>
+<enum name='kODErrorRecordTypeDisabled' value64='4103'/>
+<enum name='kODErrorSessionDaemonNotRunning' value64='1002'/>
+<enum name='kODErrorSessionDaemonRefused' value64='1003'/>
+<enum name='kODErrorSessionLocalOnlyDaemonInUse' value64='1000'/>
+<enum name='kODErrorSessionNormalDaemonInUse' value64='1001'/>
+<enum name='kODErrorSessionProxyCommunicationError' value64='1100'/>
+<enum name='kODErrorSessionProxyIPUnreachable' value64='1102'/>
+<enum name='kODErrorSessionProxyUnknownHost' value64='1103'/>
+<enum name='kODErrorSessionProxyVersionMismatch' value64='1101'/>
+<enum name='kODErrorSuccess' value64='0'/>
+<enum name='kODExpirationTimeExpired' value64='0'/>
+<enum name='kODExpirationTimeNeverExpires' value64='-1'/>
+<enum name='kODMatchAny' value64='1'/>
+<enum name='kODMatchBeginsWith' value64='8194'/>
+<enum name='kODMatchContains' value64='8196'/>
+<enum name='kODMatchEndsWith' value64='8195'/>
+<enum name='kODMatchEqualTo' value64='8193'/>
+<enum name='kODMatchGreaterThan' value64='8198'/>
+<enum name='kODMatchInsensitiveBeginsWith' value64='8450'/>
+<enum name='kODMatchInsensitiveContains' value64='8452'/>
+<enum name='kODMatchInsensitiveEndsWith' value64='8451'/>
+<enum name='kODMatchInsensitiveEqualTo' value64='8449'/>
+<enum name='kODMatchLessThan' value64='8199'/>
+<enum name='kODNodeTypeAuthentication' value64='8705'/>
+<enum name='kODNodeTypeConfigure' value64='8706'/>
+<enum name='kODNodeTypeContacts' value64='8708'/>
+<enum name='kODNodeTypeLocalNodes' value64='8704'/>
+<enum name='kODNodeTypeNetwork' value64='8709'/>
+<function name='ODContextGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='ODNodeAddAccountPolicy'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='CFDictionaryRef' name='policy' type64='^{__CFDictionary=}'/>
+<arg declared_type64='ODPolicyCategoryType' name='category' type64='@'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODNodeCopyAccountPolicies'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='CFDictionaryRef' type64='^{__CFDictionary=}'/>
+</function>
+<function name='ODNodeCopyDetails'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='CFArrayRef' name='keys' type64='^{__CFArray=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='CFDictionaryRef' type64='^{__CFDictionary=}'/>
+</function>
+<function name='ODNodeCopyPolicies'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='CFDictionaryRef' type64='^{__CFDictionary=}'/>
+</function>
+<function name='ODNodeCopyRecord'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='ODRecordType' name='recordType' type64='@'/>
+<arg declared_type64='CFStringRef' name='recordName' type64='^{__CFString=}'/>
+<arg declared_type64='CFTypeRef' name='attributes' type64='@'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='ODRecordRef' type64='^{__ODRecord=}'/>
+</function>
+<function name='ODNodeCopySubnodeNames'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='CFArrayRef' type64='^{__CFArray=}'/>
+</function>
+<function name='ODNodeCopySupportedAttributes'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='ODRecordType' name='recordType' type64='@'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='CFArrayRef' type64='^{__CFArray=}'/>
+</function>
+<function name='ODNodeCopySupportedPolicies'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='CFDictionaryRef' type64='^{__CFDictionary=}'/>
+</function>
+<function name='ODNodeCopySupportedRecordTypes'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='CFArrayRef' type64='^{__CFArray=}'/>
+</function>
+<function name='ODNodeCopyUnreachableSubnodeNames'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='CFArrayRef' type64='^{__CFArray=}'/>
+</function>
+<function name='ODNodeCreateCopy'>
+<arg declared_type64='CFAllocatorRef' name='allocator' type64='^{__CFAllocator=}'/>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='ODNodeRef' type64='^{__ODNode=}'/>
+</function>
+<function name='ODNodeCreateRecord'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='ODRecordType' name='recordType' type64='@'/>
+<arg declared_type64='CFStringRef' name='recordName' type64='^{__CFString=}'/>
+<arg declared_type64='CFDictionaryRef' name='attributeDict' type64='^{__CFDictionary=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='ODRecordRef' type64='^{__ODRecord=}'/>
+</function>
+<function name='ODNodeCreateWithName'>
+<arg declared_type64='CFAllocatorRef' name='allocator' type64='^{__CFAllocator=}'/>
+<arg declared_type64='ODSessionRef' name='session' type64='^{__ODSession=}'/>
+<arg declared_type64='CFStringRef' name='nodeName' type64='^{__CFString=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='ODNodeRef' type64='^{__ODNode=}'/>
+</function>
+<function name='ODNodeCreateWithNodeType'>
+<arg declared_type64='CFAllocatorRef' name='allocator' type64='^{__CFAllocator=}'/>
+<arg declared_type64='ODSessionRef' name='session' type64='^{__ODSession=}'/>
+<arg declared_type64='ODNodeType' name='nodeType' type64='I'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='ODNodeRef' type64='^{__ODNode=}'/>
+</function>
+<function name='ODNodeCustomCall'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='CFIndex' name='customCode' type64='q'/>
+<arg declared_type64='CFDataRef' name='data' type64='^{__CFData=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='CFDataRef' type64='^{__CFData=}'/>
+</function>
+<function name='ODNodeCustomFunction'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='CFStringRef' name='function' type64='^{__CFString=}'/>
+<arg declared_type64='CFTypeRef' name='payload' type64='@'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='CFTypeRef' type64='@'/>
+</function>
+<function name='ODNodeGetName'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<retval declared_type64='CFStringRef' type64='^{__CFString=}'/>
+</function>
+<function name='ODNodeGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='ODNodePasswordContentCheck'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='CFStringRef' name='password' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef' name='recordName' type64='^{__CFString=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODNodeRemoveAccountPolicy'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='CFDictionaryRef' name='policy' type64='^{__CFDictionary=}'/>
+<arg declared_type64='ODPolicyCategoryType' name='category' type64='@'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODNodeRemovePolicy'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='ODPolicyType' name='policyType' type64='@'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODNodeSetAccountPolicies'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='CFDictionaryRef' name='policies' type64='^{__CFDictionary=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODNodeSetCredentials'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='ODRecordType' name='recordType' type64='@'/>
+<arg declared_type64='CFStringRef' name='recordName' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef' name='password' type64='^{__CFString=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODNodeSetCredentialsExtended'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='ODRecordType' name='recordType' type64='@'/>
+<arg declared_type64='ODAuthenticationType' name='authType' type64='@'/>
+<arg declared_type64='CFArrayRef' name='authItems' type64='^{__CFArray=}'/>
+<arg declared_type64='CFArrayRef*' name='outAuthItems' type64='^^{__CFArray}'/>
+<arg declared_type64='ODContextRef*' name='outContext' type64='^^{__ODContext}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODNodeSetCredentialsUsingKerberosCache'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='CFStringRef' name='cacheName' type64='^{__CFString=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODNodeSetPolicies'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='CFDictionaryRef' name='policies' type64='^{__CFDictionary=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODNodeSetPolicy'>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='ODPolicyType' name='policyType' type64='@'/>
+<arg declared_type64='CFTypeRef' name='value' type64='@'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODQueryCopyResults'>
+<arg declared_type64='ODQueryRef' name='query' type64='^{__ODQuery=}'/>
+<arg declared_type64='_Bool' name='allowPartialResults' type64='B'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='CFArrayRef' type64='^{__CFArray=}'/>
+</function>
+<function name='ODQueryCreateWithNode'>
+<arg declared_type64='CFAllocatorRef' name='allocator' type64='^{__CFAllocator=}'/>
+<arg declared_type64='ODNodeRef' name='node' type64='^{__ODNode=}'/>
+<arg declared_type64='CFTypeRef' name='recordTypeOrList' type64='@'/>
+<arg declared_type64='ODAttributeType' name='attribute' type64='@'/>
+<arg declared_type64='ODMatchType' name='matchType' type64='I'/>
+<arg declared_type64='CFTypeRef' name='queryValueOrList' type64='@'/>
+<arg declared_type64='CFTypeRef' name='returnAttributeOrList' type64='@'/>
+<arg declared_type64='CFIndex' name='maxResults' type64='q'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='ODQueryRef' type64='^{__ODQuery=}'/>
+</function>
+<function name='ODQueryCreateWithNodeType'>
+<arg declared_type64='CFAllocatorRef' name='allocator' type64='^{__CFAllocator=}'/>
+<arg declared_type64='ODNodeType' name='nodeType' type64='I'/>
+<arg declared_type64='CFTypeRef' name='recordTypeOrList' type64='@'/>
+<arg declared_type64='ODAttributeType' name='attribute' type64='@'/>
+<arg declared_type64='ODMatchType' name='matchType' type64='I'/>
+<arg declared_type64='CFTypeRef' name='queryValueOrList' type64='@'/>
+<arg declared_type64='CFTypeRef' name='returnAttributeOrList' type64='@'/>
+<arg declared_type64='CFIndex' name='maxResults' type64='q'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='ODQueryRef' type64='^{__ODQuery=}'/>
+</function>
+<function name='ODQueryGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='ODQueryScheduleWithRunLoop'>
+<arg declared_type64='ODQueryRef' name='query' type64='^{__ODQuery=}'/>
+<arg declared_type64='CFRunLoopRef' name='runLoop' type64='^{__CFRunLoop=}'/>
+<arg declared_type64='CFStringRef' name='runLoopMode' type64='^{__CFString=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='ODQuerySetCallback'>
+<arg declared_type64='ODQueryRef' name='query' type64='^{__ODQuery=}'/>
+<arg declared_type64='ODQueryCallback' function_pointer='true' name='callback' type64='^?'>
+<arg declared_type64='ODQueryRef' type64='^{__ODQuery=}'/>
+<arg declared_type64='CFArrayRef' type64='^{__CFArray=}'/>
+<arg declared_type64='CFErrorRef' type64='^{__CFError=}'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='void*' name='userInfo' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='ODQuerySetDispatchQueue'>
+<arg declared_type64='ODQueryRef' name='query' type64='^{__ODQuery=}'/>
+<arg declared_type64='dispatch_queue_t' name='queue' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='ODQuerySynchronize'>
+<arg declared_type64='ODQueryRef' name='query' type64='^{__ODQuery=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='ODQueryUnscheduleFromRunLoop'>
+<arg declared_type64='ODQueryRef' name='query' type64='^{__ODQuery=}'/>
+<arg declared_type64='CFRunLoopRef' name='runLoop' type64='^{__CFRunLoop=}'/>
+<arg declared_type64='CFStringRef' name='runLoopMode' type64='^{__CFString=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='ODRecordAddAccountPolicy'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFDictionaryRef' name='policy' type64='^{__CFDictionary=}'/>
+<arg declared_type64='ODPolicyCategoryType' name='category' type64='@'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordAddMember'>
+<arg declared_type64='ODRecordRef' name='group' type64='^{__ODRecord=}'/>
+<arg declared_type64='ODRecordRef' name='member' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordAddValue'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='ODAttributeType' name='attribute' type64='@'/>
+<arg declared_type64='CFTypeRef' name='value' type64='@'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordAuthenticationAllowed'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordChangePassword'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFStringRef' name='oldPassword' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef' name='newPassword' type64='^{__CFString=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordContainsMember'>
+<arg declared_type64='ODRecordRef' name='group' type64='^{__ODRecord=}'/>
+<arg declared_type64='ODRecordRef' name='member' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordCopyAccountPolicies'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='CFDictionaryRef' type64='^{__CFDictionary=}'/>
+</function>
+<function name='ODRecordCopyDetails'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFArrayRef' name='attributes' type64='^{__CFArray=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='CFDictionaryRef' type64='^{__CFDictionary=}'/>
+</function>
+<function name='ODRecordCopyEffectivePolicies'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='CFDictionaryRef' type64='^{__CFDictionary=}'/>
+</function>
+<function name='ODRecordCopyPasswordPolicy'>
+<arg declared_type64='CFAllocatorRef' name='allocator' type64='^{__CFAllocator=}'/>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='CFDictionaryRef' type64='^{__CFDictionary=}'/>
+</function>
+<function name='ODRecordCopyPolicies'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='CFDictionaryRef' type64='^{__CFDictionary=}'/>
+</function>
+<function name='ODRecordCopySupportedPolicies'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='CFDictionaryRef' type64='^{__CFDictionary=}'/>
+</function>
+<function name='ODRecordCopyValues'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='ODAttributeType' name='attribute' type64='@'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='CFArrayRef' type64='^{__CFArray=}'/>
+</function>
+<function name='ODRecordDelete'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordGetRecordName'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<retval declared_type64='CFStringRef' type64='^{__CFString=}'/>
+</function>
+<function name='ODRecordGetRecordType'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<retval declared_type64='CFStringRef' type64='^{__CFString=}'/>
+</function>
+<function name='ODRecordGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+<function name='ODRecordPasswordChangeAllowed'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFStringRef' name='newPassword' type64='^{__CFString=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordRemoveAccountPolicy'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFDictionaryRef' name='policy' type64='^{__CFDictionary=}'/>
+<arg declared_type64='ODPolicyCategoryType' name='category' type64='@'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordRemoveMember'>
+<arg declared_type64='ODRecordRef' name='group' type64='^{__ODRecord=}'/>
+<arg declared_type64='ODRecordRef' name='member' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordRemovePolicy'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='ODPolicyType' name='policy' type64='@'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordRemoveValue'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='ODAttributeType' name='attribute' type64='@'/>
+<arg declared_type64='CFTypeRef' name='value' type64='@'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordSecondsUntilAuthenticationsExpire'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<retval declared_type64='int64_t' type64='q'/>
+</function>
+<function name='ODRecordSecondsUntilPasswordExpires'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<retval declared_type64='int64_t' type64='q'/>
+</function>
+<function name='ODRecordSetAccountPolicies'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFDictionaryRef' name='policies' type64='^{__CFDictionary=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordSetNodeCredentials'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFStringRef' name='username' type64='^{__CFString=}'/>
+<arg declared_type64='CFStringRef' name='password' type64='^{__CFString=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordSetNodeCredentialsExtended'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='ODRecordType' name='recordType' type64='@'/>
+<arg declared_type64='ODAuthenticationType' name='authType' type64='@'/>
+<arg declared_type64='CFArrayRef' name='authItems' type64='^{__CFArray=}'/>
+<arg declared_type64='CFArrayRef*' name='outAuthItems' type64='^^{__CFArray}'/>
+<arg declared_type64='ODContextRef*' name='outContext' type64='^^{__ODContext}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordSetNodeCredentialsUsingKerberosCache'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFStringRef' name='cacheName' type64='^{__CFString=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordSetPolicies'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFDictionaryRef' name='policies' type64='^{__CFDictionary=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordSetPolicy'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='ODPolicyType' name='policy' type64='@'/>
+<arg declared_type64='CFTypeRef' name='value' type64='@'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordSetValue'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='ODAttributeType' name='attribute' type64='@'/>
+<arg declared_type64='CFTypeRef' name='valueOrValues' type64='@'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordSynchronize'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordVerifyPassword'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='CFStringRef' name='password' type64='^{__CFString=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordVerifyPasswordExtended'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='ODAuthenticationType' name='authType' type64='@'/>
+<arg declared_type64='CFArrayRef' name='authItems' type64='^{__CFArray=}'/>
+<arg declared_type64='CFArrayRef*' name='outAuthItems' type64='^^{__CFArray}'/>
+<arg declared_type64='ODContextRef*' name='outContext' type64='^^{__ODContext}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordWillAuthenticationsExpire'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='uint64_t' name='willExpireIn' type64='Q'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODRecordWillPasswordExpire'>
+<arg declared_type64='ODRecordRef' name='record' type64='^{__ODRecord=}'/>
+<arg declared_type64='uint64_t' name='willExpireIn' type64='Q'/>
+<retval declared_type64='_Bool' type64='B'/>
+</function>
+<function name='ODSessionCopyNodeNames'>
+<arg declared_type64='CFAllocatorRef' name='allocator' type64='^{__CFAllocator=}'/>
+<arg declared_type64='ODSessionRef' name='session' type64='^{__ODSession=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='CFArrayRef' type64='^{__CFArray=}'/>
+</function>
+<function name='ODSessionCreate'>
+<arg declared_type64='CFAllocatorRef' name='allocator' type64='^{__CFAllocator=}'/>
+<arg declared_type64='CFDictionaryRef' name='options' type64='^{__CFDictionary=}'/>
+<arg declared_type64='CFErrorRef*' name='error' type64='^^{__CFError}'/>
+<retval already_retained='true' declared_type64='ODSessionRef' type64='^{__ODSession=}'/>
+</function>
+<function name='ODSessionGetTypeID'>
+<retval declared_type64='CFTypeID' type64='Q'/>
+</function>
+</signatures>

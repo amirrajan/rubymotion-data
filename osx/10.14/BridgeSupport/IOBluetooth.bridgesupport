@@ -77,6 +77,10 @@
 <field declared_type64='BluetoothHCIInquiryAccessCodeCount' name='count' type64='C'/>
 <field declared_type64='uint8_t*' name='codes' type64='[192C]'/>
 </struct>
+<struct name='BluetoothHCIEncryptionKeySizeInfo' type64='{BluetoothHCIEncryptionKeySizeInfo=&quot;handle&quot;S&quot;keySize&quot;C}'>
+<field declared_type64='BluetoothConnectionHandle' name='handle' type64='S'/>
+<field declared_type64='BluetoothHCIEncryptionKeySize' name='keySize' type64='C'/>
+</struct>
 <struct name='BluetoothHCIEnhancedAcceptSynchronousConnectionRequestParams' type64='{BluetoothHCIEnhancedAcceptSynchronousConnectionRequestParams=&quot;transmitBandwidth&quot;I&quot;receiveBandwidth&quot;I&quot;transmitCodingFormat&quot;Q&quot;receiveCodingFormat&quot;Q&quot;transmitCodecFrameSize&quot;S&quot;receiveCodecFrameSize&quot;S&quot;inputBandwidth&quot;I&quot;outputBandwidth&quot;I&quot;inputCodingFormat&quot;Q&quot;outputCodingFormat&quot;Q&quot;inputCodedDataSize&quot;S&quot;outputCodedDataSize&quot;S&quot;inputPCMDataFormat&quot;C&quot;outputPCMDataFormat&quot;C&quot;inputPCMSamplePayloadMSBPosition&quot;C&quot;outputPCMSamplePayloadMSBPosition&quot;C&quot;inputDataPath&quot;C&quot;outputDataPath&quot;C&quot;inputTransportUnitSize&quot;C&quot;outputTransportUnitSize&quot;C&quot;maxLatency&quot;S&quot;packetType&quot;S&quot;retransmissionEffort&quot;C}'>
 <field declared_type64='uint32_t' name='transmitBandwidth' type64='I'/>
 <field declared_type64='uint32_t' name='receiveBandwidth' type64='I'/>
@@ -276,7 +280,7 @@
 </struct>
 <struct name='BluetoothHCIEventReturnLinkKeysResults' type64='{BluetoothHCIEventReturnLinkKeysResults=&quot;numLinkKeys&quot;C&quot;linkKeys&quot;[1{?=&quot;deviceAddress&quot;{BluetoothDeviceAddress=&quot;data&quot;[6C]}&quot;linkKey&quot;{BluetoothKey=&quot;data&quot;[16C]}}]}'>
 <field declared_type64='uint8_t' name='numLinkKeys' type64='C'/>
-<field declared_type64='struct (anonymous struct at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/IOBluetooth.framework/Headers/Bluetooth.h:2455:2)*' name='linkKeys' type64='[1{?=&quot;deviceAddress&quot;{BluetoothDeviceAddress=&quot;data&quot;[6C]}&quot;linkKey&quot;{BluetoothKey=&quot;data&quot;[16C]}}]'/>
+<field declared_type64='struct (anonymous struct at /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/IOBluetooth.framework/Headers/Bluetooth.h:2464:2)*' name='linkKeys' type64='[1{?=&quot;deviceAddress&quot;{BluetoothDeviceAddress=&quot;data&quot;[6C]}&quot;linkKey&quot;{BluetoothKey=&quot;data&quot;[16C]}}]'/>
 </struct>
 <struct name='BluetoothHCIEventRoleChangeResults' type64='{BluetoothHCIEventRoleChangeResults=&quot;connectionHandle&quot;S&quot;deviceAddress&quot;{BluetoothDeviceAddress=&quot;data&quot;[6C]}&quot;role&quot;C}'>
 <field declared_type64='BluetoothConnectionHandle' name='connectionHandle' type64='S'/>
@@ -2416,6 +2420,7 @@
 <enum name='kBluetoothSynchronousConnectionPacketTypeNone' value64='0'/>
 <enum name='kBluetoothTransportTypePCCard' value64='2'/>
 <enum name='kBluetoothTransportTypePCICard' value64='3'/>
+<enum name='kBluetoothTransportTypePCIe' value64='5'/>
 <enum name='kBluetoothTransportTypeUART' value64='4'/>
 <enum name='kBluetoothTransportTypeUSB' value64='1'/>
 <enum name='kBluetoothVoiceSettingAirCodingFormatALaw' value64='2'/>

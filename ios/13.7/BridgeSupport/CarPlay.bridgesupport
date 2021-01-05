@@ -1,0 +1,1307 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreLocation.framework'/>
+<depends_on path='/System/Library/Frameworks/MapKit.framework'/>
+<depends_on path='/System/Library/Frameworks/UIKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type64='CGSize' name='CPMaximumListItemImageSize' type64='{CGSize=dd}'/>
+<constant const='true' declared_type64='NSTimeInterval' name='CPNavigationAlertMinimumDuration' type64='d'/>
+<constant const='true' declared_type64='UISceneSessionRole _Nonnull' name='CPTemplateApplicationDashboardSceneSessionRoleApplication' type64='@'/>
+<constant const='true' declared_type64='UISceneSessionRole _Nonnull' name='CPTemplateApplicationSceneSessionRoleApplication' type64='@'/>
+<enum name='CPAlertActionStyleCancel' value64='1'/>
+<enum name='CPAlertActionStyleDefault' value64='0'/>
+<enum name='CPAlertActionStyleDestructive' value64='2'/>
+<enum name='CPBarButtonTypeImage' value64='1'/>
+<enum name='CPBarButtonTypeText' value64='0'/>
+<enum name='CPContentStyleDark' value64='2'/>
+<enum name='CPContentStyleLight' value64='1'/>
+<enum name='CPLimitableUserInterfaceKeyboard' value64='1'/>
+<enum name='CPLimitableUserInterfaceLists' value64='2'/>
+<enum name='CPManeuverDisplayStyleDefault' value64='0'/>
+<enum name='CPManeuverDisplayStyleInstructionOnly' value64='4'/>
+<enum name='CPManeuverDisplayStyleLeadingSymbol' value64='1'/>
+<enum name='CPManeuverDisplayStyleSymbolOnly' value64='3'/>
+<enum name='CPManeuverDisplayStyleTrailingSymbol' value64='2'/>
+<enum name='CPNavigationAlertDismissalContextSystemDismissed' value64='2'/>
+<enum name='CPNavigationAlertDismissalContextTimeout' value64='0'/>
+<enum name='CPNavigationAlertDismissalContextUserDismissed' value64='1'/>
+<enum name='CPPanDirectionDown' value64='8'/>
+<enum name='CPPanDirectionLeft' value64='1'/>
+<enum name='CPPanDirectionNone' value64='0'/>
+<enum name='CPPanDirectionRight' value64='2'/>
+<enum name='CPPanDirectionUp' value64='4'/>
+<enum name='CPTimeRemainingColorDefault' value64='0'/>
+<enum name='CPTimeRemainingColorGreen' value64='1'/>
+<enum name='CPTimeRemainingColorOrange' value64='2'/>
+<enum name='CPTimeRemainingColorRed' value64='3'/>
+<enum name='CPTripEstimateStyleDark' value64='1'/>
+<enum name='CPTripEstimateStyleLight' value64='0'/>
+<enum name='CPTripPauseReasonArrived' value64='1'/>
+<enum name='CPTripPauseReasonLoading' value64='2'/>
+<enum name='CPTripPauseReasonLocating' value64='3'/>
+<enum name='CPTripPauseReasonProceedToRoute' value64='5'/>
+<enum name='CPTripPauseReasonRerouting' value64='4'/>
+<class name='CPActionSheetTemplate'>
+<method selector='actions'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTitle:message:actions:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='title' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='message' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='actions' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='message'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CPAlertAction'>
+<method selector='handler'>
+<retval declared_type64='CPAlertActionHandler _Nonnull' function_pointer='true' type64='@?'>
+<arg declared_type64='CPAlertAction * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</retval>
+</method>
+<method selector='initWithTitle:style:handler:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='title' type64='@'/>
+<arg declared_type64='CPAlertActionStyle' index='1' name='style' type64='Q'/>
+<arg declared_type64='CPAlertActionHandler _Nonnull' function_pointer='true' index='2' name='handler' type64='@?'>
+<arg declared_type64='CPAlertAction * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='style'>
+<retval declared_type64='CPAlertActionStyle' type64='Q'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='CPAlertTemplate'>
+<method selector='actions'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTitleVariants:actions:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='titleVariants' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='actions' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='titleVariants'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='CPBarButton'>
+<method selector='buttonType'>
+<retval declared_type64='CPBarButtonType' type64='Q'/>
+</method>
+<method selector='image'>
+<retval declared_type64='UIImage * _Nullable' type64='@'/>
+</method>
+<method selector='initWithType:handler:'>
+<arg declared_type64='CPBarButtonType' index='0' name='type' type64='Q'/>
+<arg declared_type64='void (^ _Nullable)(CPBarButton * _Nonnull)' function_pointer='true' index='1' name='handler' type64='@?'>
+<arg declared_type64='CPBarButton * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='isEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setEnabled:'>
+<arg declared_type64='BOOL' index='0' name='enabled' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setImage:'>
+<arg declared_type64='UIImage * _Nullable' index='0' name='image' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTitle:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='title' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CPDashboardButton'>
+<method selector='image'>
+<retval declared_type64='UIImage * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTitleVariants:subtitleVariants:image:handler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='titleVariants' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='subtitleVariants' type64='@'/>
+<arg declared_type64='UIImage * _Nonnull' index='2' name='image' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(CPDashboardButton * _Nonnull)' function_pointer='true' index='3' name='handler' type64='@?'>
+<arg declared_type64='CPDashboardButton * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='subtitleVariants'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='titleVariants'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='CPDashboardController'>
+<method selector='setShortcutButtons:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='shortcutButtons' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='shortcutButtons'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='CPGridButton'>
+<method selector='image'>
+<retval declared_type64='UIImage * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTitleVariants:image:handler:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='titleVariants' type64='@'/>
+<arg declared_type64='UIImage * _Nonnull' index='1' name='image' type64='@'/>
+<arg declared_type64='void (^ _Nullable)(CPGridButton * _Nonnull)' function_pointer='true' index='2' name='handler' type64='@?'>
+<arg declared_type64='CPGridButton * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='isEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setEnabled:'>
+<arg declared_type64='BOOL' index='0' name='enabled' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='titleVariants'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='CPGridTemplate'>
+<method selector='gridButtons'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTitle:gridButtons:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='title' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='gridButtons' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='CPImageSet'>
+<method selector='darkContentImage'>
+<retval declared_type64='UIImage * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithLightContentImage:darkContentImage:'>
+<arg declared_type64='UIImage * _Nonnull' index='0' name='lightImage' type64='@'/>
+<arg declared_type64='UIImage * _Nonnull' index='1' name='darkImage' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='lightContentImage'>
+<retval declared_type64='UIImage * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='CPInterfaceController'>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='dismissTemplateAnimated:'>
+<arg declared_type64='BOOL' index='0' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='popTemplateAnimated:'>
+<arg declared_type64='BOOL' index='0' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='popToRootTemplateAnimated:'>
+<arg declared_type64='BOOL' index='0' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='popToTemplate:animated:'>
+<arg declared_type64='__kindof CPTemplate * _Nonnull' index='0' name='targetTemplate' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='prefersDarkUserInterfaceStyle'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='presentTemplate:animated:'>
+<arg declared_type64='__kindof CPTemplate * _Nonnull' index='0' name='templateToPresent' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='presentedTemplate'>
+<retval declared_type64='__kindof CPTemplate * _Nullable' type64='@'/>
+</method>
+<method selector='pushTemplate:animated:'>
+<arg declared_type64='__kindof CPTemplate * _Nonnull' index='0' name='templateToPush' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='rootTemplate'>
+<retval declared_type64='__kindof CPTemplate * _Nonnull' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPrefersDarkUserInterfaceStyle:'>
+<arg declared_type64='BOOL' index='0' name='prefersDarkUserInterfaceStyle' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setRootTemplate:animated:'>
+<arg declared_type64='__kindof CPTemplate * _Nonnull' index='0' name='rootTemplate' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templates'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='topTemplate'>
+<retval declared_type64='CPTemplate * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CPListItem'>
+<method selector='detailText'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='image'>
+<retval declared_type64='UIImage * _Nullable' type64='@'/>
+</method>
+<method selector='initWithText:detailText:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='text' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='detailText' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithText:detailText:image:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='text' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='detailText' type64='@'/>
+<arg declared_type64='UIImage * _Nullable' index='2' name='image' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithText:detailText:image:showsDisclosureIndicator:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='text' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='detailText' type64='@'/>
+<arg declared_type64='UIImage * _Nullable' index='2' name='image' type64='@'/>
+<arg declared_type64='BOOL' index='3' name='showsDisclosureIndicator' type64='B'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setUserInfo:'>
+<arg declared_type64='id _Nullable' index='0' name='userInfo' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='showsDisclosureIndicator'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='text'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='userInfo'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CPListSection'>
+<method selector='header'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='initWithItems:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='items' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithItems:header:sectionIndexTitle:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='items' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='header' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='sectionIndexTitle' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='items'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='sectionIndexTitle'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CPListTemplate'>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='initWithTitle:sections:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='title' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='sections' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='sections'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='title'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='updateSections:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='sections' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CPManeuver'>
+<method selector='attributedInstructionVariants'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='initialTravelEstimates'>
+<retval declared_type64='CPTravelEstimates * _Nullable' type64='@'/>
+</method>
+<method selector='instructionVariants'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='junctionImage'>
+<retval declared_type64='UIImage * _Nullable' type64='@'/>
+</method>
+<method selector='setAttributedInstructionVariants:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='attributedInstructionVariants' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setInitialTravelEstimates:'>
+<arg declared_type64='CPTravelEstimates * _Nullable' index='0' name='initialTravelEstimates' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setInstructionVariants:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='instructionVariants' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setJunctionImage:'>
+<arg declared_type64='UIImage * _Nullable' index='0' name='junctionImage' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSymbolImage:'>
+<arg declared_type64='UIImage * _Nullable' index='0' name='symbolImage' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setSymbolSet:'>
+<arg declared_type64='CPImageSet * _Nullable' index='0' name='symbolSet' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setUserInfo:'>
+<arg declared_type64='id _Nullable' index='0' name='userInfo' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='symbolImage'>
+<retval declared_type64='UIImage * _Nullable' type64='@'/>
+</method>
+<method selector='symbolSet'>
+<retval declared_type64='CPImageSet * _Nullable' type64='@'/>
+</method>
+<method selector='userInfo'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CPMapButton'>
+<method selector='focusedImage'>
+<retval declared_type64='UIImage * _Nullable' type64='@'/>
+</method>
+<method selector='image'>
+<retval declared_type64='UIImage * _Nullable' type64='@'/>
+</method>
+<method selector='initWithHandler:'>
+<arg declared_type64='void (^ _Nullable)(CPMapButton * _Nonnull)' function_pointer='true' index='0' name='handler' type64='@?'>
+<arg declared_type64='CPMapButton * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='isEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isHidden'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setEnabled:'>
+<arg declared_type64='BOOL' index='0' name='enabled' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setFocusedImage:'>
+<arg declared_type64='UIImage * _Nullable' index='0' name='focusedImage' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setHidden:'>
+<arg declared_type64='BOOL' index='0' name='hidden' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setImage:'>
+<arg declared_type64='UIImage * _Nullable' index='0' name='image' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CPMapTemplate'>
+<method selector='automaticallyHidesNavigationBar'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='currentNavigationAlert'>
+<retval declared_type64='CPNavigationAlert * _Nullable' type64='@'/>
+</method>
+<method selector='dismissNavigationAlertAnimated:completion:'>
+<arg declared_type64='BOOL' index='0' name='animated' type64='B'/>
+<arg declared_type64='void (^ _Nonnull)(BOOL)' function_pointer='true' index='1' name='completion' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='dismissPanningInterfaceAnimated:'>
+<arg declared_type64='BOOL' index='0' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='guidanceBackgroundColor'>
+<retval declared_type64='UIColor * _Nonnull' type64='@'/>
+</method>
+<method selector='hideTripPreviews'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='hidesButtonsWithNavigationBar'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isPanningInterfaceVisible'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='mapButtons'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='mapDelegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='presentNavigationAlert:animated:'>
+<arg declared_type64='CPNavigationAlert * _Nonnull' index='0' name='navigationAlert' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setAutomaticallyHidesNavigationBar:'>
+<arg declared_type64='BOOL' index='0' name='automaticallyHidesNavigationBar' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setGuidanceBackgroundColor:'>
+<arg declared_type64='UIColor * _Nonnull' index='0' name='guidanceBackgroundColor' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setHidesButtonsWithNavigationBar:'>
+<arg declared_type64='BOOL' index='0' name='hidesButtonsWithNavigationBar' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMapButtons:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='mapButtons' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMapDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='mapDelegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTripEstimateStyle:'>
+<arg declared_type64='CPTripEstimateStyle' index='0' name='tripEstimateStyle' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='showPanningInterfaceAnimated:'>
+<arg declared_type64='BOOL' index='0' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='showRouteChoicesPreviewForTrip:textConfiguration:'>
+<arg declared_type64='CPTrip * _Nonnull' index='0' name='tripPreview' type64='@'/>
+<arg declared_type64='CPTripPreviewTextConfiguration * _Nullable' index='1' name='textConfiguration' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='showTripPreviews:textConfiguration:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='tripPreviews' type64='@'/>
+<arg declared_type64='CPTripPreviewTextConfiguration * _Nullable' index='1' name='textConfiguration' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='startNavigationSessionForTrip:'>
+<arg declared_type64='CPTrip * _Nonnull' index='0' name='trip' type64='@'/>
+<retval declared_type64='CPNavigationSession * _Nonnull' type64='@'/>
+</method>
+<method selector='tripEstimateStyle'>
+<retval declared_type64='CPTripEstimateStyle' type64='Q'/>
+</method>
+<method selector='updateTravelEstimates:forTrip:'>
+<arg declared_type64='CPTravelEstimates * _Nonnull' index='0' name='estimates' type64='@'/>
+<arg declared_type64='CPTrip * _Nonnull' index='1' name='trip' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='updateTravelEstimates:forTrip:withTimeRemainingColor:'>
+<arg declared_type64='CPTravelEstimates * _Nonnull' index='0' name='estimates' type64='@'/>
+<arg declared_type64='CPTrip * _Nonnull' index='1' name='trip' type64='@'/>
+<arg declared_type64='CPTimeRemainingColor' index='2' name='timeRemainingColor' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CPNavigationAlert'>
+<method selector='duration'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='image'>
+<retval declared_type64='UIImage * _Nullable' type64='@'/>
+</method>
+<method selector='imageSet'>
+<retval declared_type64='CPImageSet * _Nullable' type64='@'/>
+</method>
+<method selector='initWithTitleVariants:subtitleVariants:image:primaryAction:secondaryAction:duration:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='titleVariants' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='1' name='subtitleVariants' type64='@'/>
+<arg declared_type64='UIImage * _Nullable' index='2' name='image' type64='@'/>
+<arg declared_type64='CPAlertAction * _Nonnull' index='3' name='primaryAction' type64='@'/>
+<arg declared_type64='CPAlertAction * _Nullable' index='4' name='secondaryAction' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='5' name='duration' type64='d'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='initWithTitleVariants:subtitleVariants:imageSet:primaryAction:secondaryAction:duration:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='titleVariants' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='1' name='subtitleVariants' type64='@'/>
+<arg declared_type64='CPImageSet * _Nullable' index='2' name='imageSet' type64='@'/>
+<arg declared_type64='CPAlertAction * _Nonnull' index='3' name='primaryAction' type64='@'/>
+<arg declared_type64='CPAlertAction * _Nullable' index='4' name='secondaryAction' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='5' name='duration' type64='d'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='primaryAction'>
+<retval declared_type64='CPAlertAction * _Nonnull' type64='@'/>
+</method>
+<method selector='secondaryAction'>
+<retval declared_type64='CPAlertAction * _Nullable' type64='@'/>
+</method>
+<method selector='subtitleVariants'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='titleVariants'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='updateTitleVariants:subtitleVariants:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='newTitleVariants' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='newSubtitleVariants' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CPNavigationSession'>
+<method selector='cancelTrip'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='finishTrip'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='pauseTripForReason:description:'>
+<arg declared_type64='CPTripPauseReason' index='0' name='reason' type64='Q'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='description' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setUpcomingManeuvers:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='upcomingManeuvers' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='trip'>
+<retval declared_type64='CPTrip * _Nonnull' type64='@'/>
+</method>
+<method selector='upcomingManeuvers'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='updateTravelEstimates:forManeuver:'>
+<arg declared_type64='CPTravelEstimates * _Nonnull' index='0' name='estimates' type64='@'/>
+<arg declared_type64='CPManeuver * _Nonnull' index='1' name='maneuver' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CPRouteChoice'>
+<method selector='additionalInformationVariants'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='initWithSummaryVariants:additionalInformationVariants:selectionSummaryVariants:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='summaryVariants' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='additionalInformationVariants' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='selectionSummaryVariants' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='selectionSummaryVariants'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='setUserInfo:'>
+<arg declared_type64='id _Nullable' index='0' name='userInfo' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='summaryVariants'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='userInfo'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CPSearchTemplate'>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CPSessionConfiguration'>
+<method selector='contentStyle'>
+<retval declared_type64='CPContentStyle' type64='Q'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='initWithDelegate:'>
+<arg declared_type64='id _Nonnull' index='0' name='delegate' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='limitedUserInterfaces'>
+<retval declared_type64='CPLimitableUserInterface' type64='Q'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CPTemplate'>
+<method selector='setUserInfo:'>
+<arg declared_type64='id _Nullable' index='0' name='userInfo' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='userInfo'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CPTemplateApplicationDashboardScene'>
+<method selector='dashboardController'>
+<retval declared_type64='CPDashboardController * _Nonnull' type64='@'/>
+</method>
+<method selector='dashboardWindow'>
+<retval declared_type64='UIWindow * _Nonnull' type64='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CPTemplateApplicationScene'>
+<method selector='carWindow'>
+<retval declared_type64='CPWindow * _Nonnull' type64='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='interfaceController'>
+<retval declared_type64='CPInterfaceController * _Nonnull' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='CPTravelEstimates'>
+<method selector='distanceRemaining'>
+<retval declared_type64='NSMeasurement * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithDistanceRemaining:timeRemaining:'>
+<arg declared_type64='NSMeasurement * _Nonnull' index='0' name='distance' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='1' name='time' type64='d'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='timeRemaining'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+</class>
+<class name='CPTrip'>
+<method selector='destination'>
+<retval declared_type64='MKMapItem * _Nonnull' type64='@'/>
+</method>
+<method selector='initWithOrigin:destination:routeChoices:'>
+<arg declared_type64='MKMapItem * _Nonnull' index='0' name='origin' type64='@'/>
+<arg declared_type64='MKMapItem * _Nonnull' index='1' name='destination' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='routeChoices' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='origin'>
+<retval declared_type64='MKMapItem * _Nonnull' type64='@'/>
+</method>
+<method selector='routeChoices'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='setUserInfo:'>
+<arg declared_type64='id _Nullable' index='0' name='userInfo' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='userInfo'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CPTripPreviewTextConfiguration'>
+<method selector='additionalRoutesButtonTitle'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='initWithStartButtonTitle:additionalRoutesButtonTitle:overviewButtonTitle:'>
+<arg declared_type64='NSString * _Nullable' index='0' name='startButtonTitle' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='1' name='additionalRoutesButtonTitle' type64='@'/>
+<arg declared_type64='NSString * _Nullable' index='2' name='overviewButtonTitle' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='overviewButtonTitle'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='startButtonTitle'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CPVoiceControlState'>
+<method selector='identifier'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='image'>
+<retval declared_type64='UIImage * _Nullable' type64='@'/>
+</method>
+<method selector='initWithIdentifier:titleVariants:image:repeats:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='identifier' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='1' name='titleVariants' type64='@'/>
+<arg declared_type64='UIImage * _Nullable' index='2' name='image' type64='@'/>
+<arg declared_type64='BOOL' index='3' name='repeats' type64='B'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='repeats'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='titleVariants'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='CPVoiceControlTemplate'>
+<method selector='activateVoiceControlStateWithIdentifier:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='identifier' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='activeStateIdentifier'>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='initWithVoiceControlStates:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='voiceControlStates' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='voiceControlStates'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='CPWindow'>
+<method selector='mapButtonSafeAreaLayoutGuide'>
+<retval declared_type64='UILayoutGuide * _Nonnull' type64='@'/>
+</method>
+<method selector='setTemplateApplicationScene:'>
+<arg declared_type64='CPTemplateApplicationScene * _Nullable' index='0' name='templateApplicationScene' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateApplicationScene'>
+<retval declared_type64='CPTemplateApplicationScene * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='application:didConnectCarInterfaceController:toWindow:'>
+<arg declared_type64='UIApplication * _Nonnull' index='0' name='application' type64='@'/>
+<arg declared_type64='CPInterfaceController * _Nonnull' index='1' name='interfaceController' type64='@'/>
+<arg declared_type64='CPWindow * _Nonnull' index='2' name='window' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='application:didDisconnectCarInterfaceController:fromWindow:'>
+<arg declared_type64='UIApplication * _Nonnull' index='0' name='application' type64='@'/>
+<arg declared_type64='CPInterfaceController * _Nonnull' index='1' name='interfaceController' type64='@'/>
+<arg declared_type64='CPWindow * _Nonnull' index='2' name='window' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='application:didSelectManeuver:'>
+<arg declared_type64='UIApplication * _Nonnull' index='0' name='application' type64='@'/>
+<arg declared_type64='CPManeuver * _Nonnull' index='1' name='maneuver' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='application:didSelectNavigationAlert:'>
+<arg declared_type64='UIApplication * _Nonnull' index='0' name='application' type64='@'/>
+<arg declared_type64='CPNavigationAlert * _Nonnull' index='1' name='navigationAlert' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='backButton'>
+<retval declared_type64='CPBarButton * _Nullable' type64='@'/>
+</method>
+<method selector='leadingNavigationBarButtons'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='listTemplate:didSelectListItem:completionHandler:'>
+<arg declared_type64='CPListTemplate * _Nonnull' index='0' name='listTemplate' type64='@'/>
+<arg declared_type64='CPListItem * _Nonnull' index='1' name='item' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(void)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:didDismissNavigationAlert:dismissalContext:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPNavigationAlert * _Nonnull' index='1' name='navigationAlert' type64='@'/>
+<arg declared_type64='CPNavigationAlertDismissalContext' index='2' name='dismissalContext' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:didEndPanGestureWithVelocity:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CGPoint' index='1' name='velocity' type64='{CGPoint=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:didShowNavigationAlert:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPNavigationAlert * _Nonnull' index='1' name='navigationAlert' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:didUpdatePanGestureWithTranslation:velocity:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CGPoint' index='1' name='translation' type64='{CGPoint=dd}'/>
+<arg declared_type64='CGPoint' index='2' name='velocity' type64='{CGPoint=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:displayStyleForManeuver:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPManeuver * _Nonnull' index='1' name='maneuver' type64='@'/>
+<retval declared_type64='CPManeuverDisplayStyle' type64='q'/>
+</method>
+<method selector='mapTemplate:panBeganWithDirection:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPPanDirection' index='1' name='direction' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:panEndedWithDirection:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPPanDirection' index='1' name='direction' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:panWithDirection:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPPanDirection' index='1' name='direction' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:selectedPreviewForTrip:usingRouteChoice:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPTrip * _Nonnull' index='1' name='trip' type64='@'/>
+<arg declared_type64='CPRouteChoice * _Nonnull' index='2' name='routeChoice' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:shouldShowNotificationForManeuver:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPManeuver * _Nonnull' index='1' name='maneuver' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='mapTemplate:shouldShowNotificationForNavigationAlert:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPNavigationAlert * _Nonnull' index='1' name='navigationAlert' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='mapTemplate:shouldUpdateNotificationForManeuver:withTravelEstimates:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPManeuver * _Nonnull' index='1' name='maneuver' type64='@'/>
+<arg declared_type64='CPTravelEstimates * _Nonnull' index='2' name='travelEstimates' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='mapTemplate:startedTrip:usingRouteChoice:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPTrip * _Nonnull' index='1' name='trip' type64='@'/>
+<arg declared_type64='CPRouteChoice * _Nonnull' index='2' name='routeChoice' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:willDismissNavigationAlert:dismissalContext:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPNavigationAlert * _Nonnull' index='1' name='navigationAlert' type64='@'/>
+<arg declared_type64='CPNavigationAlertDismissalContext' index='2' name='dismissalContext' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:willShowNavigationAlert:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPNavigationAlert * _Nonnull' index='1' name='navigationAlert' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplateDidBeginPanGesture:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplateDidCancelNavigation:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplateDidDismissPanningInterface:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplateDidShowPanningInterface:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplateWillDismissPanningInterface:'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='searchTemplate:selectedResult:completionHandler:'>
+<arg declared_type64='CPSearchTemplate * _Nonnull' index='0' name='searchTemplate' type64='@'/>
+<arg declared_type64='CPListItem * _Nonnull' index='1' name='item' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(void)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='searchTemplate:updatedSearchText:completionHandler:'>
+<arg declared_type64='CPSearchTemplate * _Nonnull' index='0' name='searchTemplate' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='searchText' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='searchTemplateSearchButtonPressed:'>
+<arg declared_type64='CPSearchTemplate * _Nonnull' index='0' name='searchTemplate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sessionConfiguration:contentStyleChanged:'>
+<arg declared_type64='CPSessionConfiguration * _Nonnull' index='0' name='sessionConfiguration' type64='@'/>
+<arg declared_type64='CPContentStyle' index='1' name='contentStyle' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sessionConfiguration:limitedUserInterfacesChanged:'>
+<arg declared_type64='CPSessionConfiguration * _Nonnull' index='0' name='sessionConfiguration' type64='@'/>
+<arg declared_type64='CPLimitableUserInterface' index='1' name='limitedUserInterfaces' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setBackButton:'>
+<arg declared_type64='CPBarButton * _Nullable' index='0' name='backButton' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLeadingNavigationBarButtons:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='leadingNavigationBarButtons' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTrailingNavigationBarButtons:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='trailingNavigationBarButtons' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateApplicationDashboardScene:didConnectDashboardController:toWindow:'>
+<arg declared_type64='CPTemplateApplicationDashboardScene * _Nonnull' index='0' name='templateApplicationDashboardScene' type64='@'/>
+<arg declared_type64='CPDashboardController * _Nonnull' index='1' name='dashboardController' type64='@'/>
+<arg declared_type64='UIWindow * _Nonnull' index='2' name='window' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateApplicationDashboardScene:didDisconnectDashboardController:fromWindow:'>
+<arg declared_type64='CPTemplateApplicationDashboardScene * _Nonnull' index='0' name='templateApplicationDashboardScene' type64='@'/>
+<arg declared_type64='CPDashboardController * _Nonnull' index='1' name='dashboardController' type64='@'/>
+<arg declared_type64='UIWindow * _Nonnull' index='2' name='window' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateApplicationScene:didConnectInterfaceController:toWindow:'>
+<arg declared_type64='CPTemplateApplicationScene * _Nonnull' index='0' name='templateApplicationScene' type64='@'/>
+<arg declared_type64='CPInterfaceController * _Nonnull' index='1' name='interfaceController' type64='@'/>
+<arg declared_type64='CPWindow * _Nonnull' index='2' name='window' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateApplicationScene:didDisconnectInterfaceController:fromWindow:'>
+<arg declared_type64='CPTemplateApplicationScene * _Nonnull' index='0' name='templateApplicationScene' type64='@'/>
+<arg declared_type64='CPInterfaceController * _Nonnull' index='1' name='interfaceController' type64='@'/>
+<arg declared_type64='CPWindow * _Nonnull' index='2' name='window' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateApplicationScene:didSelectManeuver:'>
+<arg declared_type64='CPTemplateApplicationScene * _Nonnull' index='0' name='templateApplicationScene' type64='@'/>
+<arg declared_type64='CPManeuver * _Nonnull' index='1' name='maneuver' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateApplicationScene:didSelectNavigationAlert:'>
+<arg declared_type64='CPTemplateApplicationScene * _Nonnull' index='0' name='templateApplicationScene' type64='@'/>
+<arg declared_type64='CPNavigationAlert * _Nonnull' index='1' name='navigationAlert' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateDidAppear:animated:'>
+<arg declared_type64='CPTemplate * _Nonnull' index='0' name='aTemplate' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateDidDisappear:animated:'>
+<arg declared_type64='CPTemplate * _Nonnull' index='0' name='aTemplate' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateWillAppear:animated:'>
+<arg declared_type64='CPTemplate * _Nonnull' index='0' name='aTemplate' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateWillDisappear:animated:'>
+<arg declared_type64='CPTemplate * _Nonnull' index='0' name='aTemplate' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='trailingNavigationBarButtons'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<informal_protocol name='CPApplicationDelegate'>
+<method selector='application:didConnectCarInterfaceController:toWindow:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='UIApplication * _Nonnull' index='0' name='application' type64='@'/>
+<arg declared_type64='CPInterfaceController * _Nonnull' index='1' name='interfaceController' type64='@'/>
+<arg declared_type64='CPWindow * _Nonnull' index='2' name='window' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='application:didDisconnectCarInterfaceController:fromWindow:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='UIApplication * _Nonnull' index='0' name='application' type64='@'/>
+<arg declared_type64='CPInterfaceController * _Nonnull' index='1' name='interfaceController' type64='@'/>
+<arg declared_type64='CPWindow * _Nonnull' index='2' name='window' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='application:didSelectManeuver:' type64='v32@0:8@16@24'>
+<arg declared_type64='UIApplication * _Nonnull' index='0' name='application' type64='@'/>
+<arg declared_type64='CPManeuver * _Nonnull' index='1' name='maneuver' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='application:didSelectNavigationAlert:' type64='v32@0:8@16@24'>
+<arg declared_type64='UIApplication * _Nonnull' index='0' name='application' type64='@'/>
+<arg declared_type64='CPNavigationAlert * _Nonnull' index='1' name='navigationAlert' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='CPBarButtonProviding'>
+<method selector='backButton' type64='@16@0:8'>
+<retval declared_type64='CPBarButton * _Nullable' type64='@'/>
+</method>
+<method selector='leadingNavigationBarButtons' type64='@16@0:8'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='setBackButton:' type64='v24@0:8@16'>
+<arg declared_type64='CPBarButton * _Nullable' index='0' name='backButton' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLeadingNavigationBarButtons:' type64='v24@0:8@16'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='leadingNavigationBarButtons' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setTrailingNavigationBarButtons:' type64='v24@0:8@16'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='trailingNavigationBarButtons' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='trailingNavigationBarButtons' type64='@16@0:8'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='CPInterfaceControllerDelegate'>
+<method selector='templateDidAppear:animated:' type64='v28@0:8@16B24'>
+<arg declared_type64='CPTemplate * _Nonnull' index='0' name='aTemplate' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateDidDisappear:animated:' type64='v28@0:8@16B24'>
+<arg declared_type64='CPTemplate * _Nonnull' index='0' name='aTemplate' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateWillAppear:animated:' type64='v28@0:8@16B24'>
+<arg declared_type64='CPTemplate * _Nonnull' index='0' name='aTemplate' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateWillDisappear:animated:' type64='v28@0:8@16B24'>
+<arg declared_type64='CPTemplate * _Nonnull' index='0' name='aTemplate' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='animated' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='CPListTemplateDelegate'>
+<method selector='listTemplate:didSelectListItem:completionHandler:' type64='v40@0:8@16@24@?32'>
+<arg declared_type64='CPListTemplate * _Nonnull' index='0' name='listTemplate' type64='@'/>
+<arg declared_type64='CPListItem * _Nonnull' index='1' name='item' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(void)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='CPMapTemplateDelegate'>
+<method selector='mapTemplate:didDismissNavigationAlert:dismissalContext:' type64='v40@0:8@16@24Q32'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPNavigationAlert * _Nonnull' index='1' name='navigationAlert' type64='@'/>
+<arg declared_type64='CPNavigationAlertDismissalContext' index='2' name='dismissalContext' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:didEndPanGestureWithVelocity:' type64='v40@0:8@16{CGPoint=dd}24'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CGPoint' index='1' name='velocity' type64='{CGPoint=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:didShowNavigationAlert:' type64='v32@0:8@16@24'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPNavigationAlert * _Nonnull' index='1' name='navigationAlert' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:didUpdatePanGestureWithTranslation:velocity:' type64='v56@0:8@16{CGPoint=dd}24{CGPoint=dd}40'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CGPoint' index='1' name='translation' type64='{CGPoint=dd}'/>
+<arg declared_type64='CGPoint' index='2' name='velocity' type64='{CGPoint=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:displayStyleForManeuver:' type64='q32@0:8@16@24'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPManeuver * _Nonnull' index='1' name='maneuver' type64='@'/>
+<retval declared_type64='CPManeuverDisplayStyle' type64='q'/>
+</method>
+<method selector='mapTemplate:panBeganWithDirection:' type64='v32@0:8@16q24'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPPanDirection' index='1' name='direction' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:panEndedWithDirection:' type64='v32@0:8@16q24'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPPanDirection' index='1' name='direction' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:panWithDirection:' type64='v32@0:8@16q24'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPPanDirection' index='1' name='direction' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:selectedPreviewForTrip:usingRouteChoice:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPTrip * _Nonnull' index='1' name='trip' type64='@'/>
+<arg declared_type64='CPRouteChoice * _Nonnull' index='2' name='routeChoice' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:shouldShowNotificationForManeuver:' type64='B32@0:8@16@24'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPManeuver * _Nonnull' index='1' name='maneuver' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='mapTemplate:shouldShowNotificationForNavigationAlert:' type64='B32@0:8@16@24'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPNavigationAlert * _Nonnull' index='1' name='navigationAlert' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='mapTemplate:shouldUpdateNotificationForManeuver:withTravelEstimates:' type64='B40@0:8@16@24@32'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPManeuver * _Nonnull' index='1' name='maneuver' type64='@'/>
+<arg declared_type64='CPTravelEstimates * _Nonnull' index='2' name='travelEstimates' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='mapTemplate:startedTrip:usingRouteChoice:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPTrip * _Nonnull' index='1' name='trip' type64='@'/>
+<arg declared_type64='CPRouteChoice * _Nonnull' index='2' name='routeChoice' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:willDismissNavigationAlert:dismissalContext:' type64='v40@0:8@16@24Q32'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPNavigationAlert * _Nonnull' index='1' name='navigationAlert' type64='@'/>
+<arg declared_type64='CPNavigationAlertDismissalContext' index='2' name='dismissalContext' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplate:willShowNavigationAlert:' type64='v32@0:8@16@24'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<arg declared_type64='CPNavigationAlert * _Nonnull' index='1' name='navigationAlert' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplateDidBeginPanGesture:' type64='v24@0:8@16'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplateDidCancelNavigation:' type64='v24@0:8@16'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplateDidDismissPanningInterface:' type64='v24@0:8@16'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplateDidShowPanningInterface:' type64='v24@0:8@16'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='mapTemplateWillDismissPanningInterface:' type64='v24@0:8@16'>
+<arg declared_type64='CPMapTemplate * _Nonnull' index='0' name='mapTemplate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='CPSearchTemplateDelegate'>
+<method selector='searchTemplate:selectedResult:completionHandler:' type64='v40@0:8@16@24@?32'>
+<arg declared_type64='CPSearchTemplate * _Nonnull' index='0' name='searchTemplate' type64='@'/>
+<arg declared_type64='CPListItem * _Nonnull' index='1' name='item' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(void)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='searchTemplate:updatedSearchText:completionHandler:' type64='v40@0:8@16@24@?32'>
+<arg declared_type64='CPSearchTemplate * _Nonnull' index='0' name='searchTemplate' type64='@'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='searchText' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(NSArray * _Nonnull)' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='NSArray * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='searchTemplateSearchButtonPressed:' type64='v24@0:8@16'>
+<arg declared_type64='CPSearchTemplate * _Nonnull' index='0' name='searchTemplate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='CPSessionConfigurationDelegate'>
+<method selector='sessionConfiguration:contentStyleChanged:' type64='v32@0:8@16Q24'>
+<arg declared_type64='CPSessionConfiguration * _Nonnull' index='0' name='sessionConfiguration' type64='@'/>
+<arg declared_type64='CPContentStyle' index='1' name='contentStyle' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='sessionConfiguration:limitedUserInterfacesChanged:' type64='v32@0:8@16Q24'>
+<arg declared_type64='CPSessionConfiguration * _Nonnull' index='0' name='sessionConfiguration' type64='@'/>
+<arg declared_type64='CPLimitableUserInterface' index='1' name='limitedUserInterfaces' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='CPTemplateApplicationDashboardSceneDelegate'>
+<method selector='templateApplicationDashboardScene:didConnectDashboardController:toWindow:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='CPTemplateApplicationDashboardScene * _Nonnull' index='0' name='templateApplicationDashboardScene' type64='@'/>
+<arg declared_type64='CPDashboardController * _Nonnull' index='1' name='dashboardController' type64='@'/>
+<arg declared_type64='UIWindow * _Nonnull' index='2' name='window' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateApplicationDashboardScene:didDisconnectDashboardController:fromWindow:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='CPTemplateApplicationDashboardScene * _Nonnull' index='0' name='templateApplicationDashboardScene' type64='@'/>
+<arg declared_type64='CPDashboardController * _Nonnull' index='1' name='dashboardController' type64='@'/>
+<arg declared_type64='UIWindow * _Nonnull' index='2' name='window' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='CPTemplateApplicationSceneDelegate'>
+<method selector='templateApplicationScene:didConnectInterfaceController:toWindow:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='CPTemplateApplicationScene * _Nonnull' index='0' name='templateApplicationScene' type64='@'/>
+<arg declared_type64='CPInterfaceController * _Nonnull' index='1' name='interfaceController' type64='@'/>
+<arg declared_type64='CPWindow * _Nonnull' index='2' name='window' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateApplicationScene:didDisconnectInterfaceController:fromWindow:' type64='v40@0:8@16@24@32'>
+<arg declared_type64='CPTemplateApplicationScene * _Nonnull' index='0' name='templateApplicationScene' type64='@'/>
+<arg declared_type64='CPInterfaceController * _Nonnull' index='1' name='interfaceController' type64='@'/>
+<arg declared_type64='CPWindow * _Nonnull' index='2' name='window' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateApplicationScene:didSelectManeuver:' type64='v32@0:8@16@24'>
+<arg declared_type64='CPTemplateApplicationScene * _Nonnull' index='0' name='templateApplicationScene' type64='@'/>
+<arg declared_type64='CPManeuver * _Nonnull' index='1' name='maneuver' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='templateApplicationScene:didSelectNavigationAlert:' type64='v32@0:8@16@24'>
+<arg declared_type64='CPTemplateApplicationScene * _Nonnull' index='0' name='templateApplicationScene' type64='@'/>
+<arg declared_type64='CPNavigationAlert * _Nonnull' index='1' name='navigationAlert' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

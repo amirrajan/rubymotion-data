@@ -1,0 +1,587 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<struct name='IOUSBHostIOSourceDescriptors' type64='{IOUSBHostIOSourceDescriptors=&quot;bcdUSB&quot;S&quot;descriptor&quot;{IOUSBEndpointDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bEndpointAddress&quot;C&quot;bmAttributes&quot;C&quot;wMaxPacketSize&quot;S&quot;bInterval&quot;C}&quot;ssCompanionDescriptor&quot;{IOUSBSuperSpeedEndpointCompanionDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bMaxBurst&quot;C&quot;bmAttributes&quot;C&quot;wBytesPerInterval&quot;S}&quot;sspCompanionDescriptor&quot;{IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;wReserved&quot;S&quot;dwBytesPerInterval&quot;I}}'>
+<field declared_type64='uint16_t' name='bcdUSB' type64='S'/>
+<field declared_type64='IOUSBEndpointDescriptor' name='descriptor' type64='{IOUSBEndpointDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bEndpointAddress&quot;C&quot;bmAttributes&quot;C&quot;wMaxPacketSize&quot;S&quot;bInterval&quot;C}'/>
+<field declared_type64='IOUSBSuperSpeedEndpointCompanionDescriptor' name='ssCompanionDescriptor' type64='{IOUSBSuperSpeedEndpointCompanionDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;bMaxBurst&quot;C&quot;bmAttributes&quot;C&quot;wBytesPerInterval&quot;S}'/>
+<field declared_type64='IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor' name='sspCompanionDescriptor' type64='{IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor=&quot;bLength&quot;C&quot;bDescriptorType&quot;C&quot;wReserved&quot;S&quot;dwBytesPerInterval&quot;I}'/>
+</struct>
+<struct name='IOUSBHostIsochronousFrame' type64='{IOUSBHostIsochronousFrame=&quot;status&quot;i&quot;requestCount&quot;I&quot;completeCount&quot;I&quot;reserved&quot;I&quot;timeStamp&quot;Q}'>
+<field declared_type64='IOReturn' name='status' type64='i'/>
+<field declared_type64='uint32_t' name='requestCount' type64='I'/>
+<field declared_type64='uint32_t' name='completeCount' type64='I'/>
+<field declared_type64='uint32_t' name='reserved' type64='I'/>
+<field declared_type64='IOUSBHostTime' name='timeStamp' type64='Q'/>
+</struct>
+<constant const='true' declared_type64='NSTimeInterval' name='IOUSBHostDefaultControlCompletionTimeout' type64='d'/>
+<constant declared_type64='IOUSBHostDevicePropertyKey _Nonnull' name='IOUSBHostDevicePropertyKeyContainerID' type64='@'/>
+<constant declared_type64='IOUSBHostDevicePropertyKey _Nonnull' name='IOUSBHostDevicePropertyKeyCurrentConfiguration' type64='@'/>
+<constant declared_type64='IOUSBHostDevicePropertyKey _Nonnull' name='IOUSBHostDevicePropertyKeySerialNumberString' type64='@'/>
+<constant declared_type64='IOUSBHostDevicePropertyKey _Nonnull' name='IOUSBHostDevicePropertyKeyVendorString' type64='@'/>
+<constant const='true' declared_type64='NSErrorDomain _Nonnull' name='IOUSBHostErrorDomain' type64='@'/>
+<constant declared_type64='IOUSBHostInterfacePropertyKey _Nonnull' name='IOUSBHostInterfacePropertyKeyAlternateSetting' type64='@'/>
+<constant declared_type64='IOUSBHostMatchingPropertyKey _Nonnull' name='IOUSBHostMatchingPropertyKeyConfigurationValue' type64='@'/>
+<constant declared_type64='IOUSBHostMatchingPropertyKey _Nonnull' name='IOUSBHostMatchingPropertyKeyDeviceClass' type64='@'/>
+<constant declared_type64='IOUSBHostMatchingPropertyKey _Nonnull' name='IOUSBHostMatchingPropertyKeyDeviceProtocol' type64='@'/>
+<constant declared_type64='IOUSBHostMatchingPropertyKey _Nonnull' name='IOUSBHostMatchingPropertyKeyDeviceReleaseNumber' type64='@'/>
+<constant declared_type64='IOUSBHostMatchingPropertyKey _Nonnull' name='IOUSBHostMatchingPropertyKeyDeviceSubClass' type64='@'/>
+<constant declared_type64='IOUSBHostMatchingPropertyKey _Nonnull' name='IOUSBHostMatchingPropertyKeyInterfaceClass' type64='@'/>
+<constant declared_type64='IOUSBHostMatchingPropertyKey _Nonnull' name='IOUSBHostMatchingPropertyKeyInterfaceNumber' type64='@'/>
+<constant declared_type64='IOUSBHostMatchingPropertyKey _Nonnull' name='IOUSBHostMatchingPropertyKeyInterfaceProtocol' type64='@'/>
+<constant declared_type64='IOUSBHostMatchingPropertyKey _Nonnull' name='IOUSBHostMatchingPropertyKeyInterfaceSubClass' type64='@'/>
+<constant declared_type64='IOUSBHostMatchingPropertyKey _Nonnull' name='IOUSBHostMatchingPropertyKeyProductID' type64='@'/>
+<constant declared_type64='IOUSBHostMatchingPropertyKey _Nonnull' name='IOUSBHostMatchingPropertyKeyProductIDArray' type64='@'/>
+<constant declared_type64='IOUSBHostMatchingPropertyKey _Nonnull' name='IOUSBHostMatchingPropertyKeyProductIDMask' type64='@'/>
+<constant declared_type64='IOUSBHostMatchingPropertyKey _Nonnull' name='IOUSBHostMatchingPropertyKeySpeed' type64='@'/>
+<constant declared_type64='IOUSBHostMatchingPropertyKey _Nonnull' name='IOUSBHostMatchingPropertyKeyVendorID' type64='@'/>
+<constant declared_type64='IOUSBHostPropertyKey _Nonnull' name='IOUSBHostPropertyKeyLocationID' type64='@'/>
+<constant declared_type64='double' name='IOUSBHostVersionNumber' type64='d'/>
+<constant const='true' declared_type64='unsigned char*' name='IOUSBHostVersionString' type64='^C'/>
+<enum name='IOUSBHostAbortOptionAsynchronous' value64='0'/>
+<enum name='IOUSBHostAbortOptionSynchronous' value64='1'/>
+<enum name='IOUSBHostObjectInitOptionsDeviceCapture' value64='1'/>
+<enum name='IOUSBHostObjectInitOptionsNone' value64='0'/>
+<function name='IOUSBGetBillboardDescriptor'>
+<arg const='true' declared_type64='IOUSBBOSDescriptor*' name='bosDescriptor' type64='^{IOUSBBOSDescriptor=CCSC}'/>
+<retval const='true' declared_type64='IOUSBDeviceCapabilityBillboard*' type64='^{IOUSBDeviceCapabilityBillboard=CCCCCCS[32C]SCC[0{IOUSBDeviceCapabilityBillboardAltConfig=SCC}]}'/>
+</function>
+<function name='IOUSBGetConfigurationMaxPowerMilliAmps'>
+<arg declared_type64='uint32_t' name='usbDeviceSpeed' type64='I'/>
+<arg const='true' declared_type64='IOUSBConfigurationDescriptor*' name='descriptor' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+<retval declared_type64='uint32_t' type64='I'/>
+</function>
+<function name='IOUSBGetContainerIDDescriptor'>
+<arg const='true' declared_type64='IOUSBBOSDescriptor*' name='bosDescriptor' type64='^{IOUSBBOSDescriptor=CCSC}'/>
+<retval const='true' declared_type64='IOUSBDeviceCapabilityContainerID*' type64='^{IOUSBDeviceCapabilityContainerID=CCCC[16C]}'/>
+</function>
+<function name='IOUSBGetEndpointAddress'>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<retval declared_type64='uint8_t' type64='C'/>
+</function>
+<function name='IOUSBGetEndpointDirection'>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<retval declared_type64='uint8_t' type64='C'/>
+</function>
+<function name='IOUSBGetEndpointIntervalEncodedMicroframes'>
+<arg declared_type64='uint32_t' name='usbDeviceSpeed' type64='I'/>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<retval declared_type64='uint32_t' type64='I'/>
+</function>
+<function name='IOUSBGetEndpointIntervalFrames'>
+<arg declared_type64='uint32_t' name='usbDeviceSpeed' type64='I'/>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<retval declared_type64='uint32_t' type64='I'/>
+</function>
+<function name='IOUSBGetEndpointIntervalMicroframes'>
+<arg declared_type64='uint32_t' name='usbDeviceSpeed' type64='I'/>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<retval declared_type64='uint32_t' type64='I'/>
+</function>
+<function name='IOUSBGetEndpointMaxPacketSize'>
+<arg declared_type64='uint32_t' name='usbDeviceSpeed' type64='I'/>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<retval declared_type64='uint16_t' type64='S'/>
+</function>
+<function name='IOUSBGetEndpointMaxStreams'>
+<arg declared_type64='uint32_t' name='usbDeviceSpeed' type64='I'/>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<arg const='true' declared_type64='IOUSBSuperSpeedEndpointCompanionDescriptor*' name='companionDescriptor' type64='^{IOUSBSuperSpeedEndpointCompanionDescriptor=CCCCS}'/>
+<retval declared_type64='uint32_t' type64='I'/>
+</function>
+<function name='IOUSBGetEndpointMaxStreamsEncoded'>
+<arg declared_type64='uint32_t' name='usbDeviceSpeed' type64='I'/>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<arg const='true' declared_type64='IOUSBSuperSpeedEndpointCompanionDescriptor*' name='companionDescriptor' type64='^{IOUSBSuperSpeedEndpointCompanionDescriptor=CCCCS}'/>
+<retval declared_type64='uint32_t' type64='I'/>
+</function>
+<function name='IOUSBGetEndpointNumber'>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<retval declared_type64='uint8_t' type64='C'/>
+</function>
+<function name='IOUSBGetEndpointType'>
+<arg const='true' declared_type64='IOUSBEndpointDescriptor*' name='descriptor' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+<retval declared_type64='uint8_t' type64='C'/>
+</function>
+<function name='IOUSBGetNextAssociatedDescriptor'>
+<arg const='true' declared_type64='IOUSBConfigurationDescriptor*' name='configurationDescriptor' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+<arg const='true' declared_type64='IOUSBDescriptorHeader*' name='parentDescriptor' type64='^{IOUSBDescriptorHeader=CC}'/>
+<arg const='true' declared_type64='IOUSBDescriptorHeader*' name='currentDescriptor' type64='^{IOUSBDescriptorHeader=CC}'/>
+<retval const='true' declared_type64='IOUSBDescriptorHeader*' type64='^{IOUSBDescriptorHeader=CC}'/>
+</function>
+<function name='IOUSBGetNextAssociatedDescriptorWithType'>
+<arg const='true' declared_type64='IOUSBConfigurationDescriptor*' name='configurationDescriptor' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+<arg const='true' declared_type64='IOUSBDescriptorHeader*' name='parentDescriptor' type64='^{IOUSBDescriptorHeader=CC}'/>
+<arg const='true' declared_type64='IOUSBDescriptorHeader*' name='currentDescriptor' type64='^{IOUSBDescriptorHeader=CC}'/>
+<arg const='true' declared_type64='uint8_t' name='type' type64='C'/>
+<retval const='true' declared_type64='IOUSBDescriptorHeader*' type64='^{IOUSBDescriptorHeader=CC}'/>
+</function>
+<function name='IOUSBGetNextCapabilityDescriptor'>
+<arg const='true' declared_type64='IOUSBBOSDescriptor*' name='bosDescriptor' type64='^{IOUSBBOSDescriptor=CCSC}'/>
+<arg const='true' declared_type64='IOUSBDeviceCapabilityDescriptorHeader*' name='currentDescriptor' type64='^{IOUSBDeviceCapabilityDescriptorHeader=CCCC}'/>
+<retval const='true' declared_type64='IOUSBDeviceCapabilityDescriptorHeader*' type64='^{IOUSBDeviceCapabilityDescriptorHeader=CCCC}'/>
+</function>
+<function name='IOUSBGetNextCapabilityDescriptorWithType'>
+<arg const='true' declared_type64='IOUSBBOSDescriptor*' name='bosDescriptor' type64='^{IOUSBBOSDescriptor=CCSC}'/>
+<arg const='true' declared_type64='IOUSBDeviceCapabilityDescriptorHeader*' name='currentDescriptor' type64='^{IOUSBDeviceCapabilityDescriptorHeader=CCCC}'/>
+<arg const='true' declared_type64='uint8_t' name='type' type64='C'/>
+<retval const='true' declared_type64='IOUSBDeviceCapabilityDescriptorHeader*' type64='^{IOUSBDeviceCapabilityDescriptorHeader=CCCC}'/>
+</function>
+<function name='IOUSBGetNextDescriptor'>
+<arg const='true' declared_type64='IOUSBConfigurationDescriptor*' name='configurationDescriptor' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+<arg const='true' declared_type64='IOUSBDescriptorHeader*' name='currentDescriptor' type64='^{IOUSBDescriptorHeader=CC}'/>
+<retval const='true' declared_type64='IOUSBDescriptorHeader*' type64='^{IOUSBDescriptorHeader=CC}'/>
+</function>
+<function name='IOUSBGetNextDescriptorWithType'>
+<arg const='true' declared_type64='IOUSBConfigurationDescriptor*' name='configurationDescriptor' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+<arg const='true' declared_type64='IOUSBDescriptorHeader*' name='currentDescriptor' type64='^{IOUSBDescriptorHeader=CC}'/>
+<arg const='true' declared_type64='uint8_t' name='type' type64='C'/>
+<retval const='true' declared_type64='IOUSBDescriptorHeader*' type64='^{IOUSBDescriptorHeader=CC}'/>
+</function>
+<function name='IOUSBGetNextEndpointDescriptor'>
+<arg const='true' declared_type64='IOUSBConfigurationDescriptor*' name='configurationDescriptor' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+<arg const='true' declared_type64='IOUSBInterfaceDescriptor*' name='interfaceDescriptor' type64='^{IOUSBInterfaceDescriptor=CCCCCCCCC}'/>
+<arg const='true' declared_type64='IOUSBDescriptorHeader*' name='currentDescriptor' type64='^{IOUSBDescriptorHeader=CC}'/>
+<retval const='true' declared_type64='IOUSBEndpointDescriptor*' type64='^{IOUSBEndpointDescriptor=CCCCSC}'/>
+</function>
+<function name='IOUSBGetNextInterfaceAssociationDescriptor'>
+<arg const='true' declared_type64='IOUSBConfigurationDescriptor*' name='configurationDescriptor' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+<arg const='true' declared_type64='IOUSBDescriptorHeader*' name='currentDescriptor' type64='^{IOUSBDescriptorHeader=CC}'/>
+<retval const='true' declared_type64='IOUSBInterfaceAssociationDescriptor*' type64='^{IOUSBInterfaceAssociationDescriptor=CCCCCCCC}'/>
+</function>
+<function name='IOUSBGetNextInterfaceDescriptor'>
+<arg const='true' declared_type64='IOUSBConfigurationDescriptor*' name='configurationDescriptor' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+<arg const='true' declared_type64='IOUSBDescriptorHeader*' name='currentDescriptor' type64='^{IOUSBDescriptorHeader=CC}'/>
+<retval const='true' declared_type64='IOUSBInterfaceDescriptor*' type64='^{IOUSBInterfaceDescriptor=CCCCCCCCC}'/>
+</function>
+<function name='IOUSBGetSuperSpeedDeviceCapabilityDescriptor'>
+<arg const='true' declared_type64='IOUSBBOSDescriptor*' name='bosDescriptor' type64='^{IOUSBBOSDescriptor=CCSC}'/>
+<retval const='true' declared_type64='IOUSBDeviceCapabilitySuperSpeedUSB*' type64='^{IOUSBDeviceCapabilitySuperSpeedUSB=CCCCSCCS}'/>
+</function>
+<function name='IOUSBGetUSB20ExtensionDeviceCapabilityDescriptor'>
+<arg const='true' declared_type64='IOUSBBOSDescriptor*' name='bosDescriptor' type64='^{IOUSBBOSDescriptor=CCSC}'/>
+<retval const='true' declared_type64='IOUSBDeviceCapabilityUSB2Extension*' type64='^{IOUSBDeviceCapabilityUSB2Extension=CCCI}'/>
+</function>
+<function inline='true' name='IOUSBHostDeviceRequestType'>
+<arg declared_type64='tIOUSBDeviceRequestDirectionValue' name='direction' type64='i'/>
+<arg declared_type64='tIOUSBDeviceRequestTypeValue' name='type' type64='i'/>
+<arg declared_type64='tIOUSBDeviceRequestRecipientValue' name='recipient' type64='i'/>
+<retval declared_type64='uint8_t' type64='C'/>
+</function>
+<class name='IOUSBHostDevice'>
+<method selector='capabilityDescriptors'>
+<retval const='true' declared_type64='IOUSBBOSDescriptor * _Nullable' type64='^{IOUSBBOSDescriptor=CCSC}'/>
+</method>
+<method selector='configurationDescriptor'>
+<retval const='true' declared_type64='IOUSBConfigurationDescriptor * _Nullable' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+</method>
+<method selector='configurationDescriptorWithConfigurationValue:error:'>
+<arg declared_type64='NSUInteger' index='0' name='configurationValue' type64='Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval const='true' declared_type64='IOUSBConfigurationDescriptor * _Nullable' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+</method>
+<method selector='configurationDescriptorWithIndex:error:'>
+<arg declared_type64='NSUInteger' index='0' name='index' type64='Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval const='true' declared_type64='IOUSBConfigurationDescriptor * _Nullable' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+</method>
+<method selector='configureWithValue:error:'>
+<arg declared_type64='NSUInteger' index='0' name='value' type64='Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='configureWithValue:matchInterfaces:error:'>
+<arg declared_type64='NSUInteger' index='0' name='value' type64='Q'/>
+<arg declared_type64='BOOL' index='1' name='matchInterfaces' type64='B'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='createMatchingDictionaryWithVendorID:productID:bcdDevice:deviceClass:deviceSubclass:deviceProtocol:speed:productIDArray:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='vendorID' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='1' name='productID' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='2' name='bcdDevice' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='3' name='deviceClass' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='4' name='deviceSubclass' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='5' name='deviceProtocol' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='6' name='speed' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='7' name='productIDArray' type64='@'/>
+<retval declared_type64='CFMutableDictionaryRef _Nonnull' type64='^{__CFDictionary=}'/>
+</method>
+<method selector='deviceDescriptor'>
+<retval const='true' declared_type64='IOUSBDeviceDescriptor * _Nullable' type64='^{IOUSBDeviceDescriptor=CCSCCCCSSSCCCC}'/>
+</method>
+<method selector='resetWithError:'>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='IOUSBHostIOSource'>
+<method selector='deviceAddress'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='endpointAddress'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='hostInterface'>
+<retval declared_type64='IOUSBHostInterface * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='IOUSBHostInterface'>
+<method selector='configurationDescriptor'>
+<retval const='true' declared_type64='IOUSBConfigurationDescriptor * _Nonnull' type64='^{IOUSBConfigurationDescriptor=CCSCCCCC}'/>
+</method>
+<method selector='copyPipeWithAddress:error:'>
+<arg declared_type64='NSUInteger' index='0' name='address' type64='Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='IOUSBHostPipe * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='createMatchingDictionaryWithVendorID:productID:bcdDevice:interfaceNumber:configurationValue:interfaceClass:interfaceSubclass:interfaceProtocol:speed:productIDArray:'>
+<arg declared_type64='NSNumber * _Nullable' index='0' name='vendorID' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='1' name='productID' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='2' name='bcdDevice' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='3' name='interfaceNumber' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='4' name='configurationValue' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='5' name='interfaceClass' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='6' name='interfaceSubclass' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='7' name='interfaceProtocol' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='8' name='speed' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='9' name='productIDArray' type64='@'/>
+<retval declared_type64='CFMutableDictionaryRef _Nonnull' type64='^{__CFDictionary=}'/>
+</method>
+<method selector='idleTimeout'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='interfaceDescriptor'>
+<retval const='true' declared_type64='IOUSBInterfaceDescriptor * _Nonnull' type64='^{IOUSBInterfaceDescriptor=CCCCCCCCC}'/>
+</method>
+<method selector='selectAlternateSetting:error:'>
+<arg declared_type64='NSUInteger' index='0' name='alternateSetting' type64='Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setIdleTimeout:error:'>
+<arg declared_type64='NSTimeInterval' index='0' name='idleTimeout' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='IOUSBHostObject'>
+<method selector='abortDeviceRequestsWithError:'>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='abortDeviceRequestsWithOption:error:'>
+<arg declared_type64='IOUSBHostAbortOption' index='0' name='option' type64='Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='descriptorWithType:length:error:'>
+<arg declared_type64='tIOUSBDescriptorType' index='0' name='type' type64='i'/>
+<arg declared_type64='NSUInteger * _Nonnull' index='1' name='length' type64='^Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval const='true' declared_type64='IOUSBDescriptor * _Nullable' type64='^{IOUSBDescriptorHeader=CC}'/>
+</method>
+<method selector='descriptorWithType:length:index:languageID:error:'>
+<arg declared_type64='tIOUSBDescriptorType' index='0' name='type' type64='i'/>
+<arg declared_type64='NSUInteger * _Nonnull' index='1' name='length' type64='^Q'/>
+<arg declared_type64='NSUInteger' index='2' name='index' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='languageID' type64='Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='4' name='error' type64='^@'/>
+<retval const='true' declared_type64='IOUSBDescriptor * _Nullable' type64='^{IOUSBDescriptorHeader=CC}'/>
+</method>
+<method selector='descriptorWithType:length:index:languageID:requestType:requestRecipient:error:'>
+<arg declared_type64='tIOUSBDescriptorType' index='0' name='type' type64='i'/>
+<arg declared_type64='NSUInteger * _Nonnull' index='1' name='length' type64='^Q'/>
+<arg declared_type64='NSUInteger' index='2' name='index' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='languageID' type64='Q'/>
+<arg declared_type64='tIOUSBDeviceRequestTypeValue' index='4' name='requestType' type64='i'/>
+<arg declared_type64='tIOUSBDeviceRequestRecipientValue' index='5' name='requestRecipient' type64='i'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='6' name='error' type64='^@'/>
+<retval const='true' declared_type64='IOUSBDescriptor * _Nullable' type64='^{IOUSBDescriptorHeader=CC}'/>
+</method>
+<method selector='destroy'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='deviceAddress'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='enqueueDeviceRequest:data:completionTimeout:error:completionHandler:'>
+<arg declared_type64='IOUSBDeviceRequest' index='0' name='request' type64='{IOUSBDeviceRequest=CCSSS}'/>
+<arg declared_type64='NSMutableData * _Nullable' index='1' name='data' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='2' name='completionTimeout' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='3' name='error' type64='^@'/>
+<arg declared_type64='IOUSBHostCompletionHandler _Nullable' function_pointer='true' index='4' name='completionHandler' type64='@?'>
+<arg declared_type64='IOReturn' type64='i'/>
+<arg declared_type64='NSUInteger' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='enqueueDeviceRequest:data:error:completionHandler:'>
+<arg declared_type64='IOUSBDeviceRequest' index='0' name='request' type64='{IOUSBDeviceRequest=CCSSS}'/>
+<arg declared_type64='NSMutableData * _Nullable' index='1' name='data' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<arg declared_type64='IOUSBHostCompletionHandler _Nullable' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='IOReturn' type64='i'/>
+<arg declared_type64='NSUInteger' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='enqueueDeviceRequest:error:completionHandler:'>
+<arg declared_type64='IOUSBDeviceRequest' index='0' name='request' type64='{IOUSBDeviceRequest=CCSSS}'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<arg declared_type64='IOUSBHostCompletionHandler _Nullable' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='IOReturn' type64='i'/>
+<arg declared_type64='NSUInteger' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='frameNumberWithTime:'>
+<arg declared_type64='IOUSBHostTime * _Nullable' index='0' name='time' type64='^Q'/>
+<retval declared_type64='uint64_t' type64='Q'/>
+</method>
+<method selector='initWithIOService:options:queue:error:interestHandler:'>
+<arg declared_type64='io_service_t' index='0' name='ioService' type64='I'/>
+<arg declared_type64='IOUSBHostObjectInitOptions' index='1' name='options' type64='Q'/>
+<arg declared_type64='dispatch_queue_t _Nullable' index='2' name='queue' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='3' name='error' type64='^@'/>
+<arg declared_type64='IOUSBHostInterestHandler _Nullable' function_pointer='true' index='4' name='interestHandler' type64='@?'>
+<arg declared_type64='IOUSBHostObject * _Nonnull' type64='@'/>
+<arg declared_type64='uint32_t' type64='I'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='initWithIOService:queue:error:interestHandler:'>
+<arg declared_type64='io_service_t' index='0' name='ioService' type64='I'/>
+<arg declared_type64='dispatch_queue_t _Nullable' index='1' name='queue' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<arg declared_type64='IOUSBHostInterestHandler _Nullable' function_pointer='true' index='3' name='interestHandler' type64='@?'>
+<arg declared_type64='IOUSBHostObject * _Nonnull' type64='@'/>
+<arg declared_type64='uint32_t' type64='I'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='ioDataWithCapacity:error:'>
+<arg declared_type64='NSUInteger' index='0' name='capacity' type64='Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='NSMutableData * _Nullable' type64='@'/>
+</method>
+<method selector='ioService'>
+<retval declared_type64='io_service_t' type64='I'/>
+</method>
+<method selector='queue'>
+<retval declared_type64='dispatch_queue_t _Nonnull' type64='@'/>
+</method>
+<method selector='sendDeviceRequest:data:bytesTransferred:completionTimeout:error:'>
+<arg declared_type64='IOUSBDeviceRequest' index='0' name='request' type64='{IOUSBDeviceRequest=CCSSS}'/>
+<arg declared_type64='NSMutableData * _Nullable' index='1' name='data' type64='@'/>
+<arg declared_type64='NSUInteger * _Nullable' index='2' name='bytesTransferred' type64='^Q'/>
+<arg declared_type64='NSTimeInterval' index='3' name='completionTimeout' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='4' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='sendDeviceRequest:data:bytesTransferred:error:'>
+<arg declared_type64='IOUSBDeviceRequest' index='0' name='request' type64='{IOUSBDeviceRequest=CCSSS}'/>
+<arg declared_type64='NSMutableData * _Nullable' index='1' name='data' type64='@'/>
+<arg declared_type64='NSUInteger * _Nullable' index='2' name='bytesTransferred' type64='^Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='3' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='sendDeviceRequest:error:'>
+<arg declared_type64='IOUSBDeviceRequest' index='0' name='request' type64='{IOUSBDeviceRequest=CCSSS}'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='stringWithIndex:error:'>
+<arg declared_type64='NSUInteger' index='0' name='index' type64='Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval const='true' declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+<method selector='stringWithIndex:languageID:error:'>
+<arg declared_type64='NSUInteger' index='0' name='index' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='languageID' type64='Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval const='true' declared_type64='NSString * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='IOUSBHostPipe'>
+<method selector='abortWithError:'>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='abortWithOption:error:'>
+<arg declared_type64='IOUSBHostAbortOption' index='0' name='option' type64='Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='adjustPipeWithDescriptors:error:'>
+<arg const='true' declared_type64='IOUSBHostIOSourceDescriptors * _Nonnull' index='0' name='descriptors' type64='^{IOUSBHostIOSourceDescriptors=S{IOUSBEndpointDescriptor=CCCCSC}{IOUSBSuperSpeedEndpointCompanionDescriptor=CCCCS}{IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor=CCSI}}'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='clearStallWithError:'>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='copyStreamWithStreamID:error:'>
+<arg declared_type64='NSUInteger' index='0' name='streamID' type64='Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='IOUSBHostStream * _Nullable' type64='@'/>
+</method>
+<method selector='descriptors'>
+<retval const='true' declared_type64='IOUSBHostIOSourceDescriptors * _Nonnull' type64='^{IOUSBHostIOSourceDescriptors=S{IOUSBEndpointDescriptor=CCCCSC}{IOUSBSuperSpeedEndpointCompanionDescriptor=CCCCS}{IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor=CCSI}}'/>
+</method>
+<method selector='disableStreamsWithError:'>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='enableStreamsWithError:'>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='enqueueControlRequest:data:completionTimeout:error:completionHandler:'>
+<arg declared_type64='IOUSBDeviceRequest' index='0' name='request' type64='{IOUSBDeviceRequest=CCSSS}'/>
+<arg declared_type64='NSMutableData * _Nullable' index='1' name='data' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='2' name='completionTimeout' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='3' name='error' type64='^@'/>
+<arg declared_type64='IOUSBHostCompletionHandler _Nullable' function_pointer='true' index='4' name='completionHandler' type64='@?'>
+<arg declared_type64='IOReturn' type64='i'/>
+<arg declared_type64='NSUInteger' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='enqueueControlRequest:data:error:completionHandler:'>
+<arg declared_type64='IOUSBDeviceRequest' index='0' name='request' type64='{IOUSBDeviceRequest=CCSSS}'/>
+<arg declared_type64='NSMutableData * _Nullable' index='1' name='data' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<arg declared_type64='IOUSBHostCompletionHandler _Nullable' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='IOReturn' type64='i'/>
+<arg declared_type64='NSUInteger' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='enqueueControlRequest:error:completionHandler:'>
+<arg declared_type64='IOUSBDeviceRequest' index='0' name='request' type64='{IOUSBDeviceRequest=CCSSS}'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<arg declared_type64='IOUSBHostCompletionHandler _Nullable' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='IOReturn' type64='i'/>
+<arg declared_type64='NSUInteger' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='enqueueIORequestWithData:completionTimeout:error:completionHandler:'>
+<arg declared_type64='NSMutableData * _Nullable' index='0' name='data' type64='@'/>
+<arg declared_type64='NSTimeInterval' index='1' name='completionTimeout' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<arg declared_type64='IOUSBHostCompletionHandler _Nullable' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='IOReturn' type64='i'/>
+<arg declared_type64='NSUInteger' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='enqueueIORequestWithData:frameList:frameListCount:firstFrameNumber:error:completionHandler:'>
+<arg declared_type64='NSMutableData * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='IOUSBHostIsochronousFrame * _Nonnull' index='1' name='frameList' type64='^{IOUSBHostIsochronousFrame=iIIIQ}'/>
+<arg declared_type64='NSUInteger' index='2' name='frameListCount' type64='Q'/>
+<arg declared_type64='uint64_t' index='3' name='firstFrameNumber' type64='Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='4' name='error' type64='^@'/>
+<arg declared_type64='IOUSBHostIsochronousCompletionHandler _Nullable' function_pointer='true' index='5' name='completionHandler' type64='@?'>
+<arg declared_type64='IOReturn' type64='i'/>
+<arg declared_type64='IOUSBHostIsochronousFrame*' type64='^{IOUSBHostIsochronousFrame=iIIIQ}'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='idleTimeout'>
+<retval declared_type64='NSTimeInterval' type64='d'/>
+</method>
+<method selector='originalDescriptors'>
+<retval const='true' declared_type64='IOUSBHostIOSourceDescriptors * _Nonnull' type64='^{IOUSBHostIOSourceDescriptors=S{IOUSBEndpointDescriptor=CCCCSC}{IOUSBSuperSpeedEndpointCompanionDescriptor=CCCCS}{IOUSBSuperSpeedPlusIsochronousEndpointCompanionDescriptor=CCSI}}'/>
+</method>
+<method selector='sendControlRequest:data:bytesTransferred:completionTimeout:error:'>
+<arg declared_type64='IOUSBDeviceRequest' index='0' name='request' type64='{IOUSBDeviceRequest=CCSSS}'/>
+<arg declared_type64='NSMutableData * _Nullable' index='1' name='data' type64='@'/>
+<arg declared_type64='NSUInteger * _Nullable' index='2' name='bytesTransferred' type64='^Q'/>
+<arg declared_type64='NSTimeInterval' index='3' name='completionTimeout' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='4' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='sendControlRequest:data:bytesTransferred:error:'>
+<arg declared_type64='IOUSBDeviceRequest' index='0' name='request' type64='{IOUSBDeviceRequest=CCSSS}'/>
+<arg declared_type64='NSMutableData * _Nullable' index='1' name='data' type64='@'/>
+<arg declared_type64='NSUInteger * _Nullable' index='2' name='bytesTransferred' type64='^Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='3' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='sendControlRequest:error:'>
+<arg declared_type64='IOUSBDeviceRequest' index='0' name='request' type64='{IOUSBDeviceRequest=CCSSS}'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='sendIORequestWithData:bytesTransferred:completionTimeout:error:'>
+<arg declared_type64='NSMutableData * _Nullable' index='0' name='data' type64='@'/>
+<arg declared_type64='NSUInteger * _Nullable' index='1' name='bytesTransferred' type64='^Q'/>
+<arg declared_type64='NSTimeInterval' index='2' name='completionTimeout' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='3' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='sendIORequestWithData:frameList:frameListCount:firstFrameNumber:error:'>
+<arg declared_type64='NSMutableData * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='IOUSBHostIsochronousFrame * _Nonnull' index='1' name='frameList' type64='^{IOUSBHostIsochronousFrame=iIIIQ}'/>
+<arg declared_type64='NSUInteger' index='2' name='frameListCount' type64='Q'/>
+<arg declared_type64='uint64_t' index='3' name='firstFrameNumber' type64='Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='4' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setIdleTimeout:error:'>
+<arg declared_type64='NSTimeInterval' index='0' name='idleTimeout' type64='d'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='IOUSBHostStream'>
+<method selector='abortWithError:'>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='0' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='abortWithOption:error:'>
+<arg declared_type64='IOUSBHostAbortOption' index='0' name='option' type64='Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='enqueueIORequestWithData:error:completionHandler:'>
+<arg declared_type64='NSMutableData * _Nullable' index='0' name='data' type64='@'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='1' name='error' type64='^@'/>
+<arg declared_type64='IOUSBHostCompletionHandler _Nullable' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='IOReturn' type64='i'/>
+<arg declared_type64='NSUInteger' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='hostPipe'>
+<retval declared_type64='IOUSBHostPipe * _Nonnull' type64='@'/>
+</method>
+<method selector='sendIORequestWithData:bytesTransferred:error:'>
+<arg declared_type64='NSMutableData * _Nullable' index='0' name='data' type64='@'/>
+<arg declared_type64='NSUInteger * _Nullable' index='1' name='bytesTransferred' type64='^Q'/>
+<arg declared_type64='NSError * _Nullable * _Nullable' index='2' name='error' type64='^@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='streamID'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+</class>
+</signatures>

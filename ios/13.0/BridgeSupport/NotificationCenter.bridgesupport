@@ -1,0 +1,93 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/MobileCoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/UIKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<enum name='NCUpdateResultFailed' value64='2'/>
+<enum name='NCUpdateResultNewData' value64='0'/>
+<enum name='NCUpdateResultNoData' value64='1'/>
+<enum name='NCWidgetDisplayModeCompact' value64='0'/>
+<enum name='NCWidgetDisplayModeExpanded' value64='1'/>
+<class name='NCWidgetController'>
+<method selector='setHasContent:forWidgetWithBundleIdentifier:'>
+<arg declared_type64='BOOL' index='0' name='flag' type64='B'/>
+<arg declared_type64='NSString * _Nonnull' index='1' name='bundleID' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='widgetController'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='NSExtensionContext'>
+<method selector='setWidgetLargestAvailableDisplayMode:'>
+<arg declared_type64='NCWidgetDisplayMode' index='0' name='widgetLargestAvailableDisplayMode' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='widgetActiveDisplayMode'>
+<retval declared_type64='NCWidgetDisplayMode' type64='q'/>
+</method>
+<method selector='widgetLargestAvailableDisplayMode'>
+<retval declared_type64='NCWidgetDisplayMode' type64='q'/>
+</method>
+<method selector='widgetMaximumSizeForDisplayMode:'>
+<arg declared_type64='NCWidgetDisplayMode' index='0' name='displayMode' type64='q'/>
+<retval declared_type64='CGSize' type64='{CGSize=dd}'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='widgetActiveDisplayModeDidChange:withMaximumSize:'>
+<arg declared_type64='NCWidgetDisplayMode' index='0' name='activeDisplayMode' type64='q'/>
+<arg declared_type64='CGSize' index='1' name='maxSize' type64='{CGSize=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='widgetMarginInsetsForProposedMarginInsets:'>
+<arg declared_type64='UIEdgeInsets' index='0' name='defaultMarginInsets' type64='{UIEdgeInsets=dddd}'/>
+<retval declared_type64='UIEdgeInsets' type64='{UIEdgeInsets=dddd}'/>
+</method>
+<method selector='widgetPerformUpdateWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(NCUpdateResult)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NCUpdateResult' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='UIVibrancyEffect'>
+<method class_method='true' selector='notificationCenterVibrancyEffect'>
+<retval declared_type64='UIVibrancyEffect * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='widgetEffectForVibrancyStyle:'>
+<arg declared_type64='UIVibrancyEffectStyle' index='0' name='vibrancyStyle' type64='q'/>
+<retval declared_type64='UIVibrancyEffect * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='widgetPrimaryVibrancyEffect'>
+<retval declared_type64='UIVibrancyEffect * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='widgetSecondaryVibrancyEffect'>
+<retval declared_type64='UIVibrancyEffect * _Nonnull' type64='@'/>
+</method>
+</class>
+<informal_protocol name='NCWidgetProviding'>
+<method selector='widgetActiveDisplayModeDidChange:withMaximumSize:' type64='v40@0:8q16{CGSize=dd}24'>
+<arg declared_type64='NCWidgetDisplayMode' index='0' name='activeDisplayMode' type64='q'/>
+<arg declared_type64='CGSize' index='1' name='maxSize' type64='{CGSize=dd}'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='widgetMarginInsetsForProposedMarginInsets:' type64='{UIEdgeInsets=dddd}48@0:8{UIEdgeInsets=dddd}16'>
+<arg declared_type64='UIEdgeInsets' index='0' name='defaultMarginInsets' type64='{UIEdgeInsets=dddd}'/>
+<retval declared_type64='UIEdgeInsets' type64='{UIEdgeInsets=dddd}'/>
+</method>
+<method selector='widgetPerformUpdateWithCompletionHandler:' type64='v24@0:8@?16'>
+<arg declared_type64='void (^ _Nonnull)(NCUpdateResult)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='NCUpdateResult' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

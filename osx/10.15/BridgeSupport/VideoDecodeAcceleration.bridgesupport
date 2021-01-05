@@ -1,0 +1,41 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<cftype name='VDADecoder' type64='^{OpaqueVDADecoder=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kVDADecoderConfiguration_Height' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kVDADecoderConfiguration_SourceFormat' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kVDADecoderConfiguration_Width' type64='^{__CFString=}'/>
+<constant const='true' declared_type64='CFStringRef' name='kVDADecoderConfiguration_avcCData' type64='^{__CFString=}'/>
+<enum name='kVDADecoderAllocationFailedErr' value64='-12475'/>
+<enum name='kVDADecoderConfigurationError' value64='-12472'/>
+<enum name='kVDADecoderDecodeFlags_DontEmitFrame' value64='1'/>
+<enum name='kVDADecoderDecoderFailedErr' value64='-12473'/>
+<enum name='kVDADecoderFlush_EmitFrames' value64='1'/>
+<enum name='kVDADecoderFormatNotSupportedErr' value64='-12471'/>
+<enum name='kVDADecoderHardwareNotSupportedErr' value64='-12470'/>
+<enum name='kVDADecoderNoErr' value64='0'/>
+<enum name='kVDADecoderParamErr' value64='-12474'/>
+<function name='VDADecoderCreate'>
+<arg declared_type64='CFDictionaryRef' name='decoderConfiguration' type64='^{__CFDictionary=}'/>
+<arg declared_type64='CFDictionaryRef' name='destinationImageBufferAttributes' type64='^{__CFDictionary=}'/>
+<arg declared_type64='VDADecoderOutputCallback*' name='outputCallback' type64='^^?'/>
+<arg declared_type64='void*' name='decoderOutputCallbackRefcon' type64='^v'/>
+<arg declared_type64='VDADecoder*' name='decoderOut' type64='^^{OpaqueVDADecoder}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='VDADecoderDecode'>
+<arg declared_type64='VDADecoder' name='decoder' type64='^{OpaqueVDADecoder=}'/>
+<arg declared_type64='uint32_t' name='decodeFlags' type64='I'/>
+<arg declared_type64='CFTypeRef' name='compressedBuffer' type64='@'/>
+<arg declared_type64='CFDictionaryRef' name='frameInfo' type64='^{__CFDictionary=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='VDADecoderDestroy'>
+<arg declared_type64='VDADecoder' name='decoder' type64='^{OpaqueVDADecoder=}'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+<function name='VDADecoderFlush'>
+<arg declared_type64='VDADecoder' name='decoder' type64='^{OpaqueVDADecoder=}'/>
+<arg declared_type64='uint32_t' name='flushFlags' type64='I'/>
+<retval declared_type64='OSStatus' type64='i'/>
+</function>
+</signatures>

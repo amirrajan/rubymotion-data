@@ -1,0 +1,1739 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<struct name='block_kernel_map' type64='{block_kernel_map=&quot;program&quot;^{_cl_program}&quot;num_kernels&quot;Q&quot;initBlocks&quot;^?&quot;map&quot;^{_block_kernel_pair=&quot;block_ptr&quot;^v&quot;kernel&quot;^{_cl_kernel}}}'>
+<field declared_type64='cl_program' name='program' type64='^{_cl_program=}'/>
+<field const='true' declared_type64='size_t' name='num_kernels' type64='Q'/>
+<field declared_type64='void (*)(void)' function_pointer='true' name='initBlocks' type64='^?'>
+<retval declared_type64='void' type64='v'/>
+</field>
+<field declared_type64='block_kernel_pair*' name='map' type64='^{_block_kernel_pair=&quot;block_ptr&quot;^v&quot;kernel&quot;^{_cl_kernel}}'/>
+</struct>
+<struct name='block_kernel_map_table' type64='{block_kernel_map_table=&quot;table&quot;^^{block_kernel_map}&quot;size&quot;Q&quot;capacity&quot;Q}'>
+<field declared_type64='block_kernel_map**' name='table' type64='^^{block_kernel_map}'/>
+<field declared_type64='size_t' name='size' type64='Q'/>
+<field declared_type64='size_t' name='capacity' type64='Q'/>
+</struct>
+<struct name='block_kernel_pair' type64='{_block_kernel_pair=&quot;block_ptr&quot;^v&quot;kernel&quot;^{_cl_kernel}}'>
+<field declared_type64='void*' name='block_ptr' type64='^v'/>
+<field declared_type64='cl_kernel' name='kernel' type64='^{_cl_kernel=}'/>
+</struct>
+<struct name='cl_buffer_region' type64='{_cl_buffer_region=&quot;origin&quot;Q&quot;size&quot;Q}'>
+<field declared_type64='size_t' name='origin' type64='Q'/>
+<field declared_type64='size_t' name='size' type64='Q'/>
+</struct>
+<struct name='cl_image_desc' type64='{_cl_image_desc=&quot;image_type&quot;I&quot;image_width&quot;Q&quot;image_height&quot;Q&quot;image_depth&quot;Q&quot;image_array_size&quot;Q&quot;image_row_pitch&quot;Q&quot;image_slice_pitch&quot;Q&quot;num_mip_levels&quot;I&quot;num_samples&quot;I&quot;buffer&quot;^{_cl_mem}}'>
+<field declared_type64='cl_mem_object_type' name='image_type' type64='I'/>
+<field declared_type64='size_t' name='image_width' type64='Q'/>
+<field declared_type64='size_t' name='image_height' type64='Q'/>
+<field declared_type64='size_t' name='image_depth' type64='Q'/>
+<field declared_type64='size_t' name='image_array_size' type64='Q'/>
+<field declared_type64='size_t' name='image_row_pitch' type64='Q'/>
+<field declared_type64='size_t' name='image_slice_pitch' type64='Q'/>
+<field declared_type64='cl_uint' name='num_mip_levels' type64='I'/>
+<field declared_type64='cl_uint' name='num_samples' type64='I'/>
+<field declared_type64='cl_mem' name='buffer' type64='^{_cl_mem=}'/>
+</struct>
+<struct name='cl_image_format' type64='{_cl_image_format=&quot;image_channel_order&quot;I&quot;image_channel_data_type&quot;I}'>
+<field declared_type64='cl_channel_order' name='image_channel_order' type64='I'/>
+<field declared_type64='cl_channel_type' name='image_channel_data_type' type64='I'/>
+</struct>
+<struct name='cl_ndrange' type64='{_cl_ndrange=&quot;work_dim&quot;Q&quot;global_work_offset&quot;[3Q]&quot;global_work_size&quot;[3Q]&quot;local_work_size&quot;[3Q]}'>
+<field declared_type64='size_t' name='work_dim' type64='Q'/>
+<field declared_type64='size_t*' name='global_work_offset' type64='[3Q]'/>
+<field declared_type64='size_t*' name='global_work_size' type64='[3Q]'/>
+<field declared_type64='size_t*' name='local_work_size' type64='[3Q]'/>
+</struct>
+<struct name='kargs_struct' type64='{kargs_struct=&quot;arg_flags&quot;^Q&quot;arg_sizes&quot;^Q&quot;arg_values&quot;^^v}'>
+<field declared_type64='cl_bitfield*' name='arg_flags' type64='^Q'/>
+<field declared_type64='size_t*' name='arg_sizes' type64='^Q'/>
+<field declared_type64='void**' name='arg_values' type64='^^v'/>
+</struct>
+<cftype name='IOSurfaceRef' type64='^{__IOSurface=}'/>
+<cftype name='cl_GLsync' type64='^{__GLsync=}'/>
+<cftype name='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<cftype name='cl_context' type64='^{_cl_context=}'/>
+<cftype name='cl_dag' type64='^{_cl_dag=}'/>
+<cftype name='cl_device_id' type64='^{_cl_device_id=}'/>
+<cftype name='cl_event' type64='^{_cl_event=}'/>
+<cftype name='cl_kernel' type64='^{_cl_kernel=}'/>
+<cftype name='cl_mem' type64='^{_cl_mem=}'/>
+<cftype name='cl_platform_id' type64='^{_cl_platform_id=}'/>
+<cftype name='cl_program' type64='^{_cl_program=}'/>
+<cftype name='cl_sampler' type64='^{_cl_sampler=}'/>
+<string_constant name='CL_PROGRAM_STRING_DEBUG_INFO' value='#line 3684 &quot;&quot; 
+
+'/>
+<enum name='CLK_ADDRESS_CLAMP' value64='1'/>
+<enum name='CLK_ADDRESS_CLAMP_TO_EDGE' value64='2'/>
+<enum name='CLK_ADDRESS_MIRRORED_REPEAT' value64='4'/>
+<enum name='CLK_ADDRESS_NONE' value64='0'/>
+<enum name='CLK_ADDRESS_REPEAT' value64='3'/>
+<enum name='CLK_FILTER_LINEAR' value64='16'/>
+<enum name='CLK_FILTER_NEAREST' value64='0'/>
+<enum name='CLK_NORMALIZED_COORDS_FALSE' value64='0'/>
+<enum name='CLK_NORMALIZED_COORDS_TRUE' value64='8'/>
+<enum name='CL_1RGB_APPLE' value64='268435462'/>
+<enum name='CL_A' value64='4273'/>
+<enum name='CL_ABGR_APPLE' value64='268435474'/>
+<enum name='CL_ADDRESS_CLAMP' value64='4402'/>
+<enum name='CL_ADDRESS_CLAMP_TO_EDGE' value64='4401'/>
+<enum name='CL_ADDRESS_MIRRORED_REPEAT' value64='4404'/>
+<enum name='CL_ADDRESS_NONE' value64='4400'/>
+<enum name='CL_ADDRESS_REPEAT' value64='4403'/>
+<enum name='CL_ARGB' value64='4279'/>
+<enum name='CL_BGR1_APPLE' value64='268435463'/>
+<enum name='CL_BGRA' value64='4278'/>
+<enum name='CL_BIASED_HALF_APPLE' value64='268435465'/>
+<enum name='CL_BLOCKING' value64='1'/>
+<enum name='CL_BUFFER_CREATE_TYPE_REGION' value64='4640'/>
+<enum name='CL_BUILD_ERROR' value64='-2'/>
+<enum name='CL_BUILD_IN_PROGRESS' value64='-3'/>
+<enum name='CL_BUILD_NONE' value64='-1'/>
+<enum name='CL_BUILD_PROGRAM_FAILURE' value64='-11'/>
+<enum name='CL_BUILD_SUCCESS' value64='0'/>
+<enum name='CL_CGL_DEVICES_FOR_SUPPORTED_VIRTUAL_SCREENS_APPLE' value64='268435459'/>
+<enum name='CL_CGL_DEVICE_FOR_CURRENT_VIRTUAL_SCREEN_APPLE' value64='268435458'/>
+<enum name='CL_CHAR_BIT' value64='8'/>
+<enum name='CL_CHAR_MAX' value64='127'/>
+<enum name='CL_CHAR_MIN' value64='-128'/>
+<enum name='CL_COMMAND_ACQUIRE_GL_OBJECTS' value64='4607'/>
+<enum name='CL_COMMAND_BARRIER' value64='4613'/>
+<enum name='CL_COMMAND_COPY_BUFFER' value64='4597'/>
+<enum name='CL_COMMAND_COPY_BUFFER_RECT' value64='4611'/>
+<enum name='CL_COMMAND_COPY_BUFFER_TO_IMAGE' value64='4602'/>
+<enum name='CL_COMMAND_COPY_IMAGE' value64='4600'/>
+<enum name='CL_COMMAND_COPY_IMAGE_TO_BUFFER' value64='4601'/>
+<enum name='CL_COMMAND_FILL_BUFFER' value64='4615'/>
+<enum name='CL_COMMAND_FILL_IMAGE' value64='4616'/>
+<enum name='CL_COMMAND_GL_FENCE_SYNC_OBJECT_KHR' value64='8205'/>
+<enum name='CL_COMMAND_MAP_BUFFER' value64='4603'/>
+<enum name='CL_COMMAND_MAP_IMAGE' value64='4604'/>
+<enum name='CL_COMMAND_MARKER' value64='4606'/>
+<enum name='CL_COMMAND_MIGRATE_MEM_OBJECTS' value64='4614'/>
+<enum name='CL_COMMAND_NATIVE_KERNEL' value64='4594'/>
+<enum name='CL_COMMAND_NDRANGE_KERNEL' value64='4592'/>
+<enum name='CL_COMMAND_READ_BUFFER' value64='4595'/>
+<enum name='CL_COMMAND_READ_BUFFER_RECT' value64='4609'/>
+<enum name='CL_COMMAND_READ_IMAGE' value64='4598'/>
+<enum name='CL_COMMAND_RELEASE_GL_OBJECTS' value64='4608'/>
+<enum name='CL_COMMAND_TASK' value64='4593'/>
+<enum name='CL_COMMAND_UNMAP_MEM_OBJECT' value64='4605'/>
+<enum name='CL_COMMAND_USER' value64='4612'/>
+<enum name='CL_COMMAND_WRITE_BUFFER' value64='4596'/>
+<enum name='CL_COMMAND_WRITE_BUFFER_RECT' value64='4610'/>
+<enum name='CL_COMMAND_WRITE_IMAGE' value64='4599'/>
+<enum name='CL_COMPILER_NOT_AVAILABLE' value64='-3'/>
+<enum name='CL_COMPILE_PROGRAM_FAILURE' value64='-15'/>
+<enum name='CL_COMPLETE' value64='0'/>
+<enum name='CL_CONTEXT_DEVICES' value64='4225'/>
+<enum name='CL_CONTEXT_INTEROP_USER_SYNC' value64='4229'/>
+<enum name='CL_CONTEXT_NUM_DEVICES' value64='4227'/>
+<enum name='CL_CONTEXT_PLATFORM' value64='4228'/>
+<enum name='CL_CONTEXT_PROPERTIES' value64='4226'/>
+<enum name='CL_CONTEXT_PROPERTY_USE_CGL_SHAREGROUP_APPLE' value64='268435456'/>
+<enum name='CL_CONTEXT_REFERENCE_COUNT' value64='4224'/>
+<enum name='CL_CbYCrY_APPLE' value64='268435473'/>
+<enum name='CL_DBL_DIG' value64='15'/>
+<enum name='CL_DBL_EPSILON' value64='0x1.0p-52'/>
+<enum name='CL_DBL_MANT_DIG' value64='53'/>
+<enum name='CL_DBL_MAX' value64='0x1.fffffffffffffp1023'/>
+<enum name='CL_DBL_MAX_10_EXP' value64='308'/>
+<enum name='CL_DBL_MAX_EXP' value64='1024'/>
+<enum name='CL_DBL_MIN' value64='0x1.0p-1022'/>
+<enum name='CL_DBL_MIN_10_EXP' value64='-307'/>
+<enum name='CL_DBL_MIN_EXP' value64='-1021'/>
+<enum name='CL_DBL_RADIX' value64='2'/>
+<enum name='CL_DEPTH' value64='4285'/>
+<enum name='CL_DEPTH_STENCIL' value64='4286'/>
+<enum name='CL_DEVICE_ADDRESS_BITS' value64='4109'/>
+<enum name='CL_DEVICE_AFFINITY_DOMAIN_L1_CACHE' value64='16'/>
+<enum name='CL_DEVICE_AFFINITY_DOMAIN_L2_CACHE' value64='8'/>
+<enum name='CL_DEVICE_AFFINITY_DOMAIN_L3_CACHE' value64='4'/>
+<enum name='CL_DEVICE_AFFINITY_DOMAIN_L4_CACHE' value64='2'/>
+<enum name='CL_DEVICE_AFFINITY_DOMAIN_NEXT_PARTITIONABLE' value64='32'/>
+<enum name='CL_DEVICE_AFFINITY_DOMAIN_NUMA' value64='1'/>
+<enum name='CL_DEVICE_AVAILABLE' value64='4135'/>
+<enum name='CL_DEVICE_BUILT_IN_KERNELS' value64='4159'/>
+<enum name='CL_DEVICE_COMPILER_AVAILABLE' value64='4136'/>
+<enum name='CL_DEVICE_DOUBLE_FP_CONFIG' value64='4146'/>
+<enum name='CL_DEVICE_ENDIAN_LITTLE' value64='4134'/>
+<enum name='CL_DEVICE_ERROR_CORRECTION_SUPPORT' value64='4132'/>
+<enum name='CL_DEVICE_EXECUTION_CAPABILITIES' value64='4137'/>
+<enum name='CL_DEVICE_EXTENSIONS' value64='4144'/>
+<enum name='CL_DEVICE_GLOBAL_MEM_CACHELINE_SIZE' value64='4125'/>
+<enum name='CL_DEVICE_GLOBAL_MEM_CACHE_SIZE' value64='4126'/>
+<enum name='CL_DEVICE_GLOBAL_MEM_CACHE_TYPE' value64='4124'/>
+<enum name='CL_DEVICE_GLOBAL_MEM_SIZE' value64='4127'/>
+<enum name='CL_DEVICE_HALF_FP_CONFIG' value64='4147'/>
+<enum name='CL_DEVICE_HOST_UNIFIED_MEMORY' value64='4149'/>
+<enum name='CL_DEVICE_IMAGE2D_MAX_HEIGHT' value64='4114'/>
+<enum name='CL_DEVICE_IMAGE2D_MAX_WIDTH' value64='4113'/>
+<enum name='CL_DEVICE_IMAGE3D_MAX_DEPTH' value64='4117'/>
+<enum name='CL_DEVICE_IMAGE3D_MAX_HEIGHT' value64='4116'/>
+<enum name='CL_DEVICE_IMAGE3D_MAX_WIDTH' value64='4115'/>
+<enum name='CL_DEVICE_IMAGE_BASE_ADDRESS_ALIGNMENT' value64='4171'/>
+<enum name='CL_DEVICE_IMAGE_MAX_ARRAY_SIZE' value64='4161'/>
+<enum name='CL_DEVICE_IMAGE_MAX_BUFFER_SIZE' value64='4160'/>
+<enum name='CL_DEVICE_IMAGE_PITCH_ALIGNMENT' value64='4170'/>
+<enum name='CL_DEVICE_IMAGE_SUPPORT' value64='4118'/>
+<enum name='CL_DEVICE_LINKER_AVAILABLE' value64='4158'/>
+<enum name='CL_DEVICE_LOCAL_MEM_SIZE' value64='4131'/>
+<enum name='CL_DEVICE_LOCAL_MEM_TYPE' value64='4130'/>
+<enum name='CL_DEVICE_MAX_CLOCK_FREQUENCY' value64='4108'/>
+<enum name='CL_DEVICE_MAX_COMPUTE_UNITS' value64='4098'/>
+<enum name='CL_DEVICE_MAX_CONSTANT_ARGS' value64='4129'/>
+<enum name='CL_DEVICE_MAX_CONSTANT_BUFFER_SIZE' value64='4128'/>
+<enum name='CL_DEVICE_MAX_MEM_ALLOC_SIZE' value64='4112'/>
+<enum name='CL_DEVICE_MAX_PARAMETER_SIZE' value64='4119'/>
+<enum name='CL_DEVICE_MAX_READ_IMAGE_ARGS' value64='4110'/>
+<enum name='CL_DEVICE_MAX_SAMPLERS' value64='4120'/>
+<enum name='CL_DEVICE_MAX_WORK_GROUP_SIZE' value64='4100'/>
+<enum name='CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS' value64='4099'/>
+<enum name='CL_DEVICE_MAX_WORK_ITEM_SIZES' value64='4101'/>
+<enum name='CL_DEVICE_MAX_WRITE_IMAGE_ARGS' value64='4111'/>
+<enum name='CL_DEVICE_MEM_BASE_ADDR_ALIGN' value64='4121'/>
+<enum name='CL_DEVICE_MIN_DATA_TYPE_ALIGN_SIZE' value64='4122'/>
+<enum name='CL_DEVICE_NAME' value64='4139'/>
+<enum name='CL_DEVICE_NATIVE_VECTOR_WIDTH_CHAR' value64='4150'/>
+<enum name='CL_DEVICE_NATIVE_VECTOR_WIDTH_DOUBLE' value64='4155'/>
+<enum name='CL_DEVICE_NATIVE_VECTOR_WIDTH_FLOAT' value64='4154'/>
+<enum name='CL_DEVICE_NATIVE_VECTOR_WIDTH_HALF' value64='4156'/>
+<enum name='CL_DEVICE_NATIVE_VECTOR_WIDTH_INT' value64='4152'/>
+<enum name='CL_DEVICE_NATIVE_VECTOR_WIDTH_LONG' value64='4153'/>
+<enum name='CL_DEVICE_NATIVE_VECTOR_WIDTH_SHORT' value64='4151'/>
+<enum name='CL_DEVICE_NOT_AVAILABLE' value64='-2'/>
+<enum name='CL_DEVICE_NOT_FOUND' value64='-1'/>
+<enum name='CL_DEVICE_OPENCL_C_VERSION' value64='4157'/>
+<enum name='CL_DEVICE_PARENT_DEVICE' value64='4162'/>
+<enum name='CL_DEVICE_PARTITION_AFFINITY_DOMAIN' value64='4165'/>
+<enum name='CL_DEVICE_PARTITION_BY_AFFINITY_DOMAIN' value64='4232'/>
+<enum name='CL_DEVICE_PARTITION_BY_COUNTS' value64='4231'/>
+<enum name='CL_DEVICE_PARTITION_BY_COUNTS_LIST_END' value64='0'/>
+<enum name='CL_DEVICE_PARTITION_EQUALLY' value64='4230'/>
+<enum name='CL_DEVICE_PARTITION_FAILED' value64='-18'/>
+<enum name='CL_DEVICE_PARTITION_MAX_SUB_DEVICES' value64='4163'/>
+<enum name='CL_DEVICE_PARTITION_PROPERTIES' value64='4164'/>
+<enum name='CL_DEVICE_PARTITION_TYPE' value64='4166'/>
+<enum name='CL_DEVICE_PLATFORM' value64='4145'/>
+<enum name='CL_DEVICE_PREFERRED_INTEROP_USER_SYNC' value64='4168'/>
+<enum name='CL_DEVICE_PREFERRED_VECTOR_WIDTH_CHAR' value64='4102'/>
+<enum name='CL_DEVICE_PREFERRED_VECTOR_WIDTH_DOUBLE' value64='4107'/>
+<enum name='CL_DEVICE_PREFERRED_VECTOR_WIDTH_FLOAT' value64='4106'/>
+<enum name='CL_DEVICE_PREFERRED_VECTOR_WIDTH_HALF' value64='4148'/>
+<enum name='CL_DEVICE_PREFERRED_VECTOR_WIDTH_INT' value64='4104'/>
+<enum name='CL_DEVICE_PREFERRED_VECTOR_WIDTH_LONG' value64='4105'/>
+<enum name='CL_DEVICE_PREFERRED_VECTOR_WIDTH_SHORT' value64='4103'/>
+<enum name='CL_DEVICE_PRINTF_BUFFER_SIZE' value64='4169'/>
+<enum name='CL_DEVICE_PROFILE' value64='4142'/>
+<enum name='CL_DEVICE_PROFILING_TIMER_RESOLUTION' value64='4133'/>
+<enum name='CL_DEVICE_QUEUE_PROPERTIES' value64='4138'/>
+<enum name='CL_DEVICE_REFERENCE_COUNT' value64='4167'/>
+<enum name='CL_DEVICE_REGISTRY_ID_APPLE' value64='268435504'/>
+<enum name='CL_DEVICE_REMOVABLE_APPLE' value64='268435505'/>
+<enum name='CL_DEVICE_SINGLE_FP_CONFIG' value64='4123'/>
+<enum name='CL_DEVICE_TYPE' value64='4096'/>
+<enum name='CL_DEVICE_TYPE_ACCELERATOR' value64='8'/>
+<enum name='CL_DEVICE_TYPE_ALL' value64='4294967295'/>
+<enum name='CL_DEVICE_TYPE_CPU' value64='2'/>
+<enum name='CL_DEVICE_TYPE_CUSTOM' value64='16'/>
+<enum name='CL_DEVICE_TYPE_DEFAULT' value64='1'/>
+<enum name='CL_DEVICE_TYPE_GPU' value64='4'/>
+<enum name='CL_DEVICE_TYPE_USE_ID' value64='2305843009213693952'/>
+<enum name='CL_DEVICE_VENDOR' value64='4140'/>
+<enum name='CL_DEVICE_VENDOR_ID' value64='4097'/>
+<enum name='CL_DEVICE_VERSION' value64='4143'/>
+<enum name='CL_DISPATCH_QUEUE_PRIORITY_BACKGROUND' value64='1152921504606846976'/>
+<enum name='CL_DISPATCH_QUEUE_PRIORITY_DEFAULT' value64='576460752303423488'/>
+<enum name='CL_DISPATCH_QUEUE_PRIORITY_HIGH' value64='4611686018427387904'/>
+<enum name='CL_DISPATCH_QUEUE_PRIORITY_LOW' value64='9223372036854775808'/>
+<enum name='CL_DRIVER_VERSION' value64='4141'/>
+<enum name='CL_EVENT_COMMAND_EXECUTION_STATUS' value64='4563'/>
+<enum name='CL_EVENT_COMMAND_QUEUE' value64='4560'/>
+<enum name='CL_EVENT_COMMAND_TYPE' value64='4561'/>
+<enum name='CL_EVENT_CONTEXT' value64='4564'/>
+<enum name='CL_EVENT_REFERENCE_COUNT' value64='4562'/>
+<enum name='CL_EXEC_KERNEL' value64='1'/>
+<enum name='CL_EXEC_NATIVE_KERNEL' value64='2'/>
+<enum name='CL_EXEC_STATUS_ERROR_FOR_EVENTS_IN_WAIT_LIST' value64='-14'/>
+<enum name='CL_FALSE' value64='0'/>
+<enum name='CL_FILTER_LINEAR' value64='4417'/>
+<enum name='CL_FILTER_NEAREST' value64='4416'/>
+<enum name='CL_FLOAT' value64='4318'/>
+<enum name='CL_FLT_DIG' value64='6'/>
+<enum name='CL_FLT_EPSILON' value64='0x1.0p-23f'/>
+<enum name='CL_FLT_MANT_DIG' value64='24'/>
+<enum name='CL_FLT_MAX' value64='0x1.fffffep127f'/>
+<enum name='CL_FLT_MAX_10_EXP' value64='38'/>
+<enum name='CL_FLT_MAX_EXP' value64='128'/>
+<enum name='CL_FLT_MIN' value64='0x1.0p-126f'/>
+<enum name='CL_FLT_MIN_10_EXP' value64='-37'/>
+<enum name='CL_FLT_MIN_EXP' value64='-125'/>
+<enum name='CL_FLT_RADIX' value64='2'/>
+<enum name='CL_FP_CORRECTLY_ROUNDED_DIVIDE_SQRT' value64='128'/>
+<enum name='CL_FP_DENORM' value64='1'/>
+<enum name='CL_FP_FMA' value64='32'/>
+<enum name='CL_FP_INF_NAN' value64='2'/>
+<enum name='CL_FP_ROUND_TO_INF' value64='16'/>
+<enum name='CL_FP_ROUND_TO_NEAREST' value64='4'/>
+<enum name='CL_FP_ROUND_TO_ZERO' value64='8'/>
+<enum name='CL_FP_SOFT_FLOAT' value64='64'/>
+<enum name='CL_GLOBAL' value64='2'/>
+<enum name='CL_GL_MIPMAP_LEVEL' value64='8197'/>
+<enum name='CL_GL_NUM_SAMPLES' value64='8210'/>
+<enum name='CL_GL_OBJECT_BUFFER' value64='8192'/>
+<enum name='CL_GL_OBJECT_RENDERBUFFER' value64='8195'/>
+<enum name='CL_GL_OBJECT_TEXTURE1D' value64='8207'/>
+<enum name='CL_GL_OBJECT_TEXTURE1D_ARRAY' value64='8208'/>
+<enum name='CL_GL_OBJECT_TEXTURE2D' value64='8193'/>
+<enum name='CL_GL_OBJECT_TEXTURE2D_ARRAY' value64='8206'/>
+<enum name='CL_GL_OBJECT_TEXTURE3D' value64='8194'/>
+<enum name='CL_GL_OBJECT_TEXTURE_BUFFER' value64='8209'/>
+<enum name='CL_GL_TEXTURE_TARGET' value64='8196'/>
+<enum name='CL_HALF_FLOAT' value64='4317'/>
+<enum name='CL_HAS_HI_LO_VECTOR_FIELDS' value64='1'/>
+<enum name='CL_HAS_NAMED_VECTOR_FIELDS' value64='1'/>
+<enum name='CL_IMAGE_2D' value64='4337'/>
+<enum name='CL_IMAGE_3D' value64='4338'/>
+<enum name='CL_IMAGE_ARRAY_SIZE' value64='4375'/>
+<enum name='CL_IMAGE_BUFFER' value64='4376'/>
+<enum name='CL_IMAGE_DEPTH' value64='4374'/>
+<enum name='CL_IMAGE_ELEMENT_SIZE' value64='4369'/>
+<enum name='CL_IMAGE_FORMAT' value64='4368'/>
+<enum name='CL_IMAGE_FORMAT_MISMATCH' value64='-9'/>
+<enum name='CL_IMAGE_FORMAT_NOT_SUPPORTED' value64='-10'/>
+<enum name='CL_IMAGE_HEIGHT' value64='4373'/>
+<enum name='CL_IMAGE_IOSURFACE_APPLE' value64='268435483'/>
+<enum name='CL_IMAGE_IOSURFACE_PLANE_APPLE' value64='268435484'/>
+<enum name='CL_IMAGE_NUM_MIP_LEVELS' value64='4377'/>
+<enum name='CL_IMAGE_NUM_SAMPLES' value64='4378'/>
+<enum name='CL_IMAGE_ROW_PITCH' value64='4370'/>
+<enum name='CL_IMAGE_SLICE_PITCH' value64='4371'/>
+<enum name='CL_IMAGE_WIDTH' value64='4372'/>
+<enum name='CL_INTENSITY' value64='4280'/>
+<enum name='CL_INT_MAX' value64='2147483647'/>
+<enum name='CL_INT_MIN' value64='-2147483648'/>
+<enum name='CL_INVALID_ARG_INDEX' value64='-49'/>
+<enum name='CL_INVALID_ARG_NAME_APPLE' value64='-1060'/>
+<enum name='CL_INVALID_ARG_SIZE' value64='-51'/>
+<enum name='CL_INVALID_ARG_VALUE' value64='-50'/>
+<enum name='CL_INVALID_BINARY' value64='-42'/>
+<enum name='CL_INVALID_BUFFER_SIZE' value64='-61'/>
+<enum name='CL_INVALID_BUILD_OPTIONS' value64='-43'/>
+<enum name='CL_INVALID_COMMAND_QUEUE' value64='-36'/>
+<enum name='CL_INVALID_COMPILER_OPTIONS' value64='-66'/>
+<enum name='CL_INVALID_CONTEXT' value64='-34'/>
+<enum name='CL_INVALID_DEVICE' value64='-33'/>
+<enum name='CL_INVALID_DEVICE_PARTITION_COUNT' value64='-68'/>
+<enum name='CL_INVALID_DEVICE_TYPE' value64='-31'/>
+<enum name='CL_INVALID_EVENT' value64='-58'/>
+<enum name='CL_INVALID_EVENT_WAIT_LIST' value64='-57'/>
+<enum name='CL_INVALID_GLOBAL_OFFSET' value64='-56'/>
+<enum name='CL_INVALID_GLOBAL_WORK_SIZE' value64='-63'/>
+<enum name='CL_INVALID_GL_CONTEXT_APPLE' value64='-1000'/>
+<enum name='CL_INVALID_GL_OBJECT' value64='-60'/>
+<enum name='CL_INVALID_HOST_PTR' value64='-37'/>
+<enum name='CL_INVALID_IMAGE_DESCRIPTOR' value64='-65'/>
+<enum name='CL_INVALID_IMAGE_FORMAT_DESCRIPTOR' value64='-39'/>
+<enum name='CL_INVALID_IMAGE_SIZE' value64='-40'/>
+<enum name='CL_INVALID_KERNEL' value64='-48'/>
+<enum name='CL_INVALID_KERNEL_ARGS' value64='-52'/>
+<enum name='CL_INVALID_KERNEL_DEFINITION' value64='-47'/>
+<enum name='CL_INVALID_KERNEL_NAME' value64='-46'/>
+<enum name='CL_INVALID_LINKER_OPTIONS' value64='-67'/>
+<enum name='CL_INVALID_MEM_OBJECT' value64='-38'/>
+<enum name='CL_INVALID_MIP_LEVEL' value64='-62'/>
+<enum name='CL_INVALID_OPERATION' value64='-59'/>
+<enum name='CL_INVALID_PLATFORM' value64='-32'/>
+<enum name='CL_INVALID_PROGRAM' value64='-44'/>
+<enum name='CL_INVALID_PROGRAM_EXECUTABLE' value64='-45'/>
+<enum name='CL_INVALID_PROPERTY' value64='-64'/>
+<enum name='CL_INVALID_QUEUE_PROPERTIES' value64='-35'/>
+<enum name='CL_INVALID_SAMPLER' value64='-41'/>
+<enum name='CL_INVALID_VALUE' value64='-30'/>
+<enum name='CL_INVALID_WORK_DIMENSION' value64='-53'/>
+<enum name='CL_INVALID_WORK_GROUP_SIZE' value64='-54'/>
+<enum name='CL_INVALID_WORK_ITEM_SIZE' value64='-55'/>
+<enum name='CL_IOSURFACE_PLANE_APPLE' value64='268435482'/>
+<enum name='CL_IOSURFACE_REF_APPLE' value64='268435481'/>
+<enum name='CL_KERNEL_ARG_ACCESS_NONE' value64='4515'/>
+<enum name='CL_KERNEL_ARG_ACCESS_QUALIFIER' value64='4503'/>
+<enum name='CL_KERNEL_ARG_ACCESS_READ_ONLY' value64='4512'/>
+<enum name='CL_KERNEL_ARG_ACCESS_READ_WRITE' value64='4514'/>
+<enum name='CL_KERNEL_ARG_ACCESS_WRITE_ONLY' value64='4513'/>
+<enum name='CL_KERNEL_ARG_ADDRESS_CONSTANT' value64='4509'/>
+<enum name='CL_KERNEL_ARG_ADDRESS_GLOBAL' value64='4507'/>
+<enum name='CL_KERNEL_ARG_ADDRESS_LOCAL' value64='4508'/>
+<enum name='CL_KERNEL_ARG_ADDRESS_PRIVATE' value64='4510'/>
+<enum name='CL_KERNEL_ARG_ADDRESS_QUALIFIER' value64='4502'/>
+<enum name='CL_KERNEL_ARG_INFO_NOT_AVAILABLE' value64='-19'/>
+<enum name='CL_KERNEL_ARG_NAME' value64='4506'/>
+<enum name='CL_KERNEL_ARG_TYPE_CONST' value64='1'/>
+<enum name='CL_KERNEL_ARG_TYPE_NAME' value64='4504'/>
+<enum name='CL_KERNEL_ARG_TYPE_NONE' value64='0'/>
+<enum name='CL_KERNEL_ARG_TYPE_QUALIFIER' value64='4505'/>
+<enum name='CL_KERNEL_ARG_TYPE_RESTRICT' value64='2'/>
+<enum name='CL_KERNEL_ARG_TYPE_VOLATILE' value64='4'/>
+<enum name='CL_KERNEL_ATTRIBUTES' value64='4501'/>
+<enum name='CL_KERNEL_COMPILE_WORK_GROUP_SIZE' value64='4529'/>
+<enum name='CL_KERNEL_CONTEXT' value64='4499'/>
+<enum name='CL_KERNEL_FUNCTION_NAME' value64='4496'/>
+<enum name='CL_KERNEL_GLOBAL_WORK_SIZE' value64='4533'/>
+<enum name='CL_KERNEL_LOCAL_MEM_SIZE' value64='4530'/>
+<enum name='CL_KERNEL_NUM_ARGS' value64='4497'/>
+<enum name='CL_KERNEL_PREFERRED_WORK_GROUP_SIZE_MULTIPLE' value64='4531'/>
+<enum name='CL_KERNEL_PRIVATE_MEM_SIZE' value64='4532'/>
+<enum name='CL_KERNEL_PROGRAM' value64='4500'/>
+<enum name='CL_KERNEL_REFERENCE_COUNT' value64='4498'/>
+<enum name='CL_KERNEL_WORK_GROUP_SIZE' value64='4528'/>
+<enum name='CL_LINKER_NOT_AVAILABLE' value64='-16'/>
+<enum name='CL_LINK_PROGRAM_FAILURE' value64='-17'/>
+<enum name='CL_LOCAL' value64='1'/>
+<enum name='CL_LONG_MAX' value64='9223372036854775807'/>
+<enum name='CL_LONG_MIN' value64='-9223372036854775808'/>
+<enum name='CL_LUMINANCE' value64='4281'/>
+<enum name='CL_MAP_FAILURE' value64='-12'/>
+<enum name='CL_MAP_READ' value64='1'/>
+<enum name='CL_MAP_WRITE' value64='2'/>
+<enum name='CL_MAP_WRITE_INVALIDATE_REGION' value64='4'/>
+<enum name='CL_MAXFLOAT' value64='3.40282347E+38'/>
+<enum name='CL_MEM_ALLOC_HOST_PTR' value64='16'/>
+<enum name='CL_MEM_ASSOCIATED_MEMOBJECT' value64='4359'/>
+<enum name='CL_MEM_CONTEXT' value64='4358'/>
+<enum name='CL_MEM_COPY_HOST_PTR' value64='32'/>
+<enum name='CL_MEM_COPY_OVERLAP' value64='-8'/>
+<enum name='CL_MEM_FLAGS' value64='4353'/>
+<enum name='CL_MEM_HOST_NO_ACCESS' value64='512'/>
+<enum name='CL_MEM_HOST_PTR' value64='4355'/>
+<enum name='CL_MEM_HOST_READ_ONLY' value64='256'/>
+<enum name='CL_MEM_HOST_WRITE_ONLY' value64='128'/>
+<enum name='CL_MEM_MAP_COUNT' value64='4356'/>
+<enum name='CL_MEM_OBJECT_ALLOCATION_FAILURE' value64='-4'/>
+<enum name='CL_MEM_OBJECT_BUFFER' value64='4336'/>
+<enum name='CL_MEM_OBJECT_IMAGE1D' value64='4340'/>
+<enum name='CL_MEM_OBJECT_IMAGE1D_ARRAY' value64='4341'/>
+<enum name='CL_MEM_OBJECT_IMAGE1D_BUFFER' value64='4342'/>
+<enum name='CL_MEM_OBJECT_IMAGE2D' value64='4337'/>
+<enum name='CL_MEM_OBJECT_IMAGE2D_ARRAY' value64='4339'/>
+<enum name='CL_MEM_OBJECT_IMAGE3D' value64='4338'/>
+<enum name='CL_MEM_OFFSET' value64='4360'/>
+<enum name='CL_MEM_READ_ONLY' value64='4'/>
+<enum name='CL_MEM_READ_WRITE' value64='1'/>
+<enum name='CL_MEM_REFERENCE_COUNT' value64='4357'/>
+<enum name='CL_MEM_SIZE' value64='4354'/>
+<enum name='CL_MEM_TYPE' value64='4352'/>
+<enum name='CL_MEM_USE_HOST_PTR' value64='8'/>
+<enum name='CL_MEM_WRITE_ONLY' value64='2'/>
+<enum name='CL_MIGRATE_MEM_OBJECT_CONTENT_UNDEFINED' value64='2'/>
+<enum name='CL_MIGRATE_MEM_OBJECT_HOST' value64='1'/>
+<enum name='CL_MISALIGNED_SUB_BUFFER_OFFSET' value64='-13'/>
+<enum name='CL_M_1_PI' value64='0.318309886183790691216'/>
+<enum name='CL_M_1_PI_F' value64='0.31830987334251f'/>
+<enum name='CL_M_2_PI' value64='0.636619772367581382433'/>
+<enum name='CL_M_2_PI_F' value64='0.63661974668503f'/>
+<enum name='CL_M_2_SQRTPI' value64='1.128379167095512558561'/>
+<enum name='CL_M_2_SQRTPI_F' value64='1.12837922573090f'/>
+<enum name='CL_M_E' value64='2.718281828459045090796'/>
+<enum name='CL_M_E_F' value64='2.71828174591064f'/>
+<enum name='CL_M_LN10' value64='2.302585092994045901094'/>
+<enum name='CL_M_LN10_F' value64='2.30258512496948f'/>
+<enum name='CL_M_LN2' value64='0.693147180559945286227'/>
+<enum name='CL_M_LN2_F' value64='0.69314718246460f'/>
+<enum name='CL_M_LOG10E' value64='0.434294481903251816668'/>
+<enum name='CL_M_LOG10E_F' value64='0.43429449200630f'/>
+<enum name='CL_M_LOG2E' value64='1.442695040888963387005'/>
+<enum name='CL_M_LOG2E_F' value64='1.44269502162933f'/>
+<enum name='CL_M_PI' value64='3.141592653589793115998'/>
+<enum name='CL_M_PI_2' value64='1.570796326794896557999'/>
+<enum name='CL_M_PI_2_F' value64='1.57079637050629f'/>
+<enum name='CL_M_PI_4' value64='0.785398163397448278999'/>
+<enum name='CL_M_PI_4_F' value64='0.78539818525314f'/>
+<enum name='CL_M_PI_F' value64='3.14159274101257f'/>
+<enum name='CL_M_SQRT1_2' value64='0.707106781186547572737'/>
+<enum name='CL_M_SQRT1_2_F' value64='0.70710676908493f'/>
+<enum name='CL_M_SQRT2' value64='1.414213562373095145475'/>
+<enum name='CL_M_SQRT2_F' value64='1.41421353816986f'/>
+<enum name='CL_NONE' value64='0'/>
+<enum name='CL_NON_BLOCKING' value64='0'/>
+<enum name='CL_OBJECT_NAME_APPLE' value64='268435480'/>
+<enum name='CL_OUT_OF_HOST_MEMORY' value64='-6'/>
+<enum name='CL_OUT_OF_RESOURCES' value64='-5'/>
+<enum name='CL_PLATFORM_EXTENSIONS' value64='2308'/>
+<enum name='CL_PLATFORM_NAME' value64='2306'/>
+<enum name='CL_PLATFORM_PROFILE' value64='2304'/>
+<enum name='CL_PLATFORM_VENDOR' value64='2307'/>
+<enum name='CL_PLATFORM_VERSION' value64='2305'/>
+<enum name='CL_PROFILING_COMMAND_END' value64='4739'/>
+<enum name='CL_PROFILING_COMMAND_QUEUED' value64='4736'/>
+<enum name='CL_PROFILING_COMMAND_START' value64='4738'/>
+<enum name='CL_PROFILING_COMMAND_SUBMIT' value64='4737'/>
+<enum name='CL_PROFILING_INFO_NOT_AVAILABLE' value64='-7'/>
+<enum name='CL_PROGRAM_BINARIES' value64='4454'/>
+<enum name='CL_PROGRAM_BINARY_SIZES' value64='4453'/>
+<enum name='CL_PROGRAM_BINARY_TYPE' value64='4484'/>
+<enum name='CL_PROGRAM_BINARY_TYPE_COMPILED_OBJECT' value64='1'/>
+<enum name='CL_PROGRAM_BINARY_TYPE_EXECUTABLE' value64='4'/>
+<enum name='CL_PROGRAM_BINARY_TYPE_LIBRARY' value64='2'/>
+<enum name='CL_PROGRAM_BINARY_TYPE_NONE' value64='0'/>
+<enum name='CL_PROGRAM_BUILD_LOG' value64='4483'/>
+<enum name='CL_PROGRAM_BUILD_OPTIONS' value64='4482'/>
+<enum name='CL_PROGRAM_BUILD_STATUS' value64='4481'/>
+<enum name='CL_PROGRAM_CONTEXT' value64='4449'/>
+<enum name='CL_PROGRAM_DEVICES' value64='4451'/>
+<enum name='CL_PROGRAM_KERNEL_NAMES' value64='4456'/>
+<enum name='CL_PROGRAM_KERNEL_NAMES_APPLE' value64='268435461'/>
+<enum name='CL_PROGRAM_NUM_DEVICES' value64='4450'/>
+<enum name='CL_PROGRAM_NUM_KERNELS' value64='4455'/>
+<enum name='CL_PROGRAM_NUM_KERNELS_APPLE' value64='268435460'/>
+<enum name='CL_PROGRAM_REFERENCE_COUNT' value64='4448'/>
+<enum name='CL_PROGRAM_SOURCE' value64='4452'/>
+<enum name='CL_QUEUED' value64='3'/>
+<enum name='CL_QUEUE_CONTEXT' value64='4240'/>
+<enum name='CL_QUEUE_DEVICE' value64='4241'/>
+<enum name='CL_QUEUE_NUM_COMPUTE_UNITS_APPLE' value64='268435476'/>
+<enum name='CL_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE' value64='1'/>
+<enum name='CL_QUEUE_PRIORITY_APPLE' value64='268435475'/>
+<enum name='CL_QUEUE_PRIORITY_BACKGROUND_APPLE' value64='268435477'/>
+<enum name='CL_QUEUE_PRIORITY_DEFAULT_APPLE' value64='268435478'/>
+<enum name='CL_QUEUE_PROFILING_ENABLE' value64='2'/>
+<enum name='CL_QUEUE_PROPERTIES' value64='4243'/>
+<enum name='CL_QUEUE_REFERENCE_COUNT' value64='4242'/>
+<enum name='CL_R' value64='4272'/>
+<enum name='CL_RA' value64='4275'/>
+<enum name='CL_READ_ONLY_CACHE' value64='1'/>
+<enum name='CL_READ_WRITE_CACHE' value64='2'/>
+<enum name='CL_RG' value64='4274'/>
+<enum name='CL_RGB' value64='4276'/>
+<enum name='CL_RGBA' value64='4277'/>
+<enum name='CL_RGBx' value64='4284'/>
+<enum name='CL_RGx' value64='4283'/>
+<enum name='CL_RUNNING' value64='1'/>
+<enum name='CL_Rx' value64='4282'/>
+<enum name='CL_SAMPLER_ADDRESSING_MODE' value64='4435'/>
+<enum name='CL_SAMPLER_CONTEXT' value64='4433'/>
+<enum name='CL_SAMPLER_FILTER_MODE' value64='4436'/>
+<enum name='CL_SAMPLER_NORMALIZED_COORDS' value64='4434'/>
+<enum name='CL_SAMPLER_REFERENCE_COUNT' value64='4432'/>
+<enum name='CL_SCHAR_MAX' value64='127'/>
+<enum name='CL_SCHAR_MIN' value64='-128'/>
+<enum name='CL_SFIXED14_APPLE' value64='268435464'/>
+<enum name='CL_SHRT_MAX' value64='32767'/>
+<enum name='CL_SHRT_MIN' value64='-32768'/>
+<enum name='CL_SIGNED_INT16' value64='4312'/>
+<enum name='CL_SIGNED_INT32' value64='4313'/>
+<enum name='CL_SIGNED_INT8' value64='4311'/>
+<enum name='CL_SNORM_INT16' value64='4305'/>
+<enum name='CL_SNORM_INT8' value64='4304'/>
+<enum name='CL_SUBMITTED' value64='2'/>
+<enum name='CL_SUCCESS' value64='0'/>
+<enum name='CL_TRUE' value64='1'/>
+<enum name='CL_UCHAR_MAX' value64='255'/>
+<enum name='CL_UINT_MAX' value64='4294967295'/>
+<enum name='CL_ULONG_MAX' value64='18446744073709551615'/>
+<enum name='CL_UNORM_INT16' value64='4307'/>
+<enum name='CL_UNORM_INT24' value64='4319'/>
+<enum name='CL_UNORM_INT8' value64='4306'/>
+<enum name='CL_UNORM_INT_101010' value64='4310'/>
+<enum name='CL_UNORM_SHORT_555' value64='4309'/>
+<enum name='CL_UNORM_SHORT_565' value64='4308'/>
+<enum name='CL_UNSIGNED_INT16' value64='4315'/>
+<enum name='CL_UNSIGNED_INT32' value64='4316'/>
+<enum name='CL_UNSIGNED_INT8' value64='4314'/>
+<enum name='CL_USHRT_MAX' value64='65535'/>
+<enum name='CL_VERSION_1_0' value64='1'/>
+<enum name='CL_VERSION_1_1' value64='1'/>
+<enum name='CL_VERSION_1_2' value64='1'/>
+<enum name='CL_YCbYCr_APPLE' value64='268435472'/>
+<enum name='cl_APPLE_command_queue_priority' value64='1'/>
+<enum name='cl_APPLE_command_queue_select_compute_units' value64='1'/>
+<function name='clBuildProgram'>
+<arg declared_type64='cl_program' type64='^{_cl_program=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_device_id*' type64='^^{_cl_device_id}'/>
+<arg const='true' declared_type64='char*' type64='*'/>
+<arg declared_type64='void (*)(cl_program, void *)' function_pointer='true' type64='^?'>
+<arg declared_type64='cl_program' type64='^{_cl_program=}'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clCompileProgram'>
+<arg declared_type64='cl_program' type64='^{_cl_program=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_device_id*' type64='^^{_cl_device_id}'/>
+<arg const='true' declared_type64='char*' type64='*'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_program*' type64='^^{_cl_program}'/>
+<arg const='true' declared_type64='char**' type64='^*'/>
+<arg declared_type64='void (*)(cl_program, void *)' function_pointer='true' type64='^?'>
+<arg declared_type64='cl_program' type64='^{_cl_program=}'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clCreateBuffer'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_mem_flags' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+</function>
+<function name='clCreateCommandQueue'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_device_id' type64='^{_cl_device_id=}'/>
+<arg declared_type64='cl_command_queue_properties' type64='Q'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+</function>
+<function name='clCreateCommandQueueWithPropertiesAPPLE'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_device_id' type64='^{_cl_device_id=}'/>
+<arg const='true' declared_type64='cl_queue_properties_APPLE*' type64='^q'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+</function>
+<function name='clCreateContext'>
+<arg const='true' declared_type64='cl_context_properties*' type64='^q'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_device_id*' type64='^^{_cl_device_id}'/>
+<arg declared_type64='void (*)( char *, void *, size_t, void *)' function_pointer='true' type64='^?'>
+<arg const='true' declared_type64='char*' type64='*'/>
+<arg const='true' declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_context' type64='^{_cl_context=}'/>
+</function>
+<function name='clCreateContextAndCommandQueueAPPLE'>
+<arg const='true' declared_type64='cl_context_properties*' type64='^q'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_device_id*' type64='^^{_cl_device_id}'/>
+<arg declared_type64='void (*)( char *, void *, size_t, void *)' function_pointer='true' type64='^?'>
+<arg const='true' declared_type64='char*' type64='*'/>
+<arg const='true' declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='cl_command_queue_properties' type64='Q'/>
+<arg declared_type64='cl_context*' type64='^^{_cl_context}'/>
+<arg declared_type64='cl_command_queue*' type64='^^{_cl_command_queue}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clCreateContextFromType'>
+<arg const='true' declared_type64='cl_context_properties*' type64='^q'/>
+<arg declared_type64='cl_device_type' type64='Q'/>
+<arg declared_type64='void (*)( char *, void *, size_t, void *)' function_pointer='true' type64='^?'>
+<arg const='true' declared_type64='char*' type64='*'/>
+<arg const='true' declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_context' type64='^{_cl_context=}'/>
+</function>
+<function name='clCreateDAGAPPLE'>
+<arg declared_type64='cl_context' name='c' type64='^{_cl_context=}'/>
+<retval declared_type64='cl_dag' type64='^{_cl_dag=}'/>
+</function>
+<function name='clCreateEventFromGLsyncKHR'>
+<arg declared_type64='cl_context _Nonnull' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_GLsync _Nonnull' type64='^{__GLsync=}'/>
+<arg declared_type64='cl_int * _Nullable' type64='^i'/>
+<retval declared_type64='cl_event _Nullable' type64='^{_cl_event=}'/>
+</function>
+<function name='clCreateFromGLBuffer'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_mem_flags' type64='Q'/>
+<arg declared_type64='cl_GLuint' type64='I'/>
+<arg declared_type64='int*' type64='^i'/>
+<retval declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+</function>
+<function name='clCreateFromGLRenderbuffer'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_mem_flags' type64='Q'/>
+<arg declared_type64='cl_GLuint' type64='I'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+</function>
+<function name='clCreateFromGLTexture'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_mem_flags' type64='Q'/>
+<arg declared_type64='cl_GLenum' type64='I'/>
+<arg declared_type64='cl_GLint' type64='i'/>
+<arg declared_type64='cl_GLuint' type64='I'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+</function>
+<function name='clCreateFromGLTexture2D'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_mem_flags' type64='Q'/>
+<arg declared_type64='cl_GLenum' type64='I'/>
+<arg declared_type64='cl_GLint' type64='i'/>
+<arg declared_type64='cl_GLuint' type64='I'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+</function>
+<function name='clCreateFromGLTexture3D'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_mem_flags' type64='Q'/>
+<arg declared_type64='cl_GLenum' type64='I'/>
+<arg declared_type64='cl_GLint' type64='i'/>
+<arg declared_type64='cl_GLuint' type64='I'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+</function>
+<function name='clCreateImage'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_mem_flags' type64='Q'/>
+<arg const='true' declared_type64='cl_image_format*' type64='^{_cl_image_format=II}'/>
+<arg const='true' declared_type64='cl_image_desc*' type64='^{_cl_image_desc=IQQQQQQII^{_cl_mem}}'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+</function>
+<function name='clCreateImage2D'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_mem_flags' type64='Q'/>
+<arg const='true' declared_type64='cl_image_format*' type64='^{_cl_image_format=II}'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+</function>
+<function name='clCreateImage3D'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_mem_flags' type64='Q'/>
+<arg const='true' declared_type64='cl_image_format*' type64='^{_cl_image_format=II}'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+</function>
+<function name='clCreateImageFromIOSurface2DAPPLE'>
+<arg declared_type64='cl_context _Nonnull' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_mem_flags' type64='Q'/>
+<arg const='true' declared_type64='cl_image_format * _Nonnull' type64='^{_cl_image_format=II}'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='IOSurfaceRef _Nonnull' type64='^{__IOSurface=}'/>
+<arg declared_type64='cl_int * _Nullable' type64='^i'/>
+<retval declared_type64='cl_mem _Nullable' type64='^{_cl_mem=}'/>
+</function>
+<function name='clCreateImageFromIOSurfaceWithPropertiesAPPLE'>
+<arg declared_type64='cl_context _Nonnull' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_mem_flags' type64='Q'/>
+<arg const='true' declared_type64='cl_image_format * _Nonnull' type64='^{_cl_image_format=II}'/>
+<arg const='true' declared_type64='cl_image_desc * _Nonnull' type64='^{_cl_image_desc=IQQQQQQII^{_cl_mem}}'/>
+<arg declared_type64='cl_iosurface_properties_APPLE * _Nonnull' type64='^q'/>
+<arg declared_type64='cl_int * _Nullable' type64='^i'/>
+<retval declared_type64='cl_mem _Nullable' type64='^{_cl_mem=}'/>
+</function>
+<function name='clCreateKernel'>
+<arg declared_type64='cl_program' type64='^{_cl_program=}'/>
+<arg const='true' declared_type64='char*' type64='*'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_kernel' type64='^{_cl_kernel=}'/>
+</function>
+<function name='clCreateKernelFromDAGAPPLE'>
+<arg declared_type64='cl_dag' name='d' type64='^{_cl_dag=}'/>
+<arg declared_type64='cl_uint' name='n' type64='I'/>
+<arg const='true' declared_type64='cl_device_id*' name='list' type64='^^{_cl_device_id}'/>
+<retval declared_type64='cl_kernel' type64='^{_cl_kernel=}'/>
+</function>
+<function name='clCreateKernelsInProgram'>
+<arg declared_type64='cl_program' type64='^{_cl_program=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg declared_type64='cl_kernel*' type64='^^{_cl_kernel}'/>
+<arg declared_type64='cl_uint*' type64='^I'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clCreateProgramAndKernelsWithSourceAPPLE'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='char**' type64='^*'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_device_id*' type64='^^{_cl_device_id}'/>
+<arg const='true' declared_type64='char*' type64='*'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='char**' type64='^*'/>
+<arg declared_type64='cl_program*' type64='^^{_cl_program}'/>
+<arg declared_type64='cl_kernel*' type64='^^{_cl_kernel}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clCreateProgramWithBinary'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_device_id*' type64='^^{_cl_device_id}'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg const='true' declared_type64='unsigned char**' type64='^*'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_program' type64='^{_cl_program=}'/>
+</function>
+<function name='clCreateProgramWithBuiltInKernels'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_device_id*' type64='^^{_cl_device_id}'/>
+<arg const='true' declared_type64='char*' type64='*'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_program' type64='^{_cl_program=}'/>
+</function>
+<function name='clCreateProgramWithSource'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='char**' type64='^*'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_program' type64='^{_cl_program=}'/>
+</function>
+<function name='clCreateSampler'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_bool' type64='I'/>
+<arg declared_type64='cl_addressing_mode' type64='I'/>
+<arg declared_type64='cl_filter_mode' type64='I'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_sampler' type64='^{_cl_sampler=}'/>
+</function>
+<function name='clCreateSubBuffer'>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_mem_flags' type64='Q'/>
+<arg declared_type64='cl_buffer_create_type' type64='I'/>
+<arg const='true' declared_type64='void*' type64='^v'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+</function>
+<function name='clCreateSubDevices'>
+<arg declared_type64='cl_device_id' type64='^{_cl_device_id=}'/>
+<arg const='true' declared_type64='cl_device_partition_property*' type64='^q'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg declared_type64='cl_device_id*' type64='^^{_cl_device_id}'/>
+<arg declared_type64='cl_uint*' type64='^I'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clCreateUserEvent'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_event' type64='^{_cl_event=}'/>
+</function>
+<function name='clEnqueueAcquireGLObjects'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_mem*' type64='^^{_cl_mem}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueBarrier'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueBarrierWithWaitList'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueCopyBuffer'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueCopyBufferRect'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueCopyBufferToImage'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueCopyImage'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueCopyImageToBuffer'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueFillBuffer'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg const='true' declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueFillImage'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg const='true' declared_type64='void*' type64='^v'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueMapBuffer'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_bool' type64='I'/>
+<arg declared_type64='cl_map_flags' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='void*' type64='^v'/>
+</function>
+<function name='clEnqueueMapImage'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_bool' type64='I'/>
+<arg declared_type64='cl_map_flags' type64='Q'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg declared_type64='size_t*' type64='^Q'/>
+<arg declared_type64='size_t*' type64='^Q'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='void*' type64='^v'/>
+</function>
+<function name='clEnqueueMarker'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueMarkerWithWaitList'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueMigrateMemObjects'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_mem*' type64='^^{_cl_mem}'/>
+<arg declared_type64='cl_mem_migration_flags' type64='Q'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueNDRangeKernel'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_kernel' type64='^{_cl_kernel=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueNativeKernel'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='void (*)(void *)' function_pointer='true' type64='^?'>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_mem*' type64='^^{_cl_mem}'/>
+<arg const='true' declared_type64='void**' type64='^^v'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueReadBuffer'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_bool' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueReadBufferRect'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_bool' type64='I'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueReadImage'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_bool' type64='I'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueReleaseGLObjects'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_mem*' type64='^^{_cl_mem}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueTask'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_kernel' type64='^{_cl_kernel=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueUnmapMemObject'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueWaitForEvents'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueWriteBuffer'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_bool' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg const='true' declared_type64='void*' type64='^v'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueWriteBufferRect'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_bool' type64='I'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg const='true' declared_type64='void*' type64='^v'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clEnqueueWriteImage'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_bool' type64='I'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' type64='^Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg const='true' declared_type64='void*' type64='^v'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<arg declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clFinish'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clFlush'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetCommandQueueInfo'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<arg declared_type64='cl_command_queue_info' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t*' type64='^Q'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetContextInfo'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_context_info' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t*' type64='^Q'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetDAGNodeAPPLE'>
+<arg declared_type64='cl_dag' name='d' type64='^{_cl_dag=}'/>
+<arg declared_type64='cl_kernel' name='f' type64='^{_cl_kernel=}'/>
+<arg declared_type64='cl_dag_node*' name='args' type64='^i'/>
+<arg declared_type64='unsigned int*' name='arg_indices' type64='^I'/>
+<arg declared_type64='unsigned int' name='nargs' type64='I'/>
+<retval declared_type64='cl_dag_node' type64='i'/>
+</function>
+<function name='clGetDeviceIDs'>
+<arg declared_type64='cl_platform_id' type64='^{_cl_platform_id=}'/>
+<arg declared_type64='cl_device_type' type64='Q'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg declared_type64='cl_device_id*' type64='^^{_cl_device_id}'/>
+<arg declared_type64='cl_uint*' type64='^I'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetDeviceInfo'>
+<arg declared_type64='cl_device_id' type64='^{_cl_device_id=}'/>
+<arg declared_type64='cl_device_info' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t*' type64='^Q'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetEventInfo'>
+<arg declared_type64='cl_event' type64='^{_cl_event=}'/>
+<arg declared_type64='cl_event_info' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t*' type64='^Q'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetEventProfilingInfo'>
+<arg declared_type64='cl_event' type64='^{_cl_event=}'/>
+<arg declared_type64='cl_profiling_info' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t*' type64='^Q'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetExtensionFunctionAddress'>
+<arg const='true' declared_type64='char*' type64='*'/>
+<retval declared_type64='void*' type64='^v'/>
+</function>
+<function name='clGetExtensionFunctionAddressForPlatform'>
+<arg declared_type64='cl_platform_id' type64='^{_cl_platform_id=}'/>
+<arg const='true' declared_type64='char*' type64='*'/>
+<retval declared_type64='void*' type64='^v'/>
+</function>
+<function name='clGetGLContextInfoAPPLE'>
+<arg declared_type64='cl_context _Nonnull' type64='^{_cl_context=}'/>
+<arg declared_type64='void * _Nonnull' type64='^v'/>
+<arg declared_type64='cl_gl_platform_info' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<arg declared_type64='size_t * _Nullable' type64='^Q'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetGLObjectInfo'>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_gl_object_type*' type64='^I'/>
+<arg declared_type64='cl_GLuint*' type64='^I'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetGLTextureInfo'>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_gl_texture_info' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t*' type64='^Q'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetImageInfo'>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_image_info' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t*' type64='^Q'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetKernelArgInfo'>
+<arg declared_type64='cl_kernel' type64='^{_cl_kernel=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg declared_type64='cl_kernel_arg_info' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t*' type64='^Q'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetKernelInfo'>
+<arg declared_type64='cl_kernel' type64='^{_cl_kernel=}'/>
+<arg declared_type64='cl_kernel_info' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t*' type64='^Q'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetKernelWorkGroupInfo'>
+<arg declared_type64='cl_kernel' type64='^{_cl_kernel=}'/>
+<arg declared_type64='cl_device_id' type64='^{_cl_device_id=}'/>
+<arg declared_type64='cl_kernel_work_group_info' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t*' type64='^Q'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetMemObjectInfo'>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_mem_info' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t*' type64='^Q'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetPlatformIDs'>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg declared_type64='cl_platform_id*' type64='^^{_cl_platform_id}'/>
+<arg declared_type64='cl_uint*' type64='^I'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetPlatformInfo'>
+<arg declared_type64='cl_platform_id' type64='^{_cl_platform_id=}'/>
+<arg declared_type64='cl_platform_info' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t*' type64='^Q'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetProgramBuildInfo'>
+<arg declared_type64='cl_program' type64='^{_cl_program=}'/>
+<arg declared_type64='cl_device_id' type64='^{_cl_device_id=}'/>
+<arg declared_type64='cl_program_build_info' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t*' type64='^Q'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetProgramInfo'>
+<arg declared_type64='cl_program' type64='^{_cl_program=}'/>
+<arg declared_type64='cl_program_info' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t*' type64='^Q'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetSamplerInfo'>
+<arg declared_type64='cl_sampler' type64='^{_cl_sampler=}'/>
+<arg declared_type64='cl_sampler_info' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t*' type64='^Q'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clGetSupportedImageFormats'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_mem_flags' type64='Q'/>
+<arg declared_type64='cl_mem_object_type' type64='I'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg declared_type64='cl_image_format*' type64='^{_cl_image_format=II}'/>
+<arg declared_type64='cl_uint*' type64='^I'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clLinkProgram'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_device_id*' type64='^^{_cl_device_id}'/>
+<arg const='true' declared_type64='char*' type64='*'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_program*' type64='^^{_cl_program}'/>
+<arg declared_type64='void (*)(cl_program, void *)' function_pointer='true' type64='^?'>
+<arg declared_type64='cl_program' type64='^{_cl_program=}'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='void*' type64='^v'/>
+<arg declared_type64='cl_int*' type64='^i'/>
+<retval declared_type64='cl_program' type64='^{_cl_program=}'/>
+</function>
+<function name='clLogMessagesToStderrAPPLE'>
+<arg const='true' declared_type64='char*' type64='*'/>
+<arg const='true' declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='clLogMessagesToStdoutAPPLE'>
+<arg const='true' declared_type64='char*' type64='*'/>
+<arg const='true' declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='clLogMessagesToSystemLogAPPLE'>
+<arg const='true' declared_type64='char*' type64='*'/>
+<arg const='true' declared_type64='void*' type64='^v'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='clReleaseCommandQueue'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clReleaseContext'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clReleaseDAGAPPLE'>
+<arg declared_type64='cl_dag' name='dag' type64='^{_cl_dag=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='clReleaseDevice'>
+<arg declared_type64='cl_device_id' type64='^{_cl_device_id=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clReleaseEvent'>
+<arg declared_type64='cl_event' type64='^{_cl_event=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clReleaseKernel'>
+<arg declared_type64='cl_kernel' type64='^{_cl_kernel=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clReleaseMemObject'>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clReleaseProgram'>
+<arg declared_type64='cl_program' type64='^{_cl_program=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clReleaseSampler'>
+<arg declared_type64='cl_sampler' type64='^{_cl_sampler=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clRetainCommandQueue'>
+<arg declared_type64='cl_command_queue' type64='^{_cl_command_queue=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clRetainContext'>
+<arg declared_type64='cl_context' type64='^{_cl_context=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clRetainDevice'>
+<arg declared_type64='cl_device_id' type64='^{_cl_device_id=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clRetainEvent'>
+<arg declared_type64='cl_event' type64='^{_cl_event=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clRetainKernel'>
+<arg declared_type64='cl_kernel' type64='^{_cl_kernel=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clRetainMemObject'>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clRetainProgram'>
+<arg declared_type64='cl_program' type64='^{_cl_program=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clRetainSampler'>
+<arg declared_type64='cl_sampler' type64='^{_cl_sampler=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clSetEventCallback'>
+<arg declared_type64='cl_event' type64='^{_cl_event=}'/>
+<arg declared_type64='cl_int' type64='i'/>
+<arg declared_type64='void (*)(cl_event, cl_int, void *)' function_pointer='true' type64='^?'>
+<arg declared_type64='cl_event' type64='^{_cl_event=}'/>
+<arg declared_type64='cl_int' type64='i'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clSetKernelArg'>
+<arg declared_type64='cl_kernel' type64='^{_cl_kernel=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg const='true' declared_type64='void*' type64='^v'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clSetKernelArgByNameAPPLE'>
+<arg declared_type64='cl_kernel' type64='^{_cl_kernel=}'/>
+<arg const='true' declared_type64='char*' type64='*'/>
+<arg declared_type64='size_t' type64='Q'/>
+<arg const='true' declared_type64='void*' type64='^v'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clSetKernelArgsListAPPLE' variadic='true'>
+<arg declared_type64='cl_kernel' type64='^{_cl_kernel=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clSetKernelArgsVaListAPPLE'>
+<arg declared_type64='cl_kernel' type64='^{_cl_kernel=}'/>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg declared_type64='struct __va_list_tag*' type64='^{__va_list_tag=II^v^v}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clSetMemObjectDestructorAPPLE'>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='void (*)(cl_mem, void *)' function_pointer='true' type64='^?'>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clSetMemObjectDestructorCallback'>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='void (*)(cl_mem, void *)' function_pointer='true' type64='^?'>
+<arg declared_type64='cl_mem' type64='^{_cl_mem=}'/>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='void*' type64='^v'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clSetUserEventStatus'>
+<arg declared_type64='cl_event' type64='^{_cl_event=}'/>
+<arg declared_type64='cl_int' type64='i'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clUnloadCompiler'>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clUnloadPlatformCompiler'>
+<arg declared_type64='cl_platform_id' type64='^{_cl_platform_id=}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='clWaitForEvents'>
+<arg declared_type64='cl_uint' type64='I'/>
+<arg const='true' declared_type64='cl_event*' type64='^^{_cl_event}'/>
+<retval declared_type64='cl_int' type64='i'/>
+</function>
+<function name='gclBuildProgramAPPLE'>
+<arg declared_type64='char*' name='filename' type64='*'/>
+<arg declared_type64='block_kernel_map*' name='map' type64='^{block_kernel_map=^{_cl_program}Q^?^{_block_kernel_pair=^v^{_cl_kernel}}}'/>
+<retval declared_type64='int' type64='i'/>
+</function>
+<function name='gclBuildProgramBinaryAPPLE'>
+<arg const='true' declared_type64='char*' name='filename' type64='*'/>
+<arg const='true' declared_type64='char*' name='bundle_id' type64='*'/>
+<arg declared_type64='block_kernel_map*' name='map' type64='^{block_kernel_map=^{_cl_program}Q^?^{_block_kernel_pair=^v^{_cl_kernel}}}'/>
+<arg const='true' declared_type64='char*' name='build_opts' type64='*'/>
+<retval declared_type64='int' type64='i'/>
+</function>
+<function name='gclCreateArgsAPPLE'>
+<arg declared_type64='cl_kernel' name='k' type64='^{_cl_kernel=}'/>
+<arg declared_type64='kargs_struct*' name='args' type64='^{kargs_struct=^Q^Q^^v}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gclDeleteArgsAPPLE'>
+<arg declared_type64='cl_kernel' name='k' type64='^{_cl_kernel=}'/>
+<arg declared_type64='kargs_struct*' name='args' type64='^{kargs_struct=^Q^Q^^v}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gclExecKernelAPPLE'>
+<arg declared_type64='cl_kernel' name='k' type64='^{_cl_kernel=}'/>
+<arg const='true' declared_type64='cl_ndrange*' name='ndrange' type64='^{_cl_ndrange=Q[3Q][3Q][3Q]}'/>
+<arg declared_type64='kargs_struct*' name='args' type64='^{kargs_struct=^Q^Q^^v}'/>
+<retval declared_type64='int' type64='i'/>
+</function>
+<function name='gclRegisterBlockKernelMap'>
+<arg declared_type64='block_kernel_map*' name='map' type64='^{block_kernel_map=^{_cl_program}Q^?^{_block_kernel_pair=^v^{_cl_kernel}}}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gclReleaseSampler'>
+<arg declared_type64='cl_sampler' name='sampler' type64='^{_cl_sampler=}'/>
+<retval declared_type64='int' type64='i'/>
+</function>
+<function name='gclSetKernelArgAPPLE'>
+<arg declared_type64='cl_kernel' name='k' type64='^{_cl_kernel=}'/>
+<arg declared_type64='cl_uint' name='arg_index' type64='I'/>
+<arg declared_type64='size_t' name='arg_size' type64='Q'/>
+<arg const='true' declared_type64='void*' name='arg_value' type64='^v'/>
+<arg declared_type64='kargs_struct*' name='args' type64='^{kargs_struct=^Q^Q^^v}'/>
+<retval declared_type64='int' type64='i'/>
+</function>
+<function name='gclSetKernelArgMemAPPLE'>
+<arg declared_type64='cl_kernel' name='k' type64='^{_cl_kernel=}'/>
+<arg declared_type64='cl_uint' name='arg_index' type64='I'/>
+<arg const='true' declared_type64='void*' name='arg_value' type64='^v'/>
+<arg declared_type64='kargs_struct*' name='args' type64='^{kargs_struct=^Q^Q^^v}'/>
+<retval declared_type64='int' type64='i'/>
+</function>
+<function name='gclSetKernelArgSamplerAPPLE'>
+<arg declared_type64='cl_kernel' name='k' type64='^{_cl_kernel=}'/>
+<arg declared_type64='cl_uint' name='arg_index' type64='I'/>
+<arg const='true' declared_type64='void*' name='arg_value' type64='^v'/>
+<arg declared_type64='kargs_struct*' name='args' type64='^{kargs_struct=^Q^Q^^v}'/>
+<arg declared_type64='cl_sampler*' name='sampler' type64='^^{_cl_sampler}'/>
+<retval declared_type64='int' type64='i'/>
+</function>
+<function name='gcl_copy_image'>
+<arg declared_type64='cl_image _Nonnull' name='dst_image' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_image _Nonnull' name='src_image' type64='^{_cl_mem=}'/>
+<arg const='true' declared_type64='size_t*' name='dst_origin' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' name='src_origin' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' name='region' type64='^Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gcl_copy_image_to_ptr'>
+<arg declared_type64='void * _Nonnull' name='dst_ptr' type64='^v'/>
+<arg declared_type64='cl_image _Nonnull' name='src_image' type64='^{_cl_mem=}'/>
+<arg const='true' declared_type64='size_t*' name='src_origin' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' name='region' type64='^Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gcl_copy_ptr_to_image'>
+<arg declared_type64='cl_mem _Nonnull' name='dst_image' type64='^{_cl_mem=}'/>
+<arg declared_type64='void * _Nonnull' name='src_ptr' type64='^v'/>
+<arg const='true' declared_type64='size_t*' name='dst_origin' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' name='region' type64='^Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gcl_create_buffer_from_ptr'>
+<arg declared_type64='void * _Nonnull' name='ptr' type64='^v'/>
+<retval declared_type64='cl_mem _Nullable' type64='^{_cl_mem=}'/>
+</function>
+<function name='gcl_create_dispatch_queue'>
+<arg declared_type64='cl_queue_flags' name='flags' type64='Q'/>
+<arg declared_type64='cl_device_id _Nullable' name='device_id' type64='^{_cl_device_id=}'/>
+<retval already_retained='true' declared_type64='dispatch_queue_t _Nullable' type64='@'/>
+</function>
+<function name='gcl_create_image'>
+<arg const='true' declared_type64='cl_image_format * _Nonnull' name='image_format' type64='^{_cl_image_format=II}'/>
+<arg declared_type64='size_t' name='image_width' type64='Q'/>
+<arg declared_type64='size_t' name='image_height' type64='Q'/>
+<arg declared_type64='size_t' name='image_depth' type64='Q'/>
+<arg declared_type64='IOSurfaceRef _Nullable' name='io_surface' type64='^{__IOSurface=}'/>
+<retval declared_type64='cl_image _Nullable' type64='^{_cl_mem=}'/>
+</function>
+<function name='gcl_create_kernel_from_block'>
+<arg declared_type64='void * _Nonnull' name='kernel_block_ptr' type64='^v'/>
+<retval declared_type64='cl_kernel _Nullable' type64='^{_cl_kernel=}'/>
+</function>
+<function name='gcl_free'>
+<arg declared_type64='void * _Nonnull' name='ptr' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gcl_get_context'>
+<retval declared_type64='cl_context _Nullable' type64='^{_cl_context=}'/>
+</function>
+<function name='gcl_get_device_id_with_dispatch_queue'>
+<arg declared_type64='dispatch_queue_t _Nonnull' name='queue' type64='@'/>
+<retval declared_type64='cl_device_id _Nullable' type64='^{_cl_device_id=}'/>
+</function>
+<function name='gcl_get_kernel_block_workgroup_info'>
+<arg declared_type64='void * _Nonnull' name='kernel_block_ptr' type64='^v'/>
+<arg declared_type64='cl_kernel_work_group_info' name='param_name' type64='I'/>
+<arg declared_type64='size_t' name='param_value_size' type64='Q'/>
+<arg declared_type64='void * _Nonnull' name='param_value' type64='^v'/>
+<arg declared_type64='size_t * _Nullable' name='param_value_size_ret' type64='^Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gcl_get_supported_image_formats'>
+<arg declared_type64='cl_device_id _Nonnull' name='device_id' type64='^{_cl_device_id=}'/>
+<arg declared_type64='cl_image_type' name='image_type' type64='I'/>
+<arg declared_type64='unsigned int' name='num_entries' type64='I'/>
+<arg declared_type64='cl_image_format * _Nonnull' name='image_formats' type64='^{_cl_image_format=II}'/>
+<arg declared_type64='unsigned int * _Nullable' name='num_image_formats' type64='^I'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gcl_gl_create_image_from_renderbuffer'>
+<arg declared_type64='GLuint' name='render_buffer' type64='I'/>
+<retval declared_type64='cl_image _Nullable' type64='^{_cl_mem=}'/>
+</function>
+<function name='gcl_gl_create_image_from_texture'>
+<arg declared_type64='GLenum' name='texture_target' type64='I'/>
+<arg declared_type64='GLint' name='mip_level' type64='i'/>
+<arg declared_type64='GLuint' name='texture' type64='I'/>
+<retval declared_type64='cl_image _Nullable' type64='^{_cl_mem=}'/>
+</function>
+<function name='gcl_gl_create_ptr_from_buffer'>
+<arg declared_type64='GLuint' name='bufobj' type64='I'/>
+<retval declared_type64='void * _Nullable' type64='^v'/>
+</function>
+<function name='gcl_gl_set_sharegroup'>
+<arg declared_type64='void * _Nonnull' name='share' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gcl_log_cl_error' variadic='true'>
+<arg declared_type64='int' name='err' type64='i'/>
+<arg const='true' declared_type64='char*' name='fmt' type64='*'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gcl_log_cl_fatal' variadic='true'>
+<arg declared_type64='int' name='err' type64='i'/>
+<arg const='true' declared_type64='char*' name='fmt' type64='*'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gcl_log_error' variadic='true'>
+<arg const='true' declared_type64='char*' name='fmt' type64='*'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gcl_log_fatal' variadic='true'>
+<arg const='true' declared_type64='char*' name='fmt' type64='*'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gcl_log_warning' variadic='true'>
+<arg const='true' declared_type64='char*' name='fmt' type64='*'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gcl_malloc'>
+<arg declared_type64='size_t' name='bytes' type64='Q'/>
+<arg declared_type64='void * _Nullable' name='host_ptr' type64='^v'/>
+<arg declared_type64='cl_malloc_flags' name='flags' type64='Q'/>
+<retval declared_type64='void * _Nullable' type64='^v'/>
+</function>
+<function name='gcl_map_image'>
+<arg declared_type64='cl_image _Nonnull' name='image' type64='^{_cl_mem=}'/>
+<arg declared_type64='cl_map_flags' name='map_flags' type64='Q'/>
+<arg const='true' declared_type64='size_t*' name='origin' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' name='region' type64='^Q'/>
+<retval declared_type64='void * _Nullable' type64='^v'/>
+</function>
+<function name='gcl_map_ptr'>
+<arg declared_type64='void * _Nonnull' name='ptr' type64='^v'/>
+<arg declared_type64='cl_map_flags' name='map_flags' type64='Q'/>
+<arg declared_type64='size_t' name='cb' type64='Q'/>
+<retval declared_type64='void * _Nullable' type64='^v'/>
+</function>
+<function name='gcl_memcpy'>
+<arg declared_type64='void * _Nonnull' name='dst' type64='^v'/>
+<arg const='true' declared_type64='void * _Nonnull' name='src' type64='^v'/>
+<arg declared_type64='size_t' name='size' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gcl_memcpy_rect'>
+<arg declared_type64='void * _Nonnull' name='dst' type64='^v'/>
+<arg const='true' declared_type64='void * _Nonnull' name='src' type64='^v'/>
+<arg const='true' declared_type64='size_t*' name='dst_origin' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' name='src_origin' type64='^Q'/>
+<arg const='true' declared_type64='size_t*' name='region' type64='^Q'/>
+<arg declared_type64='size_t' name='dst_row_pitch' type64='Q'/>
+<arg declared_type64='size_t' name='dst_slice_pitch' type64='Q'/>
+<arg declared_type64='size_t' name='src_row_pitch' type64='Q'/>
+<arg declared_type64='size_t' name='src_slice_pitch' type64='Q'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gcl_release_image'>
+<arg declared_type64='cl_image _Nonnull' name='image' type64='^{_cl_mem=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gcl_retain_image'>
+<arg declared_type64='cl_image _Nonnull' name='image' type64='^{_cl_mem=}'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gcl_set_finalizer'>
+<arg declared_type64='void * _Nonnull' name='object' type64='^v'/>
+<arg declared_type64='void (* _Nonnull)(void * _Nonnull, void * _Nullable)' function_pointer='true' name='cl_pfn_finalizer' type64='^?'>
+<arg declared_type64='void * _Nonnull' type64='^v'/>
+<arg declared_type64='void * _Nullable' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<arg declared_type64='void * _Nullable' name='user_data' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+<function name='gcl_start_timer'>
+<retval declared_type64='cl_timer' type64='Q'/>
+</function>
+<function name='gcl_stop_timer'>
+<arg declared_type64='cl_timer' name='t' type64='Q'/>
+<retval declared_type64='double' type64='d'/>
+</function>
+<function name='gcl_unmap'>
+<arg declared_type64='void * _Nonnull' type64='^v'/>
+<retval declared_type64='void' type64='v'/>
+</function>
+</signatures>

@@ -1,0 +1,353 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/MediaToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/MediaAccessibility.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/UIKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant const='true' declared_type64='NSString*' name='AVKitErrorDomain' type64='@'/>
+<enum name='AVAudioSessionRouteSelectionExternal' value64='2'/>
+<enum name='AVAudioSessionRouteSelectionLocal' value64='1'/>
+<enum name='AVAudioSessionRouteSelectionNone' value64='0'/>
+<enum name='AVKitErrorPictureInPictureStartFailed' value64='-1001'/>
+<enum name='AVKitErrorUnknown' value64='-1000'/>
+<class name='AVAudioSession'>
+<method selector='prepareRouteSelectionForPlaybackWithCompletionHandler:'>
+<arg declared_type64='void (^ _Nonnull)(BOOL, AVAudioSessionRouteSelection)' function_pointer='true' index='0' name='completionHandler' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<arg declared_type64='AVAudioSessionRouteSelection' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='AVPictureInPictureController'>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='initWithPlayerLayer:'>
+<arg declared_type64='AVPlayerLayer * _Nonnull' index='0' name='playerLayer' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='isPictureInPictureActive'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isPictureInPicturePossible'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='isPictureInPictureSupported'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isPictureInPictureSuspended'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='pictureInPictureButtonStartImage'>
+<retval declared_type64='UIImage * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='pictureInPictureButtonStartImageCompatibleWithTraitCollection:'>
+<arg declared_type64='UITraitCollection * _Nullable' index='0' name='traitCollection' type64='@'/>
+<retval declared_type64='UIImage * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='pictureInPictureButtonStopImage'>
+<retval declared_type64='UIImage * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='pictureInPictureButtonStopImageCompatibleWithTraitCollection:'>
+<arg declared_type64='UITraitCollection * _Nullable' index='0' name='traitCollection' type64='@'/>
+<retval declared_type64='UIImage * _Nonnull' type64='@'/>
+</method>
+<method selector='playerLayer'>
+<retval declared_type64='AVPlayerLayer * _Nonnull' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='startPictureInPicture'>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='stopPictureInPicture'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='AVPlayerItem'>
+<method selector='externalMetadata'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='setExternalMetadata:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='externalMetadata' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='AVPlayerViewController'>
+<method selector='allowsPictureInPicturePlayback'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='contentOverlayView'>
+<retval declared_type64='UIView * _Nullable' type64='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='entersFullScreenWhenPlaybackBegins'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='exitsFullScreenWhenPlaybackEnds'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='isReadyForDisplay'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='pixelBufferAttributes'>
+<retval declared_type64='NSDictionary * _Nullable' type64='@'/>
+</method>
+<method selector='player'>
+<retval declared_type64='AVPlayer * _Nullable' type64='@'/>
+</method>
+<method selector='setAllowsPictureInPicturePlayback:'>
+<arg declared_type64='BOOL' index='0' name='allowsPictureInPicturePlayback' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setEntersFullScreenWhenPlaybackBegins:'>
+<arg declared_type64='BOOL' index='0' name='entersFullScreenWhenPlaybackBegins' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setExitsFullScreenWhenPlaybackEnds:'>
+<arg declared_type64='BOOL' index='0' name='exitsFullScreenWhenPlaybackEnds' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPixelBufferAttributes:'>
+<arg declared_type64='NSDictionary * _Nullable' index='0' name='pixelBufferAttributes' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPlayer:'>
+<arg declared_type64='AVPlayer * _Nullable' index='0' name='player' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShowsPlaybackControls:'>
+<arg declared_type64='BOOL' index='0' name='showsPlaybackControls' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setUpdatesNowPlayingInfoCenter:'>
+<arg declared_type64='BOOL' index='0' name='updatesNowPlayingInfoCenter' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setVideoGravity:'>
+<arg declared_type64='AVLayerVideoGravity _Nonnull' index='0' name='videoGravity' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='showsPlaybackControls'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='updatesNowPlayingInfoCenter'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='videoBounds'>
+<retval declared_type64='CGRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</method>
+<method selector='videoGravity'>
+<retval declared_type64='AVLayerVideoGravity _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='AVRoutePickerView'>
+<method selector='activeTintColor'>
+<retval declared_type64='UIColor * _Nonnull' type64='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='prioritizesVideoDevices'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='setActiveTintColor:'>
+<arg declared_type64='UIColor * _Nullable' index='0' name='activeTintColor' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setPrioritizesVideoDevices:'>
+<arg declared_type64='BOOL' index='0' name='prioritizesVideoDevices' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='pictureInPictureController:failedToStartPictureInPictureWithError:'>
+<arg declared_type64='AVPictureInPictureController * _Nonnull' index='0' name='pictureInPictureController' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='pictureInPictureController:restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:'>
+<arg declared_type64='AVPictureInPictureController * _Nonnull' index='0' name='pictureInPictureController' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(BOOL)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='pictureInPictureControllerDidStartPictureInPicture:'>
+<arg declared_type64='AVPictureInPictureController * _Nonnull' index='0' name='pictureInPictureController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='pictureInPictureControllerDidStopPictureInPicture:'>
+<arg declared_type64='AVPictureInPictureController * _Nonnull' index='0' name='pictureInPictureController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='pictureInPictureControllerWillStartPictureInPicture:'>
+<arg declared_type64='AVPictureInPictureController * _Nonnull' index='0' name='pictureInPictureController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='pictureInPictureControllerWillStopPictureInPicture:'>
+<arg declared_type64='AVPictureInPictureController * _Nonnull' index='0' name='pictureInPictureController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:failedToStartPictureInPictureWithError:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(BOOL)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:willBeginFullScreenPresentationWithAnimationCoordinator:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='coordinator' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:willEndFullScreenPresentationWithAnimationCoordinator:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='coordinator' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewControllerDidStartPictureInPicture:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewControllerDidStopPictureInPicture:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewControllerShouldAutomaticallyDismissAtPictureInPictureStart:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='playerViewControllerWillStartPictureInPicture:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewControllerWillStopPictureInPicture:'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='routePickerViewDidEndPresentingRoutes:'>
+<arg declared_type64='AVRoutePickerView * _Nonnull' index='0' name='routePickerView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='routePickerViewWillBeginPresentingRoutes:'>
+<arg declared_type64='AVRoutePickerView * _Nonnull' index='0' name='routePickerView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='AVPictureInPictureControllerDelegate'>
+<method selector='pictureInPictureController:failedToStartPictureInPictureWithError:' type64='v32@0:8@16@24'>
+<arg declared_type64='AVPictureInPictureController * _Nonnull' index='0' name='pictureInPictureController' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='pictureInPictureController:restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:' type64='v32@0:8@16@?24'>
+<arg declared_type64='AVPictureInPictureController * _Nonnull' index='0' name='pictureInPictureController' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(BOOL)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='pictureInPictureControllerDidStartPictureInPicture:' type64='v24@0:8@16'>
+<arg declared_type64='AVPictureInPictureController * _Nonnull' index='0' name='pictureInPictureController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='pictureInPictureControllerDidStopPictureInPicture:' type64='v24@0:8@16'>
+<arg declared_type64='AVPictureInPictureController * _Nonnull' index='0' name='pictureInPictureController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='pictureInPictureControllerWillStartPictureInPicture:' type64='v24@0:8@16'>
+<arg declared_type64='AVPictureInPictureController * _Nonnull' index='0' name='pictureInPictureController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='pictureInPictureControllerWillStopPictureInPicture:' type64='v24@0:8@16'>
+<arg declared_type64='AVPictureInPictureController * _Nonnull' index='0' name='pictureInPictureController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='AVPlayerViewControllerDelegate'>
+<method selector='playerViewController:failedToStartPictureInPictureWithError:' type64='v32@0:8@16@24'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:restoreUserInterfaceForPictureInPictureStopWithCompletionHandler:' type64='v32@0:8@16@?24'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(BOOL)' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='BOOL' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:willBeginFullScreenPresentationWithAnimationCoordinator:' type64='v32@0:8@16@24'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='coordinator' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewController:willEndFullScreenPresentationWithAnimationCoordinator:' type64='v32@0:8@16@24'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<arg declared_type64='id _Nonnull' index='1' name='coordinator' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewControllerDidStartPictureInPicture:' type64='v24@0:8@16'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewControllerDidStopPictureInPicture:' type64='v24@0:8@16'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewControllerShouldAutomaticallyDismissAtPictureInPictureStart:' type64='B24@0:8@16'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='playerViewControllerWillStartPictureInPicture:' type64='v24@0:8@16'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='playerViewControllerWillStopPictureInPicture:' type64='v24@0:8@16'>
+<arg declared_type64='AVPlayerViewController * _Nonnull' index='0' name='playerViewController' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='AVRoutePickerViewDelegate'>
+<method selector='routePickerViewDidEndPresentingRoutes:' type64='v24@0:8@16'>
+<arg declared_type64='AVRoutePickerView * _Nonnull' index='0' name='routePickerView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='routePickerViewWillBeginPresentingRoutes:' type64='v24@0:8@16'>
+<arg declared_type64='AVRoutePickerView * _Nonnull' index='0' name='routePickerView' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

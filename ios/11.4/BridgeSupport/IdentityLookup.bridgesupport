@@ -2,70 +2,70 @@
 <signatures version='1.0'>
 <depends_on path='/System/Library/Frameworks/Foundation.framework'/>
 <depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
-<constant const='true' declared_type='NSErrorDomain _Nonnull' name='ILMessageFilterErrorDomain' type='@'/>
-<enum name='ILMessageFilterActionAllow' value='1'/>
-<enum name='ILMessageFilterActionFilter' value='2'/>
-<enum name='ILMessageFilterActionNone' value='0'/>
-<enum name='ILMessageFilterErrorInvalidNetworkURL' value='2'/>
-<enum name='ILMessageFilterErrorNetworkRequestFailed' value='4'/>
-<enum name='ILMessageFilterErrorNetworkURLUnauthorized' value='3'/>
-<enum name='ILMessageFilterErrorRedundantNetworkDeferral' value='5'/>
-<enum name='ILMessageFilterErrorSystem' value='1'/>
+<constant const='true' declared_type64='NSErrorDomain _Nonnull' name='ILMessageFilterErrorDomain' type64='@'/>
+<enum name='ILMessageFilterActionAllow' value64='1'/>
+<enum name='ILMessageFilterActionFilter' value64='2'/>
+<enum name='ILMessageFilterActionNone' value64='0'/>
+<enum name='ILMessageFilterErrorInvalidNetworkURL' value64='2'/>
+<enum name='ILMessageFilterErrorNetworkRequestFailed' value64='4'/>
+<enum name='ILMessageFilterErrorNetworkURLUnauthorized' value64='3'/>
+<enum name='ILMessageFilterErrorRedundantNetworkDeferral' value64='5'/>
+<enum name='ILMessageFilterErrorSystem' value64='1'/>
 <class name='ILMessageFilterExtensionContext'>
 <method selector='deferQueryRequestToNetworkWithCompletion:'>
-<arg declared_type='void (^ _Nonnull)(ILNetworkResponse * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completion' type='@?'>
-<arg declared_type='ILNetworkResponse * _Nullable' type='@'/>
-<arg declared_type='NSError * _Nullable' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='void (^ _Nonnull)(ILNetworkResponse * _Nullable, NSError * _Nullable)' function_pointer='true' index='0' name='completion' type64='@?'>
+<arg declared_type64='ILNetworkResponse * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </arg>
-<retval declared_type='void' type='v'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 </class>
 <class name='ILMessageFilterQueryRequest'>
 <method selector='messageBody'>
-<retval declared_type='NSString * _Nullable' type='@'/>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
 </method>
 <method selector='sender'>
-<retval declared_type='NSString * _Nullable' type='@'/>
+<retval declared_type64='NSString * _Nullable' type64='@'/>
 </method>
 </class>
 <class name='ILMessageFilterQueryResponse'>
 <method selector='action'>
-<retval declared_type='ILMessageFilterAction' type='i' type64='q'/>
+<retval declared_type64='ILMessageFilterAction' type64='q'/>
 </method>
 <method selector='setAction:'>
-<arg declared_type='ILMessageFilterAction' index='0' name='action' type='i' type64='q'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='ILMessageFilterAction' index='0' name='action' type64='q'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 </class>
 <class name='ILNetworkResponse'>
 <method selector='data'>
-<retval declared_type='NSData * _Nonnull' type='@'/>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
 </method>
 <method selector='urlResponse'>
-<retval declared_type='NSHTTPURLResponse * _Nonnull' type='@'/>
+<retval declared_type64='NSHTTPURLResponse * _Nonnull' type64='@'/>
 </method>
 </class>
 <class name='NSObject'>
 <method selector='handleQueryRequest:context:completion:'>
-<arg declared_type='ILMessageFilterQueryRequest * _Nonnull' index='0' name='queryRequest' type='@'/>
-<arg declared_type='ILMessageFilterExtensionContext * _Nonnull' index='1' name='context' type='@'/>
-<arg declared_type='void (^ _Nonnull)(ILMessageFilterQueryResponse * _Nonnull)' function_pointer='true' index='2' name='completion' type='@?'>
-<arg declared_type='ILMessageFilterQueryResponse * _Nonnull' type='@'/>
-<retval declared_type='void' type='v'/>
+<arg declared_type64='ILMessageFilterQueryRequest * _Nonnull' index='0' name='queryRequest' type64='@'/>
+<arg declared_type64='ILMessageFilterExtensionContext * _Nonnull' index='1' name='context' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(ILMessageFilterQueryResponse * _Nonnull)' function_pointer='true' index='2' name='completion' type64='@?'>
+<arg declared_type64='ILMessageFilterQueryResponse * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </arg>
-<retval declared_type='void' type='v'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 </class>
 <informal_protocol name='ILMessageFilterQueryHandling'>
-<method selector='handleQueryRequest:context:completion:' type='v20@0:4@8@12@?16' type64='v40@0:8@16@24@?32'>
-<arg declared_type='ILMessageFilterQueryRequest * _Nonnull' index='0' name='queryRequest' type='@'/>
-<arg declared_type='ILMessageFilterExtensionContext * _Nonnull' index='1' name='context' type='@'/>
-<arg declared_type='void (^ _Nonnull)(ILMessageFilterQueryResponse * _Nonnull)' function_pointer='true' index='2' name='completion' type='@?'>
-<arg declared_type='ILMessageFilterQueryResponse * _Nonnull' type='@'/>
-<retval declared_type='void' type='v'/>
+<method selector='handleQueryRequest:context:completion:' type64='v40@0:8@16@24@?32'>
+<arg declared_type64='ILMessageFilterQueryRequest * _Nonnull' index='0' name='queryRequest' type64='@'/>
+<arg declared_type64='ILMessageFilterExtensionContext * _Nonnull' index='1' name='context' type64='@'/>
+<arg declared_type64='void (^ _Nonnull)(ILMessageFilterQueryResponse * _Nonnull)' function_pointer='true' index='2' name='completion' type64='@?'>
+<arg declared_type64='ILMessageFilterQueryResponse * _Nonnull' type64='@'/>
+<retval declared_type64='void' type64='v'/>
 </arg>
-<retval declared_type='void' type='v'/>
+<retval declared_type64='void' type64='v'/>
 </method>
 </informal_protocol>
 </signatures>

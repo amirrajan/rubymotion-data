@@ -1,0 +1,115 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='NSSystemExtensionUsageDescriptionKey' type64='@'/>
+<constant const='true' declared_type64='NSString * _Nonnull' name='OSBundleUsageDescriptionKey' type64='@'/>
+<constant const='true' declared_type64='NSErrorDomain _Nonnull' name='OSSystemExtensionErrorDomain' type64='@'/>
+<enum name='OSSystemExtensionErrorAuthorizationRequired' value64='13'/>
+<enum name='OSSystemExtensionErrorCodeSignatureInvalid' value64='8'/>
+<enum name='OSSystemExtensionErrorDuplicateExtensionIdentifer' value64='6'/>
+<enum name='OSSystemExtensionErrorExtensionMissingIdentifier' value64='5'/>
+<enum name='OSSystemExtensionErrorExtensionNotFound' value64='4'/>
+<enum name='OSSystemExtensionErrorForbiddenBySystemPolicy' value64='10'/>
+<enum name='OSSystemExtensionErrorMissingEntitlement' value64='2'/>
+<enum name='OSSystemExtensionErrorRequestCanceled' value64='11'/>
+<enum name='OSSystemExtensionErrorRequestSuperseded' value64='12'/>
+<enum name='OSSystemExtensionErrorUnknown' value64='1'/>
+<enum name='OSSystemExtensionErrorUnknownExtensionCategory' value64='7'/>
+<enum name='OSSystemExtensionErrorUnsupportedParentBundleLocation' value64='3'/>
+<enum name='OSSystemExtensionErrorValidationFailed' value64='9'/>
+<enum name='OSSystemExtensionReplacementActionCancel' value64='0'/>
+<enum name='OSSystemExtensionReplacementActionReplace' value64='1'/>
+<enum name='OSSystemExtensionRequestCompleted' value64='0'/>
+<enum name='OSSystemExtensionRequestWillCompleteAfterReboot' value64='1'/>
+<class name='NSObject'>
+<method selector='request:actionForReplacingExtension:withExtension:'>
+<arg declared_type64='OSSystemExtensionRequest * _Nonnull' index='0' name='request' type64='@'/>
+<arg declared_type64='OSSystemExtensionProperties * _Nonnull' index='1' name='existing' type64='@'/>
+<arg declared_type64='OSSystemExtensionProperties * _Nonnull' index='2' name='ext' type64='@'/>
+<retval declared_type64='OSSystemExtensionReplacementAction' type64='q'/>
+</method>
+<method selector='request:didFailWithError:'>
+<arg declared_type64='OSSystemExtensionRequest * _Nonnull' index='0' name='request' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='request:didFinishWithResult:'>
+<arg declared_type64='OSSystemExtensionRequest * _Nonnull' index='0' name='request' type64='@'/>
+<arg declared_type64='OSSystemExtensionRequestResult' index='1' name='result' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='requestNeedsUserApproval:'>
+<arg declared_type64='OSSystemExtensionRequest * _Nonnull' index='0' name='request' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='OSSystemExtensionManager'>
+<method class_method='true' selector='sharedManager'>
+<retval declared_type64='OSSystemExtensionManager * _Nonnull' type64='@'/>
+</method>
+<method selector='submitRequest:'>
+<arg declared_type64='OSSystemExtensionRequest * _Nonnull' index='0' name='request' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='OSSystemExtensionProperties'>
+<method selector='URL'>
+<retval declared_type64='NSURL * _Nonnull' type64='@'/>
+</method>
+<method selector='bundleIdentifier'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='bundleShortVersion'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='bundleVersion'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='OSSystemExtensionRequest'>
+<method class_method='true' selector='activationRequestForExtension:queue:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='identifier' type64='@'/>
+<arg declared_type64='dispatch_queue_t _Nonnull' index='1' name='queue' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='deactivationRequestForExtension:queue:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='identifier' type64='@'/>
+<arg declared_type64='dispatch_queue_t _Nonnull' index='1' name='queue' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type64='id _Nullable' type64='@'/>
+</method>
+<method selector='identifier'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type64='id _Nullable' index='0' name='delegate' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<informal_protocol name='OSSystemExtensionRequestDelegate'>
+<method selector='request:actionForReplacingExtension:withExtension:' type64='q40@0:8@16@24@32'>
+<arg declared_type64='OSSystemExtensionRequest * _Nonnull' index='0' name='request' type64='@'/>
+<arg declared_type64='OSSystemExtensionProperties * _Nonnull' index='1' name='existing' type64='@'/>
+<arg declared_type64='OSSystemExtensionProperties * _Nonnull' index='2' name='ext' type64='@'/>
+<retval declared_type64='OSSystemExtensionReplacementAction' type64='q'/>
+</method>
+<method selector='request:didFailWithError:' type64='v32@0:8@16@24'>
+<arg declared_type64='OSSystemExtensionRequest * _Nonnull' index='0' name='request' type64='@'/>
+<arg declared_type64='NSError * _Nonnull' index='1' name='error' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='request:didFinishWithResult:' type64='v32@0:8@16q24'>
+<arg declared_type64='OSSystemExtensionRequest * _Nonnull' index='0' name='request' type64='@'/>
+<arg declared_type64='OSSystemExtensionRequestResult' index='1' name='result' type64='q'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='requestNeedsUserApproval:' type64='v24@0:8@16'>
+<arg declared_type64='OSSystemExtensionRequest * _Nonnull' index='0' name='request' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</informal_protocol>
+</signatures>

@@ -25,7 +25,7 @@
 + (CGPoint)_convertPointFromScreenToDevice:(CGPoint)arg1;
 + (CGPoint)_convertPointFromDeviceToScreen:(CGPoint)arg1;
 + (id)stringForTraits:(unsigned long long)arg1;
-+ (id)stringForAXNotification:(NSInteger)arg1;
++ (id)stringForAXNotification:(long long)arg1;
 + (id)stringForAXError:(NSInteger)arg1;
 + (id)uiaxAccessibilityUIServerElement;
 + (id)uiaxFocusedApplicationsElementArray;
@@ -52,8 +52,8 @@
 + (id)_regularAttributeStrings;
 + (id)_regularAttributeNumbers;
 + (id)uiaxElementWithAXUIElementRef:(struct __AXUIElement *)arg1;
-+ (_Bool)unregisterObserver:(struct __AXObserver *)arg1 forAXNotification:(NSInteger)arg2;
-+ (_Bool)registerObserver:(struct __AXObserver *)arg1 forAXNotification:(NSInteger)arg2;
++ (_Bool)unregisterObserver:(struct __AXObserver *)arg1 forAXNotification:(long long)arg2;
++ (_Bool)registerObserver:(struct __AXObserver *)arg1 forAXNotification:(long long)arg2;
 + (_Bool)registerObserver:(struct __AXObserver *)arg1 forAXNotifications:(_Bool)arg2;
 + (void)_raiseIfAXErrorAPIDisabled:(NSInteger)arg1;
 + (void)_raiseAXErrorAPIDisabled;

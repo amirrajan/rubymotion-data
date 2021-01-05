@@ -9,7 +9,7 @@
 
 @protocol UIAXElement
 + (NSString *)stringForTraits:(unsigned long long)arg1;
-+ (NSString *)stringForAXNotification:(NSInteger)arg1;
++ (NSString *)stringForAXNotification:(long long)arg1;
 + (NSString *)stringForAXError:(NSInteger)arg1;
 + (id)uiaxAccessibilityUIServerElement;
 + (NSArray *)uiaxFocusedApplicationsElementArray;
@@ -20,8 +20,8 @@
 + (id)uiaxElementAtPosition:(CGPoint)arg1;
 + (id)uiaxApplicationAtPosition:(CGPoint)arg1;
 + (id)uiaxElementWithAXUIElementRef:(struct __AXUIElement *)arg1;
-+ (_Bool)unregisterObserver:(struct __AXObserver *)arg1 forAXNotification:(NSInteger)arg2;
-+ (_Bool)registerObserver:(struct __AXObserver *)arg1 forAXNotification:(NSInteger)arg2;
++ (_Bool)unregisterObserver:(struct __AXObserver *)arg1 forAXNotification:(long long)arg2;
++ (_Bool)registerObserver:(struct __AXObserver *)arg1 forAXNotification:(long long)arg2;
 + (_Bool)registerObserver:(struct __AXObserver *)arg1 forAXNotifications:(_Bool)arg2;
 - (NSArray *)ancestry;
 - (NSArray *)descendantsWithAttributes:(NSDictionary *)arg1 traits:(unsigned long long)arg2;

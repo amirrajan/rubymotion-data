@@ -1,0 +1,2258 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<enum name='MLCActivationTypeAbsolute' value64='6'/>
+<enum name='MLCActivationTypeCELU' value64='13'/>
+<enum name='MLCActivationTypeCount' value64='19'/>
+<enum name='MLCActivationTypeELU' value64='9'/>
+<enum name='MLCActivationTypeGELU' value64='18'/>
+<enum name='MLCActivationTypeHardShrink' value64='14'/>
+<enum name='MLCActivationTypeHardSigmoid' value64='4'/>
+<enum name='MLCActivationTypeLinear' value64='2'/>
+<enum name='MLCActivationTypeLogSigmoid' value64='11'/>
+<enum name='MLCActivationTypeNone' value64='0'/>
+<enum name='MLCActivationTypeReLU' value64='1'/>
+<enum name='MLCActivationTypeReLUN' value64='10'/>
+<enum name='MLCActivationTypeSELU' value64='12'/>
+<enum name='MLCActivationTypeSigmoid' value64='3'/>
+<enum name='MLCActivationTypeSoftPlus' value64='7'/>
+<enum name='MLCActivationTypeSoftShrink' value64='15'/>
+<enum name='MLCActivationTypeSoftSign' value64='8'/>
+<enum name='MLCActivationTypeTanh' value64='5'/>
+<enum name='MLCActivationTypeTanhShrink' value64='16'/>
+<enum name='MLCActivationTypeThreshold' value64='17'/>
+<enum name='MLCArithmeticOperationAcos' value64='13'/>
+<enum name='MLCArithmeticOperationAcosh' value64='19'/>
+<enum name='MLCArithmeticOperationAdd' value64='0'/>
+<enum name='MLCArithmeticOperationAsin' value64='12'/>
+<enum name='MLCArithmeticOperationAsinh' value64='18'/>
+<enum name='MLCArithmeticOperationAtan' value64='14'/>
+<enum name='MLCArithmeticOperationAtanh' value64='20'/>
+<enum name='MLCArithmeticOperationCeil' value64='6'/>
+<enum name='MLCArithmeticOperationCos' value64='10'/>
+<enum name='MLCArithmeticOperationCosh' value64='16'/>
+<enum name='MLCArithmeticOperationCount' value64='26'/>
+<enum name='MLCArithmeticOperationDivide' value64='3'/>
+<enum name='MLCArithmeticOperationExp' value64='22'/>
+<enum name='MLCArithmeticOperationExp2' value64='23'/>
+<enum name='MLCArithmeticOperationFloor' value64='4'/>
+<enum name='MLCArithmeticOperationLog' value64='24'/>
+<enum name='MLCArithmeticOperationLog2' value64='25'/>
+<enum name='MLCArithmeticOperationMultiply' value64='2'/>
+<enum name='MLCArithmeticOperationPow' value64='21'/>
+<enum name='MLCArithmeticOperationRound' value64='5'/>
+<enum name='MLCArithmeticOperationRsqrt' value64='8'/>
+<enum name='MLCArithmeticOperationSin' value64='9'/>
+<enum name='MLCArithmeticOperationSinh' value64='15'/>
+<enum name='MLCArithmeticOperationSqrt' value64='7'/>
+<enum name='MLCArithmeticOperationSubtract' value64='1'/>
+<enum name='MLCArithmeticOperationTan' value64='11'/>
+<enum name='MLCArithmeticOperationTanh' value64='17'/>
+<enum name='MLCConvolutionTypeDepthwise' value64='2'/>
+<enum name='MLCConvolutionTypeStandard' value64='0'/>
+<enum name='MLCConvolutionTypeTransposed' value64='1'/>
+<enum name='MLCDataTypeBoolean' value64='4'/>
+<enum name='MLCDataTypeCount' value64='8'/>
+<enum name='MLCDataTypeFloat32' value64='1'/>
+<enum name='MLCDataTypeInt32' value64='7'/>
+<enum name='MLCDataTypeInt64' value64='5'/>
+<enum name='MLCDataTypeInvalid' value64='0'/>
+<enum name='MLCDeviceTypeAny' value64='2'/>
+<enum name='MLCDeviceTypeCPU' value64='0'/>
+<enum name='MLCDeviceTypeCount' value64='3'/>
+<enum name='MLCDeviceTypeGPU' value64='1'/>
+<enum name='MLCExecutionOptionsForwardForInference' value64='8'/>
+<enum name='MLCExecutionOptionsNone' value64='0'/>
+<enum name='MLCExecutionOptionsProfiling' value64='4'/>
+<enum name='MLCExecutionOptionsSkipWritingInputDataToDevice' value64='1'/>
+<enum name='MLCExecutionOptionsSynchronous' value64='2'/>
+<enum name='MLCGraphCompilationOptionsComputeAllGradients' value64='8'/>
+<enum name='MLCGraphCompilationOptionsDebugLayers' value64='1'/>
+<enum name='MLCGraphCompilationOptionsDisableLayerFusion' value64='2'/>
+<enum name='MLCGraphCompilationOptionsLinkGraphs' value64='4'/>
+<enum name='MLCGraphCompilationOptionsNone' value64='0'/>
+<enum name='MLCLSTMResultModeOutput' value64='0'/>
+<enum name='MLCLSTMResultModeOutputAndStates' value64='1'/>
+<enum name='MLCLossTypeCategoricalCrossEntropy' value64='4'/>
+<enum name='MLCLossTypeCosineDistance' value64='7'/>
+<enum name='MLCLossTypeCount' value64='9'/>
+<enum name='MLCLossTypeHinge' value64='5'/>
+<enum name='MLCLossTypeHuber' value64='6'/>
+<enum name='MLCLossTypeLog' value64='8'/>
+<enum name='MLCLossTypeMeanAbsoluteError' value64='0'/>
+<enum name='MLCLossTypeMeanSquaredError' value64='1'/>
+<enum name='MLCLossTypeSigmoidCrossEntropy' value64='3'/>
+<enum name='MLCLossTypeSoftmaxCrossEntropy' value64='2'/>
+<enum name='MLCPaddingPolicySame' value64='0'/>
+<enum name='MLCPaddingPolicyUsePaddingSize' value64='2'/>
+<enum name='MLCPaddingPolicyValid' value64='1'/>
+<enum name='MLCPaddingTypeConstant' value64='3'/>
+<enum name='MLCPaddingTypeReflect' value64='1'/>
+<enum name='MLCPaddingTypeSymmetric' value64='2'/>
+<enum name='MLCPaddingTypeZero' value64='0'/>
+<enum name='MLCPoolingTypeAverage' value64='2'/>
+<enum name='MLCPoolingTypeCount' value64='4'/>
+<enum name='MLCPoolingTypeL2Norm' value64='3'/>
+<enum name='MLCPoolingTypeMax' value64='1'/>
+<enum name='MLCRandomInitializerTypeCount' value64='4'/>
+<enum name='MLCRandomInitializerTypeGlorotUniform' value64='2'/>
+<enum name='MLCRandomInitializerTypeInvalid' value64='0'/>
+<enum name='MLCRandomInitializerTypeUniform' value64='1'/>
+<enum name='MLCRandomInitializerTypeXavier' value64='3'/>
+<enum name='MLCReductionTypeArgMax' value64='5'/>
+<enum name='MLCReductionTypeArgMin' value64='6'/>
+<enum name='MLCReductionTypeCount' value64='7'/>
+<enum name='MLCReductionTypeMax' value64='3'/>
+<enum name='MLCReductionTypeMean' value64='2'/>
+<enum name='MLCReductionTypeMin' value64='4'/>
+<enum name='MLCReductionTypeNone' value64='0'/>
+<enum name='MLCReductionTypeSum' value64='1'/>
+<enum name='MLCRegularizationTypeL1' value64='1'/>
+<enum name='MLCRegularizationTypeL2' value64='2'/>
+<enum name='MLCRegularizationTypeNone' value64='0'/>
+<enum name='MLCSampleModeLinear' value64='1'/>
+<enum name='MLCSampleModeNearest' value64='0'/>
+<enum name='MLCSoftmaxOperationLogSoftmax' value64='1'/>
+<enum name='MLCSoftmaxOperationSoftmax' value64='0'/>
+<function name='MLCActivationTypeDebugDescription'>
+<arg declared_type64='MLCActivationType' name='activationType' type64='i'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</function>
+<function name='MLCArithmeticOperationDebugDescription'>
+<arg declared_type64='MLCArithmeticOperation' name='operation' type64='i'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</function>
+<function name='MLCConvolutionTypeDebugDescription'>
+<arg declared_type64='MLCConvolutionType' name='convolutionType' type64='i'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</function>
+<function name='MLCLSTMResultModeDebugDescription'>
+<arg declared_type64='MLCLSTMResultMode' name='mode' type64='Q'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</function>
+<function name='MLCLossTypeDebugDescription'>
+<arg declared_type64='MLCLossType' name='lossType' type64='i'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</function>
+<function name='MLCPaddingPolicyDebugDescription'>
+<arg declared_type64='MLCPaddingPolicy' name='paddingPolicy' type64='i'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</function>
+<function name='MLCPaddingTypeDebugDescription'>
+<arg declared_type64='MLCPaddingType' name='paddingType' type64='i'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</function>
+<function name='MLCPoolingTypeDebugDescription'>
+<arg declared_type64='MLCPoolingType' name='poolingType' type64='i'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</function>
+<function name='MLCReductionTypeDebugDescription'>
+<arg declared_type64='MLCReductionType' name='reductionType' type64='i'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</function>
+<function name='MLCSampleModeDebugDescription'>
+<arg declared_type64='MLCSampleMode' name='mode' type64='i'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</function>
+<function name='MLCSoftmaxOperationDebugDescription'>
+<arg declared_type64='MLCSoftmaxOperation' name='operation' type64='i'/>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</function>
+<class name='MLCActivationDescriptor'>
+<method selector='a'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='activationType'>
+<retval declared_type64='MLCActivationType' type64='i'/>
+</method>
+<method selector='b'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='c'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method class_method='true' selector='descriptorWithType:'>
+<arg declared_type64='MLCActivationType' index='0' name='activationType' type64='i'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithType:a:'>
+<arg declared_type64='MLCActivationType' index='0' name='activationType' type64='i'/>
+<arg declared_type64='float' index='1' name='a' type64='f'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithType:a:b:'>
+<arg declared_type64='MLCActivationType' index='0' name='activationType' type64='i'/>
+<arg declared_type64='float' index='1' name='a' type64='f'/>
+<arg declared_type64='float' index='2' name='b' type64='f'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithType:a:b:c:'>
+<arg declared_type64='MLCActivationType' index='0' name='activationType' type64='i'/>
+<arg declared_type64='float' index='1' name='a' type64='f'/>
+<arg declared_type64='float' index='2' name='b' type64='f'/>
+<arg declared_type64='float' index='3' name='c' type64='f'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MLCActivationLayer'>
+<method class_method='true' selector='absoluteLayer'>
+<retval declared_type64='MLCActivationLayer * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='celuLayer'>
+<retval declared_type64='MLCActivationLayer * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='celuLayerWithA:'>
+<arg declared_type64='float' index='0' name='a' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='descriptor'>
+<retval declared_type64='MLCActivationDescriptor * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='eluLayer'>
+<retval declared_type64='MLCActivationLayer * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='eluLayerWithA:'>
+<arg declared_type64='float' index='0' name='a' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='geluLayer'>
+<retval declared_type64='MLCActivationLayer * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='hardShrinkLayer'>
+<retval declared_type64='MLCActivationLayer * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='hardShrinkLayerWithA:'>
+<arg declared_type64='float' index='0' name='a' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='hardSigmoidLayer'>
+<retval declared_type64='MLCActivationLayer * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithDescriptor:'>
+<arg declared_type64='MLCActivationDescriptor * _Nonnull' index='0' name='descriptor' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='leakyReLULayer'>
+<retval declared_type64='MLCActivationLayer * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='leakyReLULayerWithNegativeSlope:'>
+<arg declared_type64='float' index='0' name='negativeSlope' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='linearLayerWithScale:bias:'>
+<arg declared_type64='float' index='0' name='scale' type64='f'/>
+<arg declared_type64='float' index='1' name='bias' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='logSigmoidLayer'>
+<retval declared_type64='MLCActivationLayer * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='relu6Layer'>
+<retval declared_type64='MLCActivationLayer * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='reluLayer'>
+<retval declared_type64='MLCActivationLayer * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='relunLayerWithA:b:'>
+<arg declared_type64='float' index='0' name='a' type64='f'/>
+<arg declared_type64='float' index='1' name='b' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='seluLayer'>
+<retval declared_type64='MLCActivationLayer * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='sigmoidLayer'>
+<retval declared_type64='MLCActivationLayer * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='softPlusLayer'>
+<retval declared_type64='MLCActivationLayer * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='softPlusLayerWithBeta:'>
+<arg declared_type64='float' index='0' name='beta' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='softShrinkLayer'>
+<retval declared_type64='MLCActivationLayer * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='softShrinkLayerWithA:'>
+<arg declared_type64='float' index='0' name='a' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='softSignLayer'>
+<retval declared_type64='MLCActivationLayer * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='tanhLayer'>
+<retval declared_type64='MLCActivationLayer * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='tanhShrinkLayer'>
+<retval declared_type64='MLCActivationLayer * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='thresholdLayerWithThreshold:replacement:'>
+<arg declared_type64='float' index='0' name='threshold' type64='f'/>
+<arg declared_type64='float' index='1' name='replacement' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MLCAdamOptimizer'>
+<method selector='beta1'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='beta2'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='epsilon'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method class_method='true' selector='optimizerWithDescriptor:'>
+<arg declared_type64='MLCOptimizerDescriptor * _Nonnull' index='0' name='optimizerDescriptor' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='optimizerWithDescriptor:beta1:beta2:epsilon:timeStep:'>
+<arg declared_type64='MLCOptimizerDescriptor * _Nonnull' index='0' name='optimizerDescriptor' type64='@'/>
+<arg declared_type64='float' index='1' name='beta1' type64='f'/>
+<arg declared_type64='float' index='2' name='beta2' type64='f'/>
+<arg declared_type64='float' index='3' name='epsilon' type64='f'/>
+<arg declared_type64='NSUInteger' index='4' name='timeStep' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='timeStep'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+</class>
+<class name='MLCArithmeticLayer'>
+<method class_method='true' selector='layerWithOperation:'>
+<arg declared_type64='MLCArithmeticOperation' index='0' name='operation' type64='i'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='operation'>
+<retval declared_type64='MLCArithmeticOperation' type64='i'/>
+</method>
+</class>
+<class name='MLCBatchNormalizationLayer'>
+<method selector='beta'>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+<method selector='betaParameter'>
+<retval declared_type64='MLCTensorParameter * _Nullable' type64='@'/>
+</method>
+<method selector='featureChannelCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='gamma'>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+<method selector='gammaParameter'>
+<retval declared_type64='MLCTensorParameter * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithFeatureChannelCount:mean:variance:beta:gamma:varianceEpsilon:'>
+<arg declared_type64='NSUInteger' index='0' name='featureChannelCount' type64='Q'/>
+<arg declared_type64='MLCTensor * _Nonnull' index='1' name='mean' type64='@'/>
+<arg declared_type64='MLCTensor * _Nonnull' index='2' name='variance' type64='@'/>
+<arg declared_type64='MLCTensor * _Nullable' index='3' name='beta' type64='@'/>
+<arg declared_type64='MLCTensor * _Nullable' index='4' name='gamma' type64='@'/>
+<arg declared_type64='float' index='5' name='varianceEpsilon' type64='f'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithFeatureChannelCount:mean:variance:beta:gamma:varianceEpsilon:momentum:'>
+<arg declared_type64='NSUInteger' index='0' name='featureChannelCount' type64='Q'/>
+<arg declared_type64='MLCTensor * _Nonnull' index='1' name='mean' type64='@'/>
+<arg declared_type64='MLCTensor * _Nonnull' index='2' name='variance' type64='@'/>
+<arg declared_type64='MLCTensor * _Nullable' index='3' name='beta' type64='@'/>
+<arg declared_type64='MLCTensor * _Nullable' index='4' name='gamma' type64='@'/>
+<arg declared_type64='float' index='5' name='varianceEpsilon' type64='f'/>
+<arg declared_type64='float' index='6' name='momentum' type64='f'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='mean'>
+<retval declared_type64='MLCTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='momentum'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='variance'>
+<retval declared_type64='MLCTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='varianceEpsilon'>
+<retval declared_type64='float' type64='f'/>
+</method>
+</class>
+<class name='MLCConcatenationLayer'>
+<method selector='dimension'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method class_method='true' selector='layer'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithDimension:'>
+<arg declared_type64='NSUInteger' index='0' name='dimension' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MLCConvolutionDescriptor'>
+<method class_method='true' selector='convolutionTransposeDescriptorWithKernelSizes:inputFeatureChannelCount:outputFeatureChannelCount:groupCount:strides:dilationRates:paddingPolicy:paddingSizes:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='kernelSizes' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='inputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='outputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='groupCount' type64='Q'/>
+<arg declared_type64='NSArray * _Nonnull' index='4' name='strides' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='5' name='dilationRates' type64='@'/>
+<arg declared_type64='MLCPaddingPolicy' index='6' name='paddingPolicy' type64='i'/>
+<arg declared_type64='NSArray * _Nullable' index='7' name='paddingSizes' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='convolutionTransposeDescriptorWithKernelSizes:inputFeatureChannelCount:outputFeatureChannelCount:strides:paddingPolicy:paddingSizes:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='kernelSizes' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='inputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='outputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='NSArray * _Nonnull' index='3' name='strides' type64='@'/>
+<arg declared_type64='MLCPaddingPolicy' index='4' name='paddingPolicy' type64='i'/>
+<arg declared_type64='NSArray * _Nullable' index='5' name='paddingSizes' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='convolutionTransposeDescriptorWithKernelWidth:kernelHeight:inputFeatureChannelCount:outputFeatureChannelCount:'>
+<arg declared_type64='NSUInteger' index='0' name='kernelWidth' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='kernelHeight' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='inputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='outputFeatureChannelCount' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='convolutionType'>
+<retval declared_type64='MLCConvolutionType' type64='i'/>
+</method>
+<method class_method='true' selector='depthwiseConvolutionDescriptorWithKernelSizes:inputFeatureChannelCount:channelMultiplier:strides:dilationRates:paddingPolicy:paddingSizes:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='kernelSizes' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='inputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='channelMultiplier' type64='Q'/>
+<arg declared_type64='NSArray * _Nonnull' index='3' name='strides' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='4' name='dilationRates' type64='@'/>
+<arg declared_type64='MLCPaddingPolicy' index='5' name='paddingPolicy' type64='i'/>
+<arg declared_type64='NSArray * _Nullable' index='6' name='paddingSizes' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='depthwiseConvolutionDescriptorWithKernelSizes:inputFeatureChannelCount:channelMultiplier:strides:paddingPolicy:paddingSizes:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='kernelSizes' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='inputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='channelMultiplier' type64='Q'/>
+<arg declared_type64='NSArray * _Nonnull' index='3' name='strides' type64='@'/>
+<arg declared_type64='MLCPaddingPolicy' index='4' name='paddingPolicy' type64='i'/>
+<arg declared_type64='NSArray * _Nullable' index='5' name='paddingSizes' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='depthwiseConvolutionDescriptorWithKernelWidth:kernelHeight:inputFeatureChannelCount:channelMultiplier:'>
+<arg declared_type64='NSUInteger' index='0' name='kernelWidth' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='kernelHeight' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='inputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='channelMultiplier' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithKernelSizes:inputFeatureChannelCount:outputFeatureChannelCount:groupCount:strides:dilationRates:paddingPolicy:paddingSizes:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='kernelSizes' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='inputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='outputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='groupCount' type64='Q'/>
+<arg declared_type64='NSArray * _Nonnull' index='4' name='strides' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='5' name='dilationRates' type64='@'/>
+<arg declared_type64='MLCPaddingPolicy' index='6' name='paddingPolicy' type64='i'/>
+<arg declared_type64='NSArray * _Nullable' index='7' name='paddingSizes' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithKernelSizes:inputFeatureChannelCount:outputFeatureChannelCount:strides:paddingPolicy:paddingSizes:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='kernelSizes' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='inputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='outputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='NSArray * _Nonnull' index='3' name='strides' type64='@'/>
+<arg declared_type64='MLCPaddingPolicy' index='4' name='paddingPolicy' type64='i'/>
+<arg declared_type64='NSArray * _Nullable' index='5' name='paddingSizes' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithKernelWidth:kernelHeight:inputFeatureChannelCount:outputFeatureChannelCount:'>
+<arg declared_type64='NSUInteger' index='0' name='kernelWidth' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='kernelHeight' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='inputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='outputFeatureChannelCount' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithType:kernelSizes:inputFeatureChannelCount:outputFeatureChannelCount:groupCount:strides:dilationRates:paddingPolicy:paddingSizes:'>
+<arg declared_type64='MLCConvolutionType' index='0' name='convolutionType' type64='i'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='kernelSizes' type64='@'/>
+<arg declared_type64='NSUInteger' index='2' name='inputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='outputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='4' name='groupCount' type64='Q'/>
+<arg declared_type64='NSArray * _Nonnull' index='5' name='strides' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='6' name='dilationRates' type64='@'/>
+<arg declared_type64='MLCPaddingPolicy' index='7' name='paddingPolicy' type64='i'/>
+<arg declared_type64='NSArray * _Nullable' index='8' name='paddingSizes' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='dilationRateInX'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='dilationRateInY'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='groupCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='inputFeatureChannelCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='isConvolutionTranspose'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='kernelHeight'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='kernelWidth'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='outputFeatureChannelCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingPolicy'>
+<retval declared_type64='MLCPaddingPolicy' type64='i'/>
+</method>
+<method selector='paddingSizeInX'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingSizeInY'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='strideInX'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='strideInY'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='usesDepthwiseConvolution'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='MLCConvolutionLayer'>
+<method selector='biases'>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+<method selector='biasesParameter'>
+<retval declared_type64='MLCTensorParameter * _Nullable' type64='@'/>
+</method>
+<method selector='descriptor'>
+<retval declared_type64='MLCConvolutionDescriptor * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithWeights:biases:descriptor:'>
+<arg declared_type64='MLCTensor * _Nonnull' index='0' name='weights' type64='@'/>
+<arg declared_type64='MLCTensor * _Nullable' index='1' name='biases' type64='@'/>
+<arg declared_type64='MLCConvolutionDescriptor * _Nonnull' index='2' name='descriptor' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='weights'>
+<retval declared_type64='MLCTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='weightsParameter'>
+<retval declared_type64='MLCTensorParameter * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MLCDevice'>
+<method class_method='true' selector='cpuDevice'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='deviceWithGPUDevices:'>
+<arg declared_type64='NSArray&gt; * _Nonnull' index='0' name='gpus' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='deviceWithType:'>
+<arg declared_type64='MLCDeviceType' index='0' name='type' type64='i'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='deviceWithType:selectsMultipleComputeDevices:'>
+<arg declared_type64='MLCDeviceType' index='0' name='type' type64='i'/>
+<arg declared_type64='BOOL' index='1' name='selectsMultipleComputeDevices' type64='B'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='gpuDevice'>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='gpuDevices'>
+<retval declared_type64='NSArray&gt; * _Nonnull' type64='@'/>
+</method>
+<method selector='type'>
+<retval declared_type64='MLCDeviceType' type64='i'/>
+</method>
+</class>
+<class name='MLCDropoutLayer'>
+<method class_method='true' selector='layerWithRate:seed:'>
+<arg declared_type64='float' index='0' name='rate' type64='f'/>
+<arg declared_type64='NSUInteger' index='1' name='seed' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='rate'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='seed'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+</class>
+<class name='MLCEmbeddingDescriptor'>
+<method class_method='true' selector='descriptorWithEmbeddingCount:embeddingDimension:'>
+<arg declared_type64='NSNumber * _Nonnull' index='0' name='embeddingCount' type64='@'/>
+<arg declared_type64='NSNumber * _Nonnull' index='1' name='embeddingDimension' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithEmbeddingCount:embeddingDimension:paddingIndex:maximumNorm:pNorm:scalesGradientByFrequency:'>
+<arg declared_type64='NSNumber * _Nonnull' index='0' name='embeddingCount' type64='@'/>
+<arg declared_type64='NSNumber * _Nonnull' index='1' name='embeddingDimension' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='2' name='paddingIndex' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='3' name='maximumNorm' type64='@'/>
+<arg declared_type64='NSNumber * _Nullable' index='4' name='pNorm' type64='@'/>
+<arg declared_type64='BOOL' index='5' name='scalesGradientByFrequency' type64='B'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='embeddingCount'>
+<retval declared_type64='NSNumber * _Nonnull' type64='@'/>
+</method>
+<method selector='embeddingDimension'>
+<retval declared_type64='NSNumber * _Nonnull' type64='@'/>
+</method>
+<method selector='maximumNorm'>
+<retval declared_type64='NSNumber * _Nullable' type64='@'/>
+</method>
+<method selector='pNorm'>
+<retval declared_type64='NSNumber * _Nullable' type64='@'/>
+</method>
+<method selector='paddingIndex'>
+<retval declared_type64='NSNumber * _Nullable' type64='@'/>
+</method>
+<method selector='scalesGradientByFrequency'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='MLCEmbeddingLayer'>
+<method selector='descriptor'>
+<retval declared_type64='MLCEmbeddingDescriptor * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithDescriptor:weights:'>
+<arg declared_type64='MLCEmbeddingDescriptor * _Nonnull' index='0' name='descriptor' type64='@'/>
+<arg declared_type64='MLCTensor * _Nonnull' index='1' name='weights' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='weights'>
+<retval declared_type64='MLCTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='weightsParameter'>
+<retval declared_type64='MLCTensorParameter * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MLCFullyConnectedLayer'>
+<method selector='biases'>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+<method selector='biasesParameter'>
+<retval declared_type64='MLCTensorParameter * _Nullable' type64='@'/>
+</method>
+<method selector='descriptor'>
+<retval declared_type64='MLCConvolutionDescriptor * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithWeights:biases:descriptor:'>
+<arg declared_type64='MLCTensor * _Nonnull' index='0' name='weights' type64='@'/>
+<arg declared_type64='MLCTensor * _Nullable' index='1' name='biases' type64='@'/>
+<arg declared_type64='MLCConvolutionDescriptor * _Nonnull' index='2' name='descriptor' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='weights'>
+<retval declared_type64='MLCTensor * _Nonnull' type64='@'/>
+</method>
+<method selector='weightsParameter'>
+<retval declared_type64='MLCTensorParameter * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MLCGramMatrixLayer'>
+<method class_method='true' selector='layerWithScale:'>
+<arg declared_type64='float' index='0' name='scale' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='scale'>
+<retval declared_type64='float' type64='f'/>
+</method>
+</class>
+<class name='MLCGraph'>
+<method selector='bindAndWriteData:forInputs:toDevice:batchSize:synchronous:'>
+<arg declared_type64='NSDictionary * _Nonnull' index='0' name='inputsData' type64='@'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='1' name='inputTensors' type64='@'/>
+<arg declared_type64='MLCDevice * _Nonnull' index='2' name='device' type64='@'/>
+<arg declared_type64='NSUInteger' index='3' name='batchSize' type64='Q'/>
+<arg declared_type64='BOOL' index='4' name='synchronous' type64='B'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='bindAndWriteData:forInputs:toDevice:synchronous:'>
+<arg declared_type64='NSDictionary * _Nonnull' index='0' name='inputsData' type64='@'/>
+<arg declared_type64='NSDictionary * _Nonnull' index='1' name='inputTensors' type64='@'/>
+<arg declared_type64='MLCDevice * _Nonnull' index='2' name='device' type64='@'/>
+<arg declared_type64='BOOL' index='3' name='synchronous' type64='B'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='concatenateWithSources:dimension:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='sources' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='dimension' type64='Q'/>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+<method selector='device'>
+<retval declared_type64='MLCDevice * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='graph'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='layers'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='nodeWithLayer:source:'>
+<arg declared_type64='MLCLayer * _Nonnull' index='0' name='layer' type64='@'/>
+<arg declared_type64='MLCTensor * _Nonnull' index='1' name='source' type64='@'/>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+<method selector='nodeWithLayer:sources:'>
+<arg declared_type64='MLCLayer * _Nonnull' index='0' name='layer' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='sources' type64='@'/>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+<method selector='nodeWithLayer:sources:disableUpdate:'>
+<arg declared_type64='MLCLayer * _Nonnull' index='0' name='layer' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='sources' type64='@'/>
+<arg declared_type64='BOOL' index='2' name='disableUpdate' type64='B'/>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+<method selector='nodeWithLayer:sources:lossLabels:'>
+<arg declared_type64='MLCLayer * _Nonnull' index='0' name='layer' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='sources' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='lossLabels' type64='@'/>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+<method selector='reshapeWithShape:source:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='shape' type64='@'/>
+<arg declared_type64='MLCTensor * _Nonnull' index='1' name='source' type64='@'/>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+<method selector='resultTensorsForLayer:'>
+<arg declared_type64='MLCLayer * _Nonnull' index='0' name='layer' type64='@'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='sourceTensorsForLayer:'>
+<arg declared_type64='MLCLayer * _Nonnull' index='0' name='layer' type64='@'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='splitWithSource:splitCount:dimension:'>
+<arg declared_type64='MLCTensor * _Nonnull' index='0' name='source' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='splitCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='dimension' type64='Q'/>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='splitWithSource:splitSectionLengths:dimension:'>
+<arg declared_type64='MLCTensor * _Nonnull' index='0' name='source' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='splitSectionLengths' type64='@'/>
+<arg declared_type64='NSUInteger' index='2' name='dimension' type64='Q'/>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='summarizedDOTDescription'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='transposeWithDimensions:source:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='dimensions' type64='@'/>
+<arg declared_type64='MLCTensor * _Nonnull' index='1' name='source' type64='@'/>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MLCGroupNormalizationLayer'>
+<method selector='beta'>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+<method selector='betaParameter'>
+<retval declared_type64='MLCTensorParameter * _Nullable' type64='@'/>
+</method>
+<method selector='featureChannelCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='gamma'>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+<method selector='gammaParameter'>
+<retval declared_type64='MLCTensorParameter * _Nullable' type64='@'/>
+</method>
+<method selector='groupCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method class_method='true' selector='layerWithFeatureChannelCount:groupCount:beta:gamma:varianceEpsilon:'>
+<arg declared_type64='NSUInteger' index='0' name='featureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='groupCount' type64='Q'/>
+<arg declared_type64='MLCTensor * _Nullable' index='2' name='beta' type64='@'/>
+<arg declared_type64='MLCTensor * _Nullable' index='3' name='gamma' type64='@'/>
+<arg declared_type64='float' index='4' name='varianceEpsilon' type64='f'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='varianceEpsilon'>
+<retval declared_type64='float' type64='f'/>
+</method>
+</class>
+<class name='MLCInferenceGraph'>
+<method selector='addInputs:'>
+<arg declared_type64='NSDictionary * _Nonnull' index='0' name='inputs' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='addInputs:lossLabels:lossLabelWeights:'>
+<arg declared_type64='NSDictionary * _Nonnull' index='0' name='inputs' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='lossLabels' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='2' name='lossLabelWeights' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='addOutputs:'>
+<arg declared_type64='NSDictionary * _Nonnull' index='0' name='outputs' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='compileWithOptions:device:'>
+<arg declared_type64='MLCGraphCompilationOptions' index='0' name='options' type64='Q'/>
+<arg declared_type64='MLCDevice * _Nonnull' index='1' name='device' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='deviceMemorySize'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='executeWithInputsData:batchSize:options:completionHandler:'>
+<arg declared_type64='NSDictionary * _Nonnull' index='0' name='inputsData' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='batchSize' type64='Q'/>
+<arg declared_type64='MLCExecutionOptions' index='2' name='options' type64='Q'/>
+<arg declared_type64='MLCGraphCompletionHandler _Nullable' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='MLCTensor * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<arg declared_type64='NSTimeInterval' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='executeWithInputsData:lossLabelsData:lossLabelWeightsData:batchSize:options:completionHandler:'>
+<arg declared_type64='NSDictionary * _Nonnull' index='0' name='inputsData' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='lossLabelsData' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='2' name='lossLabelWeightsData' type64='@'/>
+<arg declared_type64='NSUInteger' index='3' name='batchSize' type64='Q'/>
+<arg declared_type64='MLCExecutionOptions' index='4' name='options' type64='Q'/>
+<arg declared_type64='MLCGraphCompletionHandler _Nullable' function_pointer='true' index='5' name='completionHandler' type64='@?'>
+<arg declared_type64='MLCTensor * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<arg declared_type64='NSTimeInterval' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='executeWithInputsData:lossLabelsData:lossLabelWeightsData:outputsData:batchSize:options:completionHandler:'>
+<arg declared_type64='NSDictionary * _Nonnull' index='0' name='inputsData' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='lossLabelsData' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='2' name='lossLabelWeightsData' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='3' name='outputsData' type64='@'/>
+<arg declared_type64='NSUInteger' index='4' name='batchSize' type64='Q'/>
+<arg declared_type64='MLCExecutionOptions' index='5' name='options' type64='Q'/>
+<arg declared_type64='MLCGraphCompletionHandler _Nullable' function_pointer='true' index='6' name='completionHandler' type64='@?'>
+<arg declared_type64='MLCTensor * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<arg declared_type64='NSTimeInterval' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='executeWithInputsData:outputsData:batchSize:options:completionHandler:'>
+<arg declared_type64='NSDictionary * _Nonnull' index='0' name='inputsData' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='outputsData' type64='@'/>
+<arg declared_type64='NSUInteger' index='2' name='batchSize' type64='Q'/>
+<arg declared_type64='MLCExecutionOptions' index='3' name='options' type64='Q'/>
+<arg declared_type64='MLCGraphCompletionHandler _Nullable' function_pointer='true' index='4' name='completionHandler' type64='@?'>
+<arg declared_type64='MLCTensor * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<arg declared_type64='NSTimeInterval' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='graphWithGraphObjects:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='graphObjects' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='linkWithGraphs:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='graphs' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='MLCInstanceNormalizationLayer'>
+<method selector='beta'>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+<method selector='betaParameter'>
+<retval declared_type64='MLCTensorParameter * _Nullable' type64='@'/>
+</method>
+<method selector='featureChannelCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='gamma'>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+<method selector='gammaParameter'>
+<retval declared_type64='MLCTensorParameter * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithFeatureChannelCount:beta:gamma:varianceEpsilon:'>
+<arg declared_type64='NSUInteger' index='0' name='featureChannelCount' type64='Q'/>
+<arg declared_type64='MLCTensor * _Nullable' index='1' name='beta' type64='@'/>
+<arg declared_type64='MLCTensor * _Nullable' index='2' name='gamma' type64='@'/>
+<arg declared_type64='float' index='3' name='varianceEpsilon' type64='f'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithFeatureChannelCount:beta:gamma:varianceEpsilon:momentum:'>
+<arg declared_type64='NSUInteger' index='0' name='featureChannelCount' type64='Q'/>
+<arg declared_type64='MLCTensor * _Nullable' index='1' name='beta' type64='@'/>
+<arg declared_type64='MLCTensor * _Nullable' index='2' name='gamma' type64='@'/>
+<arg declared_type64='float' index='3' name='varianceEpsilon' type64='f'/>
+<arg declared_type64='float' index='4' name='momentum' type64='f'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='momentum'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='varianceEpsilon'>
+<retval declared_type64='float' type64='f'/>
+</method>
+</class>
+<class name='MLCLSTMDescriptor'>
+<method selector='batchFirst'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='descriptorWithInputSize:hiddenSize:layerCount:'>
+<arg declared_type64='NSUInteger' index='0' name='inputSize' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='hiddenSize' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='layerCount' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithInputSize:hiddenSize:layerCount:usesBiases:batchFirst:isBidirectional:dropout:'>
+<arg declared_type64='NSUInteger' index='0' name='inputSize' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='hiddenSize' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='layerCount' type64='Q'/>
+<arg declared_type64='BOOL' index='3' name='usesBiases' type64='B'/>
+<arg declared_type64='BOOL' index='4' name='batchFirst' type64='B'/>
+<arg declared_type64='BOOL' index='5' name='isBidirectional' type64='B'/>
+<arg declared_type64='float' index='6' name='dropout' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithInputSize:hiddenSize:layerCount:usesBiases:batchFirst:isBidirectional:returnsSequences:dropout:'>
+<arg declared_type64='NSUInteger' index='0' name='inputSize' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='hiddenSize' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='layerCount' type64='Q'/>
+<arg declared_type64='BOOL' index='3' name='usesBiases' type64='B'/>
+<arg declared_type64='BOOL' index='4' name='batchFirst' type64='B'/>
+<arg declared_type64='BOOL' index='5' name='isBidirectional' type64='B'/>
+<arg declared_type64='BOOL' index='6' name='returnsSequences' type64='B'/>
+<arg declared_type64='float' index='7' name='dropout' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithInputSize:hiddenSize:layerCount:usesBiases:batchFirst:isBidirectional:returnsSequences:dropout:resultMode:'>
+<arg declared_type64='NSUInteger' index='0' name='inputSize' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='hiddenSize' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='layerCount' type64='Q'/>
+<arg declared_type64='BOOL' index='3' name='usesBiases' type64='B'/>
+<arg declared_type64='BOOL' index='4' name='batchFirst' type64='B'/>
+<arg declared_type64='BOOL' index='5' name='isBidirectional' type64='B'/>
+<arg declared_type64='BOOL' index='6' name='returnsSequences' type64='B'/>
+<arg declared_type64='float' index='7' name='dropout' type64='f'/>
+<arg declared_type64='MLCLSTMResultMode' index='8' name='resultMode' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithInputSize:hiddenSize:layerCount:usesBiases:isBidirectional:dropout:'>
+<arg declared_type64='NSUInteger' index='0' name='inputSize' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='hiddenSize' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='layerCount' type64='Q'/>
+<arg declared_type64='BOOL' index='3' name='usesBiases' type64='B'/>
+<arg declared_type64='BOOL' index='4' name='isBidirectional' type64='B'/>
+<arg declared_type64='float' index='5' name='dropout' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='dropout'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='hiddenSize'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='inputSize'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='isBidirectional'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='layerCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='resultMode'>
+<retval declared_type64='MLCLSTMResultMode' type64='Q'/>
+</method>
+<method selector='returnsSequences'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='usesBiases'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='MLCLSTMLayer'>
+<method selector='biases'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='biasesParameters'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='descriptor'>
+<retval declared_type64='MLCLSTMDescriptor * _Nonnull' type64='@'/>
+</method>
+<method selector='gateActivations'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='hiddenWeights'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='hiddenWeightsParameters'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='inputWeights'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='inputWeightsParameters'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithDescriptor:inputWeights:hiddenWeights:biases:'>
+<arg declared_type64='MLCLSTMDescriptor * _Nonnull' index='0' name='descriptor' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='inputWeights' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='hiddenWeights' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='3' name='biases' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithDescriptor:inputWeights:hiddenWeights:peepholeWeights:biases:'>
+<arg declared_type64='MLCLSTMDescriptor * _Nonnull' index='0' name='descriptor' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='inputWeights' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='hiddenWeights' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='3' name='peepholeWeights' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='4' name='biases' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithDescriptor:inputWeights:hiddenWeights:peepholeWeights:biases:gateActivations:outputResultActivation:'>
+<arg declared_type64='MLCLSTMDescriptor * _Nonnull' index='0' name='descriptor' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='inputWeights' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='hiddenWeights' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='3' name='peepholeWeights' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='4' name='biases' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='5' name='gateActivations' type64='@'/>
+<arg declared_type64='MLCActivationDescriptor * _Nonnull' index='6' name='outputResultActivation' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='outputResultActivation'>
+<retval declared_type64='MLCActivationDescriptor * _Nonnull' type64='@'/>
+</method>
+<method selector='peepholeWeights'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='peepholeWeightsParameters'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MLCLayer'>
+<method selector='isDebuggingEnabled'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='label'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='layerID'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='setIsDebuggingEnabled:'>
+<arg declared_type64='BOOL' index='0' name='isDebuggingEnabled' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLabel:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='label' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method class_method='true' selector='supportsDataType:onDevice:'>
+<arg declared_type64='MLCDataType' index='0' name='dataType' type64='i'/>
+<arg declared_type64='MLCDevice * _Nonnull' index='1' name='device' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='MLCLayerNormalizationLayer'>
+<method selector='beta'>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+<method selector='betaParameter'>
+<retval declared_type64='MLCTensorParameter * _Nullable' type64='@'/>
+</method>
+<method selector='gamma'>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+<method selector='gammaParameter'>
+<retval declared_type64='MLCTensorParameter * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithNormalizedShape:beta:gamma:varianceEpsilon:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='normalizedShape' type64='@'/>
+<arg declared_type64='MLCTensor * _Nullable' index='1' name='beta' type64='@'/>
+<arg declared_type64='MLCTensor * _Nullable' index='2' name='gamma' type64='@'/>
+<arg declared_type64='float' index='3' name='varianceEpsilon' type64='f'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='normalizedShape'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='varianceEpsilon'>
+<retval declared_type64='float' type64='f'/>
+</method>
+</class>
+<class name='MLCLossDescriptor'>
+<method selector='classCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='delta'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method class_method='true' selector='descriptorWithType:reductionType:'>
+<arg declared_type64='MLCLossType' index='0' name='lossType' type64='i'/>
+<arg declared_type64='MLCReductionType' index='1' name='reductionType' type64='i'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithType:reductionType:weight:'>
+<arg declared_type64='MLCLossType' index='0' name='lossType' type64='i'/>
+<arg declared_type64='MLCReductionType' index='1' name='reductionType' type64='i'/>
+<arg declared_type64='float' index='2' name='weight' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithType:reductionType:weight:labelSmoothing:classCount:'>
+<arg declared_type64='MLCLossType' index='0' name='lossType' type64='i'/>
+<arg declared_type64='MLCReductionType' index='1' name='reductionType' type64='i'/>
+<arg declared_type64='float' index='2' name='weight' type64='f'/>
+<arg declared_type64='float' index='3' name='labelSmoothing' type64='f'/>
+<arg declared_type64='NSUInteger' index='4' name='classCount' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithType:reductionType:weight:labelSmoothing:classCount:epsilon:delta:'>
+<arg declared_type64='MLCLossType' index='0' name='lossType' type64='i'/>
+<arg declared_type64='MLCReductionType' index='1' name='reductionType' type64='i'/>
+<arg declared_type64='float' index='2' name='weight' type64='f'/>
+<arg declared_type64='float' index='3' name='labelSmoothing' type64='f'/>
+<arg declared_type64='NSUInteger' index='4' name='classCount' type64='Q'/>
+<arg declared_type64='float' index='5' name='epsilon' type64='f'/>
+<arg declared_type64='float' index='6' name='delta' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='epsilon'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='labelSmoothing'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='lossType'>
+<retval declared_type64='MLCLossType' type64='i'/>
+</method>
+<method selector='reductionType'>
+<retval declared_type64='MLCReductionType' type64='i'/>
+</method>
+<method selector='weight'>
+<retval declared_type64='float' type64='f'/>
+</method>
+</class>
+<class name='MLCLossLayer'>
+<method class_method='true' selector='categoricalCrossEntropyLossWithReductionType:labelSmoothing:classCount:weight:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='float' index='1' name='labelSmoothing' type64='f'/>
+<arg declared_type64='NSUInteger' index='2' name='classCount' type64='Q'/>
+<arg declared_type64='float' index='3' name='weight' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='categoricalCrossEntropyLossWithReductionType:labelSmoothing:classCount:weights:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='float' index='1' name='labelSmoothing' type64='f'/>
+<arg declared_type64='NSUInteger' index='2' name='classCount' type64='Q'/>
+<arg declared_type64='MLCTensor * _Nullable' index='3' name='weights' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='cosineDistanceLossWithReductionType:weight:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='float' index='1' name='weight' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='cosineDistanceLossWithReductionType:weights:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='MLCTensor * _Nullable' index='1' name='weights' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='descriptor'>
+<retval declared_type64='MLCLossDescriptor * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='hingeLossWithReductionType:weight:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='float' index='1' name='weight' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='hingeLossWithReductionType:weights:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='MLCTensor * _Nullable' index='1' name='weights' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='huberLossWithReductionType:delta:weight:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='float' index='1' name='delta' type64='f'/>
+<arg declared_type64='float' index='2' name='weight' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='huberLossWithReductionType:delta:weights:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='float' index='1' name='delta' type64='f'/>
+<arg declared_type64='MLCTensor * _Nullable' index='2' name='weights' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithDescriptor:'>
+<arg declared_type64='MLCLossDescriptor * _Nonnull' index='0' name='lossDescriptor' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithDescriptor:weights:'>
+<arg declared_type64='MLCLossDescriptor * _Nonnull' index='0' name='lossDescriptor' type64='@'/>
+<arg declared_type64='MLCTensor * _Nonnull' index='1' name='weights' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='logLossWithReductionType:epsilon:weight:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='float' index='1' name='epsilon' type64='f'/>
+<arg declared_type64='float' index='2' name='weight' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='logLossWithReductionType:epsilon:weights:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='float' index='1' name='epsilon' type64='f'/>
+<arg declared_type64='MLCTensor * _Nullable' index='2' name='weights' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='meanAbsoluteErrorLossWithReductionType:weight:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='float' index='1' name='weight' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='meanAbsoluteErrorLossWithReductionType:weights:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='MLCTensor * _Nullable' index='1' name='weights' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='meanSquaredErrorLossWithReductionType:weight:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='float' index='1' name='weight' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='meanSquaredErrorLossWithReductionType:weights:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='MLCTensor * _Nullable' index='1' name='weights' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='sigmoidCrossEntropyLossWithReductionType:labelSmoothing:weight:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='float' index='1' name='labelSmoothing' type64='f'/>
+<arg declared_type64='float' index='2' name='weight' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='sigmoidCrossEntropyLossWithReductionType:labelSmoothing:weights:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='float' index='1' name='labelSmoothing' type64='f'/>
+<arg declared_type64='MLCTensor * _Nullable' index='2' name='weights' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='softmaxCrossEntropyLossWithReductionType:labelSmoothing:classCount:weight:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='float' index='1' name='labelSmoothing' type64='f'/>
+<arg declared_type64='NSUInteger' index='2' name='classCount' type64='Q'/>
+<arg declared_type64='float' index='3' name='weight' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='softmaxCrossEntropyLossWithReductionType:labelSmoothing:classCount:weights:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='float' index='1' name='labelSmoothing' type64='f'/>
+<arg declared_type64='NSUInteger' index='2' name='classCount' type64='Q'/>
+<arg declared_type64='MLCTensor * _Nullable' index='3' name='weights' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='weights'>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MLCMatMulDescriptor'>
+<method selector='alpha'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method class_method='true' selector='descriptor'>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithAlpha:transposesX:transposesY:'>
+<arg declared_type64='float' index='0' name='alpha' type64='f'/>
+<arg declared_type64='BOOL' index='1' name='transposesX' type64='B'/>
+<arg declared_type64='BOOL' index='2' name='transposesY' type64='B'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='transposesX'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='transposesY'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='MLCMatMulLayer'>
+<method selector='descriptor'>
+<retval declared_type64='MLCMatMulDescriptor * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithDescriptor:'>
+<arg declared_type64='MLCMatMulDescriptor * _Nonnull' index='0' name='descriptor' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MLCMultiheadAttentionDescriptor'>
+<method selector='addsZeroAttention'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='descriptorWithModelDimension:headCount:'>
+<arg declared_type64='NSUInteger' index='0' name='modelDimension' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='headCount' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithModelDimension:keyDimension:valueDimension:headCount:dropout:hasBiases:hasAttentionBiases:addsZeroAttention:'>
+<arg declared_type64='NSUInteger' index='0' name='modelDimension' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='keyDimension' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='valueDimension' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='headCount' type64='Q'/>
+<arg declared_type64='float' index='4' name='dropout' type64='f'/>
+<arg declared_type64='BOOL' index='5' name='hasBiases' type64='B'/>
+<arg declared_type64='BOOL' index='6' name='hasAttentionBiases' type64='B'/>
+<arg declared_type64='BOOL' index='7' name='addsZeroAttention' type64='B'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='dropout'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='hasAttentionBiases'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='hasBiases'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='headCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='keyDimension'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='modelDimension'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='valueDimension'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+</class>
+<class name='MLCMultiheadAttentionLayer'>
+<method selector='attentionBiases'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='biases'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='biasesParameters'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='descriptor'>
+<retval declared_type64='MLCMultiheadAttentionDescriptor * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithDescriptor:weights:biases:attentionBiases:'>
+<arg declared_type64='MLCMultiheadAttentionDescriptor * _Nonnull' index='0' name='descriptor' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='weights' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='2' name='biases' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='3' name='attentionBiases' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='weights'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='weightsParameters'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MLCOptimizer'>
+<method selector='appliesGradientClipping'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='gradientClipMax'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='gradientClipMin'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='gradientRescale'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='learningRate'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='regularizationScale'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='regularizationType'>
+<retval declared_type64='MLCRegularizationType' type64='i'/>
+</method>
+<method selector='setAppliesGradientClipping:'>
+<arg declared_type64='BOOL' index='0' name='appliesGradientClipping' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setLearningRate:'>
+<arg declared_type64='float' index='0' name='learningRate' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MLCOptimizerDescriptor'>
+<method selector='appliesGradientClipping'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='descriptorWithLearningRate:gradientRescale:appliesGradientClipping:gradientClipMax:gradientClipMin:regularizationType:regularizationScale:'>
+<arg declared_type64='float' index='0' name='learningRate' type64='f'/>
+<arg declared_type64='float' index='1' name='gradientRescale' type64='f'/>
+<arg declared_type64='BOOL' index='2' name='appliesGradientClipping' type64='B'/>
+<arg declared_type64='float' index='3' name='gradientClipMax' type64='f'/>
+<arg declared_type64='float' index='4' name='gradientClipMin' type64='f'/>
+<arg declared_type64='MLCRegularizationType' index='5' name='regularizationType' type64='i'/>
+<arg declared_type64='float' index='6' name='regularizationScale' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithLearningRate:gradientRescale:regularizationType:regularizationScale:'>
+<arg declared_type64='float' index='0' name='learningRate' type64='f'/>
+<arg declared_type64='float' index='1' name='gradientRescale' type64='f'/>
+<arg declared_type64='MLCRegularizationType' index='2' name='regularizationType' type64='i'/>
+<arg declared_type64='float' index='3' name='regularizationScale' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='gradientClipMax'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='gradientClipMin'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='gradientRescale'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='learningRate'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='regularizationScale'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='regularizationType'>
+<retval declared_type64='MLCRegularizationType' type64='i'/>
+</method>
+</class>
+<class name='MLCPaddingLayer'>
+<method selector='constantValue'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method class_method='true' selector='layerWithConstantPadding:constantValue:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='padding' type64='@'/>
+<arg declared_type64='float' index='1' name='constantValue' type64='f'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithReflectionPadding:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='padding' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithSymmetricPadding:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='padding' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithZeroPadding:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='padding' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='paddingBottom'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingLeft'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingRight'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingTop'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingType'>
+<retval declared_type64='MLCPaddingType' type64='i'/>
+</method>
+</class>
+<class name='MLCPoolingDescriptor'>
+<method class_method='true' selector='averagePoolingDescriptorWithKernelSizes:strides:dilationRates:paddingPolicy:paddingSizes:countIncludesPadding:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='kernelSizes' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='strides' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='dilationRates' type64='@'/>
+<arg declared_type64='MLCPaddingPolicy' index='3' name='paddingPolicy' type64='i'/>
+<arg declared_type64='NSArray * _Nullable' index='4' name='paddingSizes' type64='@'/>
+<arg declared_type64='BOOL' index='5' name='countIncludesPadding' type64='B'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='averagePoolingDescriptorWithKernelSizes:strides:paddingPolicy:paddingSizes:countIncludesPadding:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='kernelSizes' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='strides' type64='@'/>
+<arg declared_type64='MLCPaddingPolicy' index='2' name='paddingPolicy' type64='i'/>
+<arg declared_type64='NSArray * _Nullable' index='3' name='paddingSizes' type64='@'/>
+<arg declared_type64='BOOL' index='4' name='countIncludesPadding' type64='B'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='countIncludesPadding'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='dilationRateInX'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='dilationRateInY'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='kernelHeight'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='kernelWidth'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method class_method='true' selector='l2NormPoolingDescriptorWithKernelSizes:strides:dilationRates:paddingPolicy:paddingSizes:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='kernelSizes' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='strides' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='dilationRates' type64='@'/>
+<arg declared_type64='MLCPaddingPolicy' index='3' name='paddingPolicy' type64='i'/>
+<arg declared_type64='NSArray * _Nullable' index='4' name='paddingSizes' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='l2NormPoolingDescriptorWithKernelSizes:strides:paddingPolicy:paddingSizes:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='kernelSizes' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='strides' type64='@'/>
+<arg declared_type64='MLCPaddingPolicy' index='2' name='paddingPolicy' type64='i'/>
+<arg declared_type64='NSArray * _Nullable' index='3' name='paddingSizes' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='maxPoolingDescriptorWithKernelSizes:strides:dilationRates:paddingPolicy:paddingSizes:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='kernelSizes' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='strides' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='2' name='dilationRates' type64='@'/>
+<arg declared_type64='MLCPaddingPolicy' index='3' name='paddingPolicy' type64='i'/>
+<arg declared_type64='NSArray * _Nullable' index='4' name='paddingSizes' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='maxPoolingDescriptorWithKernelSizes:strides:paddingPolicy:paddingSizes:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='kernelSizes' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='strides' type64='@'/>
+<arg declared_type64='MLCPaddingPolicy' index='2' name='paddingPolicy' type64='i'/>
+<arg declared_type64='NSArray * _Nullable' index='3' name='paddingSizes' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='paddingPolicy'>
+<retval declared_type64='MLCPaddingPolicy' type64='i'/>
+</method>
+<method selector='paddingSizeInX'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='paddingSizeInY'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method class_method='true' selector='poolingDescriptorWithType:kernelSize:stride:'>
+<arg declared_type64='MLCPoolingType' index='0' name='poolingType' type64='i'/>
+<arg declared_type64='NSUInteger' index='1' name='kernelSize' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='stride' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='poolingType'>
+<retval declared_type64='MLCPoolingType' type64='i'/>
+</method>
+<method selector='strideInX'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='strideInY'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+</class>
+<class name='MLCPoolingLayer'>
+<method selector='descriptor'>
+<retval declared_type64='MLCPoolingDescriptor * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithDescriptor:'>
+<arg declared_type64='MLCPoolingDescriptor * _Nonnull' index='0' name='descriptor' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MLCRMSPropOptimizer'>
+<method selector='alpha'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='epsilon'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='isCentered'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='momentumScale'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method class_method='true' selector='optimizerWithDescriptor:'>
+<arg declared_type64='MLCOptimizerDescriptor * _Nonnull' index='0' name='optimizerDescriptor' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='optimizerWithDescriptor:momentumScale:alpha:epsilon:isCentered:'>
+<arg declared_type64='MLCOptimizerDescriptor * _Nonnull' index='0' name='optimizerDescriptor' type64='@'/>
+<arg declared_type64='float' index='1' name='momentumScale' type64='f'/>
+<arg declared_type64='float' index='2' name='alpha' type64='f'/>
+<arg declared_type64='float' index='3' name='epsilon' type64='f'/>
+<arg declared_type64='BOOL' index='4' name='isCentered' type64='B'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MLCReductionLayer'>
+<method selector='dimension'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method class_method='true' selector='layerWithReductionType:dimension:'>
+<arg declared_type64='MLCReductionType' index='0' name='reductionType' type64='i'/>
+<arg declared_type64='NSUInteger' index='1' name='dimension' type64='Q'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='reductionType'>
+<retval declared_type64='MLCReductionType' type64='i'/>
+</method>
+</class>
+<class name='MLCReshapeLayer'>
+<method class_method='true' selector='layerWithShape:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='shape' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MLCSGDOptimizer'>
+<method selector='momentumScale'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method class_method='true' selector='optimizerWithDescriptor:'>
+<arg declared_type64='MLCOptimizerDescriptor * _Nonnull' index='0' name='optimizerDescriptor' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='optimizerWithDescriptor:momentumScale:usesNesterovMomentum:'>
+<arg declared_type64='MLCOptimizerDescriptor * _Nonnull' index='0' name='optimizerDescriptor' type64='@'/>
+<arg declared_type64='float' index='1' name='momentumScale' type64='f'/>
+<arg declared_type64='BOOL' index='2' name='usesNesterovMomentum' type64='B'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='usesNesterovMomentum'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='MLCSliceLayer'>
+<method selector='end'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='sliceLayerWithStart:end:stride:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='start' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='end' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='2' name='stride' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='start'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='stride'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MLCSoftmaxLayer'>
+<method selector='dimension'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method class_method='true' selector='layerWithOperation:'>
+<arg declared_type64='MLCSoftmaxOperation' index='0' name='operation' type64='i'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithOperation:dimension:'>
+<arg declared_type64='MLCSoftmaxOperation' index='0' name='operation' type64='i'/>
+<arg declared_type64='NSUInteger' index='1' name='dimension' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='operation'>
+<retval declared_type64='MLCSoftmaxOperation' type64='i'/>
+</method>
+</class>
+<class name='MLCSplitLayer'>
+<method selector='dimension'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method class_method='true' selector='layerWithSplitCount:dimension:'>
+<arg declared_type64='NSUInteger' index='0' name='splitCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='dimension' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithSplitSectionLengths:dimension:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='splitSectionLengths' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='dimension' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='splitCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='splitSectionLengths'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MLCTensor'>
+<method selector='bindAndWriteData:toDevice:'>
+<arg declared_type64='MLCTensorData * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='MLCDevice * _Nonnull' index='1' name='device' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='bindOptimizerData:deviceData:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='1' name='deviceData' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='copyDataFromDeviceMemoryToBytes:length:synchronizeWithDevice:'>
+<arg declared_type64='void * _Nonnull' index='0' name='bytes' type64='^v'/>
+<arg declared_type64='NSUInteger' index='1' name='length' type64='Q'/>
+<arg declared_type64='BOOL' index='2' name='synchronizeWithDevice' type64='B'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='data'>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='descriptor'>
+<retval declared_type64='MLCTensorDescriptor * _Nonnull' type64='@'/>
+</method>
+<method selector='device'>
+<retval declared_type64='MLCDevice * _Nullable' type64='@'/>
+</method>
+<method selector='hasValidNumerics'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='label'>
+<retval declared_type64='NSString * _Nonnull' type64='@'/>
+</method>
+<method selector='optimizerData'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='optimizerDeviceData'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='setLabel:'>
+<arg declared_type64='NSString * _Nonnull' index='0' name='label' type64='@'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='synchronizeData'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='synchronizeOptimizerData'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='tensorID'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method class_method='true' selector='tensorWithDescriptor:'>
+<arg declared_type64='MLCTensorDescriptor * _Nonnull' index='0' name='tensorDescriptor' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='tensorWithDescriptor:data:'>
+<arg declared_type64='MLCTensorDescriptor * _Nonnull' index='0' name='tensorDescriptor' type64='@'/>
+<arg declared_type64='MLCTensorData * _Nonnull' index='1' name='data' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='tensorWithDescriptor:fillWithData:'>
+<arg declared_type64='MLCTensorDescriptor * _Nonnull' index='0' name='tensorDescriptor' type64='@'/>
+<arg declared_type64='NSNumber * _Nonnull' index='1' name='fillData' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='tensorWithDescriptor:randomInitializerType:'>
+<arg declared_type64='MLCTensorDescriptor * _Nonnull' index='0' name='tensorDescriptor' type64='@'/>
+<arg declared_type64='MLCRandomInitializerType' index='1' name='randomInitializerType' type64='i'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='tensorWithSequenceLength:featureChannelCount:batchSize:'>
+<arg declared_type64='NSUInteger' index='0' name='sequenceLength' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='featureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='batchSize' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='tensorWithSequenceLength:featureChannelCount:batchSize:data:'>
+<arg declared_type64='NSUInteger' index='0' name='sequenceLength' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='featureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='batchSize' type64='Q'/>
+<arg declared_type64='MLCTensorData * _Nullable' index='3' name='data' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='tensorWithSequenceLength:featureChannelCount:batchSize:randomInitializerType:'>
+<arg declared_type64='NSUInteger' index='0' name='sequenceLength' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='featureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='batchSize' type64='Q'/>
+<arg declared_type64='MLCRandomInitializerType' index='3' name='randomInitializerType' type64='i'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='tensorWithSequenceLengths:sortedSequences:featureChannelCount:batchSize:data:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='sequenceLengths' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='sortedSequences' type64='B'/>
+<arg declared_type64='NSUInteger' index='2' name='featureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='batchSize' type64='Q'/>
+<arg declared_type64='MLCTensorData * _Nullable' index='4' name='data' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='tensorWithSequenceLengths:sortedSequences:featureChannelCount:batchSize:randomInitializerType:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='sequenceLengths' type64='@'/>
+<arg declared_type64='BOOL' index='1' name='sortedSequences' type64='B'/>
+<arg declared_type64='NSUInteger' index='2' name='featureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='batchSize' type64='Q'/>
+<arg declared_type64='MLCRandomInitializerType' index='4' name='randomInitializerType' type64='i'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='tensorWithShape:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='shape' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='tensorWithShape:data:dataType:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='shape' type64='@'/>
+<arg declared_type64='MLCTensorData * _Nonnull' index='1' name='data' type64='@'/>
+<arg declared_type64='MLCDataType' index='2' name='dataType' type64='i'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='tensorWithShape:dataType:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='shape' type64='@'/>
+<arg declared_type64='MLCDataType' index='1' name='dataType' type64='i'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='tensorWithShape:fillWithData:dataType:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='shape' type64='@'/>
+<arg declared_type64='NSNumber * _Nonnull' index='1' name='fillData' type64='@'/>
+<arg declared_type64='MLCDataType' index='2' name='dataType' type64='i'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='tensorWithShape:randomInitializerType:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='shape' type64='@'/>
+<arg declared_type64='MLCRandomInitializerType' index='1' name='randomInitializerType' type64='i'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='tensorWithWidth:height:featureChannelCount:batchSize:'>
+<arg declared_type64='NSUInteger' index='0' name='width' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='height' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='featureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='batchSize' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='tensorWithWidth:height:featureChannelCount:batchSize:data:'>
+<arg declared_type64='NSUInteger' index='0' name='width' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='height' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='featureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='batchSize' type64='Q'/>
+<arg declared_type64='MLCTensorData * _Nonnull' index='4' name='data' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='tensorWithWidth:height:featureChannelCount:batchSize:data:dataType:'>
+<arg declared_type64='NSUInteger' index='0' name='width' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='height' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='featureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='batchSize' type64='Q'/>
+<arg declared_type64='MLCTensorData * _Nonnull' index='4' name='data' type64='@'/>
+<arg declared_type64='MLCDataType' index='5' name='dataType' type64='i'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='tensorWithWidth:height:featureChannelCount:batchSize:fillWithData:dataType:'>
+<arg declared_type64='NSUInteger' index='0' name='width' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='height' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='featureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='batchSize' type64='Q'/>
+<arg declared_type64='float' index='4' name='fillData' type64='f'/>
+<arg declared_type64='MLCDataType' index='5' name='dataType' type64='i'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='tensorWithWidth:height:featureChannelCount:batchSize:randomInitializerType:'>
+<arg declared_type64='NSUInteger' index='0' name='width' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='height' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='featureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='batchSize' type64='Q'/>
+<arg declared_type64='MLCRandomInitializerType' index='4' name='randomInitializerType' type64='i'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MLCTensorData'>
+<method selector='bytes'>
+<retval declared_type64='void * _Nonnull' type64='^v'/>
+</method>
+<method class_method='true' selector='dataWithBytesNoCopy:length:'>
+<arg declared_type64='void * _Nonnull' index='0' name='bytes' type64='^v'/>
+<arg declared_type64='NSUInteger' index='1' name='length' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='dataWithImmutableBytesNoCopy:length:'>
+<arg const='true' declared_type64='void * _Nonnull' index='0' name='bytes' type64='^v'/>
+<arg declared_type64='NSUInteger' index='1' name='length' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='length'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+</class>
+<class name='MLCTensorDescriptor'>
+<method selector='batchSizePerSequenceStep'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='convolutionBiasesDescriptorWithFeatureChannelCount:dataType:'>
+<arg declared_type64='NSUInteger' index='0' name='featureChannelCount' type64='Q'/>
+<arg declared_type64='MLCDataType' index='1' name='dataType' type64='i'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='convolutionWeightsDescriptorWithInputFeatureChannelCount:outputFeatureChannelCount:dataType:'>
+<arg declared_type64='NSUInteger' index='0' name='inputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='outputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='MLCDataType' index='2' name='dataType' type64='i'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='convolutionWeightsDescriptorWithWidth:height:inputFeatureChannelCount:outputFeatureChannelCount:dataType:'>
+<arg declared_type64='NSUInteger' index='0' name='width' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='height' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='inputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='outputFeatureChannelCount' type64='Q'/>
+<arg declared_type64='MLCDataType' index='4' name='dataType' type64='i'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='dataType'>
+<retval declared_type64='MLCDataType' type64='i'/>
+</method>
+<method class_method='true' selector='descriptorWithShape:dataType:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='shape' type64='@'/>
+<arg declared_type64='MLCDataType' index='1' name='dataType' type64='i'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithShape:sequenceLengths:sortedSequences:dataType:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='shape' type64='@'/>
+<arg declared_type64='NSArray * _Nonnull' index='1' name='sequenceLengths' type64='@'/>
+<arg declared_type64='BOOL' index='2' name='sortedSequences' type64='B'/>
+<arg declared_type64='MLCDataType' index='3' name='dataType' type64='i'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithWidth:height:featureChannelCount:batchSize:'>
+<arg declared_type64='NSUInteger' index='0' name='width' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='height' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='featureChannels' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='batchSize' type64='Q'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithWidth:height:featureChannelCount:batchSize:dataType:'>
+<arg declared_type64='NSUInteger' index='0' name='width' type64='Q'/>
+<arg declared_type64='NSUInteger' index='1' name='height' type64='Q'/>
+<arg declared_type64='NSUInteger' index='2' name='featureChannelCount' type64='Q'/>
+<arg declared_type64='NSUInteger' index='3' name='batchSize' type64='Q'/>
+<arg declared_type64='MLCDataType' index='4' name='dataType' type64='i'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='dimensionCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method class_method='true' selector='maxTensorDimensions'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='sequenceLengths'>
+<retval declared_type64='NSArray * _Nullable' type64='@'/>
+</method>
+<method selector='shape'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='sortedSequences'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='stride'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='tensorAllocationSizeInBytes'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+</class>
+<class name='MLCTensorParameter'>
+<method selector='isUpdatable'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='parameterWithTensor:'>
+<arg declared_type64='MLCTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='parameterWithTensor:optimizerData:'>
+<arg declared_type64='MLCTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='1' name='optimizerData' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='setIsUpdatable:'>
+<arg declared_type64='BOOL' index='0' name='isUpdatable' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='tensor'>
+<retval declared_type64='MLCTensor * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MLCTrainingGraph'>
+<method selector='addInputs:lossLabels:'>
+<arg declared_type64='NSDictionary * _Nonnull' index='0' name='inputs' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='lossLabels' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='addInputs:lossLabels:lossLabelWeights:'>
+<arg declared_type64='NSDictionary * _Nonnull' index='0' name='inputs' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='lossLabels' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='2' name='lossLabelWeights' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='addOutputs:'>
+<arg declared_type64='NSDictionary * _Nonnull' index='0' name='outputs' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='allocateUserGradientForTensor:'>
+<arg declared_type64='MLCTensor * _Nonnull' index='0' name='tensor' type64='@'/>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+<method selector='bindOptimizerData:deviceData:withTensor:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='data' type64='@'/>
+<arg declared_type64='NSArray * _Nullable' index='1' name='deviceData' type64='@'/>
+<arg declared_type64='MLCTensor * _Nonnull' index='2' name='tensor' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='compileOptimizer:'>
+<arg declared_type64='MLCOptimizer * _Nonnull' index='0' name='optimizer' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='compileWithOptions:device:'>
+<arg declared_type64='MLCGraphCompilationOptions' index='0' name='options' type64='Q'/>
+<arg declared_type64='MLCDevice * _Nonnull' index='1' name='device' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='deviceMemorySize'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='executeForwardWithBatchSize:options:completionHandler:'>
+<arg declared_type64='NSUInteger' index='0' name='batchSize' type64='Q'/>
+<arg declared_type64='MLCExecutionOptions' index='1' name='options' type64='Q'/>
+<arg declared_type64='MLCGraphCompletionHandler _Nullable' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='MLCTensor * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<arg declared_type64='NSTimeInterval' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='executeForwardWithBatchSize:options:outputsData:completionHandler:'>
+<arg declared_type64='NSUInteger' index='0' name='batchSize' type64='Q'/>
+<arg declared_type64='MLCExecutionOptions' index='1' name='options' type64='Q'/>
+<arg declared_type64='NSDictionary * _Nullable' index='2' name='outputsData' type64='@'/>
+<arg declared_type64='MLCGraphCompletionHandler _Nullable' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='MLCTensor * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<arg declared_type64='NSTimeInterval' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='executeGradientWithBatchSize:options:completionHandler:'>
+<arg declared_type64='NSUInteger' index='0' name='batchSize' type64='Q'/>
+<arg declared_type64='MLCExecutionOptions' index='1' name='options' type64='Q'/>
+<arg declared_type64='MLCGraphCompletionHandler _Nullable' function_pointer='true' index='2' name='completionHandler' type64='@?'>
+<arg declared_type64='MLCTensor * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<arg declared_type64='NSTimeInterval' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='executeGradientWithBatchSize:options:outputsData:completionHandler:'>
+<arg declared_type64='NSUInteger' index='0' name='batchSize' type64='Q'/>
+<arg declared_type64='MLCExecutionOptions' index='1' name='options' type64='Q'/>
+<arg declared_type64='NSDictionary * _Nullable' index='2' name='outputsData' type64='@'/>
+<arg declared_type64='MLCGraphCompletionHandler _Nullable' function_pointer='true' index='3' name='completionHandler' type64='@?'>
+<arg declared_type64='MLCTensor * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<arg declared_type64='NSTimeInterval' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='executeOptimizerUpdateWithOptions:completionHandler:'>
+<arg declared_type64='MLCExecutionOptions' index='0' name='options' type64='Q'/>
+<arg declared_type64='MLCGraphCompletionHandler _Nullable' function_pointer='true' index='1' name='completionHandler' type64='@?'>
+<arg declared_type64='MLCTensor * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<arg declared_type64='NSTimeInterval' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='executeWithInputsData:lossLabelsData:lossLabelWeightsData:batchSize:options:completionHandler:'>
+<arg declared_type64='NSDictionary * _Nonnull' index='0' name='inputsData' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='lossLabelsData' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='2' name='lossLabelWeightsData' type64='@'/>
+<arg declared_type64='NSUInteger' index='3' name='batchSize' type64='Q'/>
+<arg declared_type64='MLCExecutionOptions' index='4' name='options' type64='Q'/>
+<arg declared_type64='MLCGraphCompletionHandler _Nullable' function_pointer='true' index='5' name='completionHandler' type64='@?'>
+<arg declared_type64='MLCTensor * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<arg declared_type64='NSTimeInterval' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='executeWithInputsData:lossLabelsData:lossLabelWeightsData:outputsData:batchSize:options:completionHandler:'>
+<arg declared_type64='NSDictionary * _Nonnull' index='0' name='inputsData' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='1' name='lossLabelsData' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='2' name='lossLabelWeightsData' type64='@'/>
+<arg declared_type64='NSDictionary * _Nullable' index='3' name='outputsData' type64='@'/>
+<arg declared_type64='NSUInteger' index='4' name='batchSize' type64='Q'/>
+<arg declared_type64='MLCExecutionOptions' index='5' name='options' type64='Q'/>
+<arg declared_type64='MLCGraphCompletionHandler _Nullable' function_pointer='true' index='6' name='completionHandler' type64='@?'>
+<arg declared_type64='MLCTensor * _Nullable' type64='@'/>
+<arg declared_type64='NSError * _Nullable' type64='@'/>
+<arg declared_type64='NSTimeInterval' type64='d'/>
+<retval declared_type64='void' type64='v'/>
+</arg>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='gradientDataForParameter:layer:'>
+<arg declared_type64='MLCTensor * _Nonnull' index='0' name='parameter' type64='@'/>
+<arg declared_type64='MLCLayer * _Nonnull' index='1' name='layer' type64='@'/>
+<retval declared_type64='NSData * _Nullable' type64='@'/>
+</method>
+<method selector='gradientTensorForInput:'>
+<arg declared_type64='MLCTensor * _Nonnull' index='0' name='input' type64='@'/>
+<retval declared_type64='MLCTensor * _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='graphWithGraphObjects:lossLayer:optimizer:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='graphObjects' type64='@'/>
+<arg declared_type64='MLCLayer * _Nullable' index='1' name='lossLayer' type64='@'/>
+<arg declared_type64='MLCOptimizer * _Nullable' index='2' name='optimizer' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='linkWithGraphs:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='graphs' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='optimizer'>
+<retval declared_type64='MLCOptimizer * _Nullable' type64='@'/>
+</method>
+<method selector='resultGradientTensorsForLayer:'>
+<arg declared_type64='MLCLayer * _Nonnull' index='0' name='layer' type64='@'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='setTrainingTensorParameters:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='parameters' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='sourceGradientTensorsForLayer:'>
+<arg declared_type64='MLCLayer * _Nonnull' index='0' name='layer' type64='@'/>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method selector='stopGradientForTensors:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='tensors' type64='@'/>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method selector='synchronizeUpdates'>
+<retval declared_type64='void' type64='v'/>
+</method>
+</class>
+<class name='MLCTransposeLayer'>
+<method selector='dimensions'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithDimensions:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='dimensions' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+</class>
+<class name='MLCUpsampleLayer'>
+<method selector='alignsCorners'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+<method class_method='true' selector='layerWithShape:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='shape' type64='@'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method class_method='true' selector='layerWithShape:sampleMode:alignsCorners:'>
+<arg declared_type64='NSArray * _Nonnull' index='0' name='shape' type64='@'/>
+<arg declared_type64='MLCSampleMode' index='1' name='sampleMode' type64='i'/>
+<arg declared_type64='BOOL' index='2' name='alignsCorners' type64='B'/>
+<retval declared_type64='instancetype _Nullable' type64='@'/>
+</method>
+<method selector='sampleMode'>
+<retval declared_type64='MLCSampleMode' type64='i'/>
+</method>
+<method selector='shape'>
+<retval declared_type64='NSArray * _Nonnull' type64='@'/>
+</method>
+</class>
+<class name='MLCYOLOLossDescriptor'>
+<method selector='anchorBoxCount'>
+<retval declared_type64='NSUInteger' type64='Q'/>
+</method>
+<method selector='anchorBoxes'>
+<retval declared_type64='NSData * _Nonnull' type64='@'/>
+</method>
+<method class_method='true' selector='descriptorWithAnchorBoxes:anchorBoxCount:'>
+<arg declared_type64='NSData * _Nonnull' index='0' name='anchorBoxes' type64='@'/>
+<arg declared_type64='NSUInteger' index='1' name='anchorBoxCount' type64='Q'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='maximumIOUForObjectAbsence'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='minimumIOUForObjectPresence'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='scaleClassLoss'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='scaleNoObjectConfidenceLoss'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='scaleObjectConfidenceLoss'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='scaleSpatialPositionLoss'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='scaleSpatialSizeLoss'>
+<retval declared_type64='float' type64='f'/>
+</method>
+<method selector='setMaximumIOUForObjectAbsence:'>
+<arg declared_type64='float' index='0' name='maximumIOUForObjectAbsence' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setMinimumIOUForObjectPresence:'>
+<arg declared_type64='float' index='0' name='minimumIOUForObjectPresence' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setScaleClassLoss:'>
+<arg declared_type64='float' index='0' name='scaleClassLoss' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setScaleNoObjectConfidenceLoss:'>
+<arg declared_type64='float' index='0' name='scaleNoObjectConfidenceLoss' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setScaleObjectConfidenceLoss:'>
+<arg declared_type64='float' index='0' name='scaleObjectConfidenceLoss' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setScaleSpatialPositionLoss:'>
+<arg declared_type64='float' index='0' name='scaleSpatialPositionLoss' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setScaleSpatialSizeLoss:'>
+<arg declared_type64='float' index='0' name='scaleSpatialSizeLoss' type64='f'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='setShouldRescore:'>
+<arg declared_type64='BOOL' index='0' name='shouldRescore' type64='B'/>
+<retval declared_type64='void' type64='v'/>
+</method>
+<method selector='shouldRescore'>
+<retval declared_type64='BOOL' type64='B'/>
+</method>
+</class>
+<class name='MLCYOLOLossLayer'>
+<method class_method='true' selector='layerWithDescriptor:'>
+<arg declared_type64='MLCYOLOLossDescriptor * _Nonnull' index='0' name='lossDescriptor' type64='@'/>
+<retval declared_type64='instancetype _Nonnull' type64='@'/>
+</method>
+<method selector='yoloLossDescriptor'>
+<retval declared_type64='MLCYOLOLossDescriptor * _Nonnull' type64='@'/>
+</method>
+</class>
+</signatures>
